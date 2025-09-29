@@ -1,34 +1,38 @@
-# MetaVida — Next Week Plan (Week 2, 3–4 h/day)
+﻿# MetaVida — Next Week Plan (3–4 h/day)
 
-Focus: WSL2 + Docker; Git branching; tiny local RAG; Make“Notion— A; Zotero‣Quarto.
+Keep the same blocks. Advance one unit per course. Add one automation.
 
-Outcomes
-- WSL2 Ubuntu + Docker Desktop working.
-- BranchƠPR ✅ merge practiced. - Minimal RAG over two local files (CPU).
-- Make A (Gmail“Notion— Tasks) live.
-- Zotero‣BBT “Quarto citations” render.
+## Focus
+- Calculus Part 1 Sections 2–3; Probability Week 2.
+- Python loops and files; R data wrangling.
+- Biostatistics: sampling distributions.
+- Make Academy Basics modules 2–4; start one API call.
+- Git & GitHub: branching → PR → merge.
 
-Daily blocks: 15m PC — 45-–&0 mDevOps — 60-–90m Math/Prob — 30-–45m Biostats — 30-45M Assistants.
+## Links (same as this week)
+- Google IT Support fundamentals — https://www.coursera.org/learn/technical-support-fundamentals
+- Udemy PowerShell for Beginners — https://www.udemy.com/course/powershell-for-beginners/
+- Python for Everybody — https://www.coursera.org/specializations/python
+- R Programming — https://www.coursera.org/learn/r-programming
+- Biostatistics in Public Health — https://www.coursera.org/specializations/biostatistics-public-health
+- Intro to Probability and Data (Duke) — https://www.coursera.org/learn/probability-intro
+- Calculus: Single Variable Part 1 — https://www.coursera.org/learn/single-variable-calculus
+- Mathematics for Machine Learning — https://www.coursera.org/specializations/mathematics-machine-learning
+- Git & GitHub (Google) — https://www.coursera.org/learn/introduction-git-github
+- Make Academy Basics — https://academy.make.com/bundles/make-basics
+- Notion relations/rollups — https://www.notion.com/help/guides/using-relation-and-rollup-properties
+- Better BibTeX install — https://retorque.re/zotero-better-bibtex/installation/
 
-Day 1 ″ WSL2
-Enable “Virtual Machine Platformb” + ‗Windows Subsystem for Linuxb��. Install: wsl --install -d Ubuntu. Update packages.
+## Day plan template
+- 15m PC basics → one lesson from Google IT or Udemy PowerShell.
+- 45–60m Programming → alternate Python and R daily.
+- 60–90m Math → alternate Calculus and Probability.
+- 30–45m Biostat → next unit + practice.
+- 30–45m Tools → Make module or Git topic.
 
-Day 2 ″ Docker
-Install Docker Desktop. Test: docker run hello-world. Optional: postgres:alpine.
+## Automation goal
+- Build Make: Gmail label **Action** → Notion/Tasks upsert (key = MessageID). Document steps in repo.
 
-Day 3 ″ Git branching
-git checkout -b week-2-notes ’ edit ’ commit ’ push ’ PR ’ merge ’ delete branch.
-
-Day 4 ″ Tiny RAG (local)
-Python venv; pip install langchain faiss-cpu pypdf. Put 2 PDFs in data/. Index + answer 1 question; save transcript.
-
-Day 5 ″ Make A
-Trigger: Gmail new email with label Action. Map Subject, From, Thread link, MessageID ’ Notion/Tasks upsert by MessageID.
-
-Day 6 ′ Zotero‣ Quarto
-BBMT auto-”export .bib from “Teaching”; lock citekeys. Quarto project uses bibliography: refs.bib and a CSL. Render citations.
-
-Day 7 ″ Review
-Update READE; tag a release. Optional rclone dry-run backup. Plan next 3 goals.
-
-Micro-„2outine (”20m: Label 3 emails ’ Notion Inbox sweep ’ tag 1 Zotero item ’ 2-line Evidence takeaway.
+## Weekly review
+- Push README updates to GitHub.
+- Close completed Notion tasks. Set 3 goals for the following week.

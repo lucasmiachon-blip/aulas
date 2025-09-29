@@ -1,130 +1,78 @@
-# MetaVida — Week Plan (3–4 h/day)  
-Focus: calculus & probability from zero, biostatistics, R/Python, VS Code + GitHub, assistants, and simple Make automations. Designed for beginner PC skills.
+﻿# MetaVida — Week Plan (consistent, 3–4 h/day)
 
-## Outcomes
-- Basic PC hygiene; ZIP/unZIP; print to PDF.
-- PowerShell file navigation.
-- Git basics; VS Code ready.
-- R/RStudio/Quarto and Python “hello world”.
-- Start calculus/probability the right way; biostats from scratch.
-- Build 3 Make automations that connect Gmail/Drive ↔ Notion.
+Use these specific courses. Links appear inline. Keep daily PC basics ≤15 min.
 
-## Daily structure (suggested)
-- 15 min — PC basics.
-- 45–60 min — Programming block (R/Python/VS Code/Git).
-- 60–90 min — Math: algebra→logs→pre‑calc→calculus; probability.
-- 30–45 min — Biostatistics.
-- 30–45 min — Assistants & automations (Gemini, Copilot, Perplexity, Make).
+## Courses used (quick links)
+- Basic computing: Google “Technical Support Fundamentals” (Coursera) — https://www.coursera.org/learn/technical-support-fundamentals
+- PowerShell basics: Udemy “PowerShell for Beginners” — https://www.udemy.com/course/powershell-for-beginners/
+- Python: “Python for Everybody” (UMich, Coursera) — https://www.coursera.org/specializations/python
+- R: “R Programming” (JHU, Coursera) — https://www.coursera.org/learn/r-programming
+- Biostatistics: “Biostatistics in Public Health” (JHU, Coursera) — https://www.coursera.org/specializations/biostatistics-public-health
+- Probability: “Introduction to Probability and Data with R” (Duke, Coursera) — https://www.coursera.org/learn/probability-intro
+- Calculus: “Calculus: Single Variable Part 1” (UPenn, Coursera) — https://www.coursera.org/learn/single-variable-calculus
+- Math for ML bridge: “Mathematics for Machine Learning” (Imperial, Coursera) — https://www.coursera.org/specializations/mathematics-machine-learning
+- Git & GitHub: “Introduction to Git and GitHub” (Google, Coursera) — https://www.coursera.org/learn/introduction-git-github
+- Make automation: Make Academy (Basics path) — https://academy.make.com/bundles/make-basics
+- Notion DB relations/rollups (help) — https://www.notion.com/help/guides/using-relation-and-rollup-properties
+- Zotero + Better BibTeX install — https://retorque.re/zotero-better-bibtex/installation/
 
-> Tip: Use a timer. One block at a time. Take short breaks.
+## Daily blocks (target)
+- 15m PC basics (Google IT or Udemy PowerShell).
+- 45–60m Programming: Python or R.
+- 60–90m Math: calculus or probability.
+- 30–45m Biostatistics.
+- 30–45m Tools & automation: Make, Git/GitHub, Notion, Zotero.
 
----
+## Day 1
+- PC basics 15m: Google IT “Technical Support Fundamentals” → Module 1. (link above)
+- Python 60m: Python for Everybody → “Programming for Everybody (Getting Started with Python)” Week 1.
+- Math 60m: UPenn Calculus → Part 1, Section 1 intro videos.
+- Biostat 30m: JHU Biostatistics → Course 1 “Biostatistics in Public Health” Week 1 videos.
+- Tools 30m: Git & GitHub (Google) → Intro lesson; set up Git config. Make Academy → “Introduction to Modules”.
 
-## Day 1 — PC hygiene + setup
-**PC (15m):** Task Manager → Startup = disable clutter. Settings → Storage Sense = On. Uninstall unused apps. Install 7‑Zip. Add “Microsoft Print to PDF”.  
-**PowerShell (20m):** `pwd`, `ls`, `cd`, `mkdir`, `ni`, `cat`, `rm`, `mv`. Make a practice tree `C:\Practice\week1` and delete it.  
-**Programming (50m):** Install Git and VS Code. Configure Git: `git config --global user.name "Lucas Miachon"` and `git config --global user.email "lucas.miachon@fm.usp.br"`. Install VS Code extensions: Python, R, Markdown, GitHub Copilot.  
-**Math (60m):** Algebra refresh with logs. Khan Academy: *Logarithms intro* → practice.  
-**Biostats (30m):** Data types; mean/median; variance vs SD.  
-**Assistants (25m):** Verify Notion, Google, Gmail, Drive logins. Create Notion databases: Tasks, Projects, Evidence (fields from prior plan).
+## Day 2
+- PC 15m: Udemy “PowerShell for Beginners” → basics: Get-Help, Get-Command.
+- R 45m: R Programming (JHU) → Week 1 install R, RStudio; run hello.R.
+- Math 60–90m: Calculus Part 1 → limits basics; or Duke Probability → sampling and types of data.
+- Biostat 30–45m: continue Week 1 practice quiz.
+- Tools 30m: Git course → clone, add, commit; push to GitHub. Notion help → create Tasks↔Projects relation + rollup.
 
-## Day 2 — Shell fluency + R/RStudio/Quarto
-**PC (15m):** File types, extensions, hidden files.  
-**PowerShell (20m):** `Get-Help`, redirection `>`, pipelines `|`. Practice: list `.pdf` and output to `list.txt`.  
-**Programming (60m):** Install R, RStudio, Quarto. Create `hello.R`. Quarto: make a minimal `hello.qmd` and render to HTML.  
-**Math (60–75m):** Precalculus: exponents↔logs; functions; graph reading.  
-**Biostats (30m):** Sampling vs population. Standard error intuition.  
-**Assistants (20m):** Zotero install + Connector + Better BibTeX. Set File Sync = As needed. Collections: 00‑Inbox, To‑Read, Teaching, Research. Save one article and lock citekey.
+## Day 3
+- PC 15m: Google IT → hardware/software overview.
+- Python 45–60m: variables, expressions; first scripts in VS Code.
+- Math 60–90m: Calculus derivatives intro or Probability: probability rules + Bayes overview.
+- Biostat 30–45m: distributions and summary stats.
+- Tools 30–45m: Make Academy Basics → triggers, actions; build 1 scenario (Gmail label “Action” → Google Sheet test).
 
-## Day 3 — Git + Python + probability start
-**PC (15m):** Downloads folder hygiene. Bookmarks and “Downloads” location.  
-**Programming (60m):** Install Python 3.11. `python -m venv .venv` → activate → `pip install --upgrade pip`. Create `hello.py`.  
-**Git (20m):** Create private repo `metavida-sandbox` (not in OneDrive). `git init`, `git add`, `git commit -m "init"`, `git remote add origin ...`, `git push -u origin main`.  
-**Math/Prob (60–75m):** Start probability from intuition. Watch first two lectures of Harvard Stat 110 (Blitzstein) or read notes.  
-**Biostats (30m):** Confidence intervals vs p‑values.  
-**Assistants (20m):** Copilot Pro in PowerPoint: auto‑outline 5 slides for this week’s math topic. Save to OneDrive.
+## Day 4
+- PC 15m: PowerShell → files/folders: `pwd`, `ls`, `cd`, `mkdir`, `ni`, `mv`, `rm`.
+- R 45–60m: vectors, data frames; simple plot.
+- Math 60–90m: derivative rules or Probability: conditional probability.
+- Biostat 30–45m: confidence intervals vs sample size.
+- Tools 30–45m: Git course → branches and merge; open PR on GitHub.
 
-## Day 4 — VS Code workflow + R basics
-**PC (15m):** ZIP/unZIP with 7‑Zip; print to PDF test.  
-**Programming (60m):** VS Code basics: Command Palette, Integrated Terminal, Settings Sync. Create a workspace.  
-**R (30–40m):** Vectors, data frames, `readr` and `dplyr` install. Mini task: compute BMI for a small CSV.  
-**Math/Calc (60–75m):** Limits concept. Average vs instantaneous rate of change.  
-**Biostats (30m):** Descriptive stats in R; make a small table.  
-**Assistants (20m):** Perplexity: 2 “last 7 days” queries with citations on your topic; save links to Notion/Evidence.
+## Day 5
+- PC 15m: Google IT → networking basics.
+- Python 45–60m: functions and loops.
+- Math 60–90m: definite integral intro or Probability: Normal distribution.
+- Biostat 30–45m: p-value vs effect size.
+- Tools 30–45m: Make Academy Basics → routers and aggregators; document scenario steps in README.
 
-## Day 5 — GitHub flow + Python basics + combinatorics
-**PC (15m):** Keyboard shortcuts: Ctrl+L, Ctrl+T, Ctrl+Shift+T, Ctrl+J.  
-**Git (30m):** Branch → edit → commit → PR → merge (even if solo).  
-**Python (30m):** Functions, f‑strings. Write a BMI function and quick tests.  
-**Math/Prob (60–75m):** Counting rules, permutations, combinations.  
-**Biostats (30m):** Study design types. Bias vs confounding.  
-**Assistants (20m):** Build 3 more slides in PowerPoint; import to Canva; apply brand style.
+## Day 6
+- PC 15m: PowerShell → pipes and redirection; run a script.
+- R 45–60m: apply, tapply; readr.
+- Math 60–90m: applications of integrals or Probability: simulation with R.
+- Biostat 30–45m: 95% CI worked examples.
+- Tools 30–45m: Zotero + Better BibTeX install; lock citekeys; add 2 items.
 
-## Day 6 — R + Quarto slides + distributions
-**PC (15m):** Screenshots and snipping tool; paste into slides.  
-**R/Quarto (45m):** Create a Quarto slide deck; add two plots with `ggplot2`.  
-**Math/Prob (60–75m):** Discrete distributions: Bernoulli, Binomial; expectation/variance.  
-**Biostats (30m):** Normal vs Binomial; when CLT applies.  
-**Assistants (30m):** Isabel: 1 real case → capture differential and terse rationale into Notion/Evidence.
+## Day 7 — Review & ship
+- PC 15m: review shortcuts and file hygiene.
+- Programming 45–60m: small Python + R mini-exercises.
+- Math 60–90m: recap key problems; write 3 questions to revisit.
+- Biostat 30–45m: quick quiz + 2-line takeaway in Notion/Evidence.
+- Tools 30–45m: finalize one Make scenario; Git: tag v0.1; push.
 
-## Day 7 — Make automations + review
-**PC (15m):** Folder structure sanity check.  
-**Make (60–75m):**  
-- **A:** Gmail label **Action** → Notion/Tasks (dedupe by MessageID).  
-- **B:** Gmail label **Evidence** → Notion/Evidence (first URL + Key takeaway field).  
-- **C:** Google Drive “Teaching Drop” → Notion/Tasks (file link).  
-**Biostats (30m):** Proportions and CI for a Binomial.  
-**Math/Calc (45–60m):** Derivative as limit; derivative rules intro.  
-**Weekly review (20m):** Clear inboxes, set next topic and 3 goals.
-
----
-
-## Course tracks (choose primary + backups)
-**Algebra & Precalculus:** Khan Academy Algebra I/II and Precalculus. Coursera: *Precalculus: Periodic Functions* (JHU).  
-**Calculus from zero:** Coursera *Calculus One* (Ohio State) or UPenn *Calculus: Single Variable*.  
-**Probability** (beginner→solid): Harvard Stat 110 (YouTube + official notes). MITx *Probability: The Science of Uncertainty and Data*.  
-**Biostatistics:** JHU *Biostatistics in Public Health* or Duke *Statistics with R* (first two courses).  
-**Programming:** RStudio primers; Datacamp’s free intros; Automate the Boring Stuff (Python) chapters 1–4 for basics.  
-**Assistants:** Microsoft Copilot in PowerPoint docs; Google Gemini for Gmail/Drive summarization; Perplexity for newest with citations.
-
-> Optional “with history/context” supplements: 3Blue1Brown calculus series; “The Story of Mathematics” (book/website) for historical notes alongside your study.
-
----
-
-## Make: scenario sketches
-- **A. Action→Tasks:** Trigger: Gmail new email with label *Action*. Steps: get thread id, subject, sender, link. Create/update Notion/Tasks by MessageID.  
-- **B. Evidence→Evidence:** Trigger: Gmail new with label *Evidence*. Steps: grab first URL from body, create Notion/Evidence with Source URL and a placeholder “Key takeaway”.  
-- **C. Drive drop→Tasks:** Trigger: new file in Drive folder *Teaching Drop*. Create Notion/Tasks with file name, link, and Project tag.
-
----
-
-## Repo & files
-- Keep this README at `OneDrive/Documentos/AssistantStack/MetaVida/Assets/plans/`.  
-- Repo suggestion: `metavida-sandbox` for exercises and notes.  
-
-### Push workflow (one-time then repeat)
-```powershell
-# In a clean folder outside OneDrive
-git clone https://github.com/<your-username>/metavida-sandbox.git
-cd metavida-sandbox
-
-# Copy the README into the repo root, then:
-git add README_MetaVida_Week_Plan.md
-git commit -m "Add week plan"
-git push
-```
-
----
-
-## Daily micro‑routine (≤20 min)
-Label 3 emails → Notion Inbox sweep → tag 1 Zotero item → write a 2‑line Evidence takeaway.
-
-## Keyboard quicklist
-- Address bar: Ctrl+L. New tab: Ctrl+T. Reopen tab: Ctrl+Shift+T. Downloads: Ctrl+J.  
-- Copy: Ctrl+C. Paste: Ctrl+V. Undo: Ctrl+Z. Screenshot: Win+Shift+S.
-
----
-
-## Notes
-- Go slow. One block per day is fine. Consistency beats volume.
-- Keep a single “Study Log” note in Notion with day, blocks done, and next step.
+## Deliverables
+- Two commits this week: notes and one automation README.
+- Notion: 7 Evidence notes with 2-line takeaways.
+- Zotero: 2 items in To-Read with tags.
