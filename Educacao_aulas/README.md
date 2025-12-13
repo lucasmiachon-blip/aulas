@@ -1,1 +1,0 @@
-﻿## Educacao_aulas

@@ -1,0 +1,8 @@
+﻿{
+  "name": "Lucas Miachon",
+  "assistant_priority": ["ChatGPT", "Gemini Advanced", "Claude"],
+  "automation_choice": "n8n (single platform)",
+  "github": { "user": "lucasmiachon-blip", "repo": "metavida-solo", "remote": "https://github.com/lucasmiachon-blip/metavida-solo.git", "subfolder": "Main_folder" },
+  "onedrive_local": "C:\\Users\\Dell\\OneDrive\\Documentos\\AssistantStack\\MetaVida",
+  "time_budget_daily_hours": 3
+}

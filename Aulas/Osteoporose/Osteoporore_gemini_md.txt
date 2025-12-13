@@ -1,0 +1,44 @@
+# 🧬 MANUAL DE ESTILO: PROJETO "AMADOR PLUS" (LUCAS & GEMINI)
+
+## 1. A Filosofia Visual
+O objetivo é transformar slides densos em **Painéis Clínicos**.
+- **Amador Comum:** Usa cores de fundo (caixas sólidas) para separar conteúdo. (Proibido)
+- **Amador Plus:** Usa **Espaço em Branco (White Space)** e **Bordas Finas** para organizar. (Obrigatório)
+
+## 2. A Paleta de Cores (Sagrada)
+* **Fundo:** Sempre **Branco Puro** (`#FFFFFF`) para slides técnicos.
+* **Texto Principal / Títulos:** **Azul Marinho Profundo** (`#0a192f` ou similar). Passa autoridade.
+* **Detalhes / Divisores:** **Dourado/Ouro** (`#D4AF37`). Usado para linhas finas, setas, números gigantes e bordas de destaque.
+* **Texto de Apoio:** Cinza Chumbo ou Preto.
+* **Alertas:** Vermelho Vinho ou Dourado (nunca vermelho "sinal de pare" brilhante).
+
+## 3. Os Componentes Padrão (Building Blocks)
+
+### A. O Card "Amador Plus"
+* **Uso:** Para listas, classificações e comparações.
+* **Design:** Fundo branco, **borda fina cinza ou dourada**, cantos levemente arredondados.
+* **Opcional:** Uma faixa fina (3px) colorida apenas no topo do card para codificar (Ex: Amarelo, Laranja, Vermelho).
+
+### B. O "Scorecard" (Painel de Dados)
+* **Uso:** Para apresentar resultados de estudos (NNT, Redução de Risco).
+* **Estrutura:**
+    1.  Título Pequeno (Azul).
+    2.  **NÚMERO GIGANTE** (Fonte 48+, Azul ou Dourado).
+    3.  Legenda pequena (Cinza).
+
+### C. O Rodapé "Insight"
+* **Uso:** Para a frase de impacto ou conclusão clínica.
+* **Design:** Caixa retangular no rodapé, fundo branco, **borda dourada fina**. Ícone de lâmpada (💡) ou alvo (🎯).
+
+## 4. Regras de Tipografia e Layout
+1.  **Hierarquia:** O dado mais importante deve ser **3x maior** que o texto ao redor.
+2.  **Measure (Largura):** Nunca deixe linhas de texto atravessarem o slide todo (16:9). Use colunas.
+3.  **Widows (Viúvas):** Nunca deixe uma palavra sozinha na última linha. Use `Shift + Enter` para equilibrar.
+4.  **Alinhamento:** Use a ferramenta "Tidy Up" para alinhar cards perfeitamente.
+
+## 5. Modos de Slide
+* **Modo Protocolo:** Fundo Branco, Texto Azul. (90% da aula).
+* **Modo Poesia/Cliffhanger:** Fundo Artístico (Pintura a óleo/Abstrato), Texto Branco/Dourado com Sombra (Blur). Usado para casos clínicos dramáticos.
+
+---
+**Status Atual:** Migrando para refinar os slides finais (VFA, TBS, DM2) que possuem linhas guias (roxas) e precisam de limpeza de fundo.

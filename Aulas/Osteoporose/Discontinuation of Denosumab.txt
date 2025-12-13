@@ -1,0 +1,989 @@
+WhisperAI Transcription Report
+
+Title: Discontinuation of Denosumab
+Date: 11/19/2025
+Duration: 3756 seconds
+Language: auto
+
+---
+
+TRANSCRIPTION:
+
+Well, good afternoon, everyone, on this third day of ACE.
+
+So I'm very pleased to introduce Dr. Nicole Rothman. Dr. Rothman is a professor of medicine in the division of Endocrinology at the University of Colorado School of Medicine, with secondary appointments in psychiatry and radiology. She serves as the clinical director of the UC Health Metabolic Bone Disease Program and is co founder and medical director of the UC Health Integrated Transgender and Gender Diversity Programs.
+
+So just a reminder that you should scan the QR code to ask questions at any point during the lecture, and I'm sure this topic will generate a lot of them to be addressed in the Q and A portion.
+
+So please help me welcome Dr. Rothman for her very clinically relevant talk, Discontinuation of Denosumab. Thank you so much. Natalie, how's the volume on this?
+
+It's okay.
+
+Okay, great. Yeah, it's exciting for me when I get invited to give a bone talk instead of a transgender talk these days because I'm like, oh, great, not so controversial. But here we are with denosumab, like the most controversial bone topic.
+
+Right.
+
+Okay, so I'm going to take you through. First of all, I have no relevant disclosures. I suppose it's possible we could touch on some off label things, but not planned at least.
+
+Our learning objectives for today are to determine the appropriate patient population for denosumab to be initiated. And I think we should think about that or discontinued. We'll talk about the properties of denosumab that lead to rebound bone loss upon discontinuation, and we'll talk about the best strategies and I'll outline to you what data we have for the different agents to mitigate bone loss when or if you do have to stop denosumab.
+
+So I'm going to take you through a case and you'll be able to see from DEXA data and stuff.
+
+This is a real case of a patient of mine.
+
+So I am a clinician at heart, as many of you are in the audience.
+
+So I feel this like you do. I think the stress right now of kind of how to manage our patients on denosumab.
+
+So I would love for this to be interactive and perhaps we can brainstorm together because spoiler alert, I don't think we have all the answers yet. Right. Of the best way to transition off.
+
+So we'll go through what we know and a lot of what we don't.
+
+So this case is going to take you back. This is a patient that I've been following for some time, so It's December of 2020, and she's 73 years old and here for routine follow up. She feels great. She's just here to review her Dexa.
+
+Great.
+
+So she had a wrist fracture in her mid-50s and that's when she was initially started on treatment. Her mother had a hip fracture in her 80s. Overall, she's doing great.
+
+Again, just here for routine follow up. All the usual bone questions. She's doing fine.
+
+So just so that you have a sense of her history, she had started on alendronate in 2002 and then was changed to abandon a.
+
+This was before I was taking care of her in 2007. And. And then she was on a drug holiday from 2009 to 2015. And based on bone density decline, and I'll show you some of that data.
+
+She started denosumab in 2015 based on her diagnosis and basically having lost bone over the course of her drug holiday.
+
+So here's her data.
+
+So how can you guys see this in the back? You can at least see the trends, hopefully.
+
+And how many of you read your own dexs?
+
+Okay, good. Oh, yeah, most of you, because you're clinical endocrinologists and I'll show you the overall. But basically you can see here.
+
+This is her time point back in 2005.
+
+You know, she was kind of maybe up and down a little bit on her oral bisphosphonate and she kind of had lost some here. And I think maybe back then at one point we did have her spine, but it's now been excluded.
+
+And anyway, what you can see here with this green arrow is this is when denosumab was initiated and she's done quite well on it.
+
+And because this is real life, the hips don't go up perfectly the same on both sides, but essentially she's really gained and she's actually had continued gains on her other side. And we do sometimes see that with denosumab. Right. In the trials and in real life, we see people with ongoing gains.
+
+So she's done great. These are her overall scores.
+
+So again, for those of you who are used to reading bone densities, again, her spine's been excluded. Her lowest T score is minus 2.0 in her left femoral neck.
+
+I think it's a pretty good quality scan. I suppose that's not the purpose of this talk today, but we can always talk about that as well. But I think it's got good femoral neck. You can see a little bit of the trochanter.
+
+Overall, I think good quality dexa no reason not to believe it, and she's doing fine.
+
+So what would you do? I think we could take a question or two.
+
+So should she stay on?
+
+She's been on five years. She's doing well. She's 73. She had a fracture a while back.
+
+Should she come off? How do you make this decision?
+
+So I think if anyone wants to kind of shout out what they would do or come to the mic actually probably would be better. Who wants to keep her on?
+
+Okay, who wants to take her off?
+
+All right, so I would say 75% on, 25% off.
+
+Okay. And how do we make this decision?
+
+And I think that's something that we need to talk about.
+
+So how do we think about this?
+
+So there's not really any tools that tell us exactly how to do this. Right.
+
+So should we use treat to target? Right. Like, there are some people who would say, okay, she's reached that target of less than minus 2. She hasn't fractured in a while.
+
+Maybe she should come off. Should we think about her fracture recency, like this notion of imminent fracture risk? Well, she had that initial fracture in her 50s, but nothing recent. But she's getting older, so her risk of fracture goes up.
+
+We're kind of weighing all these things. I didn't really say anything about her fall risk. I told you that she's pretty active. But how do we weigh all these things when we're thinking about keeping someone on or off a medication?
+
+And I think it's kind of a version of what we do when we initiate medication. But we're really doing that every year, really, or at least every couple years now.
+
+So I don't know if this is fair or not. Is it fair to look at her frax?
+
+Is it fair to look at her overall fracture risk? We don't use FRAX on treated patients. Right. But I think it does give you a sense of the fact that her risk if she were untreated is not zero.
+
+Right. She's 73. She did have a fracture. She has a parent with a hip fracture.
+
+When you think about that, you're like, gosh, her risk of hip fracture is pretty high. Maybe I should leave her on.
+
+So I don't know that there's a right answer or wrong answer, but I think these are the things we just need to think about when we're thinking about.
+
+So It's December of 2020.
+
+We have a discussion, we continue denosumab.
+
+So we're going to come back to her case. But first I want to just review what denosumab is, how it's different from bisphosphonate, the trials that got us here, and then we're going to come back to this discontinuation.
+
+So denosumab is different than a bisphosphonate.
+
+As many of you know, it's a human monoclonal antibody that inhibits the A receptor activator of nuclear factor kappa B ligand, RANK ligand as we know it. And it's approved in multiple populations.
+
+So it's approved for postmenopausal osteoporosis. It's approved for osteoporosis in men, which not all our agents are.
+
+It's approved for glucocorticoid induced osteoporosis. And it has this other niche that I think we can talk about, because I think this is a challenge for us sometimes too, of being approved for bone loss due to aromatase inhibitor use or ADT use. And I'm seeing a lot of nods because we see the patients who come from the oncologists and they have their course of treatment and then it gets stopped, and what do we do?
+
+So that's kind of our general patient populations that we're thinking about this medication.
+
+So let's talk a little bit about the action.
+
+So remember, here we have our RANK ligand that's made by osteoblasts. And then we have RANK here on osteoclasts.
+
+So rank is gonna bind RANK ligand.
+
+And when that happens, we have osteoclast formation, activity, and survival.
+
+So this is gonna activate our osteoclasts, our bone turnover and bone resorption cells. What denosumab does is it binds to RANK ligand and essentially kind of shuts this down.
+
+So when RANK ligand is bound by denosumab, it's not being bound to rank.
+
+Osteoclast formation, activity and survival are in. And we have an endogenous hormone called opg, osteoprotegrine, that actually does this endogenously.
+
+So the medication is almost like a synthetic form of that, so to speak.
+
+So it's different than a bisphosphonate.
+
+So I think this is important because I think a lot of times when we think about things like the ACP guidelines and a lot of confusing guidelines that were like, stop everything at five years. It really didn't take into account the unique properties of bisphosphonates. Bisphosphonates are a unique medication and they get a bad rap. But I think if you think about it, it's really interesting.
+
+I mean, how many medications can we give that will have ongoing efficacy after they're stopped? And of course, there's pros and cons of that. But when I think about bisphosphonates and what's kind of changed and how we're utilizing them versus when I started my training, I think we know a lot more about using bisphosphonates. Kind of the right dose, the right interval, the right duration of treatment.
+
+And I think initially, like when the Women's Health Initiative was stopped and there was all these concerns about bone loss, everybody went on a bisphosphonate. It was like you were going to be on this for life. And I think we think about this very differently now. And I think we were probably able to mitigate some of those side effects we saw from people just having that, like, complete osteoclast suppression for so long.
+
+So what's different about bisphosphonates from denosumab?
+
+So bisphosphonates bind to the bone, they're taken up by mature osteoclasts, and they essentially become kind of disabled.
+
+Some more complexity there, but they're still around, but they're basically really not active. Denosumab, as we talked about, is binding, rank ligand and blocking this formation and survival, but it's in a completely reversible fashion.
+
+So it's on when it's on, it's off when it's off.
+
+So we're not seeing that slow release from the bone like we see with bisphosphonates.
+
+So again, let's just go back a little bit. What are the data that got this medication approved?
+
+Who should we be thinking about starting it in before we start talk about stopping it?
+
+So this is the original study, the Freedom trial that came out in 2009.
+
+So this was the phase three data for denosumab.
+
+So it was 7868 postmenopausal women.
+
+They all had osteoporosis.
+
+So they had to have a T score between -2.5 and -4. And they received 60 milligrams of denosumab or placebo subcutaneously every six months for three years, 36 months. And this was after the previous dose finding trials that did use other doses, et cetera.
+
+And the 60 milligram dose for osteoporosis was decided upon. There's higher doses for cancer.
+
+So the primary endpoint of the study was new vertebral fracture, and the secondary endpoints were nonvertebral and hip fractures.
+
+So here's the three year data from the Freedom trial.
+
+And I'm going to ask you to remember a couple of these fracture incidences because they do actually kind of come up later.
+
+So this is the data for vertebral fractures.
+
+So 2.3% in the denosumab group, 7.2% in the placebo group. That's a relative risk reduction of 68% in terms of hip fracture, 0.7 in the denosumab group, 1.2% in the placebo group.
+
+It was exciting when this medication came out to see the significant reduction in hip fracture. Remember, kind of just before that time, we were seeing approvals of PTH analogs like teriparatide that we didn't see that hip data in.
+
+So this was very exciting at the time when it was, when it came out as well. And then also nonvertebral fracture.
+
+So 6.5% in the denosumab group, 8% in the placebo group, a relative risk decrease of 20%.
+
+So again, for those of you who were around at that point, or those of you who kind of started your training after, it was really very exciting to have this agent with great fracture efficacy across multiple sites. And in a subgroup of the trial, they had DEXA data. And, and another thing that was also very exciting to think about was kind of what I showed you in my patient, these ongoing gains.
+
+So with bisphosphonates, we tend to see an increase in bone density and then really kind of a plateau. Whereas with the denosumab, we're often seeing these ongoing gains, which is kind of a little bit unique in the property. And you could see it was both at the spine and the hip. When we look at the ctx, the bone marker data, you can see that with continued use of denosumab, it's really kind of flattened out and they continue to have CTX suppression as long as they stay on the medication.
+
+And so there's bone turnover marker data for a subset of the Freedom trial.
+
+So overall we're seeing fracture reduction, bone density gains and marker suppression, as we would expect.
+
+So the Freedom trial then had an extension up to 10 years. And this is why we talk about having 10 year data for denosumab.
+
+So it was a subsection of the initial trial.
+
+So what happened is for three years, remember there was a group that got placebo and there was a group that got denosumab for the 10 year extension. Basically everybody got denosumab.
+
+So you have a group who's had it for all 10 years.
+
+A group who had nothing for three years and then denosumab for seven years. And they also did this cool thing that I can't explain exactly how it was, but it was this virtual twinning where they basically had kind of a, like a fake placebo group, like what you would think the fracture rate in the placebo group would be if there was an ongoing placebo group, but there wasn't.
+
+So when you look at the data here, you can see that again.
+
+So the three year data is what we looked at before, 7.2%, 2.3%.
+
+And with this virtual twinning, the idea was that they saw 7% in the extension, they would have seen 11.5%. Again, this is what you saw before from the Freedom trial with the extension. The idea is that there would be these ongoing gains with 14% and 9.3%.
+
+So ongoing gains at 10 years, ongoing fracture reduction.
+
+And then in terms of the DEXA data, as I alluded to before, again fairly unique with this medication, they do seem to have ongoing gains.
+
+So you can see here the group that was getting it all along, all 10 years, the group that was switched over at three years, and again they all have these ongoing gains, the ten year group getting more than the seven year group.
+
+So where does this medication fall into our armamentarium? And I think again, this is something we can talk about.
+
+So this is a mashup of the ACE and the Endocrine Society guidelines. All our guidelines don't always say the exact same thing, but I think that the gist is the same. But essentially, if we're thinking someone's at low risk or moderate at risk, you know, by whatever criteria, we're thinking about non pharmacologic agents or maybe oral bisphosphonates. If we're thinking someone's at higher risk, that's where denosumab starts to come in.
+
+So T scores may be still in the T scores in the osteoporosis range, prior hip or vertebral fracture, FRAC score, that's elevated. And then when we're thinking about very high risk, again, the criteria are slightly different for ACE or Endocrine Society, but essentially very low T scores, multiple fractures, then we think perhaps more about initiating with an osteoanabolic in terms of sequencing. But perhaps we then think about going to denosumab, or maybe we think about denosumab first line.
+
+So I want to point out that the reversibility of denosumab was always known.
+
+It's not like that was a surprise. I think the surprise part was kind of just how robust it was and the clinical kind of complications that occurred.
+
+So even, I mean, you can see the date on this study from Henry Bone and his group where they were looking at bone turnover markers. And again, this is 2011.
+
+Denosumab was approved in 2010.
+
+So we knew that there was reversibility. And again, I think you have to kind of remember at the time, if you weren't practicing, this is when there was so much going on with ONJ and AFFS and all these concerns about bisphosphonates. And I think the idea that there was something reversible was kind of appealing, right, that, okay, here's this medication.
+
+It's on. When it's on, it's off. When it's off, we can stop it.
+
+Someone can get their extraction.
+
+This is going to take away or at least I'll be curious whether people. I remember feeling like this at the time.
+
+So I think the reversibility itself itself was not so much a surprise at that time.
+
+So again, this is looking at the trial data and you can see this is change in bone density.
+
+So we knew that the bone densities, that you would lose the bone density you gained if you stopped the medication. We knew that CTX would go up. I think the consequences of this were not so widely known. And I think also in these initial cities studies, people weren't on the medication for so long.
+
+So it was two or three years.
+
+So maybe we weren't seeing kind of the effects we're seeing now.
+
+So again, drug holidays are unique to bisphosphonates. I alluded to this point when we talked about the properties.
+
+So this is estrogen and calcitriol. And I put this slide here because I think the point is that most medications are reversible, right? Like if we stop our statins, our LDL goes up, we stop our blood pressure medication, our blood pressure goes back up.
+
+So I think the thought was, okay, if these medications are behaving like estrogen.
+
+So this is basically looking at placebo versus estrogen hormone therapy and then people who stop hormone therapy.
+
+So we know that hormone therapy will lower the CTX and everything from baseline, but when you stop it, you're going to see it go back up and again, maybe even a little bit more than before. But we don't see these vertebral compression fractures with estrogen cessation. When we look at bisphosphonates, it's a different ball game, right?
+
+So here's CTX on bisphosphonate this is from a trial that was comparing three years of zoledronic acid with three years of placebo versus six years of zoledronic acid.
+
+So it's a separate question, but I'm showing you the study just to show you how flat these curves are. Right. With the bisphosphonates.
+
+So if someone's gotten three years of zoledronic acid, even with three years off, they stay pretty flat. With six years on, they stay totally suppressed. This is unique for the bisphosphonates.
+
+So then what happened?
+
+Right.
+
+So then we started seeing all these reports of rebound fractures, and this was really concerning. And I know in our practice, a lot of this was happening kind of during COVID and people weren't coming in for their shots, and we were trying to figure out how to get people their shots, and it was, like, extremely stressful for everybody, I think, who practices in this field.
+
+So there were some clinical case reports of vertebral fractures, then followed by more case reports.
+
+This great article by Mike McClung canceled the denosumab holiday. This notion that there's no holiday for denosumab. And I think one of the more unique things we were seeing is that we're really seeing multiple vertebral fractures. They're kind of clustered in the area we expect them to be in, kind of that T12L1, classic osteoporotic junction.
+
+But we're seeing multiple fractures as well.
+
+So looking at Freedom, they went back and looked and said, gosh, were we seeing these fractures in people in the trial who stopped the medication?
+
+So, again, I want to take you back to the Freedom data that we were talking about in terms of when people stopped denosumab, were we seeing fractures? And essentially, the rates of having a single fracture, if you stopped denosumab took you back to placebo.
+
+So, again, more kind of what we're thinking about, like, you stop the medication, your risk goes back to what it was. You basically have no ongoing protection. But one of the differences, the rates of multiple vertebral fracture were definitely higher.
+
+So your risk of having a single fracture were the same, but your risk of having multiple vertebral fractures were higher.
+
+And there were different things that led to that.
+
+So if you had prior vertebral fractures before, you were more likely to have a vertebral fracture with stopping. If you were off treatment for longer, you were more likely to have a vertebral fracture with stopping. And the DEXA amount of loss also predicted fracture so there are clearly some people who are at more risk than others for stopping.
+
+And I think that's one of the things we have to think about in our patients as well.
+
+So why does this happen?
+
+All right, so this looks a little bit complex, but just kind of bear with me as I take you through it, because, again, I think it relates to these unique properties of denosumab.
+
+So again, we've talked about osteoblasts and rank ligand.
+
+So over here on your left, you'll see the osteoblast basically being inhibited by rank ligand here. Right.
+
+So here's our denosumab when it's in action, and it's inhibiting the pre osteoclasts going to osteoclasts and then increasing osteoclasts going to osteomorphs.
+
+So basically, under the setting of denosumab, you have all these pre osteoclasts and osteomorphs kind of sitting around primed for action.
+
+So you're not having differentiation of pre osteoclasts.
+
+Oh, sorry. You're not having differentiation of pre osteoclasts, and you're having more of the osteomorphs.
+
+So you're also not getting the osteomorphs to go back into osteoclasts.
+
+So it's inhibiting this fusion of osteomorphs back into osteoclasts.
+
+So you're basically getting all these osteomorphs that are, again, just like, ready to go. When you stop denosumab, all of a sudden there's all this rank ligand around, and then there's all this resumption of this process. It's like, okay, we've got all this, you know, ready to go.
+
+And it's almost like an osteoclast storm is what's happening.
+
+So you have basically all these osteomorphs fusing back into osteoclasts, all these pre osteoclasts differentiating, and essentially you're just in this kind of ripped. And that's why we see These really high CTXs and really high osteoclast action.
+
+So it's basically like this pool of cells just like, ready to go, you know, an osteoclast storm of sorts.
+
+So who is most at risk? And I alluded to this with the Freedom data.
+
+So the people who have been treated for more than two or two and a half years, the people who have had prior fracture, the people who seem to be somewhat protected are the people who were on bisphosphonates before. And I'm seeing some nods here, too.
+
+I think people may have experienced that. And again, I think it's that property of the bisphosphonates that perhaps they're just, you know, they're not kind of in that. In that same kind of primed place for this osteoclast storm age.
+
+Some studies, yes.
+
+Some studies, no. I would say that's kind of mixed results. But what do we do if someone needs to transition?
+
+So with that, we're going to go back to our case.
+
+Any questions before we go back to the case and kind of transitioning? How many people are struggling with this in their clinic? Yeah, that's why you're here.
+
+Okay.
+
+All right, so here's our lady.
+
+So this is what happened before. Right.
+
+So it was December of 2020.
+
+Routine follow up, feeling great. Hey, just here to look at my Dexa.
+
+So here's her history, et cetera.
+
+So she started in 2015 as we talked about.
+
+So we continued the denosumab. As I said, I get a my health connection message. This is true. Oh, boy.
+
+Right.
+
+Okay.
+
+So I call the dentist back. She does have onj.
+
+It's a small lesion.
+
+Okay.
+
+So we'll talk about kind of what one could do.
+
+So obviously, there's all kinds of possibilities that we'll consider.
+
+However, this particular oral surgeon was okay with her remaining on it. He was like, look, I think this is small. I think we can treat through this. And it was basically.
+
+I think it was October, and she's due to get it in December.
+
+Like, let's see how she's doing. Can she get her December dose?
+
+So we talk about it.
+
+She does receive her December dose, and it heals.
+
+So you're like, great, I'm out of the woods, right?
+
+No, but now she's like, well, that was really scary. And I don't know if I want to be on this medication forever and my risk of having this happen again.
+
+Can we talk about going off?
+
+So fair. Right?
+
+So she comes in for review and discussion, February of 2023.
+
+So here she is. And this is sort of like such an illustration of the sort of the beauty and the irony of the situation is her bone density is still going up. Right.
+
+So for all intents and purposes, from an osteoporosis standpoint, she's done really well on this medication.
+
+So here she is in February of 2023. Right.
+
+So she's actually gained from her 2021 that we talked about.
+
+And so she's.
+
+And again, if you look, even look at where she started, right?
+
+So this is time point zero back in 2005.
+
+So basically, she has the same bone density as she did 20 years ago.
+
+You know, I mean, it's really pretty incredible.
+
+And she hasn't fractured. She has the same bone density in the hip as she did 20 years ago. I don't think that many people in their 70s have the same bone density as they did 20 years ago. And then here's the overall scores.
+
+So again, when we're thinking about treat to target and all these kinds of things, here she is. She's minus 2, she's minus 1.9.
+
+So overall, she's in the osteopenia range and she's done well.
+
+So what do people want to do?
+
+Somebody.
+
+So who votes for.
+
+So we'll run through all the things.
+
+So who votes for an oral bisphosphonate?
+
+Okay, who votes for Zol? A few more. Who votes for teriparatide? Couple.
+
+Who votes for Romo?
+
+Okay, so I would say most of the votes were for xol, a few for Orel, and very few for osteoanabolic. Anyone want to make a comment or a point for their case?
+
+Okay, so we'll review.
+
+So these are all the options.
+
+So let's just go through the data for each of them. None of them are wrong. I guess maybe just some are better than others, perhaps.
+
+So we do have data on each of the following.
+
+So I'm just going to go through weekly oral bisphosphonate zolendronate. We have the most data on this, but one of the questions is how often. When do we give it?
+
+How many doses? Yeah, I'm seeing all the nods. Romozosumab. We have a little bit of data.
+
+PTH analogs. We have a little bit of data. Oh, and one thing I didn't mention, and I don't know how many of you have seen this, is there's been some recent reports of, like, trying to wean off denosumab.
+
+So I don't know if anyone would.
+
+I didn't ask. Would anyone vote for that? Maybe not.
+
+Okay, so oral bisphosphonates.
+
+So oral bisphosphonates seem to work best if the duration has been short. And there's a couple of trials. There's one called the DAPS trial, There's one called the CARDS trial, where they basically had people who were on a short course of denosumab switched over to an oral bisphosphonate and did Pretty well. I think a lot of times this is not our clinical population that we've put on denosumab because we've put them on it for some other reason.
+
+So that's nice, but maybe not that helpful. Alendronate probably works better than resedronate, and I think that's just the properties of that medication being a more potent bisphosphonate with a longer half life.
+
+Some people have argued if you're going to start an oral bisphosphonate, perhaps you should start it before that six months.
+
+So what I mean by that is like, you know, my lady was like December and June.
+
+Should you maybe start it in May with the idea that, you know, as that pool of osteoclasts becomes available, you're going to try to suppress them versus kind of waiting for everything to rebound.
+
+So there is some thoughts with the oral bisphosphonates of perhaps starting early.
+
+Some people check markers in that situation, some people don't. There's not really any necessarily any data for that.
+
+Most people five months into their denosumab are going to have a pretty low serum ctx.
+
+So I don't know how helpful that is. But if you're a marker person, I know some people do check markers.
+
+So if you do an oral bisphosphonate and you have them on it, I think in that situation you could consider checking a CTX after you have them on it and kind of seeing if that's working.
+
+So let's say month, five, you start them on an oral bisphosphonate. Six months, let's say three months. You check a CTX if it's really high, well, maybe that's a situation where the IV might work better.
+
+So I have certainly done that.
+
+Well, I'll show you the case.
+
+So what about going straight to an IV bisphosphonate? I would say that's where most of the data is.
+
+So I'll go through a couple of these studies.
+
+So this was the very first. This wasn't necessarily, you know, kind of looking at this, but this was the first data that we had that made people think, oh, maybe giving it right at six months is not a good idea.
+
+So this was a study by Ian Reed and their group out of. Oh, gosh, I just forgot if it's New Zealand or Australia.
+
+I'm really sorry. New Zealand, I think.
+
+Right, okay, sorry if there's any New Zealand or Australians in the room.
+
+So the patients had been on it an average of seven years.
+
+So that's long Term they gave one dose at six months and they saw a lot of loss.
+
+So that was kind of the first data we have.
+
+So everybody was like, whoa, this is not going to work. We need to look at different times of dosing with IV bisphosphonates.
+
+Maybe we need to look at different doses, maybe we need to look at multiple doses.
+
+So that was kind of where it started.
+
+So then there was a study, this zollermab study, and they looked at giving it at six months or at nine months based on ctx.
+
+So again, that idea was like, okay, maybe you need to wait for the CTX to come up, you need to have more osteoclasts, even active so that you can shut the down.
+
+And if we're giving it right at six months, maybe it's too early and there's just kind of not enough sites basically ready, ready to take the medication.
+
+So in that study they'd been on an average duration of four and a half years. But all groups did have loss.
+
+So even giving it either six, nine months waiting for the CTX to rise, everybody lost.
+
+And basically this is from the paper, they said the average loss corresponded to 0.25 to 0.5 standard deviation. And that should be expected. Expected, right.
+
+So, and it's very difficult, I think many of us have had these conversations with patients to be like, I'm going to take you off this medication, I'm going to give you another medication and you're going to lose bone.
+
+Right. Like, this is challenging for us to say to people, but this is what seems to be happening. When they looked at the six versus the nine, actually the six month did better.
+
+So that initial thought of waiting really kind of hasn't panned out.
+
+So you don't really want to wait for the CTX to, to be high, because once the CTX is high, the loss has already happened and you're trying to put the horse back in the barn.
+
+So give it at six months versus giving it at nine. But of course that doesn't help the whole story.
+
+So next study looking at this transition options.
+
+So they were looking at the difference of whether people had been on it a short time or been on it a long time.
+
+So just to walk you through this a little bit, they looked at this is number of doses, not years.
+
+So there is a five plus or minus two doses.
+
+So basically like two to three years, ten plus or minus two doses.
+
+So essentially five years and then kind of seven and a half or more years.
+
+So how they decided in this study was they gave an initial dose and then they looked at bone turnover markers and if the bone turnover markers were elevated, I think for this one was like a CTX around 500, then they did give a second dose. Interestingly, the group that had the greatest bone loss. Ooh, whoops, sorry.
+
+Was actually the middle group.
+
+And so that was kind of challenging because basically the people who had been on it for very long didn't lose as much. This is how much they went down, right?
+
+So this is two years, they lost about 3%. 10 years they really lost more.
+
+But kind of this change from, sorry, 10 doses, they really lost more. But once you got from five to seven and a half, it didn't really matter so much. This was the group that seemed to really lose the most. And maybe they're just losing so much of what they've gained.
+
+But essentially that was kind of the upshot.
+
+So this shorter term group did better again, but the second dose really didn't help.
+
+So this is the most recent data we have from Bente Langdal's group. And they're looking at this idea of giving multiple doses.
+
+So maybe we just need to keep giving multiple doses until we can get that CTX down.
+
+So this looks a little complicated, but I'll walk you through it.
+
+So basically baseline, everybody got a dose at six months.
+
+Okay, so 66 patients.
+
+This is kind of the six month time frame when they're due for their denosumab. And then they gave multiple other doses based on other criteria.
+
+So at three months they checked CTX. If the CTX was greater than 0.5 or 500, the way we think of it, they gave another dose, they checked at six months.
+
+Again, for some of the people, if it was greater than 0.5, they gave another dose.
+
+So this is just following CTX.
+
+Some patients refused.
+
+So important to note, 12 months.
+
+They also had DEXA data.
+
+So if the bone density had gone down by more than 5% at the hip or 3% at the spine, they gave another dose.
+
+Sometimes the physician just decided to give another dose. And again, some number of people were not treated because the physician was not comfortable with it, or they refused treatment.
+
+And then they did the same thing at 24 months.
+
+So basically multiple doses over the course of two years based partially on CTX data, partially on DEXA data.
+
+So we can't prevent the loss, so the loss still occurs. One of the things they saw, and she really kind of emphasized this when she talks, is a lot of acute phase reactions.
+
+And that can be, and I will admit I Had a personal experience with this, with a patient getting multiple doses. And that can be really challenging. I think we all are used to preparing our patients for acute phase reactions and kind of go through our whole, like, come in well hydrated, some of us maybe infuse it a little more slowly, take Tylenol. But the acute phase reactions that occur, I think, in this very high setting of bone turnover are really robust.
+
+So trying to then talk someone into another dose at six months can be very challenging. There can be some insurance challenges, too. I've definitely gotten calls from our infusion center even too. Or even just being like, why are you doing this?
+
+What are you doing?
+
+So the good news is that no fractures occurred during this study. I think the challenging news is they didn't prevent the loss. Most of the loss happened at the first year.
+
+So again, just things that are sort of helpful.
+
+So this is the 12 months after the initial Zoll treatment.
+
+Again, some people have gotten multiple doses, some people have gotten one dose, but it went down. You can see here, 2.5 plus or minus 4.2%, 1.5 plus or minus 2.5%.
+
+It was significant, but obviously in some patients more than others. And then there wasn't a significant change in the femoral neck, although that's not, I think, a significant site we look at quite as much. But from 12 to 24, there wasn't really an ongoing loss.
+
+So it did seem that most of the loss happened in the first year.
+
+So that's kind of what we know right now about zoledronic acid. Honestly. I mean, that's the most recent data.
+
+So I think, again, we can talk about it more in the Q and A, but there's no, you know, it's not clear exactly what the course of zoledronic acid is that's going to prevent this, if there is one, honestly.
+
+But I think if you can get through that first year, maybe that bodes well. But again, I think you have to see what's happening with your individual patients, because I think we've all experienced some do just fine and some really have a lot of loss.
+
+So what other options do we have?
+
+So PTH analogs.
+
+And this isn't about denosumab discontinuation per se, but this is just the data we have about switching from denosumab to teriparatide that you're probably familiar with from other clinical practice. Remember, this is a study out of Ben Leder's group, the data switch trial. And what they were looking at was actually giving Teriparatide and denosumab together. It was a sequencing study.
+
+Right.
+
+So this is one of the studies that tells us that giving an anabolic first followed by an antiresorptive is great. However, if you're thinking about it with the lens of this talk and looking at giving denosumab and then giving teriparatide, not so great. Right.
+
+So we know that people will lose some bone if they switch from denosumab to teriparatide. Are there situations where you might have to do it? Yes, I've been in those situations and you probably have too.
+
+Personally, I will tell you, I've seen some pretty severe hypercalcemia in that situation.
+
+So you do have to be careful, I think, because they are in such a high turnover state. If you're adding pth, that's probably another thing to think about.
+
+So it's really probably not a great option, to be honest. But.
+
+So that's kind of the data we have. However, if you can go from teriparatide to denosumab, we know that the gains are really good. We don't have data on abaliparatide. What about romazosumab?
+
+So we actually do have two studies that looked at this.
+
+So 22 women who were on placebo for two years, denosumab for one year, and then ran Romo for one year.
+
+So again, that's not necessarily a clinical situation that we're going to be in a lot, but, you know, maybe.
+
+So in that situation, the spine increased by 5%, total hip by 0.9%.
+
+Another study of denosumab for two years, and then Romo to one year again. Spine increased by 6.4%, total hip by 6%.
+
+So maybe kind of a little bit blunted, but, you know, still certainly not worse. Right.
+
+So what they conclude is that the increased turnover from discontinuing denosumab can't be fully compensated by adding Romo.
+
+So you're not going to maybe see quite the same gains as you may have on Romo in a treatment naive patient. But you're not going to see losses and you're not going to see kind of vertebral fractures. However, remember, this is one year and two years.
+
+So again, I'm not sure it really answers the question about our patients who've been on for five or more years.
+
+So what about this denosumab taper? And we'll have to talk a little bit about what about the patients that we can't give bisphosphonates to so this is a study out of Alia Khan in Canada giving 30 milligrams every six months. 114 patients, they had stable to increasing bone density at two years. Most had been pretreated with bisphosphonates.
+
+So they're probably a more protected group. But my question there is kind of like, then what?
+
+Right, so now you just have them on 30, but you're kind of. You've kicked the can down the road a little bit, right, but you're still not out of the woods.
+
+So there was another study that looked at that more recently. 30 milligrams and then 15 milligrams at month 12. And there I'll show you the pictorial of that again, once you get to this 15 milligram dose, they do continue to lose. This is only 13 patients, but basically, I mean, this is kind of sad to show.
+
+So this is the time point before they started denosumab.
+
+This is at the time point at which they were going to stop it. And then they basically kind of lose what they've gained. And it doesn't look quite so dramatic here, but essentially they're back to where they were.
+
+So they basically lost everything they had gained in the head hip.
+
+And one patient in that study did actually have multiple vertebral fractures eight months after the last 15 milligram dose.
+
+So, again, I'm not sure this tapering is necessarily going to be the answer either. But what if you have someone who absolutely can't take a bisphosphonate for whatever reason? Maybe this is an option for them.
+
+Maybe this is kind of a niche subgroup for that.
+
+So what guidelines do we have?
+
+So these came out a couple of years ago from the European Calcified Tissue Society and basically kind of goes with what we've been talking about.
+
+So if they've been on it for less than two years, their fracture risk is low.
+
+That's probably a good person to stop. Right.
+
+So an oral bisphosphonate or zoledronic acid for one to two years is what's recommended. And I think in that population, they tend to do pretty well.
+
+The long term is more complicated. You can certainly continue for up to 10 years or beyond. And I think we probably all have patients like that that we are just not going to stop this medication. And again, these are a couple years old, so it doesn't incorporate the newer stuff that I showed you.
+
+But the idea is the same, giving zoledronic acid six months after the last dose, measuring bone turnover markers, perhaps repeating a dose.
+
+So that's something you can think about there. If zoledronic acid is not an option, you could consider an oral bisphosphonate first. And I do that actually a fair amount.
+
+If they've had a vertebral fracture after they discontinue denosumab, you could resume it. And I've done that as well. You could give zoledronic acid. You could give an oral bisphosphonate and not giving teriparatide alone for the reasons we discussed, but perhaps giving them together, continuing the denosumab and adding the teriparatide and then giving zoledronic acid.
+
+One of the things they do suggest is avoiding teriparatide monotherapy. And as we talked about, we know that there's losses. And like I mentioned, I've personally seen a fair amount of just very high bone turnover and some hypercalcemia and avoiding vertebral augmentation. That's a really important kind of niche point with these patients, is they often have multiple fractures.
+
+They can end up in the hospital, and kyphoplasty really does not seem to do them well. And there are subgroups of patients for whom kyphoplasty does do well with vertebral fractures, but this particular group really does not do well with vertebral augmentation.
+
+So definitely best to avoid. All right, back to our case.
+
+Guys want to know what happened? I'm revealing myself here. I'm sharing a moment of vulnerability with you.
+
+Okay, so we have the discussion, right?
+
+She has the onj. It heals.
+
+You know, she's had these great gains, and I'm like, well, I'll switch her over. Like, maybe it won't be so bad.
+
+She's gained so much. Like, it'll be fine, right?
+
+So I start her on an oral bisphosphonate, and she's doing fine with it. She's, like, tolerating it well.
+
+All going great. Her ONJ heals, as I told you, and she has no fractures. She has no back pain. I'm like, yes, out of the woods, right?
+
+But the guideline said I'm supposed to check a CTX, right?
+
+So I check a CTX. Can you guys see that? 1,000, 529, August 30th. Six months, right?
+
+I'm supposed to check a CTX. That's six months, 1,529.
+
+So, all right, now what do I do?
+
+So, based on what I showed you, I gave her a dose of IV zoledronic acid in October of 2023, a little bit after that.
+
+And again, she did great. She actually didn't have an acute phase reaction. This patient's like a total rock star. She.
+
+Amazing that she still puts up with me after all this.
+
+So we're supposed to repeat her ctx, right? And fortunately it starts to go down.
+
+So I don't know how well you can see that in the back, but August 2023, she's 1,529.
+
+I give her the dose in October, have her come back, it's gone down by half. It's 730. I'm like, okay, I didn't dose her again. I waited and then I checked it again in October of 2024.
+
+It was 360.
+
+So I was like, we got this, right?
+
+So okay. Like feeling pretty good about it.
+
+So she comes back in for her routine follow up in November. Look at her bone density.
+
+I know.
+
+So, yeah, even kind of after all that.
+
+So here we are. I mean. Oh, gosh.
+
+Yeah, so, right.
+
+And I showed you this. She basically lost like everything she gained over the last like 20 years.
+
+Now, she didn't fracture and she's like, not particularly angry, but like, I feel awful.
+
+You know what I mean?
+
+And like, I mean, it sure feels like a failure to give some. I mean, I don't know, we can talk about it. But yeah, I was just like, oh, man. And yeah, so this is what happened.
+
+She's doing fine.
+
+But now look, right?
+
+So she was like, remember all that.
+
+Now she's back, minus 2.5, minus 2.4.
+
+We're like back where we started, so what can we do?
+
+So this actually came out of a very nice recent paper. There's been some really nice recent reviews on this that I've highlighted here that I definitely would recommend that you take a look at. Because I think everyone's really trying to think about how to best manage this.
+
+So ensuring compliance before people start. I think having that talk about the medication again, that wasn't the issue with my patient. But I think we've all had patients where they missed a dose. And understand, like I said during COVID it was a big problem doing your secondary workup, making sure people get it every six months plus or minus two weeks, again, really being careful once they've been on it longer.
+
+And again, I don't necessarily do this, but the suggestion of doing a CTX once a year, maybe thinking that there are people who are rebounding early, earlier, if you're a marker person, there are some people who seem to clear it longer or don't. Doing your DEXA and then thinking about your exit strategy is kind of what I've started to say to patients. We have to have an exit strategy.
+
+So lastly, I'll just show you a study that we did with one of our fellows and a pharmacist in Colorado where we tried to put a reminder in to basically make sure that the problem wasn't people just not getting their dose on time, because we didn't particularly talk about that today, but that can definitely be a problem.
+
+So we did implement an automatic reminder as part of our, as part of our therapy plan when we order the medication. And we did see a significant rate of, you know, people not being delayed. We had five fractures in the group before we implemented it and two afterwards, which was not significant. It was a small number, but it was kind of nice to see.
+
+So trying to, you know, use strategies within your own institution of what you can, can do to at least make sure that people get it on time.
+
+So that's not the reason it's happening.
+
+So take home points and we'll have discussion.
+
+So denosumab is a highly effective medication with good data to fracture prevention.
+
+So I really don't want to feel like I'm standing up here and bashing this medication. I think it has a very important place in our armamentarium. But just like bisphosphonates, we have to know who to use it, how long to use it, et cetera. I think its reversibility and rebound phenomenon really creates some unique trial challenges for treatment and monitoring.
+
+I think we really have to think about who to start, duration of treatment. I have a lot of people I'm start like, let's say they're really low and I do one or two years of an osteoantabolic. I will then do a couple years of denosumab. I think that's a great place for it.
+
+But then plan to change. Like, again, just thinking about that exit strategy, how long are you going to do this? Is it someone who is 85 years old and you're like, I'm going to do this forever, you know, but just thinking about that before you start. And I think we're learning best practices for transition.
+
+So stay tuned. I think this is going to be an ever evolving topic.
+
+So thank you so much for your attention. Here's my plug for this is beautiful Colorado in the winter, which you all probably know, but it's also beautiful in the summer.
+
+These are our 10th Mountain Huts, which are beautiful in the winter and the Summer.
+
+So come to Colorado. Thank you. Thank you.
+
+Thank you. Nicole. Can you guys hear me? No.
+
+This is Lynn. Hey, Lynn. Hi. That was awesome.
+
+Thank you.
+
+So you didn't give us a choice probably because the patient didn't want to of, you know, prolia for life staying on DMAB and doing bilateral femur films explaining that atypical femur fractures are rare. And you know, I mean, especially if she was 80 or 85. I mean she was 75, right, in her 70s now she's like 78.
+
+But yeah, but after the ONJ she wanted to get off.
+
+But absolutely, like that is absolutely an option for sure. Thank you. It was a great talk.
+
+I think all these studies were made like in the shadow of the WHI study. Why don't we think some studies now we are giving more and more estrogen to women that are in their 60s and 70s and 80s, mainly for the brain function. Do we have some studies or shouldn't we do.
+
+I know we don't too many to kind of give.
+
+Estrogen is great for preventing fractures.
+
+We know from before. And the mechanism is a little bit different than bisphosphonates.
+
+So shouldn't we do some studies actually on estrogen or like even we have something that we know we wouldn't harm with the vista.
+
+I think there's some small data. I think there might be one study with relaxamine that wasn't particularly like, didn't prevent a ton of loss. But I think in the right person you could consider that. I don't think there's any data on estrogen.
+
+But if someone, what if someone was on it all along too? Is that possible that that could help? It is, but in the wh, very few people were getting estrogen.
+
+Now the last five years, maybe people started start getting more estrogen.
+
+I just wonder if it's a potent enough antiresorptive though. Right. Like if you switch someone from denosumab to zole and they're still getting CTXs that are so high the bone density would not change too much. But the fracture risk, we know with estrogen and we know even with bisphosphorus.
+
+Right. But like they're in this like really high osteoclast state. Is like transdermal estrogen going to really be enough to block that? I mean, you know, it's a question, but I think the less potent antiresorptives might not be as effective.
+
+I mean, I think it's just not a super strong antiresorptive. It's great medication for Bones. But yeah, in this particular setting, it wouldn't change, but the fracture risk would. What happens with the bisphosphonates?
+
+You know, they are flat, even if bone density doesn't change. The fracture risk is actually. Right. But in this particular setting.
+
+Right. Of very high ctf. But. Yeah.
+
+Well, do the study. I'd love to see it. Thank you so much. Great.
+
+Thank you. My question is, we have a. It seems like orthopedics kind of fights a little bit with endocrine in our institution.
+
+So they're following one set of guidelines or thought of their guidelines, because I don't really believe those are as better or more qualified data than what ours is.
+
+So we have this little fight against, like, they have to come off.
+
+And so my question is, is their rationale is with the femur fracture.
+
+So they started to screen all the patients regarding doing surveillance on their femurs. But where's the data?
+
+Do you know of the data? Oh, like people who are going to stay on it long term and doing, like. That's like what Lynn was alluding to a little bit. Yeah.
+
+She was saying, because we're kind of having a fight, we're kind of keeping them on. We're not doing this routine surveillance. Yeah, I mean, there are people doing that. I don't routinely do it.
+
+There's also DEXA software, you know, now that will go further down, I think that some of you may use. I don't do it routinely. I always tell everybody, like, if you have any kind of groin hip pain, like, I need to know about it right away, like, period, sort of all my osteoporosis patients.
+
+So if I get that call, I look.
+
+I don't tend to look proactively. There's no data to say we are to be looking. I don't think so. I mean, it's out there.
+
+Like what Lynne was saying as, like, consider if you're going to keep someone on it long term, doing that. And again, now that we have this DEXA software. But I think you could consider it. But no, I don't think we have any data.
+
+I mean, you'd be picking up an aff sooner, potentially getting it rotted.
+
+You know, I think that's just kind of what you would be doing. But yeah, and I definitely have people on it long term. Like, don't get me wrong, I have plenty of people who are going to be on it for the rest of their lives and they're doing great.
+
+But obviously that's not what this talk was about.
+
+So your presentation was Excellent. Thank you. Thank you.
+
+Your patient case brings up two points. The first is, to what extent does denosumab contribute to onj? The second question is, in a patient in whom denosumab seems to be working as well as it was in your patient, what are the real disadvantages to continuing the patient on as long as it's working? Yeah, I mean, I agree.
+
+I mean, again, I was vulnerable with you all. Like, I just shared what happened. I mean, in retrospect, should I have left her on it? Like, probably.
+
+It's hard to do with a patient who's had onj. Like, come on, guys. Right? Like, wouldn't that be a little bit hard?
+
+Like, I know it's easy to say, but, like, she's had ONJ, she's minus 2, she hasn't fractured in 20 years. I mean, yes, I think that certainly could have been an option. And of course, if this was an ONJ talk and then I'd be presenting to you about her. Second, you'd be like, you left her on it and she got ONJ again.
+
+What's wrong with you?
+
+So I think clinical practice is hard.
+
+You know, we do the best we can with the information we have. But, yes, I mean, even the fact that the dentist was comfortable with her treating through the onj, I do actually have another patient who had this weird, like, osteonecrosis of the ear.
+
+Have you guys heard about this? Apparently, it's more common than we think, but it's basically like a ONJ of the ear, like one of the little ear bones.
+
+Anyway, it was found in some dentally, and long story short, the ENT was like, whatever, it's fine. We don't even know if this is significant.
+
+So, like, that patient, I have continued through and she's done fine.
+
+So I think there are definitely places to continue through things. But again, she just wasn't comfortable afterwards.
+
+So we did make that switch.
+
+Thank you very much. That was very good. Actually, it's a daily practice thing, so I'm going to. Just more challenging is that I have the same story for your patients.
+
+Just, she has a typical femoral fracture.
+
+So what you do. Yeah, I think that would be hard. I mean, I would think about switching to an osteoanabolic.
+
+In that case, I'd probably be more comfortable with something because, again, her ONJ had healed. But I think if you're in the setting of something that's not healing, you would think more about an osteoanabolic. I did have another patient in a different situation who had multiple fractures during COVID who I did put on teriparatide. There are some people too, like maybe also with a low dose bisphosphonate.
+
+I think in those people, if you're going to switch to an osteoantabolic, you just really have to watch the calcium, you really have to watch the ctx. And I think sometimes you just have to do some slightly unorthodox things of adding an antiresorptive perhaps onto your osteoantabolic. I think it's very patient dependent. But yeah, I mean, I think if someone has a poorly healing fracture, thinking about an osteoantabolic always makes sense.
+
+Hi, I'm one of the Endo fellows.
+
+So I've come across this case and I'm only my first year.
+
+So I had something like this recently and she was asking me, you know, well, why can't I just stay on it? Like, I like Prolia, I don't care that I'm at 10 years.
+
+And we were talking about it and someone was saying, teaching me like, no, you can't, there's no data for it.
+
+So is that true necessarily? Yes, you can leave them on for 10 years and yes, there is no data for it. Right.
+
+That's what I was talking together. But you're saying we don't have long term studies on lots of things. I mean, there's no, you know, we're not going to have that. The Freedom trial is done like those, you know, it's.
+
+And I think many of those women are probably still on it.
+
+So. Yes, I mean, again, I do have patients that have been on this medication since it came out.
+
+So that's 15 years now.
+
+Right?
+
+So, yes, you.
+
+Absolutely, yes. We don't have data, but, you know, we don't have data for long term treatment of lots of things that we do.
+
+Thank you. Actually, I had the same question. If they have no side effects, then how long do you think is. Can you keep them on it?
+
+Like 15, 20? I mean, I know there's no data on it, but like, how. I mean, okay, raise your hand if you have someone on it for more than 10 years in your practice.
+
+Okay.
+
+Every single person in this room pretty much. Right.
+
+So I think, you know, I think the risks of stopping in a lot of those patients are higher than the risks of continuing.
+
+So I think the risks of continuing are the small chance that they're good.
+
+I mean, you know, obviously I had to present to you a dramatic case because this is a conference, but like, there's plenty of people who stay on this medication and do just fine and say, I want to stay on it, and they do.
+
+So I think. I think people can and should often remain on it forever if they're doing well. I think we just have to.
+
+For me, I don't think I was thinking about that in 2010. Right. Honestly.
+
+So I feel like I'm thinking about it differently now.
+
+But absolutely, there are patients who can and should stay on it forever. Thank you. Sure. Hi.
+
+Thank you very much. This is a very timely topic. I hear questions about this all the time. I'm Roxanna Thanadarm, Virginia.
+
+And I have to caveat. This is not my patient. It's a friend of mine. But I'm going to totally give a different twist.
+
+So she has a patient who was started, he's 66 years old. He was started on Prolia for concerns for osteoporosis, has T score of like, negative 3.2. And come to find out she has actually now changed his diagnosis to be xlh.
+
+And so he's been on Prolia for two years.
+
+She's starting him on Crysvita for a month. Her kind of question is, is that is the Prolia?
+
+And now his T score over this two years has improved.
+
+Now it's like negative 2.8.
+
+Not a huge improvement, but better. Kind of the question now for her is that should she continue the Prolia, should she discontinue the Prolia? Does the Crysvita have any changes to the bone morphology that would allow for that to be the transition? Nice question to end on, right?
+
+Yeah. And there's some rare bones experts in the room, too, that I'm happy if they want to jump on this. I mean, I think the worry is that maybe they were treating, like, maybe she was treating osteomalacia with denosumab, which is maybe not as good a choice, and he might do better with Crysvita. I mean, I think, again, I probably have to know more about the individual case, but it may be that being on burosumab is going to be a better choice long term.
+
+Kris? Vita. Yeah. I mean, again, you'd have to kind of know a little more about the case, but the worry would be starting someone on denosumab who actually has osteomalacia, not osteoporosis.
+
+Thank you.
+
+Okay. Hello. Thank you for the talk.
+
+I just have a quick question.
+
+Let's say you have a patient That's Prolia for 10 years, but can no longer afford it, and now the GFR has dipped down to 20 to 25. How would you decide what to use after? I mean, gosh.
+
+Okay, wait. They're still on Medicare? Is this real? The patient's still on Medicare.
+
+How come? They can't afford it anymore. You're just setting me up here. No.
+
+Okay, well, I think if you had someone with a decreased GFR who had to come off for whatever reason, we'll say she had ond. I mean, I guess alternative things to think about would be like perhaps off label, very low dose bisphosphonate. Like we use half dose bisphosphonate. Maybe follow the ctx.
+
+Maybe this is someone you could do the taper, you know, that kind of thing. I think you'd have to be creative and follow markers and do some kind of unorthodox things, but you probably want to find a way to transition to some kind of antiresorptive at a lower dose of some sort. How's that? Would you do like, a slow infusion of the zoledronic acid?
+
+Like cancel? No, I avoid. I actually, if I have to choose in someone with low gfr, I prefer low dose oral to iv just because. Yeah, I think the data is better for that.
+
+There were women in Osteoporosis Studies, Stage 4.5ckd on Oral, who did fine. All right, I'll be up here if anyone wants to chat further.
+
+---
+
+Generated by WhisperAI
+https://whisperai.com

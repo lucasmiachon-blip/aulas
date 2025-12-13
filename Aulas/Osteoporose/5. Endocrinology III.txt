@@ -1,0 +1,623 @@
+WhisperAI Transcription Report
+
+Title: 5. Endocrinology III
+Date: 11/19/2025
+Duration: 3445 seconds
+Language: auto
+
+---
+
+TRANSCRIPTION:
+
+Great.
+
+So we are going to make the move now into endocrinology 3 with metabolic bone disease, adrenal disease and reproductive disorders. And welcome back, Dr. Bodnar. All right, here we go.
+
+Thank you for staying with me into your Saturday.
+
+So here are the variety of topics. This is sort of the endocrine potpourri, as my nurse would call it. We've got a little bit of everything.
+
+We're going to start with metabolic bone disease.
+
+So our first question is, a 59 year old man is evaluated for hypercalcemia and he's asymptomatic. He has recently diagnosed multiple myeloma and takes no medications. His exam, including vitals is normal and a serum calcium is 10.8.
+
+Which of the following levels should be measured next? A, A125, dihydroxy, vitamin D, B, ionized calcium, C, parathyroid hormone or D, PTH related peptide. I'm actually sort of pleased at this outcome. It's obviously very split and that's because I think there's an important teaching point that's sort of hidden here that I don't think is something many of us.
+
+No, I actually will admit that I got this question wrong the very first time I reviewed these slides a few years ago.
+
+So it's actually the ionized calcium. And this even goes against what I will commonly tell my learners, which is we sort of mimic this high stakes exam where you're sort of forced into choosing only one blood test. And I say, well, you have hypercalcemia.
+
+What do you want? Get a pth because that's how we differentiate PTH versus non PTH mediated. But what they've told you in this case is he has newly diagnosed multiple myeloma. And what you may not know is that in multiple myeloma, you know, there's a lot we already know about kind of the abnormal protein levels, but it actually may affect calcium binding.
+
+And so you may get a falsely elevated serum total calcium, which is what you get on a basic or comprehensive metabolic panel. That's misleading.
+
+So the ionized calcium may actually be normal, in which case you don't really have true, true hypercalcemia in this patient with myeloma. But if they hadn't told you that choice, C PTH would have been the right thing to do.
+
+So the most common cause in outpatients and probably the whole world is primary hyperparathyroidism. This is usually asymptomatic and chronic and that's because we get blood tests so often.
+
+So 60 years ago and before you'd only see this when it presented with bad end organ damage like recurrent kidney stones and fractures and brown tumors and things like that.
+
+But now we catch this way before it is ever symptomatic.
+
+So it's most common that this is sort of caught incidentally. On occasion though, we'll make a diagnosis when someone has unusual fractures or stones. But it is certainly more common that it's caught because we see it on the metabolic panels. You can also get humoral hypercalcemia of malignancy.
+
+So this is where the PTHRP comes in. This is PTHRP driving the hypercalcemia. And this can happen with various malignancies. But you can also get osteolytic bone lesions.
+
+So not all bony mets will cause hypercalcemia. But if they're breaking down the bone, if they're lysing bone and freeing calcium into the bloodstream, you'll get hypercalcemia. You can get ectopic PTH secretion which is very rare, one that's not on here. But you'll see if you work in any sort of a long term care type of setting is you can get hypercalcemia of immobility.
+
+You know, if your, if your bones are literally sort of dissolving because you're not moving your muscles and using them, you'll get some hypercalcemia. You can get it from granulomatous disease. This is actually very interesting.
+
+So tuberculosis, disseminated histoplasmosis, even some lymphomas will increase production of125dihydroxy vitamin D which is the activated form, that's what calcitriol is, by promoting 1 alpha hydroxylase which is typically function of the kidney drug induced.
+
+So lithium is come up a lot today in the thyroid section. It can also cause a PTH mediated hypercalcemia. Generally speaking, it's not going to cause the single adenoma so much as like sort of just 4 gland overproduction. Thiazide diuretics.
+
+Thiazides are non pth mediated but they reduce urinary calcium excretion.
+
+And so you can bump up the calcium a little bit if you're on a thiazide diuretic excess vitamin D or vitamin D toxicity.
+
+So this is uncommon, but we do see it. You have to take a lot of vitamin D.
+
+So someone on 2000 units of D3 a day in perpetuity, we'll probably never ever get this. But a good threshold might be sort of weeks to months. Of approaching 10,000 units a day or more, Especially if there's no malabsorption and we don't see it commonly now that we have much better treatments for heartburn, but excess calcium, milk alkali syndrome.
+
+So somebody who is really just eating a ton of calcium containing antacids would be the classic case.
+
+FHH is important to know.
+
+So what FHH is is this is a genetic disorder in which the calcium sensing receptor in the parathyroid glands basically wants to see a higher set point of calcium.
+
+So it's like someone has turned the calcium thermostat up a little bit and it's largely without any complications. These patients don't get unusual fractures or kidney stones unless they have all the other things that cause those.
+
+So if they have FHH but smoke and drink heavily and are on chronic steroids, yes, of course they can get osteoporosis and fractures, but it's not really from the fhh.
+
+So the way to think about this though is on blood tests, it will look exactly like primary hyperparathyroidism. You will have high calcium, you'll have high pth. The only way to really distinguish it, absent doing the more expensive genetic testing, which we tend to reserve when the cases are unclear, is by doing a 24 hour urine calcium collection.
+
+If they have very low urinary calcium excretion, it's much more likely to be fhh. If you can also pair that with looking backwards at years to decades of stable high calciums that haven't really worsened, that's consistent with FHH being a lifelong genetic thing. Whereas if they have higher urinary calcium excretion, and you can look back in their chart and see that, hey, 10 years ago, calculated calciums were in the mid 9s, now they're in the high tens. That would be primary hyperparathyroidism.
+
+The reason it's important to know whether that exists is you don't want to operate on patients with fhh' cause you're not doing them any good.
+
+So of course hypercalcemia can cause that.
+
+Classic sort of stones, moans, bones and groans. But we think about abdominal side effects.
+
+Abdominal pain, constipation, even nausea, anorexia, even weight loss, if there's enough anorexia. This is another cause of polyuria, polydipsia.
+
+So not just hyperglycemia can do this. You can get acute kidney injury and over time, chronic kidney disease from calcium deposition.
+
+You can get mental status changes acutely from hypercalcemia. They get sort of very obtunded in a way, almost think about your hypercapnic patients. They may, mental status wise, they may look a lot alike to your hypercalcemic patients. You'd certainly want to do careful review of their medications.
+
+You want to see if there's any reason to suspect malignancy or granulomatous disease. And then of course, you'd confirm the hypercalcemia and measure the pth. And the way you can sort of reconcile these slides with that very first case is I would argue that the ionized calcium was confirming the hypercalcemia in that first case.
+
+So you're sort of doing that, then measuring the PTH and then moving on.
+
+And this right hand side of the slide is really why we care so much about the pth.
+
+We know primary hyperparathyroidism is common. If the PTH is high or even inappropriately normal, we're really thinking about parathyroid disease. And that's a very different focus.
+
+If the parathyroid hormone level is low, so the classic is less than 20 in the setting of hypercalcemia, then we know it's not PTH mediated. And that's when you can do all that other testing. If you have a pth of 100, which is high and hypercalcemia, you don't need to measure a PTHRP. You don't need to measure vitamin A or measure 125 dihydroxy vitamin D, because it's not going to be those other non PTH mediated causes.
+
+So this really helps us as our branch point in where do we put our resources and our effort?
+
+So acute severe hypercalcemia, not terribly commonly seen with primary hyperparathyroidism, more commonly seen with hypercalcemia of malignancy. You've got to give them fluids. These patients are very, very, very dehydrated.
+
+You know, we're not talking 500cc's down, they need liters. Typically you have to be very cautious with furosemide.
+
+So furosemide and other loop diuretics are attractive because what do we learn? We learn loops lose calcium, meaning loop diuretics as opposite to thiazides promote urinary calcium losses.
+
+So it's sort of attractive and elegant to think, well, let's give them a loop diuretic and pull that calcium out of them. But you're going to pull more water out.
+
+So you're going to actually worsen the problem more than you're helping it because you're going to make them more dehydrated.
+
+So we typically keep that furosemide in our back pocket.
+
+We give them a lot of fluid. If they start getting problems from the fluid, if they can't handle it and they're getting, you know, not just a tiny little bit of pedal edema, but maybe they're getting significant leg edema or they're getting, you know, now you can hear crackles in their lungs, their pulse ox is going down. Then you give them continued fluid with loop diuretics to flush out the fluid and flush some calcium out while you treat. This calcitonin is second to third line, sort of depending on how you view fluids and loop diuretics.
+
+But so calcitonin will tamp down calcium, but you get tachyphylaxis after about 48 hours of usage.
+
+So all it does is buy you a little time. They come in with a calcium of 16 and of course you're going to give them as much fluid as you can safely give. Calcitonin is probably not wrong in that setting, but coming in with calcium at 12 or 13, you can probably get that down without ever resorting to calcitonin before the calcitonin would even have worked anyway.
+
+IV bisphosphonates can also be used, including in the hospital setting.
+
+So zoledronic acid is superior to pomidronate, but pomidronate is also acceptable and sometimes is more cost effective for hospitals. Important to know, though, you don't get the effect right away.
+
+So if I give zoledronic acid Wednesday morning, Thursday morning, the calcium might not be any better.
+
+Friday morning, it might be only a tiny bit better. But you walk in on Saturday or Sunday, that's when you see the improvement. It's often at least 48 hours. And I usually tell teams that I'm consulting with really give it a good 72 hours.
+
+And it is interesting. You will see not much decrease, not much decrease. And then like day three, day four, it's down a point and a half, it's down two points.
+
+So it's impressive in the delay.
+
+Glucocorticoid is really reserved for those who have that excess 1 alpha hydroxylase activity due to granulomatous disease.
+
+So how would you know that? Obviously, if you knew about underlying widespread granulomatous disease, but also if you found a sort of very disproportionately high 125 dihydroxy vitamin D, you know, that might make you think about that. Denosumab can be used sort of as a stronger option to the bisphosphonates or in Patients who have enough kidney dysfunction that it's not safe to use bisphosphonates, you could give denosumab, same doses as osteoporosis.
+
+So 60 milligrams sub Q times one like the, the bisphosphonates. Gotta give it a few days. You'll see the effect, but not immediately. Hemodialysis is really a last resort.
+
+Obviously you've gotta involve your nephrology colleagues, but you tend to do this when there are also oliguric because you know that the calcium's not coming out any other way. If they're peeing, they're getting rid of calcium when you give them fluid.
+
+So hemodialysis thankfully doesn't need to be done that often.
+
+Next question.
+
+We've got a 45 year old man, three months of fatigue, constipation, polyuria, polydipsia. He has hypertension on losartan and diltiazem exam is normal. His serum calcium is 11.4, phosphorus is 2.2, creatinine 1.1. Which of the following would you measure next? 25 hydroxy, vitamin D, calcitonin, PTH, PTHRP.
+
+And we've not given you any ionized calcium option this time. All right, very good.
+
+So this is, I think more the typical case. The first one was admittedly, I didn't write the question, but admittedly a little bit of a like, ooh, gotcha.
+
+We tested something very unique about that multiple myeloma patient. This is the patient you see every day in your clinic, right? Where they've got some symptoms, they've got hypercalcemia, you need a PTH level to differentiate which direction you go. All right, so hyperparathyroidism, as mentioned, we find this typically asymptomatically.
+
+Now in the old days or in under resourced areas, you're going to find it with end organ damage. More commonly, they're going to have those, you know, stones, bones, moans and groans sort of symptoms that we were all taught in medical school. And you'll have these various degrees of end organ damage.
+
+So we start with ensuring that we have a high PTH simultaneous with a high calcium, that more or less clinches the diagnosis.
+
+Except you gotta rule out FHH if you're gonna go to surgery. But really, if you have high calcium, high pth, those are your only two diagnoses. You would measure 25 hydroxy vitamin D for a couple reasons. One is that it says on the slide here, deficiency may obscure diagnosis.
+
+You may have higher PTH with a vitamin D deficiency. But I would actually argue that you also want to know where your status is. Because if you're going to treat this in almost any of the ways we talk about, you really need their vitamin D replete for it to be safe and effective. And then you're going to check that 24 hour urine calcium to kind of estimate that stone risk formation.
+
+So this really does two things for you though. Number one is if it's really high, that's a criterion for surgery. Even if they're otherwise asymptomatic, if it's really, really low, that's when you start to think about FHH and maybe you aren't going down the treatment route. Serum phosphorus is really helpful because if it's low, that's indicative of a parathyroid mediated process.
+
+You want to get adexa because you want to know if there's any osteoporosis that's also a criterion for surgery and it's actually really highly recommended. This is newer in the more recent kind of worldwide consensus guidelines is to actually do kidney imaging in your asymptomatic patients. And that's because a fair percentage of these somewhere in the neighborhood, like 20 to 25% of people who are quote unquote asymptomatic, you'll actually find stones and then therefore they're not really asymptomatic, they have end organ problems and then they're a candidate for an operation.
+
+So we do recommend some modality to look at the kidneys.
+
+You in the patient who's otherwise asymptomatic, you want to make sure they're on a calcium sufficient diet. You don't want to overdo it, but it's very safe to have them be on regular amounts of calcium. The flip side of that is here's what the patient's going to ask you. They're going to ask you, doc, do I need to cut back my calcium?
+
+No. Unless they're drinking like a gallon of milk a day, no, they don't. If they're having a regular diet, they do not need to modify their calcium downwards. You want to measure and replenish vitamin D and you want to know what it is because it may alter your management a little bit.
+
+Example, let's say it's not a surgical candidate. You want to give a bisphosphonate, but if their vitamin D is very low, they're at very high risk then of overshooting to hypocalcemia.
+
+They're also at very high risk of infusion reactions.
+
+So you'd want to replenish that first.
+
+So when do you operate? Turns out in a lot of patients because all they need to do is meet one of these criteria and then they are a candidate for a parathyroidectomy.
+
+So if their serum calcium level is 1.0 above the upper limit of normal on your lab, they're a candidate if they have any skeletal involvement.
+
+So osteoporosis on DEXA or a vertebral compression fracture.
+
+I have colleagues who will actually do a VFA vertebral fracture analysis, which is a lateral plane film that's kind of targeted to look at that, that's an indication immediately if they have kidney involvement.
+
+So certainly hypercalciuria stones nephrocalcinosis, even if it's asymptomatic. But many of us also advocate for operating with lower GFR because that's probably a marker of chronic hypercalcemia over time.
+
+Now, where you might not choose a surgery just on the basis of that is let's say you knew their low GFR was due to some insult 20 years ago and it's been stable ever since.
+
+And the hypercalcemia is obviously very new on their labs over the last five years. Maybe you could make a case they don't need it just based on that age under 50. It's just because they have longer to accrue complications and symptomatic patients. I'll just add real quickly about age under 50.
+
+You should also be thinking about genetic causes like men. One, these patients probably deserve to talk to a genetic counselor and be screened for genetic syndromes because it's not normal to get primary hyperparathyroidism at age 35. But we do see it.
+
+Next question.
+
+A 54 year old woman evaluated for bone health assessment. She's postmenopausal. FRAX score shows 22% risk for major osteoporotic fracture and 2.4% risk for hip fracture over 10 years. Her T scores are minus 2.1 in the lumbar spine, minus 2.3 in the femoral neck and total hip minus 1.9.
+
+Which of the following is the most appropriate pharmacologic treatment? A, Alendronate B, estrogen C Raloxifene D Teriparatide. Very good.
+
+So what they have given you.
+
+This is where the FRAX score really shines. If you don't know what it is, it's a super easy calculator. If you type FRAX in your search engine frax, it will be the first link From University of Sheffield is where the link is sort of managed if you want verification. But essentially what the FRAX score is utilized in two ways.
+
+One is if you're not sure if your patient really should be screened for osteoporosis with adexa, you could actually run a FRAX score without a T score and it'll tell you what the risk is. And then you could know whether or not you would like to actually go ahead with doing adexa. But when it's most commonly used is this in osteopenia.
+
+So this patient's T scores are less than minus 1.0, but not as bad as minus 2.5.
+
+So the T scores haven't crossed the threshold to call it osteoporosis. And if she's never had a fragility fracture, you can't call it osteoporosis. But when you have osteopenia, sort of that low bone density in that in between range, this is where the FRAX score helps you. If they have a major osteoporotic fracture risk over 20%, so that's what she hits 22% and or hip fracture risk over 3%, we would recommend therapy.
+
+So this is, this FRAX score is the equivalent of your ASCVD calculators.
+
+You know, if she had three vertebral fractures and a T score of minus three, we're calling it osteoporosis. We're not doing a fracture, we're treating her. Just like if you had a stemi, you're getting the statin.
+
+But this is for those in between patients.
+
+And so alendronate is really first line therapy for your lower sort of morbidity, Metabolic bone disease, cases of osteopenia and high FRAX risk or sort of routine osteoporosis.
+
+So lots of causes. Estrogen deficiency is most common.
+
+That's why we see it so commonly in postmenopausal women. Lifelong low bmi, they just don't build up enough due to weight and mass effects. Alcohol and smoking, low sex, steroids.
+
+So hypogonadism, hyperthyroidism, hyperparathyroidism, malabsorption of calcium and vitamin D over time, Myeloma, inflammatory joint disease.
+
+So actually on a FRAX calculator, rheumatoid arthritis, if you check that, yes, it ups their risk. Hiv. And then of course, medications that are bad for bones, classically steroids, but also some anticonvulsants and GNRH agonists.
+
+So, you know, classic case would be androgen deprivation therapy.
+
+With leuprolide in metastatic prostate cancer, those patients who are taking their testosterone very low, they are at higher risk of osteoporosis.
+
+So in whom should we screen? It's tricky.
+
+So I think everyone agrees universally women over 65.
+
+Also, everyone pretty much agrees women less than 65, at least past menopause with one or more risk factors. Exactly when and in which men to treat is unclear. There are some guidelines. The most recent guidelines I've seen are from 2012.
+
+They're not very clear. I work at the VA. The VA has a lot of men. The VA doesn't have very good guidelines.
+
+So I think you should think about these just based on risk factors.
+
+So use your clinical judgment.
+
+So, for example, I think we're going to get to this on a subsequent slide, but we'll talk about risk factors in the meantime. You can also diagnose osteoporosis by any fragility fracture.
+
+So this is a fracture after falling from standing height, a hip fracture of vertebral compression fracture.
+
+So what is this? Not I work at, you know, again, I work at the va. I have some veterans who jumped out of helicopters from 30ft, you know, 40 years ago and they've had a vertebral compression fracture since they were 22.
+
+That's not osteoporosis.
+
+You know, massive six car pileup where all the cars were totaled. Broca femur, not osteoporosis, but fractures that shouldn't happen. That's osteoporosis.
+
+Again, osteopenia is when that T Score is a -1 or -2.4 at any one site. Osteoporosis is any one site -2.5 or lower. We use the Z score for people under 50, basically, so it compares to age matched peers, whereas the T score compares to young adults.
+
+So what can help?
+
+Certainly avoidance of things that are making it worse is a really big thing.
+
+So smoking cessation, alcohol cessation or minimization, getting enough dietary calcium and vitamin D, can they get off the steroids? Do they need that anticonvulsant, et cetera, et cetera, Weight bearing and muscle strengthening exercise are really good. There's actually a lot of data for Tai Chi because it both helps with weight bearing and strengthening, but also balance.
+
+But even just going for regular walks is really good, but not sufficient.
+
+So you won't normalize your bone density by starting up a weight bearing exercise program. And that's why we have medications to help treat this.
+
+So first line oral, first line therapy.
+
+Would be oral bisphosphonates. You can choose iv. If you think that they will have trouble adhering to oral or trouble swallowing, or if they have some esophageal disorder, say known varices, known strictures, that sort of thing, you would avoid these in low GFR. Typically about 35 is your cutoff for not wanting to start them.
+
+Osteonecrosis of the jaw. This is the really feared side effect. It's exceedingly rare. If you didn't even think about this and treated your patients, you will prevent so many more fractures than cases of osteonecrosis you will ever, ever see.
+
+But we are cautious in use of these medications in much higher frequency for bony mets in cancer. That's really done by the oncologists.
+
+We're also cautious in patients who are going to have a lot of dental surgery.
+
+So single tooth being pulled, they don't need to stop their meds.
+
+But if they need to have like eight teeth pulled and they're going to get implants, should probably have them come off of these for that time. Atypical femur fractures is why we don't treat forever. Turns out if you suppress bone turnover long enough, the bones can't remodel. They can get some cracks in the lower part of the femur, so below the greater trochanter, Whereas a slip and fall, you're going to get a fracture in the femoral neck which is above the greater trochanter.
+
+You can also use denosumab. It's a little bit stronger than bisphosphonates. It is definitely Preferred in Stage 4 CKD. It's used in patients who can't tolerate bisphosphonates for other reasons.
+
+The tolerability is very, very good. There are a couple things to note. The effects are not sustained if stopped, so you get a rebound, worsening of bone loss.
+
+And so we typically tell patients this is going to be an every six month injection for a long time.
+
+Doesn't mean forever forever, but it's sort of indefinite until they either reach enough improvement in bone density that you feel really good about stopping it, or until you can switch to something else. PTHRP analogs, teriparatite and abaliparatite. These are really fascinating. Briefly, what I'll explain is, you know, I've just told you high PTH is bad for bones.
+
+Why are we giving patients meds for osteoporosis that are analogs? And it turns out that it's all in the kinetics. If you have primary hyperparathyroidism your PTH is high 24 7, 365 days a year. That's bad for bones.
+
+Pulsatile, PTRH or I'm sorry, pulsatile PTH or PTRH. Drugs like teriparatide and abaliparatide, which raise the levels over a period of maybe an hour or two, actually stimulate bone formation.
+
+So it's the kinetics, it's the difference between, you know, a 24 hour thing and a one or two hour thing.
+
+Romosozumab is the newest drug.
+
+It's now been out for several years though it's a sclerostin inhibitor, it's the only drug that both suppresses bone loss and raises bone formation.
+
+So it's one of our strongest. This is given subcutaneously every month for 12 months. Glucocorticoid induced osteoporosis is common.
+
+Important to know is kind of when are they at risk and when to test.
+
+So you really should start testing within six months after long term glucocorticoids, especially those over 40 really think strongly about added frax assessment, added vertebral fracture assessment. And you would treat really those at moderate to high risk for fracture or high risk and age under 40.
+
+So bisphosphonates, denosumab, PTHRP have all been validated in glucocorticoid induced osteoporosis.
+
+And what I should clarify here is this is both. Certainly if you find osteoporosis on a DEXA you are treating, but you can also use these prophylactically.
+
+So if they have high fracture risk, even if the DEXA doesn't support a diagnosis of osteoporosis, you can use these drugs while they're on chronic glucocorticoid therapy and it's pretty much the equivalent of prednisone 5 milligrams a day or higher for more than a period of just a few weeks.
+
+So next question.
+
+We've got a 78 year old woman, she's evaluated for progressive weakness, fatigue and myalgia over six months. Exam is non contributory. Albumin is 3.9, alkaline phosphatase is 190, calcium is 8.5, phosphorus 2.4 and PTH is 100. Which of the following levels is most appropriate to measure next?
+
+A, you can fractionate the alkaline phosphatase and get the isoenzymes. You can B do a 125 dihydroxyvitamin, D, C25 hydroxy, vitamin D or D an osteocalcin level.
+
+Okay, let's dive into this one.
+
+So the key here is actually, to me, the elevated alk phos.
+
+So, yes, this could very much be a liver problem. Right? That's where we would most commonly think of elevated alkaline phosphatase.
+
+And so A is not necessarily totally wrong in that if you want to try to prove it's a bone problem, you can do that, but they're giving you enough to suggest that it is a bone problem.
+
+You've got elevated pth, you've got low calcium, you've got low phosphorus.
+
+And so it's suggestive of another common problem, which is osteomalacia.
+
+So osteomalacia is the sort of bone end effect of chronic vitamin D deficiency. You need vitamin D to adequately absorb the calcium from your diet.
+
+And if your vitamin D stores are low, which in the Midwest, many of our patients have this because we don't, A, get adequate sunlight year round, even if you're outside a lot, and B, many of us are not outside enough.
+
+So vitamin D deficiency or insufficiency is very common. But if it progresses over time, and if it leads to low enough calcium absorption, you actually get an elevated alkaline phosphatase because the bones are like trying to do something and they just don't have the substrate to do it.
+
+So this is exactly the lab pattern you'd see.
+
+You'd see mildly high pth, you'd see high alk phos, and you'd see low calcium.
+
+So the reason that the 125 is less helpful is that I'll sort of give you two answers here. One is that when you have PTH, promotes activation, so it's going to shift any 25 you have to 125.
+
+And so that can be somewhat misleading.
+
+But then the more practical thing is you should really only ever measure a125 dihydroxy vitamin D in cases of hypercalcemia and low PTH.
+
+So you can sort of shove that test to the back burner unless you have both those things. High calcium and a PTH under 20. All right, so vitamin D deficiency, as I mentioned, mild deficiency, very common.
+
+We see this all the time. It's typically asymptomatic. But if you have severe prolonged deficiency, especially if maybe you combine it with some other malabsorptive process or a low calcium diet, you're going to get osteomalacia, and that's going to manifest with really muscle and bone and organ Damage, bone pain and tenderness, fractures. Adexa is going to look like osteoporosis, but it's actually just due to not enough mineralization.
+
+You're going to have falls, you're going to have all these sorts of problems. And the blood test I showed you on the earlier cases, exactly what it'll look like on a lab assessment. We don't really recommend screening because we're not really sure what we do with your average, otherwise well adult who has a mildly low vitamin D level. But remember, screening means you're just fishing for the problem.
+
+Testing is different. Testing is when you have a reason to test.
+
+So that's going to be your patients with osteoporosis, fractures, hypocalcemia, hyperparathyroidism. That's totally valid.
+
+And that's when we are really testing, but we're testing with a specific reason. We're not just like, oh hey, let's screen and see who's got a low vitamin D. That's really the difference.
+
+So it's important to remember while screening isn't recommended, targeted testing is.
+
+And you want to be careful. I see this happen a lot. We're all busy, we click the wrong thing. But 25 hydroxy vitamin D is the storage form.
+
+That's your blood test to assess their sort of how full their tank is with vitamin D. The 125 is reserved for the very specific case I mentioned previously. And that 25 hydroxy vitamin D is going to go up with either what you get out of your diet, which is hard to do just from diet. There are some fortified foods and like mushrooms, have vitamin D, but mostly it's from either sun or vitamin D supplementation.
+
+So how do you treat it? For most adults, D3, the sort of over the counter vitamin D, cholecalciferol is sufficient if they're more deficient or they have trouble taking lots of pills a weekly or twice weekly. Ergocalciferol, which is D2 can be useful if their GFR is 30 or above. Those are kind of your choices.
+
+If it's under 30, you're typically going to treat with the activated form.
+
+So the calcitriol. Note that underneath that here, that's the 125.
+
+So you need PTH and you need 1alpha hydroxylase activity.
+
+So even though your low GFR patients tend to have a high PTH from their chronic kidney disease, the kidneys aren't making the 1alpha hydroxylase, so you're not activating that storage form. 25 hydroxy vitamin D to the 125.
+
+So that's why we give calcitriol. In CKD in liver patients, they have a different hydroxylase deficiency, so you actually may consider calcidiol. And in patients with hypoparathyroidism, they don't have the pth, so they can't activate.
+
+So you'd actually give the calcitriol as well.
+
+So osteomalacia is, you're just not giving the bone enough substrate. You can't mineralize over top the organic matrix. You won't be able to tell it on bone density.
+
+But if you had low bone density, very low T scores, but you also had a high alk phosa and a really low vitamin D, you'd actually replenish the vitamin D before you do anything else with the bones.
+
+So the, you know, kind of common are the shut ins, unfortunately.
+
+So nursing home residents, people who don't go outside at all, you know, work from home, work in the basement, don't like nature, tea and toast kind of diet, you know, not a lot of leafy greens or meats or things like that that have calcium, malabsorption of vitamin D from celiac bypass, other malabsorptive processes, and then liver and kidney disease. As previously mentioned, you test the things we tested on that first case, you know, phosphate, calcium, D, alk phos.
+
+You'll sometimes pick this up on radiography.
+
+So this is a little bit important to distinguish from those patients you hear all the time from radiology where they say, you know, osteopenia, radiographic, osteopenia, they're just saying, hey, you should probably screen this patient. But you can also see, you know, cortex thinning.
+
+And so you can maybe appreciate that like right here, how thin that brighter cortex is just to the left of my green dot pseudofractures.
+
+So this is a pseudo fracture here. These are sort of radiolucent areas that kind of cut across the bone surface. They're often bilateral or symmetrical. But this can be tricky to pick up without the blood test as well.
+
+Yet again, you want to restore good calcium and vitamin D and it takes time. And you're really aiming for a normal 25 hydroxy vitamin D level.
+
+So typically that would be 30 or above normal calcium, normal phosphorus and oh, by the way, you do those things, you will normalize that alk phos as well. Assuming there's not some other concomitant reason for it, shifting gears completely to adrenal insufficiency.
+
+For diagnosis things, think about the two Kind of categories.
+
+So primary adrenal insufficiency is an adrenal problem, and it really has to be a both adrenal problem. You can pick off one and the other one will work out just fine. Secondary adrenal insufficiency is a central cause.
+
+So typically pituitary or we would lump in tertiary and hypothalamic causes with that as well. What are you going to see? You're going to see potentially orthostatic hypotension. You will always see weight loss.
+
+If they are not losing weight, and especially if they're gaining weight, they do not have adrenal insufficiency.
+
+And so that's a really important thing. When you look at patients with diagnosed adrenal insufficiency and what symptoms and what percentages, it's 100% weight loss. It's almost always 100% anorexia, so loss of appetite as well.
+
+But weight loss can be a real driver and can maybe help you avoid some testing.
+
+So when the patient says, I can't lose weight, I'm up five pounds this year, I think I have adrenal insufficiency. Don't go down that path. You'll waste your time and theirs.
+
+Hyperpigmentation in primary disease only. We'll get to that. Hypoglycemia can occur, Hyponatremia can occur. Hyperkalemia, again in primary disease.
+
+And so in primary adrenal insufficiency, it's really anything that can damage the adrenals.
+
+So we classically think of Addison's or autoimmune adrenalitis affecting both adrenals. They get bilateral TB or fungal infections or other infiltrative diseases like sarcoid lymphoma. Mets to both sides can happen.
+
+Adrenal hemorrhage can happen in patients anticoagulated or have other clotting disorders or even sepsis. All of these can cause it.
+
+So what are you going to see? You're going to see primary adrenal insufficiency, low end organ hormones, so low cortisol.
+
+You'd also see low aldosterone and low adrenal androgens.
+
+So you pick off the entire cortex, basically the adrenal medulla, which is where a pheochromocytoma comes from and which secretes epinephrine and norepinephrine actually is typically unaffected, because even if you take out those, there's other higher nerve fibers that can produce these. But you'll lose all of the adrenal Cortex hormones. And this is why if you have primary adrenal insufficiency with the low aldosterone, this is why you get the hyperkalemia with low aldosterone and why you're much more prone to get hypotension and orthostatic symptoms.
+
+The high ACTH is what causes the hyperpigmentation.
+
+So if the adrenals are picked off, your pituitary is functioning just like in primary hypothyroidism, where you get high tsh, you'll get high acth. High ACTH in its sort of development is going to ultimately activate melanocytes, and that's why you get hyperpigmentation only in primary. Secondary, again, is secondary or tertiary or central hypothalamic or pituitary damage or suppression.
+
+The most common thing you'll see is from chronic steroids. The second most common thing you'll see is from chronic opiates. You will, of course, have patients who have known pituitary or hypothalamic damage from tumors and trauma. Metastases would be more rare.
+
+We also see it fairly commonly now with the checkpoint inhibitors. Again, mostly the PD1 inhibitors, but can happen with others. They can get more of a hypophysitis.
+
+So inflammation and destruction of the pituitary and pituitary stock.
+
+Again, you'll get low cortisol in adrenal insufficiency.
+
+That's sort of part and parcel of that. But you typically will have normal aldosterone and renin levels because you're only losing ACTH from the pituitary. And the RAAS system will activate and cause aldosterone production even if the cortisol is not being produced because you haven't made acth.
+
+So you're gonna then get a lower, inappropriately normal ACTH level when to do further testing.
+
+So you can really start with a morning fasting cortisol if it's under three.
+
+So, zero, one or two, they have adrenal insufficiency. You don't need to do a stim test.
+
+The caveat, the care I would tell you to take, is make sure they haven't just received steroids that would suppress it.
+
+So if they just had dexamethasone for their EGD the day before, they might have a falsely low morning cortisol. If it's 3 to 15, it's indeterminate. That's when you do the ACTH stim test to see how well the adrenal cortex can respond.
+
+If it's above 15, you can be done. You've ruled it out. These columns are helpful.
+
+So left side, rule in, you've ruled it in.
+
+Right side, you've ruled it out. Middle is a pretty broad middle that's indeterminate. That's when you do your ACTH stim test.
+
+And so what that is is you give an injection of cosintropin, IM or sub Q.
+
+It's 250 micrograms as a standard dose.
+
+So it's powder diluted in normal saline. And then you measure cortisol subsequently, ideally at 30 and 60 minutes to improve your sensitivity.
+
+So primary adrenal insufficiency.
+
+If you have a baseline high acth, we're talking hundreds, you know, triple digits, that tells you it's primary.
+
+We also Recommend Measuring the 21 hydroxylase antibody. That's not really the cause of it, but if that's high, that's kind of like a marker of the autoimmunity in the adrenal gland. And that can tell you they have Addison's.
+
+And so you can stop if you get a, if you don't have an elevation of that antibody. You really need to image the adrenal glands because you need to know what caused it. Is it metastasis that you didn't know about because you didn't know they had a cancer? Is it adrenal lymphoma?
+
+Is it some disseminated, you know, histoplasmosis or TB that you didn't know they had?
+
+So you really must look at the adrenal glands with a CT. Unless you get a 21 hydroxylase antibody that's markedly elevated. And in young men, I won't go into this too much, a very rare disorder.
+
+But consider the adrenal leukodystrophies. These are going to have sort of neuromuscular manifestations as well.
+
+That's something you'd want them seen, both an endocrinologist and a neurologist for sure, because these are very rare cases. If they have normal or low acth, that's secondary or central, you really should look at the pituitary.
+
+Unless you've got the real classic like, hey, I just put this person on six months of high dose steroid. You probably don't have to in that case. But if you don't have a drug cause, you should look for structural causes, acute treatment. You're going to give them high dose hydrocortisone.
+
+So on the order of at least 50 to 100 milligrams a day, maybe in divided doses with saline, if they're in adrenal crisis, they're going to be very volume deplete chronically though you're going to give them hydrocortisone as the preferred glucocorticoid. You can do prednisone for compliance reasons. If they can only manage a once a day pill, you could give about roughly 5 milligrams of prednisone. But ideally you kind of dose in a rhythm that mimics the normal diurnal rhythm, which has a large pulse in the a.m. and a smaller pulse in the afternoon.
+
+So classic dose might be 10mg hydrocortisone upon waking, 5mg 6 or so hours later.
+
+Fludrocortisone is needed only in primary adrenal insufficiency. Think of fludrocortisone as synthetic aldosterone.
+
+So if you think they've lost their aldosterone because it's primary and they have hyperkalemia and hypotension, they need fluorocortisone.
+
+If you know it's secondary or central, they don't need it. Biggest thing that we can do to help our patients with the diagnosis is kind of sick day management.
+
+So I tell patients if you're sick enough that a reasonable person would think about calling in sick from work, you should double to triple your dose for a couple days or for the duration of the illness and then taper back down. Or you don't really have to taper, just go back to home dosing one to two days after you're better.
+
+So, you know, home with a bad cold, double your dose.
+
+Other sort of minor physiologic stresses.
+
+So very minor outpatient procedure, you might have them double or triple their dose.
+
+So like, you know, going in for an upper endoscopy, something like that.
+
+Anything bigger than that though, they really need more of a stress dose.
+
+So major operation, I would advise that anesthesia give them, you know, 50 to 100mg IV at the start of the case and then, you know, maybe 50mg q 8 hours for the first day.
+
+So much more kind of stress dosing. You don't need extra fludrocortisone if you're getting above 50 milligrams a day of hydrocortisone because you get enough mineralocorticoid activ that way.
+
+So we typically just continue their baseline fludrocortisone dose through the acute stress.
+
+Next question, shifting gears again, We've got a 35 year old man with a two month history of low libido, normal puberty, he drinks two beers a week, takes no meds, he has a normal exam including normal BMI. Normal testicular size, total testosterone level at 4 in the afternoon is 200 nanograms per deciliter. Which of the following is the most appropriate next diagnostic test?
+
+A morning serum free testosterone B morning serum total testosterone C serum ferritin and transferrin saturation D testicular ultrasonography. All right, this is good. This is something to talk about.
+
+So I think you largely recognize that normal testicular exam.
+
+You probably don't need a testicular ultrasound. You can, once you've identified hypogonadism, it's not unreasonable to screen for hemochromatosis. That's an under recognized cause.
+
+So C could be correct down the road.
+
+But what you're looking for here is how to like kind of what lab tests. And this is where I think it gets really confusing.
+
+So normal weight individuals, a total testosterone is going to be your best test because they're unlikely to have other things that perturb the total testosterone. And of all our various tests, it's the sort of like best test characteristics, best performance, you can trust the result the most.
+
+A free testosterone is generally indicated when you have reason to not trust the total.
+
+So the classic would be obesity tends to drive down sex hormone binding globulin which is a carrier protein.
+
+So like hypoalbuminemia will give you a low total calcium. On a basic panel, low SHBG is going to give you a low total testosterone.
+
+So that's when you want a free or bioavailable testosterone. But if you have a normal weight individual, I would start with a total because the free testosterone assays are much more kind of unreliable and you'll get much more variance.
+
+So you can trust a total result more in a normal weight individual.
+
+So when do you think about it?
+
+I would sort of my plea outside of the context of a high stakes exam is fatigue alone. Please steer far clear of measuring testosterone because you're just going to basically be barking up the wrong tree. Lots of things cause fatigue. Low testosterone doesn't typically actually cause fatigue, but it's often a reason.
+
+I see it ordered. You want to look for more specific symptoms so not just erectile dysfunction because a lot of men have erectile dysfunction for a lot of reasons like their smoking and their alcohol and their beta blockers and their atherosclerotic disease. But a really more specific sign is decreased or absent morning erections, decreased libido, especially if it's like an acute or subacute change is helpful. 60 year old man telling you he doesn't have the libido he did when he was 18 is not pathologic. Right?
+
+But 60 year old man telling you this is really different from a year ago, that's something you could hang your hat on. Gynecomastia, hot flashes. It can happen with marked hypogonadism in men. They describe it the same way postmenopausal women would describe it.
+
+Certainly you'd screen if they have fragility fractures or osteoporosis that's not otherwise very clearly explained. And we're going to look for it in cases of infertility as well. There's a lot, you know, these things are common though.
+
+You know, it's not usually like structural testicular pituitary disease, it's usually more functional stuff like untreated sleep apnea, chronic disease medications, those sorts of things.
+
+Substance use are much more likely to contribute to hypogonadism.
+
+So preferred testing 8am serum total testosterone. Again because it's more. You can trust the result more than a free.
+
+You can certainly add a free or bioavailable in any patient. But you'd also measure those when you think that SHBG might be low, such as obesity or if you have kind of a borderline serum total. And we always end up measuring this on more than one occasion because you can get acute like very transient lowering.
+
+So in the fed state as opposed to the fasting state, testosterone is going to be notably and statistically significantly lower.
+
+So if you have a patient and they go get morning labs, but they went to McDonald's right before and had two McMuffins, there's a lot of fat in that that's going to transiently lower the testosterone.
+
+So you really want fasting, you want multiple occasions, acute and even short lived stressors like flu, Covid cold, you'll get a low testosterone, but it will recover within many days. If it's low then you also.
+
+So this is kind of the second test, so you might just screen with the total testosterone and then if it's lower, borderline, then you bring them back on a second day for fasting labs and then you measure it again.
+
+Maybe you add the Freon, you measure the LH and FSH because you want to determine where the problem is. High LH and FSH is testicular failure, which is actually pretty rare. Normal or low is secondary or central, which is much more common.
+
+So then how do you evaluate that?
+
+You'd want to get a Prolactin.
+
+You know, obviously there's a sequence to this that's logical, but in the practical nature of outpatient medicine, you'd probably get the prolactin on that second blood draw at the same time you're getting LH and fsh, so you're not bringing them back a third time. You definitely get a pituitary mri. Any elevation in prolactin, any other pituitary deficiencies or reason to suspect or marked hypogonadism.
+
+So total testosterone under 150. I'm always checking because that's not the degree of deficiency you see with chronic illness or poor sleep or substance use. But if you had a 55 year old obese man with a normal prolactin, untreated sleep apnea, uncontrolled type 2 diabetes, total testosterone 190. Can you forego an MRI?
+
+I think most of us would say yes because you don't really have anything pointed out pointing at structural disease.
+
+It sounds a lot more like functional. Most of us will screen patients for hemochromatosis, especially if you see some polycythemia. A lot of times I look at this has already been done for some reason over the years, so I don't repeat it.
+
+If it's already been checked, certainly review their medications, steroids, opiates are going to contribute high rates of sleep apnea as well. You certainly want to treat underlying disorders.
+
+So if you can help them lose weight, if you can control an acute or chronic illness or get them through it, and then think about testosterone replacement therapy.
+
+So transdermal gel is generally preferred because you get a steady daily dose, you get lower complication and side effect rates, especially polycythemia.
+
+Intramuscular is often an option because it's the least expensive. Expensive, but you have peaks and valleys and higher degrees of patients not feeling the same on each day of the cycle and higher rates of secondary polycythemia from bone marrow stimulation. There are some oral and subcutaneous forms. They tend to be more expensive and you can generally do quite well with testosterone gel and intramuscular.
+
+I should point out that the patch is no longer manufactured in the us There was no problem with it to my knowledge. I think it was a business decision. There was actually only ever one company that manufactured a patch. You do want to be cautious.
+
+In patients with active prostate cancer, severe BPH and lower urinary tract symptoms, pre existing polycythemia or erythrocytosis, recent major cardiovascular events, we would tend to wait or defer therapy so, so we've got a 42 year old man, six month history of painful enlarged breasts, normal puberty, no meds, symmetric tender gynecomastia, normal testicular exam. He's got a low HCG of 2, LH is 5, total testosterone is 400. Which of the following is the most appropriate?
+
+Next test, Adrenal ct, estradiol karyotype or testicular ultrasonography.
+
+Very good.
+
+So you need estradiol to grow breast tissue. They're telling you that he's got good testosterone levels.
+
+So sometimes you'll see gynecomastia with low testosterone.
+
+But a total morning testosterone of 400 is good. You want to make sure that this patient doesn't have some degree of hyper estrogenemia. You can have it from obesity. Adipocytes convert testosterone to estradiol.
+
+But you'd also be worried about testicular or adrenal tumors if you had very high estradiol levels.
+
+So before you'd image adrenals or testicles, you'd want to measure this. And a karyotype's not really going to help you in a patient with normal testosterone. I'm not even sure what you'd be looking for.
+
+So gynecomastia, it can be physiologic. Our teenage boys, our aging men, certainly pharmacologic, the classic one being spironolactone. There's several others here, but that would be the one we see very commonly and can be treatment limiting for our patients who need it for other reasons. Hypogonadism, hyperprolactinemia, fairly common thyroid disorders.
+
+It's pretty uncommon, but more commonly hyperthyroidism, that you'd see this.
+
+We also see it in cirrhosis. That would be another very common time you're going to see this.
+
+So you're going to.
+
+So you need to distinguish on exam between adiposity and actual glandular tissue.
+
+So glandular tissue is going to be very rubbery, bouncy underneath the fingers or hands and it's likely going to be tender. It may or may not be unilateral or bilateral. But you're much more worried about cancer if it's unilateral or asymmetric.
+
+If it's long standing, asymptomatic, measure the testosterone. If it's new, you're going to do a greater kind of hormonal workup because you want to make sure there's not some new tumor or endocrine disorder contributing to hyperthyroidism. Testicular cancer with high hcg, something like that.
+
+Breast ultrasound or mammography, if unilateral, if you got elevated estradiol and low or normal lh, you're going to look at the testicles and then the CT of the adrenals.
+
+If testicular ultrasonography is normal hcg, you're basically looking at the testicles first and only doing a broader look if the testicular ultrasound is negative.
+
+So the way to really think about this is if the LH is high and they have increased testosterone, think about thyroid disease, androgen resistance is very rare. If they have normal or decreased lh, low testosterone, think about prolactin and evaluate and treat for high prolactin or low testosterone.
+
+So, any questions?
+
+Thank you so much. Dr. Bodnar, we are going to do one question because this came up a lot in the chat. Could you comment briefly on the role of bisphosphonate holidays when you're treating osteoporosis? Yes, I'll do that briefly.
+
+So you don't want to suppress bone turnover forever. That's when you get those atypical femur fractures. And these medicines stay, get incorporated into the mineral matrix of the bone. They stay there a long time.
+
+So classic duration would be for orals, five years for lower risk patients, up to 10 years for higher risk patients. Then you give them a holiday of a few years. IV would be three years for lower risk patients, six years for higher risk patients and then a holiday. And it's to allow it to wash out of the system and let turnover happen again.
+
+Thank you so much. That concludes Endocrinology 3. We will move into the fourth, fourth and final half hour of Endocrinology in one minute.
+
+---
+
+Generated by WhisperAI
+https://whisperai.com

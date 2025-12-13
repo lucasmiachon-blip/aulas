@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Osteoporosis Review</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Chosen Palette: Calm Harmony (Gray-50, White, Slate, Blue) -->
+    <!-- Application Structure Plan: A multi-tabbed, thematic dashboard structure is chosen. This allows a user (e.g., rheumatologist) to immediately navigate to a specific area of interest (e.g., 'Treatment', 'Guidelines') rather than scrolling a long linear page. It logically separates foundational knowledge ('Overview', 'Pathophysiology'), clinical practice ('Diagnosis', 'Treatment'), and special considerations ('Special Topics', 'Guidelines'). Interactions focus on comparing data (e.g., guideline topics, drug efficacy) and simplifying complex concepts (e.g., interactive pathophysiology diagram). -->
+    <!-- Visualization & Content Choices: 
+        - Overview: Goal(Inform) -> Key Stat Cards (HTML) & Prevalence Donut (Chart.js) -> Hover -> Quick summary.
+        - Pathophysiology: Goal(Organize/Inform) -> Interactive Diagram (HTML/JS) -> Click buttons ('Resorption'/'Formation') -> Simplifies complex pathways.
+        - Diagnosis: Goal(Inform/Compare) -> Clickable Pills (HTML/JS) & Risk Bar Chart (Chart.js) -> Click/Hover -> Organize tools, visualize risk.
+        - Treatment: Goal(Compare) -> Efficacy Bar Chart (Chart.js) & Strategy Text (HTML/JS) -> Dropdown filter (by fracture) / Button click (strategy) -> Compare drugs, explain strategies.
+        - Special Topics: Goal(Inform) -> Prevalence Pie (Chart.js) & Comorbidity Tabs (HTML/JS) -> Hover/Click -> Show secondary cause breakdown & specific interactions.
+        - Guidelines: Goal(Compare) -> Dynamic Text (HTML/JS) -> Dropdown select ('Topic') -> Updates 3 columns (Brazil, US, EU) for direct comparison.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb; /* bg-gray-50 */
+        }
+        .tab-button {
+            padding: 0.75rem 1rem;
+            margin-right: 0.5rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            color: #475569; /* text-slate-600 */
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+        .tab-button.active {
+            background-color: #ffffff;
+            color: #2563eb; /* text-blue-600 */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        }
+        .tab-button:not(.active):hover {
+            background-color: #f1f5f9; /* bg-slate-100 */
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .chart-container {
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 1rem;
+            background-color: #ffffff;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+        }
+        .info-pill {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            margin: 0.25rem;
+            border-radius: 9999px;
+            background-color: #f1f5f9; /* bg-slate-100 */
+            color: #475569; /* text-slate-600 */
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .info-pill.active {
+            background-color: #2563eb; /* bg-blue-600 */
+            color: #ffffff;
+        }
+        .info-pill:not(.active):hover {
+            background-color: #e2e8f0; /* bg-slate-200 */
+        }
+        .pathway-diagram {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+            min-height: 300px;
+        }
+        .cell {
+            padding: 1rem 1.5rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .osteoclast {
+            background-color: #fee2e2; /* bg-red-100 */
+            color: #991b1b; /* text-red-800 */
+            border: 2px solid #fca5a5; /* border-red-300 */
+        }
+        .osteoblast {
+            background-color: #dbeafe; /* bg-blue-100 */
+            color: #1e40af; /* text-blue-800 */
+            border: 2px solid #93c5fd; /* border-blue-300 */
+        }
+        .osteocyte {
+            background-color: #f0fdf4; /* bg-green-50 */
+            color: #166534; /* text-green-800 */
+            border: 2px solid #86efac; /* border-green-300 */
+        }
+        .pathway-arrow {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #64748b; /* text-slate-500 */
+            padding: 0 1rem;
+            opacity: 0.3;
+            transition: all 0.3s ease;
+        }
+        .pathway-arrow.active {
+            opacity: 1;
+        }
+        .pathway-arrow.resorption {
+            color: #c2410c; /* text-orange-700 */
+        }
+        .pathway-arrow.formation {
+            color: #166534; /* text-green-700 */
+        }
+        .pathway-text {
+            display: none;
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 0.5rem;
+        }
+        .pathway-text.active {
+            display: block;
+        }
+        .pathway-text.resorption {
+            background-color: #fff7ed; /* bg-orange-50 */
+            color: #9a3412; /* text-orange-800 */
+        }
+        .pathway-text.formation {
+            background-color: #f0fdf4; /* bg-green-50 */
+            color: #166534; /* text-green-800 */
+        }
+
+    </style>
+</head>
+<body class="bg-gray-50 text-slate-800">
+
+    <div class="container mx-auto p-4 sm:p-8">
+        <header class="mb-8">
+            <h1 class="text-3xl sm:text-4xl font-bold text-slate-900">Comprehensive Osteoporosis Review</h1>
+            <p class="text-lg text-slate-600 mt-2">An Interactive Dashboard for Rheumatology Congress Preparation</p>
+        </header>
+
+        <!-- Tab Navigation -->
+        <nav class="mb-6 overflow-x-auto pb-2">
+            <div class="flex" id="tab-nav">
+                <button class="tab-button active" data-tab="overview">Overview</button>
+                <button class="tab-button" data-tab="patho">Pathophysiology</button>
+                <button class="tab-button" data-tab="dx-risk">Diagnosis & Risk</button>
+                <button class="tab-button" data-tab="treatment">Treatment</button>
+                <button class="tab-button" data-tab="special">Special Topics</button>
+                <button class="tab-button" data-tab="guidelines">Guidelines</button>
+            </div>
+        </nav>
+
+        <!-- Tab Content -->
+        <main id="tab-content">
+
+            <!-- Overview Tab -->
+            <div id="overview" class="tab-content active space-y-6">
+                <p class="text-lg text-slate-700">This section provides a high-level overview of osteoporosis, including key statistics on prevalence and fracture risk. It sets the stage for understanding the scale and impact of the disease.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-lg font-semibold text-blue-700">Global Prevalence</h3>
+                        <p class="text-4xl font-bold text-slate-800 mt-2">200M+</p>
+                        <p class="text-slate-600">Estimated women affected worldwide.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-lg font-semibold text-blue-700">Fracture Risk</h3>
+                        <p class="text-4xl font-bold text-slate-800 mt-2">1 in 3</p>
+                        <p class="text-slate-600">Women over 50 will experience an osteoporotic fracture.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-lg font-semibold text-blue-700">Male Impact</h3>
+                        <p class="text-4xl font-bold text-slate-800 mt-2">1 in 5</p>
+                        <p class="text-slate-600">Men over 50 will also experience an osteoporotic fracture.</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div class="chart-container w-full h-80 max-w-lg mx-auto">
+                        <h3 class="text-xl font-semibold text-center mb-4">Postmenopausal Osteoporosis Prevalence</h3>
+                        <canvas id="prevalenceChart"></canvas>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-xl font-semibold mb-4">Epidemiology Insights</h3>
+                        <p class="text-slate-700">The prevalence of osteoporosis and low bone mass is projected to increase significantly due to the aging global population. Hip fractures are associated with the highest morbidity, mortality, and cost, with mortality rates approaching 20-30% in the first year post-fracture. Vertebral fractures, often silent, are also highly prevalent and are a strong predictor of future fractures.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pathophysiology Tab -->
+            <div id="patho" class="tab-content space-y-6">
+                <p class="text-lg text-slate-700">Explore the core biological pathways of bone remodeling. This section interactively demonstrates the balance between bone resorption (osteoclasts) and bone formation (osteoblasts), highlighting key targets like RANK/RANKL and Wnt/Sclerostin.</p>
+                <div class="text-center mb-4">
+                    <button id="btn-resorption" class="info-pill active">Resorption (RANKL)</button>
+                    <button id="btn-formation" class="info-pill">Formation (Wnt)</button>
+                </div>
+                <div class="pathway-diagram">
+                    <div class="text-center">
+                        <div class="cell osteoclast">Osteoclast</div>
+                        <div id="arrow-rankl" class="pathway-arrow active resorption">↑</div>
+                        <div>RANKL</div>
+                    </div>
+                    <div class="cell osteocyte">Osteocyte</div>
+                    <div class="text-center">
+                        <div class="cell osteoblast">Osteoblast</div>
+                        <div id="arrow-wnt" class="pathway-arrow formation">↑</div>
+                        <div>Wnt Pathway</div>
+                    </div>
+                </div>
+                <div id="text-resorption" class="pathway-text active resorption">
+                    <h3 class="font-bold">Bone Resorption: The RANK/RANKL Pathway</h3>
+                    <p>RANKL (Receptor Activator of Nuclear factor Kappa-B Ligand) is the master regulator of osteoclast formation, activation, and survival. When RANKL binds to its receptor (RANK) on osteoclast precursors, it triggers their differentiation into mature osteoclasts. OPG (Osteoprotegerin) acts as a decoy receptor, binding to RANKL and preventing it from activating RANK. An imbalance (high RANKL/OPG ratio) leads to excessive bone resorption and osteoporosis. Denosumab is a monoclonal antibody that mimics OPG, binding to RANKL.</p>
+This is the  pathway.
+                </div>
+                <div id="text-formation" class="pathway-text formation">
+                    <h3 class="font-bold">Bone Formation: The Wnt/Sclerostin Pathway</h3>
+                    <p>The Wnt signaling pathway is crucial for osteoblast proliferation and differentiation, leading to new bone formation. Sclerostin, primarily produced by osteocytes, is a key inhibitor of this pathway. By binding to LRP5/6 receptors, Sclerostin blocks Wnt signaling, thus reducing bone formation. Anabolic agents like Romosozumab (a sclerostin inhibitor) work by 'releasing the brake' on bone formation, while also having a dual effect of decreasing resorption.</p>
+This is the  pathway.
+                </div>
+            </div>
+
+            <!-- Diagnosis & Risk Tab -->
+            <div id="dx-risk" class="tab-content space-y-6">
+                <p class="text-lg text-slate-700">This section covers the tools used to diagnose osteoporosis and assess fracture risk. Click on each tool to learn more. The chart visualizes how risk stratification (Low, High, Very High) guides treatment decisions.</p>
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <div id="dx-pills" class="flex flex-wrap justify-center">
+                        <span class="info-pill active" data-content="dxa">DXA</span>
+                        <span class="info-pill" data-content="frax">FRAX</span>
+                        <span class="info-pill" data-content="tbs">TBS</span>
+                        <span class="info-pill" data-content="vfa">VFA</span>
+                    </div>
+                    <div id="dx-content" class="p-4 mt-4 min-h-[100px]">
+                        <!-- Content will be injected by JS -->
+                    </div>
+                </div>
+                <div class="chart-container w-full h-80 max-w-lg mx-auto">
+                    <h3 class="text-xl font-semibold text-center mb-4">Fracture Risk Stratification</h3>
+                    <canvas id="riskChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Treatment Tab -->
+            <div id="treatment" class="tab-content space-y-6">
+                <p class="text-lg text-slate-700">Analyze pharmacological treatment options. The chart below compares the efficacy of major drug classes for different fracture types (select from the dropdown). Following that, explore modern treatment strategies like sequential therapy and 'treat-to-target'.</p>
+                <div class="chart-container w-full h-96 max-w-2xl mx-auto">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-semibold">Drug Class Efficacy (% Risk Reduction)</h3>
+                        <select id="fracture-type" class="rounded-md border-gray-300 shadow-sm">
+                            <option value="vertebral">Vertebral Fracture</option>
+                            <option value="hip">Hip Fracture</option>
+                        </select>
+                    </div>
+                    <canvas id="treatmentChart"></canvas>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold mb-4">Modern Treatment Strategies</h3>
+                    <div class="flex border-b">
+                        <button class="info-pill !rounded-b-none !rounded-t-lg active" data-strategy="sequential">Sequential Therapy</button>
+                        <button class="info-pill !rounded-b-none !rounded-t-lg" data-strategy="t2t">Treat-to-Target (T2T)</button>
+                        <button class="info-pill !rounded-b-none !rounded-t-lg" data-strategy="imminent">Imminent Risk</button>
+                    </div>
+                    <div id="strategy-content" class="p-4 border border-t-0 rounded-b-lg min-h-[150px]">
+                        <!-- Content will be injected by JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Special Topics Tab -->
+            <div id="special" class="tab-content space-y-6">
+                <p class="text-lg text-slate-700">This area explores osteoporosis in specific contexts, including secondary causes and its interaction with other prevalent chronic diseases. Use the tabs to learn more about comorbidities.</p>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div class="chart-container w-full h-80 max-w-lg mx-auto">
+                        <h3 class="text-xl font-semibold text-center mb-4">Common Secondary Causes</h3>
+                        <canvas id="secondaryChart"></canvas>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-xl font-semibold mb-4">Key Secondary Causes</h3>
+                        <p class="text-slate-700 mb-4">It's crucial to investigate secondary causes, especially in patients with fractures disproportionate to their BMD or who are not responding to therapy. Glucocorticoid-induced osteoporosis (GIOP) is the most common iatrogenic cause.</p>
+                        <ul class="list-disc list-inside space-y-1 text-slate-600">
+                            <li>Glucocorticoid use</li>
+                            <li>Endocrine disorders (e.g., hyperparathyroidism, hypogonadism)</li>
+                            <li>Gastrointestinal diseases (e.g., celiac, IBD)</li>
+                            <li>Rheumatoid Arthritis</li>
+                            <li>Chronic Kidney Disease (CKD-MBD)</li>
+                        </ul>
+                    </div>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold mb-4">Interactions with Comorbidities</h3>
+                    <div class="flex border-b">
+                        <button class="info-pill !rounded-b-none !rounded-t-lg active" data-comorbidity="diabetes">Diabetes (T2DM)</button>
+                        <button class="info-pill !rounded-b-none !rounded-t-lg" data-comorbidity="copd">COPD</button>
+                        <button class="info-pill !rounded-b-none !rounded-t-lg" data-comorbidity="hf">Heart Failure (HF)</button>
+                    </div>
+                    <div id="comorbidity-content" class="p-4 border border-t-0 rounded-b-lg min-h-[150px]">
+                        <!-- Content will be injected by JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Guidelines Tab -->
+            <div id="guidelines" class="tab-content space-y-6">
+                <p class="text-lg text-slate-700">Compare key recommendations from major international and national guidelines. Select a topic from the dropdown to see how guidelines from Brazil (PCDT), the USA (ACE/AACE), and Europe (ESCEO) approach it.</p>
+                
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <label for="guideline-topic" class="block text-lg font-medium text-slate-700">Select Comparison Topic:</label>
+                    <select id="guideline-topic" class="mt-2 block w-full sm:w-1/2 rounded-md border-gray-300 shadow-sm text-lg p-2">
+                        <option value="threshold">Intervention Threshold</option>
+                        <option value="first_line">First-Line Therapy (High Risk)</option>
+                        <option value="vhr">Very High Risk (VHR) / Imminent</option>
+                        <option value="duration">Treatment Duration</option>
+                    </select>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-xl font-semibold mb-3 flex items-center">
+                            <span class="text-2xl mr-2">🇧🇷</span> Brazil (PCDT/ABRASSO)
+                        </h3>
+                        <div id="guideline-br" class="text-slate-700 space-y-2 min-h-[150px]">
+                            <!-- Content will be injected by JS -->
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-xl font-semibold mb-3 flex items-center">
+                            <span class="text-2xl mr-2">🇺🇸</span> USA (AACE/ACE)
+                        </h3>
+                        <div id="guideline-us" class="text-slate-700 space-y-2 min-h-[1What is osteoporosis?]">
+                            <!-- Content will be injected by JS -->
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-xl font-semibold mb-3 flex items-center">
+                            <span class="text-2xl mr-2">🇪🇺</span> Europe (ESCEO/IOF)
+                        </h3>
+                        <div id="guideline-eu" class="text-slate-700 space-y-2 min-h-[150px]">
+                            <!-- Content will be injected by JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // --- Chart.js Global Config ---
+            Chart.defaults.font.family = "'Inter', sans-serif";
+            Chart.defaults.plugins.tooltip.backgroundColor = '#1e293b'; // bg-slate-800
+            Chart.defaults.plugins.tooltip.titleFont.size = 14;
+            Chart.defaults.plugins.tooltip.bodyFont.size = 12;
+            Chart.defaults.plugins.tooltip.padding = 10;
+
+            // --- Data Definitions ---
+            const dxContentData = {
+                dxa: "<strong>Dual-energy X-ray Absorptiometry (DXA):</strong> The gold standard for measuring Bone Mineral Density (BMD). A T-score of -2.5 or below at the femoral neck, total hip, or lumbar spine indicates osteoporosis. A T-score between -1.0 and -2.5 is classified as osteopenia (low bone mass).",
+                frax: "<strong>Fracture Risk Assessment Tool (FRAX):</strong> A computer-based algorithm that calculates the 10-year probability of a major osteoporotic fracture (hip, clinical vertebral, humerus, or forearm) and hip fracture. It integrates clinical risk factors (e.g., age, sex, prior fracture, smoking, glucocorticoid use) with or without femoral neck BMD.",
+                tbs: "<strong>Trabecular Bone Score (TBS):</strong> An indirect measure of bone microarchitecture derived from DXA images of the lumbar spine. It provides prognostic information independent of BMD and FRAX. A low TBS suggests degraded bone structure and higher fracture risk.",
+                vfa: "<strong>Vertebral Fracture Assessment (VFA):</strong> A low-dose lateral spine imaging modality performed on most modern DXA machines. It is used to identify prevalent (often asymptomatic) vertebral fractures, which are a strong indicator of high future fracture risk and warrant treatment."
+            };
+
+            const treatmentChartData = {
+                vertebral: {
+                    labels: ['Bisphosphonates', 'Denosumab', 'Teriparatide', 'Romosozumab'],
+                    datasets: [{
+                        label: '% Risk Reduction (Vertebral)',
+                        data: [50, 68, 80, 73],
+                        backgroundColor: ['#7c3aed', '#db2777', '#0284c7', '#16a34a'],
+                    }]
+                },
+                hip: {
+                    labels: ['Bisphosphonates', 'Denosumab', 'Teriparatide', 'Romosozumab'],
+                    datasets: [{
+                        label: '% Risk Reduction (Hip)',
+                        data: [40, 40, 35, 41],
+                        backgroundColor: ['#7c3aed', '#db2777', '#0284c7', '#16a34a'],
+                    }]
+                }
+            };
+            
+            const strategyContentData = {
+                sequential: "<strong>Sequential Therapy:</strong> The order of treatments matters. The 'anabolic-first' approach is now favored for very high-risk patients: starting with an anabolic agent (e.g., Teriparatide, Romosozumab) to build bone, followed by an antiresorptive (e.g., Bisphosphonate, Denosumab) to consolidate and maintain the gains. Starting with an antiresorptive can blunt the subsequent effect of an anabolic.",
+                t2t: "<strong>Treat-to-Target (T2T):</strong> A proactive strategy adapted from other chronic diseases (like RA or Diabetes). Instead of a fixed duration, treatment is adjusted and continued until a specific 'target' is reached (e.g., a specific BMD T-score, or a lower risk-category). This moves away from a 'one-size-fits-all' approach and personalizes care.",
+                imminent: "<strong>'Imminent' or 'Very High' Risk:</strong> This concept identifies patients at highest risk of a subsequent fracture, particularly in the 1-2 years following an initial 'sentinel' fracture. These patients (e.g., recent fracture, T-score < -3.0, multiple fractures) require immediate, potent therapy, often starting with anabolic agents, to rapidly reduce their risk."
+            };
+            
+            const comorbidityContentData = {
+                diabetes: "<strong>Type 2 Diabetes (T2DM):</strong> Patients with T2DM have an increased fracture risk despite often having normal or even high BMD. This 'paradox' is due to poor bone quality, cortical porosity, and an accumulation of advanced glycation end-products (AGEs) that make bone brittle. FRAX often underestimates risk in this population. Thiazolidinediones (TZDs) can also increase fracture risk.",
+                copd: "<strong>COPD:</strong> Increased fracture risk is multifactorial, driven by systemic inflammation, low body mass, vitamin D deficiency, smoking, and (most significantly) frequent use of systemic glucocorticoids. Investigating for GIOP is critical in this population.",
+                hf: "<strong>Heart Failure (HF):</strong> A bidirectional relationship exists. Osteoporosis and HF share common risk factors (aging, inflammation, frailty). Loop diuretics may increase urinary calcium loss, and poor mobility in HF patients exacerbates bone loss. The 'bone-heart' axis is an active area of research."
+            };
+            
+            const guidelineContentData = {
+                threshold: {
+                    br: "FRAX is the primary tool. Treatment is recommended based on fracture probability thresholds adjusted for the Brazilian population (e.g., >5.3% for major fracture). Post-fracture patients or T-score ≤ -2.5 are also treatment-eligible.",
+                    us: "Treat postmenopausal women with T-scores ≤ -2.5, a history of fragility fracture, or osteopenia (T-score -1.0 to -2.5) AND a 10-year FRAX probability of ≥20% (major) or ≥3% (hip).",
+                    eu: "Intervention thresholds are country-specific based on FRAX, but generally recommend treating patients with a history of fragility fracture or those with a FRAX probability above a national age-dependent threshold."
+                },
+                first_line: {
+                    br: "Alendronate, Risedronate, Zoledronic Acid, and Denosumab are considered first-line options for high-risk patients. Choice depends on cost (PCDT favors bisphosphonates), patient preference, and comorbidities.",
+                    us: "Oral bisphosphonates (Alendronate, Risedronate) are often first-line due to efficacy, cost, and long-term data. IV bisphosphonates (Zoledronic Acid) or Denosumab are also first-line options.",
+                    eu: "Oral bisphosphonates are the most common first-line choice. The 'most appropriate' therapy is recommended based on risk level, fracture site, and patient characteristics. Denosumab is also a first-line option."
+                },
+                vhr: {
+                    br: "Teriparatide is approved (via PCDT) for 'very high risk' patients who fail or are intolerant to antiresorptives (e.g., new fracture on therapy, T-score < -3.5). Romosozumab is approved by ANVISA but not yet in PCDT.",
+                    us: "Anabolic agents (Teriparatide, Abaloparatide) or Romosozumab are recommended as initial therapy for 'very high risk' patients (e.g., recent fracture, multiple fractures, T-score < -3.0, or FRAX >30%/4.5%).",
+                    eu: "Anabolic therapy (Teriparatide, Romosozumab) is recommended as the initial treatment for patients at 'very high risk', defined by recent fracture, very low BMD, or very high FRAX score, followed by an antiresorptive."
+                },
+                duration: {
+                    br: "Oral bisphosphonate duration is typically 3-5 years. A 'drug holiday' can be in-side a  test.",
+                    us: "Re-evaluate risk after 5 years (oral bisphosphonates) or 3 years (IV Zoledronic Acid). Consider a holiday in moderate-risk, stable patients. Denosumab should not have a 'holiday' due to rebound risk.",
+                    eu: "Bisphosphonate 'drug holiday' (after 3-5 years) is supported for patients who are no longer high risk. Anabolic therapy is limited (e.g., 1-2 years), followed by antiresorptive. Denosumab requires continuation."
+                }
+            };
+
+
+            // --- Tab Navigation Logic ---
+            const tabButtons = document.querySelectorAll('#tab-nav .tab-button');
+            const tabContents = document.querySelectorAll('#tab-content .tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const tabId = button.dataset.tab;
+
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    tabContents.forEach(content => {
+                        content.classList.remove('active');
+                        if (content.id === tabId) {
+                            content.classList.add('active');
+                        }
+                    });
+                });
+            });
+
+            // --- Chart Instances ---
+            let treatmentChartInstance;
+
+            // 1. Overview: Prevalence Chart
+            const ctxPrevalence = document.getElementById('prevalenceChart');
+            if (ctxPrevalence) {
+                new Chart(ctxPrevalence.getContext('2d'), {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Osteoporosis', 'Osteopenia', 'Normal BMD'],
+                        datasets: [{
+                            data: [30.1, 43.2, 26.7],
+                            backgroundColor: ['#ef4444', '#f97316', '#22c55e'],
+                            hoverOffset: 4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { position: 'bottom' }
+                        }
+                    }
+                });
+            }
+
+            // 2. Pathophysiology Interaction
+            const btnResorption = document.getElementById('btn-resorption');
+            const btnFormation = document.getElementById('btn-formation');
+            const textResorption = document.getElementById('text-resorption');
+            const textFormation = document.getElementById('text-formation');
+            const arrowRankl = document.getElementById('arrow-rankl');
+            const arrowWnt = document.getElementById('arrow-wnt');
+            
+            btnResorption.addEventListener('click', () => {
+                btnResorption.classList.add('active');
+                btnFormation.classList.remove('active');
+                textResorption.classList.add('active');
+                textFormation.classList.remove('active');
+                arrowRankl.classList.add('active');
+                arrowWnt.classList.remove('active');
+            });
+            
+            btnFormation.addEventListener('click', () => {
+                btnFormation.classList.add('active');
+                btnResorption.classList.remove('active');
+                textFormation.classList.add('active');
+                textResorption.classList.remove('active');
+                arrowWnt.classList.add('active');
+                arrowRankl.classList.remove('active');
+            });
+
+            // 3. Diagnosis & Risk: Pills
+            const dxPillsContainer = document.getElementById('dx-pills');
+            const dxContentEl = document.getElementById('dx-content');
+            dxContentEl.innerHTML = dxContentData['dxa']; // Load initial content
+            
+            dxPillsContainer.addEventListener('click', (e) => {
+                if (e.target.classList.contains('info-pill')) {
+                    const contentKey = e.target.dataset.content;
+                    if (contentKey) {
+                        dxPillsContainer.querySelectorAll('.info-pill').forEach(pill => pill.classList.remove('active'));
+                        e.target.classList.add('active');
+                        dxContentEl.innerHTML = dxContentData[contentKey] || 'Content not found.';
+                    }
+                }
+            });
+
+            // 4. Diagnosis & Risk: Risk Chart
+            const ctxRisk = document.getElementById('riskChart');
+            if (ctxRisk) {
+                new Chart(ctxRisk.getContext('2d'), {
+                    type: 'bar',
+                    data: {
+                        labels: ['Low Risk', 'High Risk', 'Very High Risk'],
+                        datasets: [{
+                            label: '10-Year Fracture Probability (%)',
+                            data: [4, 15, 30],
+                            backgroundColor: ['#22c55e', '#f97316', '#ef4444'],
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { display: false }
+                        },
+                        scales: {
+                            y: { beginAtZero: true, max: 40 }
+                        }
+                    }
+                });
+            }
+
+            // 5. Treatment: Efficacy Chart
+            const ctxTreatment = document.getElementById('treatmentChart');
+            const fractureTypeSelector = document.getElementById('fracture-type');
+            
+            function createTreatmentChart(data) {
+                if (ctxTreatment) {
+                    treatmentChartInstance = new Chart(ctxTreatment.getContext('2d'), {
+                        type: 'bar',
+                        data: data,
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            indexAxis: 'y',
+                            scales: {
+                                x: { beginAtZero: true, max: 100 }
+                            },
+                            plugins: {
+                                legend: { display: false }
+                            }
+                        }
+                    });
+                }
+            }
+
+            function updateTreatmentChart() {
+                const selectedType = fractureTypeSelector.value;
+                const data = treatmentChartData[selectedType];
+                if (treatmentChartInstance) {
+                    treatmentChartInstance.data = data;
+                    treatmentChartInstance.update();
+                }
+            }
+            
+            if (ctxTreatment) {
+                createTreatmentChart(treatmentChartData['vertebral']);
+                fractureTypeSelector.addEventListener('change', updateTreatmentChart);
+            }
+
+            // 6. Treatment: Strategy Pills
+            const strategyContainer = document.querySelector('[data-strategy]').parentElement;
+            const strategyContentEl = document.getElementById('strategy-content');
+            strategyContentEl.innerHTML = strategyContentData['sequential']; // Load initial
+            
+            strategyContainer.addEventListener('click', (e) => {
+                if (e.target.classList.contains('info-pill')) {
+                    const contentKey = e.target.dataset.strategy;
+                    if (contentKey) {
+                        strategyContainer.querySelectorAll('.info-pill').forEach(pill => pill.classList.remove('active'));
+                        e.target.classList.add('active');
+                        strategyContentEl.innerHTML = strategyContentData[contentKey] || 'Content not found.';
+                    }
+                }
+            });
+
+            // 7. Special Topics: Secondary Chart
+            const ctxSecondary = document.getElementById('secondaryChart');
+            if (ctxSecondary) {
+                new Chart(ctxSecondary.getContext('2d'), {
+                    type: 'pie',
+                    data: {
+                        labels: ['Glucocorticoid-induced', 'Hypogonadism', 'GI Disorders', 'Rheum. Disorders', 'Other'],
+                        datasets: [{
+                            data: [30, 20, 15, 10, 25],
+                            backgroundColor: ['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6'],
+                            hoverOffset: 4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { position: 'bottom' }
+                        }
+                    }
+                });
+            }
+            
+            // 8. Special Topics: Comorbidity Tabs
+            const comorbidityContainer = document.querySelector('[data-comorbidity]').parentElement;
+            const comorbidityContentEl = document.getElementById('comorbidity-content');
+            comorbidityContentEl.innerHTML = comorbidityContentData['diabetes']; // Load initial
+            
+            comorbidityContainer.addEventListener('click', (e) => {
+                if (e.target.classList.contains('info-pill')) {
+                    const contentKey = e.target.dataset.comorbidity;
+                    if (contentKey) {
+                        comorbidityContainer.querySelectorAll('.info-pill').forEach(pill => pill.classList.remove('active'));
+                        e.target.classList.add('active');
+                        comorbidityContentEl.innerHTML = comorbidityContentData[contentKey] || 'Content not found.';
+                    }
+                }
+            });
+
+            // 9. Guidelines: Dynamic Content
+            const guidelineTopicSelector = document.getElementById('guideline-topic');
+            const guidelineBr = document.getElementById('guideline-br');
+            const guidelineUs = document.getElementById('guideline-us');
+            const guidelineEu = document.getElementById('guideline-eu');
+            
+            function updateGuidelines() {
+                const topic = guidelineTopicSelector.value;
+                const content = guidelineContentData[topic];
+                
+                guidelineBr.innerHTML = content.br;
+                guidelineUs.innerHTML = content.us;
+                guidelineEu.innerHTML = content.eu;
+            }
+            
+            guidelineTopicSelector.addEventListener('change', updateGuidelines);
+            updateGuidelines(); // Load initial content
+
+        });
+    </script>
+</body>
+</html>
+

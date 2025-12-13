@@ -1,0 +1,537 @@
+WhisperAI Transcription Report
+
+Title: Skeletal Health Management in Cancer Patients
+Date: 11/19/2025
+Duration: 2996 seconds
+Language: auto
+
+---
+
+TRANSCRIPTION:
+
+Good evening, everyone.
+
+Thanks so much for being with us. It's my absolute honor and pleasure to introduce Dr. Aziz Farooqi. He joins us from Memorial Sloan Kettering in New York City, where he is an attending physician and also an associate professor at Weill Cornell Medical College.
+
+He has great expertise in the area of osteoporosis and bone health management in cancer patients, as well as management of bone metastases and.
+
+And also general endocrinology. He is the foremost thought leader in bone disease at Sloan Kettering, and we're very honored to have him here with us tonight. He will be speaking to us about skeletal health in cancer patients.
+
+Thank you, Dr. Tabatabhai, for that kind introduction. This is a great conference. I'm really enjoying ACE this year. It's a lot of fun, a lot of good information out here, a lot of good weather.
+
+And to clarify.
+
+So I am an endocrinologist, not an oncologist. I live with oncologists. They're like that really annoying roommate that constantly does things to annoy you.
+
+You made the patient hypocalcemic again. God.
+
+So today we're going to talk about boning cancer, as you know. And let me see here.
+
+This, this is our agenda right here.
+
+So first we're going to talk about two common scenarios that I think probably a lot of people see. These patients, breast cancer patients and prostate cancer patients, receiving endocrine therapy of some type, and some various scenarios regarding these patients.
+
+So I have some provocative questions up here to get you all awake here after a long day.
+
+And so we're going to touch on the seed and soil hypothesis in terms of breast postmen, breast cancer patients.
+
+And so the question is, what drug that you probably have all prescribed has been shown to improve survival with an absolute benefit similar to adjuvant chemotherapy? Hmm. Number two, in men with prostate cancer, do most clinical fractures result from bone metastases or do they result from fragility?
+
+Hmm. And finally, the most fun part of the talk, we're going to talk about anabolic agents and whether they can be used in cancer patients, because I have all the answers. No, just kidding.
+
+So first of all, you know, some cancer therapies can cause rapid bone loss, as you might imagine.
+
+And so we can justify doing a bone density scan at the one year mark in these patients.
+
+So you see in the green here, see if my pointer works. Naturally occurring bone loss and then bone loss in women receiving aromatase inhibitor therapy, postmenopausal women, bone marrow transplant, adt, prostate cancer, aromatase inhibitor and GNRH agonist. Premature menopause can often do a big, cause a lot of bone loss, like pulling the rug out from under somebody.
+
+And then for you, for anybody that's interested in looking at this, there are some limited studies out there. This OI study, reference number seven on immunotherapy. But I think that's really fertile ground to continue looking at what the effect of immunotherapy is on bone health.
+
+So here we go with that question again.
+
+And you know, we take this all the way back to Steven Padgett. Cancer has the seed, bone has the soil. And when a plant goes to seed, its seeds are carried in all directions, but they can only live and grow if they fall on congenial soil. And this soil is sort of barren and this soil is being turned over or plowed.
+
+And we'll come back to this analogy.
+
+Antiresorptives have tons of data in patients with cancer, both non metastatic and metastatic, and they do good things. Right?
+
+So reducing bone turnover, reducing bone resorption can prevent bone loss.
+
+There's data on that in breast and prostate cancer. There's data that in advanced cancer at increased dosing frequencies, you can have palliative effect and decrease pathologic fractures and skeletal related events, as they're called, which is a composite endpoint, which led to the approval of drugs like zoledrotic acid and denosumab Xgeva. You can palliate pain and you can improve quality of life, you can treat hypercalcemia.
+
+So in this talk, we're going to sort of focus here more.
+
+We're not going to get into the metastatic disease situation right now.
+
+So here's our first case to guide the discussion. This is a 52 year old lady, newly diagnosed breast cancer with osteopenia, and she's going to start an adjuvant aromatase inhibitor. Adjuvant means given to decrease the risk of recurrence.
+
+So she has estrogen positive breast cancer. That's why she's getting the aromatase inhibitor. And she had a chemotherapy induced menopause 1 1/2 years ago. And these drugs, these aromatase inhibitors, are often continued five to 10 years or even longer.
+
+So this patient has osteopenic bone density. There's no history of adult fractures, but she had a history of maternal hip fractures.
+
+So she asked for a referral. And the frax calculation, as you might imagine, is below threshold because she's young.
+
+Right. And we don't find any secondary causes of bone loss for this patient.
+
+So Just a word about these drugs. Are you guys seeing patients receiving these aromatase inhibitors?
+
+Yeah, getting head nods. Good, you're in the right lecture. That means so you know, they have been shown to be superior to tamoxifen as adjuvant therapy. There's three of them.
+
+And you know, you can prevent bone loss with these agents by giving bisphosphonates and denosumab. And we'll look at some of that data.
+
+So, you know, they lower postmenopausal estrogen. That's the little bit that's there to nothing, basically.
+
+And that's to be contrasted with SERMs. Right?
+
+So tamoxifen, just like raloxifene, is a serum. And the distinction though is that if you have an environment where there is estrogen, like a premenopausal patient, it acts like an antagonist and there causes some bone loss, that is tamoxifen.
+
+And if you have a postmenopausal patient, then you're going to get bone protection.
+
+So I love it when patients are on tamoxifen who are postmenopausal because depending, hopefully we don't have to do too much more for them.
+
+Certainly some patients who are very high risk for hip fracture, you might want to, on top of the tamoxifen, do something else.
+
+So here we can see what happens sort of as a natural history, when you give an aromatase inhibitor and compared to tamoxifen, tamoxifen's in the solid line here.
+
+You get some bone gain. And when you give an aromatase inhibitor to these postmenopausal women, there is a loss of bone density. The slope is sort of most rapid in the first couple of years in these different studies here that are shown. And then you might wonder, well, what happens to fracture risk?
+
+Here's some data that when you compare an aromatase inhibitor to tamoxifen, there is an increase in fractures. But all you intelligent people out there saying, well, that's not really fair. You're comparing something bone protective to something that could be harmful. And that is true.
+
+So we'll get more into that, actually. And in this study, this was one landmark study, mean age 64 years, women with breast cancer, there was losses, five year losses of about 6% and 7% at the spine and total hip in that study. And when the aromatase inhibitor was stopped in that same study, thankfully, when that little bit of estrogen comes back, then we get some gain in bone density.
+
+And also the converse is true for tamoxifen, of course, when you stop Tamoxifen, you lose a little bit of bone density.
+
+And you can see this graphically here, that the fracture risk, when they stop the anastrozole, the aromatase inhibitor, the fracture risk drops back down to that of the tamoxifen treated patients right there at year five. That is one good thing. But in some patients, these drugs are never stopped. Actually, one other scenario, a different scenario that sometimes is pretty difficult to deal with, is premenopausal breast cancer patients, and they are on medical ovaryectomy, if you will, or ovarian suppression, which is a GNRH agonist plus an aromatase inhibitor.
+
+Okay?
+
+So this can cause a lot of bone loss over three years. And then, as you might imagine, when this regimen is stopped, if somebody's young, the bone density can come back.
+
+And so that's an if scenario.
+
+And so you kind of have to, you know, discuss this with the patient.
+
+Some of these patients actually want to get pregnant in the future, too. And this is another dilemma, because if you give a bisphosphonate, we all know it has bone binding affinity and it's going to stick around. And in theory, that could cause a problem with the fetal skeleton, depending how long you wait to get pregnant.
+
+And then you say, well, denosumab doesn't do that. Right? But then, you know, you, of course, you need to chase denosumab when you stop it normally. Perhaps the return of estrogen when this ovarian suppression is stopped would be a little bit of help to prevent bone loss if you were using denosumab.
+
+So I have your multidisciplinary decision making, but the oncologist is going to say, yeah, whatever you want to do, do it.
+
+Okay, and one more premenopausal study here I wanted to show you. This is a chemotherapy induced menopause study. And I thought it was striking because this is from the group at Columbia.
+
+Dr. Shane and Dawn Hirschman is the oncologist. And they gave zoledronic acid every three months, every three months, 4 milligrams of zoledronic acid, trying to prevent bone loss. These were non metastatic patients. These were just simply patients who were premenopausal and had chemotherapy induced menopause.
+
+And so you can see in the data on the bottom here that the CTX on the bottom right here, despite the zoledronic acid, normally we see a suppression in ctx and we really didn't even achieve a decent suppression there, but we thankfully achieved pretty stable bone density. But you can see here there's something we probably don't quite fully grasp about this scenario of the chemo induced menopause.
+
+And now this study made my life complete, I have to tell you.
+
+So this was an oncology study with the primary endpoint of time to clinical fracture, as opposed to the other studies I showed you, which were not designed to look at fracture as the primary endpoint.
+
+So this was a prospective randomized, double blind, blah, blah, blah, placebo controlled study, mean age 64. And. And they randomized the patients regardless of bone density.
+
+So 45% of the patients in this study actually had normal bone density.
+
+That really ruffled my feathers because I said, how can you do that? But they did that, they ran because they thought that these patients were at high risk of fracture.
+
+So normal bmd, still, they got randomized. And incidentally, anybody know what this is?
+
+That Delaware or New Jersey? That's what I thought. See, you know, this is an international group. That's how you knew that.
+
+I think, you know, we Americans, we're not that good at geography, but very good. It's Austria. Yeah.
+
+So you get a prize.
+
+Whoever said that. Kidding.
+
+So the secondary endpoints in the study were very interesting too. Cancer free survival, et cetera.
+
+And we'll get into that. But first of all, in this study, denosumab increased bone density very nicely at both the spine and the hip. You can see that here, over three years, three year data here. And the fracture rate was very interesting.
+
+I mean, let's say 16, 17% fractures at the five year mark. And you see that here, that was higher than expected. And zinosumab, as you might imagine, it did do a very nice job of reducing the risk of fractures.
+
+So I think the take homes here are that BMD may underestimate fracture risk in these patients.
+
+And certainly denosumab did a nice job of reducing fractures. This is sort of the breakdown of fractures. And in this initial analysis, there was no cases of atypical femur fracture in onj. And I'll show you an updated analysis on that and we'll look at that in more detail.
+
+But you can see the fractures were pretty, you know, evenly distributed here across the typical sites.
+
+What also was interesting about this Austrian study, the fracture reductions occurred in people with normal bone density and younger patients.
+
+So that is typically right, not people that we think of as high risk, but because of their aromatase inhibitor treatment, their fracture risk must have been increased. The caveat here is that 99% of these patients were Austrian or Swedish.
+
+So whether ethnicity is going to modulate fracture risk. I think that's a debatable concept. Of course it's in fracs. And you know, we can discuss that offline.
+
+Now. I wanted to touch on this adjuvant data. The big question that we were wondering before.
+
+And so for years there were studies with bisphosphonates and there were various mechanisms proposed as to how they could have a adjuvant benefit in breast cancer patients.
+
+Was it through the effect on the gamma delta T cells? Is it an anti angiogenic effect? But then came along one study, the Austrian study actually, that showed a similar effect with denosumab. And when that study resulted, I would say that the most likely explanation was the effect on the bone microenvironment and the mechanism whereby there was less cancer recurrence.
+
+So we'll look at this a little bit in further detail here because it's more complicated than I'm portraying here. Like most things in medicine, this is a slide from Dr. Geiss and Wright and this is an old slide now. But what this is getting at is that if you have a post menopausal situation versus premenopausal in a premenopausal state, the disseminated cancer cells that are sort of possibly lurking there in the bone marrow have nothing to activate them. And with estrogen around to keep the lid on things.
+
+But in the postmenopausal situation, you have this osteoclastic bone resorption, as we all know, and then you get proteolytic enzymes released and you have these matrix derived growth factors that are taken out of the bone matrix and feedback on the micrometastases, if you will. And this is a theoretical framework, but that is, you know, could lead from dormancy to activation. And that environment is barren soil. And then this environment is being turned over by the osteoclast.
+
+So there we go with that analogy.
+
+Now so this culminated, this adjuvant bisphosphonate story, culminated in this Meta analysis of 38 adjuvant trials. And they used both clodronate and different bisphosphonates.
+
+So you can see, my God, 22,000 patients, 18,000 patients received.
+
+This was a patient level meta analysis and treatment duration of bisphosphonate 2 to 5 years, mean 3.4 years.
+
+Okay, so the most common regimen that they used in this meta analysis was zoledronic acid, 4 milligrams every six months. And you might ask me, why did they do that? Well, this was before the approval of 5mg yearly zoledronic acid reclassed and so forth.
+
+And now we know that zoledronic acid may stick around five years or 10 years in some women. But not surprisingly they were able to show a reduction in fragility fractures. There was an abandoned eight cohort here that was 50 milligrams daily. We don't have that in this country.
+
+And then they didn't have enough data with resedronate or alendronate to say anything.
+
+So the punchline here is that bisphosphonates, when you look at postmenopausal women, not premenopausal women, that's where the mortality benefit, the absolute benefit, was indeed similar to adjuvant chemotherapy.
+
+So this was an important paper and Asco opined on this as well. I'll show you here.
+
+This is the mechanism of benefit. The mortality benefit was driven by less bone recurrence over years 0 to 4. And you might also wonder what about non cancer mortality? But there was no difference in non cancer mortality in the recurrence free women.
+
+You can see that there because we do have some mortality data post hip fracture and so forth with zoledronic acid going back to Austria here in that study they also showed an improvement in disease free survival and bone metastases free survival. That the absolute difference was remarkably similar, right? About 3%.
+
+So that, you know, again the common denominator being these are different mechanisms of drug, but they both affect the bone microenvironment and reduce bone turnover.
+
+Now when I see patients, I do sometimes the oncologist doesn't really even tell them about this, but I think it's very important data to share that you could get a double benefit from using one of these drugs and it may help somebody make the decision to start antiresorptive therapy. This is the long term data from Austria. Long term follow up at 11 years there was one atypical femur fracture, there was zero ONJ, there was no difference in overall fractures when the trial was stopped at five years. But there was an increase in multiple vertebral fractures, 14 versus 4.
+
+As we know, that can happen to susceptible patients. And in contrast to that study, there was a study out of the UK.
+
+Now the ABCSG18 is the Austrian study, The DCARE study was from the uk. It was a different population.
+
+And so like most things in medicine, nothing is that simple. And this was a negative study. They used higher dose denosumab, they used the Xgeva dose, 120mg, you see that here. But because the patient population was pretty different.
+
+I think that is what drove the fact that they were unable to show a benefit in this higher risk population.
+
+So we had two conflicting. And not to mention not all the patients were on aromatase inhibitors, but the Austrian study they were.
+
+So we had two conflicting studies.
+
+And that led the American Society of Clinical Oncology to recommend adjuvant bisphosphonates to be discussed with all postmenopausal women, irrespective of hormone receptor status. And they're not obviously not substitutes for standard therapy, but they did not recommend adjuvant denosumab to prevent recurrence.
+
+Now, of course, if your aim is to protect bone density, denosumab is a perfectly good option. And that was because of the conflicting randomized trials.
+
+Basically the duration of bisphosphonate, there was one analysis here that suggested even just two years for the adjuvant benefit was non inferior to five years. Of course you may need to treat somebody with osteoporosis for longer than two years.
+
+So some summary here that does that patient with mild osteopenia who is initiating an AI need antiresorptive therapy. I would, you know, if you want, you can click the rheumatoid arthritis button in frax to elevate their risk.
+
+That's one option. Remember that the chemo induced menopause can cause a really rip roaring bone loss. And then, you know, some patients are maximalists and then say give me, give me, give me everything you got.
+
+Some people are minimalists, say no, I don't want your drugs doc, keep your drugs.
+
+So that's what you have to tease out, I think and decide with them what they want out of this scenario.
+
+So going back to our patient here, what's the risk for bone loss? There's definitely there's risk for bone loss. Risk for fracture.
+
+Is there? Even with mild osteopenia, I would say and zoledronic acid, first choice, especially with the adjuvant, if you're going for the adjuvant benefit with the patient's preference and second denosumab and no, I mean I would tell the patient that this could help prevent bone recurrence and help you live longer. That's what I would tell the patient.
+
+So let's go to the guys, the prostate cancer crew.
+
+Okay, so there are some new players in the prostate cancer world besides just Lupron, right?
+
+So we know about traditional ADT that actually I have this here because you probably know that when you take testosterone to zero, you make estradiol Zero as well. Right. And that's what these guys get.
+
+Hot flashes. It's even been to serms, have even been studied in these men as a bone protective mechanism and never made it for various reasons.
+
+But so going back to the other option, ARIs are something that we can touch on that have show you some data that they increase fall and fracture risk as well as we would imagine. And abiraterone, which is a CYP17 inhibitor commonly given with steroids as well.
+
+So if you give somebody a GnRH agonist for more than one year, it causes a persistent increase in fracture risk. And that's what you see in the red there. If it's less than, this is the one year mark. If it's less than one year, eventually the black is no GNRH agonist.
+
+Eventually the fracture risk comes back to the line of no GNRH agonist.
+
+So there should be some recovery there over time.
+
+Now the answer to that initial question is that most clinical fractures in men with prostate cancer do not result from bone metastases disease. And it's actually only 9 to 16% of clinical fractures in men receiving hormone therapy for prostate cancer were classified as pathologic fractures.
+
+So really I think, you know, oncologists don't fully appreciate this. And when somebody is made hypogonadal, they're certainly at risk for bone loss and fractures. And you can see this here, this is study by Susan Greenspan looking at acute ADT started within the last six months and chronic ADT in patients who had been on it for like 33 months. And you can see here that in the dark triangle the bone loss happens pretty rapidly.
+
+Spine, hip, radius and the chronic adt. However, it doesn't seem to have the same detriment, except with the exception being the cortical bone perhaps here, where both the acute and the chronic at the total radius ADT continue to cause bone loss.
+
+So how do we protect these patients?
+
+So there was a high quality randomized study which was powered for vertebral fracture reduction and this is published in the New England Journal in 2009.
+
+And so these were non metastatic patients randomized to denosumab versus placebo and they were able to show reduction in new vertebral fractures. Significant reduction here. And I have a caveat on the bottom here which really applies to people with large burden of blastic metastases that, you know, giving denosumab can trigger or of zoledronic acid can trigger hypocalcemia in those patients. I Think you guys have gotten consults about that, right?
+
+This is a common thing that happens.
+
+So let's ARIs, androgen receptor inhibitors. This is Enzalutamide and the lot.
+
+So they can be added to androgen deprivation therapy in metastatic or non metastatic prostate cancer patients.
+
+Here you see a meta analysis of 11 trials and ARI versus not on ARI, essentially. And what you see here is that the fracture risk with the ADT plus the ARI is higher, twofold higher, 4% versus 2%. And the fall risk is actually also significantly higher.
+
+And so the mechanism of why the drug would cause falls is not clear.
+
+But the Apalutamide and Enzalutamide do cross the blood brain barrier, so that may be one thing to look out for. Not to mention, I mean, all prostate patients are at risk for muscle loss. And if they're being made hypogonadal and falls.
+
+And let's go back to abiraterone, we know this pathway and so this causes produces testosterone levels that are one log lower than those achieved with traditional adt.
+
+And you know, because of the shunting, of course, you get increased ACTH and can get hypertension.
+
+So they give prednisone. And the traditional prednisone would be 5mg bid. But you can certainly ask the oncologist to turn that down and it's either 2.5 bid or 5mg QD.
+
+And that should still be able to prevent this hypertension and so forth from developing in many patients. And that should be better for their bone health.
+
+So here's a case.
+
+So 70 year old gentleman has fractures, diffuse sclerotic osseous metastases.
+
+He is still on androgen deprivation therapy. He is sort of castration resistant as they say. He's getting other therapies besides just Lupron. And in the past he was treated with denosumab, 120mg for a couple of doses.
+
+Why it was stopped? Well, there's a lot going on with these patients, so we'll give the oncologist some slack. And his total alk phos is high. His corrected calcium 8.5, a little low, below the limit.
+
+Vitamin D29, not bad. GFR50. He has osteopenic T score at the hip. His spine is not readable.
+
+He has some superior end plate compression fracture and old left rib fractures. And those are his meds.
+
+So what is the next best action? What do you guys want to do here?
+
+Well, you know, it's okay. We don't have the voting option.
+
+But so, you know, I would actually be a little concerned about giving this gentleman, you know, a potent antiresorptive right now.
+
+So I would say that he would be at risk because of low gfr, large burden of metastasis, and he already has a corrected calcium that's just below the limit of normal.
+
+So, you know, I would. And he also has increased alkaline phosphatase, which is sort of, you can say, is a hungry bone metastases situation, possibly. A lot of these patients have been shown to have secondary hyperparathyroidism that's been published.
+
+And so this to me implies if he has, that it's a stressed calcium metabolism.
+
+So if you further stress it, because remember, when you give the antiresorptive, the calcium drops transiently and the PTH goes up, you can provoke severe hypocalcemia.
+
+So, yeah, I would try to make sure that that system, the parent PTH system is under control. PTH calcium and maybe even calcitriol in these patients.
+
+And so bottom line with these patients, you know, they definitely warrant antiresorptive therapy if their testosterone is less than 200.
+
+Many of them, if not all, in my opinion, the oncologists sometimes get confused that when somebody is castration resistant, that's when zoledronic acid is indicated to reduce pathologic fractures and so forth. And they don't think they can give it before that. But of course you can give it to somebody on Lupron who is responding to the Lupron in order to protect their bone health. We all know that.
+
+And one other point here is that the frax, interestingly, there was a study in JBMR that it had been validated in men with prostate cancer on adt. But I would say that look at the patient, eyeball the patient, if there are fracture waiting to happen, your clinical judgment can certainly trump frax. One other couple of other pearls here is that in these neuroendocrine, some prostate patients, a minority can have neuroendocrine differentiation. Has anybody seen these kind of patients?
+
+Because they can make FGF 23, they obviously can cause osteomalacia phosphate wasting. And they can also have ectopic cushings in these scenarios.
+
+So these are rare things, but just couple and you see a low potassium in that case.
+
+So going back to our framework here, the thing I want to point out is that you can give zoledronic acid or denosumab 60mg every six months to prevent endocrine therapy induced bone loss.
+
+Referring to both aromatase inhibitor and androgen deprivation therapy induced bone loss.
+
+Okay, so how about anabolics? All right, everybody can wake up. It was a fun part of the talk.
+
+Right?
+
+So that's what we're all wondering. And you know, there's not a lot of data, obviously, but there's some theoretical risks that are out there that are really theoretical, you know, in when you give an antiresorptive, you know, you do good things to cancer patients. Right.
+
+So could you increase this because, you know, an agent that and an anabolic that increases bone resorption. Right. Like a PTH analog. Could that be a problem as opposed to romozosumab.
+
+Right. There was a fellow here, I'd pick on them and ask them that question. But, oh, well, so.
+
+And also the increased activation of advanced cancer in the bone is another theoretical risk that, you know, when you.
+
+Again, when we know that suppressing bone turnover reduces skeletal related events.
+
+So these are really theoretical things. And you know, when we think about the microenvironment in the bone, you can see this framework here. And I just want to point out a couple of things because this is a busy slide.
+
+But the tumor can activate bone turnover through pthrp acting on osteoblasts, and that then liberates these bone derived cytokines. This is the vicious cycle. And this is TGF beta, this little blue thing here coming back and feeding back. And the vicious cycle is probably more complicated than this in immune cells and so forth.
+
+But the point I want to make here, so one thing is that you see the, the disseminated tumor cell sitting right next to our friend the osteoblast here and communicating via gap junction. But the second point, so there's a close, you know, approximation there. And the second point is that there's some preclinical data by Dr. Wu's lab. Actually, if anybody's in the audience that published this data, please let me know.
+
+You can correct me and say, no, you idiot, you got it wrong.
+
+So, no, but the preclinical data suggested PTH acts on the PTHR1 receptor, which is what we're seeing over here. This is pth. And that in the mice at least decreased PTHRP expression and decreased bone metastases.
+
+Very interesting.
+
+So we need to figure this out better. And there's more.
+
+Some of my basic science buddies are looking at this more and more to see what the positive or negative effects could be.
+
+And there we see that interaction there and here just we don't want to get too into the weeds with this. But again, you see the disseminated tumor cell and the osteoblast, the hematopoietic stem cell, all sitting here. And that's in the perivascular niche and the osteogenic niche. You see these multiple lineage forms of osteoblasts sitting here.
+
+The mesenchymal stem cell, osteoblast, pre osteoblast and the gap junction. The tumor is communicating very closely with the osteoblast.
+
+So the osteoblast is actually giving the tumor some calcium in this slide. The limited data that exists with PTH analogs, basically very little data.
+
+But I'll show you just two trials here. One was out of Australia, I believe, and it was active myeloma patients. And then I'll show you our data actually, in a minute. This was a one year trial and these patients had severe osteoporosis and vertebral fractures.
+
+Despite bisphosphonate. They had very low bone density.
+
+So. And what they found is that there was no new fractures.
+
+They increased the QCT bone density very nicely, although no change in the total hip. They did not provoke hypercalcemia, they did not increase myeloma activity. But it was 11 patients.
+
+Okay.
+
+And seven out of 12 of these patients had lytic lesions.
+
+So there was no new lytic lesions that came about. And the second trial was very interesting. It was in ONJ patients.
+
+Osteonecrosis of the jaw. And this was published in JCO, the top oncology clinical journal. Double blind trial. Eight weeks.
+
+Only eight weeks. They gave teriparatide.
+
+Okay. And 27 of these subjects had advanced cancer in the bone.
+
+And two out of 27 were prostate patients, actually.
+
+So they were looking at whether teriparatide could improve ONJ resolution.
+
+Okay. And they did find that there was some benefit to giving teriparatide to these ONJ patients, but there was no specific details given about the activity of the bone metastases after pth.
+
+So could you use this? I think it's a case by case basis.
+
+I personally would be reluctant to use it in a cancer with osteoblastic bone metastases potential.
+
+So you don't feed the whole thing.
+
+And right now there's conflicting data in the preclinical models, and that may relate to whether it's pulsatile, PTH and the duration and so on. How about romazosumab? We conducted a 10 patient pilot study and it's not published yet. And we're hoping to get an abstract out to, you know, very soon.
+
+But this did not cause any harm in these patients. We were giving the drug on label, so we were giving it to postmenopausal women with active myeloma in various degrees and who had osteoporosis.
+
+Okay.
+
+So we gave the drug for one year and we looked at bone turnover markers, bmd, and we actually were looking at the lytic lesions on the CT scans as well.
+
+And, you know, we would hope that there would be bone remineralization possibly, but it doesn't seem like there was any dramatic effects there. I'll tell you, with the preliminary data we were looking to see because these lytic lesions can become sclerotic and remineralized in some situations.
+
+So we haven't looked, thankfully found any safety concerns here. And this is unpublished.
+
+So last slide here. I have used anabolics in cancer patients, fracturing despite antiresorptive therapy. I think Dr. Geiss has also gives a talk on this.
+
+And so in general, I think that the antiresorptive data is so favorable that I use that first.
+
+Definitely. And I would try to avoid it if you have a bone tropic cancer survivor, unless they're in remission. But again, it's a case by case basis. And if somebody's fracturing, you know, you got to do something.
+
+One last point is WNT signaling.
+
+So WNT is, you know, with romozosumab is obviously a big mechanism of benefit, the bone formation. And there's been trials in oncology that have tried to develop WNT inhibitors.
+
+So this is still, I think, not 100% clear whether there could be any problem here.
+
+But in talking to my buddy Michelle McDonald in Australia, she says that sclerostin's inhibitor of one class ligands and therefore should be selective for osteoblasts and not other cells.
+
+So thank you very much for your attention. I have a couple of quotes here that. The point of these quotes is that multiple benefits from one drug in the beginning of an illness.
+
+Choose remedies which do not weaken patient strength. Use nutrition and not medication when single drugs are sufficient. Do not use composite drugs. And then later, the young physician starts life with 20 drugs for each disease, and the old physician ends life with one drug.
+
+If only if it was that easy. But whenever you think you have an original idea, somebody's thought of it. But before in medicine, that's kind of the point here.
+
+So thanks for your attention.
+
+Thank you so much, Dr. Faruki, for a fantastic talk. Do we have any live questions to begin with? Anybody want to come up to the mic? Don't be shy.
+
+Hi, Pinar Smith from Rush in Chicago. Thank you for the excellent talk. Do you have any data on this Yorvi path used for hypoparathyroidism? Because my understanding is that a lot of the cancer data actually comes from the anabolic osteoporosis medications.
+
+But that's kind of my big concern about using it.
+
+So thank you. Yeah, thanks Vinar. That's a good question and you read my mind because I've been asking the company to let us know how many cancer patients were in the trials and so forth.
+
+And I mean I think you know, even with the older drug, the Nat para, it was given to people with a history of cancer. That's who a lot of who get hypopara.
+
+So I think we need more large maybe big data analyses of this to see what the effect is on potentially recurrence or in general. But it seems we've all treated patients with hypopara who've had cancer and doesn't seem like anecdotally nothing terrible happens.
+
+Good.
+
+So thank you very much. I was curious about the why the zoloturanic acid wasn't as effective in a patient with metastatic breast cancer to prevent fractures plus further metastases. It seemed like proliab had better data.
+
+Is that true?
+
+Well, so we didn't get into that data in this talk, but you're right that there is a head to head study comparing denosumab 120 milligrams to zoledronic acid. And when they look at that was a study in people with active bone metastases.
+
+So there was some superiority margin reached in that study.
+
+Yes, probably it's a little more of a potent antiresorptive and so you with more greater potency perhaps can come greater adverse effect. That's debatable. But yeah, there is a published study in JCO on that subject. And I was also wondering how long you would keep someone on parole yet.
+
+Ah, well that's you know, the million dollar question. Right. But I mean if they're at high risk for fracture, I mean we have 10 year data and there's sort of a treat to target framework which is emerging that because you keep accruing bone density, once you get somebody to a target bone density that you're happy with, what that is is debatable. But then you could stop.
+
+I think Dr. Tabatabhai is also an expert on that. You can comment if you want to, but yeah, it's sort of the other with the cancer patients if they're still on the aromatase inhibitor for 10 years. That's a tricky situation. Maybe you don't want to continue the prolia the whole 10 years if you've got their bone density yet.
+
+Happy with it. Thank you. Hi, Dr. Farouchi, thank you for a great talk. My name is Ilya Mansour from Moffitt Cancer Center.
+
+For patients who are on denosumab who have active fractures, do you overlap therapies with anabolic agents or romosuzumab? How do you reconcile with these therapies patients who have active fracturing on denosumab? Yeah, that's a good question. Well, you know, denosumab doesn't prevent 100% of nonvertebral fractures.
+
+Right, we know that. Or vertebral fractures.
+
+So yeah, I mean, you know, on a case by case basis you could consider that as continuing the denosumab and giving an anabolic on top of that.
+
+Now, you know, we have some data that if you add romozosumab to it, you get an increase in the spine bone density on top of the denosumab.
+
+You could consider giving a PTH analog as well. I think the fact that the denosumab is restraining bone resorption, in theory, that would be a good thing if somebody had active cancer in the bone. But yeah, that's a tough one. But you could consider that it's not.
+
+No definite answer. Thank you. Would you care to comment on the effects of aromatase inhibitors on parathyroid hormone? And if there's one that is less, more beneficial than another in terms of the aromatase inhibitors.
+
+Thanks. Yes.
+
+So on parathyroid hormone, you know, I'm not sure there's a strong effect on parathyroid hormone one way or another. I think that, you know, it's.
+
+There is some published data on that. I can get it to you. But from what I remember it was small, small effects on pth. Yeah.
+
+Thank you, Doctor. Just to clarify, the clinical beneficial effects by the antirepsorant treatment in the breast cancer, is this mainly for hormone receptors positive or like triple negative breast cancer and also HER2 positive. Is this uniformly beneficial for breast cancer, bisphosphonates, postmenopausal patients? It was uniform.
+
+It was across triple negative as well.
+
+So very impressive the denosumab data from Austria, that one study, it was only estrogen positive patients receiving aromatase inhibitors. And then we have the conflicting study study from the UK with denosumab. But with bisphosphonates.
+
+It was sort of across the board. Amazing. Yeah, it looks like data having regained the bmd. How about TBS by any chance?
+
+How about both microarchitecture? That is a great question. I'm not sure if there's anything published on that. I'll have to check that out.
+
+Yeah, that. When women regain their mensi, when you stop the aromatase inhibitor, what happens to tbs? You're asking, right? Yeah.
+
+Yeah, that should be looked at. You should look at that.
+
+So it looks like we are officially out of time.
+
+So I want to thank Dr. Faruki for his excellent talk.
+
+If you're okay with a couple more questions, we could do them. Yeah, I don't mind. Dr. Khan over there. Dr. Khan.
+
+Yes. Hi. Very great talk. I really enjoyed it.
+
+I wanted to ask you what you do for breast cancer patients who have completed the three years of IV zoledronic acid and have not had fractures but are continuing the aromatase inhibitor. Do you switch them to denosumab and if so, when? How long do you expect those three years of IV zoledronate to continue to have STO protective effects? Yeah, good question.
+
+I mean, I think it depends on. On the exact patient. Right. But I guess if they're a low risk patient, I would tend to, you know, give them a holiday for two, three years at least.
+
+Hoping that the data that we have in, you know, with Reclast is going to hold over to these patients as well. Translate, I should say. Yeah, but you could.
+
+You know, there's a lot of options in these patients.
+
+Oral bisphosphonate, IV denosumab. Of course, the oncologists are not aware of chasing the denosumab. And like your data may be, low dose denosumab is the way of the future. Thank you.
+
+Okay, Dr. Fariki, I'm going to make this fun.
+
+Okay? You've got to answer these questions with a yes or no. You may not pontificate.
+
+Okay, so I'm just kidding you. You can totally pontificate if you want. Are anabolics ever okay in those who've had radiation to the bone? Yes, I think so.
+
+You know, I think it's. Again, radiation induced fractures are a big problem and we need more data on that. I was talking to somebody recently about. They had some data that romozosumab in radiation induced fracture, a case that they published, increase the bone density on CT right near that fracture.
+
+That's fascinating. Yeah.
+
+Now if stopping denosumab. Do you worry about rebound, increased risk of Cancer due to increased turnover.
+
+Right. I mean, you know, it's an unanswered question. The Austrian study, I don't think could fully answer that question because some of the follow up of those patients, some of them were chased, some of them were not. And yeah, I don't want to let bone resorption go crazy.
+
+So I do worry about that a little because I feel like that could feed that seed and soil situation the wrong way.
+
+Absolutely. And we'll take one final question from the floor. I hope you can hear me.
+
+I have laryngitis. I can hear you. Yeah.
+
+So I'm an imager, an endocrine imager in a.
+
+An adequate surgery practice. Why do we see so much hyperpara in myeloma patients? I mean, you know, it could be. Is it.
+
+Is it after they're getting IV bisphosphonates and denosumab? Because that will trigger it in a lot of people, some of them. You're talking about primary hyperpara, though, or. It's not myeloma.
+
+It's not myeloma. Hypercalcemia. It's hyperpara. Yeah.
+
+Well, you know, that's an interesting observation. I mean, we could look and see what the. In our population, what it is. Yeah, I notice it from time to time, but I haven't noticed that anecdotally there's an increase.
+
+Yeah. Thank you all so much. Have a great evening. Thank you, Dr. Faruki. Thank you.
+
+---
+
+Generated by WhisperAI
+https://whisperai.com

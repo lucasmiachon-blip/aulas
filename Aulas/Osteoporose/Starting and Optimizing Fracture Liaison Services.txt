@@ -1,0 +1,463 @@
+WhisperAI Transcription Report
+
+Title: Starting and Optimizing Fracture Liaison Services
+Date: 11/19/2025
+Duration: 3230 seconds
+Language: auto
+
+---
+
+TRANSCRIPTION:
+
+Okay, why don't we go ahead and start on time? I'd like to thank John and Ace for the opportunity for the four of us to be up here and talk about something that we've all been passionate about for years, and that is the fracture liaison service concept. We're not going to waste any of your time talking about who we are. Our biographies are in the app, and this is designed to be interactive, and it's a small group.
+
+And so I think that we hope that this will largely be discussion rather than us standing up here and pontificating about slides. We did put a few slides together to sort of direct or at least get started on what we're doing. And the overview is, as you see here, why are we talking about fls? What is it?
+
+How do you do it? What are the challenges? And how might you monitor your progress? This is the why.
+
+And I think you're all familiar with the treatment gap concept, and that's the proportion of folks who are at high fracture risk who are not receiving therapy. This is a worldwide phenomenon. And as you see here, we're number one. We have a real terrible treatment gap.
+
+And worldwide, the treatment gap has increased in the decade from 2010 to 2019.
+
+So the why is we're doing a bad job. And these are the data that. The most recent data that I'm aware of that speaks to how badly we really are doing in the United States.
+
+And this is in a journal of the Journal of Arthroplasty, I'm guessing a journal that most of you don't read, but it was a huge study of over 35,000 folks who broke their hip. The cynic went on osteoporosis related fracture, and then they followed them to say, did you get treated? And the proportion that got treated within one year is less than 6%. And what that means is that one out of 18 folks in the United States who breaks their hip has anything done about it.
+
+And suffice to say, that isn't very good in our routine approach. And FLS does better. And this is a meta analysis of 74 studies of FLS. And I'm not going to go through the data in any detail, but the red bars are the FLS group.
+
+And it basically says that testing improves, treatment, improves adherence improves fractures are reduced, and even mortality is reduced.
+
+So FLS is a way of improving our abysmal current approach.
+
+And now we're at least going to start with a little bit more didactic and then open it up for questions. And Andrea will talk about what is fls.
+
+So I'm sure many of you are aware of this, but Neil showed you the reason that we need multidisciplinary, coordinated care approach once somebody's had a fracture. Because when a systematized way of finding these patients and making sure that they get the care they need is not in place, you saw what happens, which is nothing, right? And even in good places where there are boneheads who know what to do, who care about it, we take really good care of the patients who get to us, but we don't know who the patients are who don't make it to us. And they're the ones who fall through the cracks.
+
+So this is really a focused, strategic and persistent approach to disease management for patients who've had that prevalent or first fracture.
+
+Sometimes they make it to us after the second. But the idea is they're the low hanging fruit. We should be able to recognize these patients and channel them to an organized program.
+
+At the center of this program, in addition to the patient is really a fracture care coordinator who's often an advanced practice practitioner, a PA nurse practitioner, doesn't have to be, could be a nurse, but somebody who is going to work the system and really coordinate care.
+
+And also generally a bone health champion. And we'll talk more about the key personnel as well. The idea is that in a systematic way, patients are identified wherever they come into the system so that we know who they are.
+
+They are then channeled through the program so that they have an investigation or an evaluation that we'll talk about. They get a diagnosis and in a perfect world they also get treated. And this is what an overall pathway might look like.
+
+So if you start at the top with entry into the healthcare system, identification.
+
+I know I keep saying that over and over, but that's the most important aspect in many respects, because if we can't find these patients, we can't do anything with them. Investigation occurs and then a personalized treatment recommendation. You'll see at the bottom that a patient could then in theory be sent back to their primary care. I'm going to talk about perhaps why in a moment why that may not be the best option.
+
+I'm a primary care doc at heart. I'm still in the trenches, primary care doc, but for most part that's not the best option. Or they can stay within the FLS pathway, be started on, treatment, monitored. And the goal obviously is to reduce rates of new fractures, secondary care admissions, fewer home care and admissions.
+
+And this obviously leads to overall healthcare benefits most of the time. FLS takes place at least most of the care in the outpatient setting. I do just want to mention the concept of an orthogeriatric program. That's where healthcare providers work in concert with surgeons.
+
+When a patient comes in, often those who get admitted need surgery to reduce time to the orientation to really maximize perioperative care and health outcomes, to reduce length of stay. In a perfect world, there's an ortho geriatric service that works in concert with an FLS program.
+
+So you have comprehensive care from the point of entry all the way through management. That doesn't always happen, but they both are types of post fracture care programs.
+
+And then on the next slide, this really speaks to why having a program that has the mandate not only to identify and start the evaluation, but also to treat is important because there have been a number of studies and publications that show that the more comprehensive the FLS program, the better the outcomes.
+
+So really those programs that can take patients all the way through the intervention stage and also follow longer term for persistence and adherence have the greatest success rates. And we'll come back to some of these issues and what this can look like later.
+
+So now we're going to turn it over to Ann and Kristin to speak to how you actually do this and what the this might look like in your institution.
+
+Well, I think some of the things have been revolutionized over my career because of the electronic medical record.
+
+So if you can leverage that system, it really has the power to identify the patients, which was the first I when I set up the program at Mayo Clinic, I first aligned as many people did in the early 2000s. Yes, I'm dating myself, it was a long time ago with the orthopedic teams and focusing on patients who were hospitalized with primarily hip fracture because that's your lowest hanging fruit, it's easy to identify and things like that.
+
+So you could do a baseline audit as these things say, to know where you're doing.
+
+But that requires that you work with your institution to set up an electronic system. The systems are capable of doing that. You have to know who in your system can customize. There's less seems to me.
+
+And maybe we can have a discussion sharing of electronic resources. If you're on a platform like EPIC that's widely used, someone's figured out how it works in their system and could be shared. And then there's a lot of patient factors that are barriers and we'll probably talk about that. But I think having a champion in the orthopedic team, which maybe Kristen, Will and I know others can talk about is really critical because they're often seeing the patients first.
+
+There are trickle in in other avenues. Primary care, the emergency room, a spine center, neurology, neurosurgery. There's a lot of ways that fractures kind of trickle into the system.
+
+So you have to have a wider sweeping thing if you really want to try and capture all of them.
+
+So I think it's a difficult sell sometimes because this requires resources and you're talking largely about a population that doesn't generate a lot of revenue. And although cost avoidance is always a strategy, it's not as attractive to administrators as revenue stream improvement.
+
+So everyone can agree it's the right thing, but it's hard to do.
+
+So you have to talk to it because you're going to need people and people cost money.
+
+So I think that's a sticky point. And there are competing priorities either at the institution or we might talk more about insurance and government priorities and why those have lagged behind putting this forward. I think we can sometimes create our own barriers in requiring a lot of testing before we're willing to see them, the patients. And I eliminated all of that.
+
+I said, just send them to me, I'll do what I need. And often that's very little.
+
+So I think we boneheads can do that. Primary care doesn't feel as comfortable.
+
+So the principles here are to identify the patients, educate them and do an appropriate evaluation. Assessing fall risk is a little bit trickier in this setting of an acute fracture, I find. But maybe Kristin can talk more about that bone density if it's going to be useful. And I'm selective in who I do that too.
+
+Require that nutrition support is often overlooked and often we focusing on pharmaceuticals.
+
+So, Kristin, why don't you tell me how it works in yours? Sure.
+
+So I'm a physician assistant within an orthopedic department at an academic orthopedic institution.
+
+So we're a level one trauma center.
+
+So very busy. And our spine orthopedic surgeon is the one that was the champion to set up our program at our institution. And I had been an orthopedic PA already for 15 years working in non operative spine care and pain management.
+
+So I was dealing with the repercussions of this disease. The patients having the painful spine fractures and needing rehabilitation after major fractures and surgeries.
+
+So it's kind of a natural progression. But I think the biggest mistake we made at the beginning was they just hired myself as a clinician to treat the patients and we are A comprehensive program where we identify, investigate and treat and follow.
+
+So the patients stay with us for several years throughout their treatment course. We didn't have a nurse at the beginning to help support the patients and orthopedics didn't really understand that because it's kind of a fix and forget type paradigm.
+
+Someone breaks something, you fix it, they move on, they don't stay with you for years upon years. Whereas this is a chronic disease the patient's gonna have for the rest of their life and it needs to be managed and monitored.
+
+So once we added that nurse to support the practice, then we saw that we could be successful and we could start to improve the bottom line as far as administration and the dollars. Because I was able to work up to the top of my license then and see patients all the time and not do the nursing duties that were missing because our orthopedic nurses just didn't feel comfortable with all the labs and the educational aspects that they weren't familiar with. They were very good at investigating post op complications and infections, but not understanding the chronic disease management piece of.
+
+So within our personal practice we've eliminated a lot of the barriers as well.
+
+We did initially require that the patients had a bone mineral density assessment before they saw us, but then we got a very long wait time.
+
+So patients were just falling off the schedule because they forgot why the bone mineral density was needed. By the six to nine months later it was scheduled. And really you want to capture these patients in that teachable moment.
+
+So.
+
+So if they currently have a fracture, they have a debility that is preventing them from doing some things they enjoy in their life.
+
+So if you frame it in that, we wanna prevent the next one so this doesn't happen to you repeatedly. They're really a captive audience and like, okay, let's do everything we can to put this behind us and not let it keep happening.
+
+Whereas if they see you six to nine months later, they've rehabilitated hopefully and they just kind of forget why it was important in the first place.
+
+So we have found that that's been useful as well, to not require that.
+
+I've also found that the family members are instrumental and key in helping motivate patients because they're the one who brought mom or dad to the appointment.
+
+So there is, I like to think of as a fracture as like dropping a stone in water.
+
+There's a ripple effect out. Of course the stone is a patient and they sink and that's unpleasant, but it affects their family who's going to take care of the dog who's going to pay the bills while you're recovering.
+
+So it is affecting a bigger circle in their life. And often, if you capture them when they're still needing transportation, the family can be part of the plan, reinforcing the need for medication.
+
+Understanding what this is about.
+
+And so I think that it's really a good. I think that's why that opportunity acutely in the recovery is so critical. The patient's motivated, the family's motivated.
+
+So we've spoken a little bit about challenges, and this is my personal opinion, which is why it's not in black font. And I think that if you're not reviewing your own patient's dex is, you don't know what you're doing. And even if I've read the bone density study, I make errors. And I just want to share one that came across my desk this week.
+
+T score negative 395348. Impression osteoporosis. If you act upon that, you're going to subsequently want to monitor your patient to say, is drug X, Y or Z or whatever I'm doing working. And this is what the DEXA looked like.
+
+And so these aren't anywhere close to being in the intervertebral markers. Here we've got huge areas of soft tissue that are being called bone. You don't have a clue. And this is happening all the time.
+
+So I think a challenge and a way to overcome it is for you to look at your own dexes and to know how to do do that and to put in an unabashed plug for the ISCD bone densitometry course, I think that that's a way that you can have confidence in reviewing your dexes. And on the imaging front, I think that this is something maybe that is a real advance to FLS.
+
+So since I lived in the orthopedic world for 15 years before I moved over into bone health and osteoporosis, I was very comfortable with UT radiology. And a lot of our patients that come in after a fall basically have a trauma CT scan where they have their head, neck, chest, pelvis, lumbar spine, abdominal cavity scan with a ct, you know, rapid sequence done in a few minutes.
+
+And we found this as an extremely useful tool to identify patients who might be at higher risk than average, because there's excellent correlation between Hounsfield units on CT of bone and DEXA T scores, actually.
+
+So the concept here is the information is available basically for free because it's in the patient's medical record. It's not any extra scan to the patient, it's not any extra radiation to the patient. It's just data that's in their chart that you can then mine to use for this purpose.
+
+And there's very well established markers of ct, so it's called attenuation, or CT Hounsfield units. And it's normalized to zero for water, 1,000 for air, and then bonus, somewhere in between. And the houndsfeed units actually decline very nicely with advancing age, just like bone mineral density does. And it correlates well with predicting fractures and who's at risk for fracture.
+
+And if you have access to your image viewing system, it's a technique that you can learn to do yourself in clinic. And I do this 10 to 15 times a day, and it probably takes me 30 to 60 seconds a patient to get this information. And I feel very comfortable diagnosing patients with osteoporosis if their Hounsfield units within their trabecular bone are below a certain threshold. Because again, in the literature, it's very well established that that correlates with weak bone and fracture risk.
+
+So I don't need a dexa. I mean, in a patient who's at a fracture, you don't need a DEXA anyways. They have the disease osteoporosis because they broke with low trauma. But this helps me, I think, really identify those very high risk patients.
+
+And we're a level one trauma center, so people come to us from many hours away in communities that don't have access to radiology readily in their community.
+
+So if I have this data, I'm just gonna start treating them. And I don't necessarily need the DEXA even to follow them, perhaps if I'm handing them back off to primary care.
+
+So this is a tool that I use every day, and it, you know, helps improve access and care because you again, remove another barrier that a lot of patients have because there's not enough dexas to scan all the patients that really need to be scanned.
+
+How many of you are doing opportunistic CT in your practice? This is a huge, huge, huge addition to your care. And I may be the oldest person in here, which means I'm the least computer savvy. Kristen says it takes her 30 seconds.
+
+It takes me a minute. This is easy, it's free, it's there. Please figure out how to do it in your system. It will really advance what you're doing in care of people after their fractures.
+
+I can't emphasize that enough. And there are some systems that don't allow their clinicians access to use these tools in the image viewing system. If that's the case, you can try to get access to it through radiology or you can find a friendly radiologist. And again, this is something they can just pull up a CT and it would take them a very short amount of time to just give you a number at the L1 vertebral body that you can then document in your chart to use to help you.
+
+Okay, do we want to go here or do we want to open up for discussion a little bit? Yeah. Questions, comments, challenges? I have a couple comments.
+
+One, the opportunistic CT would certainly be amenable to an AI procedure where it could just be reported out. You do the ct, the computer computer looks at and says, gee, your Hounsfield units is this at L1? And I think that technology is there now, except it's not. I don't think it's being used as it needs to be.
+
+Second comment is, I was wondering, you know, FLS is an amazing idea, but operationally it doesn't work very well because of resources and pushback and just the time and patients get lost at each step of the evaluation.
+
+And some of our European colleagues, I can name names if I want to. Just think the best low hanging fruit way of dealing with it would be to take hip fracture patients and give them a dose of zoledronate in the hospital while they're still in the hospital and the concerns have been raised. Well, if they get fever or reaction, people are worried about infections and things and apparently it doesn't happen when they're actually doing this.
+
+I talked to John Kerry in Ireland who does this. He thinks we're stupid for not doing this. And I think that FLS is great and when you have it, that's fantastic. But for a lot of institutions that do not have it, this would seem to be an operationally much simpler approach to at least reducing the burden of subsequent fractures in patients with hip fractures.
+
+Yeah, I think MGH has a program where they do that primarily using zolendronic acid in their hip fracture patients without a need for DEXA and some things. But I think, well, I'm going to put my bias out there, I guess. I think that the needle doesn't move because there's no incentive to. I mean, it's clear that if we are aligned with other chronic diseases who have acute events like cardiology, they have systems where this happens, where patients are identified, they have metrics and reimbursement constructs and Systems to lower the risk of readmission complications, medication starting, all of that.
+
+And for some reason that just doesn't appeal to our insurers and our government to do that for osteoporosis. And that limits us because it is resource intensive. And institutions, healthcare providers want to do the right thing, but they have competing money issues. And at our institution, we kind of spun it in the light of a quality improvement program because it's really easy to get data out of your electronic medical record.
+
+You know, look at a list of ICD10 codes for fractures over above the age of 50, low trauma, and then see who got a vitamin D level or a bone mineral density assessment or a medication just using the codes in the system. And our rates for spine, hip and wrist fractures were less than 15% treatment after a fracture, I think we used 12 months.
+
+So we spun it in that light. And that really appeals to administrators to improve quality of something that's very lacking and could be better.
+
+And with having it in orthopedics too, I think it's a little bit different because the patient's already there.
+
+So I often see patients on the same day they have their post op visit, 6 weeks post hip surgery.
+
+So we can just wrap it all up into a package like that so they don't need a separate trip. Which has helped us be more successful too.
+
+We also started as a QI project. And the reason I think that if you can know your baseline data and sort of what your market need is you can't measure where you're going if you have no idea where you started. And it was the same thing. We're at a tertiary referral center.
+
+Everybody says, oh, we do an excellent job. When we actually did a look back, our numbers were 19%, which is abysmal, particularly for a well established, well known tertiary referral center.
+
+So that helped because when I went at the time to our VPMA and it's finding that, you know, person in the C suite or somewhere who either has a passion for quality or for whatever reason would be the one to listen, he said, well, that can't be us. We send people out without ever taking care of them.
+
+And I said, that's exactly us. It's getting the rest of the buy in. It's not that anybody disagrees that it's the right thing to do when they have 14 proposals on their desk, all of which are the right thing thing to do. How do you get this sort of raised to the top, particularly when it isn't something the system's already doing?
+
+They have things in place for CHF or post MI or diabetes.
+
+They know what the return on investment is and that that can work. And the challenge has always been because bone isn't on the radar. How do you get them to realize that?
+
+This really makes a lot of sense and that takes effort and time. We have measures that are out there. They're not great.
+
+Some of the measures.
+
+And no one system, if you're talking about a large system, may be different in other places, have to choose every measure that's there.
+
+So just because you built it doesn't necessarily mean that they'll come. I think it's an interesting, really philosophical question of is doing something better than nothing? And I think it is.
+
+But. And while I think Zolt's great drug, there are patients who shouldn't get Zolt first. And I think FLS can figure that out and treat people appropriately with anabolics, because anabolics are frankly better.
+
+So I think that whole.
+
+Should we be educating primary care to give everybody generic lendering? Well, I don't know. Maybe. In regards to your comment, Steve, about AI, I think it's abundantly clear that AI can look at almost any imaging and tell us who's got bad bones, chest X rays, knee X rays, blah, blah, blah.
+
+The question then becomes implementation. And you know, if you send me to the ER to get a belly CT for a kidney stone and it comes back says no stones, osteoporosis, are you going to be happy if you're a primary care doc? And I fear the answer to that is no. And we've said it before, but it also needs to be reimbursed because nothing, in my opinion, is going to happen without reimbursement.
+
+I think it's clear that opportunistic imaging can identify sarcopenia and osteoporosis and falls risk and fracture risk and cardiometabolic risk. But getting that to the right people in the right format, I don't know how to do that. I think the technology works. The challenge is implementation.
+
+In my opinion, this may speak to sort of ultimately, which is on one of the upcoming slides. And then I promise we'll let you ask your question.
+
+Sort of the scope of what an FLS does, because once you become the bone people, what you find is that everything sort of gets sent to you, which is fine. I mean, that's not a bad thing, right?
+
+We still would like to do primary prevention and prevent those fractures, but it's how much can we see?
+
+And so our radiologists approached us and Decided they have all of this new AI, these new algorithms.
+
+So they are going to take images, not just ct, but others as well. And if somebody is identified as having low bone mass or osteoporosis, send it to the Bone Health and Fracture Liaison Service.
+
+Well, there is no way we can see all of those patients and in a timely manner, get in all of the fractures and everything else that's starting to come.
+
+So I sort of said to them, could we have a discussion about this before you start putting this in all of the reports? Just from a practicality standpoint, how do we prioritize things? What is the scope of the service?
+
+And then how do we make sure all the rest of the people are getting taken care of? Which is, I think, to what you were speaking.
+
+So it's a good challenge to have, but it's a challenge. I think maybe a first way to go down this road is to have AI look at knee and hip X rays and folks who are getting knee and hip hop replacements.
+
+Because all of us who are getting new joints put in have got radiographs. And maybe when the orthopedic surgeon looks at it and is looking at our worn out joints over here, there's a little box that comes up that says, hey, bad bones, think about getting this evaluated. Maybe that's the way forward. Yes, sir.
+
+Yeah. I really have more of a comment on how this integrates with different types of health care systems. I'm an endocrinologist in Amarillo, Texas, and I'm the CEO of an accountable care organization. Our accountable care organization is responsible for improving the quality and reducing the cost of all of our patients.
+
+And it's primarily driven by primary care. We get all the claims from Medicare, and our number one cost is not cancer, it's not heart disease disease, it's actually hip fracture of all of the things that we do.
+
+And so we were very acutely interested in what to do.
+
+And so we're in the process of rolling out Fracture Liaison Service now.
+
+But I think you might want to add accountable care organizations to your stakeholder list because we are very, very focused on that. And that kind of transcends one hospital system versus another. We may have patients that on one fracture they land in one hospital.
+
+The next factor, they land in a different hospital.
+
+But we're still responsible for them wherever they are.
+
+And so we're. I mean, and we have a very intense focus on getting this problem resolved. Have you crunched the numbers?
+
+If there's one thing in the world that I'm not, it's smart about business. But I've done back of the envelope calculations and it looks to me like accountable care organizations would save a boatload of money if they prevented the next fracture.
+
+Absolutely. Because we're not.
+
+It's not just the hospital stay.
+
+We now have, you know, skilled nursing facility stays. We have home health costs. All the downstream costs for the whole year are on us.
+
+So that's why.
+
+So you know, something like a heart surgery will, you know, a lot of them get better.
+
+You know, if you have an unaddressed osteoporosis, then that's an expensive thing for a long, long time. Well, I think what you're highlighting is that your system of being in accountable care is different than other systems where net revenue generation is the driving force.
+
+You are keen on cost reduction and that can be future cost reduction by preventing a problem, which is a different. Thank you for sharing. Because it's a different mechanism of looking at things. Yeah, we're not trying to gin up the expenses.
+
+We're not trying to do more CT scans and more stuff. We're looking at, you know, we're beyond, we're now getting just, we're just now getting beyond this phase where we're making our money off of increasing their risk adjustment factors by adding more diagnoses to all these patients. We really seriously have to save money. And this is, I think one of the low hanging fruit and I think that's where you ought to go is try to.
+
+There's ACOs all over that are just now becoming enlightened to this potential opportunity. You need to emphasize that. Do you have any insight into the proportion of those of us who are old and have gray hair who are in an ACO in the United States? CMS's target is to get everybody in some type of an accountable or value based service by 2030, whether it's an MA plan or traditional fee for service with an accountable care organization.
+
+Well, I think my colleagues up here have highlighted that this is a big problem and we cannot. There aren't enough endocrinologists and there certainly aren't enough bonehead endocrinologists to manage all of osteoporosis.
+
+So I would like us to maybe, and you also to discuss a little bit how we do interact with primary care. Because one of the final projects I did at Mayo was with our fracture liaison service was not one that was capable of following everyone that initiated on treatment, but coming up with parameters and a handoff and, and a treatment plan.
+
+And then what are the key points for Monitoring what are the key points that would warrant reconsideration of therapy so that we could continue to see those acute people who come in who need us and not spend time with that.
+
+So I just wonder how that's working. Just wanted to add a comment before we talk about that. And that is the beauty of.
+
+Well, it's sort of a double edged sword, right? Osteoporosis doesn't belong to anyone's specialty, which sort of means that everybody can take care of it. The flip side of that or the opposite side of the sword is that everybody thinks somebody else is doing it and nobody does it. But the beauty of this is the three of us who have been involved before in FLS programs are from different specialties.
+
+Okay, so you've got endocrine, you've got a program that runs out of an orthopedic department. I'm a primary care doc who lives in an OBGYN department. And that's where our FLS program lives.
+
+So anybody sort of with a passion and who decides it's the right thing can do it, which is a good thing because we don't have to.
+
+There aren't enough endocrinologists or rheumatologists who focus on bone to leave it just to subspecialists. But I think regardless of where it starts, there is a challenge in handing things back.
+
+Now maybe it's we hand it back after a certain time period when people in the primary care world seem to be. I'm not sure why they're bothered by needles.
+
+They give other things by injection, like B12 and other stuff, but they are by the concept of anabolic agents. And maybe when we get more to a maintenance piece and we can educate them. But I think that's a great point for discussion because I find if we send them back too early, at least in my own world, then either they all end up back on an oral bisphosphonate, which at some point may be okay, or people just don't get treated. And despite the fact that I'm right there, that piece is a challenge.
+
+So yeah. And if I could just expand upon that, we have the three specialties. The fourth one is I'm a geriatrician, but I live under the umbrella of orthopedics. And I'd really like to put in a plug for that is work with the orthopedic surgeons.
+
+So you're standing in the hall and they can come down and come clinic can talk to you and they know who you are. And I think Kristen is A wonderful example of that is that they reach to her all the time.
+
+So I think that that's something that if you can work with your orthopedic surgeons, I strongly encourage that. I would agree with that.
+
+And I think the program that I set up at Mayo went through several iterations before we landed on me going to the ortho clinic and seeing the patients there because of all the reasons that have been highlighted. And it led to great collaborations around seeing other problems such as non unions, unusual bone. There's a lot of cross fertilization. If you're really into bone, that can happen from that.
+
+I don't understand why standalone orthopedic clinics don't recognize the importance of metabolic bone health. There are several in Minneapolis that are trying to have that. But there is a great need and a lot of benefit that can come from that. The problem also highlighted is we are the champions.
+
+And sometimes when the champion leaves, the program dies because there isn't an institutional setup and an institutional buy in. And one person can do a lot, but it doesn't survive when that one person leaves unless you have your institution behind you. And on the last slide, what I put in all capitals, which we don't have to go there, but was sustainability. And that's exactly it.
+
+Because for as many programs as stand up, we lose a number.
+
+And so figuring out a way ultimately to have this embedded into the system, just like CHF programs are or diabetes programs, you know, whoever's running the diabetes program could leave and the program doesn't fall apart. And yet more often than not, if someday, you know, we decide to do something else or retire or, I don't know, whatever that might be, you don't want the program to disappear. Hi, thank you for this session.
+
+I'm Waseem Noor, Dean. I'm an endocrinologist at Henry Ford Hospital in Jackson, Michigan.
+
+So I'm here with my two nurse practitioners.
+
+So we're interested in setting up a fractured liaison service, which we currently don't have.
+
+And so I was wondering if you have any insight in terms of how to get more buy in financially from the hospital. Have you been able to get funding for, let's say, a fractured liaison nurse? And what about in terms of like getting reimbursement for, let's say if we give zoledronic acid while the patient's in the hospital, is that being reimbursed? You hit on some of the greatest barriers and that is you're asking for resources.
+
+And how do you turn that into income Generation, and that's a hard thing to sell. I don't have a suggestion. What I could add is that our program started with just one clinician. And then after about two to three years, I got very busy and I wasn't able to see patients in the clinic all day, every day because there was so much other stuff, for lack of a better term, that had to be taken care of, which a nurse or medical assistant could have done.
+
+But we didn't have the resources within orthopedics because nobody really understood it because it's chronic disease management, as I mentioned earlier.
+
+So we were able to justify getting a nurse added to our program by showing what volume of care we were doing and how it was different than other providers.
+
+So, for example, within our electronic medical record, we get reports every month about encounters generated per patient. And for my patients it was generating four to five encounters per patient, whereas the rest of orthopedics it was one and a half.
+
+And they're like, well, now we understand why you're not seeing patients all the time because you're doing this other stuff. But then once I could see patients in the clinic all the time and be doing billable activities, that made a huge difference. I paid for two nurses by seeing patients in the clinic every day instead of three and a half days a week.
+
+So it actually took care of itself.
+
+Showed them those financials and we were able, I had the luck early on when we were starting the program to have a little bit of sort of seed funding to do some pilot studies to show after I was able to look back and show that we were abysmal and had like a 19% taking care of any or all fractures, you know, within the first year appropriately, or six months to a year, depending on what we looked at, we were able to sort of have some funding to do a 6 to 12 month pilot study to show that with this type of program in place, we could increase those numbers.
+
+Now you can't show fracture reduction in 12 months, but you can show things like how many patients got identified, did they get, you know, vitamin D testing, did they get a bone density? And how many ended up appropriately on treatment?
+
+And so that was enough to convince people that the concept worked.
+
+And then we had the numbers. I knew how many fractures there were in the system. We were able, just by that, by looking at volume, to show we could cover our own salaries and then end up with sort of an admin lead and at that point hire a nurse practitioner as well. But it takes some time to be able to Sort of show.
+
+You can also look at lots of creative downstream revenue, which doesn't help your P and L necessarily, bottom line. But if somebody's looking at program and thinking from a business sense, what does it do to the system?
+
+You know, it's the hyperparathyroidism we see and the adenomas who have surgery, and it's the additional testing that gets done. It's the administration of many of these medications I can't speak to in the hospital system.
+
+In the reimbursement there maybe you can, but. No, but in the mode of convincing your orthopedic colleagues that FLS is a good thing. We haven't said these words yet, but I think you might consider saying the words bone health optimization.
+
+So there's a lot of recognition in the orthopedic community that bad bones leads to poorer outcomes after they've put in elective joints, done spine surgery, et cetera.
+
+And the people that are doing the FLS have the exact same skills as required for bho.
+
+So if you need to convince your orthopedic colleagues, I think that might be something to put on the table. Hello, everyone. My name is Sabrina.
+
+I'm an endocrinology fellow.
+
+And so right now I'm working on a project on optimization of FLS utilization services. At our institution, we previously had a FLS service with a coordinator, but with the pandemic, we lost a lot of resources and we no longer have a coordinator.
+
+So when I came on board, I did a audit, and we're really not utilizing the service.
+
+So I'm basically starting all over. My question is, I'm trying to figure out what's the best way to make it sustainable again and, you know, sustainable without trying to ask for more resources, like what's the best way to utilize what I already have.
+
+You know, Any tips on that? I think one big question, one important thing is to just try to leverage your electronic medical record to help you.
+
+So instead of doing some sort of manual identification, I know a lot of FLS programs that have a report that's just run whatever frequency they request, such as once a week or once a month, to give them a list of the new fractures that were diagnosed. And then they stratify it by age so they can cherry pick those that they feel are highest risk that need access to the resources most expediently.
+
+So when they lost their coordinators, they just went to that sort of a system to just help them identify. And then, I mean, someone still has to get those patients to the clinic at Our institution, when a patient enters with a hip fracture, our hip fracture admit order set sends the consult through the system.
+
+Once the order is signed, you have to physically unclick it. And no one unclicks preselected items.
+
+So if you can somehow get it just as part of the system again, it just comes to you automatically and you don't have to look for the patients and take time to do that.
+
+Okay, thank you.
+
+Quick question. We're over time, but go ahead. You're standing up.
+
+Let's do it.
+
+Thank you. Yeah, no, I just, I just wanted to see how in your practices have you been implementing basically giving zoledronic acid in the hospital during the hip fracture admission.
+
+And also how do you, if you, if, let's say the FLS service sees the patient, do you see them in follow up as an outpatient or how does that work? The other thing too is our current wait time for bone densities is like four or five months.
+
+So we need to. Have you been successful maybe getting another bone density machine to help facilitate quicker turnaround? Assuming we want to try to get a baseline bone density before treatment, I can answer a couple of things quickly. We're not standardly doing zole in house.
+
+And in part that's because I do agree with what Neil said, that for a lot of these very high risk patients, I'd rather somebody get something than nothing if they're never going to come back. I completely agree anything is better than nothing. But I think that there may be better treatments and that for many of these high risk patients, there is enough data out there now to suggest that starting with an osteoanabolic agent and following it with an antiresorptive is much better.
+
+So I don't necessarily want it to become that this is what's done for every patient as long as we're able to get them in and see them in a timely fashion.
+
+And it's not just me, you know, they're a team of us now, so the wait is not terrible.
+
+So zol was sort of your first question in terms of inpatient versus outpatient. When we first started, we were doing both. We were trying to see patients while they were in the hospital as well as outpatient.
+
+It did not become time or cost effective for us to be running over to the hospital to do consults.
+
+It also varies. We're a 10 hospital system and we're not the same in each hospital. We're trying to roll it out system wide.
+
+The types of fractures that we see vary, so that could be different depending on where you are. But for us, and often because we weren't treating in house, patients sometimes were sedated. Whatever the case was, we will have somebody on the orthopedic team tell them that they're going to be referred and give them a packet of information. But we see most people in the outpatient setting or since the pandemic via telehealth, which I have to tell you for these types of patients, has been wonderful.
+
+The follow through when they don't physically have to get to us, especially given our catchment area because we're a tertiary referral center, has been so much better and adherence has been so much better that one of the things we're trying to lobby for is make sure that after September we don't lose that coverage with many of your bone labs are also wrong. In the acute care setting, if you look at a patient who gets a total hip done, their PTH and 25D drop like 20% the day after they've had their, their hip replaced.
+
+So you know, you can order the labs and you don't know how to interpret them.
+
+And so getting them in the outpatient is a way better way to go.
+
+And the BMD question, you know, there's a, there are fewer machines. I think it's going to be hard to convince a lot of institutions necessarily to get another machine and hire more staff to do that. I think what you've heard from all of us is bone density is helpful. It's certainly helpful to follow and most patients want to know what's happening.
+
+But you don't have to wait to start treatment in these high risk patients for the bone density.
+
+So you know, if especially somebody's had a vertebral fracture, pelvic fracture, hip fracture, you can treat them and then they can get the bone density when they can and then you'll have an earlyish value to then be able to follow forward.
+
+So I think there are ways around that. But one other thing we've done at our institution is we have a pre prescribed protocol that if a patient is a fracture liaison service patient they automatically get TBS and vfa.
+
+So that increases reimbursement for a DEXA because those are codes, CPT codes that you get paid for.
+
+So that's been helpful. Additionally, we overwhelmed our radiology colleagues.
+
+So we've added two dexa the machines in the last six months.
+
+We now have a total of six for our, our institution as well, which has been a huge game changer to get people in. We have reserved Spots just for FLS patients.
+
+So we, when radiology saw the numbers of patients we were referring for dexa, they allowed us to hold spots just for patients that come from our program.
+
+So I believe we have 25 spots per week on the six DEXA machines that only we have access to.
+
+And then if we don't use those spots two weeks before the date, they're released to the general patient population. But that never happens. We always use them all.
+
+So that was very helpful to get our patients in at a timely fashion to get those reserved spots.
+
+Yeah, we don't have that many machines and I actually own the machine in our department, but we do the same with VFA and tbs, so that that increases things. And we do have a smaller number of reserved spots, but we have some. I wanted to bring up the issue with the seeing the patient in the hospital or providing Zol in the hospital. You talked earlier about the ortho geriatric collaboration.
+
+And in general, this has been a great collaboration between the two specialties, mostly for co management. Obviously, surgeons don't want to prescribe an antihypertensive or anything like that.
+
+So they want the medical management to be run by geriatrics.
+
+So now we're at Mayo.
+
+I talked to the geriatrics team and I brought up the issue. Why don't we give Zole while you're there? Until I see them outpatient, it was not a reimbursement issue, which I think it was brought up earlier, because most of the charge for Zole, and correct me if I'm wrong, is the administration of the medication, not the medication itself.
+
+So if I'm just prescribing it in the hospital, the floor nurse is hanging it.
+
+So it's not. There is no facility fee charged on it anymore. The problem I've had with it is one going into the patient room and talk to them about a new medication they've never heard about and you may have side effects. Over the next two days, we're going to give you Tylenol.
+
+This is not dead here, talking about how I'm going to eat, how I'm going to move Walker Cane, my next step. They didn't want to hear about that. My other issue is what Neil brought up is the vitamin D. I'm not going to give Zol if I don't know that.
+
+If I'm not confident about vitamin D status. And we stopped checking vitamin D in the hospital, now we just give vitamin D until we see them outpatient because of the lack of reliability of D in the acute setting.
+
+So those were my issues with that. But I do think the problem we're facing is the bridging between the geriatrics that you, you talked about and the fracture care that I still see is missing.
+
+Now, the barrier that I've seen with hospital given Zol is orthopedic surgeons are uninterested in administering a drug that might cause a postoperative fever. Yeah, we did not have that issue. When I talked to our ortho team, they're like, do it. We're fine with fever.
+
+We'll deal with fever. Don't worry about it.
+
+So they were fine. But yes, I know others have brought it up as like, this will be labeled as a fever post op and have to work it up.
+
+Sepia. Other questions, other comments? All right. Well, thank you for attending.
+
+---
+
+Generated by WhisperAI
+https://whisperai.com

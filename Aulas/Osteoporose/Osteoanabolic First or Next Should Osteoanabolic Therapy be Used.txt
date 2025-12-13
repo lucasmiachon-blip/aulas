@@ -1,0 +1,457 @@
+WhisperAI Transcription Report
+
+Title: Osteoanabolic First or Next Should Osteoanabolic Therapy be Used
+Date: 11/19/2025
+Duration: 3498 seconds
+Language: auto
+
+---
+
+TRANSCRIPTION:
+
+Good afternoon, everyone, and welcome to the debate on osteoporosis therapy. Sequence Osteoanabolic first or next? And the question that will be debating the proposal today is should osteoanabolic therapy be used first in postmenopausal women at high fracture risk? My name is Delora Shobak.
+
+I'm professor of medicine at the University of California, San Francisco, and I'll moderate this debate. Our first speaker and who will be the proponent of this proposal is Dr. Ben Leder. He's clinical investigator and a practicing physician and professor of medicine at the Harvard Medical School. His research focus is on osteoporosis, metabolic bone diseases, and has defined the the independent role of estrogen in skeletal metabolism in men over the last 15 years or so.
+
+He's been a principal investigator on the data studies, which are strategies to optimize the efficacy of combination and sequential approaches to osteoporosis management. And he is a recent recipient of the Fred Barter Award of the American Society for Bone and Mineral Research for excellence in in clinical research. The debater in favor of the opposite motion is Dr. Serge Ferrari. He's head of Clinical services and the Research Laboratory for Bone Diseases at Geneva University Hospital in Switzerland.
+
+He's also Vice Dean for Translational Research and Innovation at the Geneva Faculty of Medicine. He's president of the Swiss Alliance Against Osteoporosis and Chair of Diabetes and Bone Working Group for the International Osteoporosis Foundation. And he is the recent recipient of the Lawrence Royce Award from the ASBMR for Excellence in Translational Research.
+
+So these two debaters are very well matched in terms of disclosures and conflicts.
+
+I have nothing to disclose. And you can see Dr. Dr. Leiter and Dr. Ferrari's disclosures here. And the views presented here represent those of the speakers and not of the Endocrine Society.
+
+So our format this afternoon will start with a vote by the audience, and then we'll adhere strictly to the timing of this debate.
+
+This introduction will be short and then each speaker will have 17 minutes, Dr. Leader to defend the pro and Dr. Ferrari to defend the against. Rebuttals will be approximately four minutes per speaker, and then we'll have 10 minutes for questions and answers. And I encourage you to take out your phones because we'll do the question and answers from questions that you put into the app. We'll have about three minutes for conclusions and finally points.
+
+And then we'll have a repeat vote by the audience to determine who will have won this debate.
+
+So if you could take out your phones now. And here is the QR code that will allow you to place your vote.
+
+So it's time for that initial vote.
+
+And the proposal is, should osteoanabolic therapy be used first in postmenopausal women at high fracture risk? The answer will either be yes or no.
+
+So the question should osteoantabolic therapy be used first in postmenopausal women at high fracture risk? Please submit your votes now.
+
+Yes, 83%. And no, 17%.
+
+Okay, thank you.
+
+Let's hear what you have to say.
+
+Dr. Leader. Thank you very much, Dolores, and thank you to the organizing committee for inviting me to participate in this debate.
+
+So I am going to be speaking in favor of the idea that osteoantabolic therapy should be used first in postmenopausal women at high risk of fracture. And judging from the vote, my work is done.
+
+But I have 17 minutes, so I'm going to go. Historically, osteoporosis management has involved, and this is still the preferred method of many payers, at least in the United States, has involved starting with an antiresorptive agent, usually the bisphosphonates, and then moving on to more intensive anabolic therapy for those who have a poor response or fail by whatever definition. And this has been also been the communication of many guidelines in the past. Probably the most influential guidelines in the United States, at least among internists, are the ACP guidelines.
+
+In 2008, when there was only one anabolic agent, teriparatide, they wrote for postmenopausal women with osteoporosis, bisphosphonates are recommended as first line therapy. Other agents, such as calcitonin, raloxifene teriparatide, should be reserved for patients who cannot tolerate bisphosphonates or for whom they're contraindicated. They updated in 2017, saying they recommended bisphosphonates as first line therapy for women at high risk of fracture. And denosumab is an acceptable alternative, although anabolics were not part of that.
+
+So let's throw the ACP guidelines away for the moment and think about what should be our optimal osteoporosis management now. And I would argue that for patients with high risk of fracture, the best way to treat that patient is to start with an osteoantabolic agent. And the three osteoantabolic agents that are approved are listed. Of course, of course, romozosumab also has antiresorptive properties.
+
+And then it's actually imperative that when the anabolic therapy is complete to use an antiresorptive because that as we heard in some of the sessions already in this meeting that that transition involves further gains in bone density and often continued anti fracture efficacy.
+
+So before we move on, I just want to talk a little bit about risk because the question is high risk patients. Serge and I agreed that we weren't going really argue about what is a high risk patient. That would be I think very tedious for everybody.
+
+But I just want to point out that this is not who we're talking about. This picture by the way, comes from the Avenity website.
+
+That's somewhat ironic because the patient that I'm talking about now is a 61 year old, for example, with not a lot of risk factors, a T score of -2. You can see that her risk of fracture over the next 10 years I would consider modest.
+
+We're also not talking about this patient.
+
+So an 83 year old woman who's fractured, who has a family history of osteoporosis, who has a very low T score and whose 10 year estimated risk by frax of a hip fracture is 50%.
+
+So this is obviously an extremely high risk patient.
+
+So what we are talking about is someone in between, someone like this woman who also comes from a osteoporosis medication website. 74 year old woman who has previous fracture, not necessarily immediately prior to this, but has a T score of -2.1 and her risk is 21% for major osteoporotic fracture and 5% for hip fracture.
+
+I think that we can agree that this is a high risk patient and the patient preceding this was very very high risk.
+
+So why should we use osteoanabolic first in these patients? Well, I think there's really three simple categories and reasons. Anabolic drugs work better than antiresorptive drugs, they work faster than antiresorptive drugs and they work better when you give them before antiresorptive drugs.
+
+So let's look at the data that supports these three assertions. This slide is showing you the increases in bone mineral density in about 160 postmenopausal women who you can see were not at particularly high risk based on their age and T score. And they were randomized to receive either romozosumab, teriparatide, alendronate or placebo. And we're looking at spine bone density.
+
+And clearly romazozumab is increasing bone density more than teriparatide which is increasing bone density more than alendronate. And the effects of alendronate as is well known, are greater than placebo, but fairly modest. And the same is really true for hip bone density, femoral neck bone density. As long as you go beyond 12 months, you'll see the advantages of anabolic therapy really across the board.
+
+Now, what about fractures? The Vero study was a study of 1,500 postmenopausal women and randomized to receive either residuenate or teriparatide for 24 months. And I'm showing here the mean of the patient population, the mean demographics, and you can see that this is a population of patients that were very similar to the patient that I described at the beginning in terms of the risk, what is clear from the data?
+
+So what I'm showing here is the time to first clinical fracture.
+
+That teriparatide was considerably more effective than then residuinate it, reducing the risk of first clinical fracture. And if you look, the separation is occurring actually quite early, continues throughout the 24 month period, and is one of the few head to head studies that we have in osteoporosis and is actually quite definitive. Despite the fact that the study population was not huge by osteoporosis study standards. The Arch study was one of the registration trials for romazozumab.
+
+The design of the study was patients would be randomized to receive either 2 years of alendronate or 12 months of romosozumab followed by 12 months of alendronate. The study involved about 4,000 women. Again, if you look at the average in these women, their high risk, but not exceedingly high risk, not modest risk. Their frax major osteoporotic risk was about 20%.
+
+And what's clear from this study is that using gromozosumab for 12 months followed by alendronate was superior to using alendronate for 24 months in terms of reducing vertebral fractures and clinical fractures and nonvertebral fractures. I'm not showing that as well as hip fractures superior really across the board.
+
+So I think the idea that anabolic drugs works better is fairly straightforward in terms of bone density. In terms of fracture.
+
+The other important point I think is not only do they work better, but they work faster. This can be especially important for patients who are at imminent fracture risk who have, as we learned about earlier today, have recently experienced a fracture. This slide, which is courtesy of Felicia Cosman, shows the reductions in nonvertebral fracture in two of the big registration trials for antiresorptives, soledronic acid, with a horizon trial and Then denosumab with the Freedom trial. And you can see that they are both statistically significantly reducing the risk of nonvertebral fracture at three years.
+
+But it really takes three years before you see any statistical significance. And even if statistics really are, that can be changed depending on the risk of the patients and the study population. But you can see that the separation really takes quite a while to occur.
+
+So contrast that with what you see with the anabolic agents.
+
+This is a study, the original registration trial for teriparatide.
+
+It's now 25 years old, near it all. In this study, postmenopausal women at high risk of fracture were randomized to receive either placebo or PTH or teriparatide, 20 micrograms a day. There was also a higher dose group.
+
+And even at 19 months, there was a significant reduction in nonvertebral fractures in the group that received teriparatide. And the separation is really occurring early. The same was true for the arch.
+
+So I showed you the Arch study, the two year study.
+
+But if we want to focus just on this first 12 months.
+
+So during this first 12 month period, women were either receiving alendronate or romozosumab. And if you look at this time point, you already are seeing a significant reduction in non spine fractures, even as soon as 12 months.
+
+So when you compare these two drugs, the most commonly used antiresorptive, with our newest anabolic agent, the newest anabolic agent is clearly working better and working faster.
+
+Now, the last category of an argument that I want to make is that anabolic drugs work better when they're used first. And this, I think is probably the most important aspect of this debate question. Because the question is which to use first, not whether or not antiresorptives are good drugs. They are not whether they have a role in the treating osteoporosis, even patients at high risk or very high risk, they do, but which you should reach for first when you're sitting across from your patient.
+
+So the first point is that anabolic drugs don't work as well if they're given to patients who have previously been exposed to antiresorptives, and particularly this bisphosphonate.
+
+So this is again from a review that Felicia Cosman, Jerry Neaves and David Dempster published several years ago. Just looking at the increases in bone mineral density at the total hip in patients receiving teriparatide who had previously been exposed to anywhere from two to almost five years of alendronate and the increases in bone density at the total hip were either negligible or really extremely modest. And if you look at the 12 month time point, there's no increased bone density at all.
+
+The spine increases are greater than the hip increases, but still significantly blunted compared to what you can get if you started with teriparatide without prior alendronate exposure. This is an example of one of these studies.
+
+So this was from the urophores study, which is a very complicated design. I just want to focus on one part of it where they took postmenopausal women who had either been exposed to prior alendronate and the average was about three or four years, or they were treatment naive and then treated with 20 micrograms of teriparatide for a year.
+
+And the increases in bone density at the total hip, the femoral, neck and spine were all greater in patients who had not been previously exposed to bisphosphonates. Those who had been exposed to alendronate had very modest, in fact, no increases in bone density at the hip or femoral neck and more modest increases at the spine.
+
+So that's the data for bisphosphonates. What about denosumab and its sequence with anabolic agents?
+
+So this is what I'm showing you now is data from our data switch status study. That study also involved the combination therapy group, which I'm not going to talk about, but this was a study of about 75 postmenopausal women with osteoporosis. They were randomized to receive teriparatide for two years or denosumab for two years. And then at that two year time point, they switched therapies.
+
+So at the end of four years, 48 months, everyone has received the same drugs for the same period of time. The only difference between these two groups was the order in which they received them.
+
+So this slide is now showing the women who received teriparatide followed by denosumab. Teriparatide increases bone density at the total hip at 24 months.
+
+And then when you switch to denosumab, you get a further increase. Important to point out here that the increase that you get when you go from an anabolic agent like teriparatide to a potent antiresorptive is even greater than than you get with de novo therapy with denosumab. And we've published that data as well.
+
+So what's happening in that first two years is you're forming bone extremely quickly, perhaps it's not being completely mineralized.
+
+And then when you put on the Brakes. In terms of a very potent antiresorptive, you get this big increase in bone density.
+
+Now, what about if you go from denosumab to teriparatide, do you. Actually, the response is quite different.
+
+So you start with denosumab, you treat for two years, then you switch to teriparatide, and these patients are actually losing bone for an entire year, and only during the second year do they begin to recover.
+
+Now, while bone is being lost, it's important to point out that bone remodeling is occurring at an extremely accelerated rate.
+
+So what we're looking at now are the changes in bone turnover markers, osteocalcin and C telopeptide, in the same study. And if we just focus on the green, which is the women who received denosumab followed by teriparatide, you can see that when you switch from denosumab to teriparatide, there's a huge increase in bone remodeling.
+
+While this is going on, of course, we just saw we're losing bone pretty rapidly also.
+
+So for a full year, you're in this accelerated remodeling phase where you're losing bone. And this is really a sequence which you need to avoid in your patients. At the end of 48 months.
+
+Then, if you look at all sites that we measured, the group that received teriparatide first had greater increases in bone density across the board. Greater increases at the femoral neck, total hip, and at the spine. Although at the spine it's less, the discrepancy is admittedly somewhat less.
+
+Now, not only is bone density affected by the order in which these drugs are used, but bone microarchitecture and geometry are affected as well.
+
+We looked at cortical thickness at the radius and tibia, and this data here is from the tibia. In patients who were treated in this same study, those who went from teriparatide to denosumab had about a 7% increase in cortical thickness, which is a major contributor to bone strength. And those who got denosumab first actually had no increase in cortical thickness. And if then you take these HRP QCT images and analyze them by finite element analysis, which is an engineering technique that can assess the strength of a complex structure by estimating forces at various sites within that structure.
+
+The group that received denosumab first actually had no increase in strength as measured by stiffness.
+
+So over that entire four years, essentially, the strength of the bone, and in this case the distal tibia, was unchanged, whereas if you start with teriparatide, you do get a significant increase in stiffness.
+
+So the bone is. Bone density increases microarchitecturally, the bone is more sound, and if you estimate strength, the bone is stronger.
+
+The final data slide I want to show you is from Romozosumab. And this is a study that compares across different clinical trials that had previously been published, looking at the increases in bone density at the spine and total hip with one year of romozozumab in patients who are treatment naive, as shown in the blue, who received romozosumab after alendronate, as shown in the red, or after denosumab, as shown in the green. And again, you can see that if you have previously been exposed to alendronate, there is blunting. You don't get that same increase in bone density.
+
+There's even more blunting. If you started with denosumab, that's true at the spine and that's true at the hip as well.
+
+So just to summarize, osteoantabolic therapy should be used first in postmenopausal women at high risk of fracture because anabolic drugs are more effective, work faster, and work best when given first. As physicians, we must always do what's best for each of our patients.
+
+This is not a debate about health care policy or drug cost. This is a debate of what we should do. And I think that's an important word to look at. This is what we do as physicians.
+
+And if we're going to do what's best for our patients, what's best for our patients in almost every case, unless there's obviously a compelling contraindication, is to start with an anabolic medication. Thank you very much. Good afternoon, everyone. It's my honor and privilege to speak against the motion and to emphasize everything that Dr. Ben Leder hasn't shown to you.
+
+And I appreciate 83% of you believe which use anabolics first. Probably that's a bias from endocrinologists able to prescribe those drugs. But as I'll show you, this is very far from the reality and we can actually do the best for our patients in initiating with antiresorptives.
+
+So you saw my disclosures.
+
+That's just a recent picture survey of the drugs prescribed in the U.S. you see, the map shows the percentage of anabolic treatments in each and every state. Just to emphasize that anabolics are used in less than 10% of our patients.
+
+So the vast majority receives antiresorptives. And the curves on the Right.
+
+Show you that since 2009, there is sort of a recovery of the use of ant resorptives in the US by far exceeding the blue line. That doesn't move much, showing that the rate of prescription of osteoanabolics remains relatively low.
+
+And so the question is, you know, why is this? Is it because the vast majority of doctors treating ostrosis are doing wrong?
+
+Or is it because there are so good arguments in favor of the antisorptives that this explains that? The other thing, of course, is what speaks against anabolics. And there are two obvious arguments. The first is the needle, because no matter which one you want to use, the patient has to use a needle every day or at best with romosozumab, two needles every month, which leads to poor acceptability, tolerance and persistence to the drug.
+
+And that is the cost.
+
+So this graph again from a recent survey shows you the evolution of the out of pocket payments for antiresorptives or anabolics in the US and as much as the cost of antiresoups for the patient is going down, the one of anabolics is higher, actually five to ten folds higher.
+
+So let's talk about efficacy versus price.
+
+So this table summarizes the main drugs.
+
+Ant resorbase is on the top, anabolics on the bottom. And this is from the ACP guidelines from 2023. This just summarizes the evidence for the anti fracture efficacy and then the cost.
+
+So Dr. Lehrer compared before the efficacy of anabolics against oral bisphosphonates, sort of forgetting that we have parenteral antiresorptives that are much more efficient than the oral bisphosphonates.
+
+So let's take two examples from this table here. The first example is oledronate that has evidence for reducing not just vertebral and clinical fractures, but hip fractures as well. And that comes for a cost of less than $1,000 per year.
+
+Let's look at the anabolics down there.
+
+First of all, to say that there is no direct evidence that any of them reduces hip fractures. There is not a single trial where an anabolic reduced hip fractures by itself. And that comes for a cost that is 10 to 17 times higher than the antiresorptives.
+
+So we have excellent antiresorptives.
+
+And let's move away from isedronate and alendronate, for God's sake, and look at the most efficient ones, okay? And look at Zol.
+
+So this trial, everybody knows Ken Lyles had the courage almost 20 years ago to enroll patients with a recent hip fracture.
+
+So these are high risk, the ones we're talking about into receiving Zol within three months after the hip fracture and then repeating that yearly.
+
+And as you know and shown here, that showed that Zol reduces all types of fractures by 25 to 50% within a couple of years. This is tenosumab, and that's an analysis of freedom. Looking at those patients who have a fracture while in the trial and either are on placebo or are on denosumab. And in those who have a fracture, who are the high risk ones, we're talking about giving them denozumab continuously still significantly reduces fractures.
+
+And this is a recent meta regression that we did with my European colleagues, looking at a number of trials with antiresorptives, all of them stratifying the trials by baseline risk.
+
+So low baseline risk because no prevalent fractures, or high baseline risk because 100% of the patients here had prevalent fractures. And looking at the reduction of fractures with antiresorptis, what we see is that as you go for higher risk, there is actually even more efficacy of the antiresorptives in reducing fractures.
+
+Now one can turn to another high risk factor for frac, which is age.
+
+So this is looking at reduction of hip fractures with denosumab, overall 40% as we know, but then stratified by age and above age 75, where we see a large increase in hip fracture incidence in the placebo group, then your fracture risk reduction goes down to 62% for hip fractures. And I mention this because I would like to see from Dr. Leder if there is any evidence that any anti anabolic agent can actually reduce heap fractures, and certainly not to that extent. And then again back to the meta regression where we stratify by age, each dot being a trial with an ant resorptive, and again a nice inverse relationship, showing that antiresorptives reduce clinical fractures even more when you get older.
+
+So no matter which parameter you choose to define your high risk, previous fractures or older age, for example, you see that antiresorptives have proven antifracture efficacy in that context.
+
+So ACP guidelines were mentioned before. I just want to remind you that in the latest iteration of 2024, the American College of Physician has not changed his mind. He summarizes here the relative risk reduction that you get in this case with bisphosphonates. Every type of fracture is significantly reduced, including hip fractures, by 36%.
+
+And they still maintain their older conclusions that the benefits of medications other than Bisphosphonates are narrower or less certain. It may include the effects of denozumab to reduce hip fractures. But the clinical utility of medications others than bisphosphonate and denozumab is limited. But there is more than that, because not only anti resorptism high risk, they reduce fractures, but they reduce mortality.
+
+This is again zoedronic acid in hip fracture patients, reducing mortality by 28%.
+
+Now that's from an old trial, but there is accumulating evidence for those benefits of antiresorptives in high risk. This is a recent population based observational study from Taiwan from their insurance research database, including almost 50,000 subjects receiving various drugs. And as you see, they confirmed that no matter which type of fracture the patient has, if treated was denozumab or zol, there is on average about 20% reduction in mortality on the top of the reduction of fractures I showed you before.
+
+And again, I've never seen a study showing that osteoanabolics can reduce mortality in our patients. And finally, let's move to some cost effectiveness analysis.
+
+So this is now from the uk and in the uk, teriponatide costs much less than in the us, so the results will be even worse here.
+
+So this study compares the cost effectiveness of a sequence dear to Dr. Leder of tereparatide first, then alendronate versus alendronate alone for 2 years in high risk women with a recent major osteoporotic fracture.
+
+Now, the bar here, the red bar at £30,000, is the bar below which a treatment is considered cost effective for one quality adjusted life year gained. Anything above that is not cost effective.
+
+So when comparing teripratide followed by alendronate to alendronate alone across the range of risk and across all ages, you see that the sequence of terepathalendronate is always above the line of cost effectiveness. Maybe just down here when your risk of fracture is 40% and you have a certain age, you finally may reach a very small proportion of the population of very high risk that may benefit from the sequence monalendronate alone, where it becomes cost effective.
+
+But in most scenarios and in 95% of the population, terepatite first is not cost effective at UK prices. Then you multiply this by four, you get US prices and all your lines are shifted further up.
+
+So since anabolics are 10 times more costly and they are less practical because of these frequent injections, the question really is, is that valuable because they are also 10 times more effective than antiresorptives in high risk patients. And what I showed you, when it's the conclusions here, maybe against all or bisphosphonates, there is a greater increase of spine bmd, a greater reduction in vertebral fractures with anabolics shown by Dr. Leder.
+
+The vero trial, terepartide resedronate, the arch trial, Romo alendronate showed that, but it showed only that. What you don't have as evidence for better anabolic first is no comparison against the potent parenteral antiresorptives. And I've shown to you how efficient they are. You have no evidence that osteoanabolics reduce hip fractures directly.
+
+You have not a single study of osteoanabolics in patients with hip fractures who are at highest risk. And there is no advantage or no data showing a reduction in mortality with osteoanabolics. All these negatives for ten times the price.
+
+So to conclude, in my view, postmenopausal women at high risk of fracture should be treated first with a parenteral antiresorptive.
+
+Why? Because they're relatively cheap. They reduce all fracture types, including hip. They are more cost effective, and they reduce mortality.
+
+And yes, if that fails in the small percentage that fails, switching to an osteoanabolic makes sense. Even if the astronabolic has lost some of its effectiveness in that sequence, as shown by Dr. Lehrer before, it doesn't matter because that will only be for a small proportion of the patients who have not who have failed the ant resorptive. But for the vast majority, this will be the best solution.
+
+So trust me.
+
+Osteoanabolics first. No, but ant resorptives in high risk, certainly. Thank you very much. We've got time.
+
+Okay. Thanks, Serge. That was a lot.
+
+Let's go through it.
+
+We'll start with cost. This is my favorite quote about cost effectiveness. When you've lost the real argument, argue cost effectiveness. The anabolic drugs are more expensive.
+
+There's no doubt about that. And if we were here to talk about whether health care systems should be covering them or what should we be doing, it might be a very different debate. But the debate is about what we should do for our patients. And if we're sitting in a room with our patients and we're thinking about cost effectiveness, I don't think we're doing the job that we want to be doing.
+
+And there's a lot of challenges to cost effective analyses. There's. Baseline fracture has a huge impact, as we saw, on what the cost effectiveness would be the cost of these drugs are constantly changing. The cost quotes that you see, $40,000 a year, $30,000 a year, no one's actually paying those costs.
+
+Those are made up numbers. The pharmaceutical companies give rebates to hospital systems and to pharmacies. No one in this room knows how much anabolic therapies cost. I don't know.
+
+And so it's very difficult to make the analysis. There's no doubt that they're more expensive, but how much more expensive I don't think we can accurately say. I'm not going to get into the whole issue of the quality of life threshold. Suffice it to say that that's a completely arbitrary concept.
+
+That comes from the fact that Medicare decided they were going to cover dialysis in 1963, I think, and it costs $50,000 a year to improve the quality of life for one year. I don't know where we get the number of 50,000 or 30,000 pounds in Great Britain, but it is suffice to say that I do believe it is arbitrary.
+
+Now, that said, there are a lot of cost effectiveness analyses for anabolics. You saw one, these are 10 more that all say that anabolics are cost effective.
+
+I can come up with 10 that say they don't.
+
+So again, I'm going to move on because I don't want to get bogged down in cost effectiveness, But I just don't think it has a lot of pertinence to this debate. Dr. Ferrari talked about persistence. Well, it's true that some people stop taking their anabolic drugs, but there's probably lower adherence with alendronate than almost any drug that's been studied in the literature.
+
+Something about somewhere around 40% of patients after one year are still taking their bisphosphonate.
+
+So I'm not sure there's really an adherence or persistence advantage for antiresorptives.
+
+So Dr. Ferrari also showed us quotes from the ACP guidelines, the newer ones that still don't recommend anabolics. But I don't think the folks who write the ACP guidelines are experts in osteoporosis.
+
+In fact, they don't want experts in osteoporosis on those guidelines. But what do the experts say?
+
+So here's a quote from one very prominent expert. Our results add to the growing body of literature showing the superiority of osteoanabolic first treatment sequences compared to the most potent antiresorptive.
+
+And of course, this comes from Dr. Ferrari in his paper in 2022 but I want to go beyond. We can't just look at the English language literature. We need to look further.
+
+So this is from an article in German and Michael Monstadt can read this for us, but I'm going to translate it for you.
+
+It says studies in patients at high risk of fractures.
+
+So osteoanabolic preparations vero arch reduce the risk of resizurinate or reduce the risk of non vertebral fractures more than residuenate or alendronate. Accordingly, osteoantabolic drugs should be used. First line, also from my esteemed colleague Dr. Ferrari.
+
+But again, so this is the foreign language literature, the US literature. But I'm going to do what every high school student does. I'm going to go to ChatGPT and I'm going to ask the question that is on our minds in one or two sentences. Please tell me what Dr. Serge Ferrari thinks about whether it's best to use osteoantabolic therapy first in treating postmenopausal osteoporosis.
+
+And please include a nice picture. I want it to be fair. Dr. Serge Ferrari supports initiating anabolic therapy first in postmenopausal women at high risk of fracture and noting that bone density gains are greatest and fracture risk reduction occurs more rapidly when these drugs are given and lead the treatment sequence followed by an antiresorptive medication. I want to talk about hip fractures, but I don't have time.
+
+But we'll do it during the questions. But I do want to end just by saying, on behalf of Dr. Ferrari and myself, I urge you to vote yes on the resolution. But more important than this debate, of course, is that I urge you to prescribe osteoantabolic therapy first in your high risk patients. And unless there's a compelling contraindication.
+
+Thank you. Thank you, Ben. I love when you quote me. The rate of hallucination by chat DPT is 25%.
+
+So no matter what Chad says, I don't, not necessarily believe, I do not deny I said it and I repeat that that also anabolics are better than or bisphosphonates. We have head to head trials to support that. However, the quality question is whether they're better than parental ant resorptives.
+
+So you showed some of my studies and quoted some of me.
+
+But I'm going to show some of your studies too, Ben. And actually you showed the data trial before that you've conducted.
+
+Now, when we look at the first two years in your trial, comparing denozumab in red with teriparatide in Blue. I see absolutely no superiority of teriparatide over denozumab on spine bmd.
+
+And I actually show a great superiority of denozumab on radius, femur, neck and total hip compared to the effects of teriparatide on those sites.
+
+So you're going to explain to me how starting teriparatide high risk with low BMD at the femur, hip or neck will be an advantage over starting denozumab. I would like also to bring you back to a recent analysis we've published with Felicia Kossman from the frame trial.
+
+So remember, the frame trial compared romosozumab to placebo 4 year and then everybody went on denozumab.
+
+So that gave us the opportunity to now compare the favorite sequence of Dr. Lehrer, which is romosozumab, to denozumab with denosumab alone. Because that happened in the group that first had placebo. And of course, because this comparison group now has been randomized to go in the other arm, but has studied one year later, we have to do some PSM to adjust for the groups. And that was done in the study.
+
+So now we will compare directly the effects of the anabolic's first sequence with a parenteral potent ant resorptive alone. And what this study showed, this analysis showed was that there was a small advantage of starting Romo compared to denozumab on vertebral fractures, which actually were not very frequent. But on all the peripheral fractures, there were absolutely no significant differences starting Romo or going denozumab from the beginning.
+
+So should we prescribe astomabic therapy in high risk women?
+
+No, no, in the vast majority of the cases. Because giving them Zol or denalzumab will achieve similar BMD gains as shown against terepartide and actually fracture reductions and mortality reductions that we cannot see with osteoanabolics. And with that, I'd like to thank you.
+
+Okay, so we are open for questions and discussion from you guys in the audience.
+
+And I actually only have two questions, so I'll give you a moment to put your questions into the app. I will start with the first question, which is directed to Dr. Ferrari. Thank you for such an interesting debate. However, this debate is addressing the high risk group rather than comparing high risk versus very high risk.
+
+So I wonder if you support anabolic first even in the very high risk group, or do you make of that distinction? Well, one should first agree on where the line is between high and very high risk. I will take the very high Risk as the hip fracture patient, for example. And as I said, there would be no evidence or no direct evidence for osteoanabolic efficacy in that group.
+
+And then for the high risk as defined by Ben, there's like 20, 30%, 10 year probability by Frax. Those are people where in my view, the cost of ostenabolics are not justified.
+
+Now I understand from Dr. Leder that in Boston at the MGH the health care cost doesn't matter. But for the rest of us in the world, cost effectiveness is an important argument.
+
+So I'll respond to that one first. Cost effectiveness is important at MGH too. It's just not important when you're with an individual patient. That's not the time to think about cost effectiveness.
+
+The time to think about. That's the time to think about doing the best thing for your patient.
+
+So Serge, you mentioned, you spoke about the data, particularly after hip fracture and mortality. I think it's important to realize that the data that we have is not comprehensive.
+
+And the fact that for example teriparatide or balliparatide have never been shown to reduce hip fractures and isn't because we don't think they will reduce the risk of hip fracture. It's because the studies were never designed to show those. They were smaller studies. And what they do show, and I know that you're a big fan of the sabre studies as I am, is that bone density, particularly total hip bone density, is a very good surrogate for fracture reduction, including hip fracture reduction and including the increases in bone density seen as quickly as one year as we saw a paper today.
+
+And so I know you don't believe that the anabolic agents don't reduce hip fractures. The fact that we don't see the p value of 0.05 I think is just an artifact of the way the studies were designed. I can I respond briefly. I agree with you and I strongly believe in the relationship between BMD gain and fracture risk reduction.
+
+That's why I showed your study proving that denozumab increases EBMD more than teriparatide. You could probably say the same against Abalo. And there is a study from Israel showing that denozumib Romo year one shows very little difference on he BMD changes as well.
+
+So I, I trust that increasing BMD more is more effective in reducing fractures.
+
+And that's exactly why I would favor non resorptive like denos mabo zole in those cases.
+
+Sorry. All right, one moment. Yes, 30 seconds.
+
+Thank you for reading closely. The data Studies, actually, they're not significantly different from each other. I would agree with you that teriparatide is no better. The question isn't whether or not zoledronic acid or the other bisphosphonates or denosumab are good drugs.
+
+They're good drugs and they work, and I use them a lot. The question in this debate is whether to use them first. And if we use them first, the anabolic drugs, which are in our armamentarium and are extremely important, will work less well.
+
+So the debate isn't should we use one drug versus the other?
+
+We're going to use all of them in our high risk patients eventually. The question is what to use first. And if one sequence gives you a better result, that's the one I think we should choose. Dr. Leader, how do you deal with the forearm bone loss with anabolic agents?
+
+Well, the forearm bone loss with anabolic agents is certainly real. But if you look, for example, at strength at the tibia and radius by HRP pqct and I showed you that despite the fact that bone density at the 1/3 distal radius, which is a cortical site, does go down, the strength of the bone doesn't go down. And there's really no drug that adequately increases 1/3 distal radius bone density, except for maybe hormone replacement therapy. If we were, if it was an issue, we would see an increased risk, for example, of radius fractures in patients on teriparatide or abaliparatide.
+
+And that's not the case. In fact, for abaliparatide specifically, there seems to be some benefit in terms of risk fracture.
+
+Okay, I thought you said before that increasing BMD reduces fracture.
+
+So now you're saying that decreasing BMD does not increase fracture.
+
+So it's a bit contradictory. And by the way, denozumab has been shown to increase distal radius bmd, and it's the only drug that does that because particularly of the decrease in cortical porosity.
+
+So I believe that if we look not just at one site or one type of fracture, but on the globality of the BMD changes and the globality of fracture risk reduction, you have a hard time to say that anabolics first is most efficient. The sequence becomes more efficient when used than the ant resorptive rather than using it in the first line.
+
+But for most patients, you will not need that sequence if you use a antiresorptive long enough. Dr. Ferrari, will the biosimilar PTH lower the cost significantly and change your approach? The biosimilars of pth, which are Abundantly available in my country and Europe where I stay have not change the price to an extent where things become very different.
+
+Okay, Dr. Leader, in the recent study comparing Romo followed by denosumab after two years of Romo, all fracture rates were lower and the Romo first arm and BMD was more than twice as high with Romo in the first arm.
+
+Don't you think that shows superiority? Except. Excuse me, that's for you. I do.
+
+Can you say again? You were too fast on the. It's a complicated question. Thank you.
+
+Keep them simple. In the recent study comparing Romo followed by denosumab followed by two years of denosumab, all fracture rates were lower in the Romo first arm and BMD was more than twice as high with Romo in the first arm. Do you think that shows superiority? Well, I'm sorry, but the analysis we've done from the frame study does not show a significant reduction of clinical fractures nonvert or hip with romodenosumab compared to denozumab alone.
+
+So I cannot change the conclusions of our analysis. Well, you can't change the conclusions, but you're putting a lot of weight on the P values. There's. Because the slide that you showed demonstrated that there was numerically a benefit for nonvertebral fractures and hip fractures.
+
+The only statistically significant benefit was with vertebral fractures. That's true, but that is a post hoc analysis that was not a preplanned study that was powered to show a difference. It's powered because it's from the whole population of the frame study.
+
+So it's perfectly powered because we still have the 7,000 patients in it.
+
+And in the end the difference is 10 fractures less in those thousands of patients in favor of Romor first denozumab for 20 times the cost.
+
+So I mean, the number need to treat this is would be unacceptable for anyone. Dr. Ferrari, how long do we need to wait if we're upgrading therapy from a bisphosphonate or denosumab to an anabolic to allow the best outcome. How long in that sequence?
+
+The data we have, at least for Romo, show that if you use DEontresorptive Less than three years, you get more of your anabolic than.
+
+So probably if the results are not good enough, one should not wait for 10 years on bisphosphonate. I guess we agree. Yeah, I would agree with I don't wait at all.
+
+I mean, if there's a patient who's receiving antiresorptive therapy who you think would benefit from anabolic therapy? Unless it's denosumab, I don't think it makes sense to wait. I mean, there will be blunting, but the effect will still be positive. Denosumab is different.
+
+So you really don't want to go from denosumab to one of the PTH analogs because you will lose bone and you'll be in this highly accelerated remodeling state. In those patients. I would suggest you first go to a bisphosphonate when stopping denosumab and then give the anabolic agent. But the blunting is real.
+
+But it shouldn't keep you from using anabolic agents in patients who need them.
+
+Okay. And I think this is a very thoughtful question and this questioner says, in a way, the question being raised seems to require consideration of many factors encountered in real clinical situations. It would be helpful if you could share your thoughts on the conditions where the anabolic therapy is truly necessary as the first step.
+
+That's for you.
+
+So I have a very low threshold for that. My threshold would be anyone who is at high risk of fracture in whom you think you're going to be treated, treating that patient for a significant period of time with a sequence of medications. And if you're anticipating using a sequence of medications, which, you know, for high risk patients, I think that's almost everybody.
+
+Very few people treat with a bisphosphonate indefinitely. Few more, I guess, would treat with denosumab indefinitely. But that's not something that I do unless the patient is quite old.
+
+So.
+
+So if I'm anticipating using a sequence of drugs, it does not make sense to me to not use the most optimal sequence.
+
+So I will try to use an anabolic agent first in almost everyone who I think is going to be treated for a significant period of time.
+
+Now payers will stop me, but that doesn't mean that's not what I should do and what I try to do.
+
+Okay, so this is for you, Dr. Ferrari.
+
+Can we truly use BMD change to suggest fracture reduction? For example, teriparatide may drop a hip BMD but has a non vertebral fracture reduction.
+
+Okay, we want to go into the real evidence for nonvertebral fracture reduction with teriparatide. From the near study is 30 fractures, half of which are from the wrist and from the ankle.
+
+I have questions about that evidence, actually.
+
+Okay, and one more for you, Dr. Ferrari, before we retake our vote. If there were no cost difference, would you alter your recommended approach? Oh, if there were no Cost differences.
+
+One would probably propose ostenabolics first in high, very high risk substance set of women, for example. I mean, back to the question that Ben answered before. I in my practice would use terepatite or Romo or amylo in patients with recent vertebral fractures who do not have low BMD at the hip because I believe in the effects of these drugs on vertebral mass and structure. And if they were cheaper, I would use it even more.
+
+But that's a very specific subset of my high risk patients still. I mean, I think that, you know, it was necessary for this debate to make categories osteoantabolic versus antiresorptive. But we should remember that there are differences within those classes.
+
+So Romozozumab, I think clearly is a different drug in terms of increasing bone density specifically, but also fracture reduction than any of the other medications that we use.
+
+Teriparatide and abaliparatide are similar. And similarly denosumab, alendronate, zoledronic acid residronate, which we saw some data. They're not identical, they're in the same class. But I think that if we're going to have a debate like this, we should be.
+
+I think it's fair to say that anabolic should be used first. If I can just answer that, because at some point we do not completely disagree. But I mean, again, I look at, in our fracture liaison service in these very high risk patients, those to whom we give bromosozumab or ZOL, 92% of our patients with a hip fracture get ZOL. 8% managed to get Romo. Why?
+
+Because 25% have contraindications and we didn't go into that, but have cardiovascular contraindications by history of MI and stroke, which contradicts that. The terepartite story. Amino. How many women have not got some radiotherapy or breast cancer that precludes that?
+
+So there is these whole limitations as well that antiresoptives don't have. Well, I think that we may not resolve this at this table, but it is time for us to take a vote. And the hour has come.
+
+So go ahead and take your phones out and let's see whether we've moved the needle here.
+
+Should osteoantabolic therapy be used first in postmenopausal women at high fracture risk?
+
+Vote yes or no. We declare Dr. Ferrari the winner of this debate. And thank you very much for your great questions and your participation.
+
+It's terrific. Thank you.
+
+---
+
+Generated by WhisperAI
+https://whisperai.com

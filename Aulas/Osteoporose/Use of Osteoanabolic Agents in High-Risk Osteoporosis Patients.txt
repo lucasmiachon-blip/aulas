@@ -1,0 +1,473 @@
+WhisperAI Transcription Report
+
+Title: Use of Osteoanabolic Agents in High-Risk Osteoporosis Patients
+Date: 11/19/2025
+Duration: 2755 seconds
+Language: auto
+
+---
+
+TRANSCRIPTION:
+
+All right, good morning, everybody. We'll go ahead and get started. It's my pleasure to introduce Dr. Layla Tabatabi, a nationally recognized expert in osteoporosis, metabolic bone disorder and rare bone diseases. She's an associate professor of clinical medicine at the Cornell and director of the Houston Methodist bone Health Initiative.
+
+Dr. Tabatabi serves as a vice president of the Bone Health and Osteoporosis foundation, chairs the Bone and Parathyroid Disease State Network at ace. She is also the principal investigator for the National Burosumab Monitoring Program for xlh, Advancing Care and X Linked Hypophosphatemic Rickets. We'll have a question and answer session after the completion of her talk. The title of her talk would be Osteoannabolic Treatment and High Risk Osteoporosis Patients.
+
+So we'll have the Q and A at the end of the talks.
+
+So please use your audience system that was on there to submit questions during the presentation. Please join me in welcoming Dr. Layla. Thank you so much.
+
+Thank you, Dr. Abate, for that very kind introduction. We do have a lot to cover this morning, so I will move right along. I think my pointer is maybe not linked. There we go.
+
+All right.
+
+So as Dr. Bate said, I will be talking about the use of osteoantabolic agents in high risk osteoporosis patients. Here are my disclosures.
+
+Now, our objectives this morning will be to review some basic bone physiology as it pertains to osteoanabolic therapy.
+
+Will be understanding the mechanism of action and clinical profile of some osteoanabolic medications. And then lastly, we'll identify osteoporosis patients at high risk for fracture and utilize sequential therapy when appropriate.
+
+So just to start out with some basic bone physiology, as you're all aware, bone is largely composed of hydroxyapatite.
+
+So 99% of body calcium, over 85% of body phosphate is stored as hydroxyapatite.
+
+There's also a high protein content in bone type 1 collagen primarily. And then bone turnover is an active process that occurs throughout our lifespan.
+
+So we'll talk a little bit more about bone modeling as well as bone remodeling. The primary difference is that bone modeling is a coupled process, non coupled, rather, it's childhood up to adulthood.
+
+And it results in the accrual of bone mass, so gaining bone density, whereas remodeling occurs throughout adulthood.
+
+So it's in our entire life. And it results in complete turnover of 10% of the skeleton on an annual basis. And it has Coupled bone formation and resorption.
+
+So here's a cartoon depicting both bone resorption on the left and bone formation on the right.
+
+So we have hematopoietic stem cells here at the top, which differentiate into macrophage like cells and ultimately into osteoclasts. These are responsible for bone resorption of old and damaged at the bone pit here at the surface. And then here on the right, we have mesenchymal stem cells which differentiate into osteoblasts, which are responsible for laying down new bone at the surface of the bone pit.
+
+And then here we have osteocytes, which are previously thought to be quiescent cells, but now we know they are extremely important, both in communication between the osteoclast and osteoblast precursors, but also in their production of various proteins, including sclerostin, which is very important in one of the key anabolic treatments we'll talk about today.
+
+So back to the bone modeling and bone remodeling process. This is just something important to remember as we use medications that are both anabolic and antiresorptive.
+
+So, as I said, modeling results in accrual of bone mineral density.
+
+And this is a process that's really childhood to early adulthood. Bone remodeling is for the purposes of bone renewal, and it's an active process that occurs throughout life. And the net results on bone mass are with bone modeling, there's an increase in bone mass, and with bone remodeling, there's bone maintenance or perhaps a slight decrease.
+
+Now, in terms of thinking a little bit more about the pathways responsible for our osteoanabolic medications, this cartoon is really about the simplest one I could find on sclerostin activity.
+
+But essentially, as I mentioned earlier, sclerostin is produced by osteocytes, and it's transported to the bone surface where it has some association in terms of activating WNT signaling. And that WNT signaling leads to activation of osteoblast activity, which lays down new bone. In terms of the effects of sclerostin on osteoclasts, sclerosis, sclerostin also stimulates the production of RANK ligand, which you're all aware plays an important role in the therapeutic activity of denosumab.
+
+So sclerostin, by stimulating RANK ligand production, actually does stimulate some osteoclastic activity as well.
+
+And therefore, one of the target therapies that we have now, romosozumab, results in inhibition of sclerostin.
+
+So the net effect is an activation of osteoblasts and a reduction in osteoclast activity.
+
+Now, in terms of looking at the PTH and ptharp analogs, this diagram sort of delineates the pathways by which those two medications have osteoanabolic effects.
+
+So, just to orient you, here at the top, we have PTH1R activation.
+
+And when that occurs by a balloparatide, which is one of the PTHRP analog options that we have, when that binding takes place, it results in the RG conformation of the binding complex, and that RG confirmation results in cyclic AMP activation. And the end result is osteoblast activation. And then in terms of further activity, there's also some activation of the WNT pathway as well with PTH and PTHRP analogs, and that occurs via lrpc.
+
+So it's a slightly different pathway, but ultimately there's also some WNT pathway activation that promotes osteoblast activity as well.
+
+So now let's look at some of the drugs that we were just speaking about.
+
+So this is just a table summarizing the three osteoanabolic options that we have that are currently FDA approved and on the market.
+
+So, firstly we have teriparatide, Formerly known as Forteo, but it is now generic. This is a PTH 1 to 34 analog.
+
+And, and as I mentioned, it stimulates osteoblast activity via intermittent PTH receptor activation. It was approved way back in 2002. Dosage is listed there. It previously had a boxed warning which has since been removed by the fda.
+
+The boxed warning pertained to the risk of osteosarcoma. The safety information still includes that risk, which was seen in animal studies. And in terms of cardiac safety, it's believed to be neutral. And the increases in bone mineral density, both spine and hip, are listed there, as well as fracture reduction.
+
+Next, we have a balloparatide, which is known by the brand name tymlos. It's a PTHRP analog and as I mentioned, it has some key differences in terms of the binding complex at the surface of the molecule, which is why in clinical studies it is slightly superior to teriparatide when it comes to clinical effects. It was FDA approved in 2017. Dosage listed there, it has the same risk profile as teriparatide does.
+
+And again, just More recently, in 2021, the FDA removed the boxed warning from abaliparatide. It's still part of the important safety information to consider risk of osteosarcoma in susceptible patients in terms of cardiac safety, again, it's neutral. And then in terms of bone mineral density gain and fracture reduction, you can see those listed. And lastly, we have romosozumab.
+
+This is the most recent osteoanabolic to be approved by the fda. It is a sclerostin antibody inhibitor, as I said earlier, and it is responsible for an increase in bone formation and reduction in bone resorption. In terms of dosage, it's a monthly subcutaneous injection where both teriparatine and valiparatide are daily, subtle self injection. And in terms of warnings, it does carry a boxed warning at the present time pertaining to increased risk of MACE so, M.I. stroke and cardiovascular death.
+
+And for that reason, it is contraindicated in patients with a history of MI or stroke in the past 12 months. And it should be used in caution in high risk cardiovascular disease patients. And then improvements in bone mineral density, both specifically spine and hip fracture reduction percentages listed there.
+
+So all three of these agents, highly efficacious.
+
+Different safety profiles, different administration.
+
+So important to keep all this in mind as you approach your patient.
+
+Now, in terms of the effects of osteoporosis medications, on the whole, you can see anabolic agents listed there in the top row. And what's important to note here is that there's both an increase in bone mineral density as well as an improvement in microarchitecture.
+
+And that's really our primary goal when approaching patients who are at very high risk of fracture or imminent risk of fracture. We want fracture risk reduction.
+
+We also want improvements in bone density and bone microarchitecture. What we see with some of the other agents, which are also extremely efficacious.
+
+So we have antiresorptive agents, what would be considered antiresorptive?
+
+So denosumab, bisphosphonates, and then estrogen, which is an antiresorptive agent, as well as SERMs, which would include raloxifen.
+
+So these are primarily as antiresorptives, more responsible for remodeling type action. As you can see, denosumab is a little bit of a hybrid.
+
+It does result in an increase in bone mineral density and, you know, a mild to moderate improvement in bone microarchitecture. But ultimately, denosumab is considered an antiresorptive agent. And we'll see how this profile in terms of how it is slightly better than bisphosphonates in terms of bone density and bone microarchitecture improvement, there's some differential results in the clinical trials that have examined Sequential therapy.
+
+So now let's look at some of the data surrounding the osteoanabolic medications.
+
+So first we have the Vero trial, which was teriparatide head to head with resedronate.
+
+So this is, you know, from several years ago, but a very classic trial, an important one to know about. And as you can see at 12 months and at 24 months, the relative risk reduction in new vertebral fractures is significant with the teriparatide group, as shown here in the purple bars. In terms of the non vertebral fragility fracture reduction, those while they're evident here in the Kaplan Meier curve, those differences were not statistically significant for nonvertebral fracture.
+
+Now, looking at aballoparatide, here we have the results from the active and the active extend trial.
+
+So just to remind you, for the active trial, women were randomized in three groups. Double blind aballoparatide, 80 micrograms daily, open label teriparatide, 20 micrograms daily or placebo. And after the active trial was over, women were randomized to enter the 24 month extension.
+
+And that was looking at a beloparatide or placebo transition to alendronate.
+
+So as you can see here, comparing the new vertebral fracture rate in the placebo to alendronate group versus a balloparatide to alendronate group, there was a significant risk reduction seen with the patients who started with a balloparatide and then transitioned to alendronate in terms of major osteoporotic fractures. That risk reduction is also seen here.
+
+So at the 18 month mark is when the patients were transitioned over to alendronate monotherapy.
+
+And so you can see the fracture risk reduction of a balloparatide transition to alendronate here. And then the fracture rate for placebo to alendronate is the light gray line. Major osteoporotic fractures were defined as wrist, upper arm, hip and clinical spine fractures.
+
+Now, in terms of the active extend trial, what we can see here is this concept of sequential therapy.
+
+And this was really the first trial to actually show that as part of a clinical trial, pivotal clinical trial.
+
+So a balloparatide followed by alendronate results in continued osteoanabolic gains and maintenance of those gains after the anabolic therapy has ceased.
+
+So as you can see here, in terms of the active trial, at month 19, the alendronate treatment began.
+
+So we have a Bella paratide shown here in the orange curve and you can see some increase that occurs during the alendronate monotherapy period.
+
+Similarly, that was seen at the spine as well as at the mean total hip.
+
+So those increases that I spoke about at the beginning with a biloparatide, when followed by monotherapy with alendronate for the remainder of the extension period, they were even more significant.
+
+So 14% increase at the spine on average and 6.4% at the total hip once patients were transitioned from osteoanabolic to antiresorptive.
+
+Now, in terms of the active trial, the gains with abaliparatide were greater than those seen with teriparatide.
+
+And I do like to emphasize this because many times I'll have colleagues and other physicians who ask about using anabolic therapy. They'll often reference teriparatide, which is an excellent option. But it is true that if both are available to your patient, which by and large they would be, abelliparatide does have superior gains when compared to teriparatide at the total hip, femoral neck and lumbar spine sites. And that was seen to be statistically significant.
+
+So when you have the option to use Abel paratide versus teriparatide.
+
+So certainly abaliparatide would appear to be superior for its anabolic effects. And lastly, let's talk about romosozumab. We'll touch upon the Arch trial today, which is romosozumab compared to alendronate.
+
+And as you can see here, risk reduction for new vertebral fracture was significant both at 12 months and at the 24 month mark. At 12 months, all patients were transitioned to alendronate maintenance therapy.
+
+So romosozumab to alendronate, there was a significant risk reduction in new vertebral fractures of 48%.
+
+Now, in terms of nonvertebral and hip fracture, there was also a statistically significant reduction in both of those seen with romosozumab compared to alendronate.
+
+And you can see the red dotted line here would represent fracture rate with alendronate patients. And then the green dotted line would represent the fracture rate for romasozumab transition to alendronate.
+
+Now, in terms of bone mineral density gains, those are significant as well. When we look at romosozumab for the monotherapy first 12 months, you can see the significant gains there when transitioning to alendronate.
+
+As we saw with a balliparatide, there are some sustained gains that occur in the extension period of the trial, much more so than what we See, with alendronate.
+
+Now, in terms of treatment sequence, this is a very interesting trial, one that really, I don't think gets as much coverage necessarily as some of the other major trials. But this trial by Ebina and colleagues examine the response to romosozumab in patients who had been previously treated with other agents.
+
+Okay, so this is real life.
+
+You're going to experience meeting patients who've been on many other treatments before they come to you. And just to orient you here, these patients were either treatment naive, which is the gray line. They were treated with teriparatide for 11 months, which is the orange line. There were some patients treated with bisphosphonates for an average of two and a half years, which is this aqua line.
+
+And then there were some patients treated with denosumab for about two years, which is this dark blue line here.
+
+So these are the changes seen when these patients were switched to 12 months of romosozumab.
+
+So, as you can see, the greatest gains in bone density occurred at the spine and at the hip in the treatment naive patients.
+
+The next highest gain was in the patients, which makes sense, who were already on an anabolic therapy.
+
+So teriparatide to romosozumab had the next highest gain in bone mineral density at the spine and hip. Bisphosphonates was a blunted response, as you can see here. And the most blunting occurred with patients who were on denosumab and then switched to romosozumab later on.
+
+So this becomes very important again when we consider the concept of treatment sequence, because what you do first really matters.
+
+So this is just an opinion of mine, again, based on my interpretation of the evidence. But I would say that if you are considering denosumab because you feel that a patient is at high risk or imminent risk for fracture, consider an osteoanabolic agent first, if appropriate, for that patient.
+
+Now, to further investigate this idea, here we have patients. And just to orient you, all of the patients whose data is depicted here were treated with bisphosphonate for at least three years before they were transitioned to the treatments you see here.
+
+So bisphosphonate for three years followed by romosozumab did result in an increase in bone density at the total hip, femoral neck, and at the lumbar spine. But as you can see, these numbers are blunted as compared to the treatment naive numbers that we talked about at the beginning of the presentation in terms of switching from 3 years of bisphosphonate to teriparatide as shown here in the hot pink line, you can see that there's really minimal and actually no building that occurs at the spine. Minimal at the femoral neck, sorry, minimal at the femoral neck and total hip. And then we do see some osteoanabolic effects at the lumbar spine, again blunted.
+
+So these patients were transitioned from 3 years of bisphosphonate to the anabolic.
+
+Now this is the data from Ben Leder's group and the data switch trial.
+
+So again, a very important one as we began to consider sequential therapy. And this is really over a decade old at this point, this data.
+
+But what I'd like to point out here, the most important point is when considering transitions, there is one that we should avoid, which is the denosumab to teriparatide transition.
+
+So that's depicted here in the hot pin cloth line. And basically with the data switch trial, for the initial 24 months, the subjects were treated with either teriparatide in blue, denosumab in hot pink, or a combination in green. And then they were all switched at the 24 month mark and the combination patients were switched to denosumab, the denosumab patients were switched to teriparatide and the teriparatide patients were switched to denosumab.
+
+So when we do osteoanabolic to antiresorptive, which is the blue line, you can see that there were gains seen at the lumbar spine, femoral neck and total hip throughout the duration of the study. Remember, distal radius with teriparatide, there actually has been clearly demonstrated some reduction in cortical bone density, in part because of that intermittent PTH activity that teriparatide has.
+
+So the main point here though is when you look at denosumab switched to teriparatide, there is a significant loss of femoral neck and total hip bone density and that is sustained.
+
+So especially for patients who are at increased risk of fracture making this transition, denosumab to teriparatide would not be recommended.
+
+Here we have another study from Mike McClung. This was a very short term study looking at denosumab transitioning to romosozumab.
+
+So prior to this, right, we can agree that denosumab to teriparatide is not recommended. How about if we do denosumab to romosozumab?
+
+Again, this was a short term study.
+
+So initially subjects received plus placebo and their bone density at the lumbar spine. Serum cetylopeptide was monitored and then they received one year of denosumab as seen here. And that was followed by.
+
+So that's essentially two doses. That's followed by 12 months of romosozumab. And following the denosumab with romosozumab results in a prevention in the rebound of serum CTL peptide. It actually kept it right at baseline and it also prevented bone loss and allowed the patients actually to gain some bone density.
+
+It was blunted, as we would expect, but there was no bone loss.
+
+So there is potentially a role for using romosozumab to transition off denosumab. But right now we don't have the data looking at patients on long term denosumab who switch to romosozumab. But at least this short term study does show some promising results.
+
+More investigation needed.
+
+Okay, so with the last bit of time here, we're going to talk about some patients. All right, so make some real world application and then we'll just do look at some more on sequential therapy as we consider those patients.
+
+So just some excellent reading.
+
+I would highly recommend all of these papers if you have any further interest in this topic. Dr. Cosman's treatment sequence for osteoporosis was published by Endocrine Practice just last year. Extremely helpful to have a better understanding.
+
+So very high fracture risk has been clearly defined.
+
+These are our own ACE 2020 guidelines for postmenopausal osteoporosis management. And as you all know, very high fracture risk is characterized by several of these risk factors, including recent fracture within the past 12 months, fractures while on therapy.
+
+So treatment failure, very low T score, minus 3.0, among others.
+
+Now, in terms of imminent risk of fracture, this is an important concept that's been introduced.
+
+Patients with a recent fracture are at very high risk of having more fractures, fractures over the next two years, irrespective of T score.
+
+So when a patient comes to you and they've broken their wrist or spine or hip, their imminent risk is extremely high. And that translates to a fracture risk of over 10% over the subsequent two years.
+
+So this means that very high fracture risk or imminent risk, or a combination depending on the patient that you're seeing, are highly indicative that the patient needs to be treated rapidly.
+
+And our goals are to maximally reduce fracture risk.
+
+So typically the best treatment sequence to achieve that would be osteoanabolic first, followed by antiresorptive.
+
+So this type of strategy would be the treatment that you would want for patients at imminent risk of fracture.
+
+So as we've discussed Osteoantabolic to antiresorptive recommended.
+
+Right.
+
+So if you're doing a bone builder first, you're switching to either bisphosphonates or denosumab. The patient will do very well. As we mentioned, denosumab does lead to further increases slightly larger than those with bisphosphonates.
+
+So that's something to keep in mind.
+
+Now, bisphosphonate to osteoanabolic.
+
+So this will also result in an increase in bone mineral density, but depending on the agent, as you can see here, that effect is blunted.
+
+So with bisphosphonates to teriparatide, increase in spine bone density, but it's blunted compared with de novo teriparatide with bisphosphonates to romosozumab, hip bone density actually decreases for at least a year, but then will increase at 18 to 24 months and then that increase is blunted again compared with de novo treatment.
+
+Now, denosumab to osteoanabolic, as we talked about, DMAB to teriparatide, not recommended because of a loss in hip bmd, denosumab to romosozumab, there is an increase in spinal BMD and maintenance in hip bmd, again blunted.
+
+So that is the theme of doing antiresorptive to osteoanabolic. We just see blunted results. And the one to truly avoid would be denosumab to teriparatide because of hip fracture risk.
+
+Now, in terms of looking at antiresorptive to antiresorptive, now, this will occasionally happen in clinical practice, but I would caution you that both bisphosphonates and denosumab, as we all know, carry a risk of osteonecrosis of the jaw and atypical femur fracture.
+
+So if you're going from one treatment to another, you should consider the cumulative amount of time that the patient's been on antiresorptive treatment because that concern about osteonecrosis of the jaw and atypical femur fracture does exist.
+
+Now, transitioning to denosumab from long term bisphosphonate does seem to allow an increase modestly in spine and hip BMD and denosumab to bisphosphonate does allow for maintenance in spine and hip BMD after short term denosumab. There appears to be a decrease moderately in spine and hip BMD after long term denosumab.
+
+So there will be a talk at the Congress this year about denosumab transitions. And it appears that the Best off ramp for denosumab is to use bisphosphonates. We're still learning more about which one it appears to be, zoledronate and which interval.
+
+So that's under study.
+
+So here are some cases we have. Ms. L, she's a 74 year old white female referred to the Endocrine Clinic for management of osteoporosis.
+
+So she does have quite a complex history here.
+
+Unfortunately, she developed sudden severe back pain in January of 2024. MRI showed four acute new vertebral fractures, and she did have vertebroplasty of T7 and T12 for refractory pain.
+
+So to take you through her timeline, she was initially on denosumab for six years. Denosumab was stopped due to dental extractions followed by implants, and within one year, vertebral fractures were diagnosed in January 2024.
+
+After that, she was started on teriparatide for about six months, but this was discontinued because there were concerns about hypercalcemia and the patient herself disliked the daily injections. And since then, September 2024, she's been untreated.
+
+So here we have her bone density results.
+
+So, as expected, after six years of denosumab, in 2023, bone density looked pretty good.
+
+She had osteopenia at all sites after discontinuing the denosumab. There was, as expected, a precipitous drop in her bone mineral density at all sites since there was no transition plan after that. And then between 2024, 2025, she's had about six months of teriparatide.
+
+So we do see a bit of a rebound in her spine bone density.
+
+But unfortunately, the hips continue to have fairly significant osteoporosis and she would be at very high risk for multiple reasons. She's had multiple vertebral fractures and she's got a T score below minus 3.
+
+So what would you do next?
+
+Right, so we have this high risk patient.
+
+She's already been on both an antiresorptive and an osteoanabolic. And here she is presenting to you at high risk and at imminent risk.
+
+So what I would do is an osteoanabolic followed by an antiresorptive. And in her case, I would choose romosozumab, primarily because, as the patient expressed, she disliked daily subcutaneous injections.
+
+She also had hypercalcemia with teriparatide, which is not uncommon. That can be a transient side effect of both Abel paratide and teriparatide. What's Important. Important to note though is if it's significant hypercalcemia, if the patient has any risk of kidney stones or history of that, that does need to be monitored and evaluated potentially with 24 hour urine calcium.
+
+But bottom line is if this patient is appropriate for romosozumab therapy in terms of her cardiovascular risk, that would be my first option. Followed by zoledronate, 5 milligram once per year for 3 years as maintenance therapy, and then we could consider a holiday at that point. And my reasoning for the iv Zoledronate versus denosumab, either one could be used. But this lady had some dental issues, so she had multiple extractions followed by implants pretty recently as well.
+
+And with denosumab being an ongoing treatment that we typically do longer term for high risk patients, that could present more of an issue if she has any dental work in the future.
+
+Now, with zoledronate, that's absolutely a consideration as well. But we have, we're planning on three annual doses.
+
+So we do have a discrete finite amount of time that we're going to be using the antiresorptive.
+
+So potentially that would be a path forward for this patient.
+
+Okay, but you can see how there's no single right answer here.
+
+Now, in terms of our next case, we have a younger lady. She's 62.
+
+She presents after bilateral radial fractures with a fall on New Year's eve. She recalls one DEXA scan around age 50. They told me it looked fine. No follow up.
+
+She's got a history of early stage breast cancer at age 51, treated with lumpectomy and targeted mammy radiation, which is now in remission. She's considered no evidence of disease. She's got a family history of premature CAD.
+
+So, brother had an MI at 44, uncle had an MI at 40, 48.
+
+She herself does not smoke or drink heavily. She weight trains three times a week, plays pickleball, eats calcium rich foods, takes vitamin D3. This is her bone mineral density.
+
+So back in 2013 when she was told everything was fine, she actually did have osteopenia at the hips.
+
+Distal forearm was not measured, spine was normal. She should have been followed with bone mineral density at least every two to three years. But. But unfortunately that was not done in terms of her current bone density.
+
+She has severe osteoporosis at the hip and at the distal forearm as well as osteopenia at the spine.
+
+So she's imminent risk and very high risk. Right. She's had a recent bilateral radial fracture, so recent fragility fractures, T score below minus 3.
+
+So what would I do in her case? Again, I would use sequential therapy, osteoanabolic followed by antiresorptive.
+
+Now let's talk about which ones with our patient. Clearly there are some considerations on both the major osteoanabolic medications and with a balloparatide.
+
+She did have radiation, Right?
+
+So that was earlier in life. She had diagnosis of early stage breast cancer, she received mammasyte radiation.
+
+Now, in terms of mammasyte, that's actually a targeted type of radiation to the breast soft tissue.
+
+It does not include the chest wall or the skeleton per radonc records.
+
+And now she's Ned. Furthermore, the boxed warning was removed in 2021. Still a consideration, but that's what we have to say about abaliparatide, romosozumab.
+
+She's got multiple male relatives with really premature cad. She's got a coronary calcium score, we find out of about 80. Blood pressure and lipids at goal. There is a boxed warning about cardiovascular disease, but overall, 62 years old, she's probably pretty low risk.
+
+So ultimately, after speaking with her oncologist and with me, the patient elected to do a valiparatide because she felt more comfortable with that option.
+
+And so that's in fact what we're going to do. One to two years of that followed by IV re classed once per year for three years and consider a holiday depending on bone density. And with our last minute, I'm just going to go over one more case and this is just really fascinating to me, highlights a really fantastic trial that was released just in January 2025.
+
+So we've got a 52 year old lady, pretty good health. She's presenting for guidance on management of her osteopenia. As you can see, bone density scores really not severely decreased, occasional hot flushes. Her last menstrual period was seven months ago.
+
+And of note, she had a history of elevated BP with oral contraceptives.
+
+So is she at imminent risk or high risk? Not really. Right.
+
+She hasn't fractured, she doesn't have severe osteoporosis. Is she at risk for progressive bone loss?
+
+Absolutely. She's perimenopausal.
+
+You know, once 12 months have passed, we could consider her postmenopausal. Is she a candidate for menopausal hormone therapy?
+
+Now, I would say no because she's had a history of hypertension that occurred with oral contraceptive. It's possible that potentially a low dose transdermal could be okay, but that would definitely give Me cause for concern.
+
+So what about infrequent zoledronate?
+
+So this is a study that was published just in January of 2025 in the New England Journal by Bolland and colleagues. And it looks at fracture prevention with infrequent zoledronate in women ages 50 to 60.
+
+So really this was a very elegantly designed study.
+
+Essentially, women who were between the ages of 50 and 60 were treated with either placebo injections at baseline and five years, or they received an infusion of zledronate at baseline and at five years, or they received a dose of zoledronate at baseline and placebo at five years.
+
+So as you can see here, the placebo to placebo group had the highest risk of morphometric vertebral fracture. But both the groups who received one dose of zoledronate over 10 years or two doses of zoledronate over 10years had a significant risk reduction for vertebral fractures. In fact, it almost looks exactly the same in terms of the change in bone mineral density.
+
+As expected, the patients on placebo had precipitous losses because they were perimenopausal, age 50 to 60.
+
+So over that period of time we see losses at the lumbar spine and total hip. The women who received two doses of zoledronate maintained their bone density quite well, well at the hip and actually had small increases at the spine. And then even the women who received just one dose of zoledronate were able to maintain spine bone density and have a small loss of hip bone density at that 10 year mark.
+
+Okay, so zoledronate administered just once every eight year, every five years, reduced incidence of morphometric vertebral fractures in early postmenopausal women over a 10 year period.
+
+So that's, you know, do not discount the utility of the humble bisphosphonate. It would be my take home from that. But other take homes are just sequence of therapy matters in patients at imminent risk or high risk for fracture.
+
+Consider anabolic therapy first when appropriate, followed by anti resorptive therapy and then lastly make sure to avoid that one transition which is denosomal teriparatide because of increased hip bone losses and increased hip fracture risk. But I am happy to take any questions. Thank you Dr. Tabai for this excellent talk and it's a very extensive data that you've summarized and synthesized into palatable talks.
+
+So we, we appreciate that.
+
+So we have some questions from the audience.
+
+Also, if you have some questions, you can come up to the Mic, but I'll ask you my own question first. Yes. How do you manage?
+
+I know this is part of the talk, but I would like to see your opinion about perioperative spine surgery. Neurosurgeons are looking at the bone health aggressively now before spine surgeries, and they're asking us to put patients on anabolic therapy. How do you evaluate those patients, and do you prefer one drug over the other? That's an Excellent question, Dr. Abate.
+
+And there is actually some published data from groups in Japan and others looking at the utility of teriparatide, actually, largely because it's been on the market the longest. And groups were able to look at the utility of teriparatide prior to spinal instrumentation, including fusion, inclusion of hardware, et cetera, and the results have been favorable for usage of teriparatide in those types of patients. How I approach it personally is I will evaluate the patient as if I'm looking strictly at their imminent risk or high risk for fracture.
+
+So we evaluate bone mineral density using dexa.
+
+Oftentimes, their spine density is extremely difficult to interpret because they have a lot of degenerative changes or they may already have hardware. Using the L1 Hounsville units is quite effective. That's been validated in a number of studies.
+
+So if CT L1 Hounsville units are below 100, that would be consistent with a diagnosis of.
+
+Of osteoporosis.
+
+So even though DEXA may not be interpretable, you could look at CT to help guide you. But if they qualify for anabolic therapy on the basis of their bone density or for any other reasons, such as fractures, and many times they've already had occult vertebral fractures, I will absolutely treat them with osteoanabolic therapy. And in fact, that's the best way to do it because we're supported by the evidence, the FDA label, and we're able to get insurance approval.
+
+Now, occasionally we will have patients that are referred to us by the surgeons that, you know, really do seem like they would benefit, but there isn't really a clinical basis, and that's when it's a. It's a difficult call to make. Again, if I can use the Pounceville units or there does appear to be any fragility fracture that can help bypass the bone density requirements. But in terms of which, you know, sort of agent to utilize, it's possible that abeliparatide teriparatide have an earlier increase in P1NP as a marker of bone formation as opposed to roamsozumab, which is monthly.
+
+We may not see those increases until perhaps month three or four.
+
+So if it's for a rapid boost in bone density, I would tend to use a balliparatide preferentially. But that's just, you know, my own clinical preference. Thank you.
+
+That is one of the challenging things.
+
+So I'll go back and forth. We've got about four minutes from the audience. Hello, good morning.
+
+Thank you so much for this wonderful talk. I had a question about your recommendations on what to do if the course of ramosuzumab was interrupted.
+
+So, for example, patient got it for a couple of months and insurance change couldn't receive it for another two to three months. And would the cardiovascular risk make a change to your recommendation?
+
+That's a great question.
+
+So we don't have any evidence that there's any additive cardiovascular risk.
+
+So I don't use that as a consideration. If the patient's missed more than three months in their treatment course, I will typically have them restart from, from the beginning.
+
+If it's less than three months, we'll try to resume that treatment course. Obviously it's not ideal, but that would be the best thing to do, I think. Thank you so much. You're welcome.
+
+We'll take another one, maybe from the back. Good morning. It was a great talk. My question is about the case one you mentioned, when we are transitioning from denuzumab to romosuzumab.
+
+So when are you going to start the romosuzumab? The moment the patient came with new onsen fractures. Or you will wait like six months. When was the next dose of denosumab was due?
+
+Right.
+
+So in her case, unfortunately, she'd gotten the teriparatide till September and was showing up to me basically in April.
+
+So she basically had been on her own sort of self imposed holiday because nothing was done.
+
+So we were already at risk of losing whatever she gained on the teriparatide.
+
+So I would just start it immediately at that point. Again, you know, we don't have a lot of data to guide how long the washout period should be, but I think in her case, certainly she's just at such extremely high risk. I would just do the romosozumab right away, as soon as approval takes place. Thank you.
+
+You're welcome. Is there a timeline of denosumab use that you would feel comfortable transitioning to Roma or. I think on the basis of the data, shorter term denosumab, perhaps two years, maybe, maybe three to four at the most. Following that, it just seems that the anabolic effect would be extremely blunted.
+
+So again, it may be a good off ramp in terms of getting off denosumab without a big rebound loss. But you're not going to see the nice gains that we see with a treatment naive person.
+
+So I think it depends on what we're using it for and going along with the denosumab.
+
+Someone asked, what's your strength when a patient is in long term denosumab therapy and has osteonecrosis of the jaw?
+
+So this is a dreaded complication. It's bound to happen, especially if you're treating a lot of osteoporosis. Hopefully it will never happen to any of you, but it's likely to in those cases.
+
+You know, typically what we'll do is obviously, if it's an early stage osteonecrosis, communication with the oral surgeon, with the dentist is extremely important because there have been cases of very early stage necrosis that have actually healed while the patient remained on denosumab.
+
+So again, that's not your gut reaction, right, to continue a treatment, but there have been cases when that actually took place.
+
+Now, if it's a very severe case and, you know, in no way is it possible for them to continue the denosumab, what I'll typically do in that situation is discontinue it. We'll assess how the patient is progressing in terms of hyperbaric oxygen or debridement surgery, how that necrosis is actually doing, and then, you know, depending on the duration of the denosumab, if it's long term, in this case, oftentimes I'll, I'll put the patient on raloxifen, if that's appropriate. Obviously, obviously, if it's a male patient, we're, you know, we're up a creek with that one.
+
+But if it's a female patient, Raloxifen is one of the few agents, antiresorptive that doesn't have any risk of osteonecrosis that's been reported.
+
+So again, the effect is relatively weak. It's stronger at the spine, may help more just with stabilization at the hip, but it's much better than nothing. I think the issue with going from denosumab, typically we transition to zoledronate, but that's also got the necrosis risk.
+
+So very tough call there. Well, thank you. We're actually out of time, so if you have any further questions, and I think there were a couple of questions, maybe you can give your email and we'll be happy to answer questions via email.
+
+Absolutely.
+
+Thank you all so much. Thank you.
+
+---
+
+Generated by WhisperAI
+https://whisperai.com
