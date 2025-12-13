@@ -5,21 +5,108 @@ from pathlib import Path
 import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 
+def encontrar_ffmpeg():
+    """Encontra o executável do FFmpeg no sistema ou localmente"""
+    # Atualiza o PATH do processo atual com as variáveis do sistema
+    import os
+    system_path = os.environ.get("Path", "")
+    machine_path = os.environ.get("Path", "")
+    try:
+        import winreg
+        # Tenta pegar o PATH da máquina
+        with winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, r"SYSTEM\CurrentControlSet\Control\Session Manager\Environment") as key:
+            machine_path = winreg.QueryValueEx(key, "Path")[0]
+    except:
+        pass
+    
+    # Atualiza PATH temporariamente
+    os.environ["Path"] = machine_path + ";" + os.environ.get("Path", "")
+    
+    # Primeiro tenta no PATH
+    try:
+        subprocess.run(['ffmpeg', '-version'], capture_output=True, check=True, timeout=5)
+        return 'ffmpeg'
+    except (FileNotFoundError, subprocess.CalledProcessError, subprocess.TimeoutExpired):
+        pass
+    
+    # Procura localmente na pasta ffmpeg
+    ffmpeg_dir = Path(__file__).parent / "ffmpeg"
+    if ffmpeg_dir.exists():
+        for bin_dir in ffmpeg_dir.glob("*/bin"):
+            ffmpeg_exe = bin_dir / "ffmpeg.exe"
+            if ffmpeg_exe.exists():
+                try:
+                    subprocess.run([str(ffmpeg_exe), '-version'], capture_output=True, check=True)
+                    return str(ffmpeg_exe)
+                except:
+                    pass
+    
+    # Procura no local de instalação do WinGet
+    winget_packages = Path(os.environ.get("LOCALAPPDATA", "")) / "Microsoft" / "WinGet" / "Packages"
+    if winget_packages.exists():
+        # Procura por pastas do FFmpeg instaladas via WinGet
+        for ffmpeg_folder in winget_packages.glob("*FFmpeg*"):
+            # Procura em subpastas por ffmpeg.exe
+            for ffmpeg_exe in ffmpeg_folder.rglob("ffmpeg.exe"):
+                if ffmpeg_exe.exists():
+                    try:
+                        subprocess.run([str(ffmpeg_exe), '-version'], capture_output=True, check=True)
+                        return str(ffmpeg_exe)
+                    except:
+                        pass
+    
+    # Procura em locais comuns do Windows
+    locais_comuns = [
+        Path("C:/ffmpeg/bin/ffmpeg.exe"),
+        Path("C:/Program Files/ffmpeg/bin/ffmpeg.exe"),
+        Path(os.environ.get("ProgramFiles", "")) / "ffmpeg/bin/ffmpeg.exe",
+    ]
+    
+    for local in locais_comuns:
+        if local.exists():
+            try:
+                subprocess.run([str(local), '-version'], capture_output=True, check=True)
+                return str(local)
+            except:
+                pass
+    
+    return None
+
 class ConversorTS:
     def __init__(self, root):
         self.root = root
         self.root.title("Conversor TS para MP4")
-        self.root.geometry("600x400")
+        self.root.geometry("650x550")
+        self.root.minsize(600, 500)
         
         # Lista de arquivos selecionados
         self.arquivos_ts = []
+        
+        # Caminho do FFmpeg
+        self.ffmpeg_path = encontrar_ffmpeg()
         
         # Interface
         self.criar_interface()
     
     def criar_interface(self):
+        # Canvas com scrollbar para garantir que tudo seja visível
+        canvas = tk.Canvas(self.root)
+        scrollbar_principal = ttk.Scrollbar(self.root, orient="vertical", command=canvas.yview)
+        scrollable_frame = ttk.Frame(canvas)
+        
+        scrollable_frame.bind(
+            "<Configure>",
+            lambda e: canvas.configure(scrollregion=canvas.bbox("all"))
+        )
+        
+        canvas.create_window((0, 0), window=scrollable_frame, anchor="nw")
+        canvas.configure(yscrollcommand=scrollbar_principal.set)
+        
+        canvas.pack(side="left", fill="both", expand=True)
+        scrollbar_principal.pack(side="right", fill="y")
+        
         # Frame principal
-        frame_principal = ttk.Frame(self.root, padding="10")
+        frame_principal = ttk.Frame(scrollable_frame, padding="10")
         frame_principal.pack(fill=tk.BOTH, expand=True)
         
         # Título
@@ -52,7 +139,7 @@ class ConversorTS:
         self.lista_arquivos = tk.Listbox(
             frame_lista,
             yscrollcommand=scrollbar.set,
-            height=10
+            height=8
         )
         self.lista_arquivos.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
         scrollbar.config(command=self.lista_arquivos.yview)
@@ -96,14 +183,19 @@ class ConversorTS:
         self.label_status = ttk.Label(frame_principal, text="Pronto para converter")
         self.label_status.pack()
         
-        # Botão converter
+        # Botão converter (grande e destacado)
         btn_converter = ttk.Button(
             frame_principal,
-            text="▶️ Converter para MP4",
+            text="▶️ CONVERTER PARA MP4",
             command=self.converter_arquivos,
-            width=30
+            width=35
         )
-        btn_converter.pack(pady=10)
+        btn_converter.pack(pady=20)
+        
+        # Bind do mouse wheel ao canvas
+        def _on_mousewheel(event):
+            canvas.yview_scroll(int(-1*(event.delta/120)), "units")
+        canvas.bind_all("<MouseWheel>", _on_mousewheel)
     
     def selecionar_arquivos(self):
         """Abre diálogo para selecionar múltiplos arquivos TS"""
@@ -152,8 +244,9 @@ class ConversorTS:
             arquivo_mp4 = arquivo_ts.parent / f"{arquivo_ts.stem}.mp4"
         
         # Comando FFmpeg
+        ffmpeg_cmd = self.ffmpeg_path if self.ffmpeg_path else 'ffmpeg'
         comando = [
-            'ffmpeg',
+            ffmpeg_cmd,
             '-i', str(arquivo_ts),
             '-c:v', 'libx264',
             '-c:a', 'aac',
@@ -183,16 +276,46 @@ class ConversorTS:
             return
         
         # Verifica se FFmpeg está disponível
-        try:
-            subprocess.run(['ffmpeg', '-version'], capture_output=True, check=True)
-        except (FileNotFoundError, subprocess.CalledProcessError):
-            messagebox.showerror(
-                "Erro", 
-                "FFmpeg não encontrado!\n\n"
-                "Instale FFmpeg e adicione ao PATH do sistema.\n"
-                "Download: https://ffmpeg.org/download.html"
+        if not self.ffmpeg_path:
+            self.ffmpeg_path = encontrar_ffmpeg()
+        
+        if not self.ffmpeg_path:
+            resposta = messagebox.askyesno(
+                "FFmpeg não encontrado",
+                "FFmpeg não foi encontrado no sistema.\n\n"
+                "Deseja instalar automaticamente agora?\n\n"
+                "(Caso contrário, você precisará instalar manualmente)"
             )
-            return
+            if resposta:
+                # Tenta executar o instalador
+                instalador = Path(__file__).parent / "instalar_ffmpeg.py"
+                if instalador.exists():
+                    try:
+                        subprocess.run([sys.executable, str(instalador)], check=True)
+                        self.ffmpeg_path = encontrar_ffmpeg()
+                        if not self.ffmpeg_path:
+                            messagebox.showerror(
+                                "Erro",
+                                "Instalação não concluída. Por favor, instale manualmente."
+                            )
+                            return
+                    except Exception as e:
+                        messagebox.showerror(
+                            "Erro",
+                            f"Erro ao instalar FFmpeg: {e}\n\n"
+                            "Por favor, instale manualmente."
+                        )
+                        return
+                else:
+                    messagebox.showerror(
+                        "Erro",
+                        "Instalador não encontrado.\n\n"
+                        "Por favor, instale FFmpeg manualmente:\n"
+                        "https://ffmpeg.org/download.html"
+                    )
+                    return
+            else:
+                return
         
         # Pasta de saída
         pasta_saida = self.entry_saida.get().strip() if self.entry_saida.get().strip() else None

@@ -45,3 +45,4 @@ Script Python com interface gráfica para converter vídeos TS (Transport Stream
 - A qualidade de vídeo está configurada para CRF 23 (boa qualidade)
 - O preset está em "medium" (balance entre velocidade e qualidade)
 
+
