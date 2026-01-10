@@ -1,0 +1,357 @@
+/* ==========================================================================
+   ESTILOS GERAIS - AULA GRADE
+   ========================================================================== */
+
+/*
+  Layout de slides HTML para apresentação GRADE
+  Desktop-first, funciona offline
+*/
+
+/* ====================
+   CONTAINER DE SLIDES
+   ==================== */
+
+.slide {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide-content {
+  max-width: 1200px;
+  width: 100%;
+  z-index: 1;
+}
+
+/* ====================
+   TIPOS DE SLIDE
+   ==================== */
+
+/* Slide de título (fundo navy, texto gold) */
+.slide-title {
+  background-color: var(--navy-deep);
+  color: var(--white);
+}
+
+.slide-title h1 {
+  color: var(--gold);
+  font-size: var(--text-6xl);
+  margin-bottom: 1rem;
+}
+
+.slide-title p {
+  color: var(--white);
+  font-size: var(--text-xl);
+  opacity: 0.9;
+}
+
+/* Slide de conteúdo (fundo claro) */
+.slide-content-type {
+  background-color: var(--bg);
+}
+
+.slide-content-type h2 {
+  color: var(--navy-deep);
+  border-bottom: 3px solid var(--gold);
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+/* ====================
+   CARDS CONCEITUAIS
+   ==================== */
+
+.card {
+  background-color: var(--white);
+  border-left: 4px solid var(--gold);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--shadow-md);
+}
+
+.card h3 {
+  color: var(--navy-deep);
+  margin-bottom: 0.75rem;
+}
+
+.card p {
+  color: var(--text);
+  line-height: var(--leading-relaxed);
+}
+
+/* ====================
+   GRID DE CARDS
+   ==================== */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* ====================
+   SÍMBOLOS GRADE
+   ==================== */
+
+.grade-symbol {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-bold);
+}
+
+.grade-high { color: var(--grade-high); }
+.grade-moderate { color: var(--grade-moderate); }
+.grade-low { color: var(--grade-low); }
+
+/* Círculos GRADE (⊕⊕⊕⊕) */
+.grade-circle {
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 50%;
+  margin-right: 0.1em;
+}
+
+.grade-circle.filled {
+  background-color: currentColor;
+}
+
+.grade-circle.empty {
+  border: 2px solid currentColor;
+  background-color: transparent;
+}
+
+/* ====================
+   BADGES (FORTE/FRACA)
+   ==================== */
+
+.badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-strong {
+  background-color: var(--green-bg);
+  color: var(--green);
+  border: 2px solid var(--green);
+}
+
+.badge-weak {
+  background-color: var(--bg);
+  color: var(--text-secondary);
+  border: 2px solid var(--text-secondary);
+}
+
+/* ====================
+   NÚMEROS-CHAVE
+   ==================== */
+
+.number-highlight {
+  font-family: var(--font-heading);
+  font-size: var(--text-5xl);
+  font-weight: var(--weight-bold);
+  color: var(--gold);
+  line-height: 1;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.number-label {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* ====================
+   LISTAS ESTILIZADAS
+   ==================== */
+
+.styled-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.styled-list li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.styled-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-xl);
+}
+
+/* ====================
+   TABELAS
+   ==================== */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+th {
+  background-color: var(--navy-deep);
+  color: var(--white);
+  padding: 1rem;
+  text-align: left;
+  font-family: var(--font-heading);
+  font-weight: var(--weight-bold);
+}
+
+td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+tr:hover {
+  background-color: rgba(212, 175, 55, 0.05);
+}
+
+/* ====================
+   CITAÇÕES
+   ==================== */
+
+blockquote {
+  border-left: 4px solid var(--gold);
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+  color: var(--text-secondary);
+  font-size: var(--text-lg);
+}
+
+blockquote cite {
+  display: block;
+  margin-top: 1rem;
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  font-style: normal;
+}
+
+/* ====================
+   NAVEGAÇÃO (SETAS)
+   ==================== */
+
+.nav-hint {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.nav-hint:hover {
+  opacity: 1;
+}
+
+/* ====================
+   ANIMAÇÕES
+   ==================== */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* ====================
+   UTILITÁRIOS
+   ==================== */
+
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-4 { margin-top: 2rem; }
+
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-4 { margin-bottom: 2rem; }
+
+.p-4 { padding: 2rem; }
+.p-8 { padding: 4rem; }
+
+/* ====================
+   RESPONSIVO - TABLET
+   ==================== */
+
+@media (max-width: 1024px) {
+  .slide {
+    padding: 3rem;
+  }
+  
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ====================
+   RESPONSIVO - MOBILE
+   ==================== */
+
+@media (max-width: 640px) {
+  .slide {
+    padding: 2rem;
+  }
+  
+  .number-highlight {
+    font-size: var(--text-4xl);
+  }
+}
+
+/* ====================
+   IMPRESSÃO
+   ==================== */
+
+@media print {
+  .slide {
+    page-break-after: always;
+    height: auto;
+    min-height: 100vh;
+  }
+  
+  .nav-hint {
+    display: none;
+  }
+}
