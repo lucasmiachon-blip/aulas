@@ -30,6 +30,33 @@
             align-items: center;
             flex-wrap: wrap;
         }
+        .zoom-controls {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            margin-left: 15px;
+        }
+        .zoom-btn {
+            background: #D4AF37;
+            color: #000;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .zoom-btn:hover { background: #f0c245; }
+        .zoom-value {
+            background: #3a3a3a;
+            padding: 8px 15px;
+            border-radius: 6px;
+            font-weight: bold;
+            color: #D4AF37;
+            min-width: 60px;
+            text-align: center;
+            font-size: 14px;
+        }
         select {
             padding: 8px 12px;
             font-size: 14px;
@@ -73,12 +100,16 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
+            overflow: auto;
             height: calc(100vh - 80px);
         }
+        .slide-wrapper {
+            transform-origin: top center;
+            transition: transform 0.3s ease;
+        }
         .slide {
-            width: 100vw;
-            height: calc(100vh - 80px);
+            width: 1280px;
+            height: 720px;
             background: #F9F8F4;
             display: none;
             overflow: auto;
@@ -192,10 +223,16 @@
                 <option value="slide-3">Slide 3 - Nossa Travessia</option>
                 <option value="slide-4">Slide 4 - Fundadores GRADE</option>
             </select>
+            <div class="zoom-controls">
+                <button class="zoom-btn" onclick="changeZoom(-10)">−</button>
+                <div class="zoom-value" id="zoomValue">100%</div>
+                <button class="zoom-btn" onclick="changeZoom(10)">+</button>
+            </div>
         </div>
     </div>
 
     <div class="slide-container">
+        <div class="slide-wrapper" id="slideWrapper">
         <!-- SLIDE 1: CAPA -->
         <div id="slide-1" class="slide slide-title">
             <div>
@@ -264,11 +301,26 @@
                 </blockquote>
             </div>
         </div>
+        </div>
     </div>
 
     <script>
         let currentSlide = 0;
         const totalSlides = 4;
+        let currentZoom = 100;
+
+        function updateZoom() {
+            const wrapper = document.getElementById('slideWrapper');
+            wrapper.style.transform = `scale(${currentZoom / 100})`;
+            document.getElementById('zoomValue').textContent = currentZoom + '%';
+        }
+
+        function changeZoom(delta) {
+            currentZoom += delta;
+            if (currentZoom < 40) currentZoom = 40;
+            if (currentZoom > 200) currentZoom = 200;
+            updateZoom();
+        }
 
         function showSlide(index) {
             const slides = document.querySelectorAll('.slide');
@@ -332,6 +384,9 @@
 
         // Mostrar primeiro slide
         showSlide(0);
+        
+        // Inicializar zoom
+        updateZoom();
     </script>
 
 </body>
