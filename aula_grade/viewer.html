@@ -1,268 +1,339 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GRADE - Dislipidemia BR 2025</title>
-  
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    
-    :root {
-      --navy: #152432;
-      --gold: #D4AF37;
-      --white: #FFFFFF;
-      --bg: #F9F8F4;
-      --text: #152432;
-      --gray: #6B7280;
-    }
-    
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-      overflow: hidden;
-    }
-    
-    .slide {
-      width: 100vw;
-      height: 100vh;
-      display: none;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 3rem;
-    }
-    
-    .slide.active { display: flex; }
-    
-    .slide-content {
-      max-width: 1000px;
-      width: 100%;
-    }
-    
-    .slide-title {
-      background-color: var(--navy);
-      color: var(--white);
-      text-align: center;
-    }
-    
-    .slide-title h1 {
-      font-family: Georgia, serif;
-      font-size: 3.5rem;
-      color: var(--gold);
-      margin: 1rem 0;
-    }
-    
-    .slide-content-type {
-      background-color: var(--bg);
-    }
-    
-    .slide-content-type h2 {
-      font-family: Georgia, serif;
-      font-size: 2.5rem;
-      color: var(--navy);
-      border-bottom: 3px solid var(--gold);
-      padding-bottom: 0.5rem;
-      margin-bottom: 2rem;
-    }
-    
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-    
-    .card {
-      background: white;
-      border-left: 4px solid var(--gold);
-      border-radius: 8px;
-      padding: 1.5rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    }
-    
-    .card h3 {
-      color: var(--navy);
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
-    
-    .styled-list {
-      list-style: none;
-      padding: 0;
-    }
-    
-    .styled-list li {
-      position: relative;
-      padding-left: 2rem;
-      margin-bottom: 1rem;
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-    
-    .styled-list li::before {
-      content: "→";
-      position: absolute;
-      left: 0;
-      color: var(--gold);
-      font-weight: bold;
-      font-size: 1.5rem;
-    }
-    
-    blockquote {
-      border-left: 4px solid var(--gold);
-      padding-left: 1.5rem;
-      margin: 2rem 0;
-      font-style: italic;
-      color: var(--gray);
-      font-size: 1.2rem;
-    }
-    
-    .progress-bar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 0%;
-      height: 3px;
-      background-color: var(--gold);
-      transition: width 0.3s ease;
-      z-index: 1000;
-    }
-    
-    .nav-hud {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: rgba(21, 36, 50, 0.9);
-      color: white;
-      padding: 10px 20px;
-      border-radius: 20px;
-      font-size: 0.9rem;
-      opacity: 0.6;
-      transition: opacity 0.3s ease;
-      z-index: 1000;
-    }
-    
-    .nav-hud:hover { opacity: 1; }
-    .text-center { text-align: center; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRADE - Dislipidemia BR 2025</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: Arial, sans-serif;
+            background: #1a1a1a;
+            color: #fff;
+        }
+        .header {
+            background: #2a2a2a;
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        .header h1 {
+            color: #D4AF37;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .controls {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        select {
+            padding: 8px 12px;
+            font-size: 14px;
+            border-radius: 6px;
+            border: 2px solid #D4AF37;
+            background: #1a1a1a;
+            color: #fff;
+            cursor: pointer;
+            max-width: 400px;
+        }
+        .nav-btn {
+            background: #2563EB;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 16px;
+            min-width: 100px;
+            transition: background 0.2s;
+        }
+        .nav-btn:hover { background: #1d4ed8; }
+        .nav-btn:disabled {
+            background: #9CA3AF;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+        .slide-indicator {
+            background: #3a3a3a;
+            padding: 8px 15px;
+            border-radius: 6px;
+            font-weight: bold;
+            color: #D4AF37;
+            min-width: 120px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .slide-container {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            overflow: auto;
+            min-height: calc(100vh - 100px);
+        }
+        .slide {
+            width: 1280px;
+            height: 720px;
+            background: #F9F8F4;
+            display: none;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            border-radius: 8px;
+            overflow: hidden;
+            padding: 60px;
+        }
+        .slide.active { display: flex; }
+        
+        /* Estilos para slides */
+        .slide-title {
+            background: #152432;
+            color: #fff;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .slide-title h1 {
+            font-family: Georgia, serif;
+            font-size: 4rem;
+            color: #D4AF37;
+            margin: 20px 0;
+        }
+        .slide-content {
+            background: #F9F8F4;
+            color: #152432;
+            flex-direction: column;
+        }
+        .slide-content h2 {
+            font-family: Georgia, serif;
+            font-size: 3rem;
+            color: #152432;
+            border-bottom: 4px solid #D4AF37;
+            padding-bottom: 15px;
+            margin-bottom: 40px;
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .card {
+            background: white;
+            border-left: 6px solid #D4AF37;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .card h3 {
+            color: #152432;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        .card p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        .styled-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 30px;
+        }
+        .styled-list li {
+            position: relative;
+            padding-left: 40px;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            line-height: 1.7;
+        }
+        .styled-list li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #D4AF37;
+            font-weight: bold;
+            font-size: 2rem;
+        }
+        blockquote {
+            border-left: 6px solid #D4AF37;
+            padding-left: 30px;
+            margin: 40px 0;
+            font-style: italic;
+            color: #6B7280;
+            font-size: 1.4rem;
+        }
+        blockquote cite {
+            display: block;
+            margin-top: 20px;
+            font-size: 1.1rem;
+            font-style: normal;
+        }
+    </style>
+    <script>
+        window.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll(".slide").forEach(s => {
+                s.style.setProperty("display", "none", "important");
+            });
+        });
+    </script>
 </head>
 <body>
-  
-  <div class="progress-bar" id="progressBar"></div>
-  
-  <section class="slide slide-title active">
-    <div class="slide-content text-center">
-      <div style="font-size: 1.1rem; color: var(--gold); font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">
-        METODOLOGIA
-      </div>
-      <h1>GRADE</h1>
-      <div style="width: 80px; height: 3px; background: var(--gold); margin: 1rem auto;"></div>
-      <div style="font-size: 1.3rem; color: rgba(255,255,255,0.9); line-height: 1.4; margin-bottom: 1rem;">
-        Diretriz Brasileira de Dislipidemia 2025
-      </div>
-      <div style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid rgba(212,175,55,0.3);">
-        <p style="font-size: 1rem; opacity: 0.7;">Lucas Miachon</p>
-      </div>
-    </div>
-  </section>
-  
-  <section class="slide slide-content-type">
-    <div class="slide-content text-center">
-      <h2 style="font-style: italic; font-size: 3rem; border: none; margin-bottom: 2rem;">
-        "Que sais-je?"
-      </h2>
-      <p style="font-size: 1.5rem; color: var(--gray); margin-top: 2rem;">
-        "O que eu sei?"
-      </p>
-      <p style="font-size: 1.1rem; color: var(--gray); margin-top: 2rem;">
-        — Michel de Montaigne
-      </p>
-    </div>
-  </section>
-  
-  <section class="slide slide-content-type">
-    <div class="slide-content">
-      <h2>Nossa Travessia</h2>
-      <div class="card-grid">
-        <div class="card">
-          <h3>1993</h3>
-          <p>Primeira diretriz brasileira de dislipidemia</p>
+    <div class="header">
+        <h1>📊 Metodologia GRADE - Dislipidemia BR 2025</h1>
+        <div class="controls">
+            <button class="nav-btn" id="prevBtn" onclick="navigateSlide(-1)">◀ Anterior</button>
+            <div class="slide-indicator" id="slideIndicator">-- / 4</div>
+            <button class="nav-btn" id="nextBtn" onclick="navigateSlide(1)">Próximo ▶</button>
+            <select id="slideSelector" onchange="jumpToSlide()" style="margin-left: 15px;">
+                <option value="">-- Selecione um slide --</option>
+                <option value="slide-1">Slide 1 - Capa</option>
+                <option value="slide-2">Slide 2 - Que sais-je?</option>
+                <option value="slide-3">Slide 3 - Nossa Travessia</option>
+                <option value="slide-4">Slide 4 - Fundadores GRADE</option>
+            </select>
         </div>
-        <div class="card">
-          <h3>2013</h3>
-          <p>Introdução da metodologia GRADE no Brasil</p>
-        </div>
-        <div class="card">
-          <h3>2025</h3>
-          <p>Diretriz atual: evidências GRADE aplicadas</p>
-        </div>
-      </div>
     </div>
-  </section>
-  
-  <section class="slide slide-content-type">
-    <div class="slide-content">
-      <h2>Fundadores GRADE</h2>
-      <ul class="styled-list">
-        <li><strong>Gordon Guyatt</strong> — McMaster University</li>
-        <li><strong>Holger Schünemann</strong> — Coordenador GRADE Working Group</li>
-        <li><strong>GRADE Working Group</strong> — Mais de 500 membros globalmente</li>
-      </ul>
-      <blockquote style="margin-top: 2rem;">
-        "GRADE não é sobre certeza absoluta, mas sobre transparência nas incertezas."
-        <cite style="display: block; margin-top: 1rem; font-size: 1rem; font-style: normal;">— Gordon Guyatt</cite>
-      </blockquote>
+
+    <div class="slide-container">
+        <!-- SLIDE 1: CAPA -->
+        <div id="slide-1" class="slide slide-title">
+            <div>
+                <div style="font-size: 1.2rem; color: #D4AF37; font-weight: 600; letter-spacing: 0.1em; margin-bottom: 20px;">
+                    METODOLOGIA
+                </div>
+                <h1>GRADE</h1>
+                <div style="width: 100px; height: 4px; background: #D4AF37; margin: 30px auto;"></div>
+                <div style="font-size: 1.5rem; color: rgba(255,255,255,0.9); line-height: 1.5;">
+                    Diretriz Brasileira de Dislipidemia 2025
+                </div>
+                <div style="margin-top: 60px; padding-top: 30px; border-top: 1px solid rgba(212,175,55,0.3);">
+                    <p style="font-size: 1.2rem; opacity: 0.7;">Lucas Miachon</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 2: QUE SAIS-JE -->
+        <div id="slide-2" class="slide slide-content" style="justify-content: center; align-items: center; text-align: center;">
+            <div>
+                <h2 style="font-style: italic; font-size: 4rem; border: none; margin-bottom: 40px;">
+                    "Que sais-je?"
+                </h2>
+                <p style="font-size: 2rem; color: #6B7280; margin-top: 40px;">
+                    "O que eu sei?"
+                </p>
+                <p style="font-size: 1.3rem; color: #6B7280; margin-top: 40px;">
+                    — Michel de Montaigne
+                </p>
+            </div>
+        </div>
+
+        <!-- SLIDE 3: NOSSA TRAVESSIA -->
+        <div id="slide-3" class="slide slide-content">
+            <div style="width: 100%;">
+                <h2>Nossa Travessia</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>1993</h3>
+                        <p>Primeira diretriz brasileira de dislipidemia</p>
+                    </div>
+                    <div class="card">
+                        <h3>2013</h3>
+                        <p>Introdução da metodologia GRADE no Brasil</p>
+                    </div>
+                    <div class="card">
+                        <h3>2025</h3>
+                        <p>Diretriz atual: evidências GRADE aplicadas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 4: FUNDADORES -->
+        <div id="slide-4" class="slide slide-content">
+            <div style="width: 100%;">
+                <h2>Fundadores GRADE</h2>
+                <ul class="styled-list">
+                    <li><strong>Gordon Guyatt</strong> — McMaster University</li>
+                    <li><strong>Holger Schünemann</strong> — Coordenador GRADE Working Group</li>
+                    <li><strong>GRADE Working Group</strong> — Mais de 500 membros globalmente</li>
+                </ul>
+                <blockquote>
+                    "GRADE não é sobre certeza absoluta, mas sobre transparência nas incertezas."
+                    <cite>— Gordon Guyatt</cite>
+                </blockquote>
+            </div>
+        </div>
     </div>
-  </section>
-  
-  <div class="nav-hud" id="navHud">
-    <span id="slideCounter">1 / 4</span>
-    <span style="margin-left: 1rem;">← →</span>
-  </div>
-  
-  <script>
-    let current = 0;
-    const slides = document.querySelectorAll('.slide');
-    const total = slides.length;
-    
-    function show(n) {
-      if (n < 0) n = 0;
-      if (n >= total) n = total - 1;
-      
-      slides.forEach(s => {
-        s.style.display = 'none';
-        s.classList.remove('active');
-      });
-      
-      slides[n].style.display = 'flex';
-      slides[n].classList.add('active');
-      current = n;
-      
-      document.getElementById('slideCounter').textContent = `${current + 1} / ${total}`;
-      document.getElementById('progressBar').style.width = ((current + 1) / total * 100) + '%';
-    }
-    
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
-        e.preventDefault();
-        if (current < total - 1) show(current + 1);
-      }
-      if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
-        e.preventDefault();
-        if (current > 0) show(current - 1);
-      }
-      if (e.key === 'Home') {
-        e.preventDefault();
-        show(0);
-      }
-      if (e.key === 'End') {
-        e.preventDefault();
-        show(total - 1);
-      }
-    });
-    
-    show(0);
-  </script>
-  
+
+    <script>
+        let currentSlide = 0;
+        const totalSlides = 4;
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.slide');
+            
+            // Esconder todos
+            slides.forEach(s => {
+                s.classList.remove('active');
+                s.style.setProperty('display', 'none', 'important');
+            });
+            
+            // Mostrar atual
+            if (index >= 0 && index < totalSlides) {
+                slides[index].classList.add('active');
+                slides[index].style.setProperty('display', 'flex', 'important');
+                currentSlide = index;
+                
+                // Atualizar indicador
+                document.getElementById('slideIndicator').textContent = `${currentSlide + 1} / ${totalSlides}`;
+                
+                // Atualizar select
+                document.getElementById('slideSelector').value = `slide-${currentSlide + 1}`;
+                
+                // Atualizar botões
+                document.getElementById('prevBtn').disabled = (currentSlide === 0);
+                document.getElementById('nextBtn').disabled = (currentSlide === totalSlides - 1);
+            }
+        }
+
+        function navigateSlide(direction) {
+            const newIndex = currentSlide + direction;
+            if (newIndex >= 0 && newIndex < totalSlides) {
+                showSlide(newIndex);
+            }
+        }
+
+        function jumpToSlide() {
+            const selector = document.getElementById('slideSelector');
+            const slideId = selector.value;
+            if (slideId) {
+                const slideNumber = parseInt(slideId.split('-')[1]);
+                showSlide(slideNumber - 1);
+            }
+        }
+
+        // Navegação por teclado
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+                e.preventDefault();
+                navigateSlide(1);
+            } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+                e.preventDefault();
+                navigateSlide(-1);
+            } else if (e.key === 'Home') {
+                e.preventDefault();
+                showSlide(0);
+            } else if (e.key === 'End') {
+                e.preventDefault();
+                showSlide(totalSlides - 1);
+            }
+        });
+
+        // Mostrar primeiro slide
+        showSlide(0);
+    </script>
+
 </body>
 </html>
