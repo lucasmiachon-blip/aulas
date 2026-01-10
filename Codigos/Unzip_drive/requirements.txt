@@ -1,2 +1,0 @@
-# Não são necessárias dependências externas - apenas bibliotecas padrão do Python
-

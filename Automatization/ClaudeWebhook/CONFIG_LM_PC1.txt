@@ -1,8 +1,0 @@
-# Configuração LM-PC1
-# Caminho: C:\Users\Dell\OneDrive\Documentos\AssistantStack\MetaVida\Automatization\ClaudeWebhook
-# OneDrive: Sincronização ativa
-# Computador: LM-PC1
-
-# Para usar:
-# 1. python corrigir_webhook.py
-# 2. python testar_webhook.py
