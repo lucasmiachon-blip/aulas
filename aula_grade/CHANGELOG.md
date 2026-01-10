@@ -4,6 +4,31 @@ Todas as mudanças notáveis serão documentadas aqui.
 
 ---
 
+## [0.2.0] - 2025-01-10
+
+### Adicionado
+- **assets/css/colors.css** — Variáveis CSS da paleta Navy/Gold
+- **assets/css/typography.css** — Fontes Georgia (títulos) + Lato fallback (corpo)
+- **assets/css/styles.css** — Layout de slides, cards, tabelas, animações
+- **assets/js/navigation.js** — Navegação com setas ← →, teclado, touch
+- **index.html** — Índice de navegação com lista de slides
+- **viewer.html** — Visualizador fullscreen com 4 slides iniciais:
+  - Slide 0: Capa
+  - Slide 1: "Que sais-je?" (Montaigne)
+  - Slide 2: Nossa Travessia (1993-2025)
+  - Slide 3: Fundadores GRADE (Guyatt, Schünemann)
+
+### Funcionalidades
+- Navegação por teclado (setas, Home, End, PageUp/Down, Espaço)
+- Navegação touch (swipe) para mobile
+- URL hash (#1, #2, etc) para slides específicos
+- Barra de progresso visual
+- HUD com contador de slides
+- F11 para fullscreen
+- Responsivo (desktop, tablet, mobile)
+
+---
+
 ## [0.1.0] - 2025-01-10
 
 ### Adicionado
