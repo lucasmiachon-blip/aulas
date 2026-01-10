@@ -69,21 +69,20 @@
             font-size: 14px;
         }
         .slide-container {
-            padding: 20px;
+            padding: 0;
             display: flex;
             justify-content: center;
-            overflow: auto;
-            min-height: calc(100vh - 100px);
+            align-items: center;
+            overflow: hidden;
+            height: calc(100vh - 80px);
         }
         .slide {
-            width: 1280px;
-            height: 720px;
+            width: 100vw;
+            height: calc(100vh - 80px);
             background: #F9F8F4;
             display: none;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
-            border-radius: 8px;
-            overflow: hidden;
-            padding: 60px;
+            overflow: auto;
+            padding: 60px 80px;
         }
         .slide.active { display: flex; }
         
