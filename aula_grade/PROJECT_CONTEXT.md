@@ -9,10 +9,21 @@ Este arquivo fornece contexto permanente para Claude sobre o projeto de apresent
 ## Identificação do Projeto
 
 **Nome:** Aula GRADE — Apresentação HTML → PowerPoint  
-**Repositório:** https://github.com/lucasmiachon-blip/aulas  
+**Repositório:** lucasmiachon-blip/aulas  
 **Branch:** `aula_grade` ← **TRABALHAR AQUI**  
 **Tecnologia:** HTML5 + CSS3 + JS → futuro PowerPoint  
 **Versão atual:** v0.1.0
+
+---
+
+## ⚠️ AVISO CRÍTICO - NÃO MEXER EM OUTROS BRANCHES
+
+**NUNCA modificar, criar arquivos ou fazer commits no branch `aula_osteoporose`**
+
+Esse branch é um projeto **SEPARADO** de osteoporose.  
+**APENAS trabalhe em `aula_grade`** quando solicitado sobre GRADE/dislipidemia.
+
+Se o usuário pedir algo sobre osteoporose, pergunte antes de fazer qualquer modificação.
 
 ---
 
@@ -161,21 +172,11 @@ Não é "médico ensinando". É "paciente perguntando, médico decide junto".
 
 ## Diferença dos Outros Branches
 
-### `aula-GRADE` (PowerPoint direto)
-- Criado primeiro
-- Foco PowerPoint/Canva desde início
-- Documentação .pptx
+- **`aula-GRADE`** → PowerPoint direto, docs .pptx
+- **`aula_grade`** → HTML → PowerPoint ← **TRABALHAR AQUI**
+- **`aula_osteoporose`** → Projeto SEPARADO (osteoporose GIOP) **NÃO MEXER**
 
-### `aula_grade` ← **ESTE (trabalhar aqui)**
-- HTML → PowerPoint
-- Desenvolvimento iterativo
-- Mesma paleta navy/gold
-
-### `aula_osteoporose`
-- Projeto separado (GIOP)
-- HTML standalone
-
-**IMPORTANTE:** Quando trabalhar em GRADE, usar branch `aula_grade`.
+Quando trabalhar em GRADE/dislipidemia, usar `aula_grade`.
 
 ---
 
@@ -235,15 +236,6 @@ Síntese (35+)
 - Standalone (funciona offline)
 - Sem CDN (todos recursos locais)
 - Responsivo (desktop prioritário)
-
----
-
-## Links Úteis
-
-- Repositório: https://github.com/lucasmiachon-blip/aulas
-- Branch aula_grade: https://github.com/lucasmiachon-blip/aulas/tree/aula_grade/aula_grade
-- Paleta cores: [ver docs/PALETA_CORES.md no repo]
-- CONTEXT completo: [ver CONTEXT.md no repo]
 
 ---
 
