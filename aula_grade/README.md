@@ -4,6 +4,9 @@
 
 Apresentação HTML interativa sobre metodologia GRADE aplicada à Diretriz Brasileira de Dislipidemia 2025.
 
+**Repositório:** lucasmiachon-blip/aulas  
+**Branch:** `aula_grade`
+
 **Público-alvo:** Médicos, residentes, estudantes de medicina  
 **Formato:** HTML standalone (funciona offline) → futuro PowerPoint  
 **Tecnologia:** HTML5 + CSS3 + JavaScript vanilla
