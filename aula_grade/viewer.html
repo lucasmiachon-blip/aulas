@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Viewer - Aula GRADE Dislipidemia BR 2025">
+  <title>Viewer - Aula GRADE</title>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/colors.css">
+  <link rel="stylesheet" href="assets/css/typography.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  
+  <style>
+    /* Remover margens para fullscreen */
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    
+    /* Esconder todos os slides por padrão */
+    .slide {
+      display: none;
+    }
+    
+    /* Slide ativo visível */
+    .slide.active {
+      display: flex;
+    }
+    
+    /* HUD de navegação */
+    .nav-hud {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: rgba(21, 36, 50, 0.9);
+      color: var(--white);
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: var(--text-sm);
+      opacity: 0.6;
+      transition: opacity 0.3s ease;
+      z-index: 1000;
+    }
+    
+    .nav-hud:hover {
+      opacity: 1;
+    }
+    
+    /* Indicador de progresso */
+    .progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 3px;
+      background-color: var(--gold);
+      transition: width 0.3s ease;
+      z-index: 1001;
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- Barra de progresso -->
+  <div class="progress-bar" id="progressBar"></div>
+  
+  <!-- SLIDES -->
+  
+  <!-- Slide 0: Capa -->
+  <section class="slide slide-title active">
+    <div class="slide-content text-center">
+      <h1>Aula GRADE</h1>
+      <p>Metodologia GRADE aplicada à Diretriz Brasileira de Dislipidemia 2025</p>
+      <p style="margin-top: 2rem; font-size: var(--text-lg); opacity: 0.8;">
+        Lucas Miachon
+      </p>
+    </div>
+  </section>
+  
+  <!-- Slide 1: "Que sais-je?" -->
+  <section class="slide slide-content-type">
+    <div class="slide-content text-center">
+      <h2 style="font-style: italic; font-size: var(--text-5xl); color: var(--navy-deep);">
+        "Que sais-je?"
+      </h2>
+      <p style="font-size: var(--text-2xl); color: var(--text-secondary); margin-top: 2rem;">
+        "O que eu sei?"
+      </p>
+      <p style="font-size: var(--text-lg); color: var(--text-secondary); margin-top: 3rem;">
+        — Michel de Montaigne
+      </p>
+    </div>
+  </section>
+  
+  <!-- Slide 2: Nossa Travessia -->
+  <section class="slide slide-content-type">
+    <div class="slide-content">
+      <h2>Nossa Travessia</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>1993</h3>
+          <p>Primeira diretriz brasileira de dislipidemia</p>
+        </div>
+        <div class="card">
+          <h3>2013</h3>
+          <p>Introdução da metodologia GRADE no Brasil</p>
+        </div>
+        <div class="card">
+          <h3>2025</h3>
+          <p>Diretriz atual: evidências GRADE aplicadas</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Slide 3: Fundadores GRADE -->
+  <section class="slide slide-content-type">
+    <div class="slide-content">
+      <h2>Fundadores GRADE</h2>
+      <ul class="styled-list">
+        <li><strong>Gordon Guyatt</strong> — McMaster University</li>
+        <li><strong>Holger Schünemann</strong> — Coordenador GRADE Working Group</li>
+        <li><strong>GRADE Working Group</strong> — Mais de 500 membros globalmente</li>
+      </ul>
+      <blockquote style="margin-top: 2rem;">
+        "GRADE não é sobre certeza absoluta, mas sobre transparência nas incertezas."
+        <cite>— Gordon Guyatt</cite>
+      </blockquote>
+    </div>
+  </section>
+  
+  <!-- Adicionar mais slides conforme criados -->
+  
+  <!-- HUD de navegação -->
+  <div class="nav-hud" id="navHud">
+    <span id="slideCounter">1 / 4</span>
+    <span style="margin-left: 1rem;">← →</span>
+  </div>
+  
+  <!-- JavaScript de navegação -->
+  <script src="assets/js/navigation.js"></script>
+  
+  <!-- Atualizar contador e barra de progresso -->
+  <script>
+    function updateProgress() {
+      const current = window.SlideNavigation.getCurrentIndex();
+      const total = window.SlideNavigation.getTotalSlides();
+      
+      // Atualizar contador
+      document.getElementById('slideCounter').textContent = `${current + 1} / ${total}`;
+      
+      // Atualizar barra de progresso
+      const progress = ((current + 1) / total) * 100;
+      document.getElementById('progressBar').style.width = progress + '%';
+    }
+    
+    // Atualizar a cada mudança de slide
+    document.addEventListener('keydown', () => {
+      setTimeout(updateProgress, 100);
+    });
+    
+    // Atualizar no carregamento
+    window.addEventListener('load', updateProgress);
+    
+    // Dica: F11 para fullscreen
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'F11') {
+        e.preventDefault();
+        if (!document.fullscreenElement) {
+          document.documentElement.requestFullscreen();
+        } else {
+          document.exitFullscreen();
+        }
+      }
+    });
+  </script>
+  
+</body>
+</html>
