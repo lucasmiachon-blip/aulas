@@ -71,11 +71,25 @@
   <!-- Slide 0: Capa -->
   <section class="slide slide-title active">
     <div class="slide-content text-center">
-      <h1>Aula GRADE</h1>
-      <p>Metodologia GRADE aplicada à Diretriz Brasileira de Dislipidemia 2025</p>
-      <p style="margin-top: 2rem; font-size: var(--text-lg); opacity: 0.8;">
-        Lucas Miachon
-      </p>
+      <div style="margin-bottom: 3rem;">
+        <div style="font-size: var(--text-xl); color: var(--gold); font-weight: 600; letter-spacing: 0.1em; margin-bottom: 1rem;">
+          METODOLOGIA
+        </div>
+        <h1 style="font-size: 5rem; margin: 0; line-height: 1;">GRADE</h1>
+        <div style="width: 120px; height: 4px; background: var(--gold); margin: 1.5rem auto;"></div>
+        <div style="font-size: var(--text-2xl); color: rgba(255,255,255,0.9); font-weight: 300; line-height: 1.4;">
+          Aplicada à Diretriz Brasileira<br>de Dislipidemia
+        </div>
+        <div style="font-size: var(--text-xl); color: var(--gold); margin-top: 1rem; font-weight: 600;">
+          2025
+        </div>
+      </div>
+      
+      <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(212,175,55,0.3);">
+        <p style="font-size: var(--text-lg); opacity: 0.7; font-weight: 300;">
+          Lucas Miachon
+        </p>
+      </div>
     </div>
   </section>
   
@@ -144,36 +158,58 @@
   
   <!-- Atualizar contador e barra de progresso -->
   <script>
-    function updateProgress() {
-      const current = window.SlideNavigation.getCurrentIndex();
-      const total = window.SlideNavigation.getTotalSlides();
+    // Aguardar DOM e navigation.js carregarem
+    window.addEventListener('load', function() {
       
-      // Atualizar contador
-      document.getElementById('slideCounter').textContent = `${current + 1} / ${total}`;
-      
-      // Atualizar barra de progresso
-      const progress = ((current + 1) / total) * 100;
-      document.getElementById('progressBar').style.width = progress + '%';
-    }
-    
-    // Atualizar a cada mudança de slide
-    document.addEventListener('keydown', () => {
-      setTimeout(updateProgress, 100);
-    });
-    
-    // Atualizar no carregamento
-    window.addEventListener('load', updateProgress);
-    
-    // Dica: F11 para fullscreen
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'F11') {
-        e.preventDefault();
-        if (!document.fullscreenElement) {
-          document.documentElement.requestFullscreen();
-        } else {
-          document.exitFullscreen();
+      function updateProgress() {
+        if (!window.SlideNavigation) {
+          console.warn('SlideNavigation ainda não carregado');
+          return;
+        }
+        
+        const current = window.SlideNavigation.getCurrentIndex();
+        const total = window.SlideNavigation.getTotalSlides();
+        
+        // Atualizar contador
+        const counter = document.getElementById('slideCounter');
+        if (counter) {
+          counter.textContent = `${current + 1} / ${total}`;
+        }
+        
+        // Atualizar barra de progresso
+        const progress = ((current + 1) / total) * 100;
+        const bar = document.getElementById('progressBar');
+        if (bar) {
+          bar.style.width = progress + '%';
         }
       }
+      
+      // Atualizar no carregamento inicial
+      setTimeout(updateProgress, 100);
+      
+      // Atualizar a cada navegação
+      document.addEventListener('keydown', function(e) {
+        const navKeys = ['ArrowRight', 'ArrowLeft', 'PageDown', 'PageUp', 'Home', 'End', ' '];
+        if (navKeys.includes(e.key)) {
+          setTimeout(updateProgress, 50);
+        }
+        
+        // F11 para fullscreen
+        if (e.key === 'F11') {
+          e.preventDefault();
+          if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen();
+          } else {
+            document.exitFullscreen();
+          }
+        }
+      });
+      
+      // Atualizar quando hash mudar (navegação por URL)
+      window.addEventListener('hashchange', function() {
+        setTimeout(updateProgress, 50);
+      });
+      
     });
   </script>
   
