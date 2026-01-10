@@ -2,11 +2,17 @@
 
 ## Localização no GitHub
 
-**Repositório:** `lucasmiachon-blip/aulas`  
+**Repositório:** lucasmiachon-blip/aulas  
 **Branch:** `aula_grade`  
 **Caminho:** `/aula_grade/`
 
-**URL:** https://github.com/lucasmiachon-blip/aulas/tree/aula_grade/aula_grade
+---
+
+## ⚠️ AVISO CRÍTICO
+
+**NUNCA modificar o branch `aula_osteoporose`**
+
+Esse é um projeto SEPARADO. Trabalhe APENAS em `aula_grade` para conteúdo GRADE/dislipidemia.
 
 ---
 
@@ -89,21 +95,11 @@ Ver `docs/PALETA_CORES.md` para detalhes completos.
 
 ## Diferença dos Outros Branches
 
-### Branch `aula-GRADE` (PowerPoint direto)
-- Criado primeiro
-- Foco em PowerPoint/Canva desde o início
-- Documentação sobre slides .pptx
+- **`aula-GRADE`** → PowerPoint direto, documentação .pptx
+- **`aula_grade`** → HTML → PowerPoint, desenvolvimento web iterativo ← **ESTE**
+- **`aula_osteoporose`** → Projeto SEPARADO (GIOP) **NÃO MEXER**
 
-### Branch `aula_grade` (este)
-- HTML primeiro → PowerPoint depois
-- Desenvolvimento web iterativo
-- Paleta de cores idêntica
-
-### Branch `aula_osteoporose`
-- Projeto separado (GIOP)
-- HTML standalone
-
-**IMPORTANTE:** Trabalhar APENAS em `aula_grade` quando solicitado.
+**IMPORTANTE:** Trabalhar APENAS em `aula_grade` para conteúdo GRADE.
 
 ---
 
