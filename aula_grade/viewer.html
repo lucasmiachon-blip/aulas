@@ -214,7 +214,7 @@
         <h1>📊 Metodologia GRADE - Dislipidemia BR 2025</h1>
         <div class="controls">
             <button class="nav-btn" id="prevBtn" onclick="navigateSlide(-1)">◀ Anterior</button>
-            <div class="slide-indicator" id="slideIndicator">-- / 4</div>
+            <div class="slide-indicator" id="slideIndicator">-- / 8</div>
             <button class="nav-btn" id="nextBtn" onclick="navigateSlide(1)">Próximo ▶</button>
             <select id="slideSelector" onchange="jumpToSlide()" style="margin-left: 15px;">
                 <option value="">-- Selecione um slide --</option>
@@ -222,9 +222,16 @@
                 <option value="slide-2">Slide 2 - Que sais-je?</option>
                 <option value="slide-3">Slide 3 - Nossa Travessia</option>
                 <option value="slide-4">Slide 4 - Fundadores GRADE</option>
+                <option value="slide-5">Slide 5 - Certeza vs Força</option>
+                <option value="slide-6">Slide 6 - Lógica da Certeza</option>
+                <option value="slide-7">Slide 7 - Ícones GRADE</option>
+                <option value="slide-8">Slide 8 - As 5 Recomendações</option>
             </select>
             <div class="zoom-controls">
                 <button class="zoom-btn" onclick="changeZoom(-10)">−</button>
+                <button class="zoom-btn" onclick="setZoom(40)" style="background: #3a3a3a; color: #D4AF37;">40%</button>
+                <button class="zoom-btn" onclick="setZoom(60)" style="background: #3a3a3a; color: #D4AF37;">60%</button>
+                <button class="zoom-btn" onclick="setZoom(100)" style="background: #2563EB; color: white;">100%</button>
                 <div class="zoom-value" id="zoomValue">100%</div>
                 <button class="zoom-btn" onclick="changeZoom(10)">+</button>
             </div>
@@ -301,12 +308,174 @@
                 </blockquote>
             </div>
         </div>
+
+        <!-- SLIDE 5: CERTEZA VS FORÇA -->
+        <div id="slide-5" class="slide slide-content">
+            <div style="width: 100%;">
+                <h2>Certeza vs Força</h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 50px;">
+                    <div style="background: white; border-left: 6px solid #2563EB; border-radius: 10px; padding: 40px;">
+                        <h3 style="color: #2563EB; font-size: 2rem; margin-bottom: 20px;">CERTEZA da Evidência</h3>
+                        <p style="font-size: 1.2rem; line-height: 1.7; margin-bottom: 15px;">
+                            Quão confiantes estamos de que o efeito estimado está próximo do efeito real?
+                        </p>
+                        <div style="margin-top: 30px; font-size: 1.1rem; line-height: 2;">
+                            <div>⊕⊕⊕⊕ <strong>ALTA</strong></div>
+                            <div>⊕⊕⊕○ <strong>MODERADA</strong></div>
+                            <div style="color: #6B7280;">⊕⊕○○ BAIXA</div>
+                            <div style="color: #6B7280;">⊕○○○ MUITO BAIXA</div>
+                        </div>
+                    </div>
+                    <div style="background: white; border-left: 6px solid #059669; border-radius: 10px; padding: 40px;">
+                        <h3 style="color: #059669; font-size: 2rem; margin-bottom: 20px;">FORÇA da Recomendação</h3>
+                        <p style="font-size: 1.2rem; line-height: 1.7; margin-bottom: 15px;">
+                            Quão confiantes estamos de que os benefícios superam os riscos?
+                        </p>
+                        <div style="margin-top: 30px; font-size: 1.3rem; line-height: 2.5;">
+                            <div style="color: #059669;">✓ <strong>FORTE</strong> — Recomendamos</div>
+                            <div style="color: #6B7280;">? <strong>FRACA</strong> — Sugerimos</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 6: LÓGICA DA CERTEZA -->
+        <div id="slide-6" class="slide slide-content">
+            <div style="width: 100%;">
+                <h2>Lógica da Certeza</h2>
+                <div style="margin-top: 50px; font-size: 1.2rem;">
+                    <div style="background: white; border-left: 6px solid #D4AF37; border-radius: 10px; padding: 40px; margin-bottom: 30px;">
+                        <h3 style="color: #152432; font-size: 1.8rem; margin-bottom: 20px;">📊 Ponto de Partida</h3>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 25px;">
+                            <div>
+                                <strong style="font-size: 1.4rem; color: #2563EB;">RCT</strong>
+                                <div style="margin-top: 10px;">Começa ALTA ⊕⊕⊕⊕</div>
+                                <div style="color: #6B7280; margin-top: 5px;">Pode ser rebaixada</div>
+                            </div>
+                            <div>
+                                <strong style="font-size: 1.4rem; color: #6B7280;">Observacional</strong>
+                                <div style="margin-top: 10px;">Começa BAIXA ⊕⊕○○</div>
+                                <div style="color: #059669; margin-top: 5px;">Pode ser elevada</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="background: white; border-left: 6px solid #B91C1C; border-radius: 10px; padding: 40px; margin-bottom: 30px;">
+                        <h3 style="color: #B91C1C; font-size: 1.8rem; margin-bottom: 20px;">⬇️ Rate Down (rebaixar)</h3>
+                        <ul style="list-style: none; padding: 0; line-height: 2;">
+                            <li>• Risco de viés</li>
+                            <li>• Inconsistência</li>
+                            <li>• Indireção</li>
+                            <li>• Imprecisão</li>
+                            <li>• Viés de publicação</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background: white; border-left: 6px solid #059669; border-radius: 10px; padding: 40px;">
+                        <h3 style="color: #059669; font-size: 1.8rem; margin-bottom: 20px;">⬆️ Rate Up (elevar)</h3>
+                        <ul style="list-style: none; padding: 0; line-height: 2;">
+                            <li>• Grande magnitude de efeito</li>
+                            <li>• Dose-resposta</li>
+                            <li>• Todos os confundidores residuais reduziriam o efeito</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 7: ÍCONES GRADE -->
+        <div id="slide-7" class="slide slide-content">
+            <div style="width: 100%;">
+                <h2>Símbolos GRADE</h2>
+                <div style="margin-top: 60px;">
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px;">
+                        <div style="background: white; border-left: 6px solid #2563EB; border-radius: 10px; padding: 35px; text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 20px; color: #2563EB;">⊕⊕⊕⊕</div>
+                            <h3 style="font-size: 1.8rem; color: #152432; margin-bottom: 15px;">ALTA</h3>
+                            <p style="font-size: 1.1rem; color: #6B7280;">Confiança alta de que o efeito real está próximo do estimado</p>
+                        </div>
+                        
+                        <div style="background: white; border-left: 6px solid #2563EB; border-radius: 10px; padding: 35px; text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 20px; color: #2563EB;">⊕⊕⊕○</div>
+                            <h3 style="font-size: 1.8rem; color: #152432; margin-bottom: 15px;">MODERADA</h3>
+                            <p style="font-size: 1.1rem; color: #6B7280;">Confiança moderada — efeito real provavelmente próximo</p>
+                        </div>
+                        
+                        <div style="background: white; border-left: 6px solid #6B7280; border-radius: 10px; padding: 35px; text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 20px; color: #6B7280;">⊕⊕○○</div>
+                            <h3 style="font-size: 1.8rem; color: #152432; margin-bottom: 15px;">BAIXA</h3>
+                            <p style="font-size: 1.1rem; color: #6B7280;">Confiança limitada — efeito real pode ser substancialmente diferente</p>
+                        </div>
+                        
+                        <div style="background: white; border-left: 6px solid #6B7280; border-radius: 10px; padding: 35px; text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 20px; color: #6B7280;">⊕○○○</div>
+                            <h3 style="font-size: 1.8rem; color: #152432; margin-bottom: 15px;">MUITO BAIXA</h3>
+                            <p style="font-size: 1.1rem; color: #6B7280;">Confiança muito limitada — efeito real provavelmente diferente</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 8: AS 5 RECOMENDAÇÕES -->
+        <div id="slide-8" class="slide slide-content">
+            <div style="width: 100%;">
+                <h2>As 5 Recomendações da Diretriz BR 2025</h2>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-top: 40px;">
+                    <div style="background: white; border-left: 6px solid #D4AF37; border-radius: 10px; padding: 30px;">
+                        <h3 style="color: #152432; font-size: 1.5rem; margin-bottom: 15px;">1. CAC</h3>
+                        <p style="font-size: 1rem; line-height: 1.6;">Reestratificação de risco em pacientes com LDL-c 70-189 mg/dL</p>
+                        <div style="margin-top: 15px; display: flex; gap: 10px;">
+                            <span style="background: #D1FAE5; color: #059669; padding: 5px 12px; border-radius: 15px; font-size: 0.9rem; font-weight: bold;">FORTE</span>
+                            <span style="background: #DBEAFE; color: #2563EB; padding: 5px 12px; border-radius: 15px; font-size: 0.9rem;">MODERADA</span>
+                        </div>
+                    </div>
+                    
+                    <div style="background: white; border-left: 6px solid #D4AF37; border-radius: 10px; padding: 30px;">
+                        <h3 style="color: #152432; font-size: 1.5rem; margin-bottom: 15px;">2. Lp(a)</h3>
+                        <p style="font-size: 1rem; line-height: 1.6;">Medida universal uma vez na vida para reclassificação de risco</p>
+                        <div style="margin-top: 15px; display: flex; gap: 10px;">
+                            <span style="background: #D1FAE5; color: #059669; padding: 5px 12px; border-radius: 15px; font-size: 0.9rem; font-weight: bold;">FORTE</span>
+                            <span style="background: #DBEAFE; color: #2563EB; padding: 5px 12px; border-radius: 15px; font-size: 0.9rem;">MODERADA</span>
+                        </div>
+                    </div>
+                    
+                    <div style="background: white; border-left: 6px solid #D4AF37; border-radius: 10px; padding: 30px;">
+                        <h3 style="color: #152432; font-size: 1.5rem; margin-bottom: 15px;">3. ApoB</h3>
+                        <p style="font-size: 1rem; line-height: 1.6;">Preferível ao LDL-c para avaliação de risco em discordância ou TG>150</p>
+                        <div style="margin-top: 15px; display: flex; gap: 10px;">
+                            <span style="background: #D1FAE5; color: #059669; padding: 5px 12px; border-radius: 15px; font-size: 0.9rem; font-weight: bold;">FORTE</span>
+                            <span style="background: #DBEAFE; color: #2563EB; padding: 5px 12px; border-radius: 15px; font-size: 0.9rem;">MODERADA</span>
+                        </div>
+                    </div>
+                    
+                    <div style="background: white; border-left: 6px solid #D4AF37; border-radius: 10px; padding: 30px; grid-column: span 2;">
+                        <h3 style="color: #152432; font-size: 1.5rem; margin-bottom: 15px;">4. Metas Terapêuticas</h3>
+                        <p style="font-size: 1rem; line-height: 1.6;">"Lower is better" — LDL-c <70 mg/dL (alto risco), <50 mg/dL (muito alto risco)</p>
+                        <div style="margin-top: 15px; display: flex; gap: 10px;">
+                            <span style="background: #D1FAE5; color: #059669; padding: 5px 12px; border-radius: 15px; font-size: 0.9rem; font-weight: bold;">FORTE</span>
+                            <span style="background: #DBEAFE; color: #2563EB; padding: 5px 12px; border-radius: 15px; font-size: 0.9rem;">ALTA</span>
+                        </div>
+                    </div>
+                    
+                    <div style="background: white; border-left: 6px solid #D4AF37; border-radius: 10px; padding: 30px;">
+                        <h3 style="color: #152432; font-size: 1.5rem; margin-bottom: 15px;">5. PREVENT</h3>
+                        <p style="font-size: 1rem; line-height: 1.6;">Calculadora de risco para população brasileira</p>
+                        <div style="margin-top: 15px; display: flex; gap: 10px;">
+                            <span style="background: #D1FAE5; color: #059669; padding: 5px 12px; border-radius: 15px; font-size: 0.9rem; font-weight: bold;">FORTE</span>
+                            <span style="background: #DBEAFE; color: #2563EB; padding: 5px 12px; border-radius: 15px; font-size: 0.9rem;">MODERADA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
     </div>
 
     <script>
         let currentSlide = 0;
-        const totalSlides = 4;
+        const totalSlides = 8;
         let currentZoom = 100;
 
         function updateZoom() {
@@ -319,6 +488,11 @@
             currentZoom += delta;
             if (currentZoom < 40) currentZoom = 40;
             if (currentZoom > 200) currentZoom = 200;
+            updateZoom();
+        }
+
+        function setZoom(value) {
+            currentZoom = value;
             updateZoom();
         }
 
