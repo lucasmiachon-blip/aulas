@@ -190,10 +190,130 @@ Usado Flexbox na coluna para criar espaçamento consistente:
 
 ---
 
+## [2025-01] Mudança #3: Correção margem inferior Box DXA + Overflow
+
+**Tag:** `#ensino` `#css-overflow` `#javascript`
+
+**Data:** Janeiro 2025
+
+### **O QUE mudou:**
+- **Problema:** Box azul (DXA) estava sendo cortado na parte inferior
+- **Causa:** Slide tinha `height: 720px` fixo e `overflow: hidden` no CSS geral
+- **Solução:** JavaScript agora ajusta `overflow-y: auto` e altura para slide-7
+
+### **PROBLEMA IDENTIFICADO:**
+O CSS geral tinha:
+```css
+.slide {
+    height: 720px;
+    overflow: hidden;  /* Cortava conteúdo que excedia altura */
+}
+```
+
+Isso causava corte do box DXA quando o conteúdo excedia 720px.
+
+### **SOLUÇÃO IMPLEMENTADA:**
+
+**JavaScript ajusta propriedades específicas para slide-7:**
+```javascript
+// Slide 7 precisa de overflow-y auto para não cortar conteúdo
+if (slideId === 'slide-7') {
+    selectedSlide.style.setProperty('overflow-y', 'auto', 'important');
+    selectedSlide.style.setProperty('min-height', '720px', 'important');
+    selectedSlide.style.setProperty('height', 'auto', 'important');
+} else {
+    selectedSlide.style.setProperty('overflow-y', 'hidden', 'important');
+    selectedSlide.style.setProperty('height', '720px', 'important');
+}
+```
+
+**CSS: Adicionado margin-bottom no box DXA:**
+```css
+/* ANTES */
+margin-top: 0;
+
+/* DEPOIS */
+margin-top: 0;
+margin-bottom: 20px;  /* Espaço inferior para não cortar */
+```
+
+### **CONCEITOS ENSINADOS:**
+
+#### **1. CSS Overflow: hidden vs auto**
+- `overflow: hidden` - Esconde conteúdo que excede o container
+- `overflow-y: auto` - Mostra scrollbar vertical se necessário
+- `overflow: visible` - Mostra conteúdo mesmo se exceder
+
+**Exemplo:**
+```css
+/* ❌ Esconde conteúdo (corta) */
+.container {
+    height: 720px;
+    overflow: hidden;
+}
+
+/* ✅ Mostra scrollbar se necessário */
+.container {
+    min-height: 720px;
+    height: auto;
+    overflow-y: auto;
+}
+```
+
+#### **2. height: fixo vs auto vs min-height**
+- `height: 720px` - Altura fixa (pode cortar conteúdo)
+- `height: auto` - Altura adapta ao conteúdo
+- `min-height: 720px` - Altura mínima, mas pode crescer
+
+**Quando usar:**
+- Fixo: Quando você quer container exato (ex: grid items iguais)
+- Auto: Quando conteúdo varia (ex: slides com textos diferentes)
+- Min-height: Quando precisa altura mínima mas flexível
+
+#### **3. JavaScript modificando CSS após carregamento**
+- CSS carrega primeiro (definido no `<style>`)
+- JavaScript pode sobrescrever depois (especificidade + `!important`)
+- Útil para ajustes dinâmicos baseados em condições
+
+**Exemplo:**
+```javascript
+// Sobrescreve CSS após seleção de slide
+if (slideId === 'slide-7') {
+    element.style.setProperty('overflow-y', 'auto', 'important');
+}
+```
+
+#### **4. Margin-bottom vs gap (flexbox)**
+- `margin-bottom: 20px` - Espaço fixo abaixo do elemento
+- `gap: 20px` (flexbox) - Espaço automático entre elementos filhos
+
+**Neste caso:**
+- Usamos ambos: `gap` para espaçamento entre boxes + `margin-bottom` extra no último box
+
+### **PERGUNTAS PARA CLAUDE ENSINAR:**
+
+1. **Por que `overflow: hidden` corta conteúdo?**
+   - Explique como overflow funciona
+   - Quando usar cada tipo de overflow
+
+2. **Qual diferença entre `height`, `min-height` e `max-height`?**
+   - Exemplos práticos de cada um
+   - Quando usar cada propriedade
+
+3. **Por que JavaScript consegue sobrescrever CSS?**
+   - Explique ordem de precedência
+   - Como `setProperty` com `'important'` funciona
+
+4. **Quando usar `margin-bottom` vs `gap` (flexbox)?**
+   - Vantagens de cada abordagem
+   - Quando combinar ambos
+
+---
+
 ## 📊 ESTATÍSTICAS
 
-- **Total de mudanças documentadas:** 2
-- **Tags #ensino:** 2
+- **Total de mudanças documentadas:** 3
+- **Tags #ensino:** 3
 - **Tags #escape:** 0 (Auto conseguiu resolver tudo!)
 - **Conceitos novos ensinados:** 
   - CSS Grid e unidades fr
@@ -201,6 +321,9 @@ Usado Flexbox na coluna para criar espaçamento consistente:
   - Conflitos JS vs CSS
   - Flexbox gap
   - Grid + Flexbox combinados
+  - CSS Overflow (hidden vs auto)
+  - Height (fixo vs auto vs min-height)
+  - Margin vs Gap
 
 ---
 
