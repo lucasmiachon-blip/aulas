@@ -1,0 +1,271 @@
+/* ==========================================================================
+   TIPOGRAFIA - AULA GRADE
+   ========================================================================== */
+
+/*
+  Filosofia tipográfica:
+  - Georgia (serifa) para títulos → Autoridade, academia
+  - Lato (sans-serif) para corpo → Legibilidade, modernidade
+  
+  Sem CDN: Fontes system fallback
+*/
+
+/* ====================
+   IMPORTAÇÃO DE FONTES
+   ==================== */
+
+/* 
+  Usando fontes do sistema para funcionar offline
+  Georgia: Nativa no Windows/Mac
+  Lato: Fallback para sans-serif do sistema
+*/
+
+/* ====================
+   VARIÁVEIS TIPOGRÁFICAS
+   ==================== */
+
+:root {
+  /* Famílias de fonte */
+  --font-heading: Georgia, "Times New Roman", serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  
+  /* Pesos */
+  --weight-normal: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  
+  /* Tamanhos base (desktop) */
+  --text-xs: 0.75rem;    /* 12px */
+  --text-sm: 0.875rem;   /* 14px */
+  --text-base: 1rem;     /* 16px */
+  --text-lg: 1.125rem;   /* 18px */
+  --text-xl: 1.25rem;    /* 20px */
+  --text-2xl: 1.5rem;    /* 24px */
+  --text-3xl: 1.875rem;  /* 30px */
+  --text-4xl: 2.25rem;   /* 36px */
+  --text-5xl: 3rem;      /* 48px */
+  --text-6xl: 3.75rem;   /* 60px */
+  
+  /* Altura de linha */
+  --leading-none: 1;
+  --leading-tight: 1.25;
+  --leading-snug: 1.375;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose: 2;
+  
+  /* Espaçamento de letras */
+  --tracking-tight: -0.05em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.025em;
+}
+
+/* ====================
+   RESET TIPOGRÁFICO
+   ==================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px; /* Base para rem */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--weight-normal);
+  line-height: var(--leading-normal);
+  color: var(--text);
+  background-color: var(--bg);
+}
+
+/* ====================
+   HEADINGS (Georgia)
+   ==================== */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-tight);
+  color: var(--navy-deep);
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: var(--text-6xl);  /* 60px */
+  letter-spacing: var(--tracking-tight);
+}
+
+h2 {
+  font-size: var(--text-4xl);  /* 36px */
+}
+
+h3 {
+  font-size: var(--text-3xl);  /* 30px */
+}
+
+h4 {
+  font-size: var(--text-2xl);  /* 24px */
+}
+
+h5 {
+  font-size: var(--text-xl);   /* 20px */
+}
+
+h6 {
+  font-size: var(--text-lg);   /* 18px */
+}
+
+/* ====================
+   BODY TEXT (Lato fallback)
+   ==================== */
+
+p {
+  margin-bottom: 1em;
+  line-height: var(--leading-relaxed);
+}
+
+/* ====================
+   LISTAS
+   ==================== */
+
+ul, ol {
+  margin-bottom: 1em;
+  padding-left: 1.5em;
+}
+
+li {
+  margin-bottom: 0.5em;
+  line-height: var(--leading-relaxed);
+}
+
+/* ====================
+   ÊNFASES
+   ==================== */
+
+strong, b {
+  font-weight: var(--weight-bold);
+  color: var(--navy-deep);
+}
+
+em, i {
+  font-style: italic;
+}
+
+mark {
+  background-color: var(--gold-light);
+  color: var(--navy-deep);
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+}
+
+/* ====================
+   LINKS
+   ==================== */
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--blue-medium);
+  text-decoration: underline;
+}
+
+/* ====================
+   CÓDIGO E MONOSPACE
+   ==================== */
+
+code, kbd, samp, pre {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.9em;
+}
+
+code {
+  background-color: var(--border);
+  color: var(--navy-deep);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+}
+
+pre {
+  background-color: var(--navy-soft);
+  color: var(--white);
+  padding: 1em;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin-bottom: 1em;
+}
+
+/* ====================
+   CLASSES UTILITÁRIAS
+   ==================== */
+
+/* Famílias */
+.font-heading { font-family: var(--font-heading); }
+.font-body { font-family: var(--font-body); }
+
+/* Tamanhos */
+.text-xs { font-size: var(--text-xs); }
+.text-sm { font-size: var(--text-sm); }
+.text-base { font-size: var(--text-base); }
+.text-lg { font-size: var(--text-lg); }
+.text-xl { font-size: var(--text-xl); }
+.text-2xl { font-size: var(--text-2xl); }
+.text-3xl { font-size: var(--text-3xl); }
+.text-4xl { font-size: var(--text-4xl); }
+.text-5xl { font-size: var(--text-5xl); }
+.text-6xl { font-size: var(--text-6xl); }
+
+/* Pesos */
+.font-normal { font-weight: var(--weight-normal); }
+.font-medium { font-weight: var(--weight-medium); }
+.font-semibold { font-weight: var(--weight-semibold); }
+.font-bold { font-weight: var(--weight-bold); }
+
+/* Alinhamento */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+/* Altura de linha */
+.leading-tight { line-height: var(--leading-tight); }
+.leading-normal { line-height: var(--leading-normal); }
+.leading-relaxed { line-height: var(--leading-relaxed); }
+
+/* ====================
+   RESPONSIVO - TABLET
+   ==================== */
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
+  
+  h1 { font-size: var(--text-5xl); }
+  h2 { font-size: var(--text-3xl); }
+  h3 { font-size: var(--text-2xl); }
+}
+
+/* ====================
+   RESPONSIVO - MOBILE
+   ==================== */
+
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+  
+  h1 { font-size: var(--text-4xl); }
+  h2 { font-size: var(--text-2xl); }
+  h3 { font-size: var(--text-xl); }
+}
