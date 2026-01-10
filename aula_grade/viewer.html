@@ -3,52 +3,120 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Viewer - Aula GRADE Dislipidemia BR 2025">
-  <title>Viewer - Aula GRADE</title>
-  
-  <!-- CSS -->
-  <link rel="stylesheet" href="assets/css/colors.css">
-  <link rel="stylesheet" href="assets/css/typography.css">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <title>GRADE - Dislipidemia BR 2025</title>
   
   <style>
-    /* Remover margens para fullscreen */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --navy: #152432;
+      --gold: #D4AF37;
+      --white: #FFFFFF;
+      --bg: #F9F8F4;
+      --text: #152432;
+      --gray: #6B7280;
+    }
+    
     body {
-      margin: 0;
-      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
       overflow: hidden;
     }
     
-    /* Esconder todos os slides por padrão */
     .slide {
+      width: 100vw;
+      height: 100vh;
       display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 3rem;
     }
     
-    /* Slide ativo visível */
-    .slide.active {
-      display: flex;
+    .slide.active { display: flex; }
+    
+    .slide-content {
+      max-width: 1000px;
+      width: 100%;
     }
     
-    /* HUD de navegação */
-    .nav-hud {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: rgba(21, 36, 50, 0.9);
+    .slide-title {
+      background-color: var(--navy);
       color: var(--white);
-      padding: 10px 20px;
-      border-radius: 20px;
-      font-size: var(--text-sm);
-      opacity: 0.6;
-      transition: opacity 0.3s ease;
-      z-index: 1000;
+      text-align: center;
     }
     
-    .nav-hud:hover {
-      opacity: 1;
+    .slide-title h1 {
+      font-family: Georgia, serif;
+      font-size: 3.5rem;
+      color: var(--gold);
+      margin: 1rem 0;
     }
     
-    /* Indicador de progresso */
+    .slide-content-type {
+      background-color: var(--bg);
+    }
+    
+    .slide-content-type h2 {
+      font-family: Georgia, serif;
+      font-size: 2.5rem;
+      color: var(--navy);
+      border-bottom: 3px solid var(--gold);
+      padding-bottom: 0.5rem;
+      margin-bottom: 2rem;
+    }
+    
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    
+    .card {
+      background: white;
+      border-left: 4px solid var(--gold);
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    
+    .card h3 {
+      color: var(--navy);
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .styled-list {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .styled-list li {
+      position: relative;
+      padding-left: 2rem;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    
+    .styled-list li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    
+    blockquote {
+      border-left: 4px solid var(--gold);
+      padding-left: 1.5rem;
+      margin: 2rem 0;
+      font-style: italic;
+      color: var(--gray);
+      font-size: 1.2rem;
+    }
+    
     .progress-bar {
       position: fixed;
       top: 0;
@@ -57,58 +125,61 @@
       height: 3px;
       background-color: var(--gold);
       transition: width 0.3s ease;
-      z-index: 1001;
+      z-index: 1000;
     }
+    
+    .nav-hud {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: rgba(21, 36, 50, 0.9);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      opacity: 0.6;
+      transition: opacity 0.3s ease;
+      z-index: 1000;
+    }
+    
+    .nav-hud:hover { opacity: 1; }
+    .text-center { text-align: center; }
   </style>
 </head>
 <body>
   
-  <!-- Barra de progresso -->
   <div class="progress-bar" id="progressBar"></div>
   
-  <!-- SLIDES -->
-  
-  <!-- Slide 0: Capa -->
   <section class="slide slide-title active">
     <div class="slide-content text-center">
-      <div style="margin-bottom: 3rem;">
-        <div style="font-size: var(--text-xl); color: var(--gold); font-weight: 600; letter-spacing: 0.1em; margin-bottom: 1rem;">
-          METODOLOGIA
-        </div>
-        <h1 style="font-size: 5rem; margin: 0; line-height: 1;">GRADE</h1>
-        <div style="width: 120px; height: 4px; background: var(--gold); margin: 1.5rem auto;"></div>
-        <div style="font-size: var(--text-2xl); color: rgba(255,255,255,0.9); font-weight: 300; line-height: 1.4;">
-          Aplicada à Diretriz Brasileira<br>de Dislipidemia
-        </div>
-        <div style="font-size: var(--text-xl); color: var(--gold); margin-top: 1rem; font-weight: 600;">
-          2025
-        </div>
+      <div style="font-size: 1.1rem; color: var(--gold); font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.5rem;">
+        METODOLOGIA
       </div>
-      
-      <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(212,175,55,0.3);">
-        <p style="font-size: var(--text-lg); opacity: 0.7; font-weight: 300;">
-          Lucas Miachon
-        </p>
+      <h1>GRADE</h1>
+      <div style="width: 80px; height: 3px; background: var(--gold); margin: 1rem auto;"></div>
+      <div style="font-size: 1.3rem; color: rgba(255,255,255,0.9); line-height: 1.4; margin-bottom: 1rem;">
+        Diretriz Brasileira de Dislipidemia 2025
+      </div>
+      <div style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid rgba(212,175,55,0.3);">
+        <p style="font-size: 1rem; opacity: 0.7;">Lucas Miachon</p>
       </div>
     </div>
   </section>
   
-  <!-- Slide 1: "Que sais-je?" -->
   <section class="slide slide-content-type">
     <div class="slide-content text-center">
-      <h2 style="font-style: italic; font-size: var(--text-5xl); color: var(--navy-deep);">
+      <h2 style="font-style: italic; font-size: 3rem; border: none; margin-bottom: 2rem;">
         "Que sais-je?"
       </h2>
-      <p style="font-size: var(--text-2xl); color: var(--text-secondary); margin-top: 2rem;">
+      <p style="font-size: 1.5rem; color: var(--gray); margin-top: 2rem;">
         "O que eu sei?"
       </p>
-      <p style="font-size: var(--text-lg); color: var(--text-secondary); margin-top: 3rem;">
+      <p style="font-size: 1.1rem; color: var(--gray); margin-top: 2rem;">
         — Michel de Montaigne
       </p>
     </div>
   </section>
   
-  <!-- Slide 2: Nossa Travessia -->
   <section class="slide slide-content-type">
     <div class="slide-content">
       <h2>Nossa Travessia</h2>
@@ -129,7 +200,6 @@
     </div>
   </section>
   
-  <!-- Slide 3: Fundadores GRADE -->
   <section class="slide slide-content-type">
     <div class="slide-content">
       <h2>Fundadores GRADE</h2>
@@ -140,77 +210,58 @@
       </ul>
       <blockquote style="margin-top: 2rem;">
         "GRADE não é sobre certeza absoluta, mas sobre transparência nas incertezas."
-        <cite>— Gordon Guyatt</cite>
+        <cite style="display: block; margin-top: 1rem; font-size: 1rem; font-style: normal;">— Gordon Guyatt</cite>
       </blockquote>
     </div>
   </section>
   
-  <!-- Adicionar mais slides conforme criados -->
-  
-  <!-- HUD de navegação -->
   <div class="nav-hud" id="navHud">
     <span id="slideCounter">1 / 4</span>
     <span style="margin-left: 1rem;">← →</span>
   </div>
   
-  <!-- JavaScript de navegação -->
-  <script src="assets/js/navigation.js"></script>
-  
-  <!-- Atualizar contador e barra de progresso -->
   <script>
-    // Aguardar DOM e navigation.js carregarem
-    window.addEventListener('load', function() {
+    let current = 0;
+    const slides = document.querySelectorAll('.slide');
+    const total = slides.length;
+    
+    function show(n) {
+      if (n < 0) n = 0;
+      if (n >= total) n = total - 1;
       
-      function updateProgress() {
-        if (!window.SlideNavigation) {
-          console.warn('SlideNavigation ainda não carregado');
-          return;
-        }
-        
-        const current = window.SlideNavigation.getCurrentIndex();
-        const total = window.SlideNavigation.getTotalSlides();
-        
-        // Atualizar contador
-        const counter = document.getElementById('slideCounter');
-        if (counter) {
-          counter.textContent = `${current + 1} / ${total}`;
-        }
-        
-        // Atualizar barra de progresso
-        const progress = ((current + 1) / total) * 100;
-        const bar = document.getElementById('progressBar');
-        if (bar) {
-          bar.style.width = progress + '%';
-        }
+      slides.forEach(s => {
+        s.style.display = 'none';
+        s.classList.remove('active');
+      });
+      
+      slides[n].style.display = 'flex';
+      slides[n].classList.add('active');
+      current = n;
+      
+      document.getElementById('slideCounter').textContent = `${current + 1} / ${total}`;
+      document.getElementById('progressBar').style.width = ((current + 1) / total * 100) + '%';
+    }
+    
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+        e.preventDefault();
+        if (current < total - 1) show(current + 1);
       }
-      
-      // Atualizar no carregamento inicial
-      setTimeout(updateProgress, 100);
-      
-      // Atualizar a cada navegação
-      document.addEventListener('keydown', function(e) {
-        const navKeys = ['ArrowRight', 'ArrowLeft', 'PageDown', 'PageUp', 'Home', 'End', ' '];
-        if (navKeys.includes(e.key)) {
-          setTimeout(updateProgress, 50);
-        }
-        
-        // F11 para fullscreen
-        if (e.key === 'F11') {
-          e.preventDefault();
-          if (!document.fullscreenElement) {
-            document.documentElement.requestFullscreen();
-          } else {
-            document.exitFullscreen();
-          }
-        }
-      });
-      
-      // Atualizar quando hash mudar (navegação por URL)
-      window.addEventListener('hashchange', function() {
-        setTimeout(updateProgress, 50);
-      });
-      
+      if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+        e.preventDefault();
+        if (current > 0) show(current - 1);
+      }
+      if (e.key === 'Home') {
+        e.preventDefault();
+        show(0);
+      }
+      if (e.key === 'End') {
+        e.preventDefault();
+        show(total - 1);
+      }
     });
+    
+    show(0);
   </script>
   
 </body>
