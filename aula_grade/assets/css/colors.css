@@ -1,0 +1,113 @@
+/* ==========================================================================
+   PALETA DE CORES - AULA GRADE
+   ========================================================================== */
+
+/*
+  Paleta Navy + Gold para apresentação GRADE sobre Dislipidemia BR 2025
+  
+  Filosofia: Sério mas elegante
+  - 80% Navy + Neutros (dominante)
+  - 15% Gold (destaque)
+  - 5% Acentos (sinalização)
+*/
+
+:root {
+  /* ====================
+     CORES PRINCIPAIS
+     ==================== */
+  
+  /* Navy - Backgrounds, títulos */
+  --navy-deep: #152432;
+  --navy-medium: #1E3A5F;
+  --navy-soft: #2A3D51;
+  
+  /* Gold - Destaques, call-to-action */
+  --gold: #D4AF37;
+  --gold-light: #f0c245;
+  --gold-dark: #C99D2E;
+  
+  /* ====================
+     CORES DE ACENTO
+     ==================== */
+  
+  /* Blue - Certeza ALTA GRADE (⊕⊕⊕⊕) */
+  --blue: #2563EB;
+  --blue-medium: #3B82F6;
+  --blue-light: #60A5FA;
+  
+  /* Green - Benefícios, rate up */
+  --green: #059669;
+  --green-bg: #D1FAE5;
+  
+  /* Red - Riscos, rate down */
+  --red: #B91C1C;
+  --red-bg: #FEE2E2;
+  
+  /* ====================
+     CORES NEUTRAS
+     ==================== */
+  
+  --bg: #F9F8F4;           /* Fundo slides (off-white quente) */
+  --text: #152432;          /* Texto principal (navy-deep) */
+  --text-secondary: #6B7280; /* Texto secundário (cinza) */
+  --border: #BeCDD8;        /* Bordas sutis */
+  --white: #FFFFFF;
+  
+  /* ====================
+     SEMÂNTICA GRADE
+     ==================== */
+  
+  /* Certeza da evidência */
+  --grade-high: var(--blue);        /* ⊕⊕⊕⊕ ALTA */
+  --grade-moderate: var(--blue);    /* ⊕⊕⊕○ MODERADA */
+  --grade-low: var(--text-secondary); /* ⊕⊕○○ BAIXA */
+  
+  /* Força da recomendação */
+  --recommendation-strong: var(--green);
+  --recommendation-weak: var(--text-secondary);
+  
+  /* Rate up/down */
+  --rate-up: var(--green);
+  --rate-down: var(--red);
+  
+  /* ====================
+     SOMBRAS E EFEITOS
+     ==================== */
+  
+  --shadow-sm: rgba(21, 36, 50, 0.08);
+  --shadow-md: rgba(21, 36, 50, 0.12);
+  --shadow-lg: rgba(21, 36, 50, 0.16);
+}
+
+/* ==========================================================================
+   CLASSES UTILITÁRIAS DE COR
+   ========================================================================== */
+
+/* Backgrounds */
+.bg-navy { background-color: var(--navy-deep); }
+.bg-navy-medium { background-color: var(--navy-medium); }
+.bg-gold { background-color: var(--gold); }
+.bg-white { background-color: var(--white); }
+.bg-light { background-color: var(--bg); }
+
+/* Texto */
+.text-navy { color: var(--navy-deep); }
+.text-gold { color: var(--gold); }
+.text-blue { color: var(--blue); }
+.text-green { color: var(--green); }
+.text-red { color: var(--red); }
+.text-secondary { color: var(--text-secondary); }
+.text-white { color: var(--white); }
+
+/* Bordas */
+.border-gold { border-color: var(--gold); }
+.border-navy { border-color: var(--navy-deep); }
+.border-light { border-color: var(--border); }
+
+/* ==========================================================================
+   MODO ESCURO (OPCIONAL - FUTURO)
+   ========================================================================== */
+
+@media (prefers-color-scheme: dark) {
+  /* Por enquanto não implementado - slides são principalmente navy já */
+}
