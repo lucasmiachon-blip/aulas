@@ -2,9 +2,9 @@
 
 ## Localização no GitHub
 
-**Repositório:** lucasmiachon-blip/aulas  
+**Repositório:** https://github.com/lucasmiachon-blip/aulas  
 **Branch:** `aula_grade`  
-**Caminho:** `/aula_grade/`
+**Caminho completo:** https://github.com/lucasmiachon-blip/aulas/tree/aula_grade/aula_grade
 
 ---
 
