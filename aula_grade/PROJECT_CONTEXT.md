@@ -9,8 +9,9 @@ Este arquivo fornece contexto permanente para Claude sobre o projeto de apresent
 ## Identificação do Projeto
 
 **Nome:** Aula GRADE — Apresentação HTML → PowerPoint  
-**Repositório:** lucasmiachon-blip/aulas  
+**Repositório:** https://github.com/lucasmiachon-blip/aulas  
 **Branch:** `aula_grade` ← **TRABALHAR AQUI**  
+**Caminho GitHub:** https://github.com/lucasmiachon-blip/aulas/tree/aula_grade/aula_grade  
 **Tecnologia:** HTML5 + CSS3 + JS → futuro PowerPoint  
 **Versão atual:** v0.1.0
 
@@ -177,6 +178,21 @@ Não é "médico ensinando". É "paciente perguntando, médico decide junto".
 - **`aula_osteoporose`** → Projeto SEPARADO (osteoporose GIOP) **NÃO MEXER**
 
 Quando trabalhar em GRADE/dislipidemia, usar `aula_grade`.
+
+---
+
+## Links Úteis
+
+**Ver arquivos no GitHub:**  
+https://github.com/lucasmiachon-blip/aulas/tree/aula_grade/aula_grade
+
+**Ver commits do branch:**  
+https://github.com/lucasmiachon-blip/aulas/commits/aula_grade
+
+**Arquivos importantes:**
+- Paleta de cores: `/docs/PALETA_CORES.md`
+- CONTEXT completo: `/CONTEXT.md`
+- CHANGELOG: `/CHANGELOG.md`
 
 ---
 
