@@ -5,200 +5,285 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GRADE - Dislipidemia BR 2025</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
-            font-family: Arial, sans-serif;
-            background: #1a1a1a;
-            color: #fff;
+            font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0f0f0f;
+            color: #F9F8F4;
+            overflow-x: hidden;
         }
+        
         .header {
-            background: #2a2a2a;
-            padding: 15px 20px;
-            position: sticky;
+            background: #152432;
+            padding: 20px 40px;
+            position: fixed;
             top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            border-bottom: 3px solid #D4AF37;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
+        
         .header h1 {
+            font-family: Georgia, serif;
+            font-size: 1.4rem;
             color: #D4AF37;
-            font-size: 20px;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
+        
         .controls {
             display: flex;
-            gap: 10px;
             align-items: center;
+            gap: 15px;
             flex-wrap: wrap;
         }
+        
+        .nav-btn {
+            background: #D4AF37;
+            color: #152432;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: all 0.2s;
+            font-family: 'Lato', sans-serif;
+        }
+        
+        .nav-btn:hover:not(:disabled) {
+            background: #f0c245;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(212,175,55,0.3);
+        }
+        
+        .nav-btn:disabled {
+            background: #3a3a3a;
+            color: #777;
+            cursor: not-allowed;
+        }
+        
+        .slide-indicator {
+            background: #2A3D51;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: bold;
+            color: #D4AF37;
+            min-width: 90px;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+        
+        #slideSelector {
+            background: #2A3D51;
+            color: #F9F8F4;
+            border: 2px solid #D4AF37;
+            padding: 10px 15px;
+            font-size: 0.95rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: 'Lato', sans-serif;
+            min-width: 250px;
+        }
+        
         .zoom-controls {
             display: flex;
-            gap: 5px;
             align-items: center;
-            margin-left: 15px;
+            gap: 10px;
+            background: #2A3D51;
+            padding: 10px 18px;
+            border-radius: 6px;
         }
+        
         .zoom-btn {
-            background: #D4AF37;
-            color: #000;
-            border: none;
-            padding: 8px 15px;
-            border-radius: 6px;
-            font-weight: bold;
-            cursor: pointer;
-            font-size: 14px;
-        }
-        .zoom-btn:hover { background: #f0c245; }
-        .zoom-value {
             background: #3a3a3a;
-            padding: 8px 15px;
-            border-radius: 6px;
-            font-weight: bold;
-            color: #D4AF37;
-            min-width: 60px;
-            text-align: center;
-            font-size: 14px;
-        }
-        select {
-            padding: 8px 12px;
-            font-size: 14px;
-            border-radius: 6px;
-            border: 2px solid #D4AF37;
-            background: #1a1a1a;
-            color: #fff;
-            cursor: pointer;
-            max-width: 400px;
-        }
-        .nav-btn {
-            background: #2563EB;
-            color: #fff;
+            color: white;
             border: none;
-            padding: 10px 20px;
-            border-radius: 6px;
-            font-weight: bold;
+            padding: 8px 14px;
+            font-size: 1rem;
             cursor: pointer;
-            font-size: 16px;
-            min-width: 100px;
+            border-radius: 5px;
             transition: background 0.2s;
+            font-weight: 600;
         }
-        .nav-btn:hover { background: #1d4ed8; }
-        .nav-btn:disabled {
-            background: #9CA3AF;
-            cursor: not-allowed;
-            opacity: 0.6;
+        
+        .zoom-btn:hover {
+            background: #4a4a4a;
         }
-        .slide-indicator {
-            background: #3a3a3a;
-            padding: 8px 15px;
-            border-radius: 6px;
-            font-weight: bold;
+        
+        .zoom-value {
             color: #D4AF37;
-            min-width: 120px;
+            font-weight: bold;
+            min-width: 55px;
             text-align: center;
-            font-size: 14px;
+            font-size: 1.05rem;
         }
+        
         .slide-container {
-            padding: 0;
+            margin-top: 140px;
+            padding: 30px;
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: auto;
-            height: calc(100vh - 80px);
+            min-height: calc(100vh - 160px);
         }
-        .slide-wrapper {
-            transform-origin: top center;
-            transition: transform 0.3s ease;
-        }
-        .slide {
-            width: 1280px;
-            height: 720px;
-            background: #F9F8F4;
-            display: none;
-            overflow: auto;
-            padding: 60px 80px;
-        }
-        .slide.active { display: flex; }
         
-        /* Estilos para slides */
-        .slide-title {
-            background: #152432;
-            color: #fff;
+        .slide-wrapper {
+            width: 100%;
+            max-width: 1400px;
+            transform-origin: center center;
+            transition: transform 0.2s ease;
+        }
+        
+        .slide {
+            display: none;
+            background: #F9F8F4;
+            color: #152432;
+            border-radius: 20px;
+            padding: 80px;
+            min-height: 700px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.4);
+            flex-direction: column;
             justify-content: center;
             align-items: center;
+        }
+        
+        .slide.active {
+            display: flex !important;
+        }
+        
+        .slide-title {
+            background: #152432;
+            color: #F9F8F4;
             text-align: center;
         }
+        
         .slide-title h1 {
             font-family: Georgia, serif;
-            font-size: 4rem;
+            font-size: 5.5rem;
             color: #D4AF37;
-            margin: 20px 0;
+            margin: 30px 0;
+            letter-spacing: 0.05em;
         }
+        
         .slide-content {
             background: #F9F8F4;
             color: #152432;
-            flex-direction: column;
         }
+        
         .slide-content h2 {
             font-family: Georgia, serif;
             font-size: 3rem;
             color: #152432;
-            border-bottom: 4px solid #D4AF37;
-            padding-bottom: 15px;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
+            padding-bottom: 25px;
+            border-bottom: 5px solid #D4AF37;
+            text-align: center;
         }
+        
+        .slide-content h3 {
+            font-family: Georgia, serif;
+            font-size: 2rem;
+            color: #152432;
+            margin-bottom: 20px;
+        }
+        
+        .slide-content p {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            color: #2A3D51;
+        }
+        
         .card-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
             margin-top: 40px;
+            width: 100%;
         }
+        
         .card {
             background: white;
             border-left: 6px solid #D4AF37;
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            padding: 35px;
+            box-shadow: 0 5px 15px rgba(21,36,50,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
+        
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(21,36,50,0.2);
+        }
+        
         .card h3 {
-            color: #152432;
+            color: #D4AF37;
             font-size: 2rem;
-            margin-bottom: 15px;
+            margin-bottom: 18px;
         }
+        
         .card p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-        .styled-list {
-            list-style: none;
-            padding: 0;
-            margin-top: 30px;
-        }
-        .styled-list li {
-            position: relative;
-            padding-left: 40px;
-            margin-bottom: 20px;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             line-height: 1.7;
         }
-        .styled-list li::before {
-            content: "→";
+        
+        .styled-list {
+            list-style: none;
+            font-size: 1.3rem;
+            line-height: 2.2;
+            padding-left: 0;
+        }
+        
+        .styled-list li {
+            padding-left: 35px;
+            position: relative;
+            margin-bottom: 18px;
+        }
+        
+        .styled-list li:before {
+            content: "▸";
             position: absolute;
             left: 0;
             color: #D4AF37;
             font-weight: bold;
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
+        
         blockquote {
-            border-left: 6px solid #D4AF37;
-            padding-left: 30px;
-            margin: 40px 0;
-            font-style: italic;
-            color: #6B7280;
-            font-size: 1.4rem;
+            background: white;
+            border-left: 6px solid #2563EB;
+            border-radius: 12px;
+            padding: 35px;
+            margin-top: 50px;
+            font-size: 1.2rem;
+            line-height: 1.8;
         }
+        
         blockquote cite {
             display: block;
             margin-top: 20px;
-            font-size: 1.1rem;
-            font-style: normal;
+            color: #6B7280;
+            font-style: italic;
+        }
+        
+        .objective-box {
+            background: white;
+            border: 3px solid #D4AF37;
+            border-radius: 15px;
+            padding: 40px;
+            margin: 30px 0;
+            box-shadow: 0 8px 20px rgba(21,36,50,0.12);
+        }
+        
+        .objective-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
         }
     </style>
     <script>
@@ -211,25 +296,26 @@
 </head>
 <body>
     <div class="header">
-        <h1>📊 Metodologia GRADE - Dislipidemia BR 2025</h1>
+        <h1>📊 Metodologia GRADE - Diretriz Brasileira de Dislipidemia 2025</h1>
         <div class="controls">
             <button class="nav-btn" id="prevBtn" onclick="navigateSlide(-1)">◀ Anterior</button>
-            <div class="slide-indicator" id="slideIndicator">-- / 8</div>
+            <div class="slide-indicator" id="slideIndicator">1 / 10</div>
             <button class="nav-btn" id="nextBtn" onclick="navigateSlide(1)">Próximo ▶</button>
-            <select id="slideSelector" onchange="jumpToSlide()" style="margin-left: 15px;">
-                <option value="">-- Selecione um slide --</option>
+            <select id="slideSelector" onchange="jumpToSlide()">
+                <option value="">-- Ir para slide --</option>
                 <option value="slide-1">Slide 1 - Capa</option>
-                <option value="slide-2">Slide 2 - Que sais-je?</option>
-                <option value="slide-3">Slide 3 - Nossa Travessia</option>
-                <option value="slide-4">Slide 4 - Fundadores GRADE</option>
-                <option value="slide-5">Slide 5 - Certeza vs Força</option>
-                <option value="slide-6">Slide 6 - Lógica da Certeza</option>
-                <option value="slide-7">Slide 7 - Ícones GRADE</option>
-                <option value="slide-8">Slide 8 - As 5 Recomendações</option>
+                <option value="slide-2">Slide 2 - Objetivos Educacionais</option>
+                <option value="slide-3">Slide 3 - Que sais-je?</option>
+                <option value="slide-4">Slide 4 - Nossa Travessia</option>
+                <option value="slide-5">Slide 5 - Fundadores GRADE</option>
+                <option value="slide-6">Slide 6 - Certeza vs Força</option>
+                <option value="slide-7">Slide 7 - Lógica da Certeza</option>
+                <option value="slide-8">Slide 8 - Símbolos GRADE</option>
+                <option value="slide-9">Slide 9 - As 5 Recomendações</option>
+                <option value="slide-10">Slide 10 - CASO CAC</option>
             </select>
             <div class="zoom-controls">
                 <button class="zoom-btn" onclick="changeZoom(-10)">−</button>
-                <button class="zoom-btn" onclick="setZoom(40)" style="background: #3a3a3a; color: #D4AF37;">40%</button>
                 <button class="zoom-btn" onclick="setZoom(60)" style="background: #3a3a3a; color: #D4AF37;">60%</button>
                 <button class="zoom-btn" onclick="setZoom(100)" style="background: #2563EB; color: white;">100%</button>
                 <div class="zoom-value" id="zoomValue">100%</div>
@@ -240,40 +326,84 @@
 
     <div class="slide-container">
         <div class="slide-wrapper" id="slideWrapper">
+        
         <!-- SLIDE 1: CAPA -->
         <div id="slide-1" class="slide slide-title">
             <div>
-                <div style="font-size: 1.2rem; color: #D4AF37; font-weight: 600; letter-spacing: 0.1em; margin-bottom: 20px;">
+                <div style="font-size: 1.3rem; color: #D4AF37; font-weight: 600; letter-spacing: 0.15em; margin-bottom: 25px;">
                     METODOLOGIA
                 </div>
                 <h1>GRADE</h1>
-                <div style="width: 100px; height: 4px; background: #D4AF37; margin: 30px auto;"></div>
-                <div style="font-size: 1.5rem; color: rgba(255,255,255,0.9); line-height: 1.5;">
+                <div style="width: 120px; height: 5px; background: #D4AF37; margin: 35px auto;"></div>
+                <div style="font-size: 1.8rem; color: rgba(255,255,255,0.9); line-height: 1.6; font-family: Georgia, serif;">
                     Diretriz Brasileira de Dislipidemia 2025
                 </div>
-                <div style="margin-top: 60px; padding-top: 30px; border-top: 1px solid rgba(212,175,55,0.3);">
-                    <p style="font-size: 1.2rem; opacity: 0.7;">Lucas Miachon</p>
+                <div style="margin-top: 70px; padding-top: 35px; border-top: 1px solid rgba(212,175,55,0.3);">
+                    <p style="font-size: 1.3rem; opacity: 0.75;">Lucas Miachon</p>
                 </div>
             </div>
         </div>
 
-        <!-- SLIDE 2: QUE SAIS-JE -->
-        <div id="slide-2" class="slide slide-content" style="justify-content: center; align-items: center; text-align: center;">
+        <!-- SLIDE 2: OBJETIVOS EDUCACIONAIS -->
+        <div id="slide-2" class="slide slide-content">
+            <div style="width: 100%;">
+                <h2>🎯 Objetivos Educacionais</h2>
+                
+                <div class="objective-box" style="border-left: 6px solid #2563EB;">
+                    <div class="objective-icon">📚</div>
+                    <h3 style="color: #2563EB; margin-bottom: 20px;">Objetivo Principal</h3>
+                    <p style="font-size: 1.4rem; line-height: 1.8; font-weight: 500;">
+                        Ensinar os <strong>princípios fundamentais do CORE GRADE</strong> através da aplicação prática na Diretriz Brasileira de Dislipidemia 2025.
+                    </p>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px;">
+                    <div class="objective-box" style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);">
+                        <h3 style="color: #059669;">✓ Você aprenderá:</h3>
+                        <ul class="styled-list" style="font-size: 1.1rem; margin-top: 20px;">
+                            <li>Como GRADE classifica a <strong>certeza da evidência</strong></li>
+                            <li>Os <strong>5 domínios</strong> para avaliar qualidade</li>
+                            <li>Diferença entre <strong>certeza</strong> e <strong>força</strong></li>
+                            <li>Aplicação prática em <strong>casos clínicos reais</strong></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="objective-box" style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);">
+                        <h3 style="color: #D4AF37;">🔬 Foco Metodológico:</h3>
+                        <ul class="styled-list" style="font-size: 1.1rem; margin-top: 20px;">
+                            <li><strong>CAC</strong> — Reclassificação de risco</li>
+                            <li><strong>PREVENT</strong> — Estratificação populacional</li>
+                            <li><strong>Metas</strong> — "Lower is better"</li>
+                            <li><strong>Bempedoico</strong> — Trade-offs clínicos</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 50px; padding: 30px; background: #152432; border-radius: 12px; color: #F9F8F4;">
+                    <p style="font-size: 1.2rem; font-style: italic; color: #D4AF37;">
+                        "GRADE não é sobre certeza absoluta, mas sobre <strong>transparência nas incertezas</strong>."
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 3: QUE SAIS-JE -->
+        <div id="slide-3" class="slide slide-content" style="justify-content: center; text-align: center;">
             <div>
-                <h2 style="font-style: italic; font-size: 4rem; border: none; margin-bottom: 40px;">
+                <h2 style="font-style: italic; font-size: 4.5rem; border: none; margin-bottom: 50px;">
                     "Que sais-je?"
                 </h2>
-                <p style="font-size: 2rem; color: #6B7280; margin-top: 40px;">
+                <p style="font-size: 2.2rem; color: #6B7280; margin-top: 50px;">
                     "O que eu sei?"
                 </p>
-                <p style="font-size: 1.3rem; color: #6B7280; margin-top: 40px;">
+                <p style="font-size: 1.5rem; color: #6B7280; margin-top: 50px;">
                     — Michel de Montaigne
                 </p>
             </div>
         </div>
 
-        <!-- SLIDE 3: NOSSA TRAVESSIA -->
-        <div id="slide-3" class="slide slide-content">
+        <!-- SLIDE 4: NOSSA TRAVESSIA -->
+        <div id="slide-4" class="slide slide-content">
             <div style="width: 100%;">
                 <h2>Nossa Travessia</h2>
                 <div class="card-grid">
@@ -293,11 +423,11 @@
             </div>
         </div>
 
-        <!-- SLIDE 4: FUNDADORES -->
-        <div id="slide-4" class="slide slide-content">
+        <!-- SLIDE 5: FUNDADORES -->
+        <div id="slide-5" class="slide slide-content">
             <div style="width: 100%;">
                 <h2>Fundadores GRADE</h2>
-                <ul class="styled-list">
+                <ul class="styled-list" style="margin-top: 40px;">
                     <li><strong>Gordon Guyatt</strong> — McMaster University</li>
                     <li><strong>Holger Schünemann</strong> — Coordenador GRADE Working Group</li>
                     <li><strong>GRADE Working Group</strong> — Mais de 500 membros globalmente</li>
@@ -309,29 +439,29 @@
             </div>
         </div>
 
-        <!-- SLIDE 5: CERTEZA VS FORÇA -->
-        <div id="slide-5" class="slide slide-content">
+        <!-- SLIDE 6: CERTEZA VS FORÇA -->
+        <div id="slide-6" class="slide slide-content">
             <div style="width: 100%;">
                 <h2>Certeza vs Força</h2>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 50px;">
-                    <div style="background: white; border-left: 6px solid #2563EB; border-radius: 10px; padding: 40px;">
-                        <h3 style="color: #2563EB; font-size: 2rem; margin-bottom: 20px;">CERTEZA da Evidência</h3>
-                        <p style="font-size: 1.2rem; line-height: 1.7; margin-bottom: 15px;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 45px; margin-top: 60px;">
+                    <div style="background: white; border-left: 6px solid #2563EB; border-radius: 12px; padding: 45px;">
+                        <h3 style="color: #2563EB; font-size: 2.2rem; margin-bottom: 25px;">CERTEZA da Evidência</h3>
+                        <p style="font-size: 1.3rem; line-height: 1.8; margin-bottom: 20px;">
                             Quão confiantes estamos de que o efeito estimado está próximo do efeito real?
                         </p>
-                        <div style="margin-top: 30px; font-size: 1.1rem; line-height: 2;">
+                        <div style="margin-top: 35px; font-size: 1.2rem; line-height: 2.3;">
                             <div>⊕⊕⊕⊕ <strong>ALTA</strong></div>
                             <div>⊕⊕⊕○ <strong>MODERADA</strong></div>
                             <div style="color: #6B7280;">⊕⊕○○ BAIXA</div>
                             <div style="color: #6B7280;">⊕○○○ MUITO BAIXA</div>
                         </div>
                     </div>
-                    <div style="background: white; border-left: 6px solid #059669; border-radius: 10px; padding: 40px;">
-                        <h3 style="color: #059669; font-size: 2rem; margin-bottom: 20px;">FORÇA da Recomendação</h3>
-                        <p style="font-size: 1.2rem; line-height: 1.7; margin-bottom: 15px;">
+                    <div style="background: white; border-left: 6px solid #059669; border-radius: 12px; padding: 45px;">
+                        <h3 style="color: #059669; font-size: 2.2rem; margin-bottom: 25px;">FORÇA da Recomendação</h3>
+                        <p style="font-size: 1.3rem; line-height: 1.8; margin-bottom: 20px;">
                             Quão confiantes estamos de que os benefícios superam os riscos?
                         </p>
-                        <div style="margin-top: 30px; font-size: 1.3rem; line-height: 2.5;">
+                        <div style="margin-top: 35px; font-size: 1.4rem; line-height: 2.8;">
                             <div style="color: #059669;">✓ <strong>FORTE</strong> — Recomendamos</div>
                             <div style="color: #6B7280;">? <strong>FRACA</strong> — Sugerimos</div>
                         </div>
@@ -340,142 +470,173 @@
             </div>
         </div>
 
-        <!-- SLIDE 6: LÓGICA DA CERTEZA -->
-        <div id="slide-6" class="slide slide-content">
+        <!-- SLIDE 7: LÓGICA DA CERTEZA -->
+        <div id="slide-7" class="slide slide-content">
             <div style="width: 100%;">
                 <h2>Lógica da Certeza</h2>
-                <div style="margin-top: 50px; font-size: 1.2rem;">
-                    <div style="background: white; border-left: 6px solid #D4AF37; border-radius: 10px; padding: 40px; margin-bottom: 30px;">
-                        <h3 style="color: #152432; font-size: 1.8rem; margin-bottom: 20px;">📊 Ponto de Partida</h3>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 25px;">
+                <div style="margin-top: 60px;">
+                    <div style="background: white; border-left: 6px solid #D4AF37; border-radius: 12px; padding: 45px; margin-bottom: 35px;">
+                        <h3 style="color: #152432; font-size: 2rem; margin-bottom: 25px;">📊 Ponto de Partida</h3>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 35px; margin-top: 30px;">
                             <div>
-                                <strong style="font-size: 1.4rem; color: #2563EB;">RCT</strong>
-                                <div style="margin-top: 10px;">Começa ALTA ⊕⊕⊕⊕</div>
-                                <div style="color: #6B7280; margin-top: 5px;">Pode ser rebaixada</div>
+                                <div style="font-weight: bold; color: #2563EB; margin-bottom: 12px; font-size: 1.2rem;">RCT (Ensaio Clínico)</div>
+                                <div style="font-size: 1.2rem;">Inicia com ⊕⊕⊕⊕ ALTA</div>
                             </div>
                             <div>
-                                <strong style="font-size: 1.4rem; color: #6B7280;">Observacional</strong>
-                                <div style="margin-top: 10px;">Começa BAIXA ⊕⊕○○</div>
-                                <div style="color: #059669; margin-top: 5px;">Pode ser elevada</div>
+                                <div style="font-weight: bold; color: #6B7280; margin-bottom: 12px; font-size: 1.2rem;">Estudo Observacional</div>
+                                <div style="font-size: 1.2rem;">Inicia com ⊕⊕○○ BAIXA</div>
                             </div>
                         </div>
                     </div>
                     
-                    <div style="background: white; border-left: 6px solid #B91C1C; border-radius: 10px; padding: 40px; margin-bottom: 30px;">
-                        <h3 style="color: #B91C1C; font-size: 1.8rem; margin-bottom: 20px;">⬇️ Rate Down (rebaixar)</h3>
-                        <ul style="list-style: none; padding: 0; line-height: 2;">
-                            <li>• Risco de viés</li>
-                            <li>• Inconsistência</li>
-                            <li>• Indireção</li>
-                            <li>• Imprecisão</li>
-                            <li>• Viés de publicação</li>
-                        </ul>
-                    </div>
-                    
-                    <div style="background: white; border-left: 6px solid #059669; border-radius: 10px; padding: 40px;">
-                        <h3 style="color: #059669; font-size: 1.8rem; margin-bottom: 20px;">⬆️ Rate Up (elevar)</h3>
-                        <ul style="list-style: none; padding: 0; line-height: 2;">
-                            <li>• Grande magnitude de efeito</li>
-                            <li>• Dose-resposta</li>
-                            <li>• Todos os confundidores residuais reduziriam o efeito</li>
-                        </ul>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 35px;">
+                        <div style="background: white; border-left: 6px solid #B91C1C; border-radius: 12px; padding: 45px;">
+                            <h3 style="color: #152432; font-size: 2rem; margin-bottom: 25px;">⬇️ Rate Down</h3>
+                            <ul style="list-style: none; padding: 0; font-size: 1.1rem;">
+                                <li style="padding: 12px 0; border-bottom: 1px solid #f0f0f0;">−1 ou −2: <strong>Risco de Viés</strong></li>
+                                <li style="padding: 12px 0; border-bottom: 1px solid #f0f0f0;">−1 ou −2: <strong>Inconsistência</strong></li>
+                                <li style="padding: 12px 0; border-bottom: 1px solid #f0f0f0;">−1 ou −2: <strong>Indireção</strong></li>
+                                <li style="padding: 12px 0; border-bottom: 1px solid #f0f0f0;">−1 ou −2: <strong>Imprecisão</strong></li>
+                                <li style="padding: 12px 0;">−1: <strong>Viés de Publicação</strong></li>
+                            </ul>
+                        </div>
+                        
+                        <div style="background: white; border-left: 6px solid #059669; border-radius: 12px; padding: 45px;">
+                            <h3 style="color: #152432; font-size: 2rem; margin-bottom: 25px;">⬆️ Rate Up</h3>
+                            <ul style="list-style: none; padding: 0; font-size: 1.1rem;">
+                                <li style="padding: 12px 0; border-bottom: 1px solid #f0f0f0;">+1: <strong>Efeito Grande</strong> (RR > 2 ou < 0.5)</li>
+                                <li style="padding: 12px 0; border-bottom: 1px solid #f0f0f0;">+1: <strong>Dose-Resposta</strong></li>
+                                <li style="padding: 12px 0;">+1: <strong>Confundidores Residuais</strong></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- SLIDE 7: ÍCONES GRADE -->
-        <div id="slide-7" class="slide slide-content">
+        <!-- SLIDE 8: SÍMBOLOS GRADE -->
+        <div id="slide-8" class="slide slide-content">
             <div style="width: 100%;">
                 <h2>Símbolos GRADE</h2>
                 <div style="margin-top: 60px;">
-                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px;">
-                        <div style="background: white; border-left: 6px solid #2563EB; border-radius: 10px; padding: 35px; text-align: center;">
-                            <div style="font-size: 3rem; margin-bottom: 20px; color: #2563EB;">⊕⊕⊕⊕</div>
-                            <h3 style="font-size: 1.8rem; color: #152432; margin-bottom: 15px;">ALTA</h3>
-                            <p style="font-size: 1.1rem; color: #6B7280;">Confiança alta de que o efeito real está próximo do estimado</p>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 45px;">
+                        <div style="background: white; border-left: 6px solid #2563EB; border-radius: 12px; padding: 45px;">
+                            <div style="font-size: 2.8rem; margin-bottom: 25px;">⊕⊕⊕⊕</div>
+                            <h3 style="color: #2563EB; font-size: 2rem; margin-bottom: 20px;">ALTA</h3>
+                            <p style="font-size: 1.2rem; line-height: 1.8;">
+                                Temos muita confiança de que o efeito verdadeiro está próximo da estimativa.
+                            </p>
                         </div>
                         
-                        <div style="background: white; border-left: 6px solid #2563EB; border-radius: 10px; padding: 35px; text-align: center;">
-                            <div style="font-size: 3rem; margin-bottom: 20px; color: #2563EB;">⊕⊕⊕○</div>
-                            <h3 style="font-size: 1.8rem; color: #152432; margin-bottom: 15px;">MODERADA</h3>
-                            <p style="font-size: 1.1rem; color: #6B7280;">Confiança moderada — efeito real provavelmente próximo</p>
+                        <div style="background: white; border-left: 6px solid #2563EB; border-radius: 12px; padding: 45px;">
+                            <div style="font-size: 2.8rem; margin-bottom: 25px;">⊕⊕⊕○</div>
+                            <h3 style="color: #2563EB; font-size: 2rem; margin-bottom: 20px;">MODERADA</h3>
+                            <p style="font-size: 1.2rem; line-height: 1.8;">
+                                Confiança moderada: o efeito verdadeiro provavelmente está próximo da estimativa.
+                            </p>
                         </div>
                         
-                        <div style="background: white; border-left: 6px solid #6B7280; border-radius: 10px; padding: 35px; text-align: center;">
-                            <div style="font-size: 3rem; margin-bottom: 20px; color: #6B7280;">⊕⊕○○</div>
-                            <h3 style="font-size: 1.8rem; color: #152432; margin-bottom: 15px;">BAIXA</h3>
-                            <p style="font-size: 1.1rem; color: #6B7280;">Confiança limitada — efeito real pode ser substancialmente diferente</p>
+                        <div style="background: white; border-left: 6px solid #6B7280; border-radius: 12px; padding: 45px; opacity: 0.75;">
+                            <div style="font-size: 2.8rem; margin-bottom: 25px;">⊕⊕○○</div>
+                            <h3 style="color: #6B7280; font-size: 2rem; margin-bottom: 20px;">BAIXA</h3>
+                            <p style="font-size: 1.2rem; line-height: 1.8;">
+                                Confiança limitada: o efeito verdadeiro pode ser substancialmente diferente.
+                            </p>
                         </div>
                         
-                        <div style="background: white; border-left: 6px solid #6B7280; border-radius: 10px; padding: 35px; text-align: center;">
-                            <div style="font-size: 3rem; margin-bottom: 20px; color: #6B7280;">⊕○○○</div>
-                            <h3 style="font-size: 1.8rem; color: #152432; margin-bottom: 15px;">MUITO BAIXA</h3>
-                            <p style="font-size: 1.1rem; color: #6B7280;">Confiança muito limitada — efeito real provavelmente diferente</p>
+                        <div style="background: white; border-left: 6px solid #6B7280; border-radius: 12px; padding: 45px; opacity: 0.75;">
+                            <div style="font-size: 2.8rem; margin-bottom: 25px;">⊕○○○</div>
+                            <h3 style="color: #6B7280; font-size: 2rem; margin-bottom: 20px;">MUITO BAIXA</h3>
+                            <p style="font-size: 1.2rem; line-height: 1.8;">
+                                Muito pouca confiança: o efeito verdadeiro provavelmente é muito diferente.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- SLIDE 8: AS 5 RECOMENDAÇÕES -->
-        <div id="slide-8" class="slide slide-content">
+        <!-- SLIDE 9: AS 5 RECOMENDAÇÕES -->
+        <div id="slide-9" class="slide slide-content">
             <div style="width: 100%;">
                 <h2>As 5 Recomendações da Diretriz BR 2025</h2>
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-top: 40px;">
-                    <div style="background: white; border-left: 6px solid #D4AF37; border-radius: 10px; padding: 30px;">
-                        <h3 style="color: #152432; font-size: 1.5rem; margin-bottom: 15px;">1. CAC</h3>
-                        <p style="font-size: 1rem; line-height: 1.6;">Reestratificação de risco em pacientes com LDL-c 70-189 mg/dL</p>
-                        <div style="margin-top: 15px; display: flex; gap: 10px;">
-                            <span style="background: #D1FAE5; color: #059669; padding: 5px 12px; border-radius: 15px; font-size: 0.9rem; font-weight: bold;">FORTE</span>
-                            <span style="background: #DBEAFE; color: #2563EB; padding: 5px 12px; border-radius: 15px; font-size: 0.9rem;">MODERADA</span>
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-top: 50px;">
+                    <div style="background: white; border-left: 6px solid #D4AF37; border-radius: 12px; padding: 35px;">
+                        <h3 style="color: #152432; font-size: 1.7rem; margin-bottom: 18px;">1. CAC</h3>
+                        <p style="font-size: 1.15rem; line-height: 1.7;">Escore de cálcio coronário para reclassificação de risco</p>
+                        <div style="margin-top: 20px; display: flex; gap: 12px;">
+                            <span style="background: #D1FAE5; color: #059669; padding: 8px 16px; border-radius: 18px; font-size: 1rem; font-weight: bold;">FORTE</span>
+                            <span style="background: #DBEAFE; color: #2563EB; padding: 8px 16px; border-radius: 18px; font-size: 1rem;">MODERADA</span>
                         </div>
                     </div>
                     
-                    <div style="background: white; border-left: 6px solid #D4AF37; border-radius: 10px; padding: 30px;">
-                        <h3 style="color: #152432; font-size: 1.5rem; margin-bottom: 15px;">2. Lp(a)</h3>
-                        <p style="font-size: 1rem; line-height: 1.6;">Medida universal uma vez na vida para reclassificação de risco</p>
-                        <div style="margin-top: 15px; display: flex; gap: 10px;">
-                            <span style="background: #D1FAE5; color: #059669; padding: 5px 12px; border-radius: 15px; font-size: 0.9rem; font-weight: bold;">FORTE</span>
-                            <span style="background: #DBEAFE; color: #2563EB; padding: 5px 12px; border-radius: 15px; font-size: 0.9rem;">MODERADA</span>
+                    <div style="background: white; border-left: 6px solid #D4AF37; border-radius: 12px; padding: 35px;">
+                        <h3 style="color: #152432; font-size: 1.7rem; margin-bottom: 18px;">2. Lp(a)</h3>
+                        <p style="font-size: 1.15rem; line-height: 1.7;">Medida universal uma vez na vida para reclassificação de risco</p>
+                        <div style="margin-top: 20px; display: flex; gap: 12px;">
+                            <span style="background: #D1FAE5; color: #059669; padding: 8px 16px; border-radius: 18px; font-size: 1rem; font-weight: bold;">FORTE</span>
+                            <span style="background: #DBEAFE; color: #2563EB; padding: 8px 16px; border-radius: 18px; font-size: 1rem;">MODERADA</span>
                         </div>
                     </div>
                     
-                    <div style="background: white; border-left: 6px solid #D4AF37; border-radius: 10px; padding: 30px;">
-                        <h3 style="color: #152432; font-size: 1.5rem; margin-bottom: 15px;">3. ApoB</h3>
-                        <p style="font-size: 1rem; line-height: 1.6;">Preferível ao LDL-c para avaliação de risco em discordância ou TG>150</p>
-                        <div style="margin-top: 15px; display: flex; gap: 10px;">
-                            <span style="background: #D1FAE5; color: #059669; padding: 5px 12px; border-radius: 15px; font-size: 0.9rem; font-weight: bold;">FORTE</span>
-                            <span style="background: #DBEAFE; color: #2563EB; padding: 5px 12px; border-radius: 15px; font-size: 0.9rem;">MODERADA</span>
+                    <div style="background: white; border-left: 6px solid #D4AF37; border-radius: 12px; padding: 35px;">
+                        <h3 style="color: #152432; font-size: 1.7rem; margin-bottom: 18px;">3. ApoB</h3>
+                        <p style="font-size: 1.15rem; line-height: 1.7;">Preferível ao LDL-c para avaliação de risco em discordância ou TG>150</p>
+                        <div style="margin-top: 20px; display: flex; gap: 12px;">
+                            <span style="background: #D1FAE5; color: #059669; padding: 8px 16px; border-radius: 18px; font-size: 1rem; font-weight: bold;">FORTE</span>
+                            <span style="background: #DBEAFE; color: #2563EB; padding: 8px 16px; border-radius: 18px; font-size: 1rem;">MODERADA</span>
                         </div>
                     </div>
                     
-                    <div style="background: white; border-left: 6px solid #D4AF37; border-radius: 10px; padding: 30px; grid-column: span 2;">
-                        <h3 style="color: #152432; font-size: 1.5rem; margin-bottom: 15px;">4. Metas Terapêuticas</h3>
-                        <p style="font-size: 1rem; line-height: 1.6;">"Lower is better" — LDL-c <70 mg/dL (alto risco), <50 mg/dL (muito alto risco)</p>
-                        <div style="margin-top: 15px; display: flex; gap: 10px;">
-                            <span style="background: #D1FAE5; color: #059669; padding: 5px 12px; border-radius: 15px; font-size: 0.9rem; font-weight: bold;">FORTE</span>
-                            <span style="background: #DBEAFE; color: #2563EB; padding: 5px 12px; border-radius: 15px; font-size: 0.9rem;">ALTA</span>
+                    <div style="background: white; border-left: 6px solid #D4AF37; border-radius: 12px; padding: 35px;">
+                        <h3 style="color: #152432; font-size: 1.7rem; margin-bottom: 18px;">4. Metas Terapêuticas</h3>
+                        <p style="font-size: 1.15rem; line-height: 1.7;">"Lower is better" — LDL-c <70 mg/dL (alto risco), <50 mg/dL (muito alto risco)</p>
+                        <div style="margin-top: 20px; display: flex; gap: 12px;">
+                            <span style="background: #D1FAE5; color: #059669; padding: 8px 16px; border-radius: 18px; font-size: 1rem; font-weight: bold;">FORTE</span>
+                            <span style="background: #DBEAFE; color: #2563EB; padding: 8px 16px; border-radius: 18px; font-size: 1rem;">ALTA</span>
                         </div>
                     </div>
                     
-                    <div style="background: white; border-left: 6px solid #D4AF37; border-radius: 10px; padding: 30px;">
-                        <h3 style="color: #152432; font-size: 1.5rem; margin-bottom: 15px;">5. PREVENT</h3>
-                        <p style="font-size: 1rem; line-height: 1.6;">Calculadora de risco para população brasileira</p>
-                        <div style="margin-top: 15px; display: flex; gap: 10px;">
-                            <span style="background: #D1FAE5; color: #059669; padding: 5px 12px; border-radius: 15px; font-size: 0.9rem; font-weight: bold;">FORTE</span>
-                            <span style="background: #DBEAFE; color: #2563EB; padding: 5px 12px; border-radius: 15px; font-size: 0.9rem;">MODERADA</span>
+                    <div style="background: white; border-left: 6px solid #D4AF37; border-radius: 12px; padding: 35px; grid-column: span 2;">
+                        <h3 style="color: #152432; font-size: 1.7rem; margin-bottom: 18px;">5. PREVENT</h3>
+                        <p style="font-size: 1.15rem; line-height: 1.7;">Calculadora de risco cardiovascular validada para população brasileira</p>
+                        <div style="margin-top: 20px; display: flex; gap: 12px;">
+                            <span style="background: #D1FAE5; color: #059669; padding: 8px 16px; border-radius: 18px; font-size: 1rem; font-weight: bold;">FORTE</span>
+                            <span style="background: #DBEAFE; color: #2563EB; padding: 8px 16px; border-radius: 18px; font-size: 1rem;">MODERADA</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- SLIDE 10: CASO CAC (TÍTULO) -->
+        <div id="slide-10" class="slide slide-title" style="background: linear-gradient(135deg, #152432 0%, #1E3A5F 100%);">
+            <div style="text-align: center;">
+                <div style="font-size: 1.4rem; color: #B91C1C; font-weight: 700; letter-spacing: 0.18em; margin-bottom: 35px; text-transform: uppercase;">
+                    CASO CLÍNICO 1
+                </div>
+                <div style="width: 130px; height: 6px; background: #B91C1C; margin: 0 auto 50px;"></div>
+                <h1 style="font-size: 6rem; color: #F9F8F4; margin: 50px 0; letter-spacing: 0.05em;">
+                    CAC
+                </h1>
+                <div style="width: 130px; height: 6px; background: #B91C1C; margin: 50px auto;"></div>
+                <div style="font-size: 2rem; color: rgba(255,255,255,0.88); line-height: 1.7; margin-top: 50px; font-family: Georgia, serif; font-style: italic;">
+                    Escore de Cálcio Coronário
+                </div>
+                <div style="margin-top: 90px; padding-top: 45px; border-top: 1px solid rgba(185,28,28,0.35);">
+                    <p style="font-size: 1.2rem; color: rgba(255,255,255,0.65); letter-spacing: 0.06em;">
+                        RECLASSIFICAÇÃO DE RISCO CARDIOVASCULAR
+                    </p>
+                </div>
+            </div>
+        </div>
+        
         </div>
     </div>
 
     <script>
         let currentSlide = 0;
-        const totalSlides = 8;
+        const totalSlides = 10;
         let currentZoom = 100;
 
         function updateZoom() {
@@ -499,25 +660,19 @@
         function showSlide(index) {
             const slides = document.querySelectorAll('.slide');
             
-            // Esconder todos
             slides.forEach(s => {
                 s.classList.remove('active');
                 s.style.setProperty('display', 'none', 'important');
             });
             
-            // Mostrar atual
             if (index >= 0 && index < totalSlides) {
                 slides[index].classList.add('active');
                 slides[index].style.setProperty('display', 'flex', 'important');
                 currentSlide = index;
                 
-                // Atualizar indicador
                 document.getElementById('slideIndicator').textContent = `${currentSlide + 1} / ${totalSlides}`;
-                
-                // Atualizar select
                 document.getElementById('slideSelector').value = `slide-${currentSlide + 1}`;
                 
-                // Atualizar botões
                 document.getElementById('prevBtn').disabled = (currentSlide === 0);
                 document.getElementById('nextBtn').disabled = (currentSlide === totalSlides - 1);
             }
@@ -539,7 +694,6 @@
             }
         }
 
-        // Navegação por teclado
         document.addEventListener('keydown', function(e) {
             if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
                 e.preventDefault();
@@ -556,10 +710,7 @@
             }
         });
 
-        // Mostrar primeiro slide
         showSlide(0);
-        
-        // Inicializar zoom
         updateZoom();
     </script>
 
