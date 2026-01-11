@@ -1,9 +1,69 @@
-# Changelog - Aula GRADE HTML
+﻿# Changelog - Aula GRADE HTML
 
 Todas as mudanças notáveis serão documentadas aqui.
 
 ---
 
+## [0.3.1] - 2026-01-11
+
+### Refatorado
+- **viewer.html** — Despoluição e reorganização completa do código
+  - CSS organizado com variáveis CSS (:root) para paleta Turner
+  - JavaScript modularizado em seções comentadas e organizadas
+  - Código limpo e sem duplicações
+  - Estrutura mais legível e manutenível
+
+### Adicionado
+- **Barra de progresso visual** — Indicador de progresso no header
+- **Animações suaves** — Transições com opacity e transform nos slides
+- **Acessibilidade** — Atributos aria-labels em controles
+- **Suporte touch melhorado** — Swipe gestures otimizados para mobile
+- **Variáveis CSS** — Sistema de cores centralizado para fácil manutenção
+
+### Melhorado
+- **Performance** — Transições otimizadas e código mais eficiente
+- **Responsividade** — Media queries aprimoradas para mobile
+- **Organização do código** — Seções bem definidas (CSS, JS) com comentários
+- **Navegação** — Sistema de navegação mais robusto e consistente
+- **Manutenibilidade** — Código mais fácil de manter e estender
+
+### Corrigido
+- **Encoding de caracteres** — UTF-8 consistente
+- **Estrutura HTML** — Semântica melhorada
+- **Compatibilidade** — Melhor suporte cross-browser
+
+---
+
+
+## [0.3.1] - 2026-01-11
+
+### Refatorado
+- **viewer.html** â€” DespoluiÃ§Ã£o e reorganizaÃ§Ã£o completa do cÃ³digo
+  - CSS organizado com variÃ¡veis CSS (:root) para paleta Turner
+  - JavaScript modularizado em seÃ§Ãµes comentadas e organizadas
+  - CÃ³digo limpo e sem duplicaÃ§Ãµes
+  - Estrutura mais legÃ­vel e manutenÃ­vel
+
+### Adicionado
+- **Barra de progresso visual** â€” Indicador de progresso no header
+- **AnimaÃ§Ãµes suaves** â€” TransiÃ§Ãµes com opacity e transform nos slides
+- **Acessibilidade** â€” Atributos aria-labels em controles
+- **Suporte touch melhorado** â€” Swipe gestures otimizados para mobile
+- **VariÃ¡veis CSS** â€” Sistema de cores centralizado para fÃ¡cil manutenÃ§Ã£o
+
+### Melhorado
+- **Performance** â€” TransiÃ§Ãµes otimizadas e cÃ³digo mais eficiente
+- **Responsividade** â€” Media queries aprimoradas para mobile
+- **OrganizaÃ§Ã£o do cÃ³digo** â€” SeÃ§Ãµes bem definidas (CSS, JS) com comentÃ¡rios
+- **NavegaÃ§Ã£o** â€” Sistema de navegaÃ§Ã£o mais robusto e consistente
+- **Manutenibilidade** â€” CÃ³digo mais fÃ¡cil de manter e estender
+
+### Corrigido
+- **Encoding de caracteres** â€” UTF-8 consistente
+- **Estrutura HTML** â€” SemÃ¢ntica melhorada
+- **Compatibilidade** â€” Melhor suporte cross-browser
+
+---
 ## [0.3.0] - 2026-01-11
 
 ### Adicionado
@@ -199,4 +259,4 @@ Base    Ato I   Objetivos  CAC    PREVENT Bempedoico Metas  Estratif. HTML    Po
 
 ---
 
-**Última atualização:** 2026-01-11 00:50 UTC
+**Última atualização:** 2026-01-11 22:10 UTC
