@@ -3,8 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aula interativa sobre Metodologia GRADE - Diretriz Brasileira de Dislipidemia 2025">
     <title>GRADE - Dislipidemia BR 2025</title>
     <style>
+        /* ========================================
+           VARIÁVEIS CSS - PALETA TURNER
+           ======================================== */
+        :root {
+            --color-navy: #152432;
+            --color-gold: #D4AF37;
+            --color-gold-light: #f0c245;
+            --color-bg-dark: #0f0f0f;
+            --color-bg-light: #F9F8F4;
+            --color-text-dark: #152432;
+            --color-text-light: #F9F8F4;
+            --color-secondary: #2A3D51;
+            --color-gray: #6B7280;
+            --color-blue: #2563EB;
+            --color-green: #059669;
+            --color-red: #B91C1C;
+            --border-radius: 12px;
+            --border-radius-lg: 20px;
+            --shadow: 0 5px 15px rgba(21,36,50,0.1);
+            --shadow-lg: 0 15px 50px rgba(0,0,0,0.4);
+            --transition: all 0.3s ease;
+        }
+
+        /* ========================================
+           RESET & BASE
+           ======================================== */
         * {
             margin: 0;
             padding: 0;
@@ -13,28 +40,41 @@
         
         body {
             font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: #0f0f0f;
-            color: #F9F8F4;
+            background: var(--color-bg-dark);
+            color: var(--color-text-light);
             overflow-x: hidden;
+            line-height: 1.6;
         }
         
+        /* ========================================
+           HEADER & CONTROLS
+           ======================================== */
         .header {
-            background: #152432;
+            background: var(--color-navy);
             padding: 20px 40px;
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             z-index: 1000;
-            border-bottom: 3px solid #D4AF37;
+            border-bottom: 3px solid var(--color-gold);
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
         
         .header h1 {
             font-family: Georgia, serif;
             font-size: 1.4rem;
-            color: #D4AF37;
+            color: var(--color-gold);
             margin-bottom: 15px;
+        }
+        
+        .progress-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 3px;
+            background: var(--color-gold);
+            transition: width 0.3s ease;
         }
         
         .controls {
@@ -45,20 +85,20 @@
         }
         
         .nav-btn {
-            background: #D4AF37;
-            color: #152432;
+            background: var(--color-gold);
+            color: var(--color-text-dark);
             border: none;
             padding: 12px 24px;
             font-size: 1rem;
             font-weight: bold;
             cursor: pointer;
             border-radius: 6px;
-            transition: all 0.2s;
+            transition: var(--transition);
             font-family: 'Lato', sans-serif;
         }
         
         .nav-btn:hover:not(:disabled) {
-            background: #f0c245;
+            background: var(--color-gold-light);
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(212,175,55,0.3);
         }
@@ -70,20 +110,20 @@
         }
         
         .slide-indicator {
-            background: #2A3D51;
+            background: var(--color-secondary);
             padding: 12px 24px;
             border-radius: 6px;
             font-weight: bold;
-            color: #D4AF37;
+            color: var(--color-gold);
             min-width: 90px;
             text-align: center;
             font-size: 1.1rem;
         }
         
         #slideSelector {
-            background: #2A3D51;
-            color: #F9F8F4;
-            border: 2px solid #D4AF37;
+            background: var(--color-secondary);
+            color: var(--color-text-light);
+            border: 2px solid var(--color-gold);
             padding: 10px 15px;
             font-size: 0.95rem;
             border-radius: 6px;
@@ -96,7 +136,7 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            background: #2A3D51;
+            background: var(--color-secondary);
             padding: 10px 18px;
             border-radius: 6px;
         }
@@ -118,13 +158,16 @@
         }
         
         .zoom-value {
-            color: #D4AF37;
+            color: var(--color-gold);
             font-weight: bold;
             min-width: 55px;
             text-align: center;
             font-size: 1.05rem;
         }
         
+        /* ========================================
+           SLIDE CONTAINER
+           ======================================== */
         .slide-container {
             margin-top: 140px;
             padding: 30px;
@@ -138,68 +181,74 @@
             width: 100%;
             max-width: 1400px;
             transform-origin: center center;
-            transition: transform 0.2s ease;
+            transition: transform 0.3s ease;
         }
         
         .slide {
             display: none;
-            background: #F9F8F4;
-            color: #152432;
-            border-radius: 20px;
+            background: var(--color-bg-light);
+            color: var(--color-text-dark);
+            border-radius: var(--border-radius-lg);
             padding: 80px;
             min-height: 700px;
-            box-shadow: 0 15px 50px rgba(0,0,0,0.4);
+            box-shadow: var(--shadow-lg);
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.4s ease, transform 0.4s ease;
         }
         
         .slide.active {
             display: flex !important;
+            opacity: 1;
+            transform: translateY(0);
         }
         
+        /* ========================================
+           SLIDE TYPES
+           ======================================== */
         .slide-title {
-            background: #152432;
-            color: #F9F8F4;
+            background: var(--color-navy);
+            color: var(--color-text-light);
             text-align: center;
         }
         
         .slide-title h1 {
             font-family: Georgia, serif;
             font-size: 5.5rem;
-            color: #D4AF37;
+            color: var(--color-gold);
             margin: 30px 0;
             letter-spacing: 0.05em;
-        }
-        
-        .slide-content {
-            background: #F9F8F4;
-            color: #152432;
         }
         
         .slide-content h2 {
             font-family: Georgia, serif;
             font-size: 3rem;
-            color: #152432;
+            color: var(--color-text-dark);
             margin-bottom: 50px;
             padding-bottom: 25px;
-            border-bottom: 5px solid #D4AF37;
+            border-bottom: 5px solid var(--color-gold);
             text-align: center;
         }
         
         .slide-content h3 {
             font-family: Georgia, serif;
             font-size: 2rem;
-            color: #152432;
+            color: var(--color-text-dark);
             margin-bottom: 20px;
         }
         
         .slide-content p {
             font-size: 1.3rem;
             line-height: 1.8;
-            color: #2A3D51;
+            color: var(--color-secondary);
         }
         
+        /* ========================================
+           COMPONENTS
+           ======================================== */
         .card-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -210,11 +259,11 @@
         
         .card {
             background: white;
-            border-left: 6px solid #D4AF37;
-            border-radius: 12px;
+            border-left: 6px solid var(--color-gold);
+            border-radius: var(--border-radius);
             padding: 35px;
-            box-shadow: 0 5px 15px rgba(21,36,50,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
         }
         
         .card:hover {
@@ -223,7 +272,7 @@
         }
         
         .card h3 {
-            color: #D4AF37;
+            color: var(--color-gold);
             font-size: 2rem;
             margin-bottom: 18px;
         }
@@ -246,19 +295,19 @@
             margin-bottom: 18px;
         }
         
-        .styled-list li:before {
+        .styled-list li::before {
             content: "▸";
             position: absolute;
             left: 0;
-            color: #D4AF37;
+            color: var(--color-gold);
             font-weight: bold;
             font-size: 1.5rem;
         }
         
         blockquote {
             background: white;
-            border-left: 6px solid #2563EB;
-            border-radius: 12px;
+            border-left: 6px solid var(--color-blue);
+            border-radius: var(--border-radius);
             padding: 35px;
             margin-top: 50px;
             font-size: 1.2rem;
@@ -268,13 +317,13 @@
         blockquote cite {
             display: block;
             margin-top: 20px;
-            color: #6B7280;
+            color: var(--color-gray);
             font-style: italic;
         }
         
         .objective-box {
             background: white;
-            border: 3px solid #D4AF37;
+            border: 3px solid var(--color-gold);
             border-radius: 15px;
             padding: 40px;
             margin: 30px 0;
@@ -285,23 +334,57 @@
             font-size: 3rem;
             margin-bottom: 20px;
         }
+        
+        /* ========================================
+           RESPONSIVE
+           ======================================== */
+        @media (max-width: 768px) {
+            .header {
+                padding: 15px 20px;
+            }
+            
+            .header h1 {
+                font-size: 1.1rem;
+            }
+            
+            .controls {
+                gap: 10px;
+            }
+            
+            .nav-btn {
+                padding: 10px 16px;
+                font-size: 0.9rem;
+            }
+            
+            .slide {
+                padding: 40px 30px;
+                min-height: auto;
+            }
+            
+            .slide-title h1 {
+                font-size: 3.5rem;
+            }
+            
+            .slide-content h2 {
+                font-size: 2rem;
+            }
+            
+            .card-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+        }
     </style>
-    <script>
-        window.addEventListener("DOMContentLoaded", function() {
-            document.querySelectorAll(".slide").forEach(s => {
-                s.style.setProperty("display", "none", "important");
-            });
-        });
-    </script>
 </head>
 <body>
     <div class="header">
+        <div class="progress-bar" id="progressBar"></div>
         <h1>📊 Metodologia GRADE - Diretriz Brasileira de Dislipidemia 2025</h1>
         <div class="controls">
-            <button class="nav-btn" id="prevBtn" onclick="navigateSlide(-1)">◀ Anterior</button>
+            <button class="nav-btn" id="prevBtn" aria-label="Slide anterior">◀ Anterior</button>
             <div class="slide-indicator" id="slideIndicator">1 / 10</div>
-            <button class="nav-btn" id="nextBtn" onclick="navigateSlide(1)">Próximo ▶</button>
-            <select id="slideSelector" onchange="jumpToSlide()">
+            <button class="nav-btn" id="nextBtn" aria-label="Próximo slide">Próximo ▶</button>
+            <select id="slideSelector" aria-label="Selecionar slide">
                 <option value="">-- Ir para slide --</option>
                 <option value="slide-1">Slide 1 - Capa</option>
                 <option value="slide-2">Slide 2 - Objetivos Educacionais</option>
@@ -315,11 +398,11 @@
                 <option value="slide-10">Slide 10 - CASO CAC</option>
             </select>
             <div class="zoom-controls">
-                <button class="zoom-btn" onclick="changeZoom(-10)">−</button>
+                <button class="zoom-btn" onclick="changeZoom(-10)" aria-label="Diminuir zoom">−</button>
                 <button class="zoom-btn" onclick="setZoom(60)" style="background: #3a3a3a; color: #D4AF37;">60%</button>
                 <button class="zoom-btn" onclick="setZoom(100)" style="background: #2563EB; color: white;">100%</button>
                 <div class="zoom-value" id="zoomValue">100%</div>
-                <button class="zoom-btn" onclick="changeZoom(10)">+</button>
+                <button class="zoom-btn" onclick="changeZoom(10)" aria-label="Aumentar zoom">+</button>
             </div>
         </div>
     </div>
@@ -330,11 +413,11 @@
         <!-- SLIDE 1: CAPA -->
         <div id="slide-1" class="slide slide-title">
             <div>
-                <div style="font-size: 1.3rem; color: #D4AF37; font-weight: 600; letter-spacing: 0.15em; margin-bottom: 25px;">
+                <div style="font-size: 1.3rem; color: var(--color-gold); font-weight: 600; letter-spacing: 0.15em; margin-bottom: 25px;">
                     METODOLOGIA
                 </div>
                 <h1>GRADE</h1>
-                <div style="width: 120px; height: 5px; background: #D4AF37; margin: 35px auto;"></div>
+                <div style="width: 120px; height: 5px; background: var(--color-gold); margin: 35px auto;"></div>
                 <div style="font-size: 1.8rem; color: rgba(255,255,255,0.9); line-height: 1.6; font-family: Georgia, serif;">
                     Diretriz Brasileira de Dislipidemia 2025
                 </div>
@@ -349,9 +432,9 @@
             <div style="width: 100%;">
                 <h2>🎯 Objetivos Educacionais</h2>
                 
-                <div class="objective-box" style="border-left: 6px solid #2563EB;">
+                <div class="objective-box" style="border-left: 6px solid var(--color-blue);">
                     <div class="objective-icon">📚</div>
-                    <h3 style="color: #2563EB; margin-bottom: 20px;">Objetivo Principal</h3>
+                    <h3 style="color: var(--color-blue); margin-bottom: 20px;">Objetivo Principal</h3>
                     <p style="font-size: 1.4rem; line-height: 1.8; font-weight: 500;">
                         Ensinar os <strong>princípios fundamentais do CORE GRADE</strong> através da aplicação prática na Diretriz Brasileira de Dislipidemia 2025.
                     </p>
@@ -359,7 +442,7 @@
                 
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px;">
                     <div class="objective-box" style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);">
-                        <h3 style="color: #059669;">✓ Você aprenderá:</h3>
+                        <h3 style="color: var(--color-green);">✓ Você aprenderá:</h3>
                         <ul class="styled-list" style="font-size: 1.1rem; margin-top: 20px;">
                             <li>Como GRADE classifica a <strong>certeza da evidência</strong></li>
                             <li>Os <strong>5 domínios</strong> para avaliar qualidade</li>
@@ -369,7 +452,7 @@
                     </div>
                     
                     <div class="objective-box" style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);">
-                        <h3 style="color: #D4AF37;">🔬 Foco Metodológico:</h3>
+                        <h3 style="color: var(--color-gold);">🔬 Foco Metodológico:</h3>
                         <ul class="styled-list" style="font-size: 1.1rem; margin-top: 20px;">
                             <li><strong>CAC</strong> — Reclassificação de risco</li>
                             <li><strong>PREVENT</strong> — Estratificação populacional</li>
@@ -379,8 +462,8 @@
                     </div>
                 </div>
                 
-                <div style="text-align: center; margin-top: 50px; padding: 30px; background: #152432; border-radius: 12px; color: #F9F8F4;">
-                    <p style="font-size: 1.2rem; font-style: italic; color: #D4AF37;">
+                <div style="text-align: center; margin-top: 50px; padding: 30px; background: var(--color-navy); border-radius: var(--border-radius); color: var(--color-text-light);">
+                    <p style="font-size: 1.2rem; font-style: italic; color: var(--color-gold);">
                         "GRADE não é sobre certeza absoluta, mas sobre <strong>transparência nas incertezas</strong>."
                     </p>
                 </div>
@@ -393,10 +476,10 @@
                 <h2 style="font-style: italic; font-size: 4.5rem; border: none; margin-bottom: 50px;">
                     "Que sais-je?"
                 </h2>
-                <p style="font-size: 2.2rem; color: #6B7280; margin-top: 50px;">
+                <p style="font-size: 2.2rem; color: var(--color-gray); margin-top: 50px;">
                     "O que eu sei?"
                 </p>
-                <p style="font-size: 1.5rem; color: #6B7280; margin-top: 50px;">
+                <p style="font-size: 1.5rem; color: var(--color-gray); margin-top: 50px;">
                     — Michel de Montaigne
                 </p>
             </div>
@@ -444,26 +527,26 @@
             <div style="width: 100%;">
                 <h2>Certeza vs Força</h2>
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 45px; margin-top: 60px;">
-                    <div style="background: white; border-left: 6px solid #2563EB; border-radius: 12px; padding: 45px;">
-                        <h3 style="color: #2563EB; font-size: 2.2rem; margin-bottom: 25px;">CERTEZA da Evidência</h3>
+                    <div style="background: white; border-left: 6px solid var(--color-blue); border-radius: var(--border-radius); padding: 45px;">
+                        <h3 style="color: var(--color-blue); font-size: 2.2rem; margin-bottom: 25px;">CERTEZA da Evidência</h3>
                         <p style="font-size: 1.3rem; line-height: 1.8; margin-bottom: 20px;">
                             Quão confiantes estamos de que o efeito estimado está próximo do efeito real?
                         </p>
                         <div style="margin-top: 35px; font-size: 1.2rem; line-height: 2.3;">
                             <div>⊕⊕⊕⊕ <strong>ALTA</strong></div>
                             <div>⊕⊕⊕○ <strong>MODERADA</strong></div>
-                            <div style="color: #6B7280;">⊕⊕○○ BAIXA</div>
-                            <div style="color: #6B7280;">⊕○○○ MUITO BAIXA</div>
+                            <div style="color: var(--color-gray);">⊕⊕○○ BAIXA</div>
+                            <div style="color: var(--color-gray);">⊕○○○ MUITO BAIXA</div>
                         </div>
                     </div>
-                    <div style="background: white; border-left: 6px solid #059669; border-radius: 12px; padding: 45px;">
-                        <h3 style="color: #059669; font-size: 2.2rem; margin-bottom: 25px;">FORÇA da Recomendação</h3>
+                    <div style="background: white; border-left: 6px solid var(--color-green); border-radius: var(--border-radius); padding: 45px;">
+                        <h3 style="color: var(--color-green); font-size: 2.2rem; margin-bottom: 25px;">FORÇA da Recomendação</h3>
                         <p style="font-size: 1.3rem; line-height: 1.8; margin-bottom: 20px;">
                             Quão confiantes estamos de que os benefícios superam os riscos?
                         </p>
                         <div style="margin-top: 35px; font-size: 1.4rem; line-height: 2.8;">
-                            <div style="color: #059669;">✓ <strong>FORTE</strong> — Recomendamos</div>
-                            <div style="color: #6B7280;">? <strong>FRACA</strong> — Sugerimos</div>
+                            <div style="color: var(--color-green);">✓ <strong>FORTE</strong> — Recomendamos</div>
+                            <div style="color: var(--color-gray);">? <strong>FRACA</strong> — Sugerimos</div>
                         </div>
                     </div>
                 </div>
@@ -475,23 +558,23 @@
             <div style="width: 100%;">
                 <h2>Lógica da Certeza</h2>
                 <div style="margin-top: 60px;">
-                    <div style="background: white; border-left: 6px solid #D4AF37; border-radius: 12px; padding: 45px; margin-bottom: 35px;">
-                        <h3 style="color: #152432; font-size: 2rem; margin-bottom: 25px;">📊 Ponto de Partida</h3>
+                    <div style="background: white; border-left: 6px solid var(--color-gold); border-radius: var(--border-radius); padding: 45px; margin-bottom: 35px;">
+                        <h3 style="color: var(--color-text-dark); font-size: 2rem; margin-bottom: 25px;">📊 Ponto de Partida</h3>
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 35px; margin-top: 30px;">
                             <div>
-                                <div style="font-weight: bold; color: #2563EB; margin-bottom: 12px; font-size: 1.2rem;">RCT (Ensaio Clínico)</div>
+                                <div style="font-weight: bold; color: var(--color-blue); margin-bottom: 12px; font-size: 1.2rem;">RCT (Ensaio Clínico)</div>
                                 <div style="font-size: 1.2rem;">Inicia com ⊕⊕⊕⊕ ALTA</div>
                             </div>
                             <div>
-                                <div style="font-weight: bold; color: #6B7280; margin-bottom: 12px; font-size: 1.2rem;">Estudo Observacional</div>
+                                <div style="font-weight: bold; color: var(--color-gray); margin-bottom: 12px; font-size: 1.2rem;">Estudo Observacional</div>
                                 <div style="font-size: 1.2rem;">Inicia com ⊕⊕○○ BAIXA</div>
                             </div>
                         </div>
                     </div>
                     
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 35px;">
-                        <div style="background: white; border-left: 6px solid #B91C1C; border-radius: 12px; padding: 45px;">
-                            <h3 style="color: #152432; font-size: 2rem; margin-bottom: 25px;">⬇️ Rate Down</h3>
+                        <div style="background: white; border-left: 6px solid var(--color-red); border-radius: var(--border-radius); padding: 45px;">
+                            <h3 style="color: var(--color-text-dark); font-size: 2rem; margin-bottom: 25px;">⬇️ Rate Down</h3>
                             <ul style="list-style: none; padding: 0; font-size: 1.1rem;">
                                 <li style="padding: 12px 0; border-bottom: 1px solid #f0f0f0;">−1 ou −2: <strong>Risco de Viés</strong></li>
                                 <li style="padding: 12px 0; border-bottom: 1px solid #f0f0f0;">−1 ou −2: <strong>Inconsistência</strong></li>
@@ -501,8 +584,8 @@
                             </ul>
                         </div>
                         
-                        <div style="background: white; border-left: 6px solid #059669; border-radius: 12px; padding: 45px;">
-                            <h3 style="color: #152432; font-size: 2rem; margin-bottom: 25px;">⬆️ Rate Up</h3>
+                        <div style="background: white; border-left: 6px solid var(--color-green); border-radius: var(--border-radius); padding: 45px;">
+                            <h3 style="color: var(--color-text-dark); font-size: 2rem; margin-bottom: 25px;">⬆️ Rate Up</h3>
                             <ul style="list-style: none; padding: 0; font-size: 1.1rem;">
                                 <li style="padding: 12px 0; border-bottom: 1px solid #f0f0f0;">+1: <strong>Efeito Grande</strong> (RR > 2 ou < 0.5)</li>
                                 <li style="padding: 12px 0; border-bottom: 1px solid #f0f0f0;">+1: <strong>Dose-Resposta</strong></li>
@@ -520,33 +603,33 @@
                 <h2>Símbolos GRADE</h2>
                 <div style="margin-top: 60px;">
                     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 45px;">
-                        <div style="background: white; border-left: 6px solid #2563EB; border-radius: 12px; padding: 45px;">
+                        <div style="background: white; border-left: 6px solid var(--color-blue); border-radius: var(--border-radius); padding: 45px;">
                             <div style="font-size: 2.8rem; margin-bottom: 25px;">⊕⊕⊕⊕</div>
-                            <h3 style="color: #2563EB; font-size: 2rem; margin-bottom: 20px;">ALTA</h3>
+                            <h3 style="color: var(--color-blue); font-size: 2rem; margin-bottom: 20px;">ALTA</h3>
                             <p style="font-size: 1.2rem; line-height: 1.8;">
                                 Temos muita confiança de que o efeito verdadeiro está próximo da estimativa.
                             </p>
                         </div>
                         
-                        <div style="background: white; border-left: 6px solid #2563EB; border-radius: 12px; padding: 45px;">
+                        <div style="background: white; border-left: 6px solid var(--color-blue); border-radius: var(--border-radius); padding: 45px;">
                             <div style="font-size: 2.8rem; margin-bottom: 25px;">⊕⊕⊕○</div>
-                            <h3 style="color: #2563EB; font-size: 2rem; margin-bottom: 20px;">MODERADA</h3>
+                            <h3 style="color: var(--color-blue); font-size: 2rem; margin-bottom: 20px;">MODERADA</h3>
                             <p style="font-size: 1.2rem; line-height: 1.8;">
                                 Confiança moderada: o efeito verdadeiro provavelmente está próximo da estimativa.
                             </p>
                         </div>
                         
-                        <div style="background: white; border-left: 6px solid #6B7280; border-radius: 12px; padding: 45px; opacity: 0.75;">
+                        <div style="background: white; border-left: 6px solid var(--color-gray); border-radius: var(--border-radius); padding: 45px; opacity: 0.75;">
                             <div style="font-size: 2.8rem; margin-bottom: 25px;">⊕⊕○○</div>
-                            <h3 style="color: #6B7280; font-size: 2rem; margin-bottom: 20px;">BAIXA</h3>
+                            <h3 style="color: var(--color-gray); font-size: 2rem; margin-bottom: 20px;">BAIXA</h3>
                             <p style="font-size: 1.2rem; line-height: 1.8;">
                                 Confiança limitada: o efeito verdadeiro pode ser substancialmente diferente.
                             </p>
                         </div>
                         
-                        <div style="background: white; border-left: 6px solid #6B7280; border-radius: 12px; padding: 45px; opacity: 0.75;">
+                        <div style="background: white; border-left: 6px solid var(--color-gray); border-radius: var(--border-radius); padding: 45px; opacity: 0.75;">
                             <div style="font-size: 2.8rem; margin-bottom: 25px;">⊕○○○</div>
-                            <h3 style="color: #6B7280; font-size: 2rem; margin-bottom: 20px;">MUITO BAIXA</h3>
+                            <h3 style="color: var(--color-gray); font-size: 2rem; margin-bottom: 20px;">MUITO BAIXA</h3>
                             <p style="font-size: 1.2rem; line-height: 1.8;">
                                 Muito pouca confiança: o efeito verdadeiro provavelmente é muito diferente.
                             </p>
@@ -561,48 +644,48 @@
             <div style="width: 100%;">
                 <h2>As 5 Recomendações da Diretriz BR 2025</h2>
                 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-top: 50px;">
-                    <div style="background: white; border-left: 6px solid #D4AF37; border-radius: 12px; padding: 35px;">
-                        <h3 style="color: #152432; font-size: 1.7rem; margin-bottom: 18px;">1. CAC</h3>
+                    <div style="background: white; border-left: 6px solid var(--color-gold); border-radius: var(--border-radius); padding: 35px;">
+                        <h3 style="color: var(--color-text-dark); font-size: 1.7rem; margin-bottom: 18px;">1. CAC</h3>
                         <p style="font-size: 1.15rem; line-height: 1.7;">Escore de cálcio coronário para reclassificação de risco</p>
                         <div style="margin-top: 20px; display: flex; gap: 12px;">
-                            <span style="background: #D1FAE5; color: #059669; padding: 8px 16px; border-radius: 18px; font-size: 1rem; font-weight: bold;">FORTE</span>
-                            <span style="background: #DBEAFE; color: #2563EB; padding: 8px 16px; border-radius: 18px; font-size: 1rem;">MODERADA</span>
+                            <span style="background: #D1FAE5; color: var(--color-green); padding: 8px 16px; border-radius: 18px; font-size: 1rem; font-weight: bold;">FORTE</span>
+                            <span style="background: #DBEAFE; color: var(--color-blue); padding: 8px 16px; border-radius: 18px; font-size: 1rem;">MODERADA</span>
                         </div>
                     </div>
                     
-                    <div style="background: white; border-left: 6px solid #D4AF37; border-radius: 12px; padding: 35px;">
-                        <h3 style="color: #152432; font-size: 1.7rem; margin-bottom: 18px;">2. Lp(a)</h3>
+                    <div style="background: white; border-left: 6px solid var(--color-gold); border-radius: var(--border-radius); padding: 35px;">
+                        <h3 style="color: var(--color-text-dark); font-size: 1.7rem; margin-bottom: 18px;">2. Lp(a)</h3>
                         <p style="font-size: 1.15rem; line-height: 1.7;">Medida universal uma vez na vida para reclassificação de risco</p>
                         <div style="margin-top: 20px; display: flex; gap: 12px;">
-                            <span style="background: #D1FAE5; color: #059669; padding: 8px 16px; border-radius: 18px; font-size: 1rem; font-weight: bold;">FORTE</span>
-                            <span style="background: #DBEAFE; color: #2563EB; padding: 8px 16px; border-radius: 18px; font-size: 1rem;">MODERADA</span>
+                            <span style="background: #D1FAE5; color: var(--color-green); padding: 8px 16px; border-radius: 18px; font-size: 1rem; font-weight: bold;">FORTE</span>
+                            <span style="background: #DBEAFE; color: var(--color-blue); padding: 8px 16px; border-radius: 18px; font-size: 1rem;">MODERADA</span>
                         </div>
                     </div>
                     
-                    <div style="background: white; border-left: 6px solid #D4AF37; border-radius: 12px; padding: 35px;">
-                        <h3 style="color: #152432; font-size: 1.7rem; margin-bottom: 18px;">3. ApoB</h3>
+                    <div style="background: white; border-left: 6px solid var(--color-gold); border-radius: var(--border-radius); padding: 35px;">
+                        <h3 style="color: var(--color-text-dark); font-size: 1.7rem; margin-bottom: 18px;">3. ApoB</h3>
                         <p style="font-size: 1.15rem; line-height: 1.7;">Preferível ao LDL-c para avaliação de risco em discordância ou TG>150</p>
                         <div style="margin-top: 20px; display: flex; gap: 12px;">
-                            <span style="background: #D1FAE5; color: #059669; padding: 8px 16px; border-radius: 18px; font-size: 1rem; font-weight: bold;">FORTE</span>
-                            <span style="background: #DBEAFE; color: #2563EB; padding: 8px 16px; border-radius: 18px; font-size: 1rem;">MODERADA</span>
+                            <span style="background: #D1FAE5; color: var(--color-green); padding: 8px 16px; border-radius: 18px; font-size: 1rem; font-weight: bold;">FORTE</span>
+                            <span style="background: #DBEAFE; color: var(--color-blue); padding: 8px 16px; border-radius: 18px; font-size: 1rem;">MODERADA</span>
                         </div>
                     </div>
                     
-                    <div style="background: white; border-left: 6px solid #D4AF37; border-radius: 12px; padding: 35px;">
-                        <h3 style="color: #152432; font-size: 1.7rem; margin-bottom: 18px;">4. Metas Terapêuticas</h3>
+                    <div style="background: white; border-left: 6px solid var(--color-gold); border-radius: var(--border-radius); padding: 35px;">
+                        <h3 style="color: var(--color-text-dark); font-size: 1.7rem; margin-bottom: 18px;">4. Metas Terapêuticas</h3>
                         <p style="font-size: 1.15rem; line-height: 1.7;">"Lower is better" — LDL-c <70 mg/dL (alto risco), <50 mg/dL (muito alto risco)</p>
                         <div style="margin-top: 20px; display: flex; gap: 12px;">
-                            <span style="background: #D1FAE5; color: #059669; padding: 8px 16px; border-radius: 18px; font-size: 1rem; font-weight: bold;">FORTE</span>
-                            <span style="background: #DBEAFE; color: #2563EB; padding: 8px 16px; border-radius: 18px; font-size: 1rem;">ALTA</span>
+                            <span style="background: #D1FAE5; color: var(--color-green); padding: 8px 16px; border-radius: 18px; font-size: 1rem; font-weight: bold;">FORTE</span>
+                            <span style="background: #DBEAFE; color: var(--color-blue); padding: 8px 16px; border-radius: 18px; font-size: 1rem;">ALTA</span>
                         </div>
                     </div>
                     
-                    <div style="background: white; border-left: 6px solid #D4AF37; border-radius: 12px; padding: 35px; grid-column: span 2;">
-                        <h3 style="color: #152432; font-size: 1.7rem; margin-bottom: 18px;">5. PREVENT</h3>
+                    <div style="background: white; border-left: 6px solid var(--color-gold); border-radius: var(--border-radius); padding: 35px; grid-column: span 2;">
+                        <h3 style="color: var(--color-text-dark); font-size: 1.7rem; margin-bottom: 18px;">5. PREVENT</h3>
                         <p style="font-size: 1.15rem; line-height: 1.7;">Calculadora de risco cardiovascular validada para população brasileira</p>
                         <div style="margin-top: 20px; display: flex; gap: 12px;">
-                            <span style="background: #D1FAE5; color: #059669; padding: 8px 16px; border-radius: 18px; font-size: 1rem; font-weight: bold;">FORTE</span>
-                            <span style="background: #DBEAFE; color: #2563EB; padding: 8px 16px; border-radius: 18px; font-size: 1rem;">MODERADA</span>
+                            <span style="background: #D1FAE5; color: var(--color-green); padding: 8px 16px; border-radius: 18px; font-size: 1rem; font-weight: bold;">FORTE</span>
+                            <span style="background: #DBEAFE; color: var(--color-blue); padding: 8px 16px; border-radius: 18px; font-size: 1rem;">MODERADA</span>
                         </div>
                     </div>
                 </div>
@@ -610,16 +693,16 @@
         </div>
 
         <!-- SLIDE 10: CASO CAC (TÍTULO) -->
-        <div id="slide-10" class="slide slide-title" style="background: linear-gradient(135deg, #152432 0%, #1E3A5F 100%);">
+        <div id="slide-10" class="slide slide-title" style="background: linear-gradient(135deg, var(--color-navy) 0%, #1E3A5F 100%);">
             <div style="text-align: center;">
-                <div style="font-size: 1.4rem; color: #B91C1C; font-weight: 700; letter-spacing: 0.18em; margin-bottom: 35px; text-transform: uppercase;">
+                <div style="font-size: 1.4rem; color: var(--color-red); font-weight: 700; letter-spacing: 0.18em; margin-bottom: 35px; text-transform: uppercase;">
                     CASO CLÍNICO 1
                 </div>
-                <div style="width: 130px; height: 6px; background: #B91C1C; margin: 0 auto 50px;"></div>
-                <h1 style="font-size: 6rem; color: #F9F8F4; margin: 50px 0; letter-spacing: 0.05em;">
+                <div style="width: 130px; height: 6px; background: var(--color-red); margin: 0 auto 50px;"></div>
+                <h1 style="font-size: 6rem; color: var(--color-text-light); margin: 50px 0; letter-spacing: 0.05em;">
                     CAC
                 </h1>
-                <div style="width: 130px; height: 6px; background: #B91C1C; margin: 50px auto;"></div>
+                <div style="width: 130px; height: 6px; background: var(--color-red); margin: 50px auto;"></div>
                 <div style="font-size: 2rem; color: rgba(255,255,255,0.88); line-height: 1.7; margin-top: 50px; font-family: Georgia, serif; font-style: italic;">
                     Escore de Cálcio Coronário
                 </div>
@@ -635,58 +718,112 @@
     </div>
 
     <script>
-        let currentSlide = 0;
-        const totalSlides = 10;
-        let currentZoom = 100;
+        // ========================================
+        // CONFIGURAÇÃO
+        // ========================================
+        const CONFIG = {
+            totalSlides: 10,
+            minZoom: 40,
+            maxZoom: 200,
+            defaultZoom: 100,
+            zoomStep: 10
+        };
 
+        // ========================================
+        // ESTADO
+        // ========================================
+        let state = {
+            currentSlide: 0,
+            currentZoom: CONFIG.defaultZoom,
+            isTransitioning: false
+        };
+
+        // ========================================
+        // UTILITÁRIOS
+        // ========================================
+        const $ = (id) => document.getElementById(id);
+        const $$ = (selector) => document.querySelectorAll(selector);
+
+        // ========================================
+        // ZOOM
+        // ========================================
         function updateZoom() {
-            const wrapper = document.getElementById('slideWrapper');
-            wrapper.style.transform = `scale(${currentZoom / 100})`;
-            document.getElementById('zoomValue').textContent = currentZoom + '%';
+            const wrapper = $('slideWrapper');
+            wrapper.style.transform = `scale(${state.currentZoom / 100})`;
+            $('zoomValue').textContent = `${state.currentZoom}%`;
         }
 
         function changeZoom(delta) {
-            currentZoom += delta;
-            if (currentZoom < 40) currentZoom = 40;
-            if (currentZoom > 200) currentZoom = 200;
+            state.currentZoom = Math.max(
+                CONFIG.minZoom,
+                Math.min(CONFIG.maxZoom, state.currentZoom + delta)
+            );
             updateZoom();
         }
 
         function setZoom(value) {
-            currentZoom = value;
+            state.currentZoom = Math.max(
+                CONFIG.minZoom,
+                Math.min(CONFIG.maxZoom, value)
+            );
             updateZoom();
         }
 
+        // ========================================
+        // NAVEGAÇÃO DE SLIDES
+        // ========================================
+        function updateProgress() {
+            const progress = ((state.currentSlide + 1) / CONFIG.totalSlides) * 100;
+            $('progressBar').style.width = `${progress}%`;
+        }
+
         function showSlide(index) {
-            const slides = document.querySelectorAll('.slide');
+            if (state.isTransitioning || index < 0 || index >= CONFIG.totalSlides) return;
             
-            slides.forEach(s => {
-                s.classList.remove('active');
-                s.style.setProperty('display', 'none', 'important');
+            state.isTransitioning = true;
+            const slides = $$('.slide');
+            
+            // Remove classe active de todos
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+                slide.style.setProperty('display', 'none', 'important');
             });
             
-            if (index >= 0 && index < totalSlides) {
-                slides[index].classList.add('active');
-                slides[index].style.setProperty('display', 'flex', 'important');
-                currentSlide = index;
+            // Ativa o slide atual
+            setTimeout(() => {
+                if (index >= 0 && index < CONFIG.totalSlides) {
+                    slides[index].classList.add('active');
+                    slides[index].style.setProperty('display', 'flex', 'important');
+                    state.currentSlide = index;
+                    
+                    // Atualiza UI
+                    $('slideIndicator').textContent = `${state.currentSlide + 1} / ${CONFIG.totalSlides}`;
+                    $('slideSelector').value = `slide-${state.currentSlide + 1}`;
+                    
+                    // Botões de navegação
+                    $('prevBtn').disabled = (state.currentSlide === 0);
+                    $('nextBtn').disabled = (state.currentSlide === CONFIG.totalSlides - 1);
+                    
+                    // Barra de progresso
+                    updateProgress();
+                    
+                    // Atualiza URL hash
+                    window.location.hash = `#${state.currentSlide + 1}`;
+                }
                 
-                document.getElementById('slideIndicator').textContent = `${currentSlide + 1} / ${totalSlides}`;
-                document.getElementById('slideSelector').value = `slide-${currentSlide + 1}`;
-                
-                document.getElementById('prevBtn').disabled = (currentSlide === 0);
-                document.getElementById('nextBtn').disabled = (currentSlide === totalSlides - 1);
-            }
+                state.isTransitioning = false;
+            }, 50);
         }
 
         function navigateSlide(direction) {
-            const newIndex = currentSlide + direction;
-            if (newIndex >= 0 && newIndex < totalSlides) {
+            const newIndex = state.currentSlide + direction;
+            if (newIndex >= 0 && newIndex < CONFIG.totalSlides) {
                 showSlide(newIndex);
             }
         }
 
         function jumpToSlide() {
-            const selector = document.getElementById('slideSelector');
+            const selector = $('slideSelector');
             const slideId = selector.value;
             if (slideId) {
                 const slideNumber = parseInt(slideId.split('-')[1]);
@@ -694,25 +831,108 @@
             }
         }
 
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
-                e.preventDefault();
-                navigateSlide(1);
-            } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
-                e.preventDefault();
-                navigateSlide(-1);
-            } else if (e.key === 'Home') {
-                e.preventDefault();
-                showSlide(0);
-            } else if (e.key === 'End') {
-                e.preventDefault();
-                showSlide(totalSlides - 1);
+        // ========================================
+        // EVENTOS
+        // ========================================
+        function setupEventListeners() {
+            // Botões de navegação
+            $('prevBtn').addEventListener('click', () => navigateSlide(-1));
+            $('nextBtn').addEventListener('click', () => navigateSlide(1));
+            $('slideSelector').addEventListener('change', jumpToSlide);
+            
+            // Teclado
+            document.addEventListener('keydown', (e) => {
+                if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
+                
+                switch(e.key) {
+                    case 'ArrowRight':
+                    case ' ':
+                    case 'PageDown':
+                        e.preventDefault();
+                        navigateSlide(1);
+                        break;
+                    case 'ArrowLeft':
+                    case 'PageUp':
+                        e.preventDefault();
+                        navigateSlide(-1);
+                        break;
+                    case 'Home':
+                        e.preventDefault();
+                        showSlide(0);
+                        break;
+                    case 'End':
+                        e.preventDefault();
+                        showSlide(CONFIG.totalSlides - 1);
+                        break;
+                }
+            });
+            
+            // Touch/Swipe para mobile
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            document.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+            
+            document.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            }, { passive: true });
+            
+            function handleSwipe() {
+                const swipeThreshold = 50;
+                const diff = touchStartX - touchEndX;
+                
+                if (Math.abs(diff) > swipeThreshold) {
+                    if (diff > 0) {
+                        navigateSlide(1); // Swipe left -> next
+                    } else {
+                        navigateSlide(-1); // Swipe right -> prev
+                    }
+                }
             }
-        });
+            
+            // Hash change (permitir navegação direta via URL)
+            window.addEventListener('hashchange', () => {
+                const hash = window.location.hash;
+                if (hash) {
+                    const slideNum = parseInt(hash.replace('#', '')) - 1;
+                    if (!isNaN(slideNum) && slideNum >= 0 && slideNum < CONFIG.totalSlides) {
+                        showSlide(slideNum);
+                    }
+                }
+            });
+        }
 
-        showSlide(0);
-        updateZoom();
+        // ========================================
+        // INICIALIZAÇÃO
+        // ========================================
+        function init() {
+            setupEventListeners();
+            
+            // Inicializa com slide da URL hash ou primeiro slide
+            const hash = window.location.hash;
+            if (hash) {
+                const slideNum = parseInt(hash.replace('#', '')) - 1;
+                if (!isNaN(slideNum) && slideNum >= 0 && slideNum < CONFIG.totalSlides) {
+                    showSlide(slideNum);
+                } else {
+                    showSlide(0);
+                }
+            } else {
+                showSlide(0);
+            }
+            
+            updateZoom();
+        }
+
+        // Inicia quando DOM estiver pronto
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', init);
+        } else {
+            init();
+        }
     </script>
-
 </body>
 </html>
