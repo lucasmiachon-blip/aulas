@@ -33,37 +33,6 @@ Todas as mudanças notáveis serão documentadas aqui.
 - **Compatibilidade** — Melhor suporte cross-browser
 
 ---
-
-
-## [0.3.1] - 2026-01-11
-
-### Refatorado
-- **viewer.html** â€” DespoluiÃ§Ã£o e reorganizaÃ§Ã£o completa do cÃ³digo
-  - CSS organizado com variÃ¡veis CSS (:root) para paleta Turner
-  - JavaScript modularizado em seÃ§Ãµes comentadas e organizadas
-  - CÃ³digo limpo e sem duplicaÃ§Ãµes
-  - Estrutura mais legÃ­vel e manutenÃ­vel
-
-### Adicionado
-- **Barra de progresso visual** â€” Indicador de progresso no header
-- **AnimaÃ§Ãµes suaves** â€” TransiÃ§Ãµes com opacity e transform nos slides
-- **Acessibilidade** â€” Atributos aria-labels em controles
-- **Suporte touch melhorado** â€” Swipe gestures otimizados para mobile
-- **VariÃ¡veis CSS** â€” Sistema de cores centralizado para fÃ¡cil manutenÃ§Ã£o
-
-### Melhorado
-- **Performance** â€” TransiÃ§Ãµes otimizadas e cÃ³digo mais eficiente
-- **Responsividade** â€” Media queries aprimoradas para mobile
-- **OrganizaÃ§Ã£o do cÃ³digo** â€” SeÃ§Ãµes bem definidas (CSS, JS) com comentÃ¡rios
-- **NavegaÃ§Ã£o** â€” Sistema de navegaÃ§Ã£o mais robusto e consistente
-- **Manutenibilidade** â€” CÃ³digo mais fÃ¡cil de manter e estender
-
-### Corrigido
-- **Encoding de caracteres** â€” UTF-8 consistente
-- **Estrutura HTML** â€” SemÃ¢ntica melhorada
-- **Compatibilidade** â€” Melhor suporte cross-browser
-
----
 ## [0.3.0] - 2026-01-11
 
 ### Adicionado
