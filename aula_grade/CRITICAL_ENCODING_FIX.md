@@ -51,26 +51,78 @@
 
 ---
 
-## 🎯 VERSÃO ATUAL (ÚLTIMA VERSÃO)
+## 🎯 VERSÃO ATUAL (ÚLTIMA VERSÃO) - LEIA COM ATENÇÃO!
 
-**Branch:** `refactor/v2.0.0`  
-**Estrutura:**
+### ⚠️ IMPORTANTE: QUAL É A ÚLTIMA VERSÃO?
+
+**A ÚLTIMA VERSÃO É:** `viewer_v2_0_0/` no branch `refactor/v2.0.0`
+
+### 📍 ONDE ESTÁ A ÚLTIMA VERSÃO?
+
+**Caminho completo no repositório:**
+```
+aulas/
+└── aula_grade/
+    └── viewer_v2_0_0/          ← ESTA É A ÚLTIMA VERSÃO!
+        ├── index.html          ← ARQUIVO PRINCIPAL (1,464 linhas)
+        ├── css/
+        │   ├── base.css        ← ESTILOS (77 linhas)
+        │   └── responsive-fix.css
+        ├── js/
+        │   └── navigation.js   ← NAVEGAÇÃO (45 linhas)
+        └── README.md           ← DOCUMENTAÇÃO
+```
+
+**URL no GitHub:**
+- Branch: `refactor/v2.0.0`
+- Caminho: `aula_grade/viewer_v2_0_0/`
+- Link: https://github.com/lucasmiachon-blip/aulas/tree/refactor/v2.0.0/aula_grade/viewer_v2_0_0
+
+### 🚫 NÃO USAR ESTAS VERSÕES (ANTIGAS):
+
+- ❌ `viewer.html` (raiz de aula_grade) - VERSÃO ANTIGA
+- ❌ `index.html` (raiz de aula_grade) - VERSÃO ANTIGA  
+- ❌ Qualquer arquivo fora de `viewer_v2_0_0/` - VERSÃO ANTIGA
+
+### ✅ ARQUIVO PRINCIPAL PARA EDITAR:
+
+**SEMPRE editar:** `aula_grade/viewer_v2_0_0/index.html`
+
+**NUNCA editar:** `aula_grade/viewer.html` ou `aula_grade/index.html` (são versões antigas)
+
+### 📊 Estrutura da Última Versão:
+
 ```
 viewer_v2_0_0/
 ├── index.html          (1,464 linhas - UTF-8 CORRETO ✅)
+│   └── Contém: HTML puro, slides, estrutura
+│   └── NÃO contém: CSS inline, JS inline (está modularizado)
+│
 ├── css/
 │   ├── base.css        (77 linhas - UTF-8 CORRETO ✅)
+│   │   └── TODOS os estilos CSS estão aqui
 │   └── responsive-fix.css
+│
 ├── js/
 │   └── navigation.js   (45 linhas - UTF-8 CORRETO ✅)
-└── README.md           (Atualizado com protocolo)
+│       └── TODA a navegação JavaScript está aqui
+│
+└── README.md           (Documentação completa)
 ```
 
-**Status de Encoding:**
-- ✅ `index.html` - UTF-8 correto, todos os caracteres especiais funcionando
-- ✅ `css/base.css` - UTF-8 correto
-- ✅ `js/navigation.js` - UTF-8 correto
+### ✅ Status de Encoding (Última Versão):
+
+- ✅ `viewer_v2_0_0/index.html` - UTF-8 correto, todos os caracteres especiais funcionando
+- ✅ `viewer_v2_0_0/css/base.css` - UTF-8 correto
+- ✅ `viewer_v2_0_0/js/navigation.js` - UTF-8 correto
 - ✅ Todos os arquivos de documentação - UTF-8 correto
+
+### 🔍 Como Identificar a Última Versão:
+
+1. **Nome da pasta:** Deve ser `viewer_v2_0_0/` (não `viewer.html` na raiz)
+2. **Estrutura modular:** CSS e JS em arquivos separados (não inline)
+3. **Encoding correto:** Todos os caracteres especiais funcionando
+4. **Branch:** Deve estar no branch `refactor/v2.0.0`
 
 ---
 
@@ -249,20 +301,67 @@ $content = [System.IO.File]::ReadAllText("arquivo.html", [System.Text.Encoding]:
 
 ---
 
-## ⚡ RESUMO EXECUTIVO PARA CLAUDE
+## ⚡ RESUMO EXECUTIVO PARA CLAUDE - LEIA PRIMEIRO!
 
-**ÚLTIMA VERSÃO:** `refactor/v2.0.0` - Branch `refactor/v2.0.0`
+### 🎯 QUAL É A ÚLTIMA VERSÃO?
 
-**ARQUIVOS PRINCIPAIS:**
-- `viewer_v2_0_0/index.html` - ✅ UTF-8 CORRETO
-- `viewer_v2_0_0/css/base.css` - ✅ UTF-8 CORRETO  
-- `viewer_v2_0_0/js/navigation.js` - ✅ UTF-8 CORRETO
+**RESPOSTA DIRETA:**
+- **Pasta:** `aula_grade/viewer_v2_0_0/`
+- **Branch:** `refactor/v2.0.0`
+- **Arquivo principal:** `viewer_v2_0_0/index.html`
 
-**REGRA DE OURO:**
+### 📂 ONDE ESTÁ A ÚLTIMA VERSÃO?
+
+```
+Repositório: github.com/lucasmiachon-blip/aulas
+Branch: refactor/v2.0.0
+Caminho: aula_grade/viewer_v2_0_0/
+```
+
+### ✅ ARQUIVOS DA ÚLTIMA VERSÃO (PARA EDITAR):
+
+1. **`viewer_v2_0_0/index.html`** ← ARQUIVO PRINCIPAL (editar aqui!)
+   - 1,464 linhas
+   - UTF-8 CORRETO ✅
+   - Contém apenas HTML (sem CSS/JS inline)
+
+2. **`viewer_v2_0_0/css/base.css`** ← ESTILOS (editar aqui!)
+   - 77 linhas
+   - UTF-8 CORRETO ✅
+   - Todos os estilos CSS
+
+3. **`viewer_v2_0_0/js/navigation.js`** ← NAVEGAÇÃO (editar aqui!)
+   - 45 linhas
+   - UTF-8 CORRETO ✅
+   - Toda a lógica JavaScript
+
+### 🚫 NÃO EDITAR (VERSÕES ANTIGAS):
+
+- ❌ `aula_grade/viewer.html` - VERSÃO ANTIGA, IGNORAR
+- ❌ `aula_grade/index.html` - VERSÃO ANTIGA, IGNORAR
+- ❌ Qualquer arquivo fora de `viewer_v2_0_0/` - VERSÃO ANTIGA
+
+### 🔑 REGRAS DE OURO:
+
+**REGRA #1 - Versão:**
+> **SEMPRE trabalhar em `viewer_v2_0_0/`. NUNCA editar `viewer.html` ou `index.html` na raiz.**
+
+**REGRA #2 - Encoding:**
 > **SEMPRE ler e salvar arquivos como UTF-8 sem BOM. SEMPRE testar caracteres especiais visualmente antes de commitar.**
 
-**SE VER CARACTERES COMO `Ã©`, `Ã£o`, `Ã§`:**
+**REGRA #3 - Modularização:**
+> **CSS vai em `css/base.css`. JS vai em `js/navigation.js`. HTML vai em `index.html` (sem inline).**
+
+**REGRA #4 - Se ver corrupção:**
 > **PARAR TUDO. Não tentar corrigir com substituições. Usar arquivo limpo ou restaurar do Git.**
+
+### 📋 CHECKLIST RÁPIDO ANTES DE EDITAR:
+
+- [ ] Estou no branch `refactor/v2.0.0`?
+- [ ] Estou editando arquivo em `viewer_v2_0_0/`?
+- [ ] Não estou editando `viewer.html` ou `index.html` na raiz?
+- [ ] Vou salvar como UTF-8 sem BOM?
+- [ ] Vou testar caracteres especiais após salvar?
 
 ---
 
