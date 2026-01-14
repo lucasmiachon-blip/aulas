@@ -1,76 +1,76 @@
-﻿# ­ƒÜ¿ CR├ìTICO: Protocolo de Encoding UTF-8 - NUNCA MAIS COMETER ESTE ERRO
+# 🚨 CRÍTICO: Protocolo de Encoding UTF-8 - NUNCA MAIS COMETER ESTE ERRO
 
-## ÔÜá´©Å LEIA ISTO ANTES DE QUALQUER EDI├ç├âO
+## ⚠️ LEIA ISTO ANTES DE QUALQUER EDIÇÃO
 
-**Data da ├║ltima corre├º├úo:** 2026-01-14  
-**Vers├úo atual:** v2.0.0 (refactor/v2.0.0)  
-**Status:** Ô£à CORRIGIDO - Todos os arquivos agora em UTF-8 correto
+**Data da última correção:** 2026-01-14  
+**Versão atual:** v2.0.0 (refactor/v2.0.0)  
+**Status:** ✅ CORRIGIDO - Todos os arquivos agora em UTF-8 correto
 
 ---
 
-## ­ƒôï O QUE ACONTECEU (Hist├│rico do Problema)
+## 📋 O QUE ACONTECEU (Histórico do Problema)
 
-### ÔØî O ERRO QUE FOI COMETIDO M├ÜLTIPLAS VEZES:
+### ❌ O ERRO QUE FOI COMETIDO MÚLTIPLAS VEZES:
 
 1. **Arquivo `viewer_v2_0_0/index.html` estava com encoding corrompido:**
-   - Caracteres apareciam como: `├â┬®` em vez de `├®`
-   - `├â┬úo` em vez de `├úo`
-   - `├â┬¡` em vez de `├¡`
-   - `├â┬º` em vez de `├º`
-   - `├â┬¬` em vez de `├¬`
-   - `├â┬│` em vez de `├│`
-   - `├â┬í` em vez de `├í`
+   - Caracteres apareciam como: `Ã©` em vez de `é`
+   - `Ã£o` em vez de `ão`
+   - `Ã­` em vez de `í`
+   - `Ã§` em vez de `ç`
+   - `Ãª` em vez de `ê`
+   - `Ã³` em vez de `ó`
+   - `Ã¡` em vez de `á`
 
-2. **Causa raiz:** Arquivo foi salvo/convertido incorretamente m├║ltiplas vezes, criando camadas de corrup├º├úo
+2. **Causa raiz:** Arquivo foi salvo/convertido incorretamente múltiplas vezes, criando camadas de corrupção
 
-3. **Impacto:** Textos em portugu├¬s ficavam ileg├¡veis, com s├¡mbolos estranhos no lugar de letras acentuadas
+3. **Impacto:** Textos em português ficavam ilegíveis, com símbolos estranhos no lugar de letras acentuadas
 
 ---
 
-## Ô£à O QUE FOI FEITO PARA CORRIGIR
+## ✅ O QUE FOI FEITO PARA CORRIGIR
 
-### Corre├º├úo Final (2026-01-14):
+### Correção Final (2026-01-14):
 
-1. **Substitui├º├úo do arquivo corrompido:**
+1. **Substituição do arquivo corrompido:**
    - Arquivo original limpo encontrado: `C:\Users\prece\Downloads\viewer_GRADE_MAGNA_v1_9_8 (2).html`
    - Copiado para: `aula_grade/viewer_v2_0_0/index.html`
    - **Resultado:** Todos os caracteres agora corretos
 
-2. **Modulariza├º├úo mantida:**
-   - CSS extra├¡do para `css/base.css` (77 linhas)
-   - JS extra├¡do para `js/navigation.js` (45 linhas)
+2. **Modularização mantida:**
+   - CSS extraído para `css/base.css` (77 linhas)
+   - JS extraído para `js/navigation.js` (45 linhas)
    - HTML limpo e modular (1,464 linhas)
 
-3. **Limpeza de documenta├º├úo:**
-   - `CHANGELOG.md` - Removida se├º├úo duplicada corrompida
+3. **Limpeza de documentação:**
+   - `CHANGELOG.md` - Removida seção duplicada corrompida
 
 4. **Commits realizados:**
    - `819a232` - fix: corrigir encoding UTF-8 e modularizar CSS/JS
-   - `69f2554` - docs: atualizar README com informa├º├Áes corretas e protocolo de encoding
-   - `1193f2d` - fix: remover se├º├úo duplicada com encoding corrompido do CHANGELOG.md
+   - `69f2554` - docs: atualizar README com informações corretas e protocolo de encoding
+   - `1193f2d` - fix: remover seção duplicada com encoding corrompido do CHANGELOG.md
 
 ---
 
-## ­ƒÄ» VERS├âO ATUAL (├ÜLTIMA VERS├âO) - LEIA COM ATEN├ç├âO!
+## 🎯 VERSÃO ATUAL (ÚLTIMA VERSÃO) - LEIA COM ATENÇÃO!
 
-### ÔÜá´©Å IMPORTANTE: QUAL ├ë A ├ÜLTIMA VERS├âO?
+### ⚠️ IMPORTANTE: QUAL É A ÚLTIMA VERSÃO?
 
-**A ├ÜLTIMA VERS├âO ├ë:** `viewer_v2_0_0/` no branch `refactor/v2.0.0`
+**A ÚLTIMA VERSÃO É:** `viewer_v2_0_0/` no branch `refactor/v2.0.0`
 
-### ­ƒôì ONDE EST├ü A ├ÜLTIMA VERS├âO?
+### 📍 ONDE ESTÁ A ÚLTIMA VERSÃO?
 
-**Caminho completo no reposit├│rio:**
+**Caminho completo no repositório:**
 ```
 aulas/
-ÔööÔöÇÔöÇ aula_grade/
-    ÔööÔöÇÔöÇ viewer_v2_0_0/          ÔåÉ ESTA ├ë A ├ÜLTIMA VERS├âO!
-        Ôö£ÔöÇÔöÇ index.html          ÔåÉ ARQUIVO PRINCIPAL (1,464 linhas)
-        Ôö£ÔöÇÔöÇ css/
-        Ôöé   Ôö£ÔöÇÔöÇ base.css        ÔåÉ ESTILOS (77 linhas)
-        Ôöé   ÔööÔöÇÔöÇ responsive-fix.css
-        Ôö£ÔöÇÔöÇ js/
-        Ôöé   ÔööÔöÇÔöÇ navigation.js   ÔåÉ NAVEGA├ç├âO (45 linhas)
-        ÔööÔöÇÔöÇ README.md           ÔåÉ DOCUMENTA├ç├âO
+└── aula_grade/
+    └── viewer_v2_0_0/          ← ESTA É A ÚLTIMA VERSÃO!
+        ├── index.html          ← ARQUIVO PRINCIPAL (1,464 linhas)
+        ├── css/
+        │   ├── base.css        ← ESTILOS (77 linhas)
+        │   └── responsive-fix.css
+        ├── js/
+        │   └── navigation.js   ← NAVEGAÇÃO (45 linhas)
+        └── README.md           ← DOCUMENTAÇÃO
 ```
 
 **URL no GitHub:**
@@ -78,91 +78,91 @@ aulas/
 - Caminho: `aula_grade/viewer_v2_0_0/`
 - Link: https://github.com/lucasmiachon-blip/aulas/tree/refactor/v2.0.0/aula_grade/viewer_v2_0_0
 
-### ­ƒÜ½ N├âO USAR ESTAS VERS├òES (ANTIGAS):
+### 🚫 NÃO USAR ESTAS VERSÕES (ANTIGAS):
 
-- ÔØî `viewer.html` (raiz de aula_grade) - VERS├âO ANTIGA
-- ÔØî `index.html` (raiz de aula_grade) - VERS├âO ANTIGA  
-- ÔØî Qualquer arquivo fora de `viewer_v2_0_0/` - VERS├âO ANTIGA
+- ❌ `viewer.html` (raiz de aula_grade) - VERSÃO ANTIGA
+- ❌ `index.html` (raiz de aula_grade) - VERSÃO ANTIGA  
+- ❌ Qualquer arquivo fora de `viewer_v2_0_0/` - VERSÃO ANTIGA
 
-### Ô£à ARQUIVO PRINCIPAL PARA EDITAR:
+### ✅ ARQUIVO PRINCIPAL PARA EDITAR:
 
 **SEMPRE editar:** `aula_grade/viewer_v2_0_0/index.html`
 
-**NUNCA editar:** `aula_grade/viewer.html` ou `aula_grade/index.html` (s├úo vers├Áes antigas)
+**NUNCA editar:** `aula_grade/viewer.html` ou `aula_grade/index.html` (são versões antigas)
 
-### ­ƒôè Estrutura da ├Ültima Vers├úo:
+### 📊 Estrutura da Última Versão:
 
 ```
 viewer_v2_0_0/
-Ôö£ÔöÇÔöÇ index.html          (1,464 linhas - UTF-8 CORRETO Ô£à)
-Ôöé   ÔööÔöÇÔöÇ Cont├®m: HTML puro, slides, estrutura
-Ôöé   ÔööÔöÇÔöÇ N├âO cont├®m: CSS inline, JS inline (est├í modularizado)
-Ôöé
-Ôö£ÔöÇÔöÇ css/
-Ôöé   Ôö£ÔöÇÔöÇ base.css        (77 linhas - UTF-8 CORRETO Ô£à)
-Ôöé   Ôöé   ÔööÔöÇÔöÇ TODOS os estilos CSS est├úo aqui
-Ôöé   ÔööÔöÇÔöÇ responsive-fix.css
-Ôöé
-Ôö£ÔöÇÔöÇ js/
-Ôöé   ÔööÔöÇÔöÇ navigation.js   (45 linhas - UTF-8 CORRETO Ô£à)
-Ôöé       ÔööÔöÇÔöÇ TODA a navega├º├úo JavaScript est├í aqui
-Ôöé
-ÔööÔöÇÔöÇ README.md           (Documenta├º├úo completa)
+├── index.html          (1,464 linhas - UTF-8 CORRETO ✅)
+│   └── Contém: HTML puro, slides, estrutura
+│   └── NÃO contém: CSS inline, JS inline (está modularizado)
+│
+├── css/
+│   ├── base.css        (77 linhas - UTF-8 CORRETO ✅)
+│   │   └── TODOS os estilos CSS estão aqui
+│   └── responsive-fix.css
+│
+├── js/
+│   └── navigation.js   (45 linhas - UTF-8 CORRETO ✅)
+│       └── TODA a navegação JavaScript está aqui
+│
+└── README.md           (Documentação completa)
 ```
 
-### Ô£à Status de Encoding (├Ültima Vers├úo):
+### ✅ Status de Encoding (Última Versão):
 
-- Ô£à `viewer_v2_0_0/index.html` - UTF-8 correto, todos os caracteres especiais funcionando
-- Ô£à `viewer_v2_0_0/css/base.css` - UTF-8 correto
-- Ô£à `viewer_v2_0_0/js/navigation.js` - UTF-8 correto
-- Ô£à Todos os arquivos de documenta├º├úo - UTF-8 correto
+- ✅ `viewer_v2_0_0/index.html` - UTF-8 correto, todos os caracteres especiais funcionando
+- ✅ `viewer_v2_0_0/css/base.css` - UTF-8 correto
+- ✅ `viewer_v2_0_0/js/navigation.js` - UTF-8 correto
+- ✅ Todos os arquivos de documentação - UTF-8 correto
 
-### ­ƒöì Como Identificar a ├Ültima Vers├úo:
+### 🔍 Como Identificar a Última Versão:
 
-1. **Nome da pasta:** Deve ser `viewer_v2_0_0/` (n├úo `viewer.html` na raiz)
-2. **Estrutura modular:** CSS e JS em arquivos separados (n├úo inline)
+1. **Nome da pasta:** Deve ser `viewer_v2_0_0/` (não `viewer.html` na raiz)
+2. **Estrutura modular:** CSS e JS em arquivos separados (não inline)
 3. **Encoding correto:** Todos os caracteres especiais funcionando
 4. **Branch:** Deve estar no branch `refactor/v2.0.0`
 
 ---
 
-## ­ƒøí´©Å PROTOCOLO OBRIGAT├ôRIO PARA EVITAR O ERRO
+## 🛡️ PROTOCOLO OBRIGATÓRIO PARA EVITAR O ERRO
 
 ### ANTES DE CRIAR/EDITAR QUALQUER ARQUIVO:
 
-#### 1. Ô£à VERIFICAR ENCODING ATUAL
+#### 1. ✅ VERIFICAR ENCODING ATUAL
 ```bash
 # No PowerShell (Windows)
 [System.IO.File]::ReadAllText("arquivo.html", [System.Text.Encoding]::UTF8) | Out-Null
 ```
 
-#### 2. Ô£à SEMPRE SALVAR COMO UTF-8 SEM BOM
+#### 2. ✅ SEMPRE SALVAR COMO UTF-8 SEM BOM
 ```bash
 # Ao salvar arquivo
 [System.IO.File]::WriteAllText("arquivo.html", $content, [System.Text.UTF8Encoding]::new($false))
 ```
 
-#### 3. Ô£à VERIFICAR CARACTERES ESPECIAIS AP├ôS SALVAR
+#### 3. ✅ VERIFICAR CARACTERES ESPECIAIS APÓS SALVAR
 Teste visual com estas palavras:
-- "├® preciso" (n├úo "├â┬® preciso")
-- "Decis├úo" (n├úo "Decis├â┬úo")
-- "inevit├ível" (n├úo "inevit├â┬ível")
-- "b├║ssola" (n├úo "b├â┬║ssola")
-- "Recomenda├º├Áes" (n├úo "Recomenda├â┬º├â┬Áes")
-- "Evid├¬ncia" (n├úo "Evid├â┬¬ncia")
-- "opini├úo" (n├úo "opini├â┬úo")
-- "N├¡vel" (n├úo "N├â┬¡vel")
-- "C├ílcio" (n├úo "C├â┬ílcio")
-- "intermedi├írio" (n├úo "intermedi├â┬írio")
+- "é preciso" (não "Ã© preciso")
+- "Decisão" (não "DecisÃ£o")
+- "inevitável" (não "inevitÃ¡vel")
+- "bússola" (não "bÃºssola")
+- "Recomendações" (não "RecomendaÃ§Ãµes")
+- "Evidência" (não "EvidÃªncia")
+- "opinião" (não "opiniÃ£o")
+- "Nível" (não "NÃ­vel")
+- "Cálcio" (não "CÃ¡lcio")
+- "intermediário" (não "intermediÃ¡rio")
 
-#### 4. Ô£à NUNCA FAZER SUBSTITUI├ç├òES AUTOM├üTICAS DE ENCODING
-**N├âO FA├çA ISSO:**
+#### 4. ✅ NUNCA FAZER SUBSTITUIÇÕES AUTOMÁTICAS DE ENCODING
+**NÃO FAÇA ISSO:**
 ```bash
-# ERRADO - Pode piorar a corrup├º├úo
-$content = $content -replace '├â┬®','├®'
+# ERRADO - Pode piorar a corrupção
+$content = $content -replace 'Ã©','é'
 ```
 
-**FA├çA ISSO:**
+**FAÇA ISSO:**
 ```bash
 # CORRETO - Ler e salvar com encoding correto
 $content = [System.IO.File]::ReadAllText("arquivo.html", [System.Text.Encoding]::UTF8)
@@ -171,36 +171,36 @@ $content = [System.IO.File]::ReadAllText("arquivo.html", [System.Text.Encoding]:
 
 ---
 
-## ­ƒÜ½ ERROS COMUNS QUE CAUSAM CORRUP├ç├âO
+## 🚫 ERROS COMUNS QUE CAUSAM CORRUPÇÃO
 
-### ÔØî ERRO #1: Ler arquivo com encoding errado
+### ❌ ERRO #1: Ler arquivo com encoding errado
 ```bash
 # ERRADO
 Get-Content "arquivo.html" -Encoding Default  # Pode ser Windows-1252
 ```
 
-### ÔØî ERRO #2: Salvar sem especificar UTF-8
+### ❌ ERRO #2: Salvar sem especificar UTF-8
 ```bash
 # ERRADO
 $content | Out-File "arquivo.html"  # Pode salvar em encoding errado
 ```
 
-### ÔØî ERRO #3: Converter encoding m├║ltiplas vezes
+### ❌ ERRO #3: Converter encoding múltiplas vezes
 ```bash
-# ERRADO - Cada convers├úo pode piorar
+# ERRADO - Cada conversão pode piorar
 $content = [System.Text.Encoding]::GetEncoding("ISO-8859-1").GetString(...)
 $content = [System.Text.Encoding]::GetEncoding("UTF-8").GetString(...)
 ```
 
-### ÔØî ERRO #4: Substituir caracteres corrompidos manualmente
+### ❌ ERRO #4: Substituir caracteres corrompidos manualmente
 ```bash
-# ERRADO - N├úo resolve a causa raiz
-$content = $content -replace '├ú├é┬®','├®'  # Pode criar novos problemas
+# ERRADO - Não resolve a causa raiz
+$content = $content -replace 'ãÂ©','é'  # Pode criar novos problemas
 ```
 
 ---
 
-## Ô£à FORMA CORRETA DE TRABALHAR COM ARQUIVOS
+## ✅ FORMA CORRETA DE TRABALHAR COM ARQUIVOS
 
 ### Ao Ler Arquivo:
 ```powershell
@@ -216,7 +216,7 @@ $content = [System.IO.File]::ReadAllText("arquivo.html", [System.Text.Encoding]:
 
 ### Ao Criar Arquivo Novo:
 ```powershell
-# Criar com encoding UTF-8 desde o in├¡cio
+# Criar com encoding UTF-8 desde o início
 $content = @"
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -228,72 +228,72 @@ $content = @"
 
 ---
 
-## ­ƒöì CHECKLIST ANTES DE COMMITAR
+## 🔍 CHECKLIST ANTES DE COMMITAR
 
 Antes de fazer `git commit`, SEMPRE verificar:
 
 - [ ] Arquivo foi salvo como UTF-8 sem BOM?
-- [ ] Testei visualmente caracteres especiais (├®, ├úo, ├¡, ├║, ├º, etc.)?
+- [ ] Testei visualmente caracteres especiais (é, ão, í, ú, ç, etc.)?
 - [ ] HTML tem `<meta charset="utf-8"/>`?
-- [ ] CSS tem `@charset "UTF-8";` no topo (se aplic├ível)?
-- [ ] N├úo h├í caracteres corrompidos (├â┬®, ├â┬úo, etc.) no arquivo?
+- [ ] CSS tem `@charset "UTF-8";` no topo (se aplicável)?
+- [ ] Não há caracteres corrompidos (Ã©, Ã£o, etc.) no arquivo?
 - [ ] Arquivo foi testado no navegador e caracteres aparecem corretos?
 
-**SE QUALQUER ITEM ESTIVER ÔØî, N├âO COMMITAR AT├ë CORRIGIR!**
+**SE QUALQUER ITEM ESTIVER ❌, NÃO COMMITAR ATÉ CORRIGIR!**
 
 ---
 
-## ­ƒôØ EXEMPLOS DE COMO DEVE APARECER
+## 📝 EXEMPLOS DE COMO DEVE APARECER
 
-### Ô£à CORRETO:
+### ✅ CORRETO:
 ```html
-<h2>"Navegar ├® preciso..."</h2>
-<p>Decis├úo inevit├ível. GRADE como b├║ssola.</p>
-<p>Recomenda├º├Áes baseadas em N├¡vel C</p>
-<p>Evid├¬ncia limitada, opini├úo de experts</p>
+<h2>"Navegar é preciso..."</h2>
+<p>Decisão inevitável. GRADE como bússola.</p>
+<p>Recomendações baseadas em Nível C</p>
+<p>Evidência limitada, opinião de experts</p>
 ```
 
-### ÔØî ERRADO (NUNCA DEVE APARECER):
+### ❌ ERRADO (NUNCA DEVE APARECER):
 ```html
-<h2>"Navegar ├â┬® preciso..."</h2>
-<p>Decis├â┬úo inevit├â┬ível. GRADE como b├â┬║ssola.</p>
-<p>Recomenda├â┬º├â┬Áes baseadas em N├â┬¡vel C</p>
-<p>Evid├â┬¬ncia limitada, opini├â┬úo de experts</p>
+<h2>"Navegar Ã© preciso..."</h2>
+<p>DecisÃ£o inevitÃ¡vel. GRADE como bÃºssola.</p>
+<p>RecomendaÃ§Ãµes baseadas em NÃ­vel C</p>
+<p>EvidÃªncia limitada, opiniÃ£o de experts</p>
 ```
 
 ---
 
-## ­ƒÄô LI├ç├òES APRENDIDAS
+## 🎓 LIÇÕES APRENDIDAS
 
 1. **Nunca assumir encoding:** Sempre especificar UTF-8 explicitamente
 2. **Testar antes de commitar:** Verificar caracteres especiais visualmente
-3. **N├úo fazer "corre├º├Áes" autom├íticas:** Substituir caracteres corrompidos n├úo resolve o problema
-4. **Usar arquivo limpo como base:** Se encontrar corrup├º├úo, substituir por vers├úo limpa
-5. **Documentar o problema:** Este arquivo serve para evitar repeti├º├úo
+3. **Não fazer "correções" automáticas:** Substituir caracteres corrompidos não resolve o problema
+4. **Usar arquivo limpo como base:** Se encontrar corrupção, substituir por versão limpa
+5. **Documentar o problema:** Este arquivo serve para evitar repetição
 
 ---
 
-## ­ƒåÿ SE ENCONTRAR CARACTERES CORROMPIDOS
+## 🆘 SE ENCONTRAR CARACTERES CORROMPIDOS
 
-### PASSO A PASSO DE EMERG├èNCIA:
+### PASSO A PASSO DE EMERGÊNCIA:
 
-1. **PARAR IMEDIATAMENTE** - N├úo continuar editando
-2. **Verificar se h├í vers├úo limpa** no hist├│rico Git ou em backups
-3. **Se houver vers├úo limpa:** Restaurar do Git ou copiar arquivo limpo
-4. **Se n├úo houver:** Tentar ler como UTF-8 e salvar novamente como UTF-8
+1. **PARAR IMEDIATAMENTE** - Não continuar editando
+2. **Verificar se há versão limpa** no histórico Git ou em backups
+3. **Se houver versão limpa:** Restaurar do Git ou copiar arquivo limpo
+4. **Se não houver:** Tentar ler como UTF-8 e salvar novamente como UTF-8
 5. **Testar visualmente** todos os caracteres especiais
-6. **S├│ ent├úo continuar** com as edi├º├Áes
+6. **Só então continuar** com as edições
 
-### COMANDO DE EMERG├èNCIA:
+### COMANDO DE EMERGÊNCIA:
 ```powershell
-# Tentar corrigir encoding (├║ltimo recurso)
+# Tentar corrigir encoding (último recurso)
 $content = [System.IO.File]::ReadAllText("arquivo.html", [System.Text.Encoding]::UTF8)
 [System.IO.File]::WriteAllText("arquivo.html", $content, [System.Text.UTF8Encoding]::new($false))
 ```
 
 ---
 
-## ­ƒôî REFER├èNCIAS IMPORTANTES
+## 📌 REFERÊNCIAS IMPORTANTES
 
 - **Arquivo de protocolo completo:** `ENCODING_PROTOCOL_UTF8.md`
 - **README do viewer:** `viewer_v2_0_0/README.md`
@@ -301,74 +301,74 @@ $content = [System.IO.File]::ReadAllText("arquivo.html", [System.Text.Encoding]:
 
 ---
 
-## ÔÜí RESUMO EXECUTIVO PARA CLAUDE - LEIA PRIMEIRO!
+## ⚡ RESUMO EXECUTIVO PARA CLAUDE - LEIA PRIMEIRO!
 
-### ­ƒÄ» QUAL ├ë A ├ÜLTIMA VERS├âO?
+### 🎯 QUAL É A ÚLTIMA VERSÃO?
 
 **RESPOSTA DIRETA:**
 - **Pasta:** `aula_grade/viewer_v2_0_0/`
 - **Branch:** `refactor/v2.0.0`
 - **Arquivo principal:** `viewer_v2_0_0/index.html`
 
-### ­ƒôé ONDE EST├ü A ├ÜLTIMA VERS├âO?
+### 📂 ONDE ESTÁ A ÚLTIMA VERSÃO?
 
 ```
-Reposit├│rio: github.com/lucasmiachon-blip/aulas
+Repositório: github.com/lucasmiachon-blip/aulas
 Branch: refactor/v2.0.0
 Caminho: aula_grade/viewer_v2_0_0/
 ```
 
-### Ô£à ARQUIVOS DA ├ÜLTIMA VERS├âO (PARA EDITAR):
+### ✅ ARQUIVOS DA ÚLTIMA VERSÃO (PARA EDITAR):
 
-1. **`viewer_v2_0_0/index.html`** ÔåÉ ARQUIVO PRINCIPAL (editar aqui!)
+1. **`viewer_v2_0_0/index.html`** ← ARQUIVO PRINCIPAL (editar aqui!)
    - 1,464 linhas
-   - UTF-8 CORRETO Ô£à
-   - Cont├®m apenas HTML (sem CSS/JS inline)
+   - UTF-8 CORRETO ✅
+   - Contém apenas HTML (sem CSS/JS inline)
 
-2. **`viewer_v2_0_0/css/base.css`** ÔåÉ ESTILOS (editar aqui!)
+2. **`viewer_v2_0_0/css/base.css`** ← ESTILOS (editar aqui!)
    - 77 linhas
-   - UTF-8 CORRETO Ô£à
+   - UTF-8 CORRETO ✅
    - Todos os estilos CSS
 
-3. **`viewer_v2_0_0/js/navigation.js`** ÔåÉ NAVEGA├ç├âO (editar aqui!)
+3. **`viewer_v2_0_0/js/navigation.js`** ← NAVEGAÇÃO (editar aqui!)
    - 45 linhas
-   - UTF-8 CORRETO Ô£à
-   - Toda a l├│gica JavaScript
+   - UTF-8 CORRETO ✅
+   - Toda a lógica JavaScript
 
-### ­ƒÜ½ N├âO EDITAR (VERS├òES ANTIGAS):
+### 🚫 NÃO EDITAR (VERSÕES ANTIGAS):
 
-- ÔØî `aula_grade/viewer.html` - VERS├âO ANTIGA, IGNORAR
-- ÔØî `aula_grade/index.html` - VERS├âO ANTIGA, IGNORAR
-- ÔØî Qualquer arquivo fora de `viewer_v2_0_0/` - VERS├âO ANTIGA
+- ❌ `aula_grade/viewer.html` - VERSÃO ANTIGA, IGNORAR
+- ❌ `aula_grade/index.html` - VERSÃO ANTIGA, IGNORAR
+- ❌ Qualquer arquivo fora de `viewer_v2_0_0/` - VERSÃO ANTIGA
 
-### ­ƒöæ REGRAS DE OURO:
+### 🔑 REGRAS DE OURO:
 
-**REGRA #1 - Vers├úo:**
+**REGRA #1 - Versão:**
 > **SEMPRE trabalhar em `viewer_v2_0_0/`. NUNCA editar `viewer.html` ou `index.html` na raiz.**
 
 **REGRA #2 - Encoding:**
 > **SEMPRE ler e salvar arquivos como UTF-8 sem BOM. SEMPRE testar caracteres especiais visualmente antes de commitar.**
 
-**REGRA #3 - Modulariza├º├úo:**
+**REGRA #3 - Modularização:**
 > **CSS vai em `css/base.css`. JS vai em `js/navigation.js`. HTML vai em `index.html` (sem inline).**
 
-**REGRA #4 - Se ver corrup├º├úo:**
-> **PARAR TUDO. N├úo tentar corrigir com substitui├º├Áes. Usar arquivo limpo ou restaurar do Git.**
+**REGRA #4 - Se ver corrupção:**
+> **PARAR TUDO. Não tentar corrigir com substituições. Usar arquivo limpo ou restaurar do Git.**
 
-### ­ƒôï CHECKLIST R├üPIDO ANTES DE EDITAR:
+### 📋 CHECKLIST RÁPIDO ANTES DE EDITAR:
 
 - [ ] Estou no branch `refactor/v2.0.0`?
 - [ ] Estou editando arquivo em `viewer_v2_0_0/`?
-- [ ] N├úo estou editando `viewer.html` ou `index.html` na raiz?
+- [ ] Não estou editando `viewer.html` ou `index.html` na raiz?
 - [ ] Vou salvar como UTF-8 sem BOM?
-- [ ] Vou testar caracteres especiais ap├│s salvar?
+- [ ] Vou testar caracteres especiais após salvar?
 
 ---
 
-**Este arquivo foi criado em 2026-01-14 ap├│s corre├º├úo massiva de encoding.**  
-**├Ültima atualiza├º├úo:** 2026-01-14  
-**Status:** Ô£à Todos os arquivos corrigidos e funcionando
+**Este arquivo foi criado em 2026-01-14 após correção massiva de encoding.**  
+**Última atualização:** 2026-01-14  
+**Status:** ✅ Todos os arquivos corrigidos e funcionando
 
 ---
 
-**­ƒÜ¿ LEMBRE-SE: Este erro custou horas de trabalho. N├âO REPITA! ­ƒÜ¿**
+**🚨 LEMBRE-SE: Este erro custou horas de trabalho. NÃO REPITA! 🚨**
