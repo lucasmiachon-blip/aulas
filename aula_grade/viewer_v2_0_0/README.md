@@ -6,13 +6,14 @@
 viewer_v2_0_0/
 ├── index.html              (1,464 linhas - estrutura + conteúdo slides)
 ├── css/
-│   └── base.css            (183 linhas - estilos completos)
+│   ├── base.css            (77 linhas - estilos completos)
+│   └── responsive-fix.css   (CSS responsivo)
 ├── js/
-│   └── navigation.js       (65 linhas - sistema de navegação)
+│   └── navigation.js       (45 linhas - sistema de navegação)
 └── README.md               (este arquivo)
 ```
 
-**Total: 1,712 linhas** (vs 1,563 linhas monolítico original)
+**Total: ~1,586 linhas** (vs 1,564 linhas monolítico original)
 
 ## 🎯 Vantagens da Modularização
 
@@ -81,10 +82,11 @@ document.onkeydown = (e) => {
 
 | Aspecto | v1.9.8 (Monolítico) | v2.0.0 (Modular) |
 |---------|---------------------|------------------|
-| **Arquivos** | 1 arquivo (1,563 linhas) | 4 arquivos (1,712 linhas total) |
-| **CSS** | Inline (86 linhas) | Externo (183 linhas) |
-| **JS** | Inline (27 linhas) | Externo (65 linhas) |
-| **HTML puro** | 1,450 linhas | 1,464 linhas |
+| **Arquivos** | 1 arquivo (1,564 linhas) | 4 arquivos (~1,586 linhas total) |
+| **CSS** | Inline (78 linhas) | Externo (77 linhas) |
+| **JS** | Inline (26 linhas) | Externo (45 linhas, IIFE) |
+| **HTML puro** | 1,460 linhas | 1,464 linhas |
+| **Encoding** | Corrompido (caracteres especiais) | UTF-8 correto |
 | **Manutenção** | Difícil (tudo misturado) | Fácil (separado por concern) |
 | **Git diff** | Verboso | Limpo |
 | **Browser cache** | Não (tudo em 1 arquivo) | Sim (CSS/JS cacháveis) |
@@ -132,6 +134,12 @@ js/
 
 ## ⚠️ Notas Importantes
 
+### Encoding UTF-8
+- **CRÍTICO**: Arquivo deve ser salvo sempre em UTF-8 sem BOM
+- Todos os caracteres especiais (é, ão, í, ú, ç, ê, ó, á, etc.) devem estar corretos
+- Meta tag: `<meta charset="utf-8"/>` presente no HTML
+- Se caracteres aparecerem como símbolos, verificar encoding do arquivo
+
 ### Caminhos Relativos
 - CSS: `href="css/base.css"` (relativo ao `index.html`)
 - JS: `src="js/navigation.js"` (relativo ao `index.html`)
@@ -156,6 +164,8 @@ js/
 - 🔧 REFACTOR: Estrutura de diretórios modular
 - 🐛 FIX: Adicionado `preventDefault()` em keyboard nav (evita scroll)
 - 🐛 FIX: Wrapped JS em IIFE para evitar poluição global
+- 🐛 FIX: **Correção crítica de encoding UTF-8** - todos os caracteres especiais (é, ão, í, ú, ç, etc.) agora corretos
+- 🐛 FIX: Substituição de arquivo corrompido por versão limpa com encoding preservado
 
 ## 🤝 Desenvolvimento
 
@@ -168,6 +178,37 @@ js/
 1. Edite `js/navigation.js` ou crie novo arquivo JS
 2. Adicione `<script>` antes de `</body>` em `index.html`
 3. Use namespaces para evitar conflitos
+
+## 🤖 Instruções para Claude AI
+
+### Protocolo de Encoding (OBRIGATÓRIO)
+**ANTES DE QUALQUER EDIÇÃO:**
+1. ✅ Verificar que o arquivo está em UTF-8
+2. ✅ Confirmar que caracteres especiais estão corretos (é, ão, í, ú, ç, etc.)
+3. ✅ Se encontrar caracteres corrompidos (ex: "Ã©" em vez de "é"), NÃO editar até corrigir encoding
+4. ✅ Sempre salvar em UTF-8 sem BOM após edições
+
+### Estrutura Modular
+- **HTML**: Apenas estrutura e conteúdo dos slides
+- **CSS**: Tudo em `css/base.css` - NUNCA adicionar CSS inline
+- **JS**: Tudo em `js/navigation.js` - NUNCA adicionar JS inline
+- **Manter separação**: Cada arquivo tem sua responsabilidade
+
+### Ao Adicionar/Modificar Slides
+1. Editar apenas `index.html`
+2. Usar classes CSS existentes (não criar estilos inline)
+3. Manter estrutura semântica HTML
+4. Verificar encoding após salvar
+
+### Ao Modificar Estilos
+1. Editar apenas `css/base.css`
+2. Usar variáveis CSS (`:root`) para cores
+3. Manter responsividade (unidades vw/vh)
+
+### Ao Modificar Navegação
+1. Editar apenas `js/navigation.js`
+2. Manter código dentro do IIFE
+3. Testar navegação por teclado (setas, espaço)
 
 ## 📧 Contato
 
