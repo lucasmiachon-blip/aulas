@@ -1263,10 +1263,10 @@
         <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 0.9vw; flex-grow: 1; min-height: 0;">
             
             <!-- COLUNA ESQUERDA: 3 CARDS NNT/NNH -->
-            <div style="display: flex; flex-direction: column; gap: 0.45vw; justify-content: flex-start; min-height: 0;">
+            <div style="display: flex; flex-direction: column; gap: 0.5vw; justify-content: space-between; min-height: 0;">
                 
                 <!-- CARD 1: CAC = 0 -->
-                <div style="background: white; border: 2px solid #E8E6E1; border-radius: 0.4vw; padding: 0.75vw; flex: 1 1 0;">
+                <div style="background: white; border: 2px solid #E8E6E1; border-radius: 0.4vw; padding: 0.8vw; flex: 1 1 auto;">
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5vw;">
                         <h3 style="font-family: Lato, sans-serif; font-size: 0.95vw; color: #0B1320; font-weight: 700; margin: 0;">
                             CAC = 0
@@ -1301,7 +1301,7 @@
                 </div>
 
                 <!-- CARD 2: CAC 1-99 -->
-                <div style="background: white; border: 2px solid #E8E6E1; border-radius: 0.4vw; padding: 0.75vw; flex: 1 1 0;">
+                <div style="background: white; border: 2px solid #E8E6E1; border-radius: 0.4vw; padding: 0.8vw; flex: 1 1 auto;">
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5vw;">
                         <h3 style="font-family: Lato, sans-serif; font-size: 0.95vw; color: #0B1320; font-weight: 700; margin: 0;">
                             CAC 1—99
@@ -1336,7 +1336,7 @@
                 </div>
 
                 <!-- CARD 3: CAC &ge;100 -->
-                <div style="background: white; border: 2px solid #D4AF37; border-radius: 0.4vw; padding: 0.75vw; flex: 1 1 0;">
+                <div style="background: white; border: 2px solid #D4AF37; border-radius: 0.4vw; padding: 0.8vw; flex: 1 1 auto;">
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5vw;">
                         <h3 style="font-family: Lato, sans-serif; font-size: 0.95vw; color: #0B1320; font-weight: 700; margin: 0;">
                             CAC &ge;100
@@ -1376,54 +1376,52 @@
             <div style="display: flex; flex-direction: column; gap: 0.7vw; min-height: 0;">
                 
                 <!-- CARD GRADE -->
-                <div style="background: linear-gradient(135deg, #152432 0%, #1a2d3f 100%); border-radius: 0.5vw; padding: 0.95vw; flex: 1 1 0; display: flex; flex-direction: column; min-width: 0; min-height: 0; box-shadow: 0 0.2vw 0.8vw rgba(0,0,0,0.15); justify-content: space-between;">
-                    <div>
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.7vw; flex-shrink: 0; padding-bottom: 0.6vw; border-bottom: 1px solid rgba(212,175,55,0.3);">
-                            <span style="font-family: Lato, sans-serif; font-size: 0.75vw; font-weight: 700; color: rgba(255,255,255,0.7); letter-spacing: 0.12em; text-transform: uppercase;">
-                                Análise GRADE
-                            </span>
-                            <span style="font-family: Lato, sans-serif; background: rgba(212,175,55,0.25); color: #D4AF37; font-size: 0.7vw; padding: 0.3vw 0.7vw; border-radius: 0.25vw; font-weight: 700; white-space: nowrap; border: 1.5px solid #D4AF37; box-shadow: 0 0 0.3vw rgba(212,175,55,0.3);">
-                                ⊕⊕⊖⊖ BAIXA—MODERADA
-                            </span>
-                        </div>
+                <div style="background: linear-gradient(135deg, #152432 0%, #1a2d3f 100%); border-radius: 0.5vw; padding: 1vw; flex: 1 1 0; display: flex; flex-direction: column; min-width: 0; min-height: 0; box-shadow: 0 0.2vw 0.8vw rgba(0,0,0,0.15);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8vw; flex-shrink: 0; padding-bottom: 0.7vw; border-bottom: 1px solid rgba(212,175,55,0.3);">
+                        <span style="font-family: Lato, sans-serif; font-size: 0.78vw; font-weight: 700; color: rgba(255,255,255,0.7); letter-spacing: 0.12em; text-transform: uppercase;">
+                            Análise GRADE
+                        </span>
+                        <span style="font-family: Lato, sans-serif; background: rgba(212,175,55,0.25); color: #D4AF37; font-size: 0.72vw; padding: 0.32vw 0.75vw; border-radius: 0.25vw; font-weight: 700; white-space: nowrap; border: 1.5px solid #D4AF37; box-shadow: 0 0 0.3vw rgba(212,175,55,0.3);">
+                            ⊕⊕⊖⊖ BAIXA—MODERADA
+                        </span>
+                    </div>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 0.65vw; flex: 1 1 auto; min-height: 0;">
                         
-                        <div style="display: flex; flex-direction: column; gap: 0.55vw;">
-                            
-                            <div style="flex-shrink: 0;">
-                                <p style="font-family: Lato, sans-serif; font-size: 0.72vw; color: #D4AF37; margin: 0 0 0.2vw 0; font-weight: 700; letter-spacing: 0.02em;">
-                                    Tipo de evidência:
-                                </p>
-                                <p style="font-family: Lato, sans-serif; font-size: 0.75vw; color: rgba(255,255,255,0.95); margin: 0; line-height: 1.3;">
-                                    Coorte (MESA) + efeitos (RRR/RRI) transportados de meta-análises
-                                </p>
-                            </div>
-
-                            <div style="border-top: 1px solid rgba(212,175,55,0.25); padding-top: 0.55vw; flex-shrink: 0;">
-                                <p style="font-family: Lato, sans-serif; font-size: 0.72vw; color: #D4AF37; margin: 0 0 0.2vw 0; font-weight: 700; letter-spacing: 0.02em;">
-                                    Domínio-chave:
-                                </p>
-                                <p style="font-family: Lato, sans-serif; font-size: 0.75vw; color: rgba(255,255,255,0.95); margin: 0; line-height: 1.3;">
-                                    <strong style="color: #D4AF37;">INDIRECTNESS</strong> — Não é RCT estratificado por CAC
-                                </p>
-                            </div>
-
-                            <div style="border-top: 1px solid rgba(212,175,55,0.25); padding-top: 0.55vw; flex-shrink: 0;">
-                                <p style="font-family: Lato, sans-serif; font-size: 0.72vw; color: #D4AF37; margin: 0 0 0.2vw 0; font-weight: 700; letter-spacing: 0.02em;">
-                                    Domínio 2:
-                                </p>
-                                <p style="font-family: Lato, sans-serif; font-size: 0.75vw; color: rgba(255,255,255,0.95); margin: 0; line-height: 1.3;">
-                                    <strong style="color: #D4AF37;">IMPRECISÃO</strong> — Bleeds raros em CAC muito alto
-                                </p>
-                            </div>
+                        <div style="flex-shrink: 0;">
+                            <p style="font-family: Lato, sans-serif; font-size: 0.75vw; color: #D4AF37; margin: 0 0 0.25vw 0; font-weight: 700; letter-spacing: 0.02em;">
+                                Tipo de evidência:
+                            </p>
+                            <p style="font-family: Lato, sans-serif; font-size: 0.78vw; color: rgba(255,255,255,0.95); margin: 0; line-height: 1.35;">
+                                Coorte (MESA) + efeitos (RRR/RRI) transportados de meta-análises
+                            </p>
                         </div>
-                    </div>
 
-                    <div style="border-top: 1px solid rgba(212,175,55,0.3); padding-top: 0.55vw; margin-top: 0.5vw; flex-shrink: 0;">
-                        <p style="font-family: Georgia, serif; font-size: 0.78vw; color: #D4AF37; font-style: italic; margin: 0; font-weight: 500;">
-                            → Recomendação CONDICIONAL
-                        </p>
-                    </div>
+                        <div style="border-top: 1px solid rgba(212,175,55,0.25); padding-top: 0.65vw; flex-shrink: 0;">
+                            <p style="font-family: Lato, sans-serif; font-size: 0.75vw; color: #D4AF37; margin: 0 0 0.25vw 0; font-weight: 700; letter-spacing: 0.02em;">
+                                Domínio-chave:
+                            </p>
+                            <p style="font-family: Lato, sans-serif; font-size: 0.78vw; color: rgba(255,255,255,0.95); margin: 0; line-height: 1.35;">
+                                <strong style="color: #D4AF37;">INDIRECTNESS</strong> — Não é RCT estratificado por CAC
+                            </p>
+                        </div>
 
+                        <div style="border-top: 1px solid rgba(212,175,55,0.25); padding-top: 0.65vw; flex-shrink: 0;">
+                            <p style="font-family: Lato, sans-serif; font-size: 0.75vw; color: #D4AF37; margin: 0 0 0.25vw 0; font-weight: 700; letter-spacing: 0.02em;">
+                                Domínio 2:
+                            </p>
+                            <p style="font-family: Lato, sans-serif; font-size: 0.78vw; color: rgba(255,255,255,0.95); margin: 0; line-height: 1.35;">
+                                <strong style="color: #D4AF37;">IMPRECISÃO</strong> — Bleeds raros em CAC muito alto
+                            </p>
+                        </div>
+
+                        <div style="border-top: 1px solid rgba(212,175,55,0.3); padding-top: 0.65vw; margin-top: auto; flex-shrink: 0;">
+                            <p style="font-family: Georgia, serif; font-size: 0.82vw; color: #D4AF37; font-style: italic; margin: 0; font-weight: 500;">
+                                → Recomendação CONDICIONAL
+                            </p>
+                        </div>
+
+                    </div>
                 </div>
 
                 <!-- REGRA PRáTICA -->
