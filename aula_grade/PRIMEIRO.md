@@ -29,16 +29,44 @@ Você tem **2 opções** para visualizar os slides e fazer ajustes:
 - ✅ Funciona offline
 - ✅ Fácil de compartilhar
 
-**Como pedir:**
+**Como pedir (copie e cole):**
 ```
 "Mostre o viewer atualizado nos artifacts"
+```
+OU
+```
 "Envie o index.html como artifact para eu ver"
+```
+OU
+```
 "Crie um artifact com o viewer completo"
 ```
 
+**📝 Passo a passo simples:**
+1. Você me pede: "mostre o viewer nos artifacts"
+2. Eu crio o artifact com o HTML completo
+3. Você clica no artifact que aparece na conversa
+4. O navegador abre automaticamente
+5. Você vê os slides funcionando
+6. Você me diz o que quer mudar
+7. Eu faço as mudanças
+8. Você pede novamente: "mostre o viewer atualizado"
+9. Repetir até ficar perfeito
+
+**✅ Vantagens para iniciantes:**
+- Zero instalação
+- Zero comandos
+- Zero configuração
+- Funciona imediatamente
+- Não precisa entender código
+- Não precisa entender servidores
+- Basta pedir e receber
+
 ---
 
-### ✅ OPÇÃO 2: Viewer em Tempo Real (Servidor Local)
+### ⚙️ OPÇÃO 2: Viewer em Tempo Real (Servidor Local) - Para quem já sabe programar
+
+**⚠️ NÃO RECOMENDADO PARA INICIANTES** - Requer conhecimento técnico
 
 **Como funciona:**
 1. Você inicia um servidor HTTP local na pasta `viewer_v2_0_0/`
@@ -135,11 +163,28 @@ aula_grade/
 
 ---
 
-## 🎯 PRÓXIMOS PASSOS
+## 🎯 PRÓXIMOS PASSOS (ESCOLHA A OPÇÃO MAIS FÁCIL)
 
-**Escolha uma opção:**
-1. **"Mostre nos artifacts"** → Eu envio o HTML completo
-2. **"Vou usar servidor local"** → Você inicia servidor, eu faço mudanças
+### ⭐ PARA INICIANTES (RECOMENDADO):
+
+**Simplesmente diga:**
+```
+"Mostre o viewer atualizado nos artifacts"
+```
+
+Eu vou:
+1. ✅ Criar o artifact com o HTML completo
+2. ✅ Você clica e vê funcionando
+3. ✅ Você me pede ajustes
+4. ✅ Eu atualizo e mostro novamente
+
+**É só isso! Sem complicação!**
+
+---
+
+### ⚙️ PARA QUEM JÁ SABE PROGRAMAR:
+
+Se você já entende servidores e comandos, pode usar a Opção 2 (servidor local) para atualização em tempo real.
 
 ---
 
