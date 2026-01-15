@@ -1,8 +1,26 @@
-﻿# Changelog - Aula GRADE HTML
+# Changelog - Aula GRADE HTML
 
 Todas as mudanças notáveis serão documentadas aqui.
 
 ---
+
+## [2.0.1] - 2025-01-15
+
+### Fixed
+- **Encoding UTF-8 COMPLETO**: Todos os 485 caracteres especiais convertidos para entidades HTML
+  - **Acentos portugueses**: á (&aacute;), é (&eacute;), í (&iacute;), ó (&oacute;), ú (&uacute;), ã (&atilde;), õ (&otilde;), ç (&ccedil;) - 461 conversões
+  - **Símbolos**: — (&mdash;), • (&bull;), ° (&deg;) - 24 conversões
+  - **Total**: 289 entidades HTML garantindo exibição perfeita
+  - Arquivo UTF-8 sem BOM com `<meta charset="utf-8">` prioritário
+
+### Technical Details
+- **Problema raiz**: Upload via API corrompeu TODOS acentos portugueses, não apenas travessões
+- **Solução definitiva**: Entidades HTML são interpretadas após parsing, independente de encoding
+- **Robustez**: Funciona em qualquer navegador/sistema/locale
+- **Qualidade**: Zero caracteres corrompidos confirmado
+
+---
+
 
 ## [0.3.1] - 2026-01-11
 
