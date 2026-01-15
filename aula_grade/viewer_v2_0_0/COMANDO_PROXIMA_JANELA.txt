@@ -23,7 +23,8 @@ LEIA ESTES ARQUIVOS NO GITHUB:
 1. /mnt/project/ESTADO_ATUAL.md - Estado técnico completo
 2. /mnt/project/PLANO_MVP.md - Roadmap 3 dias
 3. /mnt/project/ENSINO_INTEGRADO_MVP.md - Como ensinar programação
-4. /mnt/project/GITHUB_CREDENTIALS.md - Acesso e token
+4. /mnt/project/GERENCIAMENTO_HTML_GRANDE.md - Monitoramento tamanho + comentários
+5. /mnt/project/GITHUB_CREDENTIALS.md - Acesso e token
 
 MISSÃO AGORA:
 Inicia MVP com ensino integrado.
