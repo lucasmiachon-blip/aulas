@@ -1,8 +1,27 @@
-﻿# Changelog - Aula GRADE HTML
+# Changelog - Aula GRADE HTML
 
 Todas as mudanças notáveis serão documentadas aqui.
 
 ---
+
+## [2.0.1] - 2025-01-15
+
+### Fixed
+- **Encoding UTF-8**: Todos os caracteres especiais convertidos para entidades HTML
+  - `—` → `&mdash;` (32 ocorrências)
+  - `–` → `&ndash;` (1 ocorrência)
+  - `°` → `&deg;` (1 ocorrência)
+  - Garante exibição correta independente de encoding ou navegador
+  - Arquivo salvo em UTF-8 sem BOM
+  - Tag `<meta charset="utf-8">` como primeira linha do `<head>`
+
+### Technical Details
+- **Problema identificado**: Bytes UTF-8 corrompidos ao fazer upload via API
+- **Solução definitiva**: Entidades HTML são interpretadas após parsing do arquivo
+- **Robustez**: Funciona em qualquer navegador/sistema independente de charset
+
+---
+
 
 ## [0.3.1] - 2026-01-11
 
