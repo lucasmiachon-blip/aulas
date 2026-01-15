@@ -22,6 +22,7 @@
 │           └── navigation.js       (1.4KB - navegação completa)
 │
 ├── MEDICAL_SLIDE_PROTOCOL_v3_STREAMLINED.md  (568 linhas) ⭐ PROTOCOLO ATUAL
+├── PLANO_APRENDIZADO_REPETICAO.md  ⭐ METODOLOGIA DE ENSINO
 ├── START_HERE.md                   (64 linhas - guia rápido)
 ├── WORKFLOW_CRIAR_COMMITAR.md      (guia de workflow)
 ├── GIT_COMMIT_INSTRUCTIONS.md      (instruções git)
