@@ -28,7 +28,14 @@ body {
 
 /* Tipografia Magna */
 h1 { font-family: 'Georgia', serif; font-size: 8.5vw; color: var(--gold); line-height: 1; }
-h2 { font-family: 'Georgia', serif; font-size: 4vw; color: var(--navy); line-height: 1.1; margin-bottom: 2vw; }
+h2 { 
+    font-family: 'Georgia', serif; 
+    font-size: 3.5vw; 
+    color: var(--navy); 
+    line-height: 1.1; 
+    margin-bottom: 2vw; 
+    font-weight: 400;
+}
 .label-gold { color: var(--gold); font-weight: 900; font-size: 1vw; letter-spacing: 0.4vw; text-transform: uppercase; margin-bottom: 1vw; }
 .body-literal { font-size: 1.4vw; line-height: 1.5; color: #222; }
 
