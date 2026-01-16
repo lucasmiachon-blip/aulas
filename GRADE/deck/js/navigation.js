@@ -12,11 +12,14 @@
         current = index;
         document.getElementById('currentSlide').textContent = current + 1;
         
-        // Animar barras quando entrar no Slide 4 (Interativo)
-        if(index === 3) {
+        // Animar barras quando o slide tiver data-anim="bars"
+        const currentSlide = slides[index];
+        if(currentSlide && currentSlide.getAttribute('data-anim') === 'bars') {
             setTimeout(() => {
-                document.getElementById('bar-cac').style.width = '65%';
-                document.getElementById('bar-grade').style.width = '35%';
+                const barCac = document.getElementById('bar-cac');
+                const barGrade = document.getElementById('bar-grade');
+                if(barCac) barCac.style.width = '65%';
+                if(barGrade) barGrade.style.width = '35%';
             }, 300);
         }
     }
