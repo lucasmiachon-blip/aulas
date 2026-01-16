@@ -1,0 +1,84 @@
+:root {
+    --navy: #0B1320; /* Midnight Navy */
+    --gold: #DDB944; /* Refined Gold */
+    --bg: #F9F8F4;   /* Ivory Luminous */
+    --teal: #1F766E; /* Clinical Teal */
+    --blue: #2563EB;
+    --white: #FFFFFF;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { 
+    background: #111; font-family: 'Lato', sans-serif; overflow: hidden; 
+    display: flex; justify-content: center; align-items: center; 
+    height: 100vh; width: 100vw;
+}
+
+/* Viewport 16:9 Anti-Corte */
+#viewport {
+    width: 100vw; height: 56.25vw; 
+    max-height: 100vh; max-width: 177.78vh; 
+    background: var(--bg); position: relative; overflow: hidden; display: flex;
+    box-shadow: 0 0 100px rgba(0,0,0,0.5);
+}
+
+.slide { position: absolute; inset: 0; display: none; padding: 5% 6%; flex-direction: column; }
+.slide.active { display: flex; }
+.bg-navy { background: var(--navy) !important; color: white !important; justify-content: center !important; }
+
+/* Tipografia Magna */
+h1 { font-family: 'Georgia', serif; font-size: 8.5vw; color: var(--gold); line-height: 1; }
+h2 { 
+    font-family: 'Georgia', serif; 
+    font-size: 3.5vw; 
+    color: var(--navy); 
+    line-height: 1.1; 
+    margin: 0 0 1.5vw 0; 
+    font-weight: 400;
+}
+.label-gold { color: var(--gold); font-weight: 900; font-size: 1vw; letter-spacing: 0.4vw; text-transform: uppercase; margin-bottom: 1vw; }
+.body-literal { font-size: 1.4vw; line-height: 1.5; color: #222; }
+
+/* Grid de 3 Colunas (Conforme o Desenho) */
+.grid-main { 
+    display: grid; 
+    grid-template-columns: 1.15fr 0.95fr 0.95fr; 
+    gap: 2.5vw; 
+    flex-grow: 1; 
+    align-items: stretch;
+}
+
+.column-stack { display: flex; flex-direction: column; gap: 1.5vw; }
+
+.card-magna {
+    background: var(--white);
+    border-radius: 0.8vw;
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 0.5vw 1.5vw rgba(0,0,0,0.03);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.badge-row { display: flex; gap: 0.5vw; margin-top: 1.5vw; }
+.badge { 
+    padding: 0.4vw 0.8vw; border-radius: 0.3vw; font-size: 0.85vw; font-weight: 900; 
+    color: white; text-transform: uppercase;
+}
+
+.controls { position: fixed; bottom: 20px; right: 20px; z-index: 1000; display: flex; gap: 10px; }
+button { padding: 12px 24px; background: var(--navy); color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; }
+
+.slide-counter {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+    background: var(--navy);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+}

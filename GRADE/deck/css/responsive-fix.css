@@ -1,0 +1,168 @@
+@charset "UTF-8";
+/* 
+ * GRADE Magna - Responsive Font Sizes Fix
+ * Version 2.0.1
+ * Fixes: Font sizes too large on big screens
+ */
+
+/* ============================================
+   PROBLEMA: Em telas >1920px, fontes ficam gigantes
+   SOLUÇÃO: clamp() limita min/ideal/max
+   ============================================ */
+
+/* Typography Responsive Limits */
+h1 { 
+    font-size: clamp(48px, 8.5vw, 120px);
+    /* Min: 48px | Ideal: 8.5vw | Max: 120px */
+}
+
+h2 { 
+    font-size: clamp(24px, 4vw, 56px);
+    /* Min: 24px | Ideal: 4vw | Max: 56px */
+}
+
+.label-gold { 
+    font-size: clamp(10px, 1vw, 14px);
+    letter-spacing: clamp(2px, 0.4vw, 6px);
+    margin-bottom: clamp(8px, 1vw, 16px);
+}
+
+.body-literal { 
+    font-size: clamp(14px, 1.4vw, 20px);
+}
+
+/* Badge System */
+.badge { 
+    padding: clamp(4px, 0.4vw, 8px) clamp(6px, 0.8vw, 12px);
+    font-size: clamp(10px, 0.85vw, 14px);
+}
+
+/* Grid Gaps */
+.grid-main { 
+    gap: clamp(16px, 2.5vw, 40px);
+}
+
+.column-stack { 
+    gap: clamp(12px, 1.5vw, 24px);
+}
+
+/* Card Padding */
+.card-magna {
+    padding: clamp(16px, 2vw, 32px);
+    border-radius: clamp(6px, 0.8vw, 12px);
+}
+
+/* Viewport Anti-Overflow */
+#viewport {
+    /* Garante que nunca ultrapassa viewport */
+    max-width: min(177.78vh, 100vw);
+    max-height: min(100vh, 56.25vw);
+}
+
+.slide {
+    /* Padding responsivo */
+    padding: clamp(3%, 5%, 6%) clamp(4%, 6%, 7%);
+}
+
+/* ============================================
+   MEDIA QUERIES - Telas específicas
+   ============================================ */
+
+/* Telas pequenas (<1366px) */
+@media (max-width: 1366px) {
+    h1 { font-size: 64px; }
+    h2 { font-size: 32px; }
+    .body-literal { font-size: 16px; }
+}
+
+/* Telas médias (1366px - 1920px) - IDEAL */
+@media (min-width: 1367px) and (max-width: 1920px) {
+    /* Usa os valores vw normais */
+}
+
+/* Telas grandes (>1920px) - LIMITAR */
+@media (min-width: 1921px) {
+    h1 { font-size: 120px; }
+    h2 { font-size: 56px; }
+    .body-literal { font-size: 20px; }
+    .label-gold { font-size: 14px; }
+    .badge { font-size: 14px; }
+}
+
+/* Telas muito grandes (>2560px) - MÁXIMO ABSOLUTO */
+@media (min-width: 2561px) {
+    #viewport {
+        /* Força tamanho máximo fixo */
+        width: 2560px;
+        height: 1440px;
+        transform: scale(calc(100vw / 2560));
+        transform-origin: center;
+    }
+}
+
+/* ============================================
+   OVERFLOW FIXES
+   ============================================ */
+
+/* Garante que texto nunca ultrapassa cards */
+.card-magna {
+    overflow: hidden;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Garante que slides nunca ultrapassam viewport */
+.slide {
+    overflow-y: auto; /* Permite scroll SE necessário */
+    overflow-x: hidden;
+}
+
+/* Mas esconde scrollbar para manter estética */
+.slide::-webkit-scrollbar {
+    width: 8px;
+}
+
+.slide::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.slide::-webkit-scrollbar-thumb {
+    background: rgba(11, 19, 32, 0.3);
+    border-radius: 4px;
+}
+
+.slide::-webkit-scrollbar-thumb:hover {
+    background: rgba(11, 19, 32, 0.5);
+}
+
+/* ============================================
+   DEBUG MODE (comentar em produção)
+   ============================================ */
+
+/* Descomente para ver bordas e debugar overflow
+.slide {
+    outline: 2px solid red;
+}
+
+.card-magna {
+    outline: 1px solid blue;
+}
+
+.grid-main {
+    outline: 1px solid green;
+}
+*/
+
+/* ============================================
+   NOTAS PARA OUTROS ASSISTENTES:
+   
+   Este arquivo corrige problemas de:
+   1. Fontes muito grandes em telas >1920px
+   2. Viewport ultrapassando limites
+   3. Texto comendo espaço visual
+   
+   Se usuário reclamar de tamanho:
+   - Verificar resolução da tela dele
+   - Ajustar valores de clamp() conforme necessário
+   - Testar em diferentes resoluções
+   ============================================ */
