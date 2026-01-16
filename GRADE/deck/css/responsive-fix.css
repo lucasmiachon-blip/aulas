@@ -1,0 +1,6 @@
+/* responsive-fix.css — placeholder de estabilidade.
+   Não altera design. Apenas evita cortes em telas/zoom. */
+html, body { height: 100%; }
+#viewport { overflow: hidden; }
+.slide { overflow: hidden; }
+img { max-width: 100%; height: auto; }
