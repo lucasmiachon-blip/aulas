@@ -6,14 +6,15 @@
 
 ## Estado atual
 
-- **Fase:** Fases 1+2 completas + Interações 1+2 + slides 16-17. QA pass (conteúdo + visual + interações) feito. Faltam slides 13-15 (Fase 3 — artigo âncora TBD).
+- **Fase:** Fases 1+2 completas + Interações 1+2 + slides 16-17. QA pass feito. Faltam slides 13-15 (Fase 3 — artigo âncora em deliberação).
 - **Branch:** feat/metanalise-mvp (worktree wt-metanalise)
 - **Slides no index.html:** 15 (00-title → 01-hook → 02-contrato → 03-checkpoint-1 → 04-rs-vs-ma → 05-pico → 06-abstract → 07-forest-plot → 08-benefit-harm → 09-grade → 10-heterogeneity → 11-fixed-random → 12-checkpoint-2 → [13-15 TBD] → 16-absoluto → 17-takehome)
-- **Slides planejados:** 18 (00-17) — ver blueprint.md v1.4
-- **Docs fundacionais:** narrative.md (v2), evidence-db.md (v3.2 — 13+ refs), blueprint.md (v1.5), reading-list.md
+- **Slides planejados:** 18 (00-17) — ver blueprint.md v1.6
+- **Docs fundacionais:** narrative.md (v2), evidence-db.md (v4.0 — 20+ refs, 8 candidatos âncora), blueprint.md (v1.6), reading-list.md
 - **Vite dev:** port 3032
 - **slide-registry.js:** CRIADO — state machines para hook (2-beat), checkpoint-1 (3-beat), checkpoint-2 (4-beat)
 - **Orphan slides:** 0
+- **Artigo âncora:** ✅ DECIDIDO — Valgimigli 2025, Clopidogrel vs Aspirina (Lancet, PMID 40902613). IPD-MA, 7 RCTs, 28.982 pts. Ajustes amanhã
 
 ## O que foi feito
 
@@ -58,7 +59,7 @@
 
 | Decisão | Razão | Data |
 |---------|-------|------|
-| Artigo âncora = [TBD] — 18 candidatos compilados | Primeiro importância, depois método, depois artigo. Lucas escolhe 2026-03-15 | 2026-03-14 |
+| Artigo âncora = **Valgimigli 2025 (Lancet, clopidogrel vs aspirina)** | IPD-MA, Lancet, N enorme (28.982), tema universal (cardiologia). Lucas escolheu apesar de IPD/HR — ajustes na narrativa amanhã | 2026-03-15 |
 | Slide 11 (fixed vs random) MANTÉM como slide dedicado | Lucas override: slide importante para leitura madura. Contra 3 dossiês Gemini que sugeriam substituir | 2026-03-14 |
 | 3 fases + 2 interações | Retrieval practice entre blocos | 2026-03-13 |
 | h2 = assertion técnica | Cirrose usa claims verificáveis; metanalise deve seguir mesmo padrão | 2026-03-13 |
@@ -69,24 +70,29 @@
 
 ## Caminho crítico — próximas sessões
 
-### Sessão N+1 (próxima)
-1. **Lucas decide artigo âncora** dentre os candidatos em blueprint.md v1.4 § Candidatos
-2. Verificar PMIDs Consensus-sourced do artigo escolhido
-3. Construir slides 13-15 (Fase 3) com artigo real
+### Sessão N+1 (2026-03-16) — Construir slides 13-15
+1. **Começar slides 13-15** com estrutura genérica + placeholders para dados do artigo
+   - Slide 13: apresentação do artigo (PICO, design, journal) — placeholder para título/dados
+   - Slide 14: aplicação do framework (forest plot, GRADE, benefício-dano) — layout genérico
+   - Slide 15: aplicabilidade / validade externa — layout genérico
+2. **Lucas decide artigo âncora** durante construção (Pitre PAC vs Abdul-Aziz β-lactam)
+3. Inserir dados reais do artigo escolhido nos placeholders
 4. Decidir HEX navy: `#162032` (atual) vs `#0d1a2d` (canônico design-system)
+5. Inserir exemplos visuais Cochrane (forest plot, GRADE table) nos slides das Fases 1-2 quando disponíveis
 
 ### Sessão N+2
 - Fase 3 completa + QA final (incluindo Gate 4 Gemini)
+- Criar `_manifest.js`
 
 ## Bloqueios conhecidos
 
 | Bloqueio | Impacto | Workaround |
 |----------|---------|------------|
-| Artigo âncora não definido | Slides 13-15 bloqueados (Fase 3) | ✅ Candidatos compilados (blueprint v1.5). Lucas decide |
-| Full-text Musini indisponível até 2026-10-09 | Sem forest plot real, sem NNT | Se Musini escolhido: usar abstract. Alternativas disponíveis |
+| ~~Artigo âncora em deliberação~~ | ~~Dados específicos dos slides 13-15~~ | ✅ RESOLVIDO: Valgimigli 2025 (Lancet, clopidogrel vs aspirina, PMID 40902613) |
+| Full-text Musini: PMC embargo até 2026-10-09 | Forest plot e NNT dependem de full-text | ✅ Acessível via Cochrane Library (acordo CAPES/Wiley). PMID 41065416. Musini agora = exemplo visual, não âncora |
 | HEX navy `#162032` vs canônico `#0d1a2d` | Inconsistência cross-aula | Decidir e aplicar batch replace |
-| PMIDs Consensus-sourced não verificados | 3 PMIDs (Aamann, AlSowaiegh, Saleh) pendentes PubMed check | ✅ Zacharias verificado (37467180). Restantes verificar antes de usar |
-| Propostas narrativas Gemini pendentes | ✅ ABSORVIDAS | Resolvido 2026-03-15 |
+| PMIDs Consensus-sourced não verificados | 3 PMIDs (Aamann, AlSowaiegh, Saleh) pendentes PubMed check | Não-bloqueante: esses candidatos não são top. Verificar se algum for promovido |
+| Cochrane exemplos visuais | Forest plots e GRADE tables reais precisam de screenshots/crops | Acessar via CAPES e cropar quando iniciar Fase 3 |
 
 ## Pendências para main (Classe B — não editar na WT)
 
@@ -98,7 +104,7 @@
 - Não criar _manifest.js (precisa de slides finais)
 - Não tocar em Cirrose
 - Não expandir para NMA, IPD, bayesiana
-- Não construir slides 13-15 antes de definir artigo
+- Não inserir dados específicos do artigo âncora nos slides sem confirmação do Lucas
 
 ---
 
@@ -173,4 +179,42 @@
 
 ---
 
-## Última atualização: 2026-03-15 (QA pass: contrato/takehome align, state machines, refs, CSS)
+---
+
+## Sessão 2026-03-15c — Busca de artigo âncora + docs update
+
+### O que foi feito
+- [x] Acesso Cochrane Library verificado: acordo nacional CAPES/Wiley — full-text disponível para todos os candidatos Cochrane
+- [x] Musini 2025 PMID encontrado e verificado: **41065416** ✅
+- [x] Decisão: Cochrane = exemplos visuais (Fases 1-2), âncora = preferencialmente não-Cochrane
+- [x] Decisão: área do Lucas ≠ hepatologia. Artigo pode ser de qualquer área clínica
+- [x] 3 finalistas próprios compilados: Pitre/PAC (ICM 2025), Kolkailah/VTE (Cochrane 2024), Carson/transfusão (Cochrane 2025)
+- [x] Prompt criado e enviado ao Gemini para busca ampliada
+- [x] 5 candidatos Gemini recebidos e verificados: 2 PMIDs corrigidos (McIntyre 37952187, Abdul-Aziz 38864162)
+- [x] Análise comparativa dos 2 favoritos do Lucas: β-lactam (Abdul-Aziz) e clopidogrel (Valgimigli)
+  - Valgimigli: IPD (não pairwise), HR (não RR), sem GRADE — falha 3 critérios obrigatórios
+  - Abdul-Aziz: bayesiano (CrI), sem dano claro, GRADE com pouca variação — funciona mas com ressalvas
+- [x] Evidence-db atualizado v4.0: 8 candidatos com PMIDs verificados
+- [x] Blueprint atualizado v1.6: recomendação atualizada, Fase 3 com placeholder
+- [x] HANDOFF atualizado: caminho crítico para amanhã
+- [x] Prosty (bayesiano) removido da lista
+
+### O que NÃO foi feito (deliberado)
+- Artigo âncora: Lucas decide durante construção dos slides (amanhã)
+- Slides 13-15: começam amanhã com layout genérico
+- Verificação PMIDs pendentes: Yin (38588546), Bosco (38842801) — não-bloqueante
+- _manifest.js, QA visual, HEX navy — próxima sessão
+
+### Decisões tomadas
+
+| Decisão | Razão | Data |
+|---------|-------|------|
+| Cochrane = exemplos visuais, não âncora | Contraste didático: Cochrane nas Fases 1-2, artigo de journal na Fase 3 | 2026-03-15 |
+| Área do Lucas ≠ hepatologia | Salvar na memória. Artigo pode ser de qualquer área (ambulatório ou hospital) | 2026-03-15 |
+| Bayesiano removido (Prosty A2) | Fora do escopo pairwise da aula | 2026-03-15 |
+| Slides 13-15 começam sem artigo definido | Estrutura genérica + placeholders. Material suficiente para construir layouts | 2026-03-15 |
+| Pitre PAC = recomendado pelo agente | Melhor fit: GRADE com variação, benefício+dano, não-Cochrane, PAC universal | 2026-03-15 |
+
+---
+
+## Última atualização: 2026-03-15d (artigo âncora DECIDIDO: Valgimigli 2025 Lancet clopidogrel vs aspirina)

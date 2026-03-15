@@ -29,9 +29,11 @@ Parent: ver CLAUDE.md na raiz.
 - 45–60 min, residentes clínica médica (básico-intermediário)
 - Foco: LEITURA CRÍTICA de MA (não produção de RS)
 - Modelo: pairwise clássico de RCTs
-- Âncora: [TBD — Musini 2025 é candidato, não decisão final]
+- Âncora: **Valgimigli 2025 — Clopidogrel vs Aspirina (Lancet, PMID 40902613)**. IPD-MA, 7 RCTs, 28.982 pts. Cochrane = exemplos visuais
 - Conceitos avançados (NMA, IPD, bayesiana) = fora do escopo
 - Forest plots = imagens cropadas de artigos reais (NUNCA SVG construído do zero)
+- **Área do Lucas ≠ hepatologia** — artigo pode ser de qualquer área (ambulatório ou hospital)
+- Acesso: CAPES/USP — não precisa ser open access
 
 ## Hierarquia de referência
 
@@ -62,4 +64,4 @@ reading-list.md (paralelo, informa pre-reading)
 
 ## Status
 
-**15 slides ativos (Fases 1+2 + Interações 1+2 + slides 16-17). QA pass feito (conteúdo, visual, interações, refs). slide-registry.js criado (state machines para hook + checkpoints). Faltam slides 13-15 (Fase 3 — artigo âncora TBD). Docs: narrative v2, blueprint v1.5, evidence-db v3.2.**
+**15 slides ativos (Fases 1+2 + Interações 1+2 + slides 16-17). QA pass feito. slide-registry.js criado. Faltam slides 13-15 (Fase 3 — âncora DECIDIDA: Valgimigli 2025 Lancet clopidogrel vs aspirina). Docs: narrative v2.1, blueprint v1.6, evidence-db v4.0. Próxima sessão: construir slides 13-15 com dados do Valgimigli.**

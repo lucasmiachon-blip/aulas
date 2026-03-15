@@ -13,11 +13,12 @@
 |-------|-------|
 | Autores | Musini VM, Tejani AM, Bassett K, Puil L, Thompson W, Wright JM |
 | Título | Pharmacotherapy for hypertension in adults 60 years or older |
-| Fonte | Cochrane Database Syst Rev. 2025;10:CD000028 |
+| Fonte | Cochrane Database Syst Rev. 2025 Oct 9;10(10):CD000028 |
 | DOI | 10.1002/14651858.CD000028.pub4 |
+| PMID | 41065416 ✅ |
 | Publicação | 9 outubro 2025 |
 | Tier | **1** (Cochrane) |
-| Acesso | Abstract aberto. Full-text: PMCID disponível 2026-10-09 |
+| Acesso | Abstract aberto. Full-text: acessível via Cochrane Library (acordo nacional CAPES/Wiley). PMC embargo até 2026-10-09 |
 
 ### Método
 
@@ -216,10 +217,179 @@
 
 ---
 
+## Finalistas para âncora — Fase 3 (busca 2026-03-15)
+
+> Critério: pairwise MA de RCTs, GRADE por desfecho com variação, benefício+dano, Tier 1, tema clínica médica geral.
+> Cochrane reservado para exemplos visuais (Fases 1-2). Âncora preferencialmente não-Cochrane.
+
+### F1 — Pitre 2025 — Corticoides em PAC (RECOMENDADO)
+
+| Campo | Valor |
+|-------|-------|
+| Autores | Pitre T, Pauley E, Chaudhuri D, Saha R, ..., Annane D, Rochwerg B, Shankar-Hari M |
+| Título | Corticosteroids for adult patients hospitalised with non-viral community-acquired pneumonia: a systematic review and meta-analysis |
+| Fonte | Intensive Care Med. 2025 May;51(5):917-929 |
+| DOI | 10.1007/s00134-025-07912-2 |
+| PMID | 40323455 ✅ |
+| PROSPERO | CRD42024521536 |
+| RCTs | 30 |
+| Participantes | 7.519 |
+| Mortalidade curto prazo (28-30d) | RR 0,82 (0,74–0,91); certeza **moderada** |
+| Mortalidade longo prazo (60-90d) | RR 0,89 (0,76–1,03); NS; certeza **baixa** |
+| VM invasiva | RR 0,63 (0,48–0,82); certeza **alta** |
+| Tempo UTI | MD −1,53d (0,31–2,75); certeza **baixa** |
+| Tempo hospital | MD −2,30d (0,81–3,81); certeza **baixa** |
+| Hiperglicemia (DANO) | RR 1,32 (1,12–1,56); certeza **moderada** |
+| Infecções secundárias | RR 0,97 (0,85–1,11); NS; certeza **moderada** |
+| GRADE | ✅ Explícito por desfecho: alta (1), moderada (3), baixa (3) |
+| Acesso | Springer (acesso institucional CAPES) |
+| Por que âncora | PAC universal, GRADE com variação ideal, benefício+dano claros, não-Cochrane (contraste), autores de referência (Rochwerg, Annane), guideline CCM 2024 já incorporou |
+
+### F2 — Kolkailah 2024 — Profilaxia VTE estendida vs padrão
+
+| Campo | Valor |
+|-------|-------|
+| Autores | Kolkailah AA, Abdelghaffar B, Elshafeey F, ..., Piazza G |
+| Título | Standard- versus extended-duration anticoagulation for primary VTE prophylaxis in acutely ill medical patients |
+| Fonte | Cochrane Database Syst Rev. 2024 Dec 4;12(12):CD014541 |
+| PMID | 39629741 ✅ |
+| RCTs | 7 |
+| Participantes | 40.846 |
+| TEV sintomático | RR 0,60 (0,46–0,78); NNTB 204; certeza **alta** |
+| Sangramento maior (DANO) | RR 2,05 (1,51–2,79); NNTH 314; certeza **alta** |
+| Mortalidade total | RR 0,97 (0,87–1,08); NS; certeza **alta** |
+| TEV total | RR 0,75 (0,67–0,85); NNTB 107; certeza **alta** |
+| Mortalidade por TEV | RR 0,78 (0,58–1,05); NS; certeza **moderada** |
+| Sangramento fatal | RR 2,28 (0,84–6,22); NS; certeza **baixa** |
+| GRADE | ✅ Explícito: alta (4), moderada (1), baixa (1) |
+| RoB | RoB 2, todos baixo risco |
+| Acesso | Cochrane Library (acordo CAPES) |
+| Por que alternativa | Trade-off benefício/dano exemplar (NNTB vs NNTH), hospital medicine universal. Porém Cochrane (mesmo journal dos exemplos) |
+
+### F3 — Carson 2025 — Limiares transfusionais (alternativa complexa)
+
+| Campo | Valor |
+|-------|-------|
+| Autores | Carson JL, Stanworth SJ, Dennis JA, ..., Turgeon AF |
+| Título | Transfusion thresholds and other strategies for guiding red blood cell transfusion |
+| Fonte | Cochrane Database Syst Rev. 2025 (update) |
+| PMID | 41114449 ✅ |
+| RCTs | 61 (adultos) |
+| Participantes | 27.639 |
+| Mortalidade 30d | RR 1,01 (0,90–1,14); NS; certeza **alta** |
+| Exposição a transfusão | RR 0,58 (0,52–0,65); certeza **alta**; I²=97% |
+| IAM, AVC, TEV, infecção | NS; certeza **moderada–alta** |
+| Subgrupo HDB | Mortalidade RR 0,63 (0,42–0,95) — favorece restritiva |
+| Subgrupo neurocrítico | Desfecho neurológico pior com restritiva (RR 1,14) |
+| GRADE | Alta a moderada por desfecho |
+| Nota | I²=97% ensina "high I² ≠ MA inválida" (heterogeneidade por diversidade). Porém 61 trials = complexo para nível básico |
+
+---
+
+## Candidatos Gemini (busca 2026-03-15, PMIDs verificados)
+
+> Fonte: busca assistida por Gemini com critérios da aula. PMIDs verificados manualmente via PubMed.
+> ⚠️ Gemini errou 2 de 5 PMIDs. Valores abaixo são os corretos.
+
+### G1 — Hanula 2023 — Oseltamivir em influenza ambulatorial
+
+| Campo | Valor |
+|-------|-------|
+| Autores | Hanula R, Bortolussi-Courval É, Mendel A, Ward BJ, Lee TC, McDonald EG |
+| Título | Evaluation of Oseltamivir Used to Prevent Hospitalization in Outpatients With Influenza |
+| Fonte | JAMA Intern Med. 2023;183(10):1097-1104 |
+| PMID | 37306992 ✅ |
+| RCTs | 15 |
+| Participantes | 6.166 (ITTi) |
+| Hospitalização | RR 0,79 (0,48–1,29); NS |
+| Hospitalização (alto risco) | RR 0,65 (0,33–1,28); NS |
+| Náusea (DANO) | RR 1,43 (1,13–1,82) |
+| Vômito (DANO) | RR 1,83 (1,28–2,63) |
+| EA graves | RR 0,71 (0,46–1,08); NS |
+| GRADE | ✅ Variação: baixa/moderada (eficácia), alta (dano GI) |
+| Acesso | JAMA (acesso CAPES). Free PMC |
+| Nota didática | "Quebrando dogma": Tamiflu não previne hospitalização mas causa dano GI. Choosing Wisely. Todo residente prescreve em plantão |
+
+### G2 — McIntyre 2024 — DOAC em FA detectada por dispositivo
+
+| Campo | Valor |
+|-------|-------|
+| Autores | McIntyre WF, Benz AP, Becher N, Healey JS, Granger CB, ..., Kirchhof P, Lopes RD |
+| Título | Direct Oral Anticoagulants for Stroke Prevention in Patients With Device-Detected AF |
+| Fonte | Circulation. 2024 Mar 26;149(13):981-988 |
+| PMID | 37952187 ✅ (Gemini errou: 38205664) |
+| PROSPERO | CRD42023463212 |
+| RCTs | 2 (NOAH-AFNET 6 + ARTESiA) |
+| Participantes | ~6.548 |
+| AVC isquêmico | RR 0,68 (0,50–0,92); certeza **alta** |
+| Composto CV | RR 0,85 (0,73–0,99); certeza **moderada** |
+| Morte CV | RR 0,95 (0,76–1,17); NS; certeza **moderada** |
+| Mortalidade total | RR 1,08 (0,96–1,21); NS; certeza **moderada** |
+| Sangramento maior (DANO) | RR 1,62 (1,05–2,50); certeza **alta**; I²=61% |
+| GRADE | ✅ Explícito: alta (2), moderada (3) |
+| Acesso | Circulation (acesso CAPES) |
+| Nota didática | Espelhamento: benefício AVC ≈ dano sangramento. Forest plot limpo (2 trials). Cenário atual (smartwatch/dispositivo). Apenas 2 RCTs = limitação para ensinar |
+
+### G3 — Yin 2024 — Substituição de sal e desfechos CV
+
+| Campo | Valor |
+|-------|-------|
+| Autores | Yin X, et al. |
+| Título | Long-Term Effect of Salt Substitution for Cardiovascular Outcomes |
+| Fonte | Ann Intern Med. 2024 Apr |
+| PMID | 38588546 (verificação pendente — timeout) |
+| RCTs | 16 |
+| Participantes | 27.995 |
+| Mortalidade total | RR 0,88 (0,82–0,93); certeza **baixa** |
+| Mortalidade CV | RR 0,83; certeza **baixa** |
+| EA graves / hipercalemia | RR 1,04 (0,87–1,25); NS; certeza **muito baixa** |
+| GRADE | ✅ Variação: baixa a muito baixa |
+| Nota didática | Melhor artigo para ensinar "indirectness" do GRADE: p significativo + N enorme + IC estreito, mas GRADE baixo porque 7/8 trials asiáticos (China/Taiwan). Validade externa |
+
+### G4 — Abdul-Aziz 2024 — β-lactâmicos prolongados em sepse
+
+| Campo | Valor |
+|-------|-------|
+| Autores | Abdul-Aziz MH, Hammond NE, Brett SJ, ..., Roberts JA |
+| Título | Prolonged vs Intermittent Infusions of β-Lactam Antibiotics in Adults With Sepsis or Septic Shock |
+| Fonte | JAMA. 2024 Aug 27;332(8):638-648 |
+| PMID | 38864162 ✅ (Gemini errou: 38865173) |
+| PROSPERO | CRD42023399434 |
+| RCTs | 18 |
+| Participantes | 9.108 |
+| Mortalidade 90d | RR 0,86 (CrI 0,72–0,98); I²=21,5%; certeza **alta**; prob posterior 99,1% |
+| Mortalidade UTI | RR 0,84 (CrI 0,70–0,97); certeza **alta** |
+| Cura clínica | RR 1,16 (CrI 1,07–1,31); certeza **moderada** |
+| GRADE | ✅ Alta (2), moderada (1) |
+| Acesso | JAMA (acesso CAPES). Free PMC |
+| ⚠️ Limitações | Framework **bayesiano** como análise primária (CrI, não CI). Sem desfecho de dano claro (EA ~1.0). GRADE com pouca variação (alta/alta/mod) |
+| Nota didática | Muda prática imediatamente (infusão prolongada = padrão). Sepse = core residência. Mas: bayesiano pode confundir nível básico; ensino benefício-dano fica fraco |
+
+### G5 — Bosco 2024 — Eventos CV com inibidores de receptor androgênico em câncer de próstata
+
+| Campo | Valor |
+|-------|-------|
+| Autores | Bosco E (ou Sachdeva — verificar), et al. |
+| Título | Cardiovascular Events and Androgen Receptor Signaling Inhibitors in Advanced Prostate Cancer |
+| Fonte | JAMA Oncol. 2024 |
+| PMID | 38842801 (verificação pendente) |
+| RCTs | 24 |
+| Participantes | 22.166 |
+| Eventos CV grau ≥3 (DANO) | RR 2,10 (1,72–2,55) |
+| HAS severa (DANO) | RR 2,25 |
+| Morte CV (DANO) | RR 2,02 |
+| GRADE | Framework de evidência aplicado à segurança |
+| Nota didática | Ensina farmacovigilância: ler MA para comprovar iatrogenia. Porém: oncologia = menos cotidiano para clínica geral |
+
+---
+
 ## Changelog
 
 | Data | Mudança |
 |------|---------|
+| 2026-03-15d | v4.0 — 5 candidatos Gemini adicionados (PMIDs verificados, 2 corrigidos). Hanula/oseltamivir, McIntyre/DOAC-AF, Yin/sal, Abdul-Aziz/β-lactam, Bosco/próstata-CV. Lucas indeciso entre β-lactam e PAC; slides começam amanhã sem artigo definido |
+| 2026-03-15c | v3.4 — 3 finalistas para âncora adicionados: Pitre/ICM 2025 (corticoides PAC, recomendado), Kolkailah/Cochrane 2024 (VTE), Carson/Cochrane 2025 (transfusão). Decisão: Cochrane = exemplos visuais; âncora preferencialmente não-Cochrane |
+| 2026-03-15b | v3.3 — Musini PMID 41065416 ✅ verificado. Acesso atualizado: Cochrane Library via CAPES (acordo nacional) |
 | 2026-03-15 | v3.2 — Zacharias PMID verificado (37467180 ✅). Higgins & Lopez-Lopez 2025 (I² reflections) adicionado. Header "Candidato a Âncora" (TBD) |
 | 2026-03-14 | v3.1 — Jeyaraj/Cochrane 2026 (ATB não-rifaximin para EH, PMID 41631546 ✅). Mostra dano |
 | 2026-03-14 | v3 — Refs metodológicas (Murad, Guyatt, Dettori). Candidatos âncora top 3 (Zacharias, Valgimigli). PMIDs verificados via PubMed MCP |

@@ -156,7 +156,9 @@
 
 ## FASE 3 — Aplicação (artigo TBD)
 
-> Artigo âncora ainda NÃO definido. Musini 2025 é candidato, não decisão.
+> Artigo âncora em deliberação. Top candidatos: Pitre 2025 (PAC, recomendado) e Abdul-Aziz 2024 (β-lactam).
+> Cochrane reviews reservados para exemplos visuais nas Fases 1-2.
+> Slides 16-17 já prontos (independentes do artigo). Slides 13-15 dependem da escolha.
 > Slides abaixo usam [ARTIGO] como placeholder.
 
 ### Slide 13 — O artigo âncora
@@ -251,7 +253,7 @@
 
 | # | Artigo | Journal | RCTs | N | Desfecho principal | Efeito | GRADE | PMID | Notas |
 |---|--------|---------|------|---|-------------------|--------|-------|------|-------|
-| S1 | Musini 2025 — Anti-HTN ≥60 anos | Cochrane | 16 | 26.795 | Mortalidade total | RR 0,91 (0,85–0,97) | ✅ Alta/Mod/Baixa por desfecho | evidence-db v0 | Full-text indisponível até out/2026. PA 182/95 = aplicabilidade questionável |
+| S1 | Musini 2025 — Anti-HTN ≥60 anos | Cochrane | 16 | 26.795 | Mortalidade total | RR 0,91 (0,85–0,97) | ✅ Alta/Mod/Baixa por desfecho | 41065416 ✅ | Full-text acessível via Cochrane Library (CAPES). PMC embargo até out/2026. PA 182/95 = aplicabilidade questionável |
 | S2 | Zacharias 2023 — Rifaximin para EH | Cochrane | 41 | 4.545 | Mortalidade (rif+NAD vs NAD) | RR 0,69 (0,55–0,86); NNT=22 | ✅ Moderada | 37467180 ✅ | GRADE por desfecho, NNT, I², RoB. Pacote completo. Hepatologia |
 | S3 | Valgimigli 2025 — Clopidogrel vs aspirina | Lancet | 7 | 28.982 | MACCE (5,5 anos) | HR 0,86 (0,77–0,96) | Não explícito | 40902613 ✅ | IPD-MA (mais sofisticada que pairwise). Sem aumento de sangramento. Tema universal |
 
@@ -260,7 +262,7 @@
 | # | Artigo | Journal | RCTs | N | Desfecho principal | Efeito | GRADE | PMID | Notas |
 |---|--------|---------|------|---|-------------------|--------|-------|------|-------|
 | A1 | Aamann 2026 — BCAAs para EH | Cochrane | 18 | 934 | EH | RR 0,79 (0,64–0,96) | ✅ Baixa/Muito Baixa | 41542879 | Hepatologia. Cochrane + GRADE. N pequeno |
-| A2 | Prosty 2025 — ATB profilático em HDA/cirrose | JAMA Intern Med | 14 | 1.322 | Mortalidade (curto vs longo ATB) | RD 0,9% (CrI −2,6 a 4,9) | RoB 2 usado | 40788637 | **Bayesiano** — desafia guideline. Hepatologia. Provocativo |
+| ~~A2~~ | ~~Prosty 2025 — ATB profilático em HDA/cirrose~~ | ~~JAMA Intern Med~~ | ~~14~~ | ~~1.322~~ | — | — | — | ~~40788637~~ | **REMOVIDO:** bayesiano, fora do escopo pairwise |
 | A3 | Suffert 2025 — Propranolol vs EVL (1ª profilaxia) | Hepatol Int | 14 | 1.345 | Sangramento varicoso | RR 1,40 (1,02–1,91) EVL>Prop | Não | 40968192 | Grupo brasileiro. Head-to-head. Sem GRADE |
 | A4 | AlSowaiegh 2026 — Albumina em cirrose descompensada | Hepatol Commun | 68 (56 c/ mortalidade) | — | Mortalidade | OR 0,769 (0,652–0,908) | Não | 41543475 | Ensina "qualidade vs quantidade" (benefício some em trials grandes). Hepatologia |
 | A5 | Soumare 2025 — Corticoides em choque séptico | [verificar journal] | — | — | Mortalidade | [verificar] | — | 41325621 ✅ | Tema clássico clínica médica. Dados completos pendentes |
@@ -278,17 +280,28 @@
 | B5 | β-lactam em sepse 2025 | Prolonged infusion — contínuo vs intermitente | 38864162 ✅ | Sepse = core da residência |
 | B6 | Nicoara-Farca 2024 — TIPS preemptiva IPD-MA | IPD meta-analysis (não pairwise clássica) | 37782566 | Hepatology. Landmark. Mix RCTs + observacional |
 
-### Recomendação do agente (para deliberação do Lucas)
+### Recomendação atualizada (2026-03-15)
 
-**Top 3 para decisão:**
+**Decisões do Lucas:**
+- Área do Lucas ≠ hepatologia (salvar na memória)
+- Cochrane = exemplos visuais (Fases 1-2), não âncora
+- Artigo pode ser de qualquer área (ambulatório ou hospital)
+- Não precisa ser open access (acesso CAPES/USP)
+- Bayesiano removido da lista (Prosty A2)
 
-1. **S2 (Zacharias/Cochrane rifaximin)** — Pacote didático mais completo: Cochrane, GRADE por desfecho, NNT, I², RoB, 41 RCTs. Hepatologia (área do Lucas). Múltiplas comparações pairwise. Abstract aberto. Tem tudo que a aula precisa ensinar.
+**Top 2 para decisão (não-Cochrane):**
 
-2. **S1 (Musini/Cochrane anti-HTN)** — Candidato original. GRADE explícito. Maior N. Mas full-text bloqueado e aplicabilidade questionável (PA 182/95).
+1. **F1 (Pitre 2025 / corticoides PAC)** — RECOMENDADO. ICM Tier 1. 30 RCTs, 7.519 pts. GRADE com variação ideal (alta/moderada/baixa). Benefício + dano claros. PAC = tema universal. Não-Cochrane (contraste). Autores de peso (Rochwerg, Annane). Guideline CCM 2024 já incorporou.
 
-3. **S3 (Valgimigli/Lancet clopidogrel vs aspirina)** — Lancet, N enorme, tema universal. Mas é IPD (não pairwise clássica) e HR (não RR). Sem GRADE explícito.
+2. **G4 (Abdul-Aziz 2024 / β-lactam sepse)** — Alternativa forte. JAMA Tier 1. 18 RCTs, 9.108 pts. Muda prática (infusão prolongada). Sepse = core. MAS: framework bayesiano (CrI, não CI); sem dano claro; GRADE com pouca variação.
 
-**Trade-off principal:** S2 tem melhor fit didático; S1 tem o melhor GRADE; S3 tem o maior impacto clínico.
+**Candidatos Gemini adicionais (dados completos em evidence-db v4.0):**
+- G1 Hanula/oseltamivir (JAMA IM) — "quebrando dogma": sem benefício + dano GI
+- G2 McIntyre/DOAC-AF (Circulation) — espelhamento benefício≈dano, forest limpo
+- G3 Yin/sal (Ann Intern Med) — obra-prima de indirectness/validade externa
+- G5 Bosco/próstata-CV (JAMA Oncol) — farmacovigilância, menos cotidiano
+
+**Trade-off principal:** F1 tem melhor fit didático global; G4 tem maior impacto prático imediato mas sacrifica ensino de dano e usa bayesiano.
 
 ---
 
@@ -318,4 +331,4 @@
 
 ---
 
-## Status: BLUEPRINT v1.5 — 15 slides ativos (Fases 1+2, Interações 1+2, slides 16-17). QA pass completo. State machines (hook, CP1, CP2). Contrato/takehome alinhados. Refs verificadas. Faltam: slides 13-15 (Fase 3 — artigo âncora pendente).
+## Status: BLUEPRINT v1.6 — 15 slides ativos (Fases 1+2, Interações 1+2, slides 16-17). QA pass completo. State machines (hook, CP1, CP2). Contrato/takehome alinhados. Refs verificadas. Âncora em deliberação: Pitre PAC (recomendado) vs Abdul-Aziz β-lactam. Cochrane = exemplos visuais. 8 candidatos compilados (evidence-db v4.0). Slides 13-15 começam amanhã — material genérico + placeholder para dados do artigo.
