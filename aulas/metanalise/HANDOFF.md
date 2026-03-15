@@ -316,15 +316,26 @@
 - [x] CHANGELOG, lessons.md, HANDOFF atualizados
 
 ### Decisões PENDENTES do Lucas (próxima sessão)
-1. **Volume hook:** hero number = 100+ (Epistemonikos PMID 33256642) ou ~146 (PubMed 2021 data)?
-2. **Qualidade hook:** 68% geral (De Santis 2022), 90% cancer (Siemens), range 60-97%, ou campo no label?
-3. **LoE A hook:** 10% cross-societies (JGIM 2025) ou 8,5% ACC/AHA (Fanaroff 2019)?
-4. **Título slide 02:** "Objetivos Educacionais" (override assertion-evidence)?
+1. **Dados do hook:** atualizar os 3 números com refs mais atuais (Tier 1 verificadas via MCP/WebSearch). Possivelmente uma interação a mais no slide (crescimento de volume).
+2. **Título slide 02:** "Objetivos Educacionais" (override assertion-evidence)?
+3. **Slide 02 (hook) — fonte:** família da fonte e tamanho dos dados precisam de ajuste (issue estético identificado pelo Lucas).
+
+### Status visual metanalise (avaliação Lucas fim de sessão)
+- **Scroll:** RESOLVIDO — sem scrollbar
+- **Cores/contraste:** BOM — stage-c funcionando corretamente
+- **Slides 00-02:** esteticamente bons (exceto fonte/tamanho no slide 01 hook — dados)
+- **QA batches 2-6:** pendente
+
+### ALERTA: WT Cirrose com degradação
+- **Scroll:** apareceu scrollbar em cirrose (mesma root cause: `aside.notes` sem CSS + body margin)
+- **Background:** mudou para navy (possível perda de `class="stage-c"` no body, ou merge absorveu mudança indesejada)
+- **Interações:** degradação reportada
+- **Ação:** investigar em sessão na WT cirrose (NÃO consertar aqui — Classe C, worktrees separadas)
 
 ### Pendências para main (Classe B)
-- `shared/css/base.css`: mover `body { margin: 0 }` + `aside.notes { display: none }` para base (todas as aulas)
+- `shared/css/base.css`: mover `body { margin: 0 }` + `aside.notes { display: none }` para base (resolve scroll em TODAS as aulas, incluindo cirrose)
 - `vite.config.js`: auto-detect aula via branch name
 - `deck.js`: processar `data-background-color` (stage-a futuro)
 - `base.css`: fix specificidade `.slide-navy` vs `#deck` (stage-a)
 
-## Última atualização: 2026-03-15j (Scroll fix + auditoria dados hook)
+## Última atualização: 2026-03-15k (notas finais de sessão + alerta cirrose)
