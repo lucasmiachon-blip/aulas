@@ -123,14 +123,6 @@
   max-width: 20ch;
   line-height: 1.2;
 }
-.hook-question-sub {
-  font-family: var(--font-body);
-  font-size: var(--text-body);
-  color: var(--text-on-dark-muted);
-  margin-top: var(--space-md);
-  max-width: 40ch;
-}
-
 /* --- Hook: 2-beat state machine --- */
 .hook-beat-0 {
   opacity: 0;
@@ -348,13 +340,6 @@
   border-radius: var(--radius-md);
   text-align: center;
 }
-.pipeline-number {
-  font-family: var(--font-mono);
-  font-size: var(--text-h2);
-  color: var(--text-on-dark);
-  font-weight: 600;
-  line-height: 1;
-}
 .pipeline-label {
   font-family: var(--font-body);
   font-size: var(--text-small);
@@ -374,43 +359,6 @@
   color: var(--text-on-dark-muted);
   font-size: var(--text-h3);
   flex-shrink: 0;
-}
-
-/* --- Scope layout (objectives: enters / doesn't enter) --- */
-.scope-layout {
-  display: flex;
-  gap: var(--space-lg);
-  flex: 1;
-  align-items: flex-start;
-}
-.scope-col {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-sm);
-}
-.scope-label {
-  font-family: var(--font-body);
-  font-size: var(--text-small);
-  color: var(--text-on-dark-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  padding-bottom: var(--space-xs);
-  border-bottom: 1px solid var(--border-navy);
-}
-.scope-item {
-  font-family: var(--font-body);
-  font-size: var(--text-body);
-  color: var(--text-on-dark);
-  line-height: 1.4;
-  padding: var(--space-sm) var(--space-md);
-  background: var(--bg-navy-mid);
-  border-radius: var(--radius-sm);
-}
-.scope-out .scope-item {
-  color: var(--text-on-dark-muted);
-  background: transparent;
-  border: 1px solid var(--border-navy);
 }
 
 /* --- Anatomy grid (forest plot components) --- */

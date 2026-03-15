@@ -6,15 +6,18 @@
 
 ## Estado atual
 
-- **Fase:** DECK COMPLETO — 18 slides (00-17). Slides 13-15 criados (Fase 3 — Valgimigli 2025). QA infra parametrizada multi-aula. QA loop pendente.
+- **Fase:** DECK COMPLETO — 18 slides (00-17). QA parcial (batch 1 aprovado). Build de producao pendente.
 - **Branch:** feat/metanalise-mvp (worktree wt-metanalise)
 - **Slides no index.html:** 18 (00-title → 01-hook → 02-contrato → 03-checkpoint-1 → 04-rs-vs-ma → 05-pico → 06-abstract → 07-forest-plot → 08-benefit-harm → 09-grade → 10-heterogeneity → 11-fixed-random → 12-checkpoint-2 → 13-ancora → 14-aplicacao → 15-aplicabilidade → 16-absoluto → 17-takehome)
 - **Slides planejados:** 18 (00-17) — ver blueprint.md v1.7
-- **Docs fundacionais:** narrative.md (v2), evidence-db.md (v4.0 — 20+ refs, 8 candidatos âncora), blueprint.md (v1.6), reading-list.md
-- **Vite dev:** port 3032
+- **Docs fundacionais:** narrative.md (v2.2), evidence-db.md (v4.0 — 20+ refs), blueprint.md (v1.7), reading-list.md
+- **_manifest.js:** CRIADO — 18 slides, fases F1/I1/F2/I2/F3
 - **slide-registry.js:** CRIADO — state machines para hook (2-beat), checkpoint-1 (3-beat), checkpoint-2 (4-beat)
 - **Orphan slides:** 0
-- **Artigo âncora:** ✅ DECIDIDO — Valgimigli 2025, Clopidogrel vs Aspirina (Lancet, PMID 40902613). IPD-MA, 7 RCTs, 28.982 pts. Ajustes amanhã
+- **Orphan CSS:** 0 (8 classes removidas: scope-*, pipeline-number, hook-question-sub)
+- **Artigo âncora:** ✅ Valgimigli 2025, Clopidogrel vs Aspirina (Lancet, PMID 40902613). IPD-MA, 7 RCTs, 28.982 pts
+- **lint:slides:** ✅ PASS (zero FAILs)
+- **HEX navy:** #162032 mantido (decisao Lucas — consistencia cross-aula)
 
 ## O que foi feito
 
@@ -70,16 +73,19 @@
 
 ## Caminho crítico — próximas sessões
 
-### Sessão N+1 (imediata) — QA loop
-1. **QA visual** com Vite aberto (Lucas presente)
-2. `npm run lint:slides` — verificar compliance
-3. Decidir HEX navy: `#162032` (atual) vs `#0d1a2d` (canônico design-system)
-4. Inserir exemplos visuais Cochrane (forest plot, GRADE table) se disponíveis
+### Sessão N+1 (imediata) — QA visual batches 2-6
+1. **QA visual batches 2-6** com Vite aberto (batches de 3 slides, tese por slide, checkpoint sim/nao/pq)
+   - Batch 2: slides 03-05 (checkpoint-1, RS vs MA, PICO)
+   - Batch 3: slides 06-08 (abstract, forest plot, beneficio-dano)
+   - Batch 4: slides 09-11 (GRADE, heterogeneidade, fixed-random)
+   - Batch 5: slides 12-14 (checkpoint-2, ancora, aplicacao)
+   - Batch 6: slides 15-17 (aplicabilidade, absoluto, takehome)
+2. Inserir exemplos visuais Cochrane (forest plot, GRADE table) — PDFs em `references/sources/`
 
 ### Sessão N+2
 - QA final (Gate 4 Gemini)
-- Criar `_manifest.js`
-- Build de produção
+- Build de producao
+- Merge para main
 
 ## Bloqueios conhecidos
 
@@ -98,10 +104,9 @@
 
 ## Não fazer ainda
 
-- Não criar _manifest.js (precisa de slides finais)
 - Não tocar em Cirrose
 - Não expandir para NMA, IPD, bayesiana
-- Não inserir dados específicos do artigo âncora nos slides sem confirmação do Lucas
+- Não fazer build de producao antes de QA visual completo
 
 ---
 
@@ -253,4 +258,23 @@
 - HEX navy decision
 - Exemplos visuais Cochrane
 
-## Última atualização: 2026-03-15f (QA infra parametrizada — pronta para metanalise)
+---
+
+## Sessão 2026-03-15g — QA loop parcial + _manifest.js + MD audit
+
+### O que foi feito
+- [x] `npm run lint:slides` — PASS (zero FAILs)
+- [x] HEX navy: decisao #162032 mantido (consistencia cross-aula)
+- [x] CSS orphan audit: 8 classes removidas (scope-layout/col/label/item/out, pipeline-number, hook-question-sub)
+- [x] QA visual batch 1 (slides 00-02): tese por slide, checklist aprovado
+- [x] **_manifest.js CRIADO:** 18 slides, fases F1/I1/F2/I2/F3, headlines, timing, customAnim
+- [x] **references/sources/ CRIADO:** pasta para full-text PDFs + README com convenção de nomes
+- [x] **.gitignore:** PDFs em references/sources/ adicionados
+- [x] **MD audit:** CLAUDE.md aula (status 15→18 slides), evidence-db (Musini→exemplo visual), narrative (changelog v2.2), HANDOFF (caminho critico atualizado)
+
+### O que NÃO foi feito (deliberado)
+- QA visual batches 2-6 — proxima sessao
+- Exemplos visuais Cochrane — requer PDFs em sources/
+- Build de producao — apos QA completo
+
+## Última atualização: 2026-03-15g (QA loop parcial + _manifest.js + MD audit)

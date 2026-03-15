@@ -2,6 +2,18 @@
 
 ## [Unreleased]
 
+### Added (2026-03-15g — Meta-análise QA loop + infra)
+- `aulas/metanalise/slides/_manifest.js`: source of truth — 18 slides, fases F1/I1/F2/I2/F3, headlines, timing, customAnim
+- `aulas/metanalise/references/sources/README.md`: convenção de nomes para full-text PDFs (gitignored)
+- `.gitignore`: `**/references/sources/*.pdf`
+
+### Changed (2026-03-15g — Meta-análise cleanup)
+- `aulas/metanalise/metanalise.css`: removidas 8 classes CSS órfãs (scope-layout/col/label/item/out, pipeline-number, hook-question-sub)
+- `aulas/metanalise/CLAUDE.md`: status atualizado 15→18 slides
+- `aulas/metanalise/references/evidence-db.md`: Musini reclassificado como "exemplo visual" (âncora = Valgimigli)
+- `aulas/metanalise/references/narrative.md`: changelog v2.2 (Valgimigli decidido)
+- `aulas/metanalise/HANDOFF.md`: caminho crítico atualizado (QA batches 2-6 pendentes)
+
 ### Added (2026-03-14 — Classe C guard)
 - `scripts/pre-commit.sh`: hook versionado que bloqueia commits de conteúdo (slides, CSS, JS, references) em `main`. Bypass: `ALLOW_MAIN_CONTENT=1`.
 - `scripts/install-hooks.sh`: atualizado para delegar pre-commit a `scripts/pre-commit.sh` (mesmo padrão do pre-push).

@@ -64,4 +64,4 @@ reading-list.md (paralelo, informa pre-reading)
 
 ## Status
 
-**15 slides ativos (Fases 1+2 + Interações 1+2 + slides 16-17). QA pass feito. slide-registry.js criado. Faltam slides 13-15 (Fase 3 — âncora DECIDIDA: Valgimigli 2025 Lancet clopidogrel vs aspirina). Docs: narrative v2.1, blueprint v1.6, evidence-db v4.0. Próxima sessão: construir slides 13-15 com dados do Valgimigli.**
+**18 slides ativos (deck completo: Fases 1-3 + Interações 1-2). Âncora: Valgimigli 2025 Lancet (PMID 40902613). _manifest.js criado. CSS limpo (8 classes orfas removidas). QA visual batch 1 (slides 00-02) aprovado; batches 2-6 pendentes. Docs: narrative v2.2, blueprint v1.7, evidence-db v4.0.**

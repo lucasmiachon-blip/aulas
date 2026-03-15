@@ -5,7 +5,10 @@
 
 ---
 
-## Candidato a Âncora — Musini et al. 2025 (decisão TBD)
+## Exemplo visual (Fases 1-2) — Musini et al. 2025
+
+> Musini era candidato a âncora. Decisão final: **Valgimigli 2025 (Lancet)** é o artigo âncora (Fase 3).
+> Musini fica como exemplo visual para forest plot e GRADE SoF table (quando full-text disponível).
 
 ### Identificação
 

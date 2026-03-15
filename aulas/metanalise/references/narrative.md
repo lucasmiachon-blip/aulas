@@ -177,5 +177,6 @@ Uma meta-análise não é melhor do que os RCTs que a alimentam. A qualidade da 
 | 2026-03-11 | v0 — bootstrap a partir do memo direcionado |
 | 2026-03-13 | v1 — reestruturado de 4 atos para 3 fases + 2 interações. Artigo desancorado das fases iniciais |
 | 2026-03-13 | v1.1 — revisão de slides existentes concluída. Orphans deletados. Tabela de revisão atualizada |
+| 2026-03-15g | v2.2 — Âncora decidida: Valgimigli 2025 Lancet (PMID 40902613). Fase 3 atualizada com tensões didáticas IPD/HR/GRADE. Slides 13-15 criados |
 | 2026-03-15b | v2.1 — Nota: âncora em deliberação (Pitre PAC ou Abdul-Aziz β-lactam). Cochrane = exemplos visuais. Estrutura narrativa inalterada. Área do Lucas ≠ hepatologia |
 | 2026-03-15 | v2 — convergências Gemini absorvidas: tese central (credibilidade + efeito absoluto), 3 perguntas reformuladas, credibility gap documentado, checkpoint-2 recalibrado para "falso positivo" |
