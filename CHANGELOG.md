@@ -36,6 +36,10 @@
 - `aulas/metanalise/references/narrative.md`: changelog v2.2 (Valgimigli decidido)
 - `aulas/metanalise/HANDOFF.md`: caminho crítico atualizado (QA batches 2-6 pendentes)
 
+### Fixed (2026-03-14 — P0 document scroll + section clipping)
+- `shared/css/base.css`: added `html, body { margin: 0; padding: 0 }` — eliminates 16px document scroll from browser default margins.
+- `shared/css/base.css`: removed `overflow: hidden` from `#slide-viewport > section` (commit 8683c45) — causava clipping de conteúdo no bottom de 5+ slides. Viewport já provê clipping.
+
 ### Added (2026-03-14 — Classe C guard)
 - `scripts/pre-commit.sh`: hook versionado que bloqueia commits de conteúdo (slides, CSS, JS, references) em `main`. Bypass: `ALLOW_MAIN_CONTENT=1`.
 - `scripts/install-hooks.sh`: atualizado para delegar pre-commit a `scripts/pre-commit.sh` (mesmo padrão do pre-push).
