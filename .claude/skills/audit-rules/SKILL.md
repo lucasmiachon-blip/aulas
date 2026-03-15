@@ -34,7 +34,7 @@ Audita os 8 rules files em `.claude/rules/*.md` contra o estado real do projeto.
 ```
 Read: .claude/rules/*.md (8 files)
 Read: tasks/lessons.md
-Read: aulas/cirrose/ERROR-LOG.md (e outras aulas se existirem)
+Read: aulas/{aula}/ERROR-LOG.md (e outras aulas se existirem)
 Glob: .cursor/rules/*.mdc (para check de bloat)
 ```
 

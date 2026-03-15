@@ -34,12 +34,12 @@ Toda operacao de criacao/rename/split/delete DEVE tocar TODAS:
 | 1 | `slides/_manifest.js` | `id` no objeto do slide | `{ id: 's-a1-damico', ... }` |
 | 2 | `slides/NN-slug.html` | `<section id="...">` | `<section id="s-a1-damico">` |
 | 3 | `slide-registry.js` | chave em `customAnimations` | `'s-a1-damico': (slide, gsap) => {` |
-| 4 | `cirrose.css` | seletores `#s-xxx` | `#s-a1-damico .source-tag { }` |
+| 4 | `{aula}.css` | seletores `#s-xxx` | `#s-a1-damico .source-tag { }` |
 | 5 | `references/narrative.md` | coluna Slide na tabela | `| s-a1-damico |` |
 | 6 | `references/evidence-db.md` | referencias a slide ID | `## s-a1-damico` ou inline |
 | 7 | `AUDIT-VISUAL.md` | header de scorecard | `### s-a1-damico (02b-a1-damico.html)` |
 | 8 | `HANDOFF.md` | mencoes em backlog/status | `- h2 assertivo fib4: ...` |
-| 9 | `index.html` | GERADO — `npm run build:cirrose` | nao editar manualmente |
+| 9 | `index.html` | GERADO — `npm run build:{aula}` | nao editar manualmente |
 
 **Superficie 3 (slide-registry.js):** so se o slide TEM customAnimation.
 **Superficie 9 (index.html):** NUNCA editar. Rodar build apos qualquer mudanca.
@@ -52,9 +52,9 @@ Toda operacao de criacao/rename/split/delete DEVE tocar TODAS:
 2. Criar arquivo `slides/NN-slug.html` com `<section id="s-{act}-{slug}">`
 3. Adicionar entrada em `_manifest.js` na posicao correta (ordem = ordem de apresentacao)
 4. Se slide tem animacao custom → adicionar em `slide-registry.js`
-5. Se slide tem CSS especifico → adicionar em `cirrose.css` com seletor `#s-{act}-{slug}`
+5. Se slide tem CSS especifico → adicionar em `{aula}.css` com seletor `#s-{slug}` (ou `#s-{act}-{slug}` se a aula usa acts)
 6. Adicionar linha em `narrative.md` na tabela do ato correspondente
-7. `npm run build:cirrose` → verificar que `index.html` inclui o slide
+7. `npm run build:{aula}` → verificar que `index.html` inclui o slide
 8. `npm run lint:slides` → PASS
 9. Registrar em `CHANGELOG.md`
 
@@ -71,7 +71,7 @@ Ao criar, usar proximo numero disponivel no ato.
 ### Pre-flight
 
 ```bash
-grep -rn "ID_ANTIGO" aulas/cirrose/ --include="*.html" --include="*.js" --include="*.css" --include="*.md"
+grep -rn "ID_ANTIGO" aulas/{aula}/ --include="*.html" --include="*.js" --include="*.css" --include="*.md"
 ```
 
 ### Checklist atomico (TODAS as 9 superficies)
@@ -79,14 +79,14 @@ grep -rn "ID_ANTIGO" aulas/cirrose/ --include="*.html" --include="*.js" --includ
 - [ ] `_manifest.js`: trocar `id` no objeto
 - [ ] `slides/NN-slug.html`: trocar `<section id="...">`
 - [ ] `slide-registry.js`: trocar chave em `customAnimations` (se existir)
-- [ ] `cirrose.css`: trocar TODOS os seletores `#ID_ANTIGO` → `#ID_NOVO`
+- [ ] `{aula}.css`: trocar TODOS os seletores `#ID_ANTIGO` → `#ID_NOVO`
 - [ ] `narrative.md`: trocar na tabela do ato
 - [ ] `evidence-db.md`: trocar referencias
 - [ ] `AUDIT-VISUAL.md`: trocar header do scorecard
 - [ ] `HANDOFF.md`: trocar mencoes
-- [ ] `npm run build:cirrose` → rebuild index.html
+- [ ] `npm run build:{aula}` → rebuild index.html
 - [ ] `npm run lint:slides` → PASS
-- [ ] Verificacao final: `grep -rn "ID_ANTIGO" aulas/cirrose/` retorna ZERO
+- [ ] Verificacao final: `grep -rn "ID_ANTIGO" aulas/{aula}/` retorna ZERO
 
 ### NUNCA renomear arquivo HTML junto com ID
 
@@ -103,7 +103,7 @@ Executar em commits separados para facilitar rollback.
 6. Criar customAnimation para slide B se necessario.
 7. Atualizar `narrative.md`: nova linha para slide B.
 8. Atualizar contagens em HANDOFF/CLAUDE.md (N+1 slides total).
-9. `npm run build:cirrose` + `npm run lint:slides`.
+9. `npm run build:{aula}` + `npm run lint:slides`.
 10. Re-auditar ambos slides em AUDIT-VISUAL.md.
 
 ## 6. Protocolo de DELETE
@@ -111,10 +111,10 @@ Executar em commits separados para facilitar rollback.
 1. Remover de `_manifest.js`.
 2. NAO deletar o arquivo HTML (mover para `slides/_archive/` se quiser).
 3. Remover de `slide-registry.js` (se tinha customAnimation).
-4. Remover seletores CSS em `cirrose.css`.
+4. Remover seletores CSS em `{aula}.css`.
 5. Marcar como removido em `narrative.md` (~~riscado~~ ou removido).
 6. Atualizar contagens em HANDOFF/CLAUDE.md (N-1).
-7. `npm run build:cirrose` + `npm run lint:slides`.
+7. `npm run build:{aula}` + `npm run lint:slides`.
 
 ## 7. Verificacao Automatizada
 
@@ -122,11 +122,13 @@ Executar em commits separados para facilitar rollback.
 
 ```bash
 node -e "
-var m=require('./aulas/cirrose/slides/_manifest.js');
+// Usage: node -e "..." -- {aula}  (ex: node -e "..." -- cirrose)
+var aula=process.argv.pop()||'cirrose';
+var m=require('./aulas/'+aula+'/slides/_manifest.js');
 var fs=require('fs');var p=require('path');
 var ok=0,fail=0;
 m.slides.forEach(function(s){
-  var fp=p.join('aulas/cirrose/slides',s.file);
+  var fp=p.join('aulas',aula,'slides',s.file);
   if(!fs.existsSync(fp)){console.log('MISSING|'+s.id+'|'+s.file);fail++;return}
   var html=fs.readFileSync(fp,'utf8');
   var r=html.match(/id=\x22([^\x22]+)\x22/);
@@ -153,7 +155,10 @@ Se FAIL > 0: **NAO COMMITAR.** Corrigir primeiro.
 
 ## 9. Nomes de arquivo enganosos (debt conhecida)
 
-Estes arquivos tem nomes que NAO correspondem ao ID atual (migracao historica):
+> **Nota:** Esta tabela e especifica da aula `cirrose` (migracao historica de acts).
+> Outras aulas podem ter debt similar — documentar aqui ou no HANDOFF da aula.
+
+Estes arquivos tem nomes que NAO correspondem ao ID atual (migracao historica, aula cirrose):
 
 | Arquivo | ID atual | Porque |
 |---------|----------|--------|

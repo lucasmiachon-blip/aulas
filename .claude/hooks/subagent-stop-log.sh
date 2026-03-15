@@ -25,7 +25,16 @@ console.log(d.cwd||'.');
 " 2>/dev/null)
 
 DATE=$(date '+%Y-%m-%d %H:%M')
-NOTES="$CWD/aulas/cirrose/NOTES.md"
+BRANCH=$(git branch --show-current 2>/dev/null)
+AULA=""
+case "$BRANCH" in
+  *cirrose*)     AULA="cirrose" ;;
+  *metanalise*)  AULA="metanalise" ;;
+  *grade*)       AULA="grade" ;;
+  *osteo*)       AULA="osteoporose" ;;
+  *)             AULA="unknown" ;;
+esac
+NOTES="$CWD/aulas/$AULA/NOTES.md"
 
 # Infer status from last message content
 LOWER_MSG=$(echo "$LAST_MSG" | tr '[:upper:]' '[:lower:]')

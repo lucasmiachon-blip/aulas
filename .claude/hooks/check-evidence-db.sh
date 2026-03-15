@@ -10,8 +10,8 @@ const d=JSON.parse(require('fs').readFileSync('/dev/stdin','utf8'));
 console.log((d.tool_input||{}).file_path||'');
 " 2>/dev/null)
 
-# Only apply to aulas/cirrose/slides/*.html
-if [[ "$FILE_PATH" != *"aulas/cirrose/slides/"* ]] || [[ "$FILE_PATH" != *.html ]]; then
+# Only apply to aulas/*/slides/*.html
+if [[ "$FILE_PATH" != *"aulas/"*"/slides/"* ]] || [[ "$FILE_PATH" != *.html ]]; then
     exit 0
 fi
 
@@ -58,5 +58,7 @@ if [ "$FOUND" = "1" ]; then
 fi
 
 # Block
-echo "Ler evidence-db.md antes de editar slides. Caminho: aulas/cirrose/references/evidence-db.md" >&2
+# Extract aula name from file path
+AULA=$(echo "$FILE_PATH" | node -e "const p=require('fs').readFileSync('/dev/stdin','utf8').trim();const m=p.match(/aulas\/([^\/]+)\//);console.log(m?m[1]:'unknown');" 2>/dev/null)
+echo "Ler evidence-db.md antes de editar slides. Caminho: aulas/$AULA/references/evidence-db.md" >&2
 exit 2

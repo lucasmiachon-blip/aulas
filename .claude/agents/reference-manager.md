@@ -18,7 +18,7 @@ ralph_phase: act
 
 ## RALPH Gate (Act)
 
-Antes de qualquer tarefa: ler `aulas/cirrose/references/CASE.md` para obter dados canônicos do paciente (Seu Antônio).
+Antes de qualquer tarefa: detectar aula via `git branch --show-current` → `feat/{aula}-*`. Ler `aulas/{aula}/CLAUDE.md` para contexto. Se existir `aulas/{aula}/references/CASE.md`, ler para dados canônicos.
 **CASE.md é obrigatório apenas para Cirrose.** Outras aulas podem não ter CASE.md — nesse caso, pular essa leitura.
 
 PMID inválido → STOP, flag + reportar ao Lucas. Retração → remoção imediata + alerta ao Lucas. Escolha de papers → NÃO. Só valida e organiza o que recebe.

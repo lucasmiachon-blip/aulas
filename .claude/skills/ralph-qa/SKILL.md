@@ -10,7 +10,7 @@ argument-hint: "[lecture?] [batch-size=3] [max-iterations=10]"
 
 # Ralph-QA v6 — Opus Loop + Gemini Loop (separados)
 
-Loop de QA para `$ARGUMENTS` (default: `aulas/cirrose/`).
+Loop de QA para `$ARGUMENTS` (default: auto-detectar via `git branch --show-current` → `aulas/{aula}/`).
 Batch: 3 slides. Max iterações por loop: 10.
 
 ## Arquitetura
@@ -192,7 +192,7 @@ e executa `Edit`. Zero ambiguidade, zero string mismatch.
 
 **Prompt para Gemini 3.x Flash/Pro (via MCP):**
 ```
-Masterclass médica — hepatologistas seniores, Brasil. Cirrose Hepática.
+Aula médica — público e tema extraídos de aulas/{aula}/CLAUDE.md.
 Reveal.js Plan C: fundo claro, 1280×720, GSAP ativo.
 Design system: Instrument Serif (títulos) · DM Sans (corpo) · OKLCH tokens.
 Semântica: safe=teal+✓, warning=amber+⚠, danger=red+✕.
@@ -291,7 +291,7 @@ git: commitado
 ## Output final
 
 ```
-## QA-DONE — aulas/cirrose/ — [N] batches · 28 slides
+## QA-DONE — aulas/{aula}/ — [N] batches · [M] slides
 
 Batch 1 (00-02): Opus 2x · Gemini 1x ✓
 Batch 2 (03-05): Opus 1x · Gemini 2x ✓

@@ -22,10 +22,13 @@ ralph_phase: learn
 ## RALPH Gate (Learn) — OBRIGATÓRIO antes de qualquer ação
 
 ```bash
-cat aulas/cirrose/references/CASE.md          # dados canônicos Antônio
-cat aulas/cirrose/HANDOFF.md                  # issues já conhecidos
-tail -50 aulas/cirrose/ERROR-LOG.md           # erros históricos
+# Auto-detectar aula: git branch --show-current → feat/{aula}-mvp → {aula}
+# Ler contexto da aula ativa:
+cat aulas/{aula}/CLAUDE.md                    # escopo, público, constraints
+cat aulas/{aula}/HANDOFF.md                   # issues já conhecidos
+tail -50 aulas/{aula}/ERROR-LOG.md 2>/dev/null # erros históricos (se existir)
 cat docs/slide-pedagogy.md                    # teorias pedagógicas operacionalizadas
+# Se existir: cat aulas/{aula}/references/CASE.md (caso clínico âncora)
 ```
 
 **Loop termina APENAS quando todas 14 dimensões ≥ 9/10 em todos os slides auditados.**
@@ -53,7 +56,7 @@ MAX 3 iterações por slide. Se não atingir após 3 → escalar para Lucas com 
 | ~~`mcp:attention-insight`~~ | **NÃO usar a princípio** — clarity/focus score (sharp fallback ou API paga) |
 | ~~`mcp:frontend-review` (Hyperbolic)~~ | **NÃO usar a princípio** — before/after visual diff via Qwen-VL |
 | `Bash: npm run lint:slides` | Assertion-evidence lint |
-| `Bash: npm run build:cirrose` | Build check |
+| `Bash: npm run build:{aula}` | Build check |
 | `Bash: grep` | HEX literals, px font-size, ul/ol |
 
 ### Avaliação pedagógica via perplexity_reason
@@ -66,7 +69,7 @@ perplexity_reason({
     role: "user",
     content: `
       Você é especialista em design instrucional para educação médica de adultos.
-      Avalie este slide de masterclass para hepatologistas seniores (EASL/AASLD level).
+      Avalie este slide de aula médica para o público-alvo descrito em aulas/{aula}/CLAUDE.md.
 
       SLIDE ID: [id]
       HEADLINE (h2): "[texto do h2]"
@@ -92,8 +95,8 @@ perplexity_reason({
       DIMENSÃO N — ARCO NARRATIVO (Duarte + Assertion-Evidence):
       - O slide tem tensão implícita ou explícita?
       - A resolução da tensão é a mensagem principal?
-      - O slide sabe seu lugar na jornada maior (Act 1: classificar cirrose)?
-      - O H2 seria lido como afirmação clínica verificável por um hepatologista?
+      - O slide sabe seu lugar na jornada maior (ver narrative.md da aula)?
+      - O H2 seria lido como afirmação clínica verificável pelo público-alvo?
 
       Para cada dimensão: nota (0-10) + justificativa em 1 frase + fix específico se < 9.
     `
@@ -229,7 +232,7 @@ PARA CADA slide auditado:
     3. SE alguma nota < 9:
        a. Gerar fix list precisa (critério, nota atual, fix exato)
        b. APLICAR fixes diretamente nos arquivos
-       c. npm run build:cirrose
+       c. npm run build:{aula}
        d. VOLTAR AO PASSO 1
 
   SE iteração = 3 E ainda falhou:
@@ -238,7 +241,7 @@ PARA CADA slide auditado:
 
 **Fixes que o qa-engineer PODE aplicar autonomamente:**
 - Tokens CSS (substituir HEX/OKLCH literal por `var(--*)`)
-- Failsafe `.no-js` / `.stage-bad` em cirrose.css
+- Failsafe `.no-js` / `.stage-bad` em {aula}.css
 - Rename de arquivo (ex: `screening → classify`) + atualizar `_manifest.js`
 - `font-size` px → token
 - `<ul>/<ol>` no corpo → mover para `<aside class="notes">`
@@ -297,7 +300,7 @@ Resolução: 1280×720 (Plan C). Para slides navy (#s-hook): também 1920×1080 
 Só emitido quando TODOS os slides auditados atingem PASS:
 
 ```markdown
-## QA PASS — Cirrose Bloco 1 — [Data]
+## QA PASS — {Aula} — [Data]
 Iterações necessárias: [lista por slide]
 Fixes autônomos aplicados: [lista]
 Escalados para Lucas: [lista]

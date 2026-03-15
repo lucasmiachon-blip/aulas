@@ -214,8 +214,8 @@ Antes de commitar:
 ## 10. Referências de qualidade
 
 Ver detalhes em:
-- `aulas/cirrose/archetypes.css` — 12 archetypes de layout
+- `aulas/{aula}/archetypes.css` — archetypes de layout (se existir)
 - `shared/css/base.css` — todos os tokens
-- `aulas/cirrose/slide-registry.js` — padrões de animação existentes
-- `aulas/cirrose/references/evidence-db.md` — dados clínicos verificados
-- `aulas/cirrose/references/CASE.md` — dados canônicos Antônio
+- `aulas/{aula}/slide-registry.js` — padrões de animação existentes (se existir)
+- `aulas/{aula}/references/evidence-db.md` — dados clínicos verificados
+- `aulas/{aula}/references/CASE.md` — dados canônicos do caso clínico (se existir)

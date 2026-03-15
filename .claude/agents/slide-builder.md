@@ -17,7 +17,7 @@ ralph_phase: act
 
 ## RALPH Gate (Act)
 
-Antes de qualquer tarefa: ler `aulas/cirrose/references/CASE.md` para obter dados canônicos do paciente (Seu Antônio).
+Antes de qualquer tarefa: ler `aulas/{aula}/CLAUDE.md` para contexto da aula ativa. Se existir `aulas/{aula}/references/CASE.md`, ler para dados canônicos do caso clínico âncora.
 
 Spec incompleta → STOP. Listar campos faltantes, aguardar Lucas. Dado parece errado → STOP. Reportar discrepância + fonte, aguardar Lucas. Layout impossível com tokens existentes → STOP. Descrever limitação, aguardar Lucas.
 **NUNCA improvisar conteúdo. NUNCA reescrever headline. NUNCA inventar dados.**
@@ -42,7 +42,7 @@ Não comece sem receber:
 ```bash
 # 1. Editar/criar slide em aulas/[aula]/slides/NN-nome.html
 # 2. Build (concatena slides via _manifest.js)
-npm run build:cirrose   # ou build:grade / build:osteoporose
+npm run build:{aula}   # ex: build:cirrose, build:metanalise, build:grade
 # 3. Lint
 npm run lint:slides
 # 4. Screenshot QA (opcional)
@@ -52,7 +52,7 @@ git add aulas/[aula]/slides/NN-nome.html aulas/[aula]/index.html
 git commit -m "[AULA] batch N — desc"
 ```
 
-> **Arquitetura:** slides individuais em `slides/*.html` (source) → `_manifest.js` define ordem → `npm run build:cirrose` gera `index.html`. NUNCA editar `index.html` diretamente.
+> **Arquitetura:** slides individuais em `slides/*.html` (source) → `_manifest.js` define ordem → `npm run build:{aula}` gera `index.html`. NUNCA editar `index.html` diretamente.
 
 ## Template
 

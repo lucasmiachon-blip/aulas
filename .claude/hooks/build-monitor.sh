@@ -22,17 +22,28 @@ console.log(d.cwd||'.');
 
 # Filter: only build commands
 if [[ "$CMD" != *"npm run build"* ]] && \
-   [[ "$CMD" != *"build:cirrose"* ]] && \
+   [[ "$CMD" != *"build:"* ]] && \
    [[ "$CMD" != *"build-html.ps1"* ]]; then
     exit 0
 fi
 
-NOTES="$CWD/aulas/cirrose/NOTES.md"
+# Auto-detect aula from git branch
+BRANCH=$(git branch --show-current 2>/dev/null)
+AULA=""
+case "$BRANCH" in
+  *cirrose*)     AULA="cirrose" ;;
+  *metanalise*)  AULA="metanalise" ;;
+  *grade*)       AULA="grade" ;;
+  *osteo*)       AULA="osteoporose" ;;
+  *)             AULA="unknown" ;;
+esac
+
+NOTES="$CWD/aulas/$AULA/NOTES.md"
 DATE=$(date '+%Y-%m-%d %H:%M')
 
 # Create NOTES.md if it doesn't exist
 if [ ! -f "$NOTES" ]; then
-    printf "# NOTES — Cirrose\n\n" > "$NOTES"
+    printf "# NOTES — %s\n\n" "$AULA" > "$NOTES"
 fi
 
 if [[ "$EVENT" == "PostToolUseFailure" ]]; then

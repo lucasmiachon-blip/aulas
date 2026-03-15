@@ -5,12 +5,12 @@ version: 2.0.0
 context: fork
 agent: general-purpose
 allowed-tools: Read, Edit, Bash, Grep, Glob, Agent
-argument-hint: "[aula=cirrose] [model=flash|pro] [mode=video|static|both] [max-iterations=3]"
+argument-hint: "[aula=auto-detect] [model=flash|pro] [mode=video|static|both] [max-iterations=3]"
 ---
 
 # Final Pass — Avaliacao de Deck Completo
 
-Deck: `$ARGUMENTS` (default: `aulas/cirrose/`, model: flash, max: 3 iteracoes)
+Deck: `$ARGUMENTS` (default: auto-detectar via `git branch --show-current` → `aulas/{aula}/`, model: flash, max: 3 iteracoes)
 
 ## Pre-requisito
 

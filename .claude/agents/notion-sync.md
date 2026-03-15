@@ -12,7 +12,7 @@ model: sonnet
 
 ## Pré-condição obrigatória
 
-Antes de qualquer tarefa: ler `aulas/cirrose/references/CASE.md` para obter dados canônicos do paciente (Seu Antônio).
+Antes de qualquer tarefa: detectar aula via `git branch --show-current` → `feat/{aula}-*`. Ler `aulas/{aula}/CLAUDE.md` para contexto.
 
 > Scope: **Slides DB only.** References DB sync is handled by `reference-manager`.
 > IDs: read from `docs/SYNC-NOTION-REPO.md` (single source of truth). NEVER hardcode.
@@ -30,11 +30,11 @@ Motivo: Slides DB não possui propriedade `Aula` nem filtros por aula. Operar em
 
 ## Phase 1 — Scan Repo
 
-Read `aulas/cirrose/slides/_manifest.js`:
+Read `aulas/{aula}/slides/_manifest.js`:
 - Extract slide IDs, file paths, archetype classes
 - Note any slide marked with comments like `// NEW` or `// MOVED`
 
-Read `aulas/cirrose/HANDOFF.md`:
+Read `aulas/{aula}/HANDOFF.md`:
 - Extract current pipeline status per slide (if noted)
 
 ## Phase 2 — Query Notion Slides DB

@@ -21,10 +21,10 @@ Este skill automatiza a busca nesses arquivos com 3 passos para eficiência de t
 
 | Arquivo | Contém | Prioridade |
 |---------|--------|-----------|
-| `aulas/cirrose/HANDOFF.md` | Pendências + estado atual | Alta |
-| `aulas/cirrose/NOTES.md` | Decisões técnicas + achados | Alta |
+| `aulas/{aula}/HANDOFF.md` | Pendências + estado atual | Alta |
+| `aulas/{aula}/NOTES.md` | Decisões técnicas + achados | Alta |
 | `tasks/lessons.md` | Padrões aprendidos + anti-padrões | Alta |
-| `aulas/cirrose/CHANGELOG.md` | Histórico verboso de mudanças | Média |
+| `aulas/{aula}/CHANGELOG.md` | Histórico verboso de mudanças | Média |
 | `tasks/todo.md` | Task atual em andamento | Alta |
 | `aulas/grade/HANDOFF.md` | Estado migração GRADE | Contexto |
 | `aulas/osteoporose/HANDOFF.md` | Estado migração Osteoporose | Contexto |

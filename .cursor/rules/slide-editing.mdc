@@ -1,6 +1,6 @@
 ---
-description: "USE WHEN editing Cirrose slide HTML files. Covers tri-mode, Reveal.js, assertion-evidence, interactivity, and animation rules."
-globs: "**/slides/**/*.html,**/cirrose/**/*.html"
+description: "USE WHEN editing slide HTML files (any aula). Covers tri-mode, deck.js, assertion-evidence, interactivity, and animation rules."
+globs: "**/slides/**/*.html,**/aulas/**/*.html"
 alwaysApply: false
 ---
 

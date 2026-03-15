@@ -815,6 +815,16 @@
 .conversion-impact .conversion-nnt { color: var(--safe-on-dark); }
 .conversion-negligible .conversion-nnt { color: var(--text-on-dark-muted); }
 
+/* --- Compare footer: GRADE gap variant (warning callout) --- */
+.compare-footer--gap {
+  color: var(--warning-on-dark);
+  border-top: 2px solid var(--warning-on-dark);
+  padding-top: var(--space-sm);
+}
+
+/* --- Neutral symbol (NS result, no significant difference) --- */
+.symbol-neutral { color: var(--text-on-dark-muted); }
+
 /* --- Take-home: echoes contrato with upgraded content --- */
 .takehome-card {
   flex: 1;

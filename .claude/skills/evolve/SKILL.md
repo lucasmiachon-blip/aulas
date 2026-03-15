@@ -84,8 +84,8 @@ Papel: Arqueólogo do projeto — padrões de erro e aprendizado
 
 LER (em ordem):
   1. tasks/lessons.md
-  2. aulas/cirrose/HANDOFF.md
-  3. aulas/cirrose/NOTES.md (se existir)
+  2. aulas/{aula}/HANDOFF.md
+  3. aulas/{aula}/NOTES.md (se existir)
   4. git log --oneline -30 (últimas decisões)
 
 EXTRAIR:
@@ -166,7 +166,7 @@ Papel: Inspector de ferramentas — qualidade e gaps em tools/scripts
 LER:
   tools/*.js (todos)
   package.json (scripts + deps)
-  aulas/cirrose/scripts/*.js
+  aulas/{aula}/scripts/*.js
 
 EXECUTAR:
   npm outdated

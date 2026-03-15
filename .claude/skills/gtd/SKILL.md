@@ -196,9 +196,9 @@ Exemplos:
 
 Na primeira execucao, popular a partir de fontes existentes:
 
-1. `aulas/cirrose/HANDOFF.md` → itens P0/P1/P2
+1. `aulas/{aula}/HANDOFF.md` → itens P0/P1/P2
 2. `tasks/lessons.md` → itens com status "apply"
-3. `aulas/cirrose/NOTES.md` → decisoes pendentes
+3. `aulas/{aula}/NOTES.md` → decisoes pendentes
 4. MEMORY.md → "deferred" items
 
 Nao duplicar — referenciar: `ver HANDOFF.md #P0-3`

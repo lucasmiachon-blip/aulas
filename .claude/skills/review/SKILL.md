@@ -5,7 +5,7 @@ version: 0.4.0
 context: fork
 agent: general-purpose
 allowed-tools: Read, Grep, Glob, Agent
-argument-hint: "[aula=cirrose] [slide-number?]"
+argument-hint: "[aula=auto-detect] [slide-number?]"
 ---
 
 # Review Slides — Multi-Agent

@@ -116,7 +116,7 @@ Para cada slide com animação, avalie:
 2. A velocidade do countUp dá tempo de absorver o número?
 3. O stagger revela informação na ordem lógica?
 4. Alguma animação parece frívola para o contexto médico?
-Contexto: público = gastroenterologistas seniores, tema = cirrose hepática.
+Contexto: público e tema definidos em aulas/{aula}/CLAUDE.md (consultar antes de avaliar).
 ```
 
 ---

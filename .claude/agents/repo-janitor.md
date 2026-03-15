@@ -13,7 +13,7 @@ model: fast
 
 ## Pré-condição obrigatória
 
-Antes de qualquer tarefa: ler `aulas/cirrose/references/CASE.md` para obter dados canônicos do paciente (Seu Antônio).
+Antes de qualquer tarefa: detectar aula via `git branch --show-current` → `feat/{aula}-*`. Ler `aulas/{aula}/CLAUDE.md` para contexto.
 
 ## Mode: REPORT ONLY (default)
 
@@ -21,9 +21,9 @@ Audit and report. NEVER modify files unless user passes `--fix` after reviewing 
 
 ## Phase 1 — Manifest vs Disk
 
-Read `aulas/cirrose/slides/_manifest.js`.
+Read `aulas/{aula}/slides/_manifest.js`.
 Extract all slide IDs and file paths referenced.
-List all `aulas/cirrose/slides/*.html` on disk.
+List all `aulas/{aula}/slides/*.html` on disk.
 
 | File | In manifest? | Suggested action |
 |------|-------------|-----------------|
@@ -32,7 +32,7 @@ List all `aulas/cirrose/slides/*.html` on disk.
 
 ## Phase 2 — Orphan MDs
 
-List all `*.md` recursively under `aulas/cirrose/`.
+List all `*.md` recursively under `aulas/{aula}/`.
 For each MD, check if referenced by:
 - Any other MD (grep for filename)
 - CLAUDE.md (root or aula-specific)
@@ -61,7 +61,7 @@ List all. Do not delete.
 
 ## Phase 5 — Dead CSS Selectors (lightweight)
 
-For each class in `cirrose.css` that starts with a slide-specific prefix (e.g., `.damico-`, `.hook-`, `.pathway-`):
+For each class in `{aula}.css` that starts with a slide-specific prefix:
 - Check if any HTML in `slides/` or `slide-registry.js` references it
 - Flag selectors with zero references
 
@@ -89,5 +89,5 @@ REPORT COMPLETE — review before passing --fix
 
 Execute ONLY actions marked "delete" in the reviewed report.
 Confirm each path before deletion.
-After all deletions: `npm run build:cirrose` to verify build still works.
+After all deletions: `npm run build:{aula}` to verify build still works.
 Commit: `chore: repo-janitor cleanup — N files removed`

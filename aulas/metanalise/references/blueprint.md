@@ -161,32 +161,38 @@
 > Slides 16-17 já prontos (independentes do artigo). Slides 13-15 dependem da escolha.
 > Slides abaixo usam [ARTIGO] como placeholder.
 
-### Slide 13 — O artigo âncora
+### Slide 13 — O artigo âncora (Valgimigli 2025)
 
 - **Fase:** 3
-- **Função:** ancorar aplicação em artigo real
-- **Assertion:** "[TBD — assertion depende do artigo escolhido]"
+- **Função:** ancorar aplicação em artigo real — primeiro slide que nomeia artigo específico
+- **Assertion:** "Clopidogrel reduziu eventos cardiovasculares vs aspirina em prevenção secundária — 7 RCTs e 28.982 pacientes com dados individuais"
 - **Risco cognitivo:** discutir MA no vácuo → desconexão clínica
-- **Evidência:** [ARTIGO TBD]
-- **Status:** A CRIAR — 03-ancora.html deletado (era Musini-specific). Recriar quando artigo âncora definido
+- **Evidência:** Valgimigli et al. Lancet 2025;406(10508):1091-1102. PMID 40902613
+- **Layout:** anchor-card (citação AMA) + metric-grid (IPD, 7 RCTs, 28.982 pts, 2,3a follow-up)
+- **Nota didática:** IPD ≠ pairwise — explicar em notes que os princípios de leitura são os mesmos
+- **Status:** ✅ FEITO (13-ancora.html) — anchor-card + metric-grid, notes explicam IPD e HR
 
-### Slide 14 — PICO + resultados do artigo
+### Slide 14 — Resultados + framework aplicado
 
 - **Fase:** 3
-- **Função:** aplicar PICO e leitura de resultados ao artigo real
-- **Assertion:** "[TBD — depende do artigo]"
-- **Risco cognitivo:** saber o conceito mas não saber aplicar
-- **Evidência:** [ARTIGO TBD]
-- **Status:** NOVO — unir PICO + resultados do artigo escolhido
+- **Função:** aplicar framework (benefício-dano, GRADE) ao artigo real — expor lacuna GRADE
+- **Assertion:** "MACCE caiu 14% com clopidogrel, sem aumento de sangramento — mas certeza GRADE não foi avaliada"
+- **Risco cognitivo:** aceitar resultado sem avaliar certeza; confiar no diamante porque é Lancet
+- **Evidência:** Valgimigli et al. Lancet 2025. PMID 40902613. MACCE HR 0,86 (0,77–0,96). Sangramento HR 0,94 (0,74–1,21) NS
+- **Layout:** compare-layout (benefício ✓ vs dano ○) + compare-footer--gap (GRADE warning)
+- **Nota didática:** "Mesmo o Lancet pode omitir GRADE" — valida pergunta 2 do takehome
+- **Status:** ✅ FEITO (14-aplicacao.html) — compare-layout com dados reais + gap callout
 
 ### Slide 15 — Aplicabilidade
 
 - **Fase:** 3
-- **Função:** o salto de "funciona?" para "funciona para meu paciente?"
-- **Assertion:** "[TBD — ex: A PA média dos estudos era 182/95 e a maioria usou tiazídico — sua população é diferente?]"
+- **Função:** o salto de "funciona?" para "funciona para meu paciente?" — callback ao PICO (slide 05)
+- **Assertion:** "Prevenção secundária de DAC, seguimento mediano 2,3 anos — antes de adotar, verifique se seu paciente se encaixa"
 - **Risco cognitivo:** aplicar resultado de MA sem questionar validade externa
-- **Evidência:** [ARTIGO TBD]
-- **Status:** NOVO
+- **Evidência:** Valgimigli et al. Lancet 2025. PMID 40902613
+- **Layout:** pico-grid (callback ao slide 05) com conteúdo aplicado ao artigo
+- **Nota didática:** cada letra PICO agora tem dados reais + pergunta de aplicabilidade
+- **Status:** ✅ FEITO (15-aplicabilidade.html) — pico-grid com dados Valgimigli + perguntas de validade externa
 
 ### Slide 16 — Efeito relativo vs. absoluto
 
@@ -331,4 +337,4 @@
 
 ---
 
-## Status: BLUEPRINT v1.6 — 15 slides ativos (Fases 1+2, Interações 1+2, slides 16-17). QA pass completo. State machines (hook, CP1, CP2). Contrato/takehome alinhados. Refs verificadas. Âncora em deliberação: Pitre PAC (recomendado) vs Abdul-Aziz β-lactam. Cochrane = exemplos visuais. 8 candidatos compilados (evidence-db v4.0). Slides 13-15 começam amanhã — material genérico + placeholder para dados do artigo.
+## Status: BLUEPRINT v1.7 — 18 slides ativos (deck completo). Âncora: Valgimigli 2025 Lancet (PMID 40902613). Slides 13-15 criados com dados reais. QA loop pendente.

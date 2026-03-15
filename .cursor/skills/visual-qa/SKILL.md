@@ -20,7 +20,7 @@ description: Use when testing, reviewing, or doing QA on slides. Runs visual che
 
 ```
 Siga .claude/agents/qa-engineer.md. Auditar slide [ID].
-URL local: http://localhost:3000/aulas/cirrose/
+URL local: http://localhost:{port}/aulas/{aula}/ (verificar porta no output do Vite)
 Viewport: 1280x720. Reportar com scorecard 14 dimensões (H,T,E,C,V,K,S,M,I,D,A,L,P,N).
 ```
 

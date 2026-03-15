@@ -6,10 +6,10 @@
 
 ## Estado atual
 
-- **Fase:** Fases 1+2 completas + Interações 1+2 + slides 16-17. QA pass feito. Faltam slides 13-15 (Fase 3 — artigo âncora em deliberação).
+- **Fase:** DECK COMPLETO — 18 slides (00-17). Slides 13-15 criados (Fase 3 — Valgimigli 2025). QA infra parametrizada multi-aula. QA loop pendente.
 - **Branch:** feat/metanalise-mvp (worktree wt-metanalise)
-- **Slides no index.html:** 15 (00-title → 01-hook → 02-contrato → 03-checkpoint-1 → 04-rs-vs-ma → 05-pico → 06-abstract → 07-forest-plot → 08-benefit-harm → 09-grade → 10-heterogeneity → 11-fixed-random → 12-checkpoint-2 → [13-15 TBD] → 16-absoluto → 17-takehome)
-- **Slides planejados:** 18 (00-17) — ver blueprint.md v1.6
+- **Slides no index.html:** 18 (00-title → 01-hook → 02-contrato → 03-checkpoint-1 → 04-rs-vs-ma → 05-pico → 06-abstract → 07-forest-plot → 08-benefit-harm → 09-grade → 10-heterogeneity → 11-fixed-random → 12-checkpoint-2 → 13-ancora → 14-aplicacao → 15-aplicabilidade → 16-absoluto → 17-takehome)
+- **Slides planejados:** 18 (00-17) — ver blueprint.md v1.7
 - **Docs fundacionais:** narrative.md (v2), evidence-db.md (v4.0 — 20+ refs, 8 candidatos âncora), blueprint.md (v1.6), reading-list.md
 - **Vite dev:** port 3032
 - **slide-registry.js:** CRIADO — state machines para hook (2-beat), checkpoint-1 (3-beat), checkpoint-2 (4-beat)
@@ -70,19 +70,16 @@
 
 ## Caminho crítico — próximas sessões
 
-### Sessão N+1 (2026-03-16) — Construir slides 13-15
-1. **Começar slides 13-15** com estrutura genérica + placeholders para dados do artigo
-   - Slide 13: apresentação do artigo (PICO, design, journal) — placeholder para título/dados
-   - Slide 14: aplicação do framework (forest plot, GRADE, benefício-dano) — layout genérico
-   - Slide 15: aplicabilidade / validade externa — layout genérico
-2. **Lucas decide artigo âncora** durante construção (Pitre PAC vs Abdul-Aziz β-lactam)
-3. Inserir dados reais do artigo escolhido nos placeholders
-4. Decidir HEX navy: `#162032` (atual) vs `#0d1a2d` (canônico design-system)
-5. Inserir exemplos visuais Cochrane (forest plot, GRADE table) nos slides das Fases 1-2 quando disponíveis
+### Sessão N+1 (imediata) — QA loop
+1. **QA visual** com Vite aberto (Lucas presente)
+2. `npm run lint:slides` — verificar compliance
+3. Decidir HEX navy: `#162032` (atual) vs `#0d1a2d` (canônico design-system)
+4. Inserir exemplos visuais Cochrane (forest plot, GRADE table) se disponíveis
 
 ### Sessão N+2
-- Fase 3 completa + QA final (incluindo Gate 4 Gemini)
+- QA final (Gate 4 Gemini)
 - Criar `_manifest.js`
+- Build de produção
 
 ## Bloqueios conhecidos
 
@@ -217,4 +214,43 @@
 
 ---
 
-## Última atualização: 2026-03-15d (artigo âncora DECIDIDO: Valgimigli 2025 Lancet clopidogrel vs aspirina)
+---
+
+## Sessão 2026-03-15e — Slides 13-15 criados (Fase 3 completa)
+
+### O que foi feito
+- [x] narrative.md v2.2: Fase 3 atualizada com Valgimigli 2025 (tensões didáticas IPD/HR/GRADE documentadas)
+- [x] blueprint.md v1.7: assertions concretas para slides 13-15, status atualizado
+- [x] **13-ancora.html — NOVO:** anchor-card + metric-grid (IPD, 7 RCTs, 28.982 pts, 2,3a). Notes explicam IPD vs pairwise e HR vs RR
+- [x] **14-aplicacao.html — NOVO:** compare-layout benefício (MACCE HR 0,86) vs dano (sangramento HR 0,94 NS) + GRADE gap callout. Notes ensinam que mesmo Lancet pode omitir GRADE
+- [x] **15-aplicabilidade.html — NOVO:** pico-grid callback (eco do slide 05) com dados Valgimigli aplicados. Notes guiam validade externa
+- [x] metanalise.css: +7 linhas (compare-footer--gap warning, symbol-neutral)
+- [x] index.html: 18 slides ativos (placeholders substituídos)
+
+### O que NÃO foi feito (deliberado)
+- QA loop (lint + visual) — próximo passo, com Lucas presente
+- _manifest.js — após QA
+- HEX navy decision (#162032 vs #0d1a2d)
+- Detalhes populacionais Valgimigli — [TBD] até full-text lido
+- Exemplos visuais Cochrane (forest plot crops) — requer acesso CAPES
+
+---
+
+## Sessão 2026-03-15f — Parametrização QA multi-aula
+
+### O que foi feito
+- [x] **QA infra parametrizada:** 22 arquivos em `.claude/` e `.cursor/` — ZERO caminhos `aulas/cirrose/` hardcoded restantes
+- [x] **Agents:** qa-engineer, slide-builder, verifier, notion-sync, repo-janitor, reference-manager — `{aula}` auto-detect via `git branch`
+- [x] **Skills:** ralph-qa, final-pass, review, visual-qa, mem-search, gtd, evolve, audit-rules, new-slide, slide-frontend-ux, export — parametrizados
+- [x] **Hooks:** build-monitor, check-evidence-db, subagent-stop-log — auto-detect branch → aula
+- [x] **Rules:** slide-identity (13 refs → multi-aula), motion-qa (audiência → CLAUDE.md), slide-editing.mdc (glob expandido)
+- [x] settings.json hooks (já aula-agnosticos do merge)
+- [x] Refs "cirrose" restantes = somente exemplos documentais (ex: `/export cirrose`, case statements multi-aula)
+
+### O que NÃO foi feito (deliberado)
+- QA loop visual (lint + screenshots) — próxima sessão, com Lucas presente
+- _manifest.js — após QA
+- HEX navy decision
+- Exemplos visuais Cochrane
+
+## Última atualização: 2026-03-15f (QA infra parametrizada — pronta para metanalise)

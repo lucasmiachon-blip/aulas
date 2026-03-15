@@ -112,22 +112,31 @@ O diamante favorece o tratamento. Você muda sua conduta?"
 
 **Slide:** 12-checkpoint-2
 
-### Fase 3 — Aplicação (artigo real — TBD)
+### Fase 3 — Aplicação (Valgimigli 2025 — Lancet)
 
 **Objetivo:** aplicar todos os conceitos em artigo real. Provar que o framework funciona.
 
-**Artigo âncora:** [TBD — Musini 2025 é candidato, não decisão]
+**Artigo âncora:** Valgimigli M, et al. Clopidogrel versus aspirin for secondary prevention of coronary artery disease. Lancet 2025;406(10508):1091-1102. PMID 40902613.
+- IPD-MA, 7 RCTs, 28.982 pacientes
+- MACCE (5,5 anos): HR 0,86 (0,77–0,96)
+- Sangramento maior: HR 0,94 (0,74–1,21) — NS
+- GRADE: não avaliada pelos autores
+
+**Tensões didáticas do artigo:**
+- IPD (não pairwise clássica) — o residente aprende que o mundo real é mais sofisticado
+- HR (não RR) — medida natural para tempo-até-evento; interpretação análoga (direção, IC, nulidade)
+- Sem GRADE — valida a pergunta 2 do takehome ("certeza GRADE?") — mesmo Lancet pode omitir
 
 **Conteúdo:**
-1. O artigo âncora — apresentar a revisão real
-2. Aplicar PICO, forest plot, GRADE ao artigo
-3. Validade externa / aplicabilidade ("vale para meu paciente?")
-4. Efeito relativo vs absoluto (converter RR em NNT/impacto real)
-5. Take-home — as 3 perguntas que o residente leva
+1. Slide 13: O artigo âncora — apresentar PICO, design, números-chave
+2. Slide 14: Aplicar framework — benefício vs dano com dados reais + expor lacuna GRADE
+3. Slide 15: Validade externa / aplicabilidade — PICO do artigo vs seu paciente
+4. Slide 16: Efeito relativo vs absoluto (genérico — já existente)
+5. Slide 17: Take-home — as 3 perguntas que o residente leva (já existente)
 
-**Tensão narrativa:** "agora que sei a teoria, os dados reais são mais complicados do que parecem"
+**Tensão narrativa:** "agora que sei a teoria, os dados reais são mais complicados do que parecem — e mesmo o Lancet não responde todas as perguntas que eu deveria fazer"
 
-**Slides:** 13 a 17 (5 slides de aplicação)
+**Slides:** 13 a 17 (3 novos + 2 existentes)
 
 ---
 
