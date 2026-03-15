@@ -331,6 +331,7 @@
 - **Background:** mudou para navy (possível perda de `class="stage-c"` no body, ou merge absorveu mudança indesejada)
 - **Interações:** degradação reportada
 - **Ação:** investigar em sessão na WT cirrose (NÃO consertar aqui — Classe C, worktrees separadas)
+- **Nota:** main já tem commit `8683c45` com fix de notes/overflow em `shared/css/base.css`, mas abordagem diferente (overflow em viewport+section, notes via `.notes` class). **Não inclui body margin reset.** Se WT cirrose absorveu esse commit e ainda tem scroll, o problema é outro (possivelmente body margin ou regressão em stage-c/template).
 
 ### Pendências para main (Classe B)
 - `shared/css/base.css`: mover `body { margin: 0 }` + `aside.notes { display: none }` para base (resolve scroll em TODAS as aulas, incluindo cirrose)
