@@ -231,3 +231,20 @@ Tokens não importam. Retrabalho é sinal de aprendizado — mas não pode paral
 - Podem ser PMIDs recentes (2025/2026 não indexados) ou fabricados.
 - Alternativa para álcool: PMID 37469291 (18,1% retrospectivo) — verificado.
 - Alternativa para TIPS: conceito presente em Baveno VII (PMID 36646527/35120736) — verificado.
+
+---
+
+## Sessão 14/mar — Classe C guard + doc chain
+
+### Classe C em main = violação silenciosa sem guard
+
+- Act 3 skeletons foram commitados em `main` em vez de na WT `feat/cirrose-mvp` — violação do protocolo worktree.
+- Sem mecanismo automatizado, o erro é inevitável (agente não verifica branch antes de commitar conteúdo).
+- **Fix:** `scripts/pre-commit.sh` bloqueia slides, CSS, JS e references em `main`. Bypass: `ALLOW_MAIN_CONTENT=1`.
+- **Regra:** Todo novo clone ou WT deve rodar `bash scripts/install-hooks.sh` uma vez.
+
+### Cadeia documental: metanalise era invisível
+
+- `aulas/metanalise/CLAUDE.md` existia mas não aparecia em XREF.md nem docs/README.md.
+- Projeto marcado ATIVO no CLAUDE.md root mas sem referência cruzada nos docs de governança.
+- **Regra:** Ao adicionar projeto ATIVO, registrar em: CLAUDE.md (projects), XREF.md (seção dedicada), docs/README.md (HANDOFFs).

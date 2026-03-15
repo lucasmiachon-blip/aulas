@@ -6,13 +6,15 @@
 ## Commands
 
 ```bash
-npm run dev              # Vite hot reload (port 3000)
-npm run build            # Producao
-npm run build:cirrose    # Concatena slides → index.html via _manifest.js
-npm run build:grade      # Idem para GRADE
+npm run dev               # Vite hot reload (port 3000)
+npm run build             # Producao
+npm run build:cirrose     # Concatena slides → index.html via _manifest.js
+npm run build:grade       # Idem para GRADE
 npm run build:osteoporose # Idem para Osteoporose
-npm run preview          # Servir localmente (palco)
-npm run lint:slides      # Assertion-evidence linter
+npm run preview           # Servir localmente (palco)
+npm run lint:slides       # Assertion-evidence linter
+npm run lint:case-sync    # CASE.md ↔ _manifest.js sync
+npm run lint:narrative-sync # narrative.md ↔ _manifest.js sync
 ```
 
 ## Stack
@@ -50,6 +52,8 @@ shared/js/case-panel.js → Panel lateral (cirrose)
 - **Absorb main updates:** Inside WT, `git merge main`. NUNCA `git rebase` em branch publicada.
 - **Cleanup:** `git worktree remove ../aulas-magnas-wt-<slug>` apos merge.
 - **shared/ guard:** WT agents MUST NOT edit files under `shared/`. If a shared change is needed, flag it and defer to a main-branch session.
+- **Classe C guard:** `scripts/pre-commit.sh` bloqueia commits de slides, CSS, JS e references em `main`. Conteudo de aula deve ir pela WT. Bypass emergencial: `ALLOW_MAIN_CONTENT=1 git commit`.
+- **Hook install:** `bash scripts/install-hooks.sh` (rodar uma vez apos clone ou worktree).
 - **Aula CLAUDE.md:** cada `aulas/*/CLAUDE.md` DEVE ter secao `## Worktree` declarando branch esperada e restricoes locais. Sem essa secao, WT agent deve recusar trabalho.
 
 ## Source of Truth por Camada

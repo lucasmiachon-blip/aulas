@@ -2,7 +2,7 @@
 
 > Mapa canônico de dependências entre documentos do projeto.
 > Atualizar ao criar, mover ou deletar qualquer .md.
-> Gerado: 2026-03-07. Última revisão: 2026-03-11.
+> Gerado: 2026-03-07. Última revisão: 2026-03-14.
 
 ---
 
@@ -21,7 +21,7 @@ CLAUDE.md (root)              ← fonte de verdade operacional (absorveu AGENTS.
 ├── .claude/rules/*.md        ← regras detalhadas (prevalecem sobre .cursor se mais completas)
 ├── .claude/hooks/*.sh        ← safety gates determinísticos (100% enforcement)
 ├── .claude/scripts/*.sh      ← worktree lifecycle (init, cleanup)
-├── .claude/skills/*/SKILL.md ← skills invocáveis (13 ativas)
+├── .claude/skills/*/SKILL.md ← skills invocáveis (18 ativas)
 ├── .cursor/rules/*.mdc       ← regras Cursor (quick-ref com globs)
 ├── docs/*.md                 ← referência expandida
 └── aulas/*/HANDOFF.md        ← estado por aula
@@ -103,6 +103,14 @@ CLAUDE.md (root)              ← fonte de verdade operacional (absorveu AGENTS.
 | worktree-init.sh | Cria WT com validação, logging, regras |
 | worktree-cleanup.sh | Valida estado, confirma merge, remove WT |
 
+### scripts/ (git hooks — versionados)
+
+| Arquivo | Função | Wired via |
+|---------|--------|-----------|
+| pre-commit.sh | Guard Classe C em main + lint:slides/case-sync | .git/hooks/pre-commit (delegator) |
+| pre-push.sh | done-gate --strict para aula detectada na branch | .git/hooks/pre-push (delegator) |
+| install-hooks.sh | Instala pre-commit + pre-push em .git/hooks/ | Manual: `bash scripts/install-hooks.sh` |
+
 ### aulas/cirrose/
 
 | Arquivo | Referencia | Referenciado por |
@@ -112,6 +120,12 @@ CLAUDE.md (root)              ← fonte de verdade operacional (absorveu AGENTS.
 | CHANGELOG.md | (append-only — histórico de batches) | ← CLAUDE.md (operational record) |
 | ERROR-LOG.md | (append-only — erros → regras) | ← CLAUDE.md (operational record) |
 | NOTES.md | (log de decisões entre agentes) | ← CLAUDE.md (operational record) |
+
+### aulas/metanalise/
+
+| Arquivo | Referencia | Referenciado por |
+|---------|-----------|-----------------|
+| CLAUDE.md | → CLAUDE.md (root), metanalise-scope.md | ← CLAUDE.md (projects table) |
 
 ### Arquivados (docs/archive/)
 

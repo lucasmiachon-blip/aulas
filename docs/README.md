@@ -24,6 +24,7 @@
 |-----|-----|
 | [aulas/cirrose/HANDOFF.md](../aulas/cirrose/HANDOFF.md) | Pendências Cirrose |
 | [aulas/cirrose/HANDOFF-CLAUDE-AI.md](../aulas/cirrose/HANDOFF-CLAUDE-AI.md) | Claude.ai (paths, pendências) |
+| [aulas/metanalise/CLAUDE.md](../aulas/metanalise/CLAUDE.md) | Regras + estado Meta-análise |
 | aulas/grade/HANDOFF.md | Estado GRADE |
 | aulas/osteoporose/HANDOFF.md | Estado Osteoporose |
 
@@ -74,7 +75,8 @@
 
 1. **aulas/cirrose/HANDOFF.md** — Pendências Cirrose (projeto ativo)
 2. **aulas/cirrose/HANDOFF-CLAUDE-AI.md** — Para Claude.ai (Project Knowledge)
-3. aulas/grade/HANDOFF.md, aulas/osteoporose/HANDOFF.md — Por aula
+3. **aulas/metanalise/CLAUDE.md** — Estado Meta-análise (sem HANDOFF separado; estado na seção WT State)
+4. aulas/grade/HANDOFF.md, aulas/osteoporose/HANDOFF.md — Por aula (frozen)
 
 **Não existe docs/HANDOFF.md** — estado geral está distribuído por aula.
 

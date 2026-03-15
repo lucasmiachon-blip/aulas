@@ -1,5 +1,17 @@
 /**
  * Act 1 Re-Audit QA — Detailed browser navigation with fill ratio + state analysis
+ *
+ * Cobertura das 14 dimensões AUDIT-VISUAL.md:
+ *   E (Layout)      — fillRatio (area-based estimate)
+ *   M (Comunicação)  — wordCount (excluding notes), h2Text, h2Lines
+ *   S (Sofisticação) — sourceTag presence
+ *   D (Dados)        — hasTBD detection
+ *   A (Acessib.)     — panelOverlap, console errors
+ *
+ * NÃO coberto (requer Opus visual ou Gemini):
+ *   H (Hierarquia), T (Tipografia), C (Contraste), V (Visuais),
+ *   K (Consistência), I (Interações retreat/Plan B),
+ *   L (Carga cognitiva), P (Aprendiz adulto), N (Arco narrativo)
  */
 import { chromium } from 'playwright';
 import { mkdirSync } from 'fs';

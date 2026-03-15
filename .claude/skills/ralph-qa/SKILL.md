@@ -1,6 +1,6 @@
 ---
 name: ralph-qa
-description: QA em dois loops separados por batch de 3 slides. Loop 1 (Opus 4.6): lint+constraints até PASS. Loop 2 (Gemini Flash/Pro via MCP): visual audit com video .webm das animações reais até PASS. Ativar quando usuário pedir "qa loop", "rodar qa até passar", "fix all lint", "qa autônomo", "qa batch".
+description: QA em dois loops separados por batch de 3 slides. Loop 1 (Opus 4.6): lint+constraints+estética (14 dimensões AUDIT-VISUAL.md) até PASS. Loop 2 (Gemini Flash/Pro via MCP): visual audit com video .webm das animações reais até PASS. Ativar quando usuário pedir "qa loop", "rodar qa até passar", "fix all lint", "qa autônomo", "qa batch".
 version: 6.0.0
 context: fork
 agent: general-purpose
@@ -27,8 +27,11 @@ Para cada batch de 3 slides:
   │  → Subagent Explore: constraint check por slide  │
   │       <h2> asserção? Zero <ul>/<ol>?             │
   │       <aside notes>? E07? var()? fonte/[TBD]?    │
+  │  → Playwright screenshots + métricas             │
+  │  → Opus avalia 14 dimensões (AUDIT-VISUAL.md)    │
+  │       incluindo estética: H,T,V,K,S,P,N          │
   │  → Fix cirúrgico se issues                       │
-  │  → Repeat até 0 issues                           │
+  │  → Repeat até todas 14 dim >= 9                  │
   │                                                  │
   │  Completion: "OPUS-PASS"                         │
   └──────────────────┬───────────────────────────────┘
@@ -59,16 +62,20 @@ Para cada batch de 3 slides:
 **Responsabilidade:** código, constraints, semântica
 
 ```
-WHILE issues > 0 AND iteration < 10:
+WHILE any_dim < 9 AND iteration < 10:
   run: npm run lint:slides -- [slide-a] [slide-b] [slide-c]
   check constraints via subagent Explore (paralelo por slide):
-    - <h2> asserção clínica completa?
-    - Zero <ul>/<ol> no corpo?
-    - <aside class="notes"> com timing?
-    - <section> sem display inline? (E07)
-    - Cores via var() — zero hardcode?
-    - Números com fonte verificada ou [TBD]?
-  IF lint.fails == 0 AND constraints.issues == 0:
+    - <h2> asserção clínica completa? (dim M)
+    - Zero <ul>/<ol> no corpo? (dim M)
+    - <aside class="notes"> com timing? (dim N)
+    - <section> sem display inline? (dim S)
+    - Cores via var() — zero hardcode? (dim C)
+    - Números com fonte verificada ou [TBD]? (dim D)
+  run: node scripts/act1-reaudit.mjs → métricas (dim E, M)
+  Opus avalia 14 dimensões por slide (incluindo estética):
+    - H (hierarquia), T (tipografia), V (visuais), K (consistência)
+    - S (sofisticação), L (carga cognitiva), P (aprendiz adulto), N (narrativa)
+  IF todas 14 dim >= 9:
     output "OPUS-PASS" → exit loop
   ELSE:
     fix_all() — cirúrgico, não reescrever
@@ -253,9 +260,9 @@ NÃO editar nada — você só sugere, Opus executa.
 
 | | Loop 1 (Opus) | Loop 2 (Gemini Flash/Pro) |
 |---|---|---|
-| Domínio | Código, semântica, constraints | Visual, percepção, acessibilidade, animações |
+| Domínio | Código, semântica, constraints + estética (14 dim) | Visual perception, animações reais, second opinion |
 | Input | HTML source | Vídeos .webm (default) ou screenshots .png |
-| Critério | 0 FAILs no lint + constraints | Gemini retorna PASS (confidence ≥80) |
+| Critério | Todas 14 dim >= 9 (AUDIT-VISUAL.md) | Gemini retorna PASS (confidence >=80) |
 | Fix feito por | Opus | Opus (guiado por Gemini spec JSON) |
 | Integração | Claude Code nativo | MCP gemini (automático) ou API script |
 | Custo | $0 (Claude Code) | ~$0.06/pass Pro 3.1 |

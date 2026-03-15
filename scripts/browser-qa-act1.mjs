@@ -2,6 +2,18 @@
  * Browser QA — Adaptive navigation through deck
  * Keeps pressing ArrowRight and screenshots each NEW slide seen.
  * Detects slide ID changes automatically — no hardcoded click counts.
+ *
+ * Cobertura das 14 dimensões AUDIT-VISUAL.md:
+ *   M (Comunicação)  — headlineText, headlineLines, headlineOverflow
+ *   S (Sofisticação) — sourceTagText presence
+ *   D (Dados)        — hasTBD, hasBadPMID (specific check for 32275982)
+ *   A (Acessib.)     — panelOverlap, console errors
+ *   I (Interações)   — flow steps visible/clipped (partial)
+ *
+ * NÃO coberto (requer Opus visual ou Gemini):
+ *   H (Hierarquia), T (Tipografia), E (Layout/fill ratio),
+ *   C (Contraste), V (Visuais), K (Consistência),
+ *   L (Carga cognitiva), P (Aprendiz adulto), N (Arco narrativo)
  */
 import { chromium } from 'playwright';
 import { mkdirSync } from 'fs';

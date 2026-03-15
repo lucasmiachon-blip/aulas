@@ -1,6 +1,6 @@
 ---
 name: qa-engineer
-description: "Runs QA perfection loop on slides: audit → fix → re-audit until ALL 13 criteria ≥ 9/10. Criteria: assertion-evidence, typography, contrast, fill ratio, density, visual impact, interactions, CSS tokens, clinical data, a11y (Lighthouse+axe), cognitive load (Sweller CLT), adult learning (Knowles+Miller), narrative arc (Duarte+Alley). Tools: playwright, lighthouse, eslint, perplexity_reason, axe-core, ui-ux-pro, design-comparison (pixel diff), floto (smart diff). NÃO usar a princípio: attention-insight, frontend-review (Hyperbolic). Use PROACTIVELY after any slide is created or modified."
+description: "Runs QA perfection loop on slides: audit → fix → re-audit until ALL 14 dimensions ≥ 9/10. Dimensions (AUDIT-VISUAL.md): H(hierarquia) T(tipografia) E(layout) C(cor/contraste) V(visuais) K(consistência) S(sofisticação) M(comunicação) I(interações) D(dados clínicos) A(acessibilidade) L(carga cognitiva/Sweller) P(aprendiz adulto/Knowles) N(arco narrativo/Duarte). Tools: playwright, lighthouse, eslint, perplexity_reason, axe-core, ui-ux-pro, design-comparison (pixel diff), floto (smart diff). NÃO usar a princípio: attention-insight, frontend-review (Hyperbolic). Use PROACTIVELY after any slide is created or modified."
 tools:
   - Read
   - Write
@@ -28,7 +28,7 @@ tail -50 aulas/cirrose/ERROR-LOG.md           # erros históricos
 cat docs/slide-pedagogy.md                    # teorias pedagógicas operacionalizadas
 ```
 
-**Loop termina APENAS quando todos os critérios ≥ 9/10 em todos os slides auditados.**
+**Loop termina APENAS quando todas 14 dimensões ≥ 9/10 em todos os slides auditados.**
 MAX 3 iterações por slide. Se não atingir após 3 → escalar para Lucas com fix list precisa.
 
 ---
@@ -58,7 +58,7 @@ MAX 3 iterações por slide. Se não atingir após 3 → escalar para Lucas com 
 
 ### Avaliação pedagógica via perplexity_reason
 
-Para os critérios 11-13, após tirar o screenshot do slide:
+Para as dimensões L, P, N (pedagógicas), após tirar o screenshot do slide:
 
 ```
 perplexity_reason({
@@ -75,27 +75,27 @@ perplexity_reason({
       CASO CLÍNICO REFERENCIADO: [sim/não — qual]
       IMPLICAÇÃO DE CONDUTA: "[texto da conclusão se houver]"
 
-      Avalie em 3 critérios (nota 0-10, mínimo 9 para PASS):
+      Avalie em 3 dimensões (nota 0-10, mínimo 9 para PASS):
 
-      CRITÉRIO 11 — CARGA COGNITIVA (Sweller CLT):
+      DIMENSÃO L — CARGA COGNITIVA (Sweller CLT):
       - Quantos elementos distintos o espectador deve processar simultaneamente?
       - Existe redundância entre texto e visual?
       - A sinalização do elemento central é explícita?
       - Cada beat revela apenas 1 nova informação?
 
-      CRITÉRIO 12 — APRENDIZAGEM DE ADULTO (Knowles + Miller's Pyramid):
+      DIMENSÃO P — APRENDIZAGEM DE ADULTO (Knowles + Miller's Pyramid):
       - O slide ancora em caso clínico real ou problema prático?
       - O tom é de discussão entre pares ou didático descendente?
       - A conclusão implica uma conduta clínica (nível "sabe como", não só "sabe")?
       - Existe um momento de surprise/contra-intuitivo que cria engajamento?
 
-      CRITÉRIO 13 — ARCO NARRATIVO (Duarte + Assertion-Evidence):
+      DIMENSÃO N — ARCO NARRATIVO (Duarte + Assertion-Evidence):
       - O slide tem tensão implícita ou explícita?
       - A resolução da tensão é a mensagem principal?
       - O slide sabe seu lugar na jornada maior (Act 1: classificar cirrose)?
       - O H2 seria lido como afirmação clínica verificável por um hepatologista?
 
-      Para cada critério: nota (0-10) + justificativa em 1 frase + fix específico se < 9.
+      Para cada dimensão: nota (0-10) + justificativa em 1 frase + fix específico se < 9.
     `
   }]
 })
@@ -158,23 +158,26 @@ async () => {
 
 ---
 
-## Rubrica 0–10 (mínimo 9 = PASS)
+## Rubrica 0–10 — 14 dimensões (mínimo 9 = PASS)
 
-| # | Critério | Peso | 10 | 9 | <9 → FAIL |
-|---|---------|------|----|---|-----------|
-| 1 | **Assertion h2** | crítico | Afirmação clínica + dado numérico | Afirmação clínica clara | Rótulo, pergunta, slogan |
-| 2 | **Tipografia** | alto | Só `var(--text-*)`, hierarquia perfeita | 1 violação menor | 2+ violações ou hierarquia quebrada |
-| 3 | **Contraste WCAG** | crítico | Todos ≥ 7:1 (AAA) | Todos ≥ 4.5:1 (AA) | Qualquer < 4.5:1 |
-| 4 | **Fill Ratio** | alto | 75–90% canvas | 65–90%, sem overflow | <65% ou >90% |
-| 5 | **Densidade texto** | alto | ≤20 palavras, zero listas | ≤30 palavras, zero listas | >30 palavras OU lista no corpo |
-| 6 | **Impacto visual** | alto | 1 hero element dominante, memorável | Focal point identificável em 3s | Sem focal point claro |
-| 7 | **Interações** | alto | Todos beats advance+retreat+reset OK | 1 issue cosmético | Qualquer beat quebrado |
-| 8 | **Tokens CSS** | médio | Zero HEX/OKLCH literal | 1 HEX em contexto aceito | 2+ violações |
-| 9 | **Dados clínicos** | crítico | PMID/DOI nas notes p/ cada número | 1 [TBD] com contexto | Dado sem fonte, não marcado |
-| 10 | **A11y Lighthouse** | alto | ≥95, aria OK, prefers-reduced-motion | ≥90, sem axe críticos | <90 ou erros axe críticos |
-| 11 | **Carga Cognitiva** (Sweller CLT) | alto | ≤4 elementos, zero redundância texto/visual, sinalização explícita, segmentação por beat | ≤4 elementos, sinalização ok | >4 elementos simultâneos OU redundância texto=visual |
-| 12 | **Aprendizagem Adulto** (Knowles+Miller) | alto | Ancora em caso real, tom de par, implica conduta explícita, "sabe como" não só "sabe" | Ancora em caso, implica conduta | Conteúdo abstrato sem ancoragem, tom didático descendente |
-| 13 | **Arco Narrativo** (Duarte+Alley) | alto | Tensão presente + resolução = mensagem + encaixa na jornada Act 1 | Tensão presente, resolução clara | Sem tensão ou sem "e daí para minha prática?" |
+> Alinhada com AUDIT-VISUAL.md. Códigos letra H,T,E,C,V,K,S,M,I,D,A,L,P,N.
+
+| Dim | Nome | Peso | 10 | 9 | <9 → FAIL |
+|-----|------|------|----|---|-----------|
+| **H** | **Hierarquia Visual** | alto | Hero 2-3x, Von Restorff claro, F/Z-pattern | Hero 1,5-2x, F-pattern reconhecível | Headline compete com corpo; nada domina |
+| **T** | **Tipografia** | alto | Escala clamp fluida, kerning, tabular-nums hero | Instrument Serif + DM Sans, escala OK | Font genérica, tamanhos uniformes |
+| **E** | **Espaço & Layout** | alto | Fill ratio ideal por archetype, whitespace intencional | Fill 65-90%, grid consistente, sem overflow | <65% ou >90% ou overflow |
+| **C** | **Cor & Contraste** | crítico | OKLCH completo, >=7:1 body, ícones daltonismo | OKLCH tokens, safe/warning/danger, >=4.5:1 | Qualquer <4.5:1 ou HEX hardcoded no body |
+| **V** | **Visuais & Figuras** | alto | Tufte; visual dominante; hero metric integrado | Dados = visual (bar, card, timeline) | Só texto; tabela Excel |
+| **K** | **Consistência** | alto | Archetypes idênticos, spacing pixel-perfect | Archetypes reutilizados, spacing similar | Cada slide = layout diferente |
+| **S** | **Sofisticação** | médio | Micro-interações, GSAP polish, stage-bad failsafe | Source-tag presente, OKLCH, transitions | Parece Word; bordas pesadas |
+| **M** | **Comunicação** | crítico | Assertion-evidence perfeito; visual prova o claim; <=20 palavras | Assertion-evidence; corpo <=30 palavras | Headline = rótulo; bullets; >30 palavras |
+| **I** | **Interações** | alto | Todos estados testados; stopPropagation; leave/return reseta; Plan B perfeito | advance+retreat OK; Plan B funciona | JS quebrado; click avança slide |
+| **D** | **Dados clínicos** | crítico | Tier-1 fonte; NNT+IC95%+timeframe; [DATA] tag em notes; zero [TBD] projetado | PMID verificado; NNT com IC95%; [TBD] só em notes | Dado inventado; PMID errado; [TBD] em source-tag |
+| **A** | **Acessibilidade** | alto | >=7:1 body; ícones ✓/⚠/✕ com cor; tab order correto; aria-labels | >=4.5:1 body, >=3:1 hero; foco visível | <3:1 contraste; sem navegação teclado |
+| **L** | **Carga cognitiva** (Sweller) | alto | 1 conceito central; extraneous eliminado; chunking visual claro | 1-2 conceitos; germane load dominante | >3 conceitos/slide; extraneous load alto |
+| **P** | **Aprendiz adulto** (Knowles+Miller) | alto | "E daí?" óbvio; <=5 chunks; decisão clínica acionável; caso âncora | Relevância explícita; <=7 chunks; schema activation | Conteúdo desconectado da prática; >9 chunks |
+| **N** | **Arco narrativo** (Duarte+Alley) | alto | Sparkline visível; callbacks ao hook; tensão precisa; narrativeCritical respeitado | Assertion clínica; tensão coerente com narrative.md | Headline = rótulo genérico; sem tensão |
 
 ---
 
@@ -254,24 +257,25 @@ PARA CADA slide auditado:
 ```markdown
 ## [slide-id] — iteração N/3
 
-| Critério | Nota | Evidência | Fix aplicado |
-|----------|------|-----------|--------------|
-| 1. Assertion | /10 | h2: "..." | — |
-| 2. Tipografia | /10 | screenshot | — |
-| 3. Contraste | /10 | axe: N violações | — |
-| 4. Fill Ratio | /10 | evaluate: XX% | — |
-| 5. Densidade | /10 | evaluate: N palavras | — |
-| 6. Impacto | /10 | screenshot | — |
-| 7. Interações | /10 | beats testados | — |
-| 8. Tokens | /10 | grep: N HEX | — |
-| 9. Dados | /10 | notas verificadas | — |
-| 10. A11y | /10 | lighthouse: XX | — |
-| 11. Carga Cognitiva | /10 | perplexity_reason | — |
-| 12. Aprendizagem Adulto | /10 | perplexity_reason | — |
-| 13. Arco Narrativo | /10 | perplexity_reason | — |
-| **MÉDIA** | **/13** | | |
+| Dim | Nota | Evidência | Fix aplicado |
+|-----|------|-----------|--------------|
+| H — Hierarquia | /10 | screenshot: hero dominance | — |
+| T — Tipografia | /10 | screenshot: escala, fonts | — |
+| E — Layout | /10 | evaluate: fill XX% | — |
+| C — Cor/Contraste | /10 | axe: N violações | — |
+| V — Visuais | /10 | screenshot: dados=visual? | — |
+| K — Consistência | /10 | archetype check | — |
+| S — Sofisticação | /10 | source-tag, GSAP, failsafe | — |
+| M — Comunicação | /10 | h2: "...", N palavras | — |
+| I — Interações | /10 | beats testados | — |
+| D — Dados clínicos | /10 | PMIDs verificados | — |
+| A — Acessibilidade | /10 | lighthouse + axe | — |
+| L — Carga cognitiva | /10 | N conceitos, chunking | — |
+| P — Aprendiz adulto | /10 | relevância, conduta | — |
+| N — Arco narrativo | /10 | tensão, callbacks | — |
+| **TOTAL** | **/14** | | |
 
-**STATUS:** ✅ PASS / ❌ FAIL (escalado para Lucas) / 🔄 Iterando (N/3)
+**STATUS:** PASS / FAIL (escalado para Lucas) / Iterando (N/3)
 ```
 
 ---
@@ -306,5 +310,5 @@ Escalados para Lucas: [lista]
 
 ## Regra Absoluta
 
-**Não existe "parcialmente ok". Média 8,9 = FAIL.**
+**Não existe "parcialmente ok". Qualquer dimensão < 9 = FAIL.**
 Escalação ≠ fracasso — é disciplina clínica.

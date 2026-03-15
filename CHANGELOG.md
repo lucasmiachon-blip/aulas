@@ -7,6 +7,12 @@
 - `scripts/install-hooks.sh`: atualizado para delegar pre-commit a `scripts/pre-commit.sh` (mesmo padrão do pre-push).
 - `docs/SETUP.md`: seção 1b documentando instalação de hooks.
 
+### Fixed (2026-03-14 — Doc chain hardening)
+- `CLAUDE.md`: adicionados `lint:case-sync` e `lint:narrative-sync` nos Commands; Worktree Protocol com Classe C guard e hook install.
+- `docs/XREF.md`: skills 13→18; seção `scripts/` (git hooks versionados); seção `aulas/metanalise/`; data revisão 03-14.
+- `docs/README.md`: metanalise adicionada em Estado/handoff e HANDOFFs hierarchy.
+- `tasks/lessons.md`: lições Classe C guard + metanalise invisível.
+
 ### Fixed (2026-03-05 — Bloco 1 HTML fixes)
 - `aulas/cirrose/slides/06-a1-etiologias.html` (I4): redesign completo — tabela 3→10 etiologias em grid 2×5 compacto com `etio-grid`; Álcool/MASLD/HCV destacados; `archetype-metrics` adicionado
 - `aulas/cirrose/slides/05-a1-infeccao.html` (I3+S3): `archetype-metrics` adicionado para fill ratio; stagger delay 0.3→0.2

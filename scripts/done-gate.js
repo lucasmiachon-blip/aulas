@@ -45,7 +45,6 @@ if (!existsSync(aulaDir)) {
   console.error(`ERROR: aulas/${aula}/ does not exist.`);
   process.exit(1);
 }
-
 let gate1Pass = true;
 let gate2Warnings = [];
 let gate3Warnings = [];
