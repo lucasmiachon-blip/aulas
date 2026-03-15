@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+### Fixed (2026-03-15h — MD audit para merge seguro)
+- `CLAUDE.md` (root): tabela Projects metanalise 15→18 slides; público generalizado (não só hepatologistas)
+- `aulas/metanalise/CLAUDE.md`: Fase 3 [TBD] → Valgimigli 2025
+- `aulas/metanalise/HANDOFF.md`: bloqueios HEX navy e CSS órfão marcados resolvidos; repo janitor WARN atualizado
+- `aulas/metanalise/references/blueprint.md`: header Fase 3 atualizado (Valgimigli decidido); remoção de "decisão pendente"
+- `docs/README.md`: HANDOFF metanalise adicionado à hierarquia
+- `docs/XREF.md`: seção metanalise expandida (HANDOFF, narrative, evidence-db, blueprint, _manifest.js); manifesto metanalise na tabela canônicos
+
 ### Added (2026-03-15g — Meta-análise QA loop + infra)
 - `aulas/metanalise/slides/_manifest.js`: source of truth — 18 slides, fases F1/I1/F2/I2/F3, headlines, timing, customAnim
 - `aulas/metanalise/references/sources/README.md`: convenção de nomes para full-text PDFs (gitignored)

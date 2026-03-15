@@ -93,14 +93,13 @@
 |----------|---------|------------|
 | ~~Artigo âncora em deliberação~~ | ~~Dados específicos dos slides 13-15~~ | ✅ RESOLVIDO: Valgimigli 2025 (Lancet, clopidogrel vs aspirina, PMID 40902613) |
 | Full-text Musini: PMC embargo até 2026-10-09 | Forest plot e NNT dependem de full-text | ✅ Acessível via Cochrane Library (acordo CAPES/Wiley). PMID 41065416. Musini agora = exemplo visual, não âncora |
-| HEX navy `#162032` vs canônico `#0d1a2d` | Inconsistência cross-aula | Decidir e aplicar batch replace |
+| ~~HEX navy `#162032` vs canônico `#0d1a2d`~~ | ~~Inconsistência cross-aula~~ | ✅ RESOLVIDO: #162032 mantido (decisão Lucas 2026-03-15) |
 | PMIDs Consensus-sourced não verificados | 3 PMIDs (Aamann, AlSowaiegh, Saleh) pendentes PubMed check | Não-bloqueante: esses candidatos não são top. Verificar se algum for promovido |
 | Cochrane exemplos visuais | Forest plots e GRADE tables reais precisam de screenshots/crops | Acessar via CAPES e cropar quando iniciar Fase 3 |
 
 ## Pendências para main (Classe B — não editar na WT)
 
 - **lint-slides.js false positive:** `scripts/lint-slides.js:110` — `data-animate="countUp"` sem `data-target` não pula `<script>` blocks. 2 false positives no index.html built.
-- **CSS órfão no metanalise.css:** classes `scope-*`, `anchor-*`, `metric-*` sem uso após deleção de orphans. Mantidas para potencial reuso na Fase 3.
 
 ## Não fazer ainda
 
@@ -150,7 +149,7 @@
 **Rodada:** main + wt-cirrose + wt-metanalise em paralelo. Resultado wt-metanalise:
 
 - **FAIL [✅ corrigido]:** `docs/XREF.md` linha 80 — link `pipeline/README.md` inexistente. Corrigido para `archive/pipeline/README.md`.
-- **WARN:** 12 slides em `slides/` órfãos (sem `_manifest.js`) — intencional. Criar `SLIDES-STATUS.md` ao iniciar Fase 3.
+- **WARN [✅ resolvido]:** 12 slides em `slides/` órfãos (sem `_manifest.js`) — `_manifest.js` criado (sessão 2026-03-15g).
 - **WARN [✅ corrigido]:** `03-rs-vs-ma.html` renomeado para `04-rs-vs-ma.html` — prefixo 03 não conflita mais com `03-checkpoint-1.html`.
 - **WARN:** 11 classes CSS órfãs em `metanalise.css` (`.scope-*`, `.anchor-*`, `.metric-*`) — retidas para Fase 3. Auditar ao começar.
 

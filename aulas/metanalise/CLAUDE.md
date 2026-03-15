@@ -47,7 +47,7 @@ reading-list.md (paralelo, informa pre-reading)
 2. **Interação 1** (slide 03): checkpoint de engajamento
 3. **Fase 2 — Metodologia** (slides 04-11): conceitos genéricos, sem artigo
 4. **Interação 2** (slide 12): checkpoint de consolidação
-5. **Fase 3 — Aplicação** (slides 13-17): artigo real [TBD]
+5. **Fase 3 — Aplicação** (slides 13-17): Valgimigli 2025 (Lancet, PMID 40902613)
 
 **Regra:** nenhum slide antes da Fase 3 referencia artigo específico.
 

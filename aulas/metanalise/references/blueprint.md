@@ -154,12 +154,11 @@
 
 ---
 
-## FASE 3 — Aplicação (artigo TBD)
+## FASE 3 — Aplicação (Valgimigli 2025)
 
-> Artigo âncora em deliberação. Top candidatos: Pitre 2025 (PAC, recomendado) e Abdul-Aziz 2024 (β-lactam).
+> Artigo âncora: **Valgimigli 2025 — Clopidogrel vs Aspirina (Lancet, PMID 40902613)**. IPD-MA, 7 RCTs, 28.982 pts.
 > Cochrane reviews reservados para exemplos visuais nas Fases 1-2.
-> Slides 16-17 já prontos (independentes do artigo). Slides 13-15 dependem da escolha.
-> Slides abaixo usam [ARTIGO] como placeholder.
+> Slides 13-17 criados com dados reais.
 
 ### Slide 13 — O artigo âncora (Valgimigli 2025)
 
@@ -243,7 +242,7 @@
 
 > Compilado 2026-03-14. Fontes: 3 dossiês Gemini + PubMed MCP + Consensus MCP.
 > PMIDs marcados ✅ = verificados via PubMed. Sem ✅ = Consensus-sourced, verificar antes de usar.
-> Decisão do Lucas pendente. NÃO implementar slides 13-15 até decisão.
+> Decisão: **Valgimigli 2025 (S3)**. Slides 13-15 implementados.
 
 ### Critérios ideais para a aula
 

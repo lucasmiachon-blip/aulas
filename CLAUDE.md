@@ -28,11 +28,11 @@ deck.js (custom navigation) · GSAP 3.12 · Vite 6.x · Vanilla HTML/CSS/JS · O
 | Pasta | Status | CLAUDE.md |
 |-------|--------|-----------|
 | `aulas/cirrose/` | 44 slides, QA visual pendente · **ATIVO** | `aulas/cirrose/CLAUDE.md` |
-| `aulas/metanalise/` | 15 slides (Fases 1-2 + Interações + 16-17), QA pass, Fase 3 pendente · **ATIVO** | `aulas/metanalise/CLAUDE.md` |
+| `aulas/metanalise/` | 18 slides (deck completo), QA parcial (batch 1), build pendente · **ATIVO** | `aulas/metanalise/CLAUDE.md` |
 | `aulas/grade/` | 58/58 migrados · 🧊 FROZEN (Reveal.js legacy, fallback Aulas_core) | `aulas/grade/CLAUDE.md` |
 | `aulas/osteoporose/` | 70/70 migrados · 🧊 FROZEN (Reveal.js legacy, fallback Aulas_core) | `aulas/osteoporose/CLAUDE.md` |
 
-Publico: hepatologistas seniores (Brasil). PT-BR, termos tecnicos EN.
+Publico: medicos (Brasil). Publico varia por aula — ver CLAUDE.md de cada projeto. PT-BR, termos tecnicos EN.
 
 ## Shared Infrastructure
 
