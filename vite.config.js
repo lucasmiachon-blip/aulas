@@ -35,7 +35,7 @@ export default defineConfig({
   base: './',
   server: {
     port: 3000,
-    open: '/aulas/cirrose/index.html',
+    open: '/aulas/metanalise/index.html',
     browser: 'google chrome'
   },
   build: {

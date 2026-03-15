@@ -3,6 +3,10 @@
    Depends: ../../shared/css/base.css (tokens)
    ============================================ */
 
+/* --- Page reset (base.css lacks body reset) --- */
+body { margin: 0; overflow: hidden; }
+aside.notes { display: none; }
+
 /* 720p projection scale bumps (cherry-picked from stage-c) */
 #deck {
   --text-h2:      clamp(32px, 2.4vw, 42px);

@@ -113,6 +113,30 @@
 
 ---
 
+## Sessão QA Metanalise (2026-03-15)
+
+### Toda aula precisa de stage class no body
+
+- `<body>` sem `class="stage-c"` (ou `stage-a`) → tokens `:root` default → cascata de inconsistências
+- Cirrose funcionava porque `index.template.html` já tinha `class="stage-c"` hardcoded
+- Metanalise renderizava white-bg acidental porque `index.html` não tinha stage class
+- **Regra:** Ao criar nova aula, `<body class="stage-c">` é obrigatório. Sem isso, dark tokens (`--text-on-dark`, `--bg-navy`) mantêm valores escuros e o deck renderiza incorretamente em projeção light.
+
+### deck.js ignora data-background-color
+
+- `data-background-color` é convenção Reveal.js. O deck.js custom não processa esse atributo.
+- Slides com `data-background-color="#162032"` ficam com fundo transparente → herdam bg do `#deck`.
+- **Regra:** Em deck.js, usar stage classes + tokens CSS para controlar cores. `data-background-color` é documentação/legacy, não funcional.
+- **Pendência (Classe B):** Implementar suporte a `data-background-color` em deck.js para stage-a/dark mode futuro.
+
+### CSS specificity: `#id` > `.class`
+
+- `#deck h1 { color: var(--text-primary) }` (specificity 1-0-1) sempre ganha de `.slide-navy h1 { color: var(--text-on-dark) }` (0-1-1)
+- Em stage-c isso não causa problema (ambos remapeiam para dark), mas em stage-a causaria
+- **Pendência (Classe B):** Resolver specificity `.slide-navy` vs `#deck` em base.css para stage-a
+
+---
+
 ## Sessão Infra (2026-03-12)
 
 ### Write tool preserva encoding do arquivo original

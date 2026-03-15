@@ -6,7 +6,7 @@
 
 ## Estado atual
 
-- **Fase:** DECK COMPLETO — 18 slides (00-17). QA parcial (batch 1 aprovado). Build de producao pendente.
+- **Fase:** DECK COMPLETO — 18 slides (00-17). QA visual batch 1 PASS (stage-c + scroll fixados). **Dados do hook PENDENTES revisão** (3 numeros a corrigir). Build de producao pendente.
 - **Branch:** feat/metanalise-mvp (worktree wt-metanalise)
 - **Slides no index.html:** 18 (00-title → 01-hook → 02-contrato → 03-checkpoint-1 → 04-rs-vs-ma → 05-pico → 06-abstract → 07-forest-plot → 08-benefit-harm → 09-grade → 10-heterogeneity → 11-fixed-random → 12-checkpoint-2 → 13-ancora → 14-aplicacao → 15-aplicabilidade → 16-absoluto → 17-takehome)
 - **Slides planejados:** 18 (00-17) — ver blueprint.md v1.7
@@ -276,4 +276,55 @@
 - Exemplos visuais Cochrane — requer PDFs em sources/
 - Build de producao — apos QA completo
 
-## Última atualização: 2026-03-15g (QA loop parcial + _manifest.js + MD audit)
+---
+
+## Sessão 2026-03-15i — Fix renderização + QA batch 1 (redo)
+
+### O que foi feito
+- [x] **Root cause identificado:** `index.html` sem `class="stage-c"` no `<body>` → tokens `:root` default → white-bg acidental, texto incorreto, cards navy em contexto light
+- [x] **Fix:** `<body class="stage-c">` em `aulas/metanalise/index.html` — zero risco para shared/ ou cirrose
+- [x] **vite.config.js:** `open` path trocado para `/aulas/metanalise/index.html` (quick fix WT)
+- [x] **Screenshots Playwright:** 8 PNGs batch 1 (00-title, 01-hook, 02-contrato) — beat0, beatFinal, retreat
+- [x] **CSS assessment:** metanalise.css 100% token-based, nenhum ajuste necessário para stage-c
+- [x] **QA integrado batch 1 (REDO):** 14 dimensões, scorecard consolidado — PASS (todas ≥ 8, maioria ≥ 9)
+- [x] lessons.md: 3 lições registradas (stage class obrigatória, deck.js ignora data-background-color, CSS specificity)
+- [x] CHANGELOG atualizado
+
+### WARNs menores (não-bloqueantes)
+- countUp retreat perde sufixo `%` (engine.js pre-existing)
+- Card/surface contrast sutil (4% OKLCH diff) — aceitável para projeção
+- `data-background-color` presente mas ignorado por deck.js — cosmético/legacy
+
+### Pendências para main (Classe B)
+- `vite.config.js`: auto-detect aula via branch name
+- `deck.js`: processar `data-background-color` (stage-a/dark mode futuro)
+- `base.css`: fix specificidade `.slide-navy` vs `#deck` (stage-a)
+
+---
+
+## Sessão 2026-03-15j — Scroll fix + auditoria dados hook
+
+### O que foi feito
+- [x] **Scroll fix:** `body { margin: 0; overflow: hidden; }` em metanalise.css — elimina scrollbar (browser default margin 8px)
+- [x] **Notes hidden:** `aside.notes { display: none; }` em metanalise.css — 18 speaker notes eram renderizadas visíveis (nenhum CSS existia para notes em todo o codebase)
+- [x] **Auditoria dados hook (slide 01):**
+  - "80/dia" = dado de 2019 (Hoffmann PMID 34091022). Em 2021 já ~146/dia. Desatualizado.
+  - "88%" ≠ paper citado (Siemens PMID 33741503 diz 90%, e é só câncer avançado).
+  - "8,5%" correto para ACC/AHA (Fanaroff PMID 30874755), mas slide não especifica scope. JGIM 2025 diz 10% cross-societies.
+  - Lakhlifi 2023 (PMID 37081292): ilusão de competência — sólido, sem mudança.
+- [x] **ERROR-LOG criado:** 4 erros registrados (ERRO-001 a ERRO-004)
+- [x] CHANGELOG, lessons.md, HANDOFF atualizados
+
+### Decisões PENDENTES do Lucas (próxima sessão)
+1. **Volume hook:** hero number = 100+ (Epistemonikos PMID 33256642) ou ~146 (PubMed 2021 data)?
+2. **Qualidade hook:** 68% geral (De Santis 2022), 90% cancer (Siemens), range 60-97%, ou campo no label?
+3. **LoE A hook:** 10% cross-societies (JGIM 2025) ou 8,5% ACC/AHA (Fanaroff 2019)?
+4. **Título slide 02:** "Objetivos Educacionais" (override assertion-evidence)?
+
+### Pendências para main (Classe B)
+- `shared/css/base.css`: mover `body { margin: 0 }` + `aside.notes { display: none }` para base (todas as aulas)
+- `vite.config.js`: auto-detect aula via branch name
+- `deck.js`: processar `data-background-color` (stage-a futuro)
+- `base.css`: fix specificidade `.slide-navy` vs `#deck` (stage-a)
+
+## Última atualização: 2026-03-15j (Scroll fix + auditoria dados hook)

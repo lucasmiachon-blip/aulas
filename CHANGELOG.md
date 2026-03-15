@@ -2,6 +2,20 @@
 
 ## [Unreleased]
 
+### Fixed (2026-03-15j — scroll fix + notes hiding)
+- `aulas/metanalise/metanalise.css`: added `body { margin: 0; overflow: hidden; }` — eliminates scrollbar caused by browser default 8px margin
+- `aulas/metanalise/metanalise.css`: added `aside.notes { display: none; }` — hides 18 speaker notes that were rendered as visible text blocks (no CSS existed for notes in entire codebase)
+
+### Added (2026-03-15j — ERROR-LOG + data audit)
+- `aulas/metanalise/ERROR-LOG.md`: created with 4 errors (ERRO-001 to ERRO-004): stage-c missing, scroll/notes, hook data mismatch, vite config
+- `tasks/lessons.md`: 3 lessons added (stage class required, deck.js ignores data-background-color, CSS specificity #id > .class)
+- Hook data audit: identified 3 data issues — 80/day outdated (2019→2021 ~146/day), 88% doesn't match paper (Siemens=90%, cancer-only), 8.5% domain-specific (ACC/AHA only). Fix pending user decision.
+
+### Fixed (2026-03-15i — stage-c rendering fix)
+- `aulas/metanalise/index.html`: added `class="stage-c"` to `<body>` — fixes white-bg rendering (tokens now remap correctly for Plan C light mode)
+- Root cause: missing stage class → `:root` defaults → `#deck` color won over `.slide-navy`, `data-background-color` ignored by deck.js, cards used dark navy in light context
+- `vite.config.js`: `open` path changed to `/aulas/metanalise/index.html` (WT-scoped quick fix)
+
 ### Fixed (2026-03-15h — MD audit para merge seguro)
 - `CLAUDE.md` (root): tabela Projects metanalise 15→18 slides; público generalizado (não só hepatologistas)
 - `aulas/metanalise/CLAUDE.md`: Fase 3 [TBD] → Valgimigli 2025
