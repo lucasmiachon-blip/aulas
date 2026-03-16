@@ -6,7 +6,7 @@
 
 ## Estado atual
 
-- **Fase:** DECK COMPLETO — 18 slides (00-17). **Layout CSS estável**: h2 alinhados (67px consistente), checkpoints centrados, zero scroll, contraste OK. **Dados do hook PENDENTES revisão** (3 números a corrigir — ERRO-003). Build de produção pendente.
+- **Fase:** DECK COMPLETO — 18 slides (00-17). **Layout CSS estável**: h2 alinhados (67px consistente), checkpoints centrados, zero scroll, contraste OK. **Dados do hook PENDENTES revisão** (3 números a corrigir — ERRO-003). Build de produção pendente. **A/B sync com main concluído** (16/mar): post-merge hook, JS scaling, design-system fix, lessons.md — zero divergência infra.
 - **Branch:** feat/metanalise-mvp (worktree wt-metanalise)
 - **Slides no index.html:** 18 (00-title → 01-hook → 02-contrato → 03-checkpoint-1 → 04-rs-vs-ma → 05-pico → 06-abstract → 07-forest-plot → 08-benefit-harm → 09-grade → 10-heterogeneity → 11-fixed-random → 12-checkpoint-2 → 13-ancora → 14-aplicacao → 15-aplicabilidade → 16-absoluto → 17-takehome)
 - **Slides planejados:** 18 (00-17) — ver blueprint.md v1.7

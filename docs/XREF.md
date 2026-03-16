@@ -41,6 +41,7 @@ CLAUDE.md (root)              ← fonte de verdade operacional (absorveu AGENTS.
 | → docs/SUBAGENTS.md | Extensão |
 | → aulas/cirrose/HANDOFF.md | Estado |
 | → aulas/cirrose/HANDOFF-CLAUDE-AI.md | Estado |
+| → aulas/metanalise/HANDOFF.md | Estado |
 | → tasks/lessons.md | Self-improvement |
 
 ### .claude/rules/

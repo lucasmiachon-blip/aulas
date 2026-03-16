@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+### Changed (2026-03-16d — A/B sync WT↔main)
+- Merged main into feat/metanalise-mvp: post-merge hook (Guard 4), JS deck scaling, design-system flex-start, lessons.md QA Metanalise session.
+- Fixed docs/XREF.md: added metanalise HANDOFF to root CLAUDE.md reference table.
+- Fixed docs/README.md: grade/osteoporose HANDOFFs now use markdown links (consistency).
+- Zero A/B divergence remaining — only Class C (metanalise content) differs from main.
+
 ### Fixed (2026-03-16c — fullscreen zoom + MCP cleanup)
 - `metanalise.css`: `body { zoom: min(calc(100vw / 1280px), calc(100vh / 720px)); }` — deck fills screen on any aspect ratio (16:10, 3:2, etc). Pending for main via base.css.
 - `.cursor/mcp.json`: removed 5 uv/uvx-based MCPs (biomcp, pubmed-simple, zotero, semantic-scholar, arxiv) — Windows Defender blocks uv-spawned Python executables. All npx/node MCPs retained.
