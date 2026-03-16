@@ -196,6 +196,7 @@ aside.notes { display: none; }
   font-size: var(--text-body);
   color: var(--ui-accent);
   margin-top: var(--space-md);
+  margin-inline: auto;
   text-align: center;
   max-width: 40ch;
   opacity: 0;
