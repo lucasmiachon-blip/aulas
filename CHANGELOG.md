@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+### Changed (2026-03-16i — Notion sync completo: Slides + References DB)
+- **Notion Slides DB:** 18/18 slides sincronizados (13 atualizados, 5 criados). Campos: Headline PT, Speaker Notes, Pipeline Status, Visual QA, Tipo, Animação, Checkpoint, Objetivo Cognitivo, Tempo, PMID, Effect Size, IC 95%, GRADE Certainty, NNT/NNH.
+- **Notion References DB:** 25 novas entries criadas + 2 existentes atualizadas (Hoffmann, Lakhlifi). Todas com Citation AMA, PMID, DOI, Year, Journal, Aula, Evidence Level, Tier, Tipo Ref, Relevância.
+- `HANDOFF.md`: sessão 2026-03-16i documentada.
+- Pendente: limpeza duplicata Lakhlifi no Notion References DB.
+
 ### Fixed (2026-03-16h — hook layout: centering + spacing)
 - `metanalise.css`: `.hook-data` container added (flex column, `align-items: center`, `width: 100%`) — verdict centers under numbers.
 - `metanalise.css`: `.hook-data-grid` gets `width: 100%` — grid spans full slide width.

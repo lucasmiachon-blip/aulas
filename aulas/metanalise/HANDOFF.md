@@ -445,7 +445,6 @@ Sequência sugerida: slide 01 → 02 → 03 → ... → 17 (em ordem).
 - [x] `.hook-verdict`: margin-top 80px (separação visual)
 - [x] Revertido override `.stage-c .slide-navy` errôneo (fundo é creme, não navy)
 - [x] Confirmado: Plano C = stage-c = fundo creme. `data-background-color` ignorado por deck.js
-- [x] Notion sync: slides + references atualizados
 
 ### O que NÃO foi feito (deliberado)
 - QA slides 02-17 — próxima sessão
@@ -453,4 +452,27 @@ Sequência sugerida: slide 01 → 02 → 03 → ... → 17 (em ordem).
 
 ---
 
-## Última atualização: 2026-03-16h (hook layout centering + Notion sync)
+## Sessão 2026-03-16i — Notion sync completo (Slides + References DB)
+
+### O que foi feito
+- [x] **Notion Slides DB (18/18 slides):**
+  - 13 pages atualizadas: MA-F1-TITLE, MA-F1-HOOK (corrigido 81% Bojcic + 10% Qureshi), MA-F1-CONTRATO, MA-I1-CP1, MA-F2-PICO, MA-F2-ABSTRACT, MA-F2-FOREST, MA-F2-GRADE, MA-F2-HETERO, MA-F2-FIXRAN, MA-I2-CP2, MA-F3-ABSOLUTO, MA-F3-TAKEHOME
+  - 5 pages criadas: MA-F2-RSVSMA, MA-F2-BENHARM, MA-F3-ANCORA, MA-F3-APLICACAO, MA-F3-APLICABIL
+  - Campos populados: Headline PT, Corpo, Speaker Notes EN, Pipeline Status, Visual QA, Tipo, Animacao, Checkpoint?, Objetivo Cognitivo, Tempo, Posicao no Bloco, PMID, Effect Size, IC 95%, GRADE Certainty, NNT/NNH, Dado Verificado?
+- [x] **Notion References DB (+25 novas entries):**
+  - Core em uso (8): Bojcic, Qureshi, Valgimigli, Musini, Page/PRISMA, Ioannidis, Murad, Guyatt
+  - Apoio (5): Siemens (substituido), Fanaroff (substituido), Niforatos, Bastian, Lakhlifi
+  - Candidatos ancora (10): Zacharias, Jeyaraj, Pitre, Kolkailah, Carson, Hanula, McIntyre, Yin, Abdul-Aziz, Bosco
+  - 2 existentes atualizados: Hoffmann + Lakhlifi (Aula=Meta-analise, Slide=s-hook)
+  - Todas com: Citation AMA, PMID, DOI, Year, Journal, Aula, Bloco, Evidence Level, Tier, Tipo Ref, Relevancia, Leitura, Verified, Key Finding, Slide, Periodo Busca
+- [x] **Cleanup pendente:** 1 duplicata Lakhlifi (nova 325dfe68 vs existente 323dfe68) — limpar na proxima sessao
+- [x] Nenhum bypass de guards. ALLOW_AB_ON_WT=1 usado para CHANGELOG (mecanismo documentado)
+
+### O que NÃO foi feito (deliberado)
+- QA slides 02-17 — próxima sessão (s-contrato é o proximo)
+- Build de produção
+- Limpeza duplicata Lakhlifi no Notion
+
+---
+
+## Última atualização: 2026-03-16i (Notion sync completo)
