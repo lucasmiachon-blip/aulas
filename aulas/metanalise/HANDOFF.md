@@ -374,4 +374,14 @@ Legibilidade e layout CSS praticamente finalizados. Próxima sessão é sobre CO
 4. **Ajuste fino:** fontes, espaçamentos pontuais, timing de animações
 5. Fix base.css em main (zoom, revert safe-center, guards) — prompt entregue ao Lucas
 
-## Última atualização: 2026-03-16b (zoom + Defender + guards)
+### Plano slide-a-slide (pronto para executar)
+Radiografia completa dos 18 slides feita. Prioridades:
+1. **CRITICO:** Slide 01 (hook) — 3 números errados/desatualizados, 0 refs no corpo (ERRO-003)
+2. **ALTO:** Slide 02 (contrato) — titulo "Objetivos Educacionais"? + corpo acima de 30 palavras
+3. **ALTO:** Slide 15 (aplicabilidade) — [TBD] nas notes, corpo acima
+4. **MEDIO:** Slides 03, 07, 12, 13 — PMIDs pendentes, h2 longas, palavras acima
+5. **BAIXO:** Todos F2 — refs genéricas "Cochrane Handbook" sem PMID no corpo
+
+Sequência sugerida: slide 01 → 02 → 03 → ... → 17 (em ordem).
+
+## Última atualização: 2026-03-16b (zoom + guards + plano slide-a-slide)
