@@ -39,9 +39,13 @@ Severidades: CRITICAL (bloqueia projeção), HIGH (prejudica leitura), MEDIUM (e
 - "88% qualidade criticamente baixa" → paper citado (Siemens PMID 33741503) diz 90%, não 88%. E é específico de câncer avançado, não geral.
 - "8,5% LoE A" → correto para ACC/AHA (Fanaroff PMID 30874755), mas slide não especifica que é só cardiologia. ESC = 14,2%. Dado geral (JGIM 2025): 10%.
 **Root cause:** Dados inseridos sem verificação cruzada com o paper original e sem discussão com o usuário.
-**Fix:** PENDENTE — aguardando decisão do Lucas sobre novos números e referências.
+**Fix:** PENDENTE — refs candidatas identificadas (sessão 2026-03-16d):
+- "88%": candidato = Bojcic et al. J Clin Epidemiol 2024, PMID 37931822 (35/43 SRs = 81% criticamente baixas; cross-field, não específico de câncer)
+- "8,5%": candidato = Qureshi et al. JGIM 2025, PMID 41428154 (10% LoE forte em 7.582 recomendações de 23 sociedades médicas EUA, 2019-2023)
+- "80/dia": Hoffmann PMID 34091022 ainda é a melhor fonte — número de 2019; atual (2021) ~146/dia. Decisão de Lucas: manter 80 (ancorar em 2019) ou atualizar.
+- Implementação aguarda decisão do Lucas: qual número final + qual nota contextual no slide.
 **Regra derivada:** (1) Todo dado numérico DEVE ser verificado no paper original (PMID → PubMed → abstract) antes de entrar no slide. (2) Dados devem ser discutidos com o usuário antes de serem implementados. (3) Ano do dado deve ser explicitado quando diferente do ano da aula.
-**Data:** 2026-03-15
+**Data:** 2026-03-15 | Atualizado: 2026-03-16
 
 ### ERRO-004 · MEDIUM · Vite config
 **Descrição:** `npm run dev` abria cirrose em vez de metanalise nesta worktree.

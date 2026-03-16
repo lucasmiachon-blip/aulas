@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+### Changed (2026-03-16d — housekeeping + ERRO-003 research)
+- Deleted `PROMPT-SCALING-MAIN.md` (temporary file, already executed on main + absorbed via merge).
+- `aulas/metanalise/ERROR-LOG.md`: ERRO-003 updated with 2 verified candidate PMIDs (Bojcic 37931822, Qureshi 41428154). Slide implementation pending Lucas decision.
+- `aulas/metanalise/references/evidence-db.md`: added Bojcic 2024 (PMID 37931822) and Qureshi 2025 (PMID 41428154) as hook data candidates (CANDIDATO tag).
+- `aulas/metanalise/HANDOFF.md`: session summary + pending decisions for Lucas documented.
+
 ### Added (2026-03-16 — Max security: 7 Guards + back-port Class B)
 - `scripts/pre-commit.sh`: Guard 5 — bloqueia Classe A/B (governança/infra) em feature branches. Bypass: `ALLOW_AB_ON_WT=1`.
 - `.cursor/rules/slide-identity.mdc`: back-port de cirrose — regra 9-superfícies (176 linhas).

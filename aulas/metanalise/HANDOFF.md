@@ -411,4 +411,28 @@ Sequência sugerida: slide 01 → 02 → 03 → ... → 17 (em ordem).
 - **PROMPT-SCALING-MAIN.md** na raiz da WT — arquivo temporário com instruções para JS scaling + post-merge hook no main. **Pode ser deletado** (já foi executado em main e absorvido na WT via merge).
 - **Plano de merge cirrose→main** preparado — elimina WT cirrose permanentemente, resolve rollbacks recorrentes.
 
-## Última atualização: 2026-03-16c (A/B sync + docs audit + hooks)
+---
+
+## Sessão 2026-03-16d — Housekeeping + pesquisa ERRO-003
+
+### O que foi feito
+- [x] **PROMPT-SCALING-MAIN.md deletado** (arquivo temporário, já usado)
+- [x] **Pesquisa ERRO-003 (dados hook):** 2 PMIDs candidatos verificados via WebSearch/PubMed:
+  - `88%` → candidato: **Bojcic et al. J Clin Epidemiol 2024, PMID 37931822** (81%, cross-field, não câncer-específico)
+  - `8,5%` → candidato: **Qureshi et al. JGIM 2025, PMID 41428154** (10%, 23 sociedades EUA, 7.582 recomendações)
+  - `80/dia` → Hoffmann PMID 34091022 ainda é melhor fonte (2019); 2021 ≈ 146/dia. Decisão de Lucas pendente.
+- [x] ERROR-LOG.md: ERRO-003 atualizado com candidatos
+- [x] evidence-db.md: Bojcic 2024 e Qureshi 2025 adicionados como candidatos (**CANDIDATO**)
+
+### O que NÃO foi feito (deliberado)
+- Slide 01-hook.html: NÃO modificado — aguarda decisão do Lucas sobre números finais
+- QA slide-a-slide 02→17 — próxima sessão
+
+### Decisão pendente para Lucas
+1. **"80/dia":** manter (ancorado em 2019, mais conservador) ou atualizar (~146/dia, 2021)?
+2. **"88%":** trocar Siemens (câncer) por Bojcic 81% (cross-field) com nota contextual?
+3. **"8,5%":** trocar Fanaroff (ACC/AHA 2019) por Qureshi 10% (23 sociedades, 2025)?
+
+---
+
+## Última atualização: 2026-03-16d (PROMPT-SCALING deletado + pesquisa ERRO-003)
