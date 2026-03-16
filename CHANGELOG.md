@@ -7,8 +7,34 @@
 - `.cursor/mcp.json`: removed 5 uv/uvx-based MCPs (biomcp, pubmed-simple, zotero, semantic-scholar, arxiv) — Windows Defender blocks uv-spawned Python executables. All npx/node MCPs retained.
 - Deleted `scripts/fix-defender.ps1` (temporary, already used).
 
+### Fixed (2026-03-16 — JS deck scaling + anti-rollback hook)
+- `shared/css/base.css`: CSS `zoom` substituido por `transform: scale()` via JS. `#deck` agora `position: absolute` centralizado.
+- `shared/js/deck.js`: `scaleDeck()` com `Math.min(w/1280, h/720)` + `translate(-50%,-50%)`. Handles resize + fullscreen.
+- `scripts/post-merge.sh`: Guard 4 — detecta slide count loss E alteracoes de conteudo HTML apos merge (anti-rollback silencioso).
+- `scripts/install-hooks.sh`: instala post-merge hook.
+
 ### Fixed (2026-03-16 — P0 safe-center: elimina clipping simétrico)
 - `shared/css/base.css`: `.slide-inner` `justify-content: center` → `flex-start` + pseudo-elements `::before/::after { flex: 1 0 0px }` para centering seguro. Conteúdo centra quando cabe; quando extravasa, overflow é apenas na base (preserva h2 e "ATO" no topo). 3 slides que tinham overflow marginal (meld, a3-06, app-alb) agora cabem perfeitamente.
+
+### Fixed (2026-03-16 — Fullscreen zoom + letterbox) [SUPERSEDED by JS scaling above]
+- `shared/css/base.css`: zoom simplificado para width-only `calc(100vw / 1280px)` (alinha com metanalise).
+- `shared/css/base.css`: `html { background: var(--bg-black) }` — letterbox preto explícito.
+- `shared/css/base.css`: removido `background: var(--bg-surface)` do body — causava ilusão de "conteúdo cortado" em monitores 16:10 (letterbox cream indistinguível do slide).
+
+### Fixed (2026-03-16 — Full revert of destructive safe-center commit 5222929)
+- `shared/css/base.css`: reverted all 3 destructive rules from commit 5222929:
+  (1) `justify-content: flex-start` → restored to `center`
+  (2) `::before/::after { flex: 1 0 0px }` pseudo-element spacers removed
+  (3) `> * { flex-shrink: 0 }` removed
+  Efeitos: metanalise h2 variava 42-221px; cirrose layout quebrado com scroll/clipping.
+- `shared/css/base.css`: `html { background: #000 }` — letterbox preto ao redor do deck.
+
+### Added (2026-03-16 — 3 worktree guards no pre-commit)
+- `scripts/pre-commit.sh`: Guard 2 — bloqueia edits em `shared/` em worktrees (bypass: `ALLOW_SHARED_EDIT=1`).
+- `scripts/pre-commit.sh`: Guard 3 — bloqueia commit se slide count em disco < manifest (catches silent rollback após merge, bypass: `ALLOW_SLIDE_LOSS=1`).
+
+### Fixed (2026-03-16 — P0 safe-center: elimina clipping simétrico) [REVERTED]
+- `shared/css/base.css`: `.slide-inner` `justify-content: center` → `flex-start` + pseudo-elements. **Totalmente revertido acima** — causava layout quebrado em ambos projetos.
 
 ### Fixed (2026-03-16b — h2 alignment: override base.css safe-center for metanalise)
 - `metanalise.css`: restored `justify-content: center` on `.slide-inner` — base.css safe-center pseudo-elements (`::before/::after { flex: 1 }`) competed with `flex: 1` content components (compare-layout, pico-grid, etc), causing h2 headings to shift 100-180px down and vary between slides

@@ -39,6 +39,7 @@
   --bg-card:     oklch(99% 0.003 258);
   --bg-elevated: oklch(100% 0 0);
   --bg-deep:     oklch(18% 0 0);        /* ≈ #111111 (HEX canônico) */
+  --bg-black:    oklch(0% 0 0);         /* pure black — letterbox */
   --bg-navy:     oklch(22% 0.042 258);
   --bg-navy-mid: oklch(28% 0.035 258);
 
@@ -375,15 +376,17 @@
    DECK CONTAINER + TYPOGRAPHY
    ============================================ */
 
-html, body { margin: 0; padding: 0; }
-
-/* Responsive scale: zoom is broadly supported in modern browsers */
-body { zoom: calc(100vw / 1280px); }
+html { background: var(--bg-black); }
+html, body { margin: 0; padding: 0; overflow: hidden; }
+body { width: 100vw; height: 100vh; }
 
 #deck {
   width: 1280px;
   height: 720px;
-  position: relative;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: center center;
   overflow: hidden;
   font-family: var(--font-body);
   color: var(--text-primary);
@@ -424,21 +427,10 @@ body { zoom: calc(100vw / 1280px); }
 #slide-viewport > section .slide-inner {
   width: 100%; height: 100%;
   padding: 60px 80px;
-  display: flex; flex-direction: column; justify-content: flex-start;
+  display: flex; flex-direction: column; justify-content: center;
   box-sizing: border-box;
 }
 
-/* Safe vertical centering: centers content when it fits,
-   top-aligns when it overflows (prevents symmetric clipping) */
-#slide-viewport > section .slide-inner::before,
-#slide-viewport > section .slide-inner::after {
-  content: '';
-  flex: 1 0 0px;
-}
-
-#slide-viewport > section .slide-inner > * {
-  flex-shrink: 0;
-}
 
 /* --- Typography --- */
 #deck h1, #deck h2 {
@@ -586,8 +578,8 @@ body { zoom: calc(100vw / 1280px); }
    PRINT / EXPORT
    ============================================ */
 @media print {
-  body { zoom: 1 !important; }
-  #deck { transform: none !important; width: 1280px; height: auto; overflow: visible; }
+  body { width: auto; height: auto; overflow: visible; }
+  #deck { position: static; transform: none !important; width: 1280px; height: auto; overflow: visible; }
   #slide-viewport { position: static; }
   #slide-viewport > section {
     opacity: 1 !important;

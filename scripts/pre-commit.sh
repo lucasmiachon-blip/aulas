@@ -86,6 +86,31 @@ if [ "$BRANCH" != "main" ]; then
   fi
 fi
 
+# ── Guard 4: Slide integrity — build must run after content changes ──
+# If slide HTMLs changed but .slide-integrity didn't, the build was skipped.
+# This catches cases where a merge changed slides but nobody ran build:cirrose.
+if [ "$BRANCH" != "main" ]; then
+  SLIDES_STAGED=$(git diff --cached --name-only | grep -E 'aulas/.*/slides/.*\.html$' || true)
+  INTEGRITY_STAGED=$(git diff --cached --name-only | grep -E '\.slide-integrity$' || true)
+
+  if [ -n "$SLIDES_STAGED" ] && [ -z "$INTEGRITY_STAGED" ]; then
+    echo ""
+    echo "╔══════════════════════════════════════════════════════════╗"
+    echo "║  AVISO: Slides mudaram mas build nao rodou!             ║"
+    echo "║  Rode 'npm run build:cirrose' para atualizar            ║"
+    echo "║  o fingerprint .slide-integrity.                        ║"
+    echo "║  Bypass: ALLOW_NO_BUILD=1 git commit                   ║"
+    echo "╚══════════════════════════════════════════════════════════╝"
+    echo ""
+    echo "Slides alterados sem rebuild:"
+    echo "$SLIDES_STAGED" | sed 's/^/  → /'
+    echo ""
+    if [ -z "$ALLOW_NO_BUILD" ]; then
+      exit 1
+    fi
+  fi
+fi
+
 # ── Lints ──
 SLIDES_CHANGED=$(git diff --cached --name-only | grep -E 'aulas/.*/slides/.*\.html$' || true)
 CASE_OR_MANIFEST=$(git diff --cached --name-only | grep -E '(CASE\.md|_manifest\.js)$' || true)

@@ -193,7 +193,7 @@ Referência: Paul Tol color schemes (https://personal.sron.nl/~pault/)
 .slide-inner {
   width: 100%; height: 100%;
   padding: 60px 80px;
-  display: flex; flex-direction: column; justify-content: center;
+  display: flex; flex-direction: column; justify-content: flex-start;
   box-sizing: border-box;
 }
 ```

@@ -35,3 +35,14 @@ PUSHEOF
 
 chmod +x "$HOOKS_DIR/pre-push"
 echo "✓ pre-push hook instalado em $HOOKS_DIR/pre-push"
+
+# ── Post-merge ──
+cat > "$HOOKS_DIR/post-merge" << 'MERGEEOF'
+#!/usr/bin/env bash
+set -e
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+bash "$REPO_ROOT/scripts/post-merge.sh"
+MERGEEOF
+
+chmod +x "$HOOKS_DIR/post-merge"
+echo "✓ post-merge hook instalado em $HOOKS_DIR/post-merge"

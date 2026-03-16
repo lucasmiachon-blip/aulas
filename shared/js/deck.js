@@ -8,7 +8,7 @@
  * State machines attach __hookAdvance / __hookRetreat to the section element.
  * ClickReveal attaches __clickRevealNext to the section element.
  *
- * Scale: body { zoom: calc(100vw / 1280px) } via CSS — no JS scaling.
+ * Scale: transform scale() via scaleDeck() — centered letterbox on any aspect ratio.
  */
 
 let sections = [];
@@ -125,6 +125,17 @@ export function initDeck(viewportSelector = '#slide-viewport') {
   setTimeout(() => {
     dispatch('slide:entered', { currentSlide: sections[0], indexh: 0 });
   }, 100);
+
+  scaleDeck();
+  window.addEventListener('resize', scaleDeck);
+  document.addEventListener('fullscreenchange', scaleDeck);
+}
+
+function scaleDeck() {
+  const deck = document.getElementById('deck');
+  if (!deck) return;
+  const s = Math.min(window.innerWidth / 1280, window.innerHeight / 720);
+  deck.style.transform = `translate(-50%, -50%) scale(${s})`;
 }
 
 export function getCurrentSlide() {
