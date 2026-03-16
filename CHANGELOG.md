@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Changed (2026-03-16e — QA slide-a-slide: s-title)
+- `metanalise.css`: title slide tokens corrigidos para stage-c — `--text-on-dark-*` → `--text-secondary/primary/muted`. Pilares peso 400→500 (legibilidade projetor).
+- `AUDIT-VISUAL.md`: CRIADO — scorecard 14 dimensões, s-title PASS. Pendências Gemini anotadas.
+
 ### Changed (2026-03-16d — housekeeping + ERRO-003 research)
 - Deleted `PROMPT-SCALING-MAIN.md` (temporary file, already executed on main + absorbed via merge).
 - `aulas/metanalise/ERROR-LOG.md`: ERRO-003 updated with 2 verified candidate PMIDs (Bojcic 37931822, Qureshi 41428154). Slide implementation pending Lucas decision.

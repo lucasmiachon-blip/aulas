@@ -43,7 +43,7 @@ aside.notes { display: none; }
 .title-subtitle {
   font-family: var(--font-body);
   font-size: var(--text-h3);
-  color: var(--text-on-dark-muted);
+  color: var(--text-secondary);
   margin-top: var(--space-sm);
   font-weight: 400;
   letter-spacing: 0.02em;
@@ -58,8 +58,8 @@ aside.notes { display: none; }
   margin-top: var(--space-md);
   font-family: var(--font-body);
   font-size: var(--text-body);
-  color: var(--text-on-dark-muted);
-  font-weight: 400;
+  color: var(--text-secondary);
+  font-weight: 500;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
@@ -67,8 +67,8 @@ aside.notes { display: none; }
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: var(--text-on-dark-muted);
-  opacity: 0.5;
+  background: var(--text-muted);
+  opacity: 0.6;
 }
 
 /* --- Title: divider line --- */
@@ -86,14 +86,14 @@ aside.notes { display: none; }
 .title-author {
   font-family: var(--font-body);
   font-size: var(--text-body);
-  color: var(--text-on-dark);
+  color: var(--text-primary);
   font-weight: 500;
   margin: 0;
 }
 .title-affiliation {
   font-family: var(--font-body);
   font-size: var(--text-small);
-  color: var(--text-on-dark-muted);
+  color: var(--text-muted);
   margin: var(--space-xs) 0 0;
 }
 
