@@ -366,9 +366,12 @@
 - [x] **fix-defender.ps1 deletado** (temporário, já usado).
 - [x] **Prompts de recovery gerados** para main e cirrose (copiados pelo Lucas, MDs temporários deletados).
 
-### Pendências inalteradas
-- Dados do hook (ERRO-003) — próxima sessão
-- QA visual batches 2-6
-- Fix base.css em main (zoom, revert safe-center, guards) — prompt entregue ao Lucas
+### Próxima sessão (N+1) — Foco: conteúdo, interações, ajuste fino
+Legibilidade e layout CSS praticamente finalizados. Próxima sessão é sobre CONTEÚDO:
+1. **Dados do hook (ERRO-003):** atualizar 3 números com refs Tier 1 atuais
+2. **QA visual batches 2-6:** foco em conteúdo, tese, interações (não mais layout)
+3. **Interações:** testar state machines (hook 2-beat, checkpoints 3/4-beat)
+4. **Ajuste fino:** fontes, espaçamentos pontuais, timing de animações
+5. Fix base.css em main (zoom, revert safe-center, guards) — prompt entregue ao Lucas
 
 ## Última atualização: 2026-03-16b (zoom + Defender + guards)
