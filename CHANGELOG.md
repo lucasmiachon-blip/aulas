@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+### Fixed (2026-03-16c — fullscreen zoom + MCP cleanup)
+- `metanalise.css`: `body { zoom: min(calc(100vw / 1280px), calc(100vh / 720px)); }` — deck fills screen on any aspect ratio (16:10, 3:2, etc). Pending for main via base.css.
+- `.cursor/mcp.json`: removed 5 uv/uvx-based MCPs (biomcp, pubmed-simple, zotero, semantic-scholar, arxiv) — Windows Defender blocks uv-spawned Python executables. All npx/node MCPs retained.
+- Deleted `scripts/fix-defender.ps1` (temporary, already used).
+
 ### Fixed (2026-03-16 — P0 safe-center: elimina clipping simétrico)
 - `shared/css/base.css`: `.slide-inner` `justify-content: center` → `flex-start` + pseudo-elements `::before/::after { flex: 1 0 0px }` para centering seguro. Conteúdo centra quando cabe; quando extravasa, overflow é apenas na base (preserva h2 e "ATO" no topo). 3 slides que tinham overflow marginal (meld, a3-06, app-alb) agora cabem perfeitamente.
 

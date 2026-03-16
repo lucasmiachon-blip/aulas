@@ -3,8 +3,8 @@
    Depends: ../../shared/css/base.css (tokens)
    ============================================ */
 
-/* --- Page reset (base.css lacks body reset) --- */
-body { margin: 0; overflow: hidden; }
+/* --- Page reset + fullscreen zoom fix --- */
+body { margin: 0; overflow: hidden; zoom: min(calc(100vw / 1280px), calc(100vh / 720px)); }
 aside.notes { display: none; }
 
 /* 720p projection scale bumps (cherry-picked from stage-c) */

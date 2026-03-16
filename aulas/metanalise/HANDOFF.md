@@ -357,4 +357,18 @@
 - QA visual batches 2-6 — layout estável, pronto para prosseguir
 - Fix cirrose — requer sessão dedicada na WT cirrose
 
-## Última atualização: 2026-03-16a (layout CSS fixes + documentação)
+## Sessão 2026-03-16b — Zoom fullscreen + Defender + MCPs + guards testados
+
+### O que foi feito
+- [x] **Zoom fullscreen:** `body { zoom: min(calc(100vw / 1280px), calc(100vh / 720px)); }` em metanalise.css — deck preenche tela em qualquer aspect ratio (16:10, 3:2, etc). Pendente para main via base.css.
+- [x] **MCPs uv/uvx removidos:** biomcp, pubmed-simple, zotero, semantic-scholar, arxiv — Windows Defender bloqueava executáveis Python do `uv`. Mantidos todos os MCPs npx/node.
+- [x] **Guards testados:** Guard 2 (shared/ readonly) confirmado BLOQUEANDO na WT. Guards 1 e 3 ativos via hook compartilhado.
+- [x] **fix-defender.ps1 deletado** (temporário, já usado).
+- [x] **Prompts de recovery gerados** para main e cirrose (copiados pelo Lucas, MDs temporários deletados).
+
+### Pendências inalteradas
+- Dados do hook (ERRO-003) — próxima sessão
+- QA visual batches 2-6
+- Fix base.css em main (zoom, revert safe-center, guards) — prompt entregue ao Lucas
+
+## Última atualização: 2026-03-16b (zoom + Defender + guards)
