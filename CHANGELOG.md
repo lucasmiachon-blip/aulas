@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+### Fixed (2026-03-16 — P0 safe-center: elimina clipping simétrico)
+- `shared/css/base.css`: `.slide-inner` `justify-content: center` → `flex-start` + pseudo-elements `::before/::after { flex: 1 0 0px }` para centering seguro. Conteúdo centra quando cabe; quando extravasa, overflow é apenas na base (preserva h2 e "ATO" no topo). 3 slides que tinham overflow marginal (meld, a3-06, app-alb) agora cabem perfeitamente.
+
 ### Fixed (2026-03-15j — scroll fix + notes hiding)
 - `aulas/metanalise/metanalise.css`: added `body { margin: 0; overflow: hidden; }` — eliminates scrollbar caused by browser default 8px margin
 - `aulas/metanalise/metanalise.css`: added `aside.notes { display: none; }` — hides 18 speaker notes that were rendered as visible text blocks (no CSS existed for notes in entire codebase)

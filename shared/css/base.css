@@ -424,8 +424,20 @@ body { zoom: calc(100vw / 1280px); }
 #slide-viewport > section .slide-inner {
   width: 100%; height: 100%;
   padding: 60px 80px;
-  display: flex; flex-direction: column; justify-content: center;
+  display: flex; flex-direction: column; justify-content: flex-start;
   box-sizing: border-box;
+}
+
+/* Safe vertical centering: centers content when it fits,
+   top-aligns when it overflows (prevents symmetric clipping) */
+#slide-viewport > section .slide-inner::before,
+#slide-viewport > section .slide-inner::after {
+  content: '';
+  flex: 1 0 0px;
+}
+
+#slide-viewport > section .slide-inner > * {
+  flex-shrink: 0;
 }
 
 /* --- Typography --- */
