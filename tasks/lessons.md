@@ -35,8 +35,8 @@
 
 ### Rules: .cursor vs .claude
 
-- **Fonte canônica:** .cursor/rules/ — Cursor usa .mdc com frontmatter
-- **.claude rules:** Deprecados para overlap; conteúdo único migrado para .cursor
+- `.cursor/rules/` e `.claude/rules/` sao **complementares, nao redundantes** (corrigido 04/mar)
+- Em conflito, conteudo mais detalhado prevalece, independente do diretorio
 - **design-system:** Mais verboso que cirrose-design; design-system = referência completa, cirrose-design = quick ref
 
 ### Paths CSS

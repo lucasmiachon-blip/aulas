@@ -8,7 +8,7 @@ alwaysApply: true
 
 ## Documentação
 - Toda mudança de código → atualizar `CHANGELOG.md`
-- Correção de bug em aula → também `ERROR-LOG.md` (ERRO-NNN, root cause, regra)
+- Correção de bug em aula → também `aulas/*/ERROR-LOG.md` da aula afetada (ERRO-NNN, root cause, regra)
 - Mudanças de estrutura → atualizar `README.md`
 
 ## CSS Mínimo
@@ -59,6 +59,13 @@ Quando o usuário ou o agente notar:
 → **Recomendar novo chat.** O contexto está provavelmente saturado.
 
 Referência: `docs/SUBAGENTS.md` (quando delegar) e `docs/RULES.md`.
+
+## Isolamento de workspace (anti-crosspath)
+- NUNCA editar arquivos fora do workspace root via paths absolutos (ex: `C:\Dev\Projetos\wt-cirrose\...` a partir de `aulas-magnas`)
+- Para editar worktree: abrir sessão Cursor naquele diretório
+- Hooks (pre-commit, pre-push) NÃO impedem escrita direta em arquivos — a trava é comportamental
+- Classe A/B (infra, governança) → commitar em main. Classe C (conteúdo aula) → commitar na WT
+- Ao absorver main na WT (`git merge main`): Guard 2 bloqueia shared/ — usar `ALLOW_SHARED_EDIT=1` no merge commit
 
 ## Compromisso
 Erros novos = aprendizado. Erros repetidos = inaceitável. 3x = checklist obrigatório.

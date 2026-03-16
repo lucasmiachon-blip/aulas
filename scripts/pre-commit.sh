@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Pre-commit: (1) guard Classe C on main, (2) guard shared/ on WTs,
-#             (3) slide-count regression gate, (4) lint on change.
+#             (3) slide-count regression gate, (4) slide integrity,
+#             (5) guard Classe A/B on WTs, then lint on change.
 # Called by .git/hooks/pre-commit. Versionado no repo.
 set -e
 
@@ -108,6 +109,27 @@ if [ "$BRANCH" != "main" ]; then
     if [ -z "$ALLOW_NO_BUILD" ]; then
       exit 1
     fi
+  fi
+fi
+
+# ── Guard 5: Class A/B governance files should live on main ──
+# Warns and blocks when governance/infra files are edited on feature branches.
+# Files inside aulas/*/ are Class C (aula-specific docs) and are excluded.
+# Bypass: ALLOW_AB_ON_WT=1 git commit
+if [ "$BRANCH" != "main" ] && [ -z "$ALLOW_AB_ON_WT" ]; then
+  AB_EDITS=$(git diff --cached --name-only | grep -E '^(\.cursor/rules/|\.claude/|CLAUDE\.md$|docs/|tasks/|scripts/|\.gitignore$|vite\.config\.js$|README\.md$|ERROR-LOG\.md$|CHANGELOG\.md$)' | grep -v '^aulas/' || true)
+  if [ -n "$AB_EDITS" ]; then
+    echo ""
+    echo "╔══════════════════════════════════════════════════════════╗"
+    echo "║  BLOQUEADO: Classe A/B editada em feature branch        ║"
+    echo "║  Governança/infra deve ser commitada em main.           ║"
+    echo "║  Bypass: ALLOW_AB_ON_WT=1 git commit                   ║"
+    echo "╚══════════════════════════════════════════════════════════╝"
+    echo ""
+    echo "Arquivos bloqueados:"
+    echo "$AB_EDITS" | sed 's/^/  → /'
+    echo ""
+    exit 1
   fi
 fi
 

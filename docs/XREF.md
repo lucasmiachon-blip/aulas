@@ -2,7 +2,7 @@
 
 > Mapa canônico de dependências entre documentos do projeto.
 > Atualizar ao criar, mover ou deletar qualquer .md.
-> Gerado: 2026-03-07. Última revisão: 2026-03-14.
+> Gerado: 2026-03-07. Última revisão: 2026-03-16.
 
 ---
 
@@ -108,9 +108,10 @@ CLAUDE.md (root)              ← fonte de verdade operacional (absorveu AGENTS.
 
 | Arquivo | Função | Wired via |
 |---------|--------|-----------|
-| pre-commit.sh | Guard Classe C em main + lint:slides/case-sync | .git/hooks/pre-commit (delegator) |
+| pre-commit.sh | Guard 1 (Classe C em main) + Guard 2 (shared/ em WT) + Guard 3 (slide-count regression) + Guard 4 (slide-integrity build) + lint | .git/hooks/pre-commit (delegator) |
 | pre-push.sh | done-gate --strict para aula detectada na branch | .git/hooks/pre-push (delegator) |
-| install-hooks.sh | Instala pre-commit + pre-push em .git/hooks/ | Manual: `bash scripts/install-hooks.sh` |
+| post-merge.sh | Anti-rollback: slide count loss + content diff detection pós-merge | .git/hooks/post-merge (delegator) |
+| install-hooks.sh | Instala pre-commit + pre-push + post-merge em .git/hooks/ | Manual: `bash scripts/install-hooks.sh` |
 
 ### aulas/cirrose/
 

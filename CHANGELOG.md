@@ -2,11 +2,24 @@
 
 ## [Unreleased]
 
+### Added (2026-03-16 — Max security: 7 Guards + back-port Class B)
+- `scripts/pre-commit.sh`: Guard 5 — bloqueia Classe A/B (governança/infra) em feature branches. Bypass: `ALLOW_AB_ON_WT=1`.
+- `.cursor/rules/slide-identity.mdc`: back-port de cirrose — regra 9-superfícies (176 linhas).
+- `README.md` root: back-port de cirrose — quick start, stack, links.
+- `docs/XREF.md`: back-port de cirrose — Guards 1-4 documentados, post-merge.sh.
+- `core-constraints.mdc`: ERROR-LOG path corrigido para `aulas/*/ERROR-LOG.md`.
+- `CLAUDE.md`: `tasks/lessons.md` na tabela Classe A, slide-identity ref adicionada.
+- `.gitignore`: `*.png` na raiz (screenshots de debug).
+
 ### Changed (2026-03-16d — A/B sync WT↔main)
 - Merged main into feat/metanalise-mvp: post-merge hook (Guard 4), JS deck scaling, design-system flex-start, lessons.md QA Metanalise session.
 - Fixed docs/XREF.md: added metanalise HANDOFF to root CLAUDE.md reference table.
 - Fixed docs/README.md: grade/osteoporose HANDOFFs now use markdown links (consistency).
-- Zero A/B divergence remaining — only Class C (metanalise content) differs from main.
+
+### Fixed (2026-03-16 — Governança: anti-crosspath rule)
+- `core-constraints.mdc`: regra "Isolamento de workspace" — agente em main NUNCA editar arquivos em `../wt-*` via paths absolutos.
+- `CLAUDE.md`: regra "Anti-crosspath" no Worktree Protocol.
+- `tasks/lessons.md`: 5 lições da sessão (scaling, GSAP overflow, flex-wrap, slide-integrity, violação worktree).
 
 ### Fixed (2026-03-16c — fullscreen zoom + MCP cleanup)
 - `metanalise.css`: `body { zoom: min(calc(100vw / 1280px), calc(100vh / 720px)); }` — deck fills screen on any aspect ratio (16:10, 3:2, etc). Pending for main via base.css.
