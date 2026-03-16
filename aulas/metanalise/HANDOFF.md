@@ -6,7 +6,7 @@
 
 ## Estado atual
 
-- **Fase:** QA SLIDE-A-SLIDE em andamento. s-title PASS, s-hook PASS (source-tag centered, dados 2019 contextualizados, ERRO-003 corrigido). Próximo: s-contrato (02). Layout CSS estável. A/B sync com main concluído (16/mar). Build de produção pendente.
+- **Fase:** QA SLIDE-A-SLIDE em andamento. s-title PASS, s-hook PASS, ERRO-008 (double-scaling fullscreen) CORRIGIDO — CSS zoom removido (deck.js handles scaling), fixed px tokens mantidos. Verificado em 1920x1080: title, hook, contrato renderizam corretamente. Próximo: s-contrato (02) QA audit. A/B sync com main concluído (16/mar). Build de produção pendente.
 - **Branch:** feat/metanalise-mvp (worktree wt-metanalise)
 - **Slides no index.html:** 18 (00-title → 01-hook → 02-contrato → 03-checkpoint-1 → 04-rs-vs-ma → 05-pico → 06-abstract → 07-forest-plot → 08-benefit-harm → 09-grade → 10-heterogeneity → 11-fixed-random → 12-checkpoint-2 → 13-ancora → 14-aplicacao → 15-aplicabilidade → 16-absoluto → 17-takehome)
 - **Slides planejados:** 18 (00-17) — ver blueprint.md v1.7
@@ -18,7 +18,7 @@
 - **Artigo âncora:** ✅ Valgimigli 2025, Clopidogrel vs Aspirina (Lancet, PMID 40902613). IPD-MA, 7 RCTs, 28.982 pts
 - **lint:slides:** ✅ PASS (zero FAILs)
 - **HEX navy:** #162032 mantido (decisao Lucas — consistencia cross-aula)
-- **CSS overrides em metanalise.css vs base.css:** `justify-content: center` restaurado + pseudo-elements desativados (ERRO-005). Checkpoint safe-center pattern proprio (ERRO-006).
+- **CSS overrides em metanalise.css vs base.css:** `justify-content: center` restaurado + pseudo-elements desativados (ERRO-005). Checkpoint safe-center pattern proprio (ERRO-006). CSS zoom REMOVIDO — deck.js scale() é o mecanismo correto (ERRO-008). Fixed px tokens mantidos para evitar vw double-scaling.
 
 ## O que foi feito
 

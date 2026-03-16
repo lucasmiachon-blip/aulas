@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+### Fixed (2026-03-16g — ERRO-008: double-scaling at fullscreen)
+- **Root cause:** CSS `zoom` on body conflicted with deck.js `transform: scale()` — 1.5 × 1.5 = 2.25x. Cards clipped, h2 above viewport, source-tag below.
+- `metanalise.css`: removed `body { zoom }` entirely — deck.js handles viewport scaling.
+- `metanalise.css`: fixed px token overrides retained (`--text-h2: 34px` etc.) — `vw` clamp still double-scales via viewport reference.
+- `metanalise.css`: `#deck p.hook-question-text` and `#deck p.hook-verdict` selectors bumped for specificity vs `.stage-c #deck p`.
+- `ERROR-LOG.md`: ERRO-008 documented with investigation trail and 4 derived rules.
+- Verified at 1920x1080: all 3 slides (title, hook, contrato) render correctly.
+
 ### Changed (2026-03-16f — QA slide-a-slide: s-hook)
 - `metanalise.css`: source-tag selector bumped to `#deck p.source-tag` + `max-width: none; width: 100%` — fixes left-alignment caused by `.stage-c #deck p { max-width: 56ch }` in base.css.
 - `01-hook.html`: beat-0 text "publicadas hoje" → "por dia — só em 2019" (Hoffmann data is from 2019; ~146/dia by 2021). Label "SRs por dia" → "SRs/dia em 2019".

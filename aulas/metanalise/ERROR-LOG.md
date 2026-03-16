@@ -76,6 +76,25 @@ Severidades: CRITICAL (bloqueia projeção), HIGH (prejudica leitura), MEDIUM (e
 **Regra derivada:** (1) Qualquer `<p>` dentro de `#deck` herda `max-width: 56ch` de base.css. Para `<p>` que precisa ser full-width (footers, centered text), sobrescrever com `max-width: none; width: 100%`. (2) Ao debugar alinhamento, sempre verificar computed `max-width` — pode estar limitando o elemento invisívelmente.
 **Data:** 2026-03-16
 
+### ERRO-008 · CRITICAL · Todos os slides (double-scaling at fullscreen) — ✅ CORRIGIDO
+**Descrição:** Slides renderizando com fontes e layout 2.25x maiores que o correto em viewports > 1280px (ex: 1920x1080 fullscreen). Cards clipped horizontalmente, h2 acima do viewport, source-tag abaixo do viewport.
+**Root cause:** `body { zoom: min(100vw/1280, 100vh/720) }` em metanalise.css conflitava com `#deck { transform: translate(-50%, -50%) scale(S) }` de deck.js. Ambos escalavam para o viewport: zoom 1.5 × scale 1.5 = 2.25x. Além disso, `vw`-based clamp tokens computavam no viewport (1920), não no canvas (1280), causando double-scaling em qualquer resolução.
+**Investigação:**
+- Primeiro tentou-se fixar tokens de px (parcialmente correto)
+- Depois fixar body width: 1280px (não resolveu — getBoundingClientRect mostrava 2880px)
+- Debug do #deck revelou `style="transform: translate(-50%, -50%) scale(1.5)"` — deck.js já escalava
+- CSS zoom era 100% redundante e conflitante
+**Fix:**
+1. **Removido** `zoom` do body em metanalise.css — deck.js handles scaling
+2. **Mantido** fixed px tokens no `#deck` — `vw` units still reference viewport, not canvas
+3. Selectors `#deck p.hook-question-text` e `#deck p.hook-verdict` bumped para vencer `.stage-c #deck p` de base.css
+**Regra derivada:**
+(1) NUNCA usar CSS `zoom` em aulas com deck.js — deck.js já aplica `transform: scale()` no `#deck`.
+(2) Tokens com `vw` em clamp() computam no viewport, não no canvas escalado — usar fixed px em aulas com deck.js.
+(3) Todo `<p>` dentro de `#deck` herda styles de `.stage-c #deck p` — selectors de `<p>` precisam de especificidade `#deck p.className`.
+(4) Antes de adicionar zoom/scale, verificar se deck.js já escala (inspecionar `#deck.style.transform`).
+**Data:** 2026-03-16
+
 ---
 
 *Append-only. Não remover erros antigos.*

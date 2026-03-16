@@ -3,17 +3,25 @@
    Depends: ../../shared/css/base.css (tokens)
    ============================================ */
 
-/* --- Page reset + fullscreen zoom fix --- */
-body { margin: 0; overflow: hidden; zoom: min(calc(100vw / 1280px), calc(100vh / 720px)); }
+/* --- Page reset ---
+   deck.js handles viewport scaling via transform: scale() on #deck.
+   NO CSS zoom — it double-scales with deck.js's transform (ERRO-008).
+   base.css sets body { width: 100vw; height: 100vh; overflow: hidden }. */
 aside.notes { display: none; }
 
-/* 720p projection scale bumps (cherry-picked from stage-c) */
+/* 720p projection scale — fixed px for 1280 canvas (ERRO-008).
+   deck.js scales #deck via transform: scale(viewport/1280).
+   base.css clamp() uses vw which references viewport (1920), not canvas (1280).
+   At 1920: clamp(28px, 2.2vw, 42px) = 42px * scale(1.5) = 63px visual.
+   Fixed px computes in canvas space: 34px * scale(1.5) = 51px visual. Correct. */
 #deck {
-  --text-h2:      clamp(32px, 2.4vw, 42px);
-  --text-h3:      clamp(22px, 1.6vw, 30px);
-  --text-body:    clamp(20px, 1.25vw, 26px);
-  --text-small:   clamp(16px, 1.0vw, 20px);
-  --text-caption: clamp(14px, 0.85vw, 15px);
+  --text-hero:    56px;
+  --text-h1:      38px;
+  --text-h2:      34px;
+  --text-h3:      24px;
+  --text-body:    20px;
+  --text-small:   16px;
+  --text-caption: 14px;
 }
 
 /* --- Slide layout (override base.css safe-center pseudo-elements
@@ -127,9 +135,10 @@ aside.notes { display: none; }
   align-items: center;
   flex: 1;
   text-align: center;
-  padding: var(--space-lg) var(--space-md);
+  padding: var(--space-sm) var(--space-md);
 }
-#deck .hook-question-text {
+/* Specificity: #deck p.X (0,1,1,1) beats .stage-c #deck p (0,1,1,1) by cascade order */
+#deck p.hook-question-text {
   font-family: var(--font-display);
   font-size: var(--text-h2);
   font-style: italic;
@@ -182,7 +191,7 @@ aside.notes { display: none; }
 }
 
 /* --- Hook: verdict line --- */
-#deck .hook-verdict {
+#deck p.hook-verdict {
   font-family: var(--font-body);
   font-size: var(--text-body);
   color: var(--ui-accent);
