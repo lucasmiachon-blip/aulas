@@ -6,7 +6,7 @@
 
 ## Estado atual
 
-- **Fase:** DECK COMPLETO — 18 slides (00-17). **Layout CSS estável**: h2 alinhados (67px consistente), checkpoints centrados, zero scroll, contraste OK. **Dados do hook PENDENTES revisão** (3 números a corrigir — ERRO-003). Build de produção pendente. **A/B sync com main concluído** (16/mar): post-merge hook, JS scaling, design-system fix, lessons.md — zero divergência infra.
+- **Fase:** DECK COMPLETO — 18 slides (00-17). **Layout CSS estável**: h2 alinhados, checkpoints centrados, zero scroll, contraste OK. **A/B sync com main concluído** (16/mar): post-merge hook, JS scaling, design-system fix — zero divergência infra. **Próximo:** QA conteúdo slide-a-slide + dados hook (ERRO-003). Build de produção pendente.
 - **Branch:** feat/metanalise-mvp (worktree wt-metanalise)
 - **Slides no index.html:** 18 (00-title → 01-hook → 02-contrato → 03-checkpoint-1 → 04-rs-vs-ma → 05-pico → 06-abstract → 07-forest-plot → 08-benefit-harm → 09-grade → 10-heterogeneity → 11-fixed-random → 12-checkpoint-2 → 13-ancora → 14-aplicacao → 15-aplicabilidade → 16-absoluto → 17-takehome)
 - **Slides planejados:** 18 (00-17) — ver blueprint.md v1.7
@@ -74,20 +74,22 @@
 
 ## Caminho crítico — próximas sessões
 
-### Sessão N+1 (imediata) — Dados do hook + QA visual batches 2-6
-1. **Dados do hook (slide 01):** atualizar 3 números com refs mais atuais (Tier 1 verificadas). Possivelmente uma interação a mais. Ver ERRO-003.
-2. **QA visual batches 2-6** com Vite aberto (batches de 3 slides, tese por slide, checkpoint sim/nao/pq)
-   - Batch 2: slides 03-05 (checkpoint-1, RS vs MA, PICO)
-   - Batch 3: slides 06-08 (abstract, forest plot, beneficio-dano)
-   - Batch 4: slides 09-11 (GRADE, heterogeneidade, fixed-random)
-   - Batch 5: slides 12-14 (checkpoint-2, ancora, aplicacao)
-   - Batch 6: slides 15-17 (aplicabilidade, absoluto, takehome)
-3. Inserir exemplos visuais Cochrane (forest plot, GRADE table) — PDFs em `references/sources/`
+### Sessão N+1 (imediata) — Conteúdo slide-a-slide
+1. **Deletar PROMPT-SCALING-MAIN.md** (temporário, já executado)
+2. **Slide 01 (hook):** atualizar 3 números com refs Tier 1 atuais + possível interação extra (ERRO-003)
+3. **QA slide-a-slide** com Vite aberto (tese, argumentos, referências, narrativa):
+   - Slide 01 → 02 → 03 → ... → 17 (em ordem)
+   - Para cada slide: verificar h2 (assertion), corpo (<=30 palavras), refs (PMID/DOI), notes (timing + fontes)
+4. Inserir exemplos visuais Cochrane (forest plot, GRADE table) — PDFs em `references/sources/`
 
 ### Sessão N+2
 - QA final (Gate 4 Gemini)
-- Build de producao
+- Build de producao (`npm run build:metanalise`)
 - Merge para main
+
+### Opcional — Merge cirrose→main
+- Plano pronto (ver conversa anterior). Elimina WT cirrose permanentemente.
+- Sequência: push cirrose → merge --no-ff em main (ALLOW_MAIN_CONTENT=1) → remover WT → atualizar hooks → push
 
 ## Bloqueios conhecidos
 
@@ -384,4 +386,29 @@ Radiografia completa dos 18 slides feita. Prioridades:
 
 Sequência sugerida: slide 01 → 02 → 03 → ... → 17 (em ordem).
 
-## Última atualização: 2026-03-16b (zoom + guards + plano slide-a-slide)
+## Sessão 2026-03-16c — A/B sync WT↔main + docs audit
+
+### O que foi feito
+- [x] **A/B sync completo:** merged main into feat/metanalise-mvp — 9 arquivos de infra absorvidos (post-merge hook, JS deck scaling, design-system, pre-commit, lessons.md)
+- [x] **Docs audit:** XREF.md (metanalise HANDOFF na tabela root), README.md (grade/osteoporose com links), consistência CLAUDE.md root vs aula verificada
+- [x] **Hooks instalados na WT:** pre-commit + pre-push + post-merge (Guard 4 anti-rollback)
+- [x] **Push feito:** done-gate PASS (warnings: screenshots stale, 2x TBD em HANDOFF)
+- [x] **Diff final verificado:** somente Classe C (conteúdo metanalise) difere de main. Zero A/B divergente.
+
+### Travas de segurança ativas
+- **Guard 1 (pre-commit):** bloqueia Classe C em main
+- **Guard 2 (pre-commit):** bloqueia edits em shared/ em WTs
+- **Guard 3 (pre-commit):** slide count regression gate
+- **Guard 4 (post-merge):** detecta rollback silencioso de conteúdo HTML após merge
+
+### O que NÃO foi feito (deliberado)
+- Merge da WT cirrose em main — plano pronto, usuário decide quando executar
+- Dados do hook (ERRO-003)
+- QA visual batches 2-6
+- Build de produção
+
+### Pendências externas (main/cirrose)
+- **PROMPT-SCALING-MAIN.md** na raiz da WT — arquivo temporário com instruções para JS scaling + post-merge hook no main. **Pode ser deletado** (já foi executado em main e absorvido na WT via merge).
+- **Plano de merge cirrose→main** preparado — elimina WT cirrose permanentemente, resolve rollbacks recorrentes.
+
+## Última atualização: 2026-03-16c (A/B sync + docs audit + hooks)
