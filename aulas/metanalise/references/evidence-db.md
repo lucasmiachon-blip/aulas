@@ -335,14 +335,14 @@
 | Acesso | Circulation (acesso CAPES) |
 | Nota didática | Espelhamento: benefício AVC ≈ dano sangramento. Forest plot limpo (2 trials). Cenário atual (smartwatch/dispositivo). Apenas 2 RCTs = limitação para ensinar |
 
-### G3 — Yin 2024 — Substituição de sal e desfechos CV
+### G3 — Greenwood 2024 — Substituição de sal e desfechos CV
 
 | Campo | Valor |
 |-------|-------|
-| Autores | Yin X, et al. |
-| Título | Long-Term Effect of Salt Substitution for Cardiovascular Outcomes |
-| Fonte | Ann Intern Med. 2024 Apr |
-| PMID | 38588546 (verificação pendente — timeout) |
+| Autores | Greenwood H, Barnes K, Clark J, Ball L, Albarqouni L |
+| Título | Long-Term Effect of Salt Substitution for Cardiovascular Outcomes: A Systematic Review and Meta-analysis |
+| Fonte | Ann Intern Med. 2024;177(5):643-655 |
+| PMID | 38588546 ✅ |
 | RCTs | 16 |
 | Participantes | 27.995 |
 | Mortalidade total | RR 0,88 (0,82–0,93); certeza **baixa** |
@@ -370,14 +370,14 @@
 | ⚠️ Limitações | Framework **bayesiano** como análise primária (CrI, não CI). Sem desfecho de dano claro (EA ~1.0). GRADE com pouca variação (alta/alta/mod) |
 | Nota didática | Muda prática imediatamente (infusão prolongada = padrão). Sepse = core residência. Mas: bayesiano pode confundir nível básico; ensino benefício-dano fica fraco |
 
-### G5 — Bosco 2024 — Eventos CV com inibidores de receptor androgênico em câncer de próstata
+### G5 — El-Taji 2024 — Eventos CV com inibidores de receptor androgênico em câncer de próstata
 
 | Campo | Valor |
 |-------|-------|
-| Autores | Bosco E (ou Sachdeva — verificar), et al. |
-| Título | Cardiovascular Events and Androgen Receptor Signaling Inhibitors in Advanced Prostate Cancer |
-| Fonte | JAMA Oncol. 2024 |
-| PMID | 38842801 (verificação pendente) |
+| Autores | El-Taji O, Taktak S, Jones C, Brown M, Clarke N, Sachdeva A |
+| Título | Cardiovascular Events and Androgen Receptor Signaling Inhibitors in Advanced Prostate Cancer: A Systematic Review and Meta-Analysis |
+| Fonte | JAMA Oncol. 2024;10(7):874-884 |
+| PMID | 38842801 ✅ |
 | RCTs | 24 |
 | Participantes | 22.166 |
 | Eventos CV grau ≥3 (DANO) | RR 2,10 (1,72–2,55) |
@@ -392,6 +392,7 @@
 
 | Data | Mudança |
 |------|---------|
+| 2026-03-16j | v4.2 — Autores corrigidos via PubMed: G3 Yin→Greenwood H (PMID 38588546 ✅), G5 Bosco→El-Taji O (PMID 38842801 ✅). Todos 5 PMIDs candidatos agora verificados |
 | 2026-03-16e | v4.1 — Hook dados atualizados: Siemens 88% → Bojcic 81% (cross-field); Fanaroff 8,5% → Qureshi 10% (23 sociedades). Tags CANDIDATO → EM USO. Pendente: sync Notion References DB |
 | 2026-03-15d | v4.0 — 5 candidatos Gemini adicionados (PMIDs verificados, 2 corrigidos). Hanula/oseltamivir, McIntyre/DOAC-AF, Yin/sal, Abdul-Aziz/β-lactam, Bosco/próstata-CV. Lucas indeciso entre β-lactam e PAC; slides começam amanhã sem artigo definido |
 | 2026-03-15c | v3.4 — 3 finalistas para âncora adicionados: Pitre/ICM 2025 (corticoides PAC, recomendado), Kolkailah/Cochrane 2024 (VTE), Carson/Cochrane 2025 (transfusão). Decisão: Cochrane = exemplos visuais; âncora preferencialmente não-Cochrane |

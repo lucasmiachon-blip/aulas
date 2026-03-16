@@ -25,13 +25,13 @@
 - **Tier:** 1
 - **Acesso:** aberto, oficial
 
-### 4. Abstract da revisão âncora [TBD]
+### 4. Abstract do artigo âncora — Valgimigli et al. Lancet 2025
 - **Função:** chegar na aula tendo lido o caso real
 - **Tarefa:** anotar PICO, principal benefício, principal dano, uma dúvida de aplicabilidade
 - **Carga:** 10–12 min
 - **Tier:** 1
-- **Acesso:** depende do artigo escolhido
-- **Nota:** Musini et al. 2025 é candidato, não decisão final. Atualizar quando artigo definido.
+- **Acesso:** Lancet (acesso CAPES/USP). PMID 40902613
+- **Ref:** Valgimigli M, et al. Clopidogrel versus aspirin for secondary prevention of coronary artery disease: an individual participant data meta-analysis. Lancet 2025;406(10508):1091-1102.
 
 ---
 
@@ -103,7 +103,7 @@
 
 | Recurso | Status | Impacto |
 |---------|--------|---------|
-| Full-text Musini 2025 | PMCID 2026-10-09 | Sem forest plot, sem NNT, sem detalhes de subgrupo |
+| Full-text Valgimigli 2025 | Lancet (CAPES/USP) | Forest plots disponíveis no artigo. Detalhes populacionais [TBD] |
 | JAMA Users' Guides | Acesso institucional | Pode não estar disponível para todos os residentes |
 
 ---

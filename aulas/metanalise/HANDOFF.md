@@ -6,7 +6,7 @@
 
 ## Estado atual
 
-- **Fase:** QA SLIDE-A-SLIDE em andamento. s-title PASS, s-hook PASS (layout centering fix: flex:1 equal columns, verdict 80px below grid, question at top). ERRO-008 CORRIGIDO. **Plano C = fundo creme (stage-c), NÃO navy.** Próximo: s-contrato (02) QA audit. Build de produção pendente.
+- **Fase:** QA SLIDE-A-SLIDE **17/18 PASS** (s-contrato pendente decisao Lucas). Hook atualizado 80→146/dia. Evidence-db v4.2 (5 PMIDs verificados, 2 autores corrigidos). CHANGELOG.md criado. Build de producao pendente.
 - **Branch:** feat/metanalise-mvp (worktree wt-metanalise)
 - **Slides no index.html:** 18 (00-title → 01-hook → 02-contrato → 03-checkpoint-1 → 04-rs-vs-ma → 05-pico → 06-abstract → 07-forest-plot → 08-benefit-harm → 09-grade → 10-heterogeneity → 11-fixed-random → 12-checkpoint-2 → 13-ancora → 14-aplicacao → 15-aplicabilidade → 16-absoluto → 17-takehome)
 - **Slides planejados:** 18 (00-17) — ver blueprint.md v1.7
@@ -26,7 +26,7 @@
 - [x] Docs fundacionais: narrative.md, evidence-db.md, blueprint.md, reading-list.md
 - [x] metanalise.css: tokens, layouts (compare, pico-grid, pipeline-flow, anatomy-grid, concept-card, grade-stack, scope-layout, contrato-grid, checkpoint-layout)
 - [x] 00-title.html — "Meta-análise: Leitura crítica para decisão clínica" + 3 pilares
-- [x] **01-hook.html — REESCRITO (2026-03-13):** 2-beat state machine, 3 countUp (80/dia, 88%, 8.5%), 4 PMIDs tier 1
+- [x] **01-hook.html — REESCRITO (2026-03-13, atualizado 2026-03-16j):** 2-beat state machine, 3 countUp (146/dia, 81%, 10%), 4 PMIDs tier 1
 - [x] **02-contrato.html — NOVO (2026-03-13):** 3 cards framework + scope footer. Absorveu 01-objectives.html
 - [x] **03-checkpoint-1.html — NOVO (2026-03-13):** cenário MA ilustrativo → "Você muda?" → twist (PICO, comparador, dano)
 - [x] 04-rs-vs-ma.html → posição 04 — RS vs MA (compare layout)
@@ -98,7 +98,7 @@
 | ~~Artigo âncora em deliberação~~ | ~~Dados específicos dos slides 13-15~~ | ✅ RESOLVIDO: Valgimigli 2025 (Lancet, clopidogrel vs aspirina, PMID 40902613) |
 | Full-text Musini: PMC embargo até 2026-10-09 | Forest plot e NNT dependem de full-text | ✅ Acessível via Cochrane Library (acordo CAPES/Wiley). PMID 41065416. Musini agora = exemplo visual, não âncora |
 | ~~HEX navy `#162032` vs canônico `#0d1a2d`~~ | ~~Inconsistência cross-aula~~ | ✅ RESOLVIDO: #162032 mantido (decisão Lucas 2026-03-15) |
-| PMIDs Consensus-sourced não verificados | 3 PMIDs (Aamann, AlSowaiegh, Saleh) pendentes PubMed check | Não-bloqueante: esses candidatos não são top. Verificar se algum for promovido |
+| ~~PMIDs Consensus-sourced não verificados~~ | ~~3 PMIDs pendentes~~ | ✅ RESOLVIDO: Aamann (41542879), AlSowaiegh (41543475), Saleh (41767699) verificados. Yin→Greenwood, Bosco→El-Taji corrigidos |
 | Cochrane exemplos visuais | Forest plots e GRADE tables reais precisam de screenshots/crops | Acessar via CAPES e cropar quando iniciar Fase 3 |
 
 ## Pendências para main (Classe B — não editar na WT)
@@ -475,4 +475,26 @@ Sequência sugerida: slide 01 → 02 → 03 → ... → 17 (em ordem).
 
 ---
 
-## Última atualização: 2026-03-16i (Notion sync completo)
+## Sessao 2026-03-16j — QA full-deck + housekeeping + repo janitor
+
+### O que foi feito
+- [x] **Hook (01):** 80/dia → 146/dia (decisao Lucas). countUp, label "2021", notes atualizados
+- [x] **CP1 (03):** Musini PMID atualizado nas notes (pendente → 41065416)
+- [x] **Evidence-db v4.2:** G3 Yin→Greenwood H (PMID 38588546), G5 Bosco→El-Taji O (PMID 38842801). Todos 5 candidatos verificados via PubMed MCP
+- [x] **Reading-list:** item 4 Musini→Valgimigli. Lacuna de acesso atualizada
+- [x] **CSS:** `.checkpoint-teaser` removido (dead selector)
+- [x] **CLAUDE.md aula:** merge ref corrigido (6889ff7→733eb2e)
+- [x] **CHANGELOG.md CRIADO** (referenciado mas nunca existiu)
+- [x] **QA slide-a-slide 18/18:** 17 PASS, 1 pendente (s-contrato — decisao Lucas)
+- [x] **Repo janitor:** 0 orphans, 0 broken links, 0 temp files. 1 dead CSS removida
+- [x] **Reference manager:** 5 PMIDs verificados, 2 autores corrigidos
+- [x] HANDOFF, CHANGELOG, evidence-db, reading-list atualizados
+
+### O que NAO foi feito (deliberado)
+- Slide 02 (contrato) — Lucas decide titulo + word count na proxima sessao
+- Build de producao — apos QA completo
+- QA screenshots novos — post-fix-scan/ ainda e current
+
+---
+
+## Ultima atualizacao: 2026-03-16j (QA full-deck + housekeeping)

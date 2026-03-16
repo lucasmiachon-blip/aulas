@@ -672,11 +672,6 @@ aside.notes { display: none; }
   color: var(--warning-on-dark);
   line-height: 1.3;
 }
-.checkpoint-teaser {
-  font-family: var(--font-body);
-  font-size: var(--text-small);
-  color: var(--text-secondary);
-}
 /* .no-js fallback for checkpoint */
 .no-js .checkpoint-reveal {
   opacity: 1 !important;

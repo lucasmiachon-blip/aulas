@@ -5,7 +5,7 @@ Parent: ver CLAUDE.md na raiz.
 ## WT State (atualizar a cada sessao)
 
 - **Branch:** feat/metanalise-mvp
-- **Ultimo merge main:** 6889ff7 (2026-03-15)
+- **Ultimo merge main:** 733eb2e (2026-03-16)
 - **Classe C pendente:** 0 arquivos em main
 - **Infra sync:** OK — governance absorvida (Class A/B only)
 
