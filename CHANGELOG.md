@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+### Changed (2026-03-16f — QA slide-a-slide: s-hook)
+- `metanalise.css`: source-tag selector bumped to `#deck p.source-tag` + `max-width: none; width: 100%` — fixes left-alignment caused by `.stage-c #deck p { max-width: 56ch }` in base.css.
+- `01-hook.html`: beat-0 text "publicadas hoje" → "por dia — só em 2019" (Hoffmann data is from 2019; ~146/dia by 2021). Label "SRs por dia" → "SRs/dia em 2019".
+- `01-hook.html`: speaker notes updated — growth context (80→146/dia) + verification date.
+- `index.html`: mirror of all hook changes.
+- `AUDIT-VISUAL.md`: s-hook scorecard updated — 4 new fixes + serif font legibility as Gemini pendency.
+- `evidence-db.md`: Bojcic/Qureshi promoted CANDIDATO → EM USO (v4.1).
+- `narrative.md`: hook data refs updated (was [TBD]).
+
 ### Changed (2026-03-16e — QA slide-a-slide: s-title)
 - `metanalise.css`: title slide tokens corrigidos para stage-c — `--text-on-dark-*` → `--text-secondary/primary/muted`. Pilares peso 400→500 (legibilidade projetor).
 - `AUDIT-VISUAL.md`: CRIADO — scorecard 14 dimensões, s-title PASS. Pendências Gemini anotadas.

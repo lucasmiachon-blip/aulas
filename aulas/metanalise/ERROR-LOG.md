@@ -32,20 +32,21 @@ Severidades: CRITICAL (bloqueia projeção), HIGH (prejudica leitura), MEDIUM (e
 **Regra derivada:** (1) Slides são canvas fixo — `overflow-y: hidden` obrigatório. (2) `aside.notes` DEVE ser hidden via CSS. (3) Pendência para main: mover estas regras para `shared/css/base.css` para todas as aulas.
 **Data:** 2026-03-15
 
-### ERRO-003 · HIGH · Slide 01 (hook)
+### ERRO-003 · HIGH · Slide 01 (hook) — ✅ CORRIGIDO
 **Descrição:** Dados clínicos no hook não correspondem às referências citadas ou estão desatualizados.
 **Detalhes:**
 - "80/dia" → dado de 2019 (Hoffmann PMID 34091022). Em 2021 já eram ~146/dia (53.208 SRs no PubMed). Apresentar como "hoje" em 2026 é understatement significativo.
 - "88% qualidade criticamente baixa" → paper citado (Siemens PMID 33741503) diz 90%, não 88%. E é específico de câncer avançado, não geral.
 - "8,5% LoE A" → correto para ACC/AHA (Fanaroff PMID 30874755), mas slide não especifica que é só cardiologia. ESC = 14,2%. Dado geral (JGIM 2025): 10%.
 **Root cause:** Dados inseridos sem verificação cruzada com o paper original e sem discussão com o usuário.
-**Fix:** PENDENTE — refs candidatas identificadas (sessão 2026-03-16d):
-- "88%": candidato = Bojcic et al. J Clin Epidemiol 2024, PMID 37931822 (35/43 SRs = 81% criticamente baixas; cross-field, não específico de câncer)
-- "8,5%": candidato = Qureshi et al. JGIM 2025, PMID 41428154 (10% LoE forte em 7.582 recomendações de 23 sociedades médicas EUA, 2019-2023)
-- "80/dia": Hoffmann PMID 34091022 ainda é a melhor fonte — número de 2019; atual (2021) ~146/dia. Decisão de Lucas: manter 80 (ancorar em 2019) ou atualizar.
-- Implementação aguarda decisão do Lucas: qual número final + qual nota contextual no slide.
+**Fix:** ✅ APLICADO (sessão 2026-03-16f):
+- 88% → 81% (Bojcic et al. J Clin Epidemiol 2024, PMID 37931822 — 35/43 SRs, cross-field, AMSTAR-2)
+- 8,5% → 10% (Qureshi et al. JGIM 2025, PMID 41428154 — 768/7.582 recomendações, 23 sociedades EUA)
+- 80/dia: mantido (Hoffmann PMID 34091022) com contexto temporal: "só em 2019" no beat-0 + label "SRs/dia em 2019"
+- evidence-db.md: Bojcic/Qureshi promovidos de CANDIDATO → EM USO
+- narrative.md: dados do hook atualizados
 **Regra derivada:** (1) Todo dado numérico DEVE ser verificado no paper original (PMID → PubMed → abstract) antes de entrar no slide. (2) Dados devem ser discutidos com o usuário antes de serem implementados. (3) Ano do dado deve ser explicitado quando diferente do ano da aula.
-**Data:** 2026-03-15 | Atualizado: 2026-03-16
+**Data:** 2026-03-15 | Corrigido: 2026-03-16
 
 ### ERRO-004 · MEDIUM · Vite config
 **Descrição:** `npm run dev` abria cirrose em vez de metanalise nesta worktree.
@@ -66,6 +67,13 @@ Severidades: CRITICAL (bloqueia projeção), HIGH (prejudica leitura), MEDIUM (e
 **Root cause:** `.checkpoint-layout { justify-content: center; flex: 1 }` — com conteúdo que overflow, `justify-content: center` distribui espaço simetricamente, empurrando metade do overflow ACIMA do viewport. Agravado por: (a) `min-height: auto` inflando layout, (b) browser default `<p> { margin: 1em }` adicionando ~240px invisíveis, (c) `margin-top` redundante com `gap`.
 **Fix:** (1) Removido `justify-content: center` do `.checkpoint-layout`, (2) `min-height: 0` para prevenir inflação, (3) `margin-top: auto` no `.checkpoint-scenario` (safe-center pattern interno), (4) `.checkpoint-layout p { margin: 0 }`, (5) removido `margin-top` redundante do `.checkpoint-question`.
 **Regra derivada:** (1) `justify-content: center` em flex containers com overflow = clipping simétrico. Usar `margin-top: auto` no primeiro child em vez de `justify-content: center`. (2) Reset `p { margin: 0 }` dentro de flex layouts que usam `gap`. (3) Nunca duplicar espaçamento (`gap` + `margin`).
+**Data:** 2026-03-16
+
+### ERRO-007 · MEDIUM · Slide 01 (hook) — ✅ CORRIGIDO
+**Descrição:** Source-tag (referências no rodapé) alinhada à esquerda em vez de centralizada.
+**Root cause:** `.stage-c #deck p` em `shared/css/base.css` tem `max-width: 56ch` com especificidade (0,1,1,1). O seletor `#deck .source-tag` em `metanalise.css` tem (0,1,1,0) — perde a cascata. O `<p>` fica com 56ch de largura máxima, posicionado em flex-start (esquerda). `text-align: center` centraliza dentro dos 56ch, mas o elemento não é full-width.
+**Fix:** Seletor bumped para `#deck p.source-tag` (0,1,1,1) — vence por cascade order (metanalise.css carrega depois de base.css). Adicionado `max-width: none; width: 100%`.
+**Regra derivada:** (1) Qualquer `<p>` dentro de `#deck` herda `max-width: 56ch` de base.css. Para `<p>` que precisa ser full-width (footers, centered text), sobrescrever com `max-width: none; width: 100%`. (2) Ao debugar alinhamento, sempre verificar computed `max-width` — pode estar limitando o elemento invisívelmente.
 **Data:** 2026-03-16
 
 ---

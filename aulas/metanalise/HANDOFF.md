@@ -6,7 +6,7 @@
 
 ## Estado atual
 
-- **Fase:** QA SLIDE-A-SLIDE em andamento. s-title PASS (tokens light-mode corrigidos). Próximo: s-hook. Layout CSS estável. A/B sync com main concluído (16/mar). Build de produção pendente.
+- **Fase:** QA SLIDE-A-SLIDE em andamento. s-title PASS, s-hook PASS (source-tag centered, dados 2019 contextualizados, ERRO-003 corrigido). Próximo: s-contrato (02). Layout CSS estável. A/B sync com main concluído (16/mar). Build de produção pendente.
 - **Branch:** feat/metanalise-mvp (worktree wt-metanalise)
 - **Slides no index.html:** 18 (00-title → 01-hook → 02-contrato → 03-checkpoint-1 → 04-rs-vs-ma → 05-pico → 06-abstract → 07-forest-plot → 08-benefit-harm → 09-grade → 10-heterogeneity → 11-fixed-random → 12-checkpoint-2 → 13-ancora → 14-aplicacao → 15-aplicabilidade → 16-absoluto → 17-takehome)
 - **Slides planejados:** 18 (00-17) — ver blueprint.md v1.7

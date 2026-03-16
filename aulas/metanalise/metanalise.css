@@ -100,19 +100,23 @@ aside.notes { display: none; }
 /* --- Assertion headline (shared across content slides) --- */
 .slide-headline {
   font-size: var(--text-h2);
-  color: var(--text-on-dark);
+  color: var(--text-primary);
   margin-bottom: var(--space-md);
   line-height: 1.15;
 }
 
-/* --- Source tag (reference footer) --- */
-.source-tag {
+/* --- Source tag (reference footer) ---
+   Specificity must beat .stage-c #deck p (0,1,1,1) which sets max-width: 56ch.
+   Using #deck p.source-tag (0,1,1,1) — wins by cascade order (loaded after base.css). */
+#deck p.source-tag {
   font-family: var(--font-body);
-  font-size: clamp(10px, 0.55vw, 11px);
-  color: var(--text-on-dark-muted);
+  font-size: var(--text-caption);
+  color: var(--text-muted);
   margin-top: auto;
   padding-bottom: var(--space-xs);
   text-align: center;
+  max-width: none;
+  width: 100%;
 }
 
 /* --- Hook slide: central question block --- */
@@ -123,15 +127,15 @@ aside.notes { display: none; }
   align-items: center;
   flex: 1;
   text-align: center;
-  padding: var(--space-xl) var(--space-lg);
+  padding: var(--space-lg) var(--space-md);
 }
-.hook-question-text {
+#deck .hook-question-text {
   font-family: var(--font-display);
-  font-size: var(--text-h1);
+  font-size: var(--text-h2);
   font-style: italic;
-  color: var(--text-on-dark);
-  max-width: 20ch;
-  line-height: 1.2;
+  color: var(--text-primary);
+  max-width: 24ch;
+  line-height: 1.25;
 }
 /* --- Hook: 2-beat state machine --- */
 .hook-beat-0 {
@@ -147,7 +151,7 @@ aside.notes { display: none; }
 /* --- Hook: data grid (3 numbers) --- */
 .hook-data-grid {
   display: flex;
-  gap: var(--space-xl);
+  gap: var(--space-lg);
   justify-content: center;
   align-items: flex-end;
   margin-top: var(--space-lg);
@@ -158,29 +162,30 @@ aside.notes { display: none; }
   align-items: center;
   gap: var(--space-xs);
 }
-.hook-data-value {
+#deck .hook-data-value {
   font-family: var(--font-mono);
-  font-size: var(--text-h1);
-  color: var(--text-on-dark);
+  font-size: var(--text-h2);
+  color: var(--text-primary);
   font-weight: 600;
   line-height: 1;
 }
-.hook-data-big {
-  font-size: var(--text-hero);
+#deck .hook-data-big {
+  font-size: var(--text-h1);
 }
-.hook-data-label {
+#deck .hook-data-label {
   font-family: var(--font-body);
-  font-size: var(--text-small);
-  color: var(--text-on-dark-muted);
+  font-size: var(--text-caption);
+  color: var(--text-secondary);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
+  font-weight: 500;
 }
 
 /* --- Hook: verdict line --- */
-.hook-verdict {
+#deck .hook-verdict {
   font-family: var(--font-body);
   font-size: var(--text-body);
-  color: var(--text-on-dark-muted);
+  color: var(--ui-accent);
   margin-top: var(--space-md);
   text-align: center;
   max-width: 40ch;
@@ -222,7 +227,7 @@ aside.notes { display: none; }
 .compare-name {
   font-family: var(--font-body);
   font-size: var(--text-small);
-  color: var(--text-on-dark-muted);
+  color: var(--text-secondary);
   text-transform: uppercase;
   letter-spacing: 0.04em;
   margin-top: var(--space-xs);
@@ -230,14 +235,14 @@ aside.notes { display: none; }
 .compare-desc {
   font-family: var(--font-body);
   font-size: var(--text-body);
-  color: var(--text-on-dark);
+  color: var(--text-primary);
   line-height: 1.5;
   margin-top: var(--space-sm);
 }
 .compare-footer {
   font-family: var(--font-body);
   font-size: var(--text-h3);
-  color: var(--text-on-dark);
+  color: var(--text-primary);
   text-align: center;
   margin-top: var(--space-md);
   font-weight: 500;
@@ -255,7 +260,7 @@ aside.notes { display: none; }
 .anchor-citation {
   font-family: var(--font-body);
   font-size: var(--text-small);
-  color: var(--text-on-dark-muted);
+  color: var(--text-secondary);
   line-height: 1.5;
   border-left: 3px solid var(--ui-accent-on-dark);
   padding-left: var(--space-sm);
@@ -274,14 +279,14 @@ aside.notes { display: none; }
 .metric-value {
   font-family: var(--font-mono);
   font-size: var(--text-h1);
-  color: var(--text-on-dark);
+  color: var(--text-primary);
   font-weight: 600;
   line-height: 1;
 }
 .metric-label {
   font-family: var(--font-body);
   font-size: var(--text-small);
-  color: var(--text-on-dark-muted);
+  color: var(--text-secondary);
   text-transform: uppercase;
   letter-spacing: 0.04em;
   text-align: center;
@@ -319,14 +324,14 @@ aside.notes { display: none; }
 .pico-label {
   font-family: var(--font-body);
   font-size: var(--text-small);
-  color: var(--text-on-dark-muted);
+  color: var(--text-secondary);
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
 .pico-desc {
   font-family: var(--font-body);
   font-size: var(--text-body);
-  color: var(--text-on-dark);
+  color: var(--text-primary);
   line-height: 1.3;
 }
 
@@ -353,20 +358,20 @@ aside.notes { display: none; }
 .pipeline-label {
   font-family: var(--font-body);
   font-size: var(--text-small);
-  color: var(--text-on-dark-muted);
+  color: var(--text-secondary);
   text-transform: uppercase;
   letter-spacing: 0.03em;
 }
 .pipeline-detail {
   font-family: var(--font-body);
   font-size: var(--text-caption);
-  color: var(--text-on-dark-muted);
+  color: var(--text-secondary);
   line-height: 1.3;
 }
 .pipeline-arrow {
   display: flex;
   align-items: center;
-  color: var(--text-on-dark-muted);
+  color: var(--text-secondary);
   font-size: var(--text-h3);
   flex-shrink: 0;
 }
@@ -403,13 +408,13 @@ aside.notes { display: none; }
 .anatomy-name {
   font-family: var(--font-body);
   font-size: var(--text-body);
-  color: var(--text-on-dark);
+  color: var(--text-primary);
   font-weight: 500;
 }
 .anatomy-what {
   font-family: var(--font-body);
   font-size: var(--text-small);
-  color: var(--text-on-dark-muted);
+  color: var(--text-secondary);
 }
 
 /* --- GRADE stack (certainty levels) --- */
@@ -437,7 +442,7 @@ aside.notes { display: none; }
 .grade-meaning {
   font-family: var(--font-body);
   font-size: var(--text-body);
-  color: var(--text-on-dark);
+  color: var(--text-primary);
   line-height: 1.3;
 }
 .grade-icon {
@@ -455,9 +460,9 @@ aside.notes { display: none; }
 .grade-low { border-left: 4px solid var(--danger-on-dark); }
 .grade-low .grade-label { color: var(--danger-on-dark); }
 .grade-low .grade-icon { color: var(--danger-on-dark); }
-.grade-very-low { border-left: 4px solid var(--text-on-dark-muted); }
-.grade-very-low .grade-label { color: var(--text-on-dark-muted); }
-.grade-very-low .grade-icon { color: var(--text-on-dark-muted); }
+.grade-very-low { border-left: 4px solid var(--text-secondary); }
+.grade-very-low .grade-label { color: var(--text-secondary); }
+.grade-very-low .grade-icon { color: var(--text-secondary); }
 
 /* --- Concept card (heterogeneity, general concepts) --- */
 .concept-card {
@@ -478,7 +483,7 @@ aside.notes { display: none; }
 .concept-definition {
   font-family: var(--font-body);
   font-size: var(--text-body);
-  color: var(--text-on-dark);
+  color: var(--text-primary);
   text-align: center;
   max-width: 50ch;
   line-height: 1.4;
@@ -486,7 +491,7 @@ aside.notes { display: none; }
 .concept-question {
   font-family: var(--font-body);
   font-size: var(--text-h3);
-  color: var(--text-on-dark);
+  color: var(--text-primary);
   max-width: 50ch;
   padding: var(--space-md);
   background: var(--bg-navy-mid);
@@ -527,18 +532,18 @@ aside.notes { display: none; }
 .contrato-question {
   font-family: var(--font-display);
   font-size: var(--text-h3);
-  color: var(--text-on-dark);
+  color: var(--text-primary);
   line-height: 1.2;
 }
 .contrato-skill {
   font-family: var(--font-body);
   font-size: var(--text-small);
-  color: var(--text-on-dark-muted);
+  color: var(--text-secondary);
 }
 .contrato-scope {
   font-family: var(--font-body);
   font-size: var(--text-small);
-  color: var(--text-on-dark-muted);
+  color: var(--text-secondary);
   text-align: center;
   margin-top: var(--space-md);
   max-width: 60ch;
@@ -586,7 +591,7 @@ aside.notes { display: none; }
 .checkpoint-context {
   font-family: var(--font-body);
   font-size: var(--text-body);
-  color: var(--text-on-dark-muted);
+  color: var(--text-secondary);
 }
 .checkpoint-result {
   display: flex;
@@ -598,14 +603,14 @@ aside.notes { display: none; }
 .checkpoint-metric {
   font-family: var(--font-mono);
   font-size: var(--text-hero);
-  color: var(--text-on-dark);
+  color: var(--text-primary);
   font-weight: 600;
   line-height: 1;
 }
 .checkpoint-ci {
   font-family: var(--font-mono);
   font-size: var(--text-h3);
-  color: var(--text-on-dark-muted);
+  color: var(--text-secondary);
 }
 .checkpoint-grade {
   font-family: var(--font-body);
@@ -619,13 +624,13 @@ aside.notes { display: none; }
 .checkpoint-outcome {
   font-family: var(--font-body);
   font-size: var(--text-h3);
-  color: var(--text-on-dark);
+  color: var(--text-primary);
 }
 .checkpoint-question {
   font-family: var(--font-display);
   font-size: var(--text-h1);
   font-style: italic;
-  color: var(--text-on-dark);
+  color: var(--text-primary);
   max-width: 20ch;
   line-height: 1.2;
 }
@@ -650,7 +655,7 @@ aside.notes { display: none; }
 .checkpoint-teaser {
   font-family: var(--font-body);
   font-size: var(--text-small);
-  color: var(--text-on-dark-muted);
+  color: var(--text-secondary);
 }
 /* .no-js fallback for checkpoint */
 .no-js .checkpoint-reveal {
@@ -685,7 +690,7 @@ aside.notes { display: none; }
 .checkpoint-step-text {
   font-family: var(--font-body);
   font-size: var(--text-body);
-  color: var(--text-on-dark);
+  color: var(--text-primary);
   line-height: 1.3;
 }
 .checkpoint-step--safe { border-left: 4px solid var(--safe-on-dark); }
@@ -727,7 +732,7 @@ aside.notes { display: none; }
 .conversion-hero-label {
   font-family: var(--font-body);
   font-size: var(--text-small);
-  color: var(--text-on-dark-muted);
+  color: var(--text-secondary);
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
@@ -750,14 +755,14 @@ aside.notes { display: none; }
 .conversion-baseline {
   font-family: var(--font-body);
   font-size: var(--text-small);
-  color: var(--text-on-dark-muted);
+  color: var(--text-secondary);
   text-transform: uppercase;
   letter-spacing: 0.03em;
 }
 .conversion-arr {
   font-family: var(--font-mono);
   font-size: var(--text-h2);
-  color: var(--text-on-dark);
+  color: var(--text-primary);
   font-weight: 600;
 }
 .conversion-nnt {
@@ -769,10 +774,10 @@ aside.notes { display: none; }
 .conversion-nnt-label {
   font-family: var(--font-body);
   font-size: var(--text-small);
-  color: var(--text-on-dark-muted);
+  color: var(--text-secondary);
 }
 .conversion-impact .conversion-nnt { color: var(--safe-on-dark); }
-.conversion-negligible .conversion-nnt { color: var(--text-on-dark-muted); }
+.conversion-negligible .conversion-nnt { color: var(--text-secondary); }
 
 /* --- Compare footer: GRADE gap variant (warning callout) --- */
 .compare-footer--gap {
@@ -782,7 +787,7 @@ aside.notes { display: none; }
 }
 
 /* --- Neutral symbol (NS result, no significant difference) --- */
-.symbol-neutral { color: var(--text-on-dark-muted); }
+.symbol-neutral { color: var(--text-secondary); }
 
 /* --- Take-home: echoes contrato with upgraded content --- */
 .takehome-card {
@@ -806,12 +811,12 @@ aside.notes { display: none; }
 .takehome-question {
   font-family: var(--font-display);
   font-size: var(--text-h3);
-  color: var(--text-on-dark);
+  color: var(--text-primary);
   line-height: 1.2;
 }
 .takehome-detail {
   font-family: var(--font-body);
   font-size: var(--text-small);
-  color: var(--text-on-dark-muted);
+  color: var(--text-secondary);
   line-height: 1.3;
 }

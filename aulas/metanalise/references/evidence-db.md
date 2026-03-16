@@ -123,7 +123,7 @@
 | Dado | Valor | Fonte | PMID | DOI | Tier | Nota |
 |------|-------|-------|------|-----|------|------|
 | SRs em câncer com qualidade criticamente baixa (AMSTAR-2) | **88,1%** (230/261) | Siemens et al. J Clin Epidemiol 2021;136:84-95 | 33741503 | 10.1016/j.jclinepi.2021.03.010 | 1 | ⚠ Específico de câncer avançado — não usar como dado geral |
-| SRs que declaram AMSTAR-2: criticamente baixas (cross-field) | **81%** (35/43) | Bojcic et al. J Clin Epidemiol 2024;165:111210 | 37931822 ✅ | 10.1016/j.jclinepi.2023.10.026 | 1 | **CANDIDATO** para substituir Siemens no hook — não específico de área |
+| SRs que declaram AMSTAR-2: criticamente baixas (cross-field) | **81%** (35/43) | Bojcic et al. J Clin Epidemiol 2024;165:111210 | 37931822 ✅ | 10.1016/j.jclinepi.2023.10.026 | 1 | ✅ **EM USO no hook** (substituiu Siemens 88%) — cross-field, não específico de área |
 | "A grande maioria é desnecessária, enganosa ou conflitada" | — | Ioannidis 2016 | 27620683 | idem | 1 | |
 | MAs redundantes sobre antidepressivos (2007-2014) | **185** sobre o mesmo tema | Ioannidis 2016 | 27620683 | idem | 1 | |
 
@@ -134,7 +134,7 @@
 | Recomendações ACC/AHA com LoE A (=SR/MA) | **8,5%** (248/2930) | Fanaroff et al. JAMA 2019;321(11):1069-80 | 30874755 | 10.1001/jama.2019.1122 | 1 | Específico ACC/AHA cardiologia |
 | Recomendações ESC com LoE A | **14,2%** (484/3399) | Fanaroff et al. 2019 | 30874755 | idem | 1 | |
 | Recomendações ESC com LoE C (opinião de expert) | **54,8%** | Fanaroff et al. 2019 | 30874755 | idem | 1 | |
-| Recomendações com evidência forte (LoE A equiv.) — cross-society | **10%** (768/7.582) | Qureshi et al. JGIM 2025 [online 22 dez] | 41428154 ✅ | 10.1007/s11606-025-10088-6 | 1 | **CANDIDATO** para substituir/complementar Fanaroff — 23 sociedades EUA, 2019-2023, cross-specialty |
+| Recomendações com evidência forte (LoE A equiv.) — cross-society | **10%** (768/7.582) | Qureshi et al. JGIM 2025 [online 22 dez] | 41428154 ✅ | 10.1007/s11606-025-10088-6 | 1 | ✅ **EM USO no hook** (substituiu Fanaroff 8,5%) — 23 sociedades EUA, 2019-2023, cross-specialty |
 | Guidelines que usam métodos sistemáticos | **34%** (17/50) | Lunny et al. PLoS ONE 2021;16(4):e0250356 | 33886670 | 10.1371/journal.pone.0250356 | 1 | |
 
 ### Competência dos médicos
@@ -392,6 +392,7 @@
 
 | Data | Mudança |
 |------|---------|
+| 2026-03-16e | v4.1 — Hook dados atualizados: Siemens 88% → Bojcic 81% (cross-field); Fanaroff 8,5% → Qureshi 10% (23 sociedades). Tags CANDIDATO → EM USO. Pendente: sync Notion References DB |
 | 2026-03-15d | v4.0 — 5 candidatos Gemini adicionados (PMIDs verificados, 2 corrigidos). Hanula/oseltamivir, McIntyre/DOAC-AF, Yin/sal, Abdul-Aziz/β-lactam, Bosco/próstata-CV. Lucas indeciso entre β-lactam e PAC; slides começam amanhã sem artigo definido |
 | 2026-03-15c | v3.4 — 3 finalistas para âncora adicionados: Pitre/ICM 2025 (corticoides PAC, recomendado), Kolkailah/Cochrane 2024 (VTE), Carson/Cochrane 2025 (transfusão). Decisão: Cochrane = exemplos visuais; âncora preferencialmente não-Cochrane |
 | 2026-03-15b | v3.3 — Musini PMID 41065416 ✅ verificado. Acesso atualizado: Cochrane Library via CAPES (acordo nacional) |

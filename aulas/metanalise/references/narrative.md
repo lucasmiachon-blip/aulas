@@ -48,7 +48,7 @@ Residentes de clínica médica (básico-intermediário).
 
 **Conteúdo:**
 - Por que meta-análise importa para o residente clínico?
-- Dado de impacto: quantas decisões clínicas dependem de MA? [TBD — buscar dado]
+- Dados de impacto no hook: 80 SRs/dia (Hoffmann 2021), 81% criticamente baixas (Bojcic 2024), 10% guidelines com LoE forte (Qureshi 2025), ilusão de competência (Lakhlifi 2023)
 - Situação provocativa: "Você lê o abstract e confia no diamante. Mas deveria?"
 - Contrato com a audiência: o que a aula vai entregar (3 perguntas framework)
 
