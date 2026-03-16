@@ -6,7 +6,7 @@
 
 ## Estado atual
 
-- **Fase:** QA SLIDE-A-SLIDE em andamento. s-title PASS, s-hook PASS, ERRO-008 (double-scaling fullscreen) CORRIGIDO — CSS zoom removido (deck.js handles scaling), fixed px tokens mantidos. Verificado em 1920x1080: title, hook, contrato renderizam corretamente. Próximo: s-contrato (02) QA audit. A/B sync com main concluído (16/mar). Build de produção pendente.
+- **Fase:** QA SLIDE-A-SLIDE em andamento. s-title PASS, s-hook PASS (layout centering fix: flex:1 equal columns, verdict 80px below grid, question at top). ERRO-008 CORRIGIDO. **Plano C = fundo creme (stage-c), NÃO navy.** Próximo: s-contrato (02) QA audit. Build de produção pendente.
 - **Branch:** feat/metanalise-mvp (worktree wt-metanalise)
 - **Slides no index.html:** 18 (00-title → 01-hook → 02-contrato → 03-checkpoint-1 → 04-rs-vs-ma → 05-pico → 06-abstract → 07-forest-plot → 08-benefit-harm → 09-grade → 10-heterogeneity → 11-fixed-random → 12-checkpoint-2 → 13-ancora → 14-aplicacao → 15-aplicabilidade → 16-absoluto → 17-takehome)
 - **Slides planejados:** 18 (00-17) — ver blueprint.md v1.7
@@ -18,7 +18,7 @@
 - **Artigo âncora:** ✅ Valgimigli 2025, Clopidogrel vs Aspirina (Lancet, PMID 40902613). IPD-MA, 7 RCTs, 28.982 pts
 - **lint:slides:** ✅ PASS (zero FAILs)
 - **HEX navy:** #162032 mantido (decisao Lucas — consistencia cross-aula)
-- **CSS overrides em metanalise.css vs base.css:** `justify-content: center` restaurado + pseudo-elements desativados (ERRO-005). Checkpoint safe-center pattern proprio (ERRO-006). CSS zoom REMOVIDO — deck.js scale() é o mecanismo correto (ERRO-008). Fixed px tokens mantidos para evitar vw double-scaling.
+- **CSS overrides em metanalise.css vs base.css:** `justify-content: center` restaurado + pseudo-elements desativados (ERRO-005). Checkpoint safe-center pattern proprio (ERRO-006). CSS zoom REMOVIDO — deck.js scale() é o mecanismo correto (ERRO-008). Fixed px tokens mantidos para evitar vw double-scaling. Hook: `.hook-data` flex container + `.hook-data-item { flex: 1 }` para colunas iguais + verdict `margin-top: 80px`.
 
 ## O que foi feito
 
@@ -435,4 +435,22 @@ Sequência sugerida: slide 01 → 02 → 03 → ... → 17 (em ordem).
 
 ---
 
-## Última atualização: 2026-03-16d (PROMPT-SCALING deletado + pesquisa ERRO-003)
+## Sessão 2026-03-16h — Hook layout centering
+
+### O que foi feito
+- [x] `.hook-data` container criado: flex column, align-items center, width 100%
+- [x] `.hook-data-grid`: width 100%, gap reduzido 40→24px
+- [x] `.hook-data-item`: flex: 1 + min-width: 0 — 3 colunas iguais (simetria horizontal)
+- [x] `.hook-question`: removido justify-content center — question text sobe ao topo
+- [x] `.hook-verdict`: margin-top 80px (separação visual)
+- [x] Revertido override `.stage-c .slide-navy` errôneo (fundo é creme, não navy)
+- [x] Confirmado: Plano C = stage-c = fundo creme. `data-background-color` ignorado por deck.js
+- [x] Notion sync: slides + references atualizados
+
+### O que NÃO foi feito (deliberado)
+- QA slides 02-17 — próxima sessão
+- Build de produção
+
+---
+
+## Última atualização: 2026-03-16h (hook layout centering + Notion sync)

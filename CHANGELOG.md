@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+### Fixed (2026-03-16h — hook layout: centering + spacing)
+- `metanalise.css`: `.hook-data` container added (flex column, `align-items: center`, `width: 100%`) — verdict centers under numbers.
+- `metanalise.css`: `.hook-data-grid` gets `width: 100%` — grid spans full slide width.
+- `metanalise.css`: `.hook-data-item` gets `flex: 1; min-width: 0` — 3 equal-width columns for symmetric horizontal centering.
+- `metanalise.css`: `.hook-question` changed from `justify-content: center` to flex-start — question text sits higher.
+- `metanalise.css`: verdict `margin-top: 80px` — visual separation from numbers grid.
+- `metanalise.css`: grid gap reduced `--space-lg` → `--space-md` (40→24px) — tighter grouping.
+- Verified at 1920x1080 on stage-c (cream bg, dark text).
+
 ### Fixed (2026-03-16g — ERRO-008: double-scaling at fullscreen)
 - **Root cause:** CSS `zoom` on body conflicted with deck.js `transform: scale()` — 1.5 × 1.5 = 2.25x. Cards clipped, h2 above viewport, source-tag below.
 - `metanalise.css`: removed `body { zoom }` entirely — deck.js handles viewport scaling.
