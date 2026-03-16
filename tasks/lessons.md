@@ -129,6 +129,27 @@
 - **Regra:** Em deck.js, usar stage classes + tokens CSS para controlar cores. `data-background-color` é documentação/legacy, não funcional.
 - **Pendência (Classe B):** Implementar suporte a `data-background-color` em deck.js para stage-a/dark mode futuro.
 
+### Safe-center pseudo-elements incompatíveis com flex:1 children
+
+- `base.css` introduziu `::before, ::after { flex: 1 0 0px }` como spacers para safe-center (evitar clipping simétrico)
+- Pattern funciona quando ALL content children têm tamanho fixo (sem `flex-grow`)
+- Quando children têm `flex: 1` (compare-layout, pico-grid, etc), os spacers competem pelo espaço restante → conteúdo NÃO centra, h2 é empurrado para posições inconsistentes
+- **Regra:** Safe-center com pseudo-elements requer `flex-shrink: 0` E ausência de `flex-grow` nos children de conteúdo. Se layout components usam `flex: 1`, usar `justify-content: center` direto (sem spacers).
+- **Regra:** Após merge de main que modifica `.slide-inner`, medir h2 positions programaticamente em TODAS as aulas antes de prosseguir.
+
+### justify-content: center + overflow = clipping simétrico
+
+- `justify-content: center` em flex column com overflow distribui excesso simetricamente: metade para cima, metade para baixo
+- Conteúdo que extravasa é cortado no TOPO (h2 desaparece) e no FUNDO
+- **Fix pattern:** Remover `justify-content: center`, usar `margin-top: auto` no primeiro child real → centra quando cabe, colapsa a 0 quando overflows (conteúdo sempre começa do topo)
+- **Regra:** Em layouts com conteúdo variável, NUNCA usar `justify-content: center` — usar margin-auto safe-center.
+
+### Browser default p { margin: 1em } em flex layouts
+
+- `<p>` dentro de flex layout com `gap` terá espaçamento DUPLICADO: `gap` + `margin: 1em` top + `margin: 1em` bottom
+- Em checkpoint com 8 `<p>` = ~240px de margem invisível que inflava o layout
+- **Regra:** Reset `p { margin: 0 }` dentro de qualquer flex layout que usa `gap`. Ou usar `<span>` se o parágrafo não precisa de block.
+
 ### CSS specificity: `#id` > `.class`
 
 - `#deck h1 { color: var(--text-primary) }` (specificity 1-0-1) sempre ganha de `.slide-navy h1 { color: var(--text-on-dark) }` (0-1-1)

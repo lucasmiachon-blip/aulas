@@ -16,9 +16,15 @@ aside.notes { display: none; }
   --text-caption: clamp(14px, 0.85vw, 15px);
 }
 
-/* --- Slide padding (consistent with cirrose) --- */
+/* --- Slide layout (override base.css safe-center pseudo-elements
+   which compete with flex:1 content components) --- */
 #slide-viewport > section .slide-inner {
   padding: 40px 64px;
+  justify-content: center;
+}
+#slide-viewport > section .slide-inner::before,
+#slide-viewport > section .slide-inner::after {
+  display: none;
 }
 
 /* --- Title slide (capa centrada) --- */
@@ -564,16 +570,18 @@ aside.notes { display: none; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   flex: 1;
+  min-height: 0;
   gap: var(--space-md);
   text-align: center;
 }
+.checkpoint-layout p { margin: 0; }
 .checkpoint-scenario {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--space-sm);
+  margin-top: auto;
 }
 .checkpoint-context {
   font-family: var(--font-body);
@@ -618,7 +626,6 @@ aside.notes { display: none; }
   font-size: var(--text-h1);
   font-style: italic;
   color: var(--text-on-dark);
-  margin-top: var(--space-md);
   max-width: 20ch;
   line-height: 1.2;
 }

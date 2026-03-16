@@ -5,6 +5,20 @@
 ### Fixed (2026-03-16 — P0 safe-center: elimina clipping simétrico)
 - `shared/css/base.css`: `.slide-inner` `justify-content: center` → `flex-start` + pseudo-elements `::before/::after { flex: 1 0 0px }` para centering seguro. Conteúdo centra quando cabe; quando extravasa, overflow é apenas na base (preserva h2 e "ATO" no topo). 3 slides que tinham overflow marginal (meld, a3-06, app-alb) agora cabem perfeitamente.
 
+### Fixed (2026-03-16b — h2 alignment: override base.css safe-center for metanalise)
+- `metanalise.css`: restored `justify-content: center` on `.slide-inner` — base.css safe-center pseudo-elements (`::before/::after { flex: 1 }`) competed with `flex: 1` content components (compare-layout, pico-grid, etc), causing h2 headings to shift 100-180px down and vary between slides
+- `metanalise.css`: `::before, ::after { display: none }` — disables safe-center spacers for metanalise (cirrose still uses them from base.css)
+- Result: 16/16 h2 slides now at consistent 67px from top (was 42-221px, inconsistent). Checkpoints unaffected (own safe-center pattern)
+- Root cause: base.css commit "P0 safe-center" changed `justify-content: center` → `flex-start` + spacers. This is correct for fixed-content slides (cirrose) but breaks metanalise where layout components have `flex: 1`, making spacers share remaining space 3 ways instead of centering content
+
+### Fixed (2026-03-16a — checkpoint padding + heading alignment)
+- `metanalise.css`: `.checkpoint-layout` — removed `justify-content: center` (caused center-overflow pushing content above viewport), added `min-height: 0` (prevents flex min-height: auto from inflating layout past 640px container)
+- `metanalise.css`: `.checkpoint-scenario` — added `margin-top: auto` (safe-center: centers when content fits, collapses to 0 when it overflows)
+- `metanalise.css`: `.checkpoint-layout p { margin: 0 }` — resets browser default `margin: 1em` on `<p>` elements inside flex layout (was adding ~240px of hidden vertical space)
+- `metanalise.css`: `.checkpoint-question` — removed redundant `margin-top: var(--space-md)` (double-counted with layout `gap`)
+- CP1: content now perfectly centered (scrollHeight 640 = available space); before: 42px overflow, content at 25px from top
+- CP2: scenario at 40px from top (was -75px, literally clipped above viewport); verdict now visible at 682px (was clipped)
+
 ### Fixed (2026-03-15j — scroll fix + notes hiding)
 - `aulas/metanalise/metanalise.css`: added `body { margin: 0; overflow: hidden; }` — eliminates scrollbar caused by browser default 8px margin
 - `aulas/metanalise/metanalise.css`: added `aside.notes { display: none; }` — hides 18 speaker notes that were rendered as visible text blocks (no CSS existed for notes in entire codebase)

@@ -6,7 +6,7 @@
 
 ## Estado atual
 
-- **Fase:** DECK COMPLETO — 18 slides (00-17). QA visual batch 1 PASS (stage-c + scroll fixados). **Dados do hook PENDENTES revisão** (3 numeros a corrigir). Build de producao pendente.
+- **Fase:** DECK COMPLETO — 18 slides (00-17). **Layout CSS estável**: h2 alinhados (67px consistente), checkpoints centrados, zero scroll, contraste OK. **Dados do hook PENDENTES revisão** (3 números a corrigir — ERRO-003). Build de produção pendente.
 - **Branch:** feat/metanalise-mvp (worktree wt-metanalise)
 - **Slides no index.html:** 18 (00-title → 01-hook → 02-contrato → 03-checkpoint-1 → 04-rs-vs-ma → 05-pico → 06-abstract → 07-forest-plot → 08-benefit-harm → 09-grade → 10-heterogeneity → 11-fixed-random → 12-checkpoint-2 → 13-ancora → 14-aplicacao → 15-aplicabilidade → 16-absoluto → 17-takehome)
 - **Slides planejados:** 18 (00-17) — ver blueprint.md v1.7
@@ -14,10 +14,11 @@
 - **_manifest.js:** CRIADO — 18 slides, fases F1/I1/F2/I2/F3
 - **slide-registry.js:** CRIADO — state machines para hook (2-beat), checkpoint-1 (3-beat), checkpoint-2 (4-beat)
 - **Orphan slides:** 0
-- **Orphan CSS:** 0 (8 classes removidas: scope-*, pipeline-number, hook-question-sub)
+- **Orphan CSS:** 0
 - **Artigo âncora:** ✅ Valgimigli 2025, Clopidogrel vs Aspirina (Lancet, PMID 40902613). IPD-MA, 7 RCTs, 28.982 pts
 - **lint:slides:** ✅ PASS (zero FAILs)
 - **HEX navy:** #162032 mantido (decisao Lucas — consistencia cross-aula)
+- **CSS overrides em metanalise.css vs base.css:** `justify-content: center` restaurado + pseudo-elements desativados (ERRO-005). Checkpoint safe-center pattern proprio (ERRO-006).
 
 ## O que foi feito
 
@@ -73,14 +74,15 @@
 
 ## Caminho crítico — próximas sessões
 
-### Sessão N+1 (imediata) — QA visual batches 2-6
-1. **QA visual batches 2-6** com Vite aberto (batches de 3 slides, tese por slide, checkpoint sim/nao/pq)
+### Sessão N+1 (imediata) — Dados do hook + QA visual batches 2-6
+1. **Dados do hook (slide 01):** atualizar 3 números com refs mais atuais (Tier 1 verificadas). Possivelmente uma interação a mais. Ver ERRO-003.
+2. **QA visual batches 2-6** com Vite aberto (batches de 3 slides, tese por slide, checkpoint sim/nao/pq)
    - Batch 2: slides 03-05 (checkpoint-1, RS vs MA, PICO)
    - Batch 3: slides 06-08 (abstract, forest plot, beneficio-dano)
    - Batch 4: slides 09-11 (GRADE, heterogeneidade, fixed-random)
    - Batch 5: slides 12-14 (checkpoint-2, ancora, aplicacao)
    - Batch 6: slides 15-17 (aplicabilidade, absoluto, takehome)
-2. Inserir exemplos visuais Cochrane (forest plot, GRADE table) — PDFs em `references/sources/`
+3. Inserir exemplos visuais Cochrane (forest plot, GRADE table) — PDFs em `references/sources/`
 
 ### Sessão N+2
 - QA final (Gate 4 Gemini)
@@ -326,17 +328,33 @@
 - **Slides 00-02:** esteticamente bons (exceto fonte/tamanho no slide 01 hook — dados)
 - **QA batches 2-6:** pendente
 
-### ALERTA: WT Cirrose com degradação
-- **Scroll:** apareceu scrollbar em cirrose (mesma root cause: `aside.notes` sem CSS + body margin)
-- **Background:** mudou para navy (possível perda de `class="stage-c"` no body, ou merge absorveu mudança indesejada)
+### ALERTA: WT Cirrose com degradação (reportado 2026-03-15, persiste)
+- **Scroll:** scrollbar visível
+- **Background:** mudou para navy (deveria ser light gray stage-c)
 - **Interações:** degradação reportada
-- **Ação:** investigar em sessão na WT cirrose (NÃO consertar aqui — Classe C, worktrees separadas)
-- **Nota:** main já tem commit `8683c45` com fix de notes/overflow em `shared/css/base.css`, mas abordagem diferente (overflow em viewport+section, notes via `.notes` class). **Não inclui body margin reset.** Se WT cirrose absorveu esse commit e ainda tem scroll, o problema é outro (possivelmente body margin ou regressão em stage-c/template).
+- **Causa provável:** base.css "P0 safe-center" mudou `.slide-inner { justify-content }` + adicionou pseudo-elements. Cirrose pode ter layouts `flex:1` que sofrem o mesmo problema que metanalise (ERRO-005). Também: `body { margin: 0 }` ausente em base.css e cirrose.css.
+- **Ação:** sessão dedicada na WT cirrose com diagnóstico completo. **Prompt de diagnóstico preparado abaixo.**
 
 ### Pendências para main (Classe B)
-- `shared/css/base.css`: mover `body { margin: 0 }` + `aside.notes { display: none }` para base (resolve scroll em TODAS as aulas, incluindo cirrose)
+- `shared/css/base.css`: `body { margin: 0; padding: 0 }` — resolve scroll em TODAS as aulas
+- `shared/css/base.css`: avaliar se pseudo-elements safe-center causam regressão em cirrose (mesma interação com `flex: 1`)
 - `vite.config.js`: auto-detect aula via branch name
 - `deck.js`: processar `data-background-color` (stage-a futuro)
 - `base.css`: fix specificidade `.slide-navy` vs `#deck` (stage-a)
 
-## Última atualização: 2026-03-15k (notas finais de sessão + alerta cirrose)
+---
+
+## Sessão 2026-03-16 — CSS layout fixes (h2 alignment + checkpoint centering)
+
+### O que foi feito
+- [x] **ERRO-005 (h2 alignment):** base.css "P0 safe-center" pseudo-elements competiam com `flex: 1` content components → h2 headings variavam de 42-221px. Fix: `metanalise.css` override `justify-content: center` + `::before/::after { display: none }`. 16/16 h2 agora a 67px consistente.
+- [x] **ERRO-006 (checkpoint centering):** `justify-content: center` em `.checkpoint-layout` + `flex: 1` + `min-height: auto` → content overflow pushed above viewport. Fix: safe-center pattern com `margin-top: auto` + `min-height: 0` + `p { margin: 0 }`.
+- [x] Verificado com Playwright: 18 slides, todos os estados de animação, h2 positions medidos programaticamente.
+- [x] ERROR-LOG, CHANGELOG, HANDOFF, lessons.md atualizados.
+
+### O que NÃO foi feito (deliberado)
+- Dados do hook (ERRO-003) — próxima sessão
+- QA visual batches 2-6 — layout estável, pronto para prosseguir
+- Fix cirrose — requer sessão dedicada na WT cirrose
+
+## Última atualização: 2026-03-16a (layout CSS fixes + documentação)

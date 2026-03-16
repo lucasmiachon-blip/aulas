@@ -50,6 +50,20 @@ Severidades: CRITICAL (bloqueia projeção), HIGH (prejudica leitura), MEDIUM (e
 **Regra derivada:** Pendência para main (Classe B): auto-detect aula via branch name em `vite.config.js`.
 **Data:** 2026-03-15
 
+### ERRO-005 · HIGH · Todos os slides (regressão de layout)
+**Descrição:** Todos os h2 headings desalinhados verticalmente — posições variavam de 42px a 221px entre slides (deveriam ser consistentes a ~67px). Conteúdo empurrado para baixo em slides com menos conteúdo.
+**Root cause:** `shared/css/base.css` (commit "P0 safe-center" em main) trocou `.slide-inner { justify-content: center }` por `justify-content: flex-start` + pseudo-elements `::before, ::after { flex: 1 0 0px }` para centering seguro. Pattern correto para slides com conteúdo fixo (cirrose), mas em metanalise os componentes de layout (`.compare-layout`, `.pico-grid`, `.contrato-grid`, etc) têm `flex: 1` — os spacers competem com eles, dividindo espaço em 3 partes iguais em vez de centrar.
+**Fix:** Override em `metanalise.css`: (1) `justify-content: center` restaurado no `.slide-inner`, (2) `::before, ::after { display: none }` para desativar spacers. Scoped — cirrose não afetada.
+**Regra derivada:** (1) Safe-center com pseudo-elements NÃO funciona quando children têm `flex: 1` — os spacers competem pelo espaço restante. (2) Sempre testar layout patterns do base.css em TODAS as aulas após merge de main. (3) Ao absorver main em WT, verificar se `.slide-inner` behavior mudou — medir h2 positions programaticamente.
+**Data:** 2026-03-16
+
+### ERRO-006 · MEDIUM · Checkpoints 03, 12
+**Descrição:** Checkpoint slides sem padding superior e conteúdo desalinhado. CP1: conteúdo a 25px do topo (deveria estar centrado). CP2: cenário a -75px (acima do viewport, cortado).
+**Root cause:** `.checkpoint-layout { justify-content: center; flex: 1 }` — com conteúdo que overflow, `justify-content: center` distribui espaço simetricamente, empurrando metade do overflow ACIMA do viewport. Agravado por: (a) `min-height: auto` inflando layout, (b) browser default `<p> { margin: 1em }` adicionando ~240px invisíveis, (c) `margin-top` redundante com `gap`.
+**Fix:** (1) Removido `justify-content: center` do `.checkpoint-layout`, (2) `min-height: 0` para prevenir inflação, (3) `margin-top: auto` no `.checkpoint-scenario` (safe-center pattern interno), (4) `.checkpoint-layout p { margin: 0 }`, (5) removido `margin-top` redundante do `.checkpoint-question`.
+**Regra derivada:** (1) `justify-content: center` em flex containers com overflow = clipping simétrico. Usar `margin-top: auto` no primeiro child em vez de `justify-content: center`. (2) Reset `p { margin: 0 }` dentro de flex layouts que usam `gap`. (3) Nunca duplicar espaçamento (`gap` + `margin`).
+**Data:** 2026-03-16
+
 ---
 
 *Append-only. Não remover erros antigos.*
