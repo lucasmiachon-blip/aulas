@@ -5,9 +5,9 @@ Parent: ver CLAUDE.md na raiz.
 ## WT State (atualizar a cada sessao)
 
 - **Branch:** feat/metanalise-mvp
-- **Ultimo merge main:** 492ca7d (2026-03-16)
+- **Ultimo merge main:** 4bda0c1 (2026-03-17) — governance hardening (624ebec), evolve patches (2f9e909), GSAP 3.14.2, rules split deck-patterns/reveal-legacy
 - **Classe C pendente:** 0 arquivos em main
-- **Infra sync:** OK — governance absorvida (Class A/B only)
+- **Infra sync:** OK — governance absorvida (Class A/B), GSAP 3.14.2
 
 ## Worktree
 

@@ -506,7 +506,7 @@ Sequência sugerida: slide 01 → 02 → 03 → ... → 17 (em ordem).
 - [x] Classe: todos A/B (governanca + infra). Zero Classe C
 - [x] .mcp.json validado (12 servers, JSON valido)
 - [x] `npm run build:metanalise` — OK (18 slides)
-- [x] CLAUDE.md aula atualizado (merge ref 492ca7d)
+- [x] CLAUDE.md aula atualizado (merge ref 4bda0c1)
 
 ### O que NAO foi feito (deliberado)
 - QA slides 02-17
@@ -514,4 +514,4 @@ Sequência sugerida: slide 01 → 02 → 03 → ... → 17 (em ordem).
 
 ---
 
-## Ultima atualizacao: 2026-03-16k (merge main A/B)
+## Ultima atualizacao: 2026-03-17 (merge main — governance hardening + evolve + GSAP 3.14.2)
