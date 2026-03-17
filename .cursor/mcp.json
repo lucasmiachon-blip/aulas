@@ -86,6 +86,11 @@
       "command": "npx",
       "args": ["@floto/mcp-server", "run"],
       "env": { "FLOTO_API_KEY": "${FLOTO_API_KEY}" }
+    },
+    "gemini": {
+      "command": "npx",
+      "args": ["-y", "@rlabs-inc/gemini-mcp"],
+      "env": { "GEMINI_API_KEY": "${GEMINI_API_KEY}" }
     }
   }
 }

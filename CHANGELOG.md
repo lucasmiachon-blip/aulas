@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+### Added (2026-03-17 — Gemini MCP)
+- **.cursor/mcp.json:** Servidor `gemini` adicionado (`@rlabs-inc/gemini-mcp`). Usa `GEMINI_API_KEY` do env — key não fica no repo.
+
+### Changed (2026-03-17 — MCP cleanup)
+- **.mcp.json:** Simplificado de ~30 servers para 5 npx-only (a11y-contrast, a11y, lighthouse, frontend-review, frontend-design-audit). Removidos todos `uvx`-based (biomcp, pubmed-simple, zotero, semantic-scholar, arxiv) — Windows Defender bloqueava executáveis Python.
+
 ### Fixed (2026-03-17 — Diagnóstico MDs: 8 correções)
 - **package.json:** Removida chave duplicada `build:metanalise` (echo sobrescrevia script PowerShell). `npm run build:metanalise` agora executa build-html.ps1.
 - **README.md:** "12 slides" → "18 slides" (metanalise).

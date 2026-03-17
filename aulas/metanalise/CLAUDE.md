@@ -64,4 +64,4 @@ reading-list.md (paralelo, informa pre-reading)
 
 ## Status
 
-**18 slides ativos (deck completo: Fases 1-3 + Interações 1-2). Âncora: Valgimigli 2025 Lancet (PMID 40902613). _manifest.js criado. CSS limpo (8 classes orfas removidas). QA visual batch 1 (slides 00-02) aprovado; batches 2-6 pendentes. Docs: narrative v2.2, blueprint v1.7, evidence-db v4.0.**
+**18 slides ativos (deck completo: Fases 1-3 + Interações 1-2). Âncora: Valgimigli 2025 Lancet (PMID 40902613). _manifest.js criado. CSS limpo (8 classes orfas removidas). QA F1 PASS (title, hook, contrato — scorecards 14-dim); scorecards F2/I1/I2/F3 pendentes. Gates 1-4: 18/18 PASS. Docs: narrative v2.2, blueprint v1.7, evidence-db v4.2.**
