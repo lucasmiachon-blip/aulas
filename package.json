@@ -20,6 +20,7 @@
     "export:pdf": "node scripts/export-pdf.js",
     "qa:a11y": "node scripts/qa-accessibility.js",
     "qa:screenshots:cirrose": "node aulas/cirrose/scripts/qa-screenshots-stage-c.js",
+    "build:metanalise": "powershell -ExecutionPolicy Bypass -File aulas/metanalise/scripts/build-html.ps1",
     "build:cirrose": "powershell -ExecutionPolicy Bypass -File aulas/cirrose/scripts/build-html.ps1",
     "build:grade": "powershell -ExecutionPolicy Bypass -File aulas/grade/scripts/build-html.ps1",
     "build:osteoporose": "powershell -ExecutionPolicy Bypass -File aulas/osteoporose/scripts/build-html.ps1",

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meta-análise — Leitura crítica para decisão clínica</title>
+</head>
+<body class="stage-c">
+<div id="deck">
+  <div id="slide-viewport">
+
+%%SLIDES%%
+
+  </div>
+</div>
+<script type="module">
+  import gsap from 'gsap';
+  import '../../shared/css/base.css';
+  import './metanalise.css';
+  import { initAula, createAnimationDispatcher } from '../../shared/js/engine.js';
+  import { initDeck } from '../../shared/js/deck.js';
+  import { slideRegistry } from './slide-registry.js';
+
+  initDeck('#slide-viewport');
+  initAula(gsap);
+  const anim = createAnimationDispatcher(gsap);
+
+  for (const [id, fn] of Object.entries(slideRegistry)) {
+    anim.registerCustom(id, fn);
+  }
+
+  anim.connect();
+</script>
+</body>
+</html>
