@@ -7,7 +7,7 @@
 ## Estado atual
 
 - **Fase:** QA SLIDE-A-SLIDE **18/18 PASS** (s-contrato aprovado 2026-03-17 — slide-navy + data-background-color removidos, scorecard 14-dim). Build de producao pendente.
-- **QA pipeline:** ver [QA-WORKFLOW.md](QA-WORKFLOW.md) — 4 fases (screenshots → per-slide loop → dynamic gate → deck-level Gemini). 15/18 DONE, 3 pendentes Fase 3 (hook, CP1, CP2). Fase 4 bloqueada.
+- **QA pipeline:** ver [QA-WORKFLOW.md](QA-WORKFLOW.md) — reescrito 2026-03-17 como doc executavel autonomo. Gates 1-4: 18/18 PASS. Scorecards formais 14-dim: 3/18 (F1). Fase 3 (dynamic): 3 pendentes (hook, CP1, CP2). Fase 4 (Gemini): bloqueada.
 - **Branch:** feat/metanalise-mvp (worktree wt-metanalise)
 - **Slides no index.html:** 18 (00-title → 01-hook → 02-contrato → 03-checkpoint-1 → 04-rs-vs-ma → 05-pico → 06-abstract → 07-forest-plot → 08-benefit-harm → 09-grade → 10-heterogeneity → 11-fixed-random → 12-checkpoint-2 → 13-ancora → 14-aplicacao → 15-aplicabilidade → 16-absoluto → 17-takehome)
 - **Slides planejados:** 18 (00-17) — ver blueprint.md v1.7
@@ -75,16 +75,15 @@
 
 ## Caminho crítico — próximas sessões
 
-### Sessão N+1 (imediata) — Conteúdo slide-a-slide
-1. **Deletar PROMPT-SCALING-MAIN.md** (temporário, já executado)
-2. **Slide 01 (hook):** atualizar 3 números com refs Tier 1 atuais + possível interação extra (ERRO-003)
-3. **QA slide-a-slide** com Vite aberto (tese, argumentos, referências, narrativa):
-   - Slide 01 → 02 → 03 → ... → 17 (em ordem)
-   - Para cada slide: verificar h2 (assertion), corpo (<=30 palavras), refs (PMID/DOI), notes (timing + fontes)
-4. Inserir exemplos visuais Cochrane (forest plot, GRADE table) — PDFs em `references/sources/`
+### Sessão N+1 (imediata) — Scorecards formais 14-dim
+1. **QA slide-a-slide** com Playwright (Gates 1-4 por slide, workflow em QA-WORKFLOW.md):
+   - Slide 04 (s-checkpoint-1) → 05 → 06 → ... → 18 (em ordem)
+   - Para cada: screenshot + contraste + score 14-dim + fix loop + docs + commit
+   - Gemini slide-a-slide (nao em batch)
+2. **Fase 3 (dynamic gate):** hook, CP1, CP2 — timing assertions + click-reveal + video
 
 ### Sessão N+2
-- QA final (Gate 4 Gemini)
+- Fase 4 (Gemini deck-level — este sim em batches)
 - Build de producao (`npm run build:metanalise`)
 - Merge para main
 

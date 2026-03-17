@@ -4,6 +4,22 @@
 
 ---
 
+## 2026-03-17c — QA-WORKFLOW.md reescrito como doc executavel autonomo
+
+Branch: `feat/metanalise-mvp`
+
+- **QA-WORKFLOW.md reescrito:** workflow operacional baseado no QA real de F1 (s-title, s-hook, s-contrato)
+- Removidas ferramentas nao conectadas (chrome-devtools MCP, Claude Vision 7-dim separado, metrics.json manual)
+- Diagrama ASCII substituido por fluxo 4-gate sequencial (Gate 1→2→3→4 por slide, Fase 3 por fase, Fase 4 por deck)
+- Gate 2 simplificado de 5 passos para 3 (screenshot+contraste, score 14-dim, console)
+- Template scorecard adicionado (copy-paste para AUDIT-VISUAL.md)
+- Spec ideal movida para secao "Extensoes Futuras" (nenhuma info perdida)
+- Status tracker atualizado: s-contrato DONE, 18/18 Gates 1-4 PASS
+- Tooling atualizado com MCPs reais (Gemini marcado FALHANDO)
+- HANDOFF atualizado: caminho critico = scorecards formais 14-dim para 15 slides restantes
+
+---
+
 ## 2026-03-17b — QA s-contrato visual fix (Playwright + metrics)
 
 Branch: `feat/metanalise-mvp`
