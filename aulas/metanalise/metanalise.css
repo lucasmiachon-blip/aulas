@@ -528,16 +528,15 @@ aside.notes { display: none; }
 .contrato-grid {
   display: flex;
   gap: var(--space-md);
-  flex: 1;
-  align-items: stretch;
 }
 .contrato-card {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: var(--space-sm);
-  padding: var(--space-md);
+  padding: var(--space-lg) var(--space-md);
   background: var(--bg-navy-mid);
   border-radius: var(--radius-md);
   text-align: center;
@@ -545,7 +544,7 @@ aside.notes { display: none; }
 .contrato-number {
   font-family: var(--font-mono);
   font-size: var(--text-hero);
-  color: var(--ui-accent-on-dark);
+  color: var(--ui-accent);
   font-weight: 600;
   line-height: 1;
 }

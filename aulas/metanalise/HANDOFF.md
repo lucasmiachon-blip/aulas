@@ -534,3 +534,19 @@ Sequência sugerida: slide 01 → 02 → 03 → ... → 17 (em ordem).
 - QA batches 2-6 (F2/I1/I2/F3) — scorecards formais pendentes
 - Build de producao apos QA completo
 - Gate 4 Gemini visual (deck completo)
+
+---
+
+## Sessao 2026-03-17b — QA s-contrato visual fix (Playwright pipeline)
+
+### O que foi feito
+- [x] **Screenshots Playwright:** s-contrato capturado 1280x720 (pre e pos fix)
+- [x] **Gate 1:** constraint check PASS (lint, h2 assertion, notes, zero ul/ol, zero inline style)
+- [x] **Gate 2 metrics:** fill 82%, cards 550→248px (fix), contraste minimo 8.8:1
+- [x] **CSS fixes:** contrato-grid flex:1 removido, contrato-card justify-content:center, contrato-number token corrigido (on-dark→ui-accent)
+- [x] **AUDIT-VISUAL re-scored:** 13 dims ≥ 9 (E subiu 8→9), V=8 intencional, D=N/A
+- [x] **CHANGELOG, HANDOFF atualizados**
+
+### Pendente
+- /review skill + MCPs CLI (usuario roda)
+- QA I1 (s-checkpoint-1) — proximo slide

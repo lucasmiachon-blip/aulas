@@ -106,22 +106,22 @@ Scorecards formais serao preenchidos durante ralph-qa batches 2-6 (proximas sess
 
 ## s-contrato (02-contrato.html)
 
-**Status:** PASS (QA 14-dim 2026-03-17)
+**Status:** PASS (QA 14-dim 2026-03-17b — re-audit com screenshots Playwright)
 **Archetype:** cards (setup) — dim D = N/A (sem dados clínicos)
 
 | Dim | Score | Nota |
 |-----|-------|------|
-| H (hierarquia) | 9 | Número hero (56px mono) > pergunta (h3 serif) > skill (small sans). Von Restorff nos numerais. |
-| T (tipografia) | 9 | Instrument Serif nas perguntas, JetBrains Mono nos numerais, DM Sans nas skills. Tokens px fixos (ERRO-008). Sem font-size literal. |
-| E (layout fill) | 8 | contrato-grid flex:1. h2 + 3 cards. Fill estimado ~70-75%. Sem overflow. A confirmar com screenshot. |
-| C (cor/contraste) | 8 | Textos ≥9:1 (h2 14:1, número 9.4:1, pergunta 13:1, skill 9.0:1). WARN: bg-navy-mid (#e2e3e9) sobre bg-surface (#ededf1) = 1.1:1. Cards distinguíveis por gap+radius, não por contraste de área. Sem HEX inline. |
+| H (hierarquia) | 9 | Número hero (56px mono) > pergunta (h3 24px serif) > skill (16px sans). Von Restorff nos numerais. |
+| T (tipografia) | 9 | Instrument Serif nas perguntas, JetBrains Mono nos numerais, DM Sans nas skills. 3 famílias distintas. |
+| E (layout fill) | 9 | Cards 248px (antes 550px — fix flex:1). h2 top 220px, grid 281-529px. Fill 82%. Proporção card adequada. |
+| C (cor/contraste) | 9 | número vs card-bg 8.8:1, pergunta vs card-bg 15.5:1, skill vs card-bg 12.2:1. Todos acima de 7:1. |
 | V (visuais) | 8 | Numerais 1/2/3 em hero mono funcionam como âncoras visuais. Sem gráfico. Correto para setup. |
 | K (consistência) | 9 | Echo direto com s-takehome (slide 17). Archetype cards reutilizado de s-pico. Callbacks perguntas idênticas. |
-| S (sofisticação) | 8 | data-animate="stagger" declarativo. Failsafes .no-js e .stage-bad em base.css. Sem source-tag (correto — sem dados). Sem AI markers. |
-| M (comunicação) | 9 | h2 = asserção verificável. Sem ul/ol. 37 tokens no parser (30 palavras substantivas — 3 numerais + 4 conectores + excluídos). |
+| S (sofisticação) | 9 | data-animate="stagger" declarativo. Failsafes .no-js e .stage-bad. Sem source-tag (correto — sem dados). Sem AI markers. Token --ui-accent corrigido (era on-dark). |
+| M (comunicação) | 9 | h2 = asserção verificável. Sem ul/ol. 45 palavras total mas 3 cards × ~12 palavras (Cowan chunks). |
 | I (interações) | 9 | Stagger automático ao entrar. clickReveals: 0 no manifest. Sem click handlers. Sem JS inline. |
 | D (dados) | N/A | Slide de setup — sem dados numéricos clínicos. Sem TBD em corpo. |
-| A (acessibilidade) | 9 | Contraste textos ≥9:1. aside.notes hidden. Sem elementos interativos sem label. Sem ícones semânticos de cor (não há safe/warning/danger). |
+| A (acessibilidade) | 9 | Contraste mínimo 8.8:1 (todos pares medidos). aside.notes hidden. Console errors: ZERO. |
 | L (carga cognitiva) | 9 | 1 conceito central: framework de 3 perguntas. 3 chunks visuais independentes. Stagger revela sequencialmente. |
 | P (andragogia) | 9 | "3 perguntas que você faz" = imperativo do residente. Contrato com audiência = técnica andragógica sólida. Echo com takehome cria schema. |
 | N (arco narrativo) | 9 | narrativeRole: setup. tensionLevel: 1 — resolve ansiedade do hook. Perguntas espelham takehome (slide 17). Posição correta no arco. |
@@ -130,16 +130,24 @@ Scorecards formais serao preenchidos durante ralph-qa batches 2-6 (proximas sess
 - `slide-navy` removido de `.slide-inner` — herança de versão navy anterior. Stage-c = fundo creme.
 - `data-background-color="#162032"` removido do `<section>` — ignorado por deck.js (ERRO-034), era legado.
 
+**Fixes aplicados (2026-03-17b):**
+- `.contrato-grid`: removido `flex: 1` + `align-items: stretch` — cards de 550→248px.
+- `.contrato-card`: adicionado `justify-content: center` + padding vertical `--space-lg`.
+- `.contrato-number`: token `--ui-accent-on-dark` → `--ui-accent` (correto para stage-c light bg).
+
+**Gate 1 constraint check: PASS**
+- h2 = asserção ✅, zero ul/ol ✅, aside.notes ✅, sem inline style ✅, sem data-background-color ✅, sem slide-navy ✅, lint:slides PASS ✅, console ZERO ✅
+- WARN: word count 45 (3 cards × ~12 — dentro do esperado para archetype cards)
+
 **DOC COMPLIANCE:**
 - [x] manifest headline == HTML h2: "3 perguntas que você faz a toda meta-análise"
 - [x] manifest id == section id: s-contrato
 - [x] Notes com timing [0:00-0:15] [0:15-0:30] [0:30-0:45] — sem dados numéricos novos
 - [x] Sem [TBD] em corpo projetado
 
-**Screenshot:** `qa-screenshots/s02-contrato-final.png` (sessão 16e, pré-edição h2/skill). Playwright CLI screenshot preto (deck.js hash nav requer script). Screenshot pós-edição pendente próxima sessão.
+**Screenshots:** `qa-screenshots/s02-contrato-current.png` (pré-fix), `qa-screenshots/s02-contrato-fix1.png` (pós-fix). Ambos 1280×720 via Playwright script.
 
 **Pendências para audit Gemini (Gate 4):**
-- Confirmar fill ratio real com screenshot 1280×720 (pós-edição)
-- Avaliar se cards são distinguíveis em projetor real (contraste de área 1.1:1 bg-navy-mid/bg-surface)
+- Avaliar se cards são distinguíveis em projetor real (contraste de área bg-navy-mid/bg-surface sutil)
 - Avaliar timing stagger: 3 cards × 0.15s = 0.45s — adequado para pacing clínico?
 - Confirmar legibilidade Instrument Serif nas perguntas dos cards em tela a 5m

@@ -4,6 +4,24 @@
 
 ---
 
+## 2026-03-17b — QA s-contrato visual fix (Playwright + metrics)
+
+Branch: `feat/metanalise-mvp`
+
+### CSS fixes
+- `.contrato-grid`: removido `flex: 1` + `align-items: stretch` — cards 550→248px
+- `.contrato-card`: `justify-content: center` + padding vertical `--space-lg`
+- `.contrato-number`: `--ui-accent-on-dark` → `--ui-accent` (stage-c = light bg)
+
+### QA pipeline
+- Screenshots Playwright (3 beats hook + contrato)
+- Gate 1 constraint check: PASS (lint, h2, notes, no inline style)
+- Gate 2 metrics: fill 82%, contraste mínimo 8.8:1 (todos pares)
+- Gate 2 console: ZERO errors
+- AUDIT-VISUAL scorecard re-scored: 13 dims ≥ 9, V=8 (intencional), D=N/A
+
+---
+
 ## 2026-03-17 — QA s-contrato (edições + scorecard 14-dim)
 
 Branch: `feat/metanalise-mvp`
