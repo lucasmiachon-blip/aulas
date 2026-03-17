@@ -497,4 +497,20 @@ Sequência sugerida: slide 01 → 02 → 03 → ... → 17 (em ordem).
 
 ---
 
-## Ultima atualizacao: 2026-03-16j (QA full-deck + housekeeping)
+## Sessao 2026-03-16k — Merge main (4 commits A/B)
+
+### O que foi feito
+- [x] `git merge main --no-edit` — fast, zero conflitos
+- [x] 7 arquivos absorvidos: `.gitignore`, `.mcp.json`, `.mcp-profiles/qa.json`, `.mcp-profiles/full.json`, `.env.example`, `docs/ECOSYSTEM.md`, `docs/MCP-ENV-VARS.md`
+- [x] Classe: todos A/B (governanca + infra). Zero Classe C
+- [x] .mcp.json validado (12 servers, JSON valido)
+- [x] `npm run build:metanalise` — OK (18 slides)
+- [x] CLAUDE.md aula atualizado (merge ref 492ca7d)
+
+### O que NAO foi feito (deliberado)
+- QA slides 02-17
+- Build de producao
+
+---
+
+## Ultima atualizacao: 2026-03-16k (merge main A/B)
