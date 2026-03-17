@@ -7,6 +7,7 @@
 ## Estado atual
 
 - **Fase:** QA SLIDE-A-SLIDE **17/18 PASS** (s-contrato pendente decisao Lucas). Hook atualizado 80→146/dia. Evidence-db v4.2 (5 PMIDs verificados, 2 autores corrigidos). CHANGELOG.md criado. Build de producao pendente.
+- **QA pipeline:** ver [QA-WORKFLOW.md](QA-WORKFLOW.md) — 4 fases (screenshots → per-slide loop → dynamic gate → deck-level Gemini). 15/18 DONE, 3 pendentes Fase 3 (hook, CP1, CP2). Fase 4 bloqueada.
 - **Branch:** feat/metanalise-mvp (worktree wt-metanalise)
 - **Slides no index.html:** 18 (00-title → 01-hook → 02-contrato → 03-checkpoint-1 → 04-rs-vs-ma → 05-pico → 06-abstract → 07-forest-plot → 08-benefit-harm → 09-grade → 10-heterogeneity → 11-fixed-random → 12-checkpoint-2 → 13-ancora → 14-aplicacao → 15-aplicabilidade → 16-absoluto → 17-takehome)
 - **Slides planejados:** 18 (00-17) — ver blueprint.md v1.7
