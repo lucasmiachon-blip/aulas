@@ -4,6 +4,29 @@
 
 ---
 
+## 2026-03-17d — HTML cleanup: dead attributes removed + checkpoint navy CSS override
+
+Branch: `feat/metanalise-mvp`
+
+### HTML cleanup (15 slides)
+- `data-background-color="#162032"` removido de 15 slides (00-title, 01-hook, 04-rs-vs-ma, 04-pico, 05-abstract, 06-forest-plot, 07-benefit-harm, 08-grade, 09-heterogeneity, 10-fixed-random, 13-ancora, 14-aplicacao, 15-aplicabilidade, 16-absoluto, 17-takehome). Total: 17/18 (CP1+CP2 ja removidos em sessao anterior)
+- `slide-navy` removido de `.slide-inner` em 14 slides light (mesmos acima exceto 00-title que ja nao tinha). Total: 16/18 (CP1+CP2 mantidos — TEM bg navy via CSS)
+
+### CSS (ja aplicado, sem mudancas neste commit)
+- `#s-checkpoint-1 .slide-inner, #s-checkpoint-2 .slide-inner { background-color: #162032 }` + 8 on-dark tokens restaurados no scope
+
+### Docs
+- ERRO-009 registrado (checkpoint contraste destruido por atributos mortos)
+- HANDOFF atualizado (estado limpo para QA)
+- AUDIT-VISUAL nota de cobertura adicionada
+
+### Verificacao
+- `grep data-background-color slides/` → 0 resultados
+- `grep slide-navy slides/` → apenas CP1 e CP2
+- lint:slides PASS
+
+---
+
 ## 2026-03-17c — QA-WORKFLOW.md reescrito como doc executavel autonomo
 
 Branch: `feat/metanalise-mvp`

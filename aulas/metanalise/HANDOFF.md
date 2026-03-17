@@ -6,7 +6,8 @@
 
 ## Estado atual
 
-- **Fase:** QA SLIDE-A-SLIDE **18/18 PASS** (s-contrato aprovado 2026-03-17 — slide-navy + data-background-color removidos, scorecard 14-dim). Build de producao pendente.
+- **Fase:** HTML cleanup completo. Janela limpa para QA scorecards 14-dim.
+- **HTML cleanup (2026-03-17d):** `data-background-color` removido de 17/18 slides (todos — deck.js ignora). `slide-navy` removido de 16/18 slides light (mantido em CP1+CP2 que TEM bg navy via CSS override). ERRO-009 documentado.
 - **QA pipeline:** ver [QA-WORKFLOW.md](QA-WORKFLOW.md) — reescrito 2026-03-17 como doc executavel autonomo. Gates 1-4: 18/18 PASS. Scorecards formais 14-dim: 3/18 (F1). Fase 3 (dynamic): 3 pendentes (hook, CP1, CP2). Fase 4 (Gemini): bloqueada.
 - **Branch:** feat/metanalise-mvp (worktree wt-metanalise)
 - **Slides no index.html:** 18 (00-title → 01-hook → 02-contrato → 03-checkpoint-1 → 04-rs-vs-ma → 05-pico → 06-abstract → 07-forest-plot → 08-benefit-harm → 09-grade → 10-heterogeneity → 11-fixed-random → 12-checkpoint-2 → 13-ancora → 14-aplicacao → 15-aplicabilidade → 16-absoluto → 17-takehome)
@@ -19,7 +20,8 @@
 - **Artigo âncora:** ✅ Valgimigli 2025, Clopidogrel vs Aspirina (Lancet, PMID 40902613). IPD-MA, 7 RCTs, 28.982 pts
 - **lint:slides:** ✅ PASS (zero FAILs)
 - **HEX navy:** #162032 mantido (decisao Lucas — consistencia cross-aula)
-- **CSS overrides em metanalise.css vs base.css:** `justify-content: center` restaurado + pseudo-elements desativados (ERRO-005). Checkpoint safe-center pattern proprio (ERRO-006). CSS zoom REMOVIDO — deck.js scale() é o mecanismo correto (ERRO-008). Fixed px tokens mantidos para evitar vw double-scaling. Hook: `.hook-data` flex container + `.hook-data-item { flex: 1 }` para colunas iguais + verdict `margin-top: 80px`.
+- **CSS overrides em metanalise.css vs base.css:** `justify-content: center` restaurado + pseudo-elements desativados (ERRO-005). Checkpoint safe-center pattern proprio (ERRO-006). CSS zoom REMOVIDO — deck.js scale() é o mecanismo correto (ERRO-008). Fixed px tokens mantidos para evitar vw double-scaling. Hook: `.hook-data` flex container + `.hook-data-item { flex: 1 }` para colunas iguais + verdict `margin-top: 80px`. Checkpoint navy override: `#s-checkpoint-1/2 .slide-inner { background-color: #162032 }` + 8 on-dark tokens restaurados (ERRO-009).
+- **Backlog CSS:** 13 refs `--on-dark` tokens em CSS de slides light (funcional via stage-c remap, naming misleading). Nao bloqueia QA — registrado para cleanup futuro.
 
 ## O que foi feito
 
@@ -76,11 +78,12 @@
 ## Caminho crítico — próximas sessões
 
 ### Sessão N+1 (imediata) — Scorecards formais 14-dim
-1. **QA slide-a-slide** com Playwright (Gates 1-4 por slide, workflow em QA-WORKFLOW.md):
+1. HTML limpo. Zero dead attributes. Checkpoint CSS verificado.
+2. **QA slide-a-slide** com Playwright (Gates 1-4 por slide, workflow em QA-WORKFLOW.md):
    - Slide 04 (s-checkpoint-1) → 05 → 06 → ... → 18 (em ordem)
    - Para cada: screenshot + contraste + score 14-dim + fix loop + docs + commit
    - Gemini slide-a-slide (nao em batch)
-2. **Fase 3 (dynamic gate):** hook, CP1, CP2 — timing assertions + click-reveal + video
+3. **Fase 3 (dynamic gate):** hook, CP1, CP2 — timing assertions + click-reveal + video
 
 ### Sessão N+2
 - Fase 4 (Gemini deck-level — este sim em batches)

@@ -537,7 +537,10 @@ aside.notes { display: none; }
   justify-content: center;
   gap: var(--space-sm);
   padding: var(--space-lg) var(--space-md);
-  background: var(--bg-navy-mid);
+  background: var(--bg-card);
+  border: 1px solid var(--overlay-border);
+  border-left: 3px solid var(--ui-accent);
+  box-shadow: 0 1px 3px var(--shadow-subtle);
   border-radius: var(--radius-md);
   text-align: center;
 }
@@ -556,9 +559,16 @@ aside.notes { display: none; }
 }
 .contrato-skill {
   font-family: var(--font-body);
-  font-size: var(--text-small);
-  color: var(--text-secondary);
+  font-size: var(--text-body);
+  color: var(--text-muted);
 }
+/* --- Contrato: vertical centering + wider gap (scoped, preserves takehome) --- */
+#s-contrato .contrato-grid {
+  margin-top: auto;
+  margin-bottom: auto;
+  gap: var(--space-lg);
+}
+
 /* --- Checkpoint: initial hidden state (controlled by state machine) --- */
 .checkpoint--hidden {
   opacity: 0;
@@ -577,6 +587,22 @@ aside.notes { display: none; }
     visibility: visible !important;
     transform: none !important;
   }
+}
+
+/* --- Checkpoint: navy background (narrative rhythm — Duarte)
+   stage-c remaps on-dark tokens for light bg.
+   Override at slide scope to restore correct contrast. --- */
+#s-checkpoint-1 .slide-inner,
+#s-checkpoint-2 .slide-inner {
+  background-color: #162032;
+  --text-primary:       oklch(95% 0.005 258);
+  --text-secondary:     oklch(70% 0.01 258);
+  --text-on-dark:       oklch(95% 0.005 258);
+  --text-on-dark-muted: oklch(70% 0.01 258);
+  --bg-navy-mid:        oklch(28% 0.035 258);
+  --safe-on-dark:       oklch(75% 0.13 170);
+  --warning-on-dark:    oklch(80% 0.14 85);
+  --danger-on-dark:     oklch(72% 0.16 25);
 }
 
 /* --- Checkpoint layout (scenario + question + reveal) --- */

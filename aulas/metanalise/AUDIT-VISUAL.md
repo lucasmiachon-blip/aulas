@@ -21,6 +21,8 @@ Scorecards formais de 14 dimensoes existem para s-title, s-hook, s-contrato (bat
 Demais slides passaram constraint check + review manual, mas sem scorecard 14-dim registrado.
 Scorecards formais serao preenchidos durante ralph-qa batches 2-6 (proximas sessoes).
 
+**HTML cleanup (2026-03-17d):** `data-background-color` removido de 17/18 slides (deck.js ignora — atributo morto). `slide-navy` removido de 16/18 slides light (mantido em CP1+CP2 que tem bg navy via CSS override). Nao altera scorecards existentes — so remove dead attributes. ERRO-009 documentado em ERROR-LOG.
+
 ---
 
 ## s-title (00-title.html)

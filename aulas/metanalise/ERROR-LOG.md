@@ -95,6 +95,23 @@ Severidades: CRITICAL (bloqueia projeção), HIGH (prejudica leitura), MEDIUM (e
 (4) Antes de adicionar zoom/scale, verificar se deck.js já escala (inspecionar `#deck.style.transform`).
 **Data:** 2026-03-16
 
+### ERRO-009 · HIGH · Checkpoints 03, 12 (contraste destruído)
+**Descrição:** Checkpoint slides com `slide-navy` + `data-background-color` mas sem CSS `background-color` = texto on-dark sobre fundo light = contraste destruído. Texto praticamente invisível em projeção.
+**Root cause:** Três fatores combinados:
+1. `data-background-color` é convenção Reveal.js — deck.js ignora este atributo completamente.
+2. `.slide-navy` em `base.css` só remapeia variáveis de texto para on-dark (não aplica `background-color`).
+3. `stage-c` remapeia `--text-on-dark` para valor escuro (correto para fundo light). Resultado: texto escuro sobre fundo light, mas tokens on-dark referenciados no CSS da aula (borders, labels) ficam com valores de light-mode.
+Sem regra CSS explicitando `background-color` no slide, o fundo permanece light (creme stage-c), mas texto e decoração ficam com tokens on-dark remapeados = contraste inconsistente.
+**Fix:**
+1. CSS override com `#s-checkpoint-1 .slide-inner, #s-checkpoint-2 .slide-inner { background-color: #162032; }` + token restoration scope (8 tokens on-dark re-declarados no seletor para sobrescrever o remap de stage-c).
+2. `data-background-color` removido de TODOS os 18 slides (atributo morto em deck.js).
+3. `slide-navy` removido de 16 slides light (mantido apenas em CP1 e CP2 que TÊM bg navy via CSS override).
+**Regra derivada:**
+(1) Slides navy em deck.js DEVEM ter background via CSS seletor de ID (`#slide-id .slide-inner { background-color: #HEX }`) — NUNCA via `data-background-color`.
+(2) Quando um slide deck.js precisa de bg escuro em stage-c, DEVE incluir token restoration scope (re-declarar on-dark tokens no seletor CSS do slide) para sobrescrever o remap de stage-c.
+(3) `slide-navy` só deve ser usado em slides que efetivamente têm fundo navy via CSS.
+**Data:** 2026-03-17
+
 ---
 
 *Append-only. Não remover erros antigos.*
