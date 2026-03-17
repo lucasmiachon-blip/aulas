@@ -2,7 +2,7 @@
 
 > Modelos não competem — cada um tem um papel específico no pipeline.
 > Handoff certo = sem retrabalho. Ver pipeline resumido no CLAUDE.md (Step 0).
-> Última atualização: 2026-03-07 (benchmarks verificados via WebSearch)
+> Última atualização: 2026-03-16 (MCPs visuais adicionados)
 
 ---
 
@@ -71,8 +71,8 @@
 |------------|----------------|-----|--------|
 | **Claude Opus 4.6** (claude.ai) | Design decisions · spec · clinical | — | ✅ Ativo |
 | **Claude Code** (Sonnet 4.6) | Implementação · build | — | ✅ Esta sessão |
-| **Gemini 3.1 Pro** | CSS/GSAP debug · SVG · video QA | → MCP planejado | ⏳ Setup pendente |
-| **Gemini 3.1 Flash-Lite** | Lint · quick fix · batch | → MCP planejado | ⏳ Setup pendente |
+| **Gemini 3.1 Pro** | CSS/GSAP debug · SVG · video QA | gemini MCP | ✅ Ativo |
+| **Gemini 3.1 Flash-Lite** | Lint · quick fix · batch | gemini MCP | ✅ Ativo |
 | **Perplexity Computer** | Orquestração multi-agente | — | ⏳ $200/mês Max |
 | **ChatGPT Agent** (GPT-5.4) | Browser QA · auditor clínico/narrativo (nunca edita) | — | ✅ Disponível |
 | **Perplexity Ultra** | Pesquisa em tempo real | Sim | ✅ Ativo |
@@ -113,9 +113,12 @@
 | zotero | Referências | OK |
 | perplexity / arxiv | Pesquisa ampliada | OK |
 | scite | Citações, supporting/contradicting | OK |
-| **gemini** | CSS debug · video QA | **⏳ Pendente config** |
+| **gemini** | CSS debug · video QA | OK |
+| **a11y-contrast** | Contraste de cores (detalhado) | OK |
+| **frontend-review** | Visual review via Hyperbolic | OK |
+| **chrome-devtools** | Computed styles, bounding boxes, DOM | OK |
 
-**Variáveis de ambiente:** `docs/MCP-ENV-VARS.md` (NOTION_TOKEN, NCBI_API_KEY, ZOTERO_API_KEY)
+**Variáveis de ambiente:** `docs/MCP-ENV-VARS.md` (NOTION_TOKEN, NCBI_API_KEY, GEMINI_API_KEY, etc.)
 
 ---
 

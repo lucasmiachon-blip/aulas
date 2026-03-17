@@ -34,6 +34,28 @@
     "sharp": {
       "command": "npx",
       "args": ["-y", "sharp-mcp"]
+    },
+    "a11y-contrast": {
+      "command": "npx",
+      "args": ["-y", "a11y-color-contrast-mcp"]
+    },
+    "gemini": {
+      "command": "npx",
+      "args": ["-y", "@fre4x/gemini"],
+      "env": {
+        "GEMINI_API_KEY": "${GEMINI_API_KEY}"
+      }
+    },
+    "frontend-review": {
+      "command": "npx",
+      "args": ["frontend-review-mcp"],
+      "env": {
+        "HYPERBOLIC_API_KEY": "${HYPERBOLIC_API_KEY}"
+      }
+    },
+    "chrome-devtools": {
+      "command": "npx",
+      "args": ["-y", "chrome-devtools-mcp"]
     }
   }
 }

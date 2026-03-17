@@ -136,6 +136,14 @@
       "env": {
         "FLOTO_API_KEY": "${FLOTO_API_KEY}"
       }
+    },
+    "a11y-contrast": {
+      "command": "npx",
+      "args": ["-y", "a11y-color-contrast-mcp"]
+    },
+    "chrome-devtools": {
+      "command": "npx",
+      "args": ["-y", "chrome-devtools-mcp"]
     }
   }
 }
