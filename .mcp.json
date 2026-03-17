@@ -18,6 +18,20 @@
       "args": ["/c", "npx", "@danielsogl/lighthouse-mcp"],
       "env": {}
     },
+    "perplexity": {
+      "type": "stdio",
+      "command": "cmd",
+      "args": ["/c", "npx", "-y", "@perplexity-ai/mcp-server"],
+      "env": {
+        "PERPLEXITY_API_KEY": "${PERPLEXITY_API_KEY}"
+      }
+    },
+    "crossref": {
+      "type": "stdio",
+      "command": "cmd",
+      "args": ["/c", "npx", "-y", "@botanicastudios/crossref-mcp"],
+      "env": {}
+    },
     "frontend-review": {
       "type": "stdio",
       "command": "cmd",

@@ -2,7 +2,7 @@
 
 > Modelos não competem — cada um tem um papel específico no pipeline.
 > Handoff certo = sem retrabalho. Ver pipeline resumido no CLAUDE.md (Step 0).
-> Última atualização: 2026-03-16 (MCPs visuais adicionados)
+> Última atualização: 2026-03-17 (MCPs racionalizados — built-ins cobrem 14 servers removidos)
 
 ---
 
@@ -100,25 +100,58 @@
 
 ## MCPs (Inventário)
 
-| MCP | Uso no pipeline | Status |
-|-----|----------------|--------|
-| pubmed / pubmed-simple | Verificar PMIDs, buscar evidência | OK |
-| crossref | Validar DOIs | OK |
-| notion | Specs, Bíblia Narrativa, References DB | OK |
-| playwright | Screenshots, QA visual | OK |
-| a11y | Contraste, acessibilidade | OK |
-| eslint | Lint slides | OK |
-| memory | Contexto entre sessões | Fix path |
-| biomcp | Dados biológicos | OK |
-| zotero | Referências | OK |
-| perplexity / arxiv | Pesquisa ampliada | OK |
-| scite | Citações, supporting/contradicting | OK |
-| **gemini** | CSS debug · video QA | OK |
-| **a11y-contrast** | Contraste de cores (detalhado) | OK |
-| **frontend-review** | Visual review via Hyperbolic | OK |
-| **chrome-devtools** | Computed styles, bounding boxes, DOM | OK |
+### `.mcp.json` — always-on (7 servers)
 
-**Variáveis de ambiente:** `docs/MCP-ENV-VARS.md` (NOTION_TOKEN, NCBI_API_KEY, GEMINI_API_KEY, etc.)
+| MCP | Uso no pipeline | Tipo |
+|-----|----------------|------|
+| **a11y-contrast** | Contraste de cores (detalhado) | npx (free) |
+| **a11y** | Acessibilidade WCAG | npx (free) |
+| **lighthouse** | Performance, SEO, PWA | npx (free) |
+| **perplexity** | Pesquisa web em tempo real, verificação dados | npx (API key) |
+| **crossref** | Validação DOI | npx (free) |
+| **frontend-review** | Visual review via Hyperbolic | npx (API key) |
+| **frontend-design-audit** | Design audit | npx (free) |
+
+### Built-ins Claude Code (não precisam de `.mcp.json`)
+
+| Built-in | Tools | Substitui |
+|----------|-------|-----------|
+| `mcp__claude_ai_PubMed` | 7 (search, metadata, full-text, related) | pubmed, pubmed-simple |
+| `mcp__claude_ai_Notion` | 16 (search, create, update, query DB) | notion (npx) |
+| `mcp__claude_ai_Consensus` | search | google-scholar |
+| `mcp__claude_ai_Scholar_Gateway` | semanticSearch | semantic-scholar |
+| `mcp__plugin_playwright` | 20+ (nav, click, screenshot) | playwright (npx) |
+| `mcp__gemini__*` | 30+ (analyze, search, video, image) | gemini (npx) |
+
+### `.mcp-profiles/` — ativados sob demanda (`npm run mcp:{profile}`)
+
+| Perfil | Quando usar |
+|--------|------------|
+| `dev.json` | Default (8 servers) |
+| `research.json` | Pesquisa acadêmica (12 servers: +pubmed, crossref, semantic-scholar, perplexity, notion) |
+| `qa.json` | QA visual (playwright, lighthouse, a11y, eslint) |
+| `full.json` | Todos os servers disponíveis |
+
+### Removidos (2026-03-17) — cobertos por built-ins ou irrelevantes
+
+| MCP removido | Motivo |
+|-------------|--------|
+| pubmed / pubmed-simple | Built-in `mcp__claude_ai_PubMed` |
+| notion (npx) | Built-in `mcp__claude_ai_Notion` |
+| semantic-scholar | Built-in `mcp__claude_ai_Scholar_Gateway` |
+| google-scholar | Built-in `mcp__claude_ai_Consensus` |
+| playwright (npx) | Plugin oficial `mcp__plugin_playwright` |
+| filesystem | Claude Code Read/Write/Glob/Grep nativos |
+| fetch | Claude Code WebFetch nativo |
+| memory | Claude Code memory nativo |
+| biomcp | Irrelevante (dados genômicos) |
+| zotero | Não usado ativamente |
+| arxiv | Papers médicos no PubMed |
+| sharp | Raramente usado |
+| chrome-devtools | Instável, coberto por Playwright |
+| eslint | Disponível em profiles sob demanda |
+
+**Variáveis de ambiente:** `docs/MCP-ENV-VARS.md` (PERPLEXITY_API_KEY, HYPERBOLIC_API_KEY, GEMINI_API_KEY, etc.)
 
 ---
 

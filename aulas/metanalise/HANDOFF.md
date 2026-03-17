@@ -516,7 +516,7 @@ Sequência sugerida: slide 01 → 02 → 03 → ... → 17 (em ordem).
 
 ---
 
-## Ultima atualizacao: 2026-03-17 (merge main — governance hardening + evolve + GSAP 3.14.2)
+## Ultima atualizacao: 2026-03-17 (MCPs racionalizados — 30→7 servers, built-ins cobrem o resto)
 
 ---
 
@@ -536,6 +536,23 @@ Sequência sugerida: slide 01 → 02 → 03 → ... → 17 (em ordem).
 - QA batches 2-6 (F2/I1/I2/F3) — scorecards formais pendentes
 - Build de producao apos QA completo
 - Gate 4 Gemini visual (deck completo)
+
+---
+
+## Sessao 2026-03-17e — MCPs racionalizados (.mcp.json)
+
+### O que foi feito
+- [x] **`.mcp.json` racionalizado:** 5→7 servers (adicionados perplexity + crossref, mantido frontend-review)
+- [x] **14 MCPs removidos:** cobertos por built-ins Claude Code (PubMed, Notion, Scholar Gateway, Consensus, Playwright, Gemini) ou irrelevantes (biomcp, arxiv, zotero, sharp, filesystem, fetch, memory, chrome-devtools)
+- [x] **ECOSYSTEM.md reescrito:** seção MCPs com 4 sub-seções (always-on, built-ins, profiles, removidos)
+- [x] HANDOFF atualizado
+
+### Decisão
+- `frontend-review` (Hyperbolic) MANTIDO por decisão do Lucas — apesar de não aparecer nos deferred tools desta sessão
+
+### O que NAO foi feito (deliberado)
+- `.mcp-profiles/` não alterados (servem para ativação sob demanda)
+- QA slides pendentes
 
 ---
 

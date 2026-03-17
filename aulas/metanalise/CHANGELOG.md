@@ -4,6 +4,22 @@
 
 ---
 
+## 2026-03-17e — MCPs racionalizados (.mcp.json 5→7 servers)
+
+Branch: `feat/metanalise-mvp`
+
+### .mcp.json
+- **Adicionados:** perplexity (web search tempo real), crossref (validação DOI)
+- **Mantidos:** a11y-contrast, a11y, lighthouse, frontend-review, frontend-design-audit
+- **Removidos (cobertos por built-ins):** pubmed, pubmed-simple, notion, semantic-scholar, google-scholar, playwright, gemini, filesystem, fetch, memory, eslint
+- **Removidos (irrelevantes):** biomcp, zotero, arxiv, sharp, chrome-devtools
+
+### Docs
+- ECOSYSTEM.md: seção MCPs reescrita (always-on, built-ins, profiles, removidos)
+- HANDOFF atualizado
+
+---
+
 ## 2026-03-17d — HTML cleanup: dead attributes removed + checkpoint navy CSS override
 
 Branch: `feat/metanalise-mvp`
