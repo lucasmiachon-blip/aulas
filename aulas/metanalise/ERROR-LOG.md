@@ -42,7 +42,7 @@ Severidades: CRITICAL (bloqueia projeção), HIGH (prejudica leitura), MEDIUM (e
 **Fix:** ✅ APLICADO (sessão 2026-03-16f):
 - 88% → 81% (Bojcic et al. J Clin Epidemiol 2024, PMID 37931822 — 35/43 SRs, cross-field, AMSTAR-2)
 - 8,5% → 10% (Qureshi et al. JGIM 2025, PMID 41428154 — 768/7.582 recomendações, 23 sociedades EUA)
-- 80/dia: mantido (Hoffmann PMID 34091022) com contexto temporal: "só em 2019" no beat-0 + label "SRs/dia em 2019"
+- 80/dia → 146/dia: atualizado para dado de 2021 (Hoffmann PMID 34091022: 53.208 SRs em 2021). Label "SRs/dia em 2021". Beat-0 texto atualizado. Decisão Lucas (sessão 2026-03-16j)
 - evidence-db.md: Bojcic/Qureshi promovidos de CANDIDATO → EM USO
 - narrative.md: dados do hook atualizados
 **Regra derivada:** (1) Todo dado numérico DEVE ser verificado no paper original (PMID → PubMed → abstract) antes de entrar no slide. (2) Dados devem ser discutidos com o usuário antes de serem implementados. (3) Ano do dado deve ser explicitado quando diferente do ano da aula.

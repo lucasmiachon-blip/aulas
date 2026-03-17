@@ -2,6 +2,24 @@
 
 > Scorecard por slide. 14 dimensões. Atualizado a cada QA pass.
 > Pendente: audit final Gemini (Gate 4) para todas as dims.
+> Pipeline: ver [QA-WORKFLOW.md](QA-WORKFLOW.md)
+
+---
+
+## Cobertura
+
+| Fase | Slides | Scorecard formal | QA session |
+|------|--------|-----------------|------------|
+| F1 | s-title, s-hook, s-contrato | s-title e s-hook abaixo. s-contrato pendente decisao Lucas | 2026-03-16e |
+| I1 | s-checkpoint-1 | Pendente (Fase 3 motion) | 2026-03-16j (constraint check PASS) |
+| F2 | s-rs-vs-ma → s-fixed-random (8) | Pendente scorecard formal | 2026-03-16j (constraint check PASS, QA slide-a-slide) |
+| I2 | s-checkpoint-2 | Pendente (Fase 3 motion) | 2026-03-16j (constraint check PASS) |
+| F3 | s-ancora → s-takehome (5) | Pendente scorecard formal | 2026-03-16j (constraint check PASS, QA slide-a-slide) |
+
+**Nota:** Sessao 2026-03-16j fez QA slide-a-slide (h2 assertion, word count, refs, notes) para 17/18 slides — PASS.
+Scorecards formais de 14 dimensoes existem apenas para s-title e s-hook (batch 1, sessao 2026-03-16e).
+Demais slides passaram constraint check + review manual, mas sem scorecard 14-dim registrado.
+Scorecards formais serao preenchidos durante ralph-qa batches 2-6 (proximas sessoes).
 
 ---
 
