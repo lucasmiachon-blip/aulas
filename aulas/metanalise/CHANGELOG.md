@@ -4,6 +4,23 @@
 
 ---
 
+## 2026-03-16k — Merge main (4 commits A/B absorvidos)
+
+Branch: `feat/metanalise-mvp`
+
+- `git merge main --no-edit` — merge commit `492ca7d`, zero conflitos
+- 7 arquivos absorvidos (todos Classe A/B, zero Classe C):
+  - `.gitignore` (test-results/)
+  - `.mcp.json` (+4 servers visuais: a11y-contrast, gemini, frontend-review, chrome-devtools)
+  - `.mcp-profiles/qa.json`, `.mcp-profiles/full.json` (idem)
+  - `.env.example` (vars dos novos MCPs)
+  - `docs/ECOSYSTEM.md`, `docs/MCP-ENV-VARS.md` (docs sync)
+- Total MCP servers pos-merge: 12 (sem duplicatas)
+- Build OK: 18 slides
+- CLAUDE.md aula + HANDOFF.md atualizados (commit `a6f3821`)
+
+---
+
 ## 2026-03-16j — QA full-deck + housekeeping
 
 Branch: `feat/metanalise-mvp`
