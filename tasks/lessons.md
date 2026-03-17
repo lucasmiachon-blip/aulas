@@ -339,3 +339,25 @@ Tokens não importam. Retrabalho é sinal de aprendizado — mas não pode paral
 - Hooks (pre-commit, pre-push) só disparam no git commit/push — não impedem escrita direta em arquivos.
 - **Regra:** Agente em main NUNCA pode escrever em `../wt-*`. Para editar worktree, abrir sessão Cursor naquele diretório.
 - **Regra:** `scripts/pre-commit.sh` e `tasks/lessons.md` são Classe A/B — sempre commitar em main, nunca direto na WT.
+
+---
+
+## Sessao 16/mar (j) — _manifest.js e a 9a superficie
+
+### Editar headline no HTML sem atualizar _manifest.js = drift silencioso
+
+- Hook slide: texto mudou de "80/dia" para "146/dia" no HTML (`01-hook.html`), speaker notes e body.
+- `_manifest.js` headline ficou com "80 revisões..." — drift detectado pelo usuario no browser.
+- **Root cause:** slide-identity.md lista 9 superficies. `_manifest.js` e a superficie #1. Agente atualizou superficies 2 (HTML body) e notes, mas esqueceu a #1.
+- **Regra:** Toda mudanca em texto visivel de slide DEVE incluir `_manifest.js` headline no mesmo Edit batch. Nunca "depois".
+- **Regra:** Antes de commitar mudanca em slides, rodar `npm run lint:narrative-sync` — detecta drift headline automaticamente.
+- **Checklist mental (4 perguntas):** (1) O h2/headline mudou? → `_manifest.js`. (2) O ID mudou? → 9 superficies completas. (3) Dados mudaram? → notes [DATA] tag. (4) Aula tem build script? Se nao → **index.html manual e uma superficie extra**.
+
+### index.html manual = superficie extra nao documentada
+
+- Metanalise nao tem `build:metanalise` script. O `index.html` foi criado manualmente (concatenacao dos slides).
+- Vite serve `index.html`, NAO `slides/*.html`. Editar o standalone sem atualizar index.html = usuario ve versao antiga.
+- **Root cause:** cirrose tem `build:cirrose` que regenera index.html automaticamente. Metanalise nao.
+- **Regra CRITICA:** Toda edicao em `slides/*.html` DEVE ser replicada em `index.html` no mesmo batch. Sem excecao.
+- **Pendencia Classe B:** Criar `build:metanalise` script (como cirrose) para eliminar essa superficie manual.
+- **Verificacao:** Apos editar qualquer slide, rodar `grep` comparando o trecho no slide vs no index.html.
