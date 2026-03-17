@@ -42,10 +42,10 @@
 
 - **Fase:** 1
 - **Função:** definir o que a aula entrega — criar expectativa
-- **Assertion:** "Ao final, 3 perguntas que você faz a toda MA antes de mudar sua conduta"
+- **Assertion:** "3 perguntas que você faz a toda meta-análise"
 - **Risco cognitivo:** residente não saber o que esperar → atenção dispersa
 - **Evidência:** —
-- **Status:** ✅ FEITO (02-contrato.html) — 3 cards reformulados: "Posso confiar na síntese?" / "Qual o efeito — e qual o dano?" / "O que isso significa para meu paciente?" + scope footer. Absorveu 01-objectives.html. Alinhado com takehome (slide 17).
+- **Status:** ✅ FEITO (02-contrato.html) — 3 cards reformulados: "Posso confiar na síntese?" / "Qual o efeito — e qual o dano?" / "O que isso significa para meu paciente?" . Absorveu 01-objectives.html. Alinhado com takehome (slide 17). Scope footer removido.
 
 ---
 

@@ -4,6 +4,41 @@
 
 ---
 
+## 2026-03-17 — QA s-contrato (edições + scorecard 14-dim)
+
+Branch: `feat/metanalise-mvp`
+
+### Mudanças no slide
+
+- **h2:** "Ao final, 3 perguntas..." → "3 perguntas que você faz a toda meta-análise" (assertion direta)
+- **Card 2 skill:** "Forest plot + GRADE por desfecho" → "Forest plot + confiança + heterogeneidade" (GRADE movido para card 3 contexto)
+- **Scope footer removido:** `<p class="contrato-scope">` deletado (redundante com notes)
+- **slide-navy removido** de `.slide-inner` (herança de versão navy — stage-c = creme)
+- **data-background-color removido** de `<section>` (ignorado por deck.js, ERRO-034)
+
+### Cadeia atualizada
+
+- `_manifest.js`: headline atualizado
+- `blueprint.md`: h2 e skill atualizados
+- `metanalise.css`: dead `.contrato-scope` removido
+- `index.html`: rebuild (18 slides)
+- `AUDIT-VISUAL.md`: scorecard 14-dim registrado — PASS
+
+### Gate 1 constraint check: PASS
+
+- h2 = asserção (não rótulo)
+- Zero `<ul>/<ol>`
+- `<aside class="notes">` com timing 3 blocos
+- Sem inline style no `<section>`
+- CSS 100% tokens (zero HEX inline)
+- lint:slides PASS
+
+### Pendência
+
+- Screenshot Playwright CLI = preto (deck.js hash nav requer script com waitForSelector). Referência visual: `qa-screenshots/s02-contrato-final.png` (sessão 16e, pré-edição). Screenshot pós-edição pendente.
+
+---
+
 ## 2026-03-16k — Merge main (4 commits A/B absorvidos)
 
 Branch: `feat/metanalise-mvp`

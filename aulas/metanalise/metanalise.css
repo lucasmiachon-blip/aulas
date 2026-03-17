@@ -560,16 +560,6 @@ aside.notes { display: none; }
   font-size: var(--text-small);
   color: var(--text-secondary);
 }
-.contrato-scope {
-  font-family: var(--font-body);
-  font-size: var(--text-small);
-  color: var(--text-secondary);
-  text-align: center;
-  margin-top: var(--space-md);
-  max-width: 60ch;
-  align-self: center;
-}
-
 /* --- Checkpoint: initial hidden state (controlled by state machine) --- */
 .checkpoint--hidden {
   opacity: 0;
