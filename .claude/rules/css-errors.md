@@ -1,6 +1,6 @@
 # CSS Errors — Registry & Prevention
 
-> 32 erros em 5 clusters. Canônico para erros e prevenção.
+> 35 erros em 5 clusters. Canônico para erros e prevenção.
 > Relacionados: [design-system](design-system.md) · [medical-data](medical-data.md) · [slide-editing](slide-editing.md)
 > Prioridade: MUST = fatal/bloqueante | SHOULD = alta | MAY = nice-to-have
 
@@ -18,6 +18,9 @@
 | E26 | MUST (3x) | NUNCA flex:1 igualitário em containers desiguais |
 | E27 | SHOULD | Diagnosticar assimetria ANTES de escolher layout |
 | E28 | SHOULD | ≤3 children para space-between |
+| E32 | MUST | Pseudo-elements (::before/::after) com flex-grow PROIBIDOS em containers base compartilhados. Participam do layout flex — combinados com gap ou flex:1, produzem efeitos colaterais |
+| E33 | MUST | `justify-content: center` em flex column com overflow = clipping simétrico (h2 desaparece). Usar `margin-top:auto` no primeiro child |
+| E34 | SHOULD | `<p>` dentro de flex com gap = espaçamento duplicado (gap + margin 1em). Reset `p { margin: 0 }` dentro de flex layouts com gap |
 
 ### Regra Master Flexbox
 ```

@@ -10,7 +10,14 @@ allowed-tools: Bash(npm *), Bash(npx *), Bash(kill *), Bash(sleep *)
 
 Exporta `$ARGUMENTS` para PDF + screenshots. Exemplo: `/export cirrose`
 
-## Passos
+## WARN: deck.js vs Reveal.js
+
+- **grade, osteoporose** (Reveal.js): DeckTape `reveal` plugin funciona normalmente.
+- **cirrose, metanalise** (deck.js): DeckTape `reveal` plugin NAO funciona. Usar:
+  - DeckTape com `--slides` manual (flag `generic` plugin), ou
+  - Playwright screenshot loop (preferido — ver `qa-screenshots-stage-c.js` como referencia)
+
+## Passos (Reveal.js — grade/osteoporose)
 
 1. Build: `npm run build`
 2. Preview server: `npx serve dist -l 4173 &` → `sleep 2`
@@ -36,3 +43,14 @@ Exporta `$ARGUMENTS` para PDF + screenshots. Exemplo: `/export cirrose`
    ```
 6. Matar servidor: `kill $(lsof -t -i:4173)`
 7. Reportar: tamanhos dos arquivos + contagem de slides
+
+## Passos (deck.js — cirrose/metanalise)
+
+1. Build: `npm run build:$ARGUMENTS`
+2. Preview server: `npx serve . -l 4173 &` → `sleep 2`
+3. Playwright screenshot loop:
+   ```bash
+   node aulas/$ARGUMENTS/scripts/qa-screenshots-stage-c.js
+   ```
+4. Para PDF: combinar screenshots com ImageMagick ou ferramenta equivalente
+5. Matar servidor: `kill $(lsof -t -i:4173)`

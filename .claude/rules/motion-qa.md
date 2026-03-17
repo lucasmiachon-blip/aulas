@@ -1,7 +1,7 @@
 # Motion QA — Heurísticas + Workflow de Validação
 
 > Checklist para agentes AI validarem animações GSAP/Reveal.js.
-> Relacionados: [slide-editing](slide-editing.md) · [reveal-patterns](reveal-patterns.md) · [design-principles](design-principles.md)
+> Relacionados: [slide-editing](slide-editing.md) · [deck-patterns](deck-patterns.md) · [reveal-legacy](reveal-legacy.md) · [design-principles](design-principles.md)
 > Para julgamento contextual (ritmo, adequação, feeling) → humano + Gemini com vídeo.
 
 ---

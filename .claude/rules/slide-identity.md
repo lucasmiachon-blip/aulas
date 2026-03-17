@@ -2,7 +2,7 @@
 
 > Erro mais recorrente do projeto. Qualquer operacao em ID de slide
 > que nao toque TODAS as 9 superficies = drift garantido.
-> Relacionados: [slide-editing](slide-editing.md) · [reveal-patterns](reveal-patterns.md)
+> Relacionados: [slide-editing](slide-editing.md) · [deck-patterns](deck-patterns.md)
 
 ## 1. Anatomia de um Slide ID
 

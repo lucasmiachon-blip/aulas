@@ -51,11 +51,13 @@ CLAUDE.md (root)              ← fonte de verdade operacional (absorveu AGENTS.
 | anti-drift.md | (autônomo — protocolo de foco) | ← CLAUDE.md (workflow step 1) |
 | css-errors.md | → design-system.md, medical-data.md | ← slide-editing.md |
 | design-principles.md | → design-system.md | ← CLAUDE.md |
-| design-system.md | (autônomo) | ← css-errors.md, design-principles.md, slide-editing.md, reveal-patterns.md |
+| deck-patterns.md | → slide-identity.md, design-system.md | ← slide-editing.md, motion-qa.md, CLAUDE.md |
+| design-system.md | (autônomo) | ← css-errors.md, design-principles.md, slide-editing.md, deck-patterns.md |
 | medical-data.md | (autônomo) | ← css-errors.md, slide-editing.md |
-| motion-qa.md | → slide-editing.md, reveal-patterns.md | ← CLAUDE.md |
-| reveal-patterns.md | (autônomo) | ← slide-editing.md, motion-qa.md, CLAUDE.md |
-| slide-editing.md | → css-errors.md, design-system.md, reveal-patterns.md, medical-data.md | ← CLAUDE.md |
+| motion-qa.md | → slide-editing.md, deck-patterns.md, reveal-legacy.md | ← CLAUDE.md |
+| reveal-legacy.md | → deck-patterns.md | ← slide-editing.md, motion-qa.md (FROZEN — grade/osteoporose) |
+| slide-editing.md | → css-errors.md, design-system.md, deck-patterns.md, reveal-legacy.md, medical-data.md | ← CLAUDE.md |
+| slide-identity.md | → slide-editing.md, reveal-patterns (via deck-patterns) | ← CLAUDE.md, deck-patterns.md |
 
 ### docs/
 
@@ -146,6 +148,9 @@ CLAUDE.md (root)              ← fonte de verdade operacional (absorveu AGENTS.
 | cirrose-scope.md | Superseded por blueprint-cirrose.md |
 | AUDIT-BATCHES.md | One-shot |
 | research-skills-ecosystem-2026-03-11.md | Pesquisa ecosystem upgrade (referência, não operacional) |
+| CHATGPT_HANDOFF_ACT2.md | One-shot planning Act 2 |
+| NNT-IC95-REPORT.md | Relatório NNT verificação |
+| aulas-magnas-system-v6.plan.md | System plan v6 |
 
 ---
 
@@ -158,8 +163,10 @@ CLAUDE.md (root)              ← fonte de verdade operacional (absorveu AGENTS.
 | design-system.md | cirrose-design.mdc + design-system.mdc | Split OK |
 | medical-data.md | medical-data.mdc | .claude |
 | motion-qa.md | motion-qa.mdc | .claude |
-| reveal-patterns.md | reveal-patterns.mdc | Ambos |
+| deck-patterns.md | reveal-patterns.mdc | .claude (deck.js specifics) |
+| reveal-legacy.md | — | .claude only (FROZEN) |
 | slide-editing.md | slide-editing.mdc | Ambos |
+| slide-identity.md | slide-identity.mdc | .claude |
 
 **Sem par em .claude:** core-constraints.mdc, plan-mode.mdc, notion-mcp.mdc (só .cursor).
 
@@ -175,7 +182,8 @@ CLAUDE.md (root)              ← fonte de verdade operacional (absorveu AGENTS.
 | Erros CSS | .claude/rules/css-errors.md | — |
 | Dados médicos | .claude/rules/medical-data.md | — |
 | Animações GSAP | .claude/rules/motion-qa.md | shared/js/engine.js |
-| Reveal.js patterns | .claude/rules/reveal-patterns.md | — |
+| Deck.js patterns (ativo) | .claude/rules/deck-patterns.md | — |
+| Reveal.js patterns (frozen) | .claude/rules/reveal-legacy.md | — |
 | Assertion-Evidence | .claude/rules/slide-editing.md | design-principles.md §1 |
 | Notion IDs | .env.example (variáveis `NOTION_*_ID`) | docs/SYNC-NOTION-REPO.md |
 | MCP profiles | .mcp-profiles/*.json | .mcp.json (perfil ativo) |

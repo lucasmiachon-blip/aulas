@@ -162,7 +162,7 @@ Depois: `source ~/.zshrc`
 As regras do projeto estão em `.cursor/rules/*.mdc`.
 O Cursor as carrega automaticamente por glob pattern:
 - `design-system.mdc` → ativo em `**/*.html,**/*.css`
-- `assertion-evidence.mdc` → ativo em `aulas/**/*.html`
+- `slide-editing.mdc` → ativo em `aulas/**/*.html`
 - `medical-data.mdc` → ativo em `aulas/**/*.html,docs/**/*.md`
 
 Nada a configurar — funciona ao abrir o projeto.

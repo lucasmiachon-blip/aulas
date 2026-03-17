@@ -1,10 +1,12 @@
 ---
 name: medical-data
-description: Verifica e formata dados clínicos em slides — exige trial/estudo, effect size com IC95%, n, e PMID/DOI para cada número. Ativar ao adicionar qualquer claim clínico, estatística ou resultado de trial a um slide.
-version: 0.2.0
+description: "DEPRECATED — coberto por /review (v0.4+). Verifica dados clinicos em slides. Usar /review para auditoria completa."
+version: 0.2.1
 allowed-tools: Read, Grep
 argument-hint: "[claim clínico ou slide-file]"
 ---
+
+> **DEPRECATED:** Este skill esta coberto pelo `/review` (v0.4+), que inclui verificacao de dados clinicos como uma das dimensoes de auditoria. Usar `/review` em vez deste skill.
 
 ## Todo número clínico no slide DEVE ter
 

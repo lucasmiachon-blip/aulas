@@ -97,8 +97,22 @@ disable-model-invocation: true  # opcional — só invocação manual
 | `evidence` | 0.2.0 | fork / general-purpose | Read, WebSearch | Busca evidências PubMed → citação AMA + dados slide |
 | `new-slide` | — | — | — | Cria slide HTML completo com archetype correto |
 | `export` | — | — | — | Exporta slides para PDF/compartilhamento |
+| `context7` | — | — | Read, Grep, Glob | Injeta docs de libs no contexto (GSAP, Reveal, Vite, OKLCH) |
+| `new-skill` | — | — | — | Scaffold de nova skill com frontmatter correto |
+| `repo-janitor` | — | fork / general-purpose | Read, Grep, Glob, Bash | Audit orphan files, broken links, dead HTML (read-only) |
+| `audit-rules` | — | — | Read, Grep, Glob | Audita rules para contradições, stale refs, gaps |
+| `evolve` | — | fork / general-purpose | Read, Grep, Glob, WebSearch | Comitê de evolução — pesquisa + patches para skills/docs/tools |
+| `final-pass` | — | fork / general-purpose | Read, Grep, Glob | Avaliação final deck completo via Gemini (Gates 1-3 já passaram) |
+| `gtd` | — | — | Read, Write | Getting Things Done file-based (inbox, next actions, weekly review) |
+| `mem-search` | — | — | Read, Grep, Glob | Busca semântica na memória do projeto |
+| `ralph-qa` | — | fork / qa-engineer | Read, Write, Bash | QA em 2 loops (Opus lint + Gemini visual) até PASS |
+| `resolve-conflict` | — | — | Read, Grep | Guia PT-BR para merge conflicts |
 
 ### Cursor (`.cursor/skills/`)
+
+| Skill | Papel |
+|-------|-------|
+| `slide-frontend-ux` | Frontend review UX de slides |
 
 | Skill | Papel |
 |-------|-------|

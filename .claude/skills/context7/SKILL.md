@@ -24,7 +24,7 @@ Verificado via WebSearch + WebFetch por subagent. Substituir se libs atualizarem
 
 ## GSAP — versão atual: 3.14.2
 
-Projeto pina 3.12 — **upgrade para 3.14 é seguro**, sem breaking changes na API de tweens.
+Projeto usa 3.14.2 (atualizado 2026-03-17). Sem breaking changes desde 3.0.
 
 ### Atenção (3.13): registry privado morto
 Se `package.json` ou `.npmrc` referenciar `npm.greensock.com` → **remover imediatamente**.
@@ -234,12 +234,14 @@ export default defineConfig({
 
 ## Action items para este projeto
 
-| Item | Prioridade | O que fazer |
-|------|-----------|-------------|
-| `.npmrc` com `npm.greensock.com` | **URGENTE** | Remover se existir |
-| GSAP 3.12 → 3.14 | Alta | `npm i gsap@latest` — zero breaking changes |
-| `scrollActivationWidth: null` | Média | Adicionar em `engine.js` → `Reveal.initialize()` |
-| `from()` revert fix (3.13) | Alta | Resolvido com upgrade GSAP |
+| Item | Prioridade | Status |
+|------|-----------|--------|
+| `.npmrc` com `npm.greensock.com` | — | OK — nao existe |
+| GSAP 3.12 → 3.14 | — | DONE (2026-03-17) |
+| `scrollActivationWidth: null` | Baixa | Afeta so Reveal.js legacy (grade/osteoporose — frozen) |
+| `from()` revert fix (3.13) | — | DONE — incluso no upgrade 3.14 |
+
+> **Nota:** Vite 8.0 (Rolldown) disponivel. Projeto usa 6.x. Upgrade nao urgente — 6.x ainda mantido.
 
 ---
 

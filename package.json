@@ -24,6 +24,7 @@
     "build:cirrose": "powershell -ExecutionPolicy Bypass -File aulas/cirrose/scripts/build-html.ps1",
     "build:grade": "powershell -ExecutionPolicy Bypass -File aulas/grade/scripts/build-html.ps1",
     "build:osteoporose": "powershell -ExecutionPolicy Bypass -File aulas/osteoporose/scripts/build-html.ps1",
+    "build:metanalise": "echo Build script not yet configured for metanalise",
     "dev:osteoporose": "vite --open /aulas/osteoporose/index.html",
     "zip:ia": "./scripts/build-zip-limpo-ia.ps1",
     "done:cirrose": "node scripts/done-gate.js cirrose",
@@ -50,7 +51,7 @@
     "vite": "^6.0.0"
   },
   "dependencies": {
-    "gsap": "^3.12.5",
+    "gsap": "^3.14.2",
     "reveal.js": "~5.2.1"
   }
 }

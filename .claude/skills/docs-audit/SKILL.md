@@ -1,20 +1,65 @@
 ---
 name: docs-audit
 description: Audits docs/*.md and rules/skills for links, redundancy, verbosity, and token economy. Use when user says "audite os docs", "verifique os MDs", "audit markdown", or before long sessions to reduce context. Executes via subagent generalPurpose or qa-engineer.
-version: 0.2.0
+version: 0.3.0
 context: fork
 agent: general-purpose
 allowed-tools: Read, Grep, Glob
 ---
 
-**Fonte canônica:** `.cursor/skills/docs-audit/` — este arquivo é redirect.
+# Auditing Docs
 
-## Workflow (Claude Code)
+Audits markdown files using criteria from dev, designer, prompt engineer, systems engineer, and token-economy perspectives.
 
-Delegar para subagent `generalPurpose` ou `qa-engineer` com prompt:
+## When to Use
+
+- User: "audite os docs", "verifique os MDs", "audit markdown", "revisar documentacao"
+- Before long sessions (reduce context load)
+- After batch doc changes
+- When context saturates (token economy)
+
+## Execution
+
+Delegate to subagent `generalPurpose` or `qa-engineer` with prompt:
 
 ```
-Siga .cursor/skills/docs-audit/SKILL.md. Audite docs/*.md em batches de 5-7. Reporte no formato do skill.
+Audite docs/*.md em batches de 5-7. Use o checklist abaixo. Reporte no formato de output abaixo.
 ```
 
-Ver `.cursor/skills/docs-audit/SKILL.md` para checklist completo e `reference.md` para critérios detalhados.
+## Quick Checklist
+
+| Domain | Focus |
+|--------|-------|
+| Systems | Links valid, paths relative, cross-refs consistent |
+| Dev | Single source per concept, no duplication |
+| Prompt eng | Reference over duplicate, tables for comparison |
+| Tokens | Docs >200 lines → index or reference.md, no time-sensitive data |
+| Design | Header hierarchy, lists for discrete items |
+
+## Output Format
+
+```
+## Docs Audit — [date]
+
+| Domain | Status | Items |
+|--------|--------|-------|
+| Links | PASS/WARN/FAIL | ... |
+| Redundancy | PASS/WARN/FAIL | ... |
+| Verbosity | PASS/WARN/FAIL | ... |
+| Tokens | PASS/WARN/FAIL | ... |
+| Structure | PASS/WARN/FAIL | ... |
+
+### Recommended actions
+1. ...
+```
+
+## Tools
+
+- Grep: `\[.*\]\(.*\)` for links
+- Read: sample 5-7 docs per batch
+- Optional: `npx markdownlint-cli docs/**/*.md` (if installed)
+
+## References
+
+- docs/README.md — doc index
+- docs/XREF.md — cross-reference map

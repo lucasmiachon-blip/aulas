@@ -43,7 +43,7 @@ Glob: .cursor/rules/*.mdc (para check de bloat)
 Para cada par de rules files:
 - Extrair afirmações prescritivas ("NUNCA", "SEMPRE", "obrigatório", "proibido")
 - Comparar: mesma afirmação com sentido oposto = FAIL
-- Especial: `design-system.md` vs `css-errors.md` (cores), `slide-editing.md` vs `reveal-patterns.md` (fragments)
+- Especial: `design-system.md` vs `css-errors.md` (cores), `slide-editing.md` vs `deck-patterns.md` (click-reveal)
 
 ### 3. Check contra lessons.md
 

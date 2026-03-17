@@ -1,6 +1,6 @@
 # Slide Editing Rules
 
-> Relacionados: [css-errors](css-errors.md) · [design-system](design-system.md) · [reveal-patterns](reveal-patterns.md) · [medical-data](medical-data.md)
+> Relacionados: [css-errors](css-errors.md) · [design-system](design-system.md) · [deck-patterns](deck-patterns.md) · [reveal-legacy](reveal-legacy.md) · [medical-data](medical-data.md)
 
 ## Checklist Pré-Edição (OBRIGATÓRIO)
 
@@ -58,11 +58,24 @@ ver `references/decision-protocol.md`
 
 ---
 
+## Regras Operacionais (deck.js)
+
+| Regra | Fonte |
+|-------|-------|
+| Click handlers DENTRO de slides devem usar `stopPropagation()` para nao propagar ao nav layer | ERRO-033 |
+| Custom animations devem ser registradas (`wireAll`) ANTES do dispatcher conectar | ERRO-016 |
+| deck.js bg escuro: usar `background-color` no CSS com seletor `#slide-id .slide-inner`, NAO `data-background-color` | ERRO-034 |
+| `[TBD]` permitido APENAS em `<aside class="notes">`. NUNCA em headline, source-tag ou corpo projetado | ERRO-029 |
+| Archetype scope: reutilizar elementos de um archetype em outro requer re-declarar display/flex no novo contexto | ERRO-018/032 |
+
+---
+
 ## Referências cruzadas
 
 - Flexbox anti-patterns → `css-errors.md` Cluster A
 - Cores e semântica → `design-system.md`
-- Speaker notes formato → `reveal-patterns.md`
-- Fragments e Reveal.js → `reveal-patterns.md`
-- Apêndice: `data-visibility="hidden"` (NÃO uncounted) → `reveal-patterns.md`
+- Speaker notes formato → `deck-patterns.md`
+- Click-reveal (deck.js) → `deck-patterns.md`
+- Fragments (Reveal.js legacy) → `reveal-legacy.md`
+- Apêndice: `data-visibility="hidden"` (NÃO uncounted) → `deck-patterns.md`
 - Dados médicos → `medical-data.md`

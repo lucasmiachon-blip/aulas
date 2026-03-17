@@ -1,10 +1,12 @@
 ---
 name: assertion-evidence
-description: Valida slides médicos no formato Assertion-Evidence — título como afirmação clínica verificável (max 2 linhas) + evidência visual dominante no corpo. Ativar ao editar ou revisar qualquer HTML em aulas/*/slides/*.html. Não cria slides (usar slide-builder para isso).
-version: 0.2.0
+description: "DEPRECATED — coberto por /review (v0.4+). Valida formato Assertion-Evidence em slides HTML. Usar /review para auditoria completa."
+version: 0.2.1
 allowed-tools: Read, Grep, Glob
 argument-hint: "[slide-file ou aulas/*/slides/]"
 ---
+
+> **DEPRECATED:** Este skill esta coberto pelo `/review` (v0.4+), que inclui assertion-evidence como uma das dimensoes de auditoria. Usar `/review` em vez deste skill.
 
 ## Formato obrigatório
 

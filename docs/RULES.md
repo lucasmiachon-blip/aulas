@@ -60,8 +60,9 @@ Conteúdo em markdown...
 | cirrose-design | **/*.css,**/*.html | Não | Tokens, cores, fontes |
 | design-system | **/*.css | Não | OKLCH tokens, semântica cores, tipografia |
 | motion-qa | **/*.js | Não | Heurísticas GSAP, timing, validação |
-| reveal-patterns | **/*.html,**/*.js | Não | Reveal.js, fragments, speaker notes, PDF |
-| css-errors | **/*.css | Não | 32 erros em 5 clusters |
+| reveal-patterns | **/*.html,**/*.js | Não | (**DEPRECATED** — split em deck-patterns + reveal-legacy) |
+| css-errors | **/*.css | Não | 35 erros em 5 clusters |
+| slide-identity | **/slides/**/*.html | Não | 9 superficies de slide ID |
 | notion-mcp | — | Não | Notion MCP, specs |
 
 ---

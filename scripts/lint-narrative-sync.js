@@ -15,12 +15,24 @@
  *   aula defaults to "cirrose"
  */
 import { readFileSync, existsSync } from 'node:fs';
+import { execSync } from 'node:child_process';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const root = join(__dirname, '..');
-const aula = process.argv[2] || 'cirrose';
+
+// Auto-detect aula from git branch: feat/cirrose-mvp → cirrose
+function detectAula() {
+  if (process.argv[2]) return process.argv[2];
+  try {
+    const branch = execSync('git rev-parse --abbrev-ref HEAD', { encoding: 'utf-8' }).trim();
+    const match = branch.match(/^feat\/([\w-]+)-mvp$/);
+    if (match) return match[1];
+  } catch {}
+  return 'cirrose';
+}
+const aula = detectAula();
 const aulaDir = join(root, 'aulas', aula);
 
 let errors = 0;
