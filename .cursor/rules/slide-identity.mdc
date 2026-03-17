@@ -44,10 +44,10 @@ Toda operacao de criacao/rename/split/delete DEVE tocar TODAS:
 | 6 | `references/evidence-db.md` | referencias a slide ID | `## s-a1-damico` ou inline |
 | 7 | `AUDIT-VISUAL.md` | header de scorecard | `### s-a1-damico (02b-a1-damico.html)` |
 | 8 | `HANDOFF.md` | mencoes em backlog/status | `- h2 assertivo fib4: ...` |
-| 9 | `index.html` | GERADO — `npm run build:cirrose` | nao editar manualmente |
+| 9 | `index.html` | GERADO — `npm run build:{aula}` | nao editar manualmente |
 
 **Superficie 3 (slide-registry.js):** so se o slide TEM customAnimation.
-**Superficie 9 (index.html):** NUNCA editar. Rodar build apos qualquer mudanca.
+**Superficie 9 (index.html):** NUNCA editar. Rodar `npm run build:{aula}` apos qualquer mudanca. {aula} = cirrose | metanalise | grade | osteoporose.
 
 ## 3. Protocolo de CRIACAO de Slide
 
@@ -59,7 +59,7 @@ Toda operacao de criacao/rename/split/delete DEVE tocar TODAS:
 4. Se slide tem animacao custom → adicionar em `slide-registry.js`
 5. Se slide tem CSS especifico → adicionar em `cirrose.css` com seletor `#s-{act}-{slug}`
 6. Adicionar linha em `narrative.md` na tabela do ato correspondente
-7. `npm run build:cirrose` → verificar que `index.html` inclui o slide
+7. `npm run build:{aula}` → verificar que `index.html` inclui o slide
 8. `npm run lint:slides` → PASS
 9. Registrar em `CHANGELOG.md`
 
@@ -90,7 +90,7 @@ grep -rn "ID_ANTIGO" aulas/cirrose/ --include="*.html" --include="*.js" --includ
 - [ ] `evidence-db.md`: trocar referencias
 - [ ] `AUDIT-VISUAL.md`: trocar header do scorecard
 - [ ] `HANDOFF.md`: trocar mencoes
-- [ ] `npm run build:cirrose` → rebuild index.html
+- [ ] `npm run build:{aula}` → rebuild index.html
 - [ ] `npm run lint:slides` → PASS
 - [ ] Verificacao final: `grep -rn "ID_ANTIGO" aulas/cirrose/` retorna ZERO
 
@@ -109,7 +109,7 @@ Executar em commits separados para facilitar rollback.
 6. Criar customAnimation para slide B se necessario.
 7. Atualizar `narrative.md`: nova linha para slide B.
 8. Atualizar contagens em HANDOFF/CLAUDE.md (N+1 slides total).
-9. `npm run build:cirrose` + `npm run lint:slides`.
+9. `npm run build:{aula}` + `npm run lint:slides`.
 10. Re-auditar ambos slides em AUDIT-VISUAL.md.
 
 ## 6. Protocolo de DELETE
@@ -120,7 +120,7 @@ Executar em commits separados para facilitar rollback.
 4. Remover seletores CSS em `cirrose.css`.
 5. Marcar como removido em `narrative.md` (~~riscado~~ ou removido).
 6. Atualizar contagens em HANDOFF/CLAUDE.md (N-1).
-7. `npm run build:cirrose` + `npm run lint:slides`.
+7. `npm run build:{aula}` + `npm run lint:slides`.
 
 ## 7. Verificacao Automatizada
 

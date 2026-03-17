@@ -353,11 +353,9 @@ Tokens não importam. Retrabalho é sinal de aprendizado — mas não pode paral
 - **Regra:** Antes de commitar mudanca em slides, rodar `npm run lint:narrative-sync` — detecta drift headline automaticamente.
 - **Checklist mental (4 perguntas):** (1) O h2/headline mudou? → `_manifest.js`. (2) O ID mudou? → 9 superficies completas. (3) Dados mudaram? → notes [DATA] tag. (4) Aula tem build script? Se nao → **index.html manual e uma superficie extra**.
 
-### index.html manual = superficie extra nao documentada
+### index.html manual = superficie extra (RESOLVIDO para metanalise)
 
-- Metanalise nao tem `build:metanalise` script. O `index.html` foi criado manualmente (concatenacao dos slides).
-- Vite serve `index.html`, NAO `slides/*.html`. Editar o standalone sem atualizar index.html = usuario ve versao antiga.
-- **Root cause:** cirrose tem `build:cirrose` que regenera index.html automaticamente. Metanalise nao.
-- **Regra CRITICA:** Toda edicao em `slides/*.html` DEVE ser replicada em `index.html` no mesmo batch. Sem excecao.
-- **Pendencia Classe B:** Criar `build:metanalise` script (como cirrose) para eliminar essa superficie manual.
-- **Verificacao:** Apos editar qualquer slide, rodar `grep` comparando o trecho no slide vs no index.html.
+- ~~Metanalise nao tinha `build:metanalise` script~~ — **RESOLVIDO 2026-03:** `npm run build:metanalise` existe (build-html.ps1). Bug de chave duplicada em package.json corrigido.
+- Vite serve `index.html`, NAO `slides/*.html`. Editar o standalone sem rodar build = usuario ve versao antiga.
+- **Regra:** Toda aula com `_manifest.js` DEVE ter `npm run build:{aula}`. Rodar apos qualquer mudanca em slides.
+- **Verificacao:** `npm run build:{aula}` antes de commitar. Guard 4 (post-merge) detecta drift.

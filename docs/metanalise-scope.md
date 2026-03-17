@@ -20,8 +20,8 @@ Capacitar o residente-leitor a ler uma meta-análise sem confundir precisão est
 
 ## Âncora didática
 
-[TBD] — Musini et al. 2025 é candidato, não decisão final.
-Artigo âncora entra apenas na Fase 3 (slides 13-17). Fases 1-2 são genéricas.
+**Valgimigli 2025** — Clopidogrel vs Aspirina (Lancet, PMID 40902613). IPD-MA, 7 RCTs, 28.982 pts.
+Artigo âncora entra apenas na Fase 3 (slides 13-17). Fases 1-2 são genéricas. Musini 2025 = exemplo visual (Cochrane).
 
 ## Princípio-chave
 

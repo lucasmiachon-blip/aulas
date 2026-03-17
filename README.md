@@ -11,7 +11,7 @@ deck.js (custom navigation) · GSAP 3.12 · Vite 6.x · Vanilla HTML/CSS/JS · O
 | Pasta | Status |
 |-------|--------|
 | `aulas/cirrose/` | 44 slides, QA visual em andamento |
-| `aulas/metanalise/` | 12 slides (Fases 1-2) |
+| `aulas/metanalise/` | 18 slides (deck completo) |
 | `aulas/grade/` | 58/58 migrados (frozen, Reveal.js legacy) |
 | `aulas/osteoporose/` | 70/70 migrados (frozen, Reveal.js legacy) |
 

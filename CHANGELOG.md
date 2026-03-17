@@ -2,6 +2,16 @@
 
 ## [Unreleased]
 
+### Fixed (2026-03-17 — Diagnóstico MDs: 8 correções)
+- **package.json:** Removida chave duplicada `build:metanalise` (echo sobrescrevia script PowerShell). `npm run build:metanalise` agora executa build-html.ps1.
+- **README.md:** "12 slides" → "18 slides" (metanalise).
+- **docs/metanalise-scope.md:** Âncora [TBD] → Valgimigli 2025 (Lancet, PMID 40902613).
+- **CLAUDE.md:** Removido "build script pendente" da tabela metanalise.
+- **.cursor/rules/slide-identity.mdc:** `build:cirrose` → `build:{aula}` (5 ocorrências) + legenda {aula}.
+- **docs/XREF.md:** slide-identity referencia deck-patterns.md (removido reveal-patterns obsoleto).
+- **tasks/lessons.md:** Lição build:metanalise atualizada — RESOLVIDO, regra genérica.
+- **docs/archive/AGENTS.md:** Banner ARQUIVADO (mar/2026, superseded por CLAUDE.md).
+
 ### Changed (2026-03-16i — Notion sync completo: Slides + References DB)
 - **Notion Slides DB:** 18/18 slides sincronizados (13 atualizados, 5 criados). Campos: Headline PT, Speaker Notes, Pipeline Status, Visual QA, Tipo, Animação, Checkpoint, Objetivo Cognitivo, Tempo, PMID, Effect Size, IC 95%, GRADE Certainty, NNT/NNH.
 - **Notion References DB:** 25 novas entries criadas + 2 existentes atualizadas (Hoffmann, Lakhlifi). Todas com Citation AMA, PMID, DOI, Year, Journal, Aula, Evidence Level, Tier, Tipo Ref, Relevância.

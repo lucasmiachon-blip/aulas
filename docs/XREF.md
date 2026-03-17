@@ -57,7 +57,7 @@ CLAUDE.md (root)              ← fonte de verdade operacional (absorveu AGENTS.
 | motion-qa.md | → slide-editing.md, deck-patterns.md, reveal-legacy.md | ← CLAUDE.md |
 | reveal-legacy.md | → deck-patterns.md | ← slide-editing.md, motion-qa.md (FROZEN — grade/osteoporose) |
 | slide-editing.md | → css-errors.md, design-system.md, deck-patterns.md, reveal-legacy.md, medical-data.md | ← CLAUDE.md |
-| slide-identity.md | → slide-editing.md, reveal-patterns (via deck-patterns) | ← CLAUDE.md, deck-patterns.md |
+| slide-identity.md | → slide-editing.md, deck-patterns.md | ← CLAUDE.md, deck-patterns.md |
 
 ### docs/
 

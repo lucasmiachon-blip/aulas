@@ -1,5 +1,7 @@
 # AGENTS.md — Aulas Magnas
 
+> **ARQUIVADO — mar/2026.** Superseded por CLAUDE.md (root). Não atualizar. Histórico mantido para referência.
+
 Slides médicos elite para congressos internacionais.
 Público: hepatologistas e gastroenterologistas seniores.
 
