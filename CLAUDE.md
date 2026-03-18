@@ -28,7 +28,7 @@ deck.js (custom navigation) · GSAP 3.14 · Vite 6.x · Vanilla HTML/CSS/JS · O
 | Pasta | Status | CLAUDE.md |
 |-------|--------|-----------|
 | `aulas/cirrose/` | 44 slides, QA visual em andamento (batch 1 parcial) · **ATIVO** | `aulas/cirrose/CLAUDE.md` |
-| `aulas/metanalise/` | 18 slides, QA parcial · **ATIVO** | `aulas/metanalise/CLAUDE.md` |
+| `aulas/metanalise/` | 18 slides, F1 QA PASS, F2-F3 LINT-PASS · **ATIVO** | `aulas/metanalise/CLAUDE.md` |
 | `aulas/grade/` | 58/58 migrados · FROZEN (Reveal.js legacy) | `aulas/grade/CLAUDE.md` |
 | `aulas/osteoporose/` | 70/70 migrados · FROZEN (Reveal.js legacy) | `aulas/osteoporose/CLAUDE.md` |
 

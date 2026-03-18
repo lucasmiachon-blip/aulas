@@ -99,10 +99,10 @@ Scorecards formais serao preenchidos durante ralph-qa batches 2-6 (proximas sess
 - **Instrument Serif italic** na provocação (beat-0) — confirmar legibilidade em TV/projetor a 5m em sala iluminada. Se ilegível, fallback para DM Sans 600 italic
 - "só em 2019" como qualificador — avaliar se enfraquece o impacto dramático ou se reforça (implica crescimento)
 
-**Pendências operacionais:**
-- Sync Notion References DB: Bojcic e Qureshi mudar de CANDIDATO → EM USO
-- narrative.md atualizado (dados do hook)
-- evidence-db.md atualizado (Bojcic/Qureshi: CANDIDATO → EM USO)
+**Pendências operacionais:** ✅ TODAS RESOLVIDAS (verificado 2026-03-17)
+- ~~Sync Notion References DB: Bojcic e Qureshi mudar de CANDIDATO → EM USO~~ ✅ Notion sync feito (2026-03-16i, timestamp 23:16). Bojcic highlight confirma "EM USO no hook".
+- ~~narrative.md atualizado (dados do hook)~~ ✅ Linha 51: 146/dia, Bojcic 81%, Qureshi 10%
+- ~~evidence-db.md atualizado (Bojcic/Qureshi: CANDIDATO → EM USO)~~ ✅ v4.1 (linhas 126, 137)
 
 ---
 

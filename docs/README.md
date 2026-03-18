@@ -26,6 +26,7 @@
 | [aulas/cirrose/HANDOFF-CLAUDE-AI.md](../aulas/cirrose/HANDOFF-CLAUDE-AI.md) | Claude.ai (paths, pendências) |
 | [aulas/metanalise/HANDOFF.md](../aulas/metanalise/HANDOFF.md) | Pendências Meta-análise |
 | [aulas/metanalise/CLAUDE.md](../aulas/metanalise/CLAUDE.md) | Regras + estado Meta-análise |
+| [aulas/metanalise/WT-OPERATING.md](../aulas/metanalise/WT-OPERATING.md) | Máquina de estados + QA loop Meta-análise |
 | [aulas/grade/HANDOFF.md](../aulas/grade/HANDOFF.md) | Estado GRADE |
 | [aulas/osteoporose/HANDOFF.md](../aulas/osteoporose/HANDOFF.md) | Estado Osteoporose |
 

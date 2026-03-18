@@ -359,3 +359,27 @@ Tokens não importam. Retrabalho é sinal de aprendizado — mas não pode paral
 - Vite serve `index.html`, NAO `slides/*.html`. Editar o standalone sem rodar build = usuario ve versao antiga.
 - **Regra:** Toda aula com `_manifest.js` DEVE ter `npm run build:{aula}`. Rodar apos qualquer mudanca em slides.
 - **Verificacao:** `npm run build:{aula}` antes de commitar. Guard 4 (post-merge) detecta drift.
+
+---
+
+## Sessao 17/mar — Doc sync: drift de dados entre docs
+
+### Dados duplicados em N docs driftam silenciosamente
+
+- O dado "80 SRs/dia" vivia em 4 docs: blueprint, narrative, evidence-db, reading-list.
+- Quando o hook atualizou para "146/dia" (sessao 16/mar), apenas HTML + evidence-db foram atualizados. Blueprint e narrative ficaram com "80/dia".
+- Drift só detectado na auditoria documental (sessao 17/mar) — 2 sessões depois.
+- **Regra:** Ao atualizar dado numérico em slide, grep por TODOS os docs que mencionam o valor antigo: `grep -rn "80/dia\|80 revisões" aulas/{aula}/`. Atualizar no MESMO batch.
+- **Regra:** evidence-db.md é fonte canônica de dados. Se evidence-db diz X mas narrative.md diz Y → narrative está errado. Nao o contrario.
+
+### Candidatos não-decididos acumulam verbosidade
+
+- 11 candidatos a artigo-âncora com 200+ linhas de dados detalhados permaneceram em evidence-db após decisão (Valgimigli).
+- Após 3 sessões, ninguém mais consultava esses dados — mas ocupavam contexto.
+- Fix: colapsar para tabela-resumo com PMIDs (1 linha cada, -189 linhas).
+- **Regra:** Após decisão final sobre candidatos, colapsar os não-selecionados em tabela-resumo na mesma sessão. Dados completos ficam acessíveis via PMID.
+
+### Referências cross-doc desatualizadas após troca de âncora
+
+- reading-list.md item 4 referenciava Musini (antigo candidato). Âncora mudou para Valgimigli 2 sessões antes.
+- **Regra:** Ao trocar artigo-âncora, grep por nome do antigo em TODOS os docs: `grep -rn "Musini\|antigo" aulas/{aula}/`. Atualizar ou remover referências obsoletas.

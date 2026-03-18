@@ -135,6 +135,14 @@ CLAUDE.md (root)              ← fonte de verdade operacional (absorveu AGENTS.
 | references/evidence-db.md | (canônico dados clínicos) | ← blueprint.md, slides/ |
 | references/blueprint.md | → narrative.md, evidence-db.md | ← HANDOFF.md |
 | slides/_manifest.js | (canônico ordem/metadata slides) | ← lint:narrative-sync, index.html |
+| WT-OPERATING.md | → HANDOFF.md, slide-identity.md | ← CLAUDE.md aula (doc order) |
+| CHANGELOG.md | (append-only — histórico de batches) | ← HANDOFF.md |
+| ERROR-LOG.md | (append-only — erros → regras) | ← CHANGELOG.md |
+| AUDIT-VISUAL.md | → WT-OPERATING.md §4 | ← HANDOFF.md |
+| NOTES.md | (log de decisões entre agentes) | ← WT-OPERATING.md |
+| HANDOFF-ARCHIVE.md | (sessões arquivadas) | ← HANDOFF.md |
+| QA-WORKFLOW.md | DEPRECATED → WT-OPERATING.md §4 | ← AUDIT-VISUAL.md (tooling ref) |
+| references/reading-list.md | (pre-reading list) | ← blueprint.md |
 
 ### Arquivados (docs/archive/)
 
@@ -188,6 +196,7 @@ CLAUDE.md (root)              ← fonte de verdade operacional (absorveu AGENTS.
 | Notion IDs | .env.example (variáveis `NOTION_*_ID`) | docs/SYNC-NOTION-REPO.md |
 | MCP profiles | .mcp-profiles/*.json | .mcp.json (perfil ativo) |
 | Estado Cirrose | aulas/cirrose/HANDOFF.md | — |
+| Estado Metanalise | aulas/metanalise/HANDOFF.md | WT-OPERATING.md |
 | Context window | docs/SUBAGENTS.md | .cursor/rules/core-constraints.mdc |
 | Manifesto slides (cirrose) | aulas/cirrose/slides/_manifest.js | CLAUDE.md tabela |
 | Manifesto slides (metanalise) | aulas/metanalise/slides/_manifest.js | CLAUDE.md tabela |

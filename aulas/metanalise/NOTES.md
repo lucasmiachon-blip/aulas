@@ -5,4 +5,16 @@
 
 ---
 
-*Nenhuma nota registrada até o momento. Decisões vivem em HANDOFF.md (tabela "Decisões tomadas").*
+## 2026-03-17 — Verificação documental
+
+### Pendências s-hook resolvidas
+- evidence-db.md: Bojcic/Qureshi → EM USO (v4.1, linhas 126/137)
+- narrative.md: 146/dia, Bojcic 81%, Qureshi 10% (linha 51)
+- Notion References DB: Bojcic e Qureshi com "EM USO" confirmado via Notion search (timestamp 2026-03-16T23:16)
+- AUDIT-VISUAL.md atualizado — pendências operacionais fechadas
+
+### Pendências para main resolvidas na WT (autorização Lucas)
+- docs/XREF.md: 8 arquivos metanalise adicionados + canônico Estado Metanalise
+- docs/README.md: WT-OPERATING.md adicionado à tabela Estado e handoff
+- CLAUDE.md root: status metanalise atualizado (QA parcial → F1 QA PASS, F2-F3 LINT-PASS)
+- tasks/lessons.md: 3 lições doc sync adicionadas (drift dados, verbosidade candidatos, refs cross-doc)

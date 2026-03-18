@@ -4,6 +4,25 @@
 
 ---
 
+## 2026-03-17h — Verificação documental + pendências para main
+
+Branch: `feat/metanalise-mvp`
+
+### Pendências verificadas e fechadas
+- AUDIT-VISUAL.md s-hook: 3 pendências operacionais ✅ (evidence-db, narrative, Notion sync)
+- lessons.md: 3 lições doc sync (drift dados, verbosidade candidatos, refs cross-doc)
+
+### Docs atualizados (autorização Lucas — Classe B editada na WT)
+- docs/XREF.md: +8 arquivos metanalise + canônico Estado Metanalise
+- docs/README.md: +WT-OPERATING.md na tabela
+- CLAUDE.md root: status metanalise atualizado
+- NOTES.md: verificações registradas
+- HANDOFF.md: pendências resolvidas
+
+### Zero slides tocados
+
+---
+
 ## 2026-03-17g — Doc sync: 6 inconsistencias + 302 linhas cortadas
 
 Branch: `feat/metanalise-mvp`

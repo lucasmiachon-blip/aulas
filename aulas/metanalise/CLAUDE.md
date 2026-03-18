@@ -81,4 +81,4 @@ Sem archetypes.css. Build via `npm run build:metanalise`.
 
 ## Status
 
-**18 slides ativos (deck completo: Fases 1-3 + Interações 1-2). Âncora: Valgimigli 2025 Lancet (PMID 40902613). _manifest.js criado. CSS limpo (8 classes orfas removidas). QA F1 PASS (title, hook, contrato — scorecards 14-dim); scorecards F2/I1/I2/F3 pendentes. Gates 1-4: 18/18 PASS. Docs: narrative v2.2, blueprint v1.7, evidence-db v4.2.**
+**18 slides ativos (deck completo: Fases 1-3 + Interações 1-2). Âncora: Valgimigli 2025 Lancet (PMID 40902613). _manifest.js criado. CSS limpo (8 classes orfas removidas). QA F1 PASS (title, hook, contrato — scorecards 14-dim); scorecards F2/I1/I2/F3 pendentes. Gates 1-4: 18/18 PASS. Docs: narrative v2.2, blueprint v1.8, evidence-db v4.3.**

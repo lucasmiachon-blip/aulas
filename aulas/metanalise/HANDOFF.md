@@ -159,9 +159,9 @@
 ## Pendências para main (Classe B — não editar na WT)
 
 - **lint-slides.js false positive:** `scripts/lint-slides.js:110` — `data-animate="countUp"` sem `data-target` não pula `<script>` blocks. 2 false positives no index.html built.
-- **docs/XREF.md:** Adicionar WT-OPERATING.md, QA-WORKFLOW.md, CHANGELOG.md, ERROR-LOG.md, AUDIT-VISUAL.md, reading-list.md à seção metanalise
-- **docs/README.md:** Adicionar WT-OPERATING.md na tabela "Estado e handoff"
-- **CLAUDE.md root:31:** "QA parcial" → "F1 QA PASS, F2-F3 LINT-PASS"
+- ~~**docs/XREF.md:** Adicionar arquivos metanalise~~ ✅ Feito na WT (autorização Lucas 2026-03-17)
+- ~~**docs/README.md:** Adicionar WT-OPERATING.md~~ ✅ Feito na WT (autorização Lucas 2026-03-17)
+- ~~**CLAUDE.md root:31:** "QA parcial" → atualizar~~ ✅ Feito na WT (autorização Lucas 2026-03-17)
 
 ## Não fazer ainda
 
@@ -189,7 +189,7 @@
 
 ---
 
-## Ultima atualizacao: 2026-03-17 (MCPs racionalizados — 30→7 servers, built-ins cobrem o resto)
+## Ultima atualizacao: 2026-03-17h (verificação documental + pendências para main resolvidas na WT)
 
 ---
 
@@ -280,10 +280,31 @@ Sessao inteira de docs. Autorizada pelo usuario como pre-requisito para QA limpo
 - [x] Zero slides tocados (sessao de suporte)
 
 ### Pendente para proxima sessao
-- lessons.md: adicionar licoes de doc sync (drift de dados entre docs)
+- ~~lessons.md: adicionar licoes de doc sync~~ ✅ Feito (sessao 2026-03-17h)
 - Skills: verificacao de coerencia (baixa prioridade)
-- AUDIT-VISUAL.md s-hook: verificar se sync Notion (Bojcic/Qureshi CANDIDATO→EM USO) foi feito
+- ~~AUDIT-VISUAL.md s-hook: verificar sync Notion~~ ✅ Confirmado via Notion search (sessao 2026-03-17h)
 - Scorecards 14-dim: 15 slides pendentes (caminho critico)
 
 ### Nota anti-drift
 Sessao de docs autorizada pelo usuario. Previne regressao de dados em sessoes futuras de QA.
+
+---
+
+## Sessao 2026-03-17h — Verificação documental + pendências para main
+
+### O que foi feito
+- [x] **AUDIT-VISUAL.md s-hook:** 3 pendências operacionais verificadas e fechadas (evidence-db ✅, narrative ✅, Notion sync ✅)
+- [x] **lessons.md:** 3 lições de doc sync adicionadas (drift dados, verbosidade candidatos, refs cross-doc)
+- [x] **docs/XREF.md:** 8 arquivos metanalise adicionados à seção metanalise + canônico Estado Metanalise
+- [x] **docs/README.md:** WT-OPERATING.md adicionado à tabela Estado e handoff
+- [x] **CLAUDE.md root:** status metanalise atualizado (QA parcial → F1 QA PASS, F2-F3 LINT-PASS)
+- [x] **NOTES.md:** verificações registradas
+- [x] **HANDOFF.md:** pendências para main marcadas como resolvidas (3/4 — resta lint false positive)
+- [x] Zero slides tocados (sessão de suporte)
+
+### Nota
+Pendências para main editadas na WT com autorização explícita do Lucas. Merge resolverá.
+Único pendente Classe B remanescente: lint-slides.js false positive (requer edição de scripts/).
+
+### Nota anti-drift
+Sessão de housekeeping autorizada. Todas pendências documentais do doc sync (2026-03-17g) resolvidas.
