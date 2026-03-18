@@ -33,7 +33,7 @@
 
 - **Fase:** 1
 - **Função:** hook — criar importância, gerar curiosidade
-- **Assertion:** "146 revisões sistemáticas por dia. Quantas você consegue avaliar?"
+- **Assertion:** "Residentes acertam 41% em avaliação de evidência — mas a confiança é alta, mesmo nas respostas erradas"
 - **Risco cognitivo:** aula parecer estatística pura → desmotivação imediata
 - **Evidência:** Hoffmann PMID 34091022 (146/dia em 2021), Bojcic PMID 37931822 (81% crit. baixa), Qureshi PMID 41428154 (10% LoE forte), Lakhlifi PMID 37081292 (ilusão de competência)
 - **Status:** ✅ FEITO (01-hook.html) — 2-beat state machine, 3 countUp animations

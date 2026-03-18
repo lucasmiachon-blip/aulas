@@ -94,6 +94,7 @@ CLAUDE.md (root)              ← fonte de verdade operacional (absorveu AGENTS.
 | prompts/gemini-transcript-comparison.md | (prompt template — Gemini) | ← README.md |
 | prompts/openai-backward-design.md | (prompt template — OpenAI) | ← README.md |
 | prompts/openai-canvas-storyboard.md | (prompt template — OpenAI) | ← README.md |
+| prompts/gemini-slide-qa.md | (prompt template — Gemini Gate 4 QA) | ← README.md |
 | external/11-long-context-auditor.md | (tool spec — Gemini long-context) | ← README.md |
 
 ### .claude/agents/ (custom subagents)
@@ -168,7 +169,6 @@ CLAUDE.md (root)              ← fonte de verdade operacional (absorveu AGENTS.
 | AUDIT-VISUAL.md | → WT-OPERATING.md §4 | ← HANDOFF.md |
 | NOTES.md | (log de decisões entre agentes) | ← WT-OPERATING.md |
 | HANDOFF-ARCHIVE.md | (sessões arquivadas) | ← HANDOFF.md |
-| QA-WORKFLOW.md | DEPRECATED → WT-OPERATING.md §4 | ← AUDIT-VISUAL.md (tooling ref) |
 | references/reading-list.md | (pre-reading list) | ← blueprint.md |
 
 ### Arquivados (docs/archive/)
@@ -183,6 +183,8 @@ CLAUDE.md (root)              ← fonte de verdade operacional (absorveu AGENTS.
 | cirrose-scope.md | Superseded por blueprint-cirrose.md |
 | AUDIT-BATCHES.md | One-shot |
 | research-skills-ecosystem-2026-03-11.md | Pesquisa ecosystem upgrade (referência, não operacional) |
+| audit-rules-report-2026-03-17.md | Relatório audit rules (one-shot) |
+| docs-audit-report-2026-03-17.md | Relatório docs audit (one-shot) |
 | CHATGPT_HANDOFF_ACT2.md | One-shot planning Act 2 |
 | NNT-IC95-REPORT.md | Relatório NNT verificação |
 | aulas-magnas-system-v6.plan.md | System plan v6 |

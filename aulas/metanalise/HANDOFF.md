@@ -14,7 +14,7 @@
 - **Slides planejados:** 18 (00-17) — ver blueprint.md v1.8
 - **Docs fundacionais:** narrative.md (v2.2), evidence-db.md (v5.0 — 26+ refs, hook refs adicionadas), blueprint.md (v1.8), reading-list.md (v0.3)
 - **_manifest.js:** CRIADO — 18 slides, fases F1/I1/F2/I2/F3
-- **slide-registry.js:** CRIADO — state machines para title (choreography), hook (3-beat: fadeUp + countUp + blackout/verdict), checkpoint-1 (3-beat), checkpoint-2 (4-beat)
+- **slide-registry.js:** CRIADO — state machines para title (choreography), hook (2-beat: countUp + blackout/verdict), checkpoint-1 (3-beat), checkpoint-2 (4-beat)
 - **Orphan slides:** 0
 - **Orphan CSS:** 0
 - **Artigo âncora:** ✅ Valgimigli 2025, Clopidogrel vs Aspirina (Lancet, PMID 40902613). IPD-MA, 7 RCTs, 28.982 pts

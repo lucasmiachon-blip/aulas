@@ -63,6 +63,7 @@
 | [prompts/gemini-transcript-comparison.md](prompts/gemini-transcript-comparison.md) | Comparacao transcripts Gemini |
 | [prompts/openai-backward-design.md](prompts/openai-backward-design.md) | Backward design OpenAI |
 | [prompts/openai-canvas-storyboard.md](prompts/openai-canvas-storyboard.md) | Storyboard OpenAI Canvas |
+| [prompts/gemini-slide-qa.md](prompts/gemini-slide-qa.md) | Prompt QA visual Gemini (Gate 4) |
 | [external/11-long-context-auditor.md](external/11-long-context-auditor.md) | Tool spec: Gemini long-context auditor |
 
 ### Outros
