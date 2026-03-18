@@ -2,7 +2,7 @@
 
 > Scorecard por slide. 14 dimensões. Atualizado a cada QA pass.
 > Pendente: audit final Gemini (Gate 4) para todas as dims.
-> Pipeline: ver [QA-WORKFLOW.md](QA-WORKFLOW.md)
+> Pipeline: ver [WT-OPERATING.md §4](WT-OPERATING.md#4-qa-sub-loop-dentro-do-estado-qa)
 
 ---
 

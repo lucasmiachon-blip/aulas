@@ -55,7 +55,7 @@ slide-registry.js
 metanalise.css
 ```
 
-Sem archetypes.css, sem index.template.html. Build via `npm run build:metanalise`.
+Sem archetypes.css. Build via `npm run build:metanalise`.
 
 ## Estrutura narrativa (v1)
 

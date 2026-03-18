@@ -45,7 +45,7 @@ Uma meta-análise não é melhor do que os RCTs que a alimentam. A qualidade da 
 - Gestão de referências / extração de dados
 - Meta-regressão
 - Network meta-analysis (NMA)
-- IPD meta-analysis
+- IPD meta-analysis (como topico didatico — Valgimigli 2025 e IPD mas usado como exemplo aplicado, nao como conteudo ensinado)
 - Modelos bayesianos
 - Dose-response meta-analysis
 - Fragility index (pode ser teaser futuro)
@@ -58,4 +58,4 @@ NMA, meta-regressão, prediction intervals, TSA, publication bias avançado, ROB
 
 ## Status
 
-**Fases 1+2 completas (12 slides, QA pass). Fase 3 bloqueada até artigo âncora definido.**
+**18 slides completos. Âncora: Valgimigli 2025. F1 QA PASS (scorecards 14-dim), F2-F3 LINT-PASS (scorecards pendentes). Ver aulas/metanalise/HANDOFF.md para estado atual.**
