@@ -7,9 +7,8 @@
 ## Sessão Flip + QA (2026-03-04)
 
 ### CSS selector: `#id.class` ≠ `#id .class`
-- `#s-a1-damico.archetype-flow` = mesmo elemento com id E class → nunca casa (section tem id, div filho tem class)
-- `#s-a1-damico .archetype-flow` = descendente → correto
-- **Verificar sempre:** `document.querySelectorAll('seletor').length > 0` antes de assumir que uma rule aplica
+- `.class` no mesmo elemento vs descendente. Verificar: `querySelectorAll('seletor').length > 0`.
+- Ver tambem: css-errors.md Cluster B.
 
 ### Archetype scope: reutilizar elementos de um archetype em outro
 - `.archetype-pathway .pathway-track { display:flex }` → só funciona dentro de `archetype-pathway`
@@ -54,24 +53,12 @@
 - Não manual. Skill docs-audit + subagent generalPurpose/qa-engineer
 - Critérios: dev, designer, prompt eng, engenheiro de sistema, economia de tokens
 
-### Skills .cursor vs .claude
-
-- Sem conflito: cada superfície usa seu diretório (Cursor vs Claude Code vs Claude.ai)
-- docs-audit espelhado: mesmo conteúdo, path no prompt adaptado
-- assertion-evidence, medical-data: Claude only, complementam medical-slide (não duplicam)
-
 ### Skills
-
-- medical-slide (Cursor) cobre assertion-evidence + verificação de dados
-- assertion-evidence e medical-data (Claude) são subconjuntos — avaliar depreciação
+- Sem conflito entre superfícies (Cursor vs Claude Code vs Claude.ai). Ref: `docs/SKILLS.md`
+- assertion-evidence e medical-data (Claude): deprecated → cobertos por /review v0.4+
 
 ### Context Window
-
-- ≥70%: informar ao usuário
-- ≥85%: recomendar subagent ou novo chat
-- ≥95%: parar e recomendar novo chat
-- **Sinais sem métrica:** respostas genéricas, esquecimento, repetição, confusão, pedidos já respondidos, lentidão → novo chat
-- Regra em core-constraints.mdc; referência em docs/RULES.md, docs/SUBAGENTS.md
+- Thresholds 70/85/95%: `.cursor/rules/core-constraints.mdc`. Ref: `docs/SUBAGENTS.md`
 
 ---
 
@@ -85,31 +72,14 @@
 
 ## Auditoria Profunda (2026-03-04)
 
-### Rules .cursor vs .claude — NÃO são redundantes
+### Agents corrigidos
+- verifier: fast→sonnet. reference-checker→reference-manager. assertion-evidence: "Cria"→"Valida"
+- slide-builder vs medical-slide: ambientes diferentes (Claude Code vs Cursor), não duplicatas
 
-- **CORRIGIDO:** README.md dizia ".cursor canônico" — na verdade são **complementares**
-- `.claude` é mais completo em: medical-data (Tier 1 table), design-principles (27 vs 11), css-errors (5 clusters), motion-qa (5 tiers)
-- `.cursor` é mais completo em: slide-editing (tri-mode), reveal-patterns (GSAP timeline)
-- 3 rules .cursor sem equivalente .claude: core-constraints, plan-mode, notion-mcp
-- Regra: em conflito, conteúdo mais detalhado prevalece
+### design-principles.mdc: 26 princípios (alinhado com .claude/27)
+- Adicionados: Andragogia (3), Mayer (2), Kahneman, Duarte (5), Tufte (4), Layout/Fill Ratio
 
-### Agents — Problemas Corrigidos
-
-- **verifier:** model fast→sonnet (Haiku fraco demais para git diff + julgamento)
-- **reference-checker → reference-manager:** Definido formato de handoff (report inline no NOTES.md)
-- **slide-builder vs medical-slide:** NÃO são duplicatas — ambientes diferentes (Claude Code vs Cursor). Cross-references adicionadas
-- **docs-audit .claude:** Clarificado como redirect para .cursor/skills/docs-audit/
-- **assertion-evidence:** Descrição corrigida "Cria" → "Valida"
-
-### design-principles.mdc — 15 princípios adicionados
-
-- .cursor tinha 11, agora tem 26 (alinhado com .claude/27)
-- Adicionados: Andragogia (3), Mayer extras (2), Kahneman, Duarte expandido (5), Tufte (4), Layout Patterns + Fill Ratio
-- Faltava: F-pattern, Z-pattern, Fill Ratio, Expertise-Reversal, Testing Effect — todos críticos para design de slides médicos
-
----
-
-*Append-only. Não remover lições antigas.*
+> Rules .cursor vs .claude: seção redundante removida — ver `.claude/rules/README.md`
 
 ---
 
@@ -173,8 +143,7 @@
 
 ### Build artifacts (index.html) não devem ser tracked
 
-- 4× `aulas/*/index.html` estavam tracked, gerando diffs de ~23k linhas em cada rebuild.
-- **Regra:** Arquivo gerado por `npm run build:*` = `.gitignore`. Usar `git rm --cached` para destrackear sem deletar do disco.
+- Gerado por `npm run build:*` = `.gitignore`. Feito em 2026-03-12.
 
 ---
 
@@ -206,7 +175,7 @@ Tokens não importam. Retrabalho é sinal de aprendizado — mas não pode paral
 
 - Novos campos disponíveis: `version`, `allowed-tools`, `argument-hint`, `user-invocable`, `disable-model-invocation`, `context`, `agent`
 - `allowed-tools` evita aprovação manual por uso — sempre especificar em skills de auditoria (Read, Grep, Glob)
-- **Bug crítico Issue #17283:** `context:fork` e `agent:` são ignorados quando skill invocado via Skill tool (API/SDK). Só funciona no CLI direto.
+- **Bug Issue #17283:** `context:fork` e `agent:` ignorados via Skill tool (API/SDK). Só funciona no CLI direto. Verificar se corrigido em versões posteriores.
 - `user-invocable: false` útil para skills de conhecimento de fundo (Claude auto-ativa, não aparece no menu `/`)
 - `disable-model-invocation: true` para skills com side-effects sérios (deploy, push, send)
 
@@ -220,7 +189,7 @@ Tokens não importam. Retrabalho é sinal de aprendizado — mas não pode paral
 - Usar PREDESCI NNT 9 como hero number de slide PÓS-HDA = erro conceitual grave (mistura populações)
 - Act 1 (s-a1-classify): PREDESCI como hero → correto (prevenção primária)
 - Act 2 (A2-07 pós-HDA): NSBB = profilaxia SECUNDÁRIA → hero number deve vir de outro trial ou ser callback narrativo ao Act 1
-- **Regra:** Sempre verificar a POPULAÇÃO do trial antes de usar como hero. Prevenção 1ª ≠ 2ª.
+- **Regra:** Sempre verificar a POPULAÇÃO do trial antes de usar como hero. Prevenção 1ª ≠ 2ª. Ref: `medical-data.md` (População do Trial).
 
 ### MELD intermediários: dados narrativos vs clínicos
 
@@ -243,8 +212,7 @@ Tokens não importam. Retrabalho é sinal de aprendizado — mas não pode paral
 
 ### Operational records: atualizar no MESMO batch
 
-- CHANGELOG, ERROR-LOG, lessons.md devem ser atualizados na MESMA sessão em que o trabalho foi feito
-- Deixar para "depois" = invariavelmente esquece, próximo agente não tem contexto
+- CHANGELOG, ERROR-LOG, lessons.md: na MESMA sessao. Ver CLAUDE.md root "Workflow" step 6-7.
 
 ---
 
@@ -252,11 +220,8 @@ Tokens não importam. Retrabalho é sinal de aprendizado — mas não pode paral
 
 ### NUNCA confiar em PMID gerado por modelo sem verificação
 
-- **5/5 CANDIDATE PMIDs estavam ERRADOS.** Todos foram produzidos por ChatGPT 5.4 Pro e model-based search sem MCP.
-- Tipos de erro: PMID de artigo completamente diferente (herbicida, belatacept, fluoxetine), off-by-4, journal errado.
-- **Regra:** Todo PMID deve ser verificado via PubMed MCP ou WebSearch (pubmed.ncbi.nlm.nih.gov/{PMID}) antes de entrar em evidence-db ou slide.
-- **Regra:** Marcar como `[CANDIDATE]` até verificado. Nunca promover a verificado sem check.
-- **Regra:** Se PubMed MCP indisponível, WebSearch no domínio pubmed.ncbi.nlm.nih.gov é fallback aceitável.
+- 5/5 CANDIDATE PMIDs estavam errados (ChatGPT/GPT-5.4). Sempre verificar via PubMed MCP ou WebSearch.
+- Regra completa: `.claude/rules/medical-data.md` secao "Verificacao de PMIDs".
 
 ### Hooks: usar `node -e`, nunca `python -c`
 
@@ -383,3 +348,27 @@ Tokens não importam. Retrabalho é sinal de aprendizado — mas não pode paral
 
 - reading-list.md item 4 referenciava Musini (antigo candidato). Âncora mudou para Valgimigli 2 sessões antes.
 - **Regra:** Ao trocar artigo-âncora, grep por nome do antigo em TODOS os docs: `grep -rn "Musini\|antigo" aulas/{aula}/`. Atualizar ou remover referências obsoletas.
+
+---
+
+## Lessons adicionadas por auditoria (2026-03-17)
+
+### deck.js bg escuro: CSS seletor, nao data-attribute
+
+- `data-background-color` e convencao Reveal.js — deck.js NAO processa.
+- Pattern correto: `#slide-id .slide-inner { background-color: #0d1a2d; }` no CSS da aula.
+- Adicionar `.slide-navy` no `.slide-inner` para remap de tokens de texto.
+- Ref: deck-patterns.md, slide-editing.md (ERRO-034).
+
+### .no-js failsafe obrigatorio para [data-animate]
+
+- CSS: `[data-animate] { opacity: 0; }` + `.no-js [data-animate] { opacity: 1; }`.
+- Sem isso: GSAP offline/quebrado = slide em branco.
+- Failsafe deve existir em `base.css` (shared) E pode ser reforçado em `{aula}.css`.
+- Ref: CLAUDE.md rule 12, deck-patterns.md secao CSS Failsafe.
+
+### Pseudo-elements com flex-grow: E32 canonizado
+
+- `::before/::after { flex: 1 }` em containers base compartilhados PROIBIDO.
+- Participam do layout flex → com gap ou flex:1 children, produzem efeitos colaterais.
+- Codificado como E32 em css-errors.md. Lesson detalhada: sessao 16/mar neste arquivo.

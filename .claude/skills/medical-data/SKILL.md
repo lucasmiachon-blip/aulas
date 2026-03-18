@@ -2,6 +2,7 @@
 name: medical-data
 description: "DEPRECATED — coberto por /review (v0.4+). Verifica dados clinicos em slides. Usar /review para auditoria completa."
 version: 0.2.1
+deprecated: true
 allowed-tools: Read, Grep
 argument-hint: "[claim clínico ou slide-file]"
 ---

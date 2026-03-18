@@ -11,10 +11,7 @@ argument-hint: "[capture|review|next|focus|done|inbox] [texto da tarefa]"
 
 Comando: `$ARGUMENTS`
 
-## Filosofia
-
 David Allen: "Sua mente e para ter ideias, nao para guarda-las."
-Tudo que ocupa espaco mental → capturar → processar → organizar → fazer.
 
 ---
 
@@ -22,183 +19,78 @@ Tudo que ocupa espaco mental → capturar → processar → organizar → fazer.
 
 ```
 gtd/
-├── inbox.md          ← Captura rapida (caixa de entrada)
-├── next-actions.md   ← Proximas acoes concretas (max 3 em FOCO)
-├── projects.md       ← Projetos ativos (>1 acao para completar)
-├── waiting-for.md    ← Esperando resposta/acao de terceiros
-├── someday-maybe.md  ← Ideias para o futuro
-└── done.md           ← Arquivo de conclusoes (append-only)
+├── inbox.md          ← Captura rapida
+├── next-actions.md   ← Proximas acoes (max 3 em FOCO)
+├── projects.md       ← Projetos ativos (>1 acao)
+├── waiting-for.md    ← Esperando terceiros
+├── someday-maybe.md  ← Ideias futuras
+└── done.md           ← Conclusoes (append-only)
 ```
 
-Criar na raiz do projeto. Cada arquivo e Markdown puro — compativel com Obsidian no futuro.
+Markdown puro — compativel com Obsidian.
 
 ---
 
 ## Comandos
 
-### `capture` ou `inbox` — Capturar
+### `capture` / `inbox`
+Adicionar item ao inbox.md: `- [ ] [texto] — capturado [YYYY-MM-DD]`
 
-Adicionar item ao inbox.md. Nao classificar agora — so capturar.
+### `process`
+Para cada item no inbox: acionavel? → <2min: fazer agora → delegavel: waiting-for → parte de projeto: projects.md → senao: next-actions.md. Nao acionavel: someday-maybe ou deletar.
 
-```markdown
-## Inbox
-
-- [ ] [texto] — capturado [YYYY-MM-DD]
-- [ ] [texto] — capturado [YYYY-MM-DD]
-```
-
-### `process` — Processar inbox
-
-Para CADA item no inbox, perguntar (em ordem):
-
-```
-1. E acionavel? (da para fazer algo concreto?)
-   NAO → someday-maybe.md ou deletar
-   SIM ↓
-
-2. Leva menos de 2 minutos?
-   SIM → fazer agora, registrar em done.md
-   NAO ↓
-
-3. Sou eu que faco?
-   NAO → waiting-for.md (com quem e deadline)
-   SIM ↓
-
-4. Faz parte de projeto existente?
-   SIM → adicionar como acao em projects.md
-   NAO → next-actions.md
-```
-
-### `next` — Ver proximas acoes
-
-Mostrar next-actions.md com destaque para os 3 itens em FOCO.
+### `next`
+Mostrar next-actions.md. **Regra do 3:** max 3 itens em FOCO simultaneo.
 
 ```markdown
-## Next Actions
-
 ### FOCO (max 3)
-- [ ] **[acao 1]** — projeto: [X] | contexto: @computador
-- [ ] **[acao 2]** — projeto: [X] | contexto: @computador
-- [ ] **[acao 3]** — projeto: [X] | contexto: @celular
+- [ ] **[acao]** — projeto: [X] | contexto: @computador
 
 ### Backlog
-- [ ] [acao 4] — projeto: [Y]
-- [ ] [acao 5] — projeto: [Z]
+- [ ] [acao] — projeto: [Y]
 ```
 
-**Regra do 3:** Maximo 3 itens em FOCO simultaneo. Terminar ou mover para backlog antes de puxar novo.
+### `focus`
+Mover itens entre FOCO e Backlog. Perguntar: "Qual e a coisa mais importante agora?"
 
-### `focus` — Definir foco
-
-Mover itens entre FOCO e Backlog. Perguntar:
-- "Qual e a coisa mais importante que voce pode fazer agora?"
-- "Isso desbloqueia algum projeto?"
-
-### `done [item]` — Marcar como feito
-
-1. Remover de next-actions.md (ou projects.md)
+### `done [item]`
+1. Remover de next-actions/projects
 2. Adicionar a done.md com data
-3. Se projeto completou → mover para done.md tambem
-4. Puxar proximo item do backlog para FOCO (se <3)
+3. Puxar proximo do backlog se FOCO <3
 
-```markdown
-## Done
+### `review` — Semanal (~15min)
+1. Inbox zerado?
+2. FOCO: os 3 ainda sao os mais importantes?
+3. Projects: algum parado >7 dias?
+4. Waiting-for: cobrar?
+5. Someday-maybe: alguma virou prioridade?
 
-### 2026-03-12
-- [x] Criar skill resolve-conflict — projeto: Ecosystem
-- [x] Ativar guard-merge.sh — projeto: Ecosystem
-```
-
-### `review` — Revisao semanal
-
-Checklist (rodar 1x/semana, ~15min):
-
-```
-1. Inbox zerado? (processar tudo)
-2. Next-actions: os 3 FOCO ainda sao os mais importantes?
-3. Projects: algum projeto parado >7 dias? → mover ou cancelar
-4. Waiting-for: cobrar quem deve resposta?
-5. Someday-maybe: alguma ideia virou prioridade?
-6. Done: celebrar o que foi feito esta semana
-```
-
-Gerar resumo:
-```markdown
-## Weekly Review — [YYYY-MM-DD]
-
-### Concluido esta semana
-- [lista de done.md da semana]
-
-### Em foco para proxima semana
-- [3 itens FOCO]
-
-### Bloqueios
-- [o que esta parado e por que]
-```
+Gerar resumo: concluido + foco proxima semana + bloqueios.
 
 ---
 
-## Contextos (tags opcionais)
+## Contextos
 
-| Tag | Quando usar |
-|-----|-------------|
+| Tag | Quando |
+|-----|--------|
 | `@computador` | Precisa de terminal/IDE |
-| `@celular` | Pode fazer do celular/tablet |
-| `@pesquisa` | Precisa buscar evidencia/paper |
-| `@decisao` | Precisa de decisao antes de agir |
-| `@esperando` | Delegado, aguardando retorno |
-
----
-
-## Integracao com Projeto Atual
-
-### HANDOFF.md → GTD
-
-HANDOFF.md e o "inbox" do projeto de slides. Na weekly review:
-1. Ler HANDOFF.md de cada aula ativa
-2. Itens P0/P1 → next-actions.md com FOCO
-3. Itens P2 → backlog
-4. Itens futuros → someday-maybe.md
-
-### Tasks nativo do Claude → GTD
-
-Tasks (TaskCreate/TaskList) = tracking de sessao (volatil).
-GTD = tracking entre sessoes (persistente).
-Nao competem — complementam.
-
-### Anti-drift
-
-Se FOCO tem 3 itens e usuario pede algo fora:
-```
-"Voce tem 3 itens em FOCO: [X, Y, Z].
-Este pedido nao esta entre eles.
-Quer substituir algum, ou adicionar ao backlog?"
-```
+| `@celular` | Pode fazer do celular |
+| `@pesquisa` | Buscar evidencia/paper |
+| `@decisao` | Decisao antes de agir |
 
 ---
 
 ## Formato de Item
 
 ```markdown
-- [ ] **[verbo no infinitivo] [objeto]** — projeto: [nome] | contexto: @[tag] | capturado: [data]
-```
-
-Exemplos:
-```markdown
-- [ ] **Preencher conteudo do slide s-a3-01** — projeto: Cirrose Act3 | contexto: @computador | capturado: 2026-03-12
-- [ ] **Buscar PMID para PREDESCI NNT** — projeto: Cirrose Act2 | contexto: @pesquisa | capturado: 2026-03-12
-- [ ] **Decidir h2 do slide hook** — projeto: Cirrose Act1 | contexto: @decisao | capturado: 2026-03-12
+- [ ] **[verbo infinitivo] [objeto]** — projeto: [nome] | contexto: @[tag] | capturado: [data]
 ```
 
 ---
 
-## Migrar Inbox para o projeto (bootstrap)
+## Integracao com Projeto
 
-Na primeira execucao, popular a partir de fontes existentes:
-
-1. `aulas/{aula}/HANDOFF.md` → itens P0/P1/P2
-2. `tasks/lessons.md` → itens com status "apply"
-3. `aulas/{aula}/NOTES.md` → decisoes pendentes
-4. MEMORY.md → "deferred" items
-
-Nao duplicar — referenciar: `ver HANDOFF.md #P0-3`
+- **HANDOFF.md → GTD:** P0/P1 → FOCO, P2 → backlog, futuros → someday-maybe
+- **Tasks nativo (TaskCreate):** tracking de sessao (volatil). GTD = entre sessoes (persistente).
+- **Anti-drift:** Se FOCO tem 3 itens e usuario pede algo fora → avisar e perguntar.
+- **Bootstrap:** Popular inbox a partir de HANDOFF.md + lessons.md + NOTES.md + MEMORY.md.

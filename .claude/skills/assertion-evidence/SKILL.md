@@ -2,6 +2,7 @@
 name: assertion-evidence
 description: "DEPRECATED — coberto por /review (v0.4+). Valida formato Assertion-Evidence em slides HTML. Usar /review para auditoria completa."
 version: 0.2.1
+deprecated: true
 allowed-tools: Read, Grep, Glob
 argument-hint: "[slide-file ou aulas/*/slides/]"
 ---

@@ -1,316 +1,62 @@
 ---
 name: ralph-qa
 description: QA em dois loops separados por batch de 3 slides. Loop 1 (Opus 4.6): lint+constraints+estética (14 dimensões AUDIT-VISUAL.md) até PASS. Loop 2 (Gemini Flash/Pro via MCP): visual audit com video .webm das animações reais até PASS. Ativar quando usuário pedir "qa loop", "rodar qa até passar", "fix all lint", "qa autônomo", "qa batch".
-version: 6.0.0
+version: 6.0.1
 context: fork
 agent: general-purpose
 allowed-tools: Read, Edit, Bash, Grep, Glob, Agent
 argument-hint: "[lecture?] [batch-size=3] [max-iterations=10]"
 ---
 
-# Ralph-QA v6 — Opus Loop + Gemini Loop (separados)
+# Ralph-QA v6 — Opus Loop + Gemini Loop
 
-Loop de QA para `$ARGUMENTS` (default: auto-detectar via `git branch --show-current` → `aulas/{aula}/`).
-Batch: 3 slides. Max iterações por loop: 10.
+Aula: `$ARGUMENTS` (default: auto-detectar via branch). Batch: 3 slides. Max iter/loop: 10.
 
 ## Arquitetura
 
 ```
 Para cada batch de 3 slides:
-─────────────────────────────────────────────────────────
 
-  ┌──────────────────────────────────────────────────┐
-  │  LOOP 1 — Opus 4.6                               │
-  │  Roda sozinho até PASS, independente do Gemini   │
-  │                                                  │
-  │  → npm run lint:slides (3 slides)                │
-  │  → Subagent Explore: constraint check por slide  │
-  │       <h2> asserção? Zero <ul>/<ol>?             │
-  │       <aside notes>? E07? var()? fonte/[TBD]?    │
-  │  → Playwright screenshots + métricas             │
-  │  → Opus avalia 14 dimensões (AUDIT-VISUAL.md)    │
-  │       incluindo estética: H,T,V,K,S,P,N          │
-  │  → Fix cirúrgico se issues                       │
-  │  → Repeat até todas 14 dim >= 9                  │
-  │                                                  │
-  │  Completion: "OPUS-PASS"                         │
-  └──────────────────┬───────────────────────────────┘
-                     │ OPUS-PASS
-                     ▼
-  ┌──────────────────────────────────────────────────┐
-  │  LOOP 2 — Gemini 3.1 Pro                         │
-  │  Roda sozinho até PASS, independente do Opus     │
-  │                                                  │
-  │  → Screenshots dos 3 slides (Playwright)         │
-  │  → Gemini audit visual (prompt abaixo)           │
-  │  → Filtra issues com confidence ≥ 80             │
-  │  → Opus corrige os issues filtrados              │
-  │  → Gemini re-audita                              │
-  │  → Repeat até Gemini retornar PASS               │
-  │                                                  │
-  │  Completion: "GEMINI-PASS"                       │
-  └──────────────────┬───────────────────────────────┘
-                     │ GEMINI-PASS
-                     ▼
-             git commit batch N
-             próximo batch →
+  LOOP 1 — Opus 4.6 (codigo, constraints, estetica)
+    → lint:slides → constraint check (h2, ul/ol, notes, E07, var(), fontes)
+    → Playwright screenshots → Opus avalia 14 dim (AUDIT-VISUAL.md)
+    → Fix cirurgico ate todas 14 dim >= 9 → "OPUS-PASS"
+
+  LOOP 2 — Gemini 3.1 Pro (visual, animacoes, percepcao)
+    → Screenshots/video .webm → Gemini audit → filtra confidence >= 80
+    → Opus executa fix specs → Gemini re-audita → "GEMINI-PASS"
+
+  git commit batch N → proximo batch
 ```
 
-## Loop 1 — Opus 4.6
+## Loop 1 — Opus
 
-**Agente:** `claude-opus-4-6` (subagent com `model: opus` no frontmatter)
-**Responsabilidade:** código, constraints, semântica
+Criterio: todas 14 dimensoes AUDIT-VISUAL >= 9. Dims: H(hierarquia) T(tipografia) E(layout) C(cor) V(visuais) K(consistencia) S(sofisticacao) M(comunicacao) I(interacoes) D(dados) A(acessibilidade) L(carga cognitiva) P(aprendiz adulto) N(narrativa).
 
-```
-WHILE any_dim < 9 AND iteration < 10:
-  run: npm run lint:slides -- [slide-a] [slide-b] [slide-c]
-  check constraints via subagent Explore (paralelo por slide):
-    - <h2> asserção clínica completa? (dim M)
-    - Zero <ul>/<ol> no corpo? (dim M)
-    - <aside class="notes"> com timing? (dim N)
-    - <section> sem display inline? (dim S)
-    - Cores via var() — zero hardcode? (dim C)
-    - Números com fonte verificada ou [TBD]? (dim D)
-  run: node scripts/act1-reaudit.mjs → métricas (dim E, M)
-  Opus avalia 14 dimensões por slide (incluindo estética):
-    - H (hierarquia), T (tipografia), V (visuais), K (consistência)
-    - S (sofisticação), L (carga cognitiva), P (aprendiz adulto), N (narrativa)
-  IF todas 14 dim >= 9:
-    output "OPUS-PASS" → exit loop
-  ELSE:
-    fix_all() — cirúrgico, não reescrever
-    iteration++
+## Loop 2 — Gemini
 
-IF iteration == 10:
-  output "OPUS-BLOCKED: [issue persistente]" → PARAR
-```
+Modelo: Pro 3.1 (default, ~$0.06/pass). Fallback: Flash 3, Flash-Lite 3.1.
+Input: video .webm (default) ou screenshots estaticos.
+Gemini **so sugere** — retorna JSON spec → Opus le o arquivo e executa fix.
 
-## Loop 2 — Gemini 3.x (Flash + Pro)
-
-**Agente:** Gemini via MCP (`gemini` server) ou API direta (`@google/genai`)
-**Modelo:** Pro 3.1 (`gemini-3.1-pro-preview`) — sempre. Budget aprovado: ate $100/projeto.
-**Fallback:** Flash 3 (`gemini-3-flash-preview`) se Pro indisponivel. Flash-Lite 3.1 (`gemini-3.1-flash-lite-preview`) ultimo recurso.
-**Responsabilidade:** visual, layout, percepção, acessibilidade, animações reais
-**Protocolo:** Gemini **só sugere** — retorna especificação estruturada → Opus lê o arquivo e executa o fix
-**Gemini não toca no código. Nunca.**
-**Custo:** ~$0.06/pass Pro (3 slides video HIGH)
-
-### Integração (ordem de preferência)
-
-| Modo | Como funciona | Setup |
-|------|--------------|-------|
-| **MCP** (default) | Claude Code chama Gemini via MCP tool | `claude mcp add gemini` (já instalado) |
-| **API script** | Node script com `@google/genai` | `npm install @google/genai` |
-| **Manual** | Gera prompt + user cola no Gemini AI web | Nenhum (fallback) |
-
-GEMINI_API_KEY: já em env (verificado).
-
-### Duas modalidades de input
-
-| Modalidade | Comando | Quando usar |
-|-----------|---------|------------|
-| **Estática** | `npm run qa:static` | Layout, hierarquia, contraste — rápido |
-| **Dinâmica** (vídeo, DEFAULT) | `npm run qa:video` | Animações GSAP, timing, ritmo narrativo |
-
-#### Fluxo vídeo dinâmico (padrão)
-```
-Playwright grava 3-5s .webm por slide via recordVideo API:
-→ qa-screenshots/videos/{slide-id}.webm
-→ Enviar via MCP para Gemini (automático)
-→ Gemini assiste a animação real (GSAP countUp, stagger, drawPath)
-→ Retorna issues com state/timing exato
-```
-
-#### Fluxo estático (fallback)
-```
-npm run qa:static -- --batch=0,3
-→ qa-screenshots/static/{slide-id}/s0.png, s1.png, ..., sN.png
-→ Enviar via MCP para Gemini
-```
-
-```
-prev_screenshots = null
-prev_issues = []
-
-WHILE gemini.verdict != PASS AND iteration < 10:
-  # Capturar estados dinâmicos: S0 (inicial) + S1..SN (um por fragment)
-  run: npm run qa:static -- --batch=[from,to]
-  # Output: qa-screenshots/static/{slide-id}/s0.png ... sN.png
-
-  html_sources = read([slide-a.html, slide-b.html, slide-c.html])
-  # Opcional: npm run qa:video -- para slides com animações complexas
-
-  # Gemini recebe em cada iteração:
-  # - screenshots atuais (renderizados agora)
-  # - html_sources atuais
-  # - prev_screenshots (iteração anterior, null na 1ª)
-  # - prev_issues (o que ele mesmo flagou antes, para verificar resolução)
-  specs = gemini.audit(
-    screenshots,
-    html_sources,
-    prev_screenshots,   # antes das correções do Opus
-    prev_issues,        # "estes issues foram corrigidos? ou persistem?"
-    prompt_contextual
-  )
-
-  issues = specs.filter(confidence >= 80)
-  IF issues.length == 0:
-    output "GEMINI-PASS" → exit loop
-  ELSE:
-    prev_screenshots = screenshots   # salvar para próxima iteração
-    prev_issues = issues             # salvar para Gemini verificar na próxima
-    FOR each issue IN issues:
-      opus.read(issue.slide)         # lê o arquivo
-      opus.grep(issue.line_hint)     # localiza o ponto exato
-      opus.edit(issue.fix)           # aplica cirurgicamente
-    iteration++
-
-IF iteration == 10:
-  output "GEMINI-BLOCKED: [issue persistente]" → PARAR
-```
-
-### Por que especificação estruturada (não old_string/new_string)
-
-Gemini é excelente em percepção visual mas pode errar strings HTML exatas
-(whitespace, ordem de atributos, indentação). `old_string` errado → Edit falha silenciosamente.
-
-Solução: Gemini especifica **o quê** e **onde**, Opus executa o **como**:
-
+Spec format por issue:
 ```json
-// Output esperado do Gemini por issue
 {
   "slide": "08-a2-01.html",
   "line_hint": 23,
   "confidence": 91,
-  "issue": "hero-number usa color: #cc4a3a hardcoded",
-  "fix": "substituir color: #cc4a3a por color: var(--danger)"
+  "issue": "hero-number usa color hardcoded",
+  "fix": "substituir por var(--danger)"
 }
 ```
 
-Opus recebe isso, faz `Grep` no arquivo com `line_hint` como anchor, localiza a string exata
-e executa `Edit`. Zero ambiguidade, zero string mismatch.
+Prompt Gemini: aula medica, Reveal.js/deck.js Plan C 1280x720, design system OKLCH. Avaliar: hierarquia visual, flow narrativo (comparar estados S0→SN), legibilidade, daltonismo, densidade (<=30 palavras). Issues com confidence >= 80 apenas.
 
-**Prompt para Gemini 3.x Flash/Pro (via MCP):**
-```
-Aula médica — público e tema extraídos de aulas/{aula}/CLAUDE.md.
-Reveal.js Plan C: fundo claro, 1280×720, GSAP ativo.
-Design system: Instrument Serif (títulos) · DM Sans (corpo) · OKLCH tokens.
-Semântica: safe=teal+✓, warning=amber+⚠, danger=red+✕.
+## Seguranca
 
-[SE iteração > 1, incluir:]
-ITERAÇÃO ANTERIOR:
-- Screenshots anteriores: [prev_screenshots]
-- Issues que você flagou: [prev_issues]
-Para cada issue anterior: confirmar se foi resolvido, piorou ou persiste.
-Se persistiu 3x sem melhora → marcar como "BLOQUEADO" (root cause humano).
-
-ITERAÇÃO ATUAL — para cada slide você recebe N imagens (1 por estado):
-  [S0]      estado 0 — antes de qualquer animação ou click
-  [S1]      após 1º fragment/reveal
-  [S2]      após 2º fragment/reveal
-  ...
-  [SN]      estado final — todos os fragments revelados
-
-Número de estados varia por slide (slides simples: 1-2; checkpoints: 4-6).
-
-Avaliar cada estado onde relevante:
-
-1. HIERARQUIA VISUAL (avaliar em [S0] e [SN])
-   - Dado mais importante visualmente dominante?
-   - Hero element ≥2x maior que corpo?
-   - Ordem de leitura segue F-pattern natural?
-   - [S0]: elemento principal visível ou escondido indevidamente?
-
-2. FLOW NARRATIVO (comparar [S0] → [S1] → ... → [SN])
-   - Ordem de reveal segue a lógica clínica?
-   - Cada reveal adiciona chunk cognitivo completo (não meio dado)?
-   - Algum estado intermediário está vazio, confuso ou sem contexto?
-   - Transição entre estados é clara e sem saltos abruptos?
-
-3. LEGIBILIDADE (avaliar em [FINAL] — estado que audiência mais vê)
-   - Texto legível a 5m sem esforço?
-   - Contraste texto/fundo adequado?
-
-4. DALTONISMO — simular protanopia em [FINAL]
-   - Informação clínica depende só de cor?
-   - Ícones ✓/⚠/✕ presentes com cores semânticas?
-
-5. DENSIDADE (avaliar em [FINAL])
-   - Corpo ≤30 palavras?
-   - Slide congestionado?
-
-Para cada issue novo ou persistente, retornar JSON:
-{
-  "slide": "[nome do arquivo]",
-  "state": "S0" | "S1" | "S2" | ... | "SN" | "transition(S1→S2)",
-  "line_hint": [linha aproximada no HTML],
-  "confidence": [0-100],
-  "issue": "[descrição exata do problema visual]",
-  "fix": "[instrução de 1 linha: o que substituir por quê]",
-  "status": "new" | "persists" | "resolved" | "blocked"
-}
-
-Reportar APENAS issues com confidence ≥ 80.
-Se todos resolvidos ou nenhum ≥ 80: retornar {"verdict": "PASS"}.
-NÃO retornar HTML — apenas especificação do fix.
-NÃO editar nada — você só sugere, Opus executa.
-```
-
-## Separação dos loops — por que importa
-
-| | Loop 1 (Opus) | Loop 2 (Gemini Flash/Pro) |
-|---|---|---|
-| Domínio | Código, semântica, constraints + estética (14 dim) | Visual perception, animações reais, second opinion |
-| Input | HTML source | Vídeos .webm (default) ou screenshots .png |
-| Critério | Todas 14 dim >= 9 (AUDIT-VISUAL.md) | Gemini retorna PASS (confidence >=80) |
-| Fix feito por | Opus | Opus (guiado por Gemini spec JSON) |
-| Integração | Claude Code nativo | MCP gemini (automático) ou API script |
-| Custo | $0 (Claude Code) | ~$0.06/pass Pro 3.1 |
-| Independência | Não depende do Gemini | Não roda antes do Opus PASS |
-
-## Segurança
-
-- Max 10 iterações **por loop** (não compartilhado)
-- Fix > 30% do slide → PARAR + reportar (não cirúrgico)
-- **NUNCA** deletar `<aside class="notes">` — append only
-- **NUNCA** modificar dados clínicos — marcar `[TBD]` + reportar
-- Gemini issue < 80 confiança → ignorar
-- Mesmo issue persiste 3x no Loop 2 → PARAR (Gemini pode estar incorreto)
-
-## Output por batch
-
-```
-## Batch N — slides [X..Y]
-
-Loop 1 (Opus):   [K] iterações · [N] fixes · OPUS-PASS ✓
-Loop 2 (Gemini): [K] iterações · [N] fixes · GEMINI-PASS ✓
-
-git: commitado
-```
-
-## Output final
-
-```
-## QA-DONE — aulas/{aula}/ — [N] batches · [M] slides
-
-Batch 1 (00-02): Opus 2x · Gemini 1x ✓
-Batch 2 (03-05): Opus 1x · Gemini 2x ✓
-...
-
-Opus fixes total:   [N]
-Gemini fixes total: [N]
-Gemini noise (<80): [N] descartados
-
-QA-DONE
-```
-
-## Stop Hook (modo autônomo)
-
-```bash
-#!/bin/bash
-# ~/.claude/hooks/ralph-qa-hook.sh
-if ! grep -q "QA-DONE" "$CLAUDE_OUTPUT_FILE" 2>/dev/null; then
-  exit 2  # bloqueia saída → re-injeta prompt
-fi
-exit 0
-```
+- Max 10 iter **por loop**
+- Fix > 30% do slide → PARAR + reportar
+- NUNCA deletar `<aside class="notes">`
+- NUNCA modificar dados clinicos — marcar `[TBD]`
+- Issue < 80 confianca → ignorar
+- Mesmo issue 3x no Loop 2 → PARAR (root cause humano)

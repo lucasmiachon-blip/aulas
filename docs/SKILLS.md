@@ -1,6 +1,6 @@
 # Skills — Melhores Práticas
 
-> Baseado em: docs oficiais Anthropic Claude Code (mar 2026) + Cursor Docs. Última atualização: 2026-03-07.
+> Baseado em: docs oficiais Anthropic Claude Code (mar 2026) + Cursor Docs. Última atualização: 2026-03-17.
 
 ---
 
@@ -107,6 +107,7 @@ disable-model-invocation: true  # opcional — só invocação manual
 | `mem-search` | — | — | Read, Grep, Glob | Busca semântica na memória do projeto |
 | `ralph-qa` | — | fork / qa-engineer | Read, Write, Bash | QA em 2 loops (Opus lint + Gemini visual) até PASS |
 | `resolve-conflict` | — | — | Read, Grep | Guia PT-BR para merge conflicts |
+| `retro` | — | — | Read, Edit, Write, Grep, Glob | Extrai lições da sessão para tasks/lessons.md |
 
 ### Cursor (`.cursor/skills/`)
 

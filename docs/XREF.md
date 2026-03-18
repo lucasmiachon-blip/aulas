@@ -2,7 +2,7 @@
 
 > Mapa canônico de dependências entre documentos do projeto.
 > Atualizar ao criar, mover ou deletar qualquer .md.
-> Gerado: 2026-03-07. Última revisão: 2026-03-16.
+> Gerado: 2026-03-07. Última revisão: 2026-03-17.
 
 ---
 
@@ -48,6 +48,7 @@ CLAUDE.md (root)              ← fonte de verdade operacional (absorveu AGENTS.
 
 | Arquivo | Referencia | Referenciado por |
 |---------|-----------|-----------------|
+| README.md | → todos .claude/rules/*.md, .cursor/rules/*.mdc | ← XREF.md (este arquivo) |
 | anti-drift.md | (autônomo — protocolo de foco) | ← CLAUDE.md (workflow step 1) |
 | css-errors.md | → design-system.md, medical-data.md | ← slide-editing.md |
 | design-principles.md | → design-system.md | ← CLAUDE.md |
@@ -81,6 +82,19 @@ CLAUDE.md (root)              ← fonte de verdade operacional (absorveu AGENTS.
 | ZIP-LIMPO-PROTOCOLO.md | (autônomo) | ← README.md |
 | metanalise-scope.md | (autônomo) | ← README.md |
 | archive/pipeline/README.md | (pipeline humano — arquivado) | ← SUBAGENTS.md |
+
+### docs/prompts/ e docs/external/
+
+| Arquivo | Referencia | Referenciado por |
+|---------|-----------|-----------------|
+| prompts/weekly-updates.md | (prompt template) | ← README.md |
+| prompts/research-best-practices.md | (prompt template) | ← README.md |
+| prompts/gemini-deck-audit.md | (prompt template — Gemini) | ← README.md |
+| prompts/gemini-paper-extraction.md | (prompt template — Gemini) | ← README.md |
+| prompts/gemini-transcript-comparison.md | (prompt template — Gemini) | ← README.md |
+| prompts/openai-backward-design.md | (prompt template — OpenAI) | ← README.md |
+| prompts/openai-canvas-storyboard.md | (prompt template — OpenAI) | ← README.md |
+| external/11-long-context-auditor.md | (tool spec — Gemini long-context) | ← README.md |
 
 ### .claude/hooks/ (safety gates — determinísticos)
 
@@ -124,6 +138,7 @@ CLAUDE.md (root)              ← fonte de verdade operacional (absorveu AGENTS.
 | CHANGELOG.md | (append-only — histórico de batches) | ← CLAUDE.md (operational record) |
 | ERROR-LOG.md | (append-only — erros → regras) | ← CLAUDE.md (operational record) |
 | NOTES.md | (log de decisões entre agentes) | ← CLAUDE.md (operational record) |
+| WT-OPERATING.md | (prompt operacional — máquina de estados + QA loop, WT-only) | ← HANDOFF.md |
 
 ### aulas/metanalise/
 

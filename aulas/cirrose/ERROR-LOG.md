@@ -253,6 +253,24 @@ Severidades: CRITICAL (bloqueia projeção), HIGH (prejudica leitura), MEDIUM (e
 
 ---
 
+---
+
+## Erros registrados — sessão audit-rules (2026-03-17)
+
+### ERRO-033 · SHOULD · deck.js
+**Click handlers em slides propagam ao nav layer**
+**Root cause:** Handlers de click dentro de slides (ex: `.vote-option`) disparam evento que propaga ao deck.js. Nav layer interpreta como navegação (próximo slide).
+**Regra:** Click handlers DENTRO de slides devem usar `stopPropagation()` para não propagar ao nav layer.
+**Status:** ✅ Regra preventiva (slide-editing.md, deck-patterns.md). Nenhum bug real registrado.
+
+### ERRO-034 · SHOULD · deck.js
+**`data-background-color` não funciona em deck.js**
+**Root cause:** `data-background-color` é convenção Reveal.js. O deck.js custom não processa esse atributo. Slides com `data-background-color="#162032"` ficam com fundo transparente → herdam bg do `#deck`.
+**Regra:** Em deck.js, usar `background-color` no CSS com seletor `#slide-id .slide-inner`, NÃO `data-background-color`.
+**Status:** ✅ Regra preventiva (lessons 16/mar, deck-patterns.md). ERRO-031 relacionado (Reveal legacy).
+
+---
+
 | Severidade | Total | Corrigidos | Pendentes |
 |------------|-------|------------|-----------|
 | CRITICAL   | 5     | 5          | 0 |
@@ -260,4 +278,4 @@ Severidades: CRITICAL (bloqueia projeção), HIGH (prejudica leitura), MEDIUM (e
 | MEDIUM     | 10    | 8          | 2 (ERRO-008, ERRO-023) |
 | LOW        | 2     | 2          | 0 |
 
-*Última atualização: 2026-03-10 · ERRO-030/031 corrigidos (rodada 4). ERRO-008/022/023 pendentes*
+*Última atualização: 2026-03-17 · ERRO-033/034 registrados (audit-rules). ERRO-008/022/023 pendentes*

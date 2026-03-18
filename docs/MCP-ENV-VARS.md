@@ -45,6 +45,13 @@ O `pubmed` usa `scripts/run-pubmed-mcp.js` para corrigir o bug tiktoken no Windo
 
 ---
 
+## Opcionais — research
+
+| Variável | MCP | Onde obter |
+|----------|-----|------------|
+| `SEMANTIC_SCHOLAR_API_KEY` | semantic-scholar | [semanticscholar.org/product/api](https://www.semanticscholar.org/product/api) |
+| `PERPLEXITY_API_KEY` | perplexity | [perplexity.ai/settings/api](https://www.perplexity.ai/settings/api) (assinatura paga) |
+
 ---
 
 ## Opcionais — visual QA

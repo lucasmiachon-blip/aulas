@@ -1,7 +1,7 @@
 ---
 name: context7
 description: Injeta documentação atualizada de bibliotecas no contexto. Ativar automaticamente quando o usuário trabalhar com GSAP, Reveal.js, Vite, OKLCH, ou qualquer lib do projeto. Resolve hallucination de APIs desatualizadas. Usar "/context7 [library]" para busca manual.
-version: 2.0.0
+version: 2.0.1
 context: lazy
 agent: general-purpose
 allowed-tools: Read, WebSearch, WebFetch
@@ -15,241 +15,79 @@ triggers:
   - data-animate
 ---
 
-# Context7 — Docs Verificadas (atualizado 2026-03-07)
+# Context7 — Docs Verificadas (2026-03-17)
 
-Referência canônica para GSAP 3.14, Reveal.js 5.2, Vite 6.x.
-Verificado via WebSearch + WebFetch por subagent. Substituir se libs atualizarem.
+## GSAP 3.14.2
 
----
+Sem breaking changes desde 3.0. Registry privado `npm.greensock.com` MORTO — todos plugins gratis no npm publico.
 
-## GSAP — versão atual: 3.14.2
-
-Projeto usa 3.14.2 (atualizado 2026-03-17). Sem breaking changes desde 3.0.
-
-### Atenção (3.13): registry privado morto
-Se `package.json` ou `.npmrc` referenciar `npm.greensock.com` → **remover imediatamente**.
-Todos os plugins (SplitText, MorphSVG etc.) agora são gratuitos no npm público.
-
-### Assinaturas core (estáveis desde 3.0, inalteradas em 3.14)
+### Core
 ```js
-gsap.to(targets, vars)
+gsap.to(targets, { duration, ease, delay, stagger, onComplete, overwrite: "auto" })
 gsap.from(targets, vars)
 gsap.fromTo(targets, fromVars, toVars)
 ```
+PROIBIDO: `bounce`, `elastic`, `back` (frivolo). Padrao: `power2.out`.
 
-**vars mais usados:**
+### Stagger
 ```js
-{
-  duration: 0.4,          // segundos (default 0.5)
-  ease: "power2.out",     // PROIBIDO: bounce, elastic, back (frívolo)
-  delay: 0,
-  stagger: 0.15,          // ou objeto — ver abaixo
-  onComplete: fn,
-  overwrite: "auto",
-  immediateRender: false,
-}
+stagger: { each: 0.15, from: "start", ease: "power2.in" }
 ```
-
-**Stagger objeto:**
-```js
-stagger: {
-  each: 0.15,             // ou amount: total_time
-  from: "start",          // start|center|edges|end|random|index
-  ease: "power2.in",
-}
-```
-
-⚠ **Quirk (todas as 3.x):** `stagger` no topo é ignorado com `keyframes`. Mover para `defaults`:
-```js
-gsap.to(els, { defaults: { stagger: 0.15 }, keyframes: [...] })
-```
-
-**Novo em 3.13:** animar para CSS variable:
-```js
-gsap.to(".box", { x: "var(--space-lg)" })  // útil com nossos tokens
-```
+Quirk: `stagger` no topo ignorado com `keyframes` — mover para `defaults`.
+Novo 3.13: `gsap.to(".box", { x: "var(--space-lg)" })`.
 
 ### Timeline
 ```js
-const tl = gsap.timeline({
-  paused: true,
-  defaults: { duration: 0.4, ease: "power2.out" },
-  onComplete: fn,
-})
-tl.to(el, vars, positionParam)   // "<" start anterior · ">" end anterior
-tl.from(el, vars, positionParam)
-tl.set(el, vars, positionParam)
-tl.addLabel("name", positionParam)
-tl.play() / tl.pause() / tl.reverse() / tl.restart()
-tl.seek(timeOrLabel)
-tl.revert()   // reverte estado original + mata
+const tl = gsap.timeline({ paused: true, defaults: { duration: 0.4, ease: "power2.out" } })
+tl.to(el, vars, "<")  // "<" start anterior, ">" end anterior
+tl.revert()            // cleanup no slidechanged
 ```
 
-### gsap.context() — cleanup no slidechanged
+### Cleanup: `gsap.context()`
 ```js
-let ctx = gsap.context(() => {
-  gsap.to(el, { x: 100 })
-  return () => { /* cleanup custom */ }
-}, containerEl)
-
-// No slidechanged handler:
-ctx.revert()   // reverte tudo + cleanup
+let ctx = gsap.context(() => { gsap.to(el, { x: 100 }) }, containerEl)
+ctx.revert()  // no slidechanged handler
 ```
 
-### gsap.matchMedia() — reduced motion
+### Reduced motion: `gsap.matchMedia()`
 ```js
 let mm = gsap.matchMedia()
-mm.add({
-  animate: "(prefers-reduced-motion: no-preference)",
-  reduce:  "(prefers-reduced-motion: reduce)"
-}, (ctx) => {
-  let { animate } = ctx.conditions
-  if (animate) gsap.to(el, { y: -20 })
-})
+mm.add("(prefers-reduced-motion: no-preference)", () => { gsap.to(el, { y: -20 }) })
 ```
-⚠ Não aninhar `gsap.matchMedia()` dentro de `gsap.context()` — são equivalentes internamente.
+NAO aninhar matchMedia dentro de context — sao equivalentes.
 
-### Fix relevante (3.13)
-Bug corrigido: `from()` tweens dentro de timeline que não renderizaram não revertiam corretamente.
-Afeta `engine.js` cleanup no `slidechanged` → motivo adicional para upgrade 3.12 → 3.14.
+## Reveal.js 5.2.1 (FROZEN — grade/osteoporose)
 
----
-
-## Reveal.js — versão atual: 5.2.1
-
-### Reveal.initialize() — opções relevantes
+### Opcoes relevantes
 ```js
 Reveal.initialize({
-  // Novo em v5 — ATENÇÃO
-  view: "scroll",              // auto-ativa abaixo de 435px viewport
-  scrollActivationWidth: null, // null = DESABILITAR (recomendado para congresso)
-  jumpToSlide: true,           // v5.1: menu jump; false para desativar
-
-  // Estáveis
-  width: 1280, height: 720,    // nosso target
-  margin: 0.04,
-  controls: false, progress: true,
-  hash: true, history: false,
-  center: false,               // nosso layout usa align-content:start
-  transition: "fade",
-  transitionSpeed: "fast",
-  backgroundTransition: "fade",
-
-  // PDF
-  pdfSeparateFragments: false,
-  pdfMaxPagesPerSlide: 1,
-  showNotes: "separate-page",
-
-  plugins: [Notes, Highlight],
+  scrollActivationWidth: null,  // v5: DESABILITAR para congresso
+  width: 1280, height: 720,
+  center: false,                // layout usa align-content:start
+  transition: "fade", transitionSpeed: "fast",
+  pdfSeparateFragments: false, pdfMaxPagesPerSlide: 1,
 })
 ```
 
-⚠ **Novo em v5:** `scrollActivationWidth: 435` ativa scroll-view em viewports < 435px.
-Para congresso: adicionar `scrollActivationWidth: null` em `engine.js`.
-
-### Eventos (assinaturas inalteradas v4→v5)
+### Eventos
 ```js
-Reveal.on("ready", ({ currentSlide, indexh, indexv }) => { })
-
-// Início da transição → cleanup GSAP aqui
-Reveal.on("slidechanged", ({ previousSlide, currentSlide, indexh, indexv }) => {
-  ctx.revert()   // cleanup gsap.context do slide anterior
-})
-
-// Fim da transição → iniciar animações aqui (slide visível, bounding boxes disponíveis)
-Reveal.on("slidetransitionend", ({ currentSlide, indexh, indexv }) => {
-  // gsap.to(), tl.play() etc.
-})
-
+Reveal.on("slidechanged", ({ previousSlide, currentSlide }) => { ctx.revert() })
+Reveal.on("slidetransitionend", ({ currentSlide }) => { /* iniciar animacoes */ })
 Reveal.on("fragmentshown", ({ fragment }) => { })
-Reveal.on("fragmenthidden", ({ fragment }) => { })
 ```
 
-### Keyboard bindings
-```js
-Reveal.addKeyBinding(
-  { keyCode: 84, key: "T", description: "Start timer" },
-  () => { /* handler */ }
-)
-Reveal.removeKeyBinding(keyCode)
-```
+### data-visibility: sempre `hidden` (nao `uncounted`) para apendice.
 
-### data-visibility
-```html
-<!-- USAR para apêndice (remove do DOM, não navegável) -->
-<section data-visibility="hidden">...</section>
+### Breaking v4→v5: `?print-pdf` → `?view=print` (antigo ainda funciona). Scroll-view auto <435px.
 
-<!-- NÃO usar para apêndice — só funciona no final do deck -->
-<section data-visibility="uncounted">...</section>
-```
-Regra do projeto: **sempre `hidden`**, nunca `uncounted` para apêndice.
+## Vite 6.x
 
-### Breaking changes v4→v5
-| Mudança | Ação |
-|---------|------|
-| `?print-pdf` → `?view=print` | Antigo ainda funciona (backwards-compat) |
-| scroll-view auto <435px | `scrollActivationWidth: null` em engine.js |
-| `initialize()` não pode ser chamado 2x | Proteção — sem ação |
-| iOS usa `100dvh` agora | Monitorar em iPad de congresso |
+### Breaking v5→v6
+- Sass API: `css.preprocessorOptions.scss.api: "modern-compiler"` (se usar SCSS)
+- `commonjsOptions.strictRequires` default `true`
+- postcss-oklab-function sem mudancas
 
----
+Vite 8.0 (Rolldown) disponivel. Upgrade nao urgente — 6.x mantido.
 
-## Vite — versão atual: 6.x (projeto pina ^6.0.0)
-
-### Breaking changes v5→v6 relevantes para este projeto
-
-| Mudança | Impacto | Ação |
-|---------|---------|------|
-| Sass API moderna como default | Médio se usar SCSS | `css.preprocessorOptions.scss.api: "legacy"` (removido no v7) |
-| `postcss-load-config` v4→v6 | **Baixo** — só afeta config TS/YAML | `postcss.config.js` como JS puro → zero ação |
-| `commonjsOptions.strictRequires` default `true` | Baixo | Build mais determinístico |
-| Glob `{01..03}` não suportado | Baixo | Atualizar padrões glob se usar |
-
-### Config Vite 6 — o que mudou para nós
-```js
-// vite.config.js
-export default defineConfig({
-  css: {
-    // postcss.config.js como JS puro → sem mudança necessária
-    // postcss-oklab-function continua funcionando
-    preprocessorOptions: {
-      scss: { api: "modern-compiler" }  // se usar SCSS
-    }
-  },
-  build: {
-    lib: {
-      cssFileName: "style",  // explícito para manter nome estável
-    }
-  },
-  server: { port: 3000 },
-  preview: { port: 4173 },
-})
-```
-
-### postcss-oklab-function — status
-✓ **Sem breaking changes.** `postcss.config.js` como JS puro não é afetado pela migração
-`postcss-load-config` v4→v6. Plugin continua gerando fallbacks sRGB automaticamente.
-
----
-
-## Action items para este projeto
-
-| Item | Prioridade | Status |
-|------|-----------|--------|
-| `.npmrc` com `npm.greensock.com` | — | OK — nao existe |
-| GSAP 3.12 → 3.14 | — | DONE (2026-03-17) |
-| `scrollActivationWidth: null` | Baixa | Afeta so Reveal.js legacy (grade/osteoporose — frozen) |
-| `from()` revert fix (3.13) | — | DONE — incluso no upgrade 3.14 |
-
-> **Nota:** Vite 8.0 (Rolldown) disponivel. Projeto usa 6.x. Upgrade nao urgente — 6.x ainda mantido.
-
----
-
-## Fallback (se docs ficarem desatualizadas)
-
-```
-1. Verificar versão atual: cat package.json | grep -E "gsap|reveal|vite"
-2. WebSearch: "[lib] [versão] changelog breaking changes"
-3. WebFetch: URL oficial de release notes
-4. Atualizar esta seção com data
-```
+## Fallback
+Se docs ficarem desatualizadas: `cat package.json | grep -E "gsap|reveal|vite"` → WebSearch changelog.

@@ -5,18 +5,11 @@
 O Claude Desktop NÃO lê o `.mcp.json` do projeto.
 Ele usa um arquivo global do sistema operacional.
 
-### macOS
-Abra: `~/Library/Application Support/Claude/claude_desktop_config.json`  
-Windows: `%APPDATA%\Claude\` ou equivalente.
-
-```bash
-# Se o arquivo não existir, crie:
-mkdir -p ~/Library/Application\ Support/Claude
-nano ~/Library/Application\ Support/Claude/claude_desktop_config.json
-```
-
-### Windows
+### Windows (este projeto)
 Abra: `%APPDATA%\Claude\claude_desktop_config.json`
+
+### macOS
+Abra: `~/Library/Application Support/Claude/claude_desktop_config.json`
 
 ### Conteúdo (copiar inteiro)
 
@@ -90,11 +83,11 @@ Abra: `%APPDATA%\Claude\claude_desktop_config.json`
 }
 ```
 
-**Pré-requisitos:**
-- Node.js ≥20 (para npx)
-- Python + uv (para BioMCP): `brew install uv` ou `pip install uv`
-- Trocar `SEU_USUARIO` pelo seu username do macOS
-- Criar pasta `.memory/` no projeto: `mkdir -p aulas-magnas/.memory`
+**Pre-requisitos:**
+- Node.js >= 20 (para npx)
+- uv (para BioMCP e outros Python MCPs): `pip install uv` (Windows) ou `brew install uv` (macOS)
+- Trocar `SEU_USUARIO` pelo seu username do OS
+- Variaveis de ambiente: ver `.env.example` na raiz do repo
 
 ### Obter NCBI API Key (grátis)
 1. Ir a https://www.ncbi.nlm.nih.gov/account/
@@ -113,8 +106,9 @@ Abra: `%APPDATA%\Claude\claude_desktop_config.json`
 3. Deve listar: pubmed, playwright, semantic-scholar
 
 ### Debug
-Logs em: `~/Library/Logs/Claude/mcp.log`  
-Windows: `%APPDATA%\Claude\` ou equivalente.
+Logs em:
+- **Windows:** `%APPDATA%\Claude\logs\`
+- **macOS:** `~/Library/Logs/Claude/mcp.log`
 
 ---
 

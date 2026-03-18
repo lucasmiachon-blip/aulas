@@ -1,7 +1,7 @@
 # Meta-análise — Escopo v1
 
 > Supersede versão anterior (v0, que era mais ampla/enciclopédica).
-> Fonte de verdade: aulas/metanalise/references/narrative.md
+> Fonte de verdade (quando existir): aulas/metanalise/references/narrative.md — arquivo ainda não criado
 
 ---
 

@@ -258,8 +258,8 @@ Para cada slide do Bloco 1:
 | # | Referência | Achado-chave | Mapeia para |
 |---|-----------|-------------|-------------|
 | 6 | Garner & Alley 2013, Tech Comm Q | AE < misconceptions que slides tradicionais | Pilar 1, slide-editing.md |
-| 7 | Wolfe 2024 [VERIFICAR] | AE funciona para experts, não só novatos | Pilar 1, expertise-reversal |
-| 8 | Hales 2017 [VERIFICAR] | Image fraction prediz avaliação CME | Pilar 2, fill ratio |
+| 7 | Wolfe 2024 [NAO VERIFICADO — PMID pendente] | AE funciona para experts, nao so novatos | Pilar 1, expertise-reversal |
+| 8 | Hales 2017 [NAO VERIFICADO — PMID pendente] | Image fraction prediz avaliacao CME | Pilar 2, fill ratio |
 | 9 | Roediger & Butler 2011, Trends Cogn Sci | Testing effect: retrieval > re-study | Pilar 3, checkpoints |
 | 10 | Cowan 2001, Behav Brain Sci | Capacidade WM = 4+-1 chunks | Pilar 4, Chunking |
 | 11 | Kosslyn 2007, Clear and to the Point | 8 princípios cognitivos para slides | design-principles.md |

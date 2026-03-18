@@ -98,7 +98,7 @@
 
 ---
 
-## MCPs (Inventário)
+## MCPs (Inventario)
 
 ### `.mcp.json` — always-on (7 servers)
 
@@ -151,7 +151,7 @@
 | chrome-devtools | Instável, coberto por Playwright |
 | eslint | Disponível em profiles sob demanda |
 
-**Variáveis de ambiente:** `docs/MCP-ENV-VARS.md` (PERPLEXITY_API_KEY, HYPERBOLIC_API_KEY, GEMINI_API_KEY, etc.)
+**Variáveis de ambiente:** `docs/MCP-ENV-VARS.md` · `.env.example` (fonte canônica)
 
 ---
 

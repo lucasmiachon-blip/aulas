@@ -60,6 +60,14 @@
 - `aulas/metanalise/references/evidence-db.md`: added Bojcic 2024 (PMID 37931822) and Qureshi 2025 (PMID 41428154) as hook data candidates (CANDIDATO tag).
 - `aulas/metanalise/HANDOFF.md`: session summary + pending decisions for Lucas documented.
 
+### Fixed (2026-03-17 — Achados audit-rules e docs-audit)
+- `aulas/cirrose/ERROR-LOG.md`: ERRO-033 (stopPropagation) e ERRO-034 (data-background-color deck.js) registrados — refs em slide-editing.md agora válidas.
+- `docs/README.md`: link metanalise HANDOFF → CLAUDE.md (HANDOFF pendente); link grade HANDOFF adicionado; osteoporose em backlog.
+- `docs/XREF.md`: seção metanalise — HANDOFF.md marcado como pendente.
+
+### Added (2026-03-17 — Docs audit)
+- `docs/docs-audit-report-2026-03-17.md`: relatório de auditoria docs/*.md (batches 1–4). Links, redundancy, verbosity, tokens, structure.
+
 ### Added (2026-03-16 — Max security: 7 Guards + back-port Class B)
 - `scripts/pre-commit.sh`: Guard 5 — bloqueia Classe A/B (governança/infra) em feature branches. Bypass: `ALLOW_AB_ON_WT=1`.
 - `.cursor/rules/slide-identity.mdc`: back-port de cirrose — regra 9-superfícies (176 linhas).
