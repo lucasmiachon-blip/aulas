@@ -48,7 +48,7 @@ Residentes de clínica médica (básico-intermediário).
 
 **Conteúdo:**
 - Por que meta-análise importa para o residente clínico?
-- Dados de impacto no hook: 80 SRs/dia (Hoffmann 2021), 81% criticamente baixas (Bojcic 2024), 10% guidelines com LoE forte (Qureshi 2025), ilusão de competência (Lakhlifi 2023)
+- Dados de impacto no hook: 146 SRs/dia em 2021 (Hoffmann 2021, PMID 34091022: 53.208 SRs indexadas), 81% criticamente baixas (Bojcic 2024), 10% guidelines com LoE forte (Qureshi 2025), ilusão de competência (Lakhlifi 2023)
 - Situação provocativa: "Você lê o abstract e confia no diamante. Mas deveria?"
 - Contrato com a audiência: o que a aula vai entregar (3 perguntas framework)
 
@@ -157,16 +157,9 @@ Uma meta-análise não é melhor do que os RCTs que a alimentam. A qualidade da 
 
 ---
 
-## Revisão dos slides existentes (00-05) — CONCLUÍDA
+## Revisão dos slides existentes (CONCLUÍDA)
 
-| Slide | Ação planejada | Status |
-|-------|---------------|--------|
-| 00-title.html | Manter | ✅ Mantido |
-| 01-hook.html | Reescrever — generalizar | ✅ Reescrito (2-beat, 3 countUp, 4 PMIDs) |
-| 02-rs-vs-ma.html | Mover para posição 04 | ✅ Renumerado → 04-rs-vs-ma.html. Antigo 02-rs-vs-ma.html deletado |
-| 03-ancora.html | Postergar para Fase 3 | ✅ Deletado (será recriado na Fase 3 com artigo definido) |
-| 04-pico.html | Generalizar PICO | ✅ Generalizado (sem dados Musini) |
-| 05-abstract.html | Generalizar abstract | ✅ Generalizado (PRISMA genérico) |
+> 6/6 slides revisados (2026-03-13). Detalhes: CHANGELOG.md.
 
 ---
 

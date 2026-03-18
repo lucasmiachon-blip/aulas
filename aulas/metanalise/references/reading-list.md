@@ -55,10 +55,10 @@
 
 ## Residentes — Nice to read
 
-### 1. Texto completo da revisão âncora
-- **Função:** ver tabela de estudos, subgrupos, discussão de aplicabilidade
+### 1. Texto completo do artigo âncora — Valgimigli et al. Lancet 2025
+- **Função:** ver forest plots reais, tabelas de subgrupo, discussão de aplicabilidade
 - **Tier:** 1
-- **Acesso:** PMCID disponível apenas 2026-10-09; requer PDF
+- **Acesso:** Lancet (acesso CAPES/USP). PMID 40902613
 
 ---
 
@@ -113,5 +113,6 @@
 | Data | Mudança |
 |------|---------|
 | 2026-03-11 | v0 — derivado do memo direcionado |
-| 2026-03-14 | v0.2 — Murad JAMA 2014 (good to read residentes), Guyatt BMJ 2008 (good to read professor) |
 | 2026-03-13 | v0.1 — item 4 atualizado: artigo âncora = [TBD], não Musini definitivo |
+| 2026-03-14 | v0.2 — Murad JAMA 2014 (good to read residentes), Guyatt BMJ 2008 (good to read professor) |
+| 2026-03-17 | v0.3 — Nice-to-read: Musini PMC embargo → Valgimigli Lancet (CAPES). Changelog reordenado |

@@ -4,6 +4,27 @@
 
 ---
 
+## 2026-03-17g — Doc sync: 6 inconsistencias + 302 linhas cortadas
+
+Branch: `feat/metanalise-mvp`
+
+### Batch 1 — Inconsistencias factuais (6 edits)
+- blueprint.md: assertion hook 80→146/dia, evidencias Siemens→Bojcic + Fanaroff→Qureshi, autores G3/G5 corrigidos
+- narrative.md: 80→146/dia com contexto (53.208 SRs indexadas em 2021)
+- reading-list.md: nice-to-read Musini PMC → Valgimigli Lancet; changelog reordenado
+
+### Batch 2 — Verbosidade (-302 linhas)
+- blueprint.md (-100): mapa migracao concluido, candidatos ancora decididos, propostas absorvidas → colapsados para 1-3 linhas cada
+- evidence-db.md v4.3 (-189): 11 candidatos nao selecionados → tabela-resumo com PMIDs
+- narrative.md (-8): tabela revisao → 1 linha
+- HANDOFF.md (-5): 4 bloqueios resolvidos removidos
+
+### Misc
+- NOTES.md criado (placeholder — referenciado por WT-OPERATING.md)
+- Zero slides tocados
+
+---
+
 ## 2026-03-17f — WT-OPERATING.md + state machine no HANDOFF
 
 Branch: `feat/metanalise-mvp`

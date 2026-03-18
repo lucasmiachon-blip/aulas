@@ -12,7 +12,7 @@
 - **Branch:** feat/metanalise-mvp (worktree wt-metanalise)
 - **Slides no index.html:** 18 (00-title → 01-hook → 02-contrato → 03-checkpoint-1 → 04-rs-vs-ma → 05-pico → 06-abstract → 07-forest-plot → 08-benefit-harm → 09-grade → 10-heterogeneity → 11-fixed-random → 12-checkpoint-2 → 13-ancora → 14-aplicacao → 15-aplicabilidade → 16-absoluto → 17-takehome)
 - **Slides planejados:** 18 (00-17) — ver blueprint.md v1.7
-- **Docs fundacionais:** narrative.md (v2.2), evidence-db.md (v4.2 — 20+ refs), blueprint.md (v1.7), reading-list.md
+- **Docs fundacionais:** narrative.md (v2.2), evidence-db.md (v4.3 — 20+ refs, candidatos colapsados), blueprint.md (v1.8), reading-list.md (v0.3)
 - **_manifest.js:** CRIADO — 18 slides, fases F1/I1/F2/I2/F3
 - **slide-registry.js:** CRIADO — state machines para hook (2-beat), checkpoint-1 (3-beat), checkpoint-2 (4-beat)
 - **Orphan slides:** 0
@@ -154,11 +154,7 @@
 
 | Bloqueio | Impacto | Workaround |
 |----------|---------|------------|
-| ~~Artigo âncora em deliberação~~ | ~~Dados específicos dos slides 13-15~~ | ✅ RESOLVIDO: Valgimigli 2025 (Lancet, clopidogrel vs aspirina, PMID 40902613) |
-| Full-text Musini: PMC embargo até 2026-10-09 | Forest plot e NNT dependem de full-text | ✅ Acessível via Cochrane Library (acordo CAPES/Wiley). PMID 41065416. Musini agora = exemplo visual, não âncora |
-| ~~HEX navy `#162032` vs canônico `#0d1a2d`~~ | ~~Inconsistência cross-aula~~ | ✅ RESOLVIDO: #162032 mantido (decisão Lucas 2026-03-15) |
-| ~~PMIDs Consensus-sourced não verificados~~ | ~~3 PMIDs pendentes~~ | ✅ RESOLVIDO: Aamann (41542879), AlSowaiegh (41543475), Saleh (41767699) verificados. Yin→Greenwood, Bosco→El-Taji corrigidos |
-| Cochrane exemplos visuais | Forest plots e GRADE tables reais precisam de screenshots/crops | Acessar via CAPES e cropar quando iniciar Fase 3 |
+| Cochrane exemplos visuais | Forest plots e GRADE tables reais precisam de screenshots/crops | Acessar via CAPES e cropar quando iniciar QA visual |
 
 ## Pendências para main (Classe B — não editar na WT)
 
@@ -264,3 +260,30 @@
 
 ### Nota anti-drift
 Sessao inteira de docs. Autorizada pelo usuario como pre-requisito para QA limpo.
+
+---
+
+## Sessao 2026-03-17g — Doc sync: inconsistencias + verbosidade
+
+### O que foi feito
+- [x] **Batch 1 — 6 inconsistencias factuais corrigidas:**
+  - blueprint.md: assertion "80 revisoes" → "146 SRs/dia"; evidencias Siemens/Fanaroff → Bojcic/Qureshi; G3 Yin→Greenwood, G5 Bosco→El-Taji
+  - narrative.md: 80→146/dia + contexto (53.208 SRs)
+  - reading-list.md: Musini PMC embargo → Valgimigli Lancet; changelog reordenado + v0.3
+- [x] **Batch 2 — 302 linhas cortadas:**
+  - blueprint.md (-100): mapa migracao, candidatos ancora, propostas absorvidas → colapsados
+  - evidence-db.md (-189): S2/A7/F1-F3/G1-G5 → tabela-resumo com PMIDs
+  - narrative.md (-8): revisao slides → 1 linha
+  - HANDOFF.md (-5): 4 bloqueios resolvidos removidos
+- [x] **NOTES.md CRIADO:** placeholder (referenciado por WT-OPERATING.md mas nao existia)
+- [x] **evidence-db v4.3**, blueprint v1.8
+- [x] Zero slides tocados (sessao de suporte)
+
+### Pendente para proxima sessao
+- lessons.md: adicionar licoes de doc sync (drift de dados entre docs)
+- Skills: verificacao de coerencia (baixa prioridade)
+- AUDIT-VISUAL.md s-hook: verificar se sync Notion (Bojcic/Qureshi CANDIDATO→EM USO) foi feito
+- Scorecards 14-dim: 15 slides pendentes (caminho critico)
+
+### Nota anti-drift
+Sessao de docs autorizada pelo usuario. Previne regressao de dados em sessoes futuras de QA.

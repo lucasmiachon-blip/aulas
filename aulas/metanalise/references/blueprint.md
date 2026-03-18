@@ -33,9 +33,9 @@
 
 - **Fase:** 1
 - **Função:** hook — criar importância, gerar curiosidade
-- **Assertion:** "80 revisões sistemáticas foram publicadas hoje. Quantas você consegue avaliar?"
+- **Assertion:** "146 revisões sistemáticas por dia. Quantas você consegue avaliar?"
 - **Risco cognitivo:** aula parecer estatística pura → desmotivação imediata
-- **Evidência:** Hoffmann PMID 34091022 (80/dia), Siemens PMID 33741503 (88% crit. baixa), Fanaroff PMID 30874755 (8.5% LoE A), Lakhlifi PMID 37081292 (ilusão de competência)
+- **Evidência:** Hoffmann PMID 34091022 (146/dia em 2021), Bojcic PMID 37931822 (81% crit. baixa), Qureshi PMID 41428154 (10% LoE forte), Lakhlifi PMID 37081292 (ilusão de competência)
 - **Status:** ✅ FEITO (01-hook.html) — 2-beat state machine, 3 countUp animations
 
 ### Slide 02 — Contrato com a audiência
@@ -213,127 +213,27 @@
 
 ---
 
-## Mapa de migração (slides existentes → nova posição)
+## Mapa de migração (CONCLUÍDO)
 
-| Arquivo atual | Posição v0 | Nova posição v1 | Ação | Status |
-|---------------|-----------|-----------------|------|--------|
-| 00-title.html | Slide 00 | Slide 00 (Fase 1) | Manter | ✅ QA pass |
-| 01-hook.html | Slide 01 | Slide 01 (Fase 1) | Reescrever — generalizar | ✅ Reescrito + QA |
-| ~~01-objectives.html~~ | Slide 01 (v0) | — | Absorvido por 02-contrato | ✅ Deletado |
-| 02-contrato.html | — | Slide 02 (Fase 1) | NOVO | ✅ Criado + QA |
-| 03-checkpoint-1.html | — | Slide 03 (Interação 1) | NOVO | ✅ Criado + QA |
-| ~~02-rs-vs-ma.html~~ | Slide 02 (v0) | — | Orphan (substituído por 04-rs-vs-ma) | ✅ Deletado |
-| 04-rs-vs-ma.html | Slide 02 (v0) | Slide 04 (Fase 2) | Renumerar + assertion | ✅ QA pass |
-| 04-pico.html | Slide 04 | Slide 05 (Fase 2) | Generalizar — remover Musini | ✅ QA pass |
-| 05-abstract.html | Slide 05 | Slide 06 (Fase 2) | Generalizar — remover Musini | ✅ QA pass |
-| 06-forest-plot.html | — | Slide 07 (Fase 2) | NOVO | ✅ QA pass |
-| 07-benefit-harm.html | — | Slide 08 (Fase 2) | NOVO | ✅ QA pass |
-| 08-grade.html | — | Slide 09 (Fase 2) | NOVO | ✅ QA pass + ícones daltonismo |
-| 09-heterogeneity.html | — | Slide 10 (Fase 2) | NOVO | ✅ QA pass |
-| 10-fixed-random.html | — | Slide 11 (Fase 2) | NOVO | ✅ QA pass |
-| ~~03-ancora.html~~ | Slide 03 (v0) | — | Musini-specific, Fase 3 bloqueada | ✅ Deletado |
-| 12-checkpoint-2.html | — | Slide 12 (Interação 2) | NOVO | ✅ Criado + QA + state machine |
-| 16-absoluto.html | — | Slide 16 (Fase 3) | NOVO | ✅ Criado + QA |
-| 17-takehome.html | — | Slide 17 (Fase 3) | NOVO | ✅ Criado + QA |
+> 18/18 slides migrados e posicionados. Todos ✅. Detalhes: CHANGELOG.md (sessões 2026-03-13 a 2026-03-15).
 
 ---
 
-## Candidatos a Artigo Âncora — Fase 3
+## Candidatos a Artigo Âncora (DECIDIDO)
 
-> Compilado 2026-03-14. Fontes: 3 dossiês Gemini + PubMed MCP + Consensus MCP.
-> PMIDs marcados ✅ = verificados via PubMed. Sem ✅ = Consensus-sourced, verificar antes de usar.
-> Decisão: **Valgimigli 2025 (S3)**. Slides 13-15 implementados.
-
-### Critérios ideais para a aula
-
-1. Pairwise MA de RCTs (não NMA, não IPD se possível)
-2. Desfechos binários (mortalidade, eventos) com RR ou OR + IC 95%
-3. GRADE explícito por desfecho (ou fácil de reconstruir)
-4. Tier 1 journal (Cochrane, Lancet, BMJ, JAMA, NEJM, Hepatology, J Hepatol)
-5. Abstract aberto (residentes precisam ler como pre-reading)
-6. Tema clínico relevante para residência de clínica médica
-7. Benefício E dano reportados (ensino de GRADE por desfecho)
-
-### Tier S — Ideais para a aula
-
-| # | Artigo | Journal | RCTs | N | Desfecho principal | Efeito | GRADE | PMID | Notas |
-|---|--------|---------|------|---|-------------------|--------|-------|------|-------|
-| S1 | Musini 2025 — Anti-HTN ≥60 anos | Cochrane | 16 | 26.795 | Mortalidade total | RR 0,91 (0,85–0,97) | ✅ Alta/Mod/Baixa por desfecho | 41065416 ✅ | Full-text acessível via Cochrane Library (CAPES). PMC embargo até out/2026. PA 182/95 = aplicabilidade questionável |
-| S2 | Zacharias 2023 — Rifaximin para EH | Cochrane | 41 | 4.545 | Mortalidade (rif+NAD vs NAD) | RR 0,69 (0,55–0,86); NNT=22 | ✅ Moderada | 37467180 ✅ | GRADE por desfecho, NNT, I², RoB. Pacote completo. Hepatologia |
-| S3 | Valgimigli 2025 — Clopidogrel vs aspirina | Lancet | 7 | 28.982 | MACCE (5,5 anos) | HR 0,86 (0,77–0,96) | Não explícito | 40902613 ✅ | IPD-MA (mais sofisticada que pairwise). Sem aumento de sangramento. Tema universal |
-
-### Tier A — Fortes com ressalvas
-
-| # | Artigo | Journal | RCTs | N | Desfecho principal | Efeito | GRADE | PMID | Notas |
-|---|--------|---------|------|---|-------------------|--------|-------|------|-------|
-| A1 | Aamann 2026 — BCAAs para EH | Cochrane | 18 | 934 | EH | RR 0,79 (0,64–0,96) | ✅ Baixa/Muito Baixa | 41542879 | Hepatologia. Cochrane + GRADE. N pequeno |
-| ~~A2~~ | ~~Prosty 2025 — ATB profilático em HDA/cirrose~~ | ~~JAMA Intern Med~~ | ~~14~~ | ~~1.322~~ | — | — | — | ~~40788637~~ | **REMOVIDO:** bayesiano, fora do escopo pairwise |
-| A3 | Suffert 2025 — Propranolol vs EVL (1ª profilaxia) | Hepatol Int | 14 | 1.345 | Sangramento varicoso | RR 1,40 (1,02–1,91) EVL>Prop | Não | 40968192 | Grupo brasileiro. Head-to-head. Sem GRADE |
-| A4 | AlSowaiegh 2026 — Albumina em cirrose descompensada | Hepatol Commun | 68 (56 c/ mortalidade) | — | Mortalidade | OR 0,769 (0,652–0,908) | Não | 41543475 | Ensina "qualidade vs quantidade" (benefício some em trials grandes). Hepatologia |
-| A5 | Soumare 2025 — Corticoides em choque séptico | [verificar journal] | — | — | Mortalidade | [verificar] | — | 41325621 ✅ | Tema clássico clínica médica. Dados completos pendentes |
-| A6 | Saleh 2026 — TIPS preemptiva (só RCTs) | J Clin Exp Hepatol | 6 | 424 | Ressangramento <6 sem | RR 0,15 (0,07–0,34) | Não | 41767699 | Múltiplos desfechos binários. Hepatologia. N pequeno |
-| A7 | Jeyaraj 2026 — Aminoglicosídeos/vancomicina/metronidazol para EH | Cochrane | 24 | 1.405 | Mortalidade (aminoglicosídeo vs outros) | RR 1,64 (1,03–2,62) | ✅ Baixa/Muito Baixa | 41631546 ✅ | Cochrane + GRADE. Mostra DANO (aumento mortalidade). Perfeito para ensinar benefício-dano + GRADE |
-
-### Tier B — Interessantes por caso especial
-
-| # | Artigo | Ensina o quê | PMID | Nota |
-|---|--------|-------------|------|------|
-| B1 | AF ablation 2025 | Time-flattening bias (agregação temporal mascara efeitos opostos) | 40587868 ✅ | Cardiologia invasiva — menos relevante para clínica geral |
-| B2 | DOACs vs aspirina 2025 | Risk Difference (RD) com linha de nulidade em 0 (não 1) | 39928949 ✅ | Medida de efeito incomum — pode confundir no nível básico |
-| B3 | Reddy 2025 — Idosos com SCA | Fragilidade + idade como modificador de efeito | 40549394 ✅ | Relevante para clínica médica |
-| B4 | Early DOAC em AVC 2024 | Timing de intervenção como variável | 39608862 ✅ | Tema urgente |
-| B5 | β-lactam em sepse 2025 | Prolonged infusion — contínuo vs intermitente | 38864162 ✅ | Sepse = core da residência |
-| B6 | Nicoara-Farca 2024 — TIPS preemptiva IPD-MA | IPD meta-analysis (não pairwise clássica) | 37782566 | Hepatology. Landmark. Mix RCTs + observacional |
-
-### Recomendação atualizada (2026-03-15)
-
-**Decisões do Lucas:**
-- Área do Lucas ≠ hepatologia (salvar na memória)
-- Cochrane = exemplos visuais (Fases 1-2), não âncora
-- Artigo pode ser de qualquer área (ambulatório ou hospital)
-- Não precisa ser open access (acesso CAPES/USP)
-- Bayesiano removido da lista (Prosty A2)
-
-**Top 2 para decisão (não-Cochrane):**
-
-1. **F1 (Pitre 2025 / corticoides PAC)** — RECOMENDADO. ICM Tier 1. 30 RCTs, 7.519 pts. GRADE com variação ideal (alta/moderada/baixa). Benefício + dano claros. PAC = tema universal. Não-Cochrane (contraste). Autores de peso (Rochwerg, Annane). Guideline CCM 2024 já incorporou.
-
-2. **G4 (Abdul-Aziz 2024 / β-lactam sepse)** — Alternativa forte. JAMA Tier 1. 18 RCTs, 9.108 pts. Muda prática (infusão prolongada). Sepse = core. MAS: framework bayesiano (CrI, não CI); sem dano claro; GRADE com pouca variação.
-
-**Candidatos Gemini adicionais (dados completos em evidence-db v4.0):**
-- G1 Hanula/oseltamivir (JAMA IM) — "quebrando dogma": sem benefício + dano GI
-- G2 McIntyre/DOAC-AF (Circulation) — espelhamento benefício≈dano, forest limpo
-- G3 Yin/sal (Ann Intern Med) — obra-prima de indirectness/validade externa
-- G5 Bosco/próstata-CV (JAMA Oncol) — farmacovigilância, menos cotidiano
-
-**Trade-off principal:** F1 tem melhor fit didático global; G4 tem maior impacto prático imediato mas sacrifica ensino de dano e usa bayesiano.
+> **Decisão final: Valgimigli 2025 (S3) — Lancet, PMID 40902613.** Slides 13-15 implementados.
+> Dados completos dos 20+ candidatos avaliados: evidence-db.md.
+> Decisões do Lucas: Cochrane = exemplos visuais (Fases 1-2); área ≠ hepatologia; CAPES/USP; bayesiano excluído.
+> Slide 11 (fixed vs random) MANTÉM — override do Lucas sobre 3 dossiês Gemini.
 
 ---
 
-## Propostas de mudança narrativa (ABSORVIDAS 2026-03-15)
+## Propostas narrativas Gemini (ABSORVIDAS)
 
-> 3 dossiês Gemini analisados em 2026-03-14. Convergências absorvidas em narrative.md v2 e blueprint v1.4.
-
-### Convergências dos 3 dossiês (aceitar)
-
-1. **Credibility gap** entre slides 06 (abstract) e 07 (forest plot) — falta "posso confiar nesta síntese?" (PRISMA ≠ qualidade, RoB)
-2. **Tese central** precisa incluir credibilidade da síntese + efeito absoluto
-3. **3 perguntas do take-home** precisam reformulação (embeddar credibilidade + risco absoluto)
-4. **Checkpoint 2** recalibrar para "falso positivo" (diamante diz benefício, GRADE diz não confiar)
-
-### Decisão do Lucas (2026-03-14)
-
-- **Slide 11 (fixed vs random) MANTÉM** — Lucas decidiu que é slide importante, override das 3 recomendações de substituir
-
-### Referências metodológicas novas (verificadas)
-
-| Referência | PMID | Função | Status |
-|-----------|------|--------|--------|
-| Murad et al. JAMA 2014 — Rating quality of evidence | 25005654 ✅ | GRADE tutorial canônico | Adicionar ao reading-list |
-| Guyatt et al. BMJ 2008 — GRADE intro series | 21195583 ✅ | Série GRADE original | Referência do professor |
-| Sterne et al. BMJ 2019 — RoB 2 | 31462531 ✅ | Credibility gap | Já em evidence-db |
-| Page et al. BMJ 2021 — PRISMA 2020 | 33782057 ✅ | Transparência ≠ qualidade | Já em evidence-db |
+> 3 dossiês Gemini (2026-03-14) absorvidos em narrative.md v2 e blueprint v1.4:
+> credibility gap, tese central, 3 perguntas reformuladas, checkpoint-2 "falso positivo".
+> Refs metodológicas (Murad, Guyatt, Sterne, Page) já em evidence-db e reading-list.
 
 ---
 
-## Status: BLUEPRINT v1.7 — 18 slides ativos (deck completo). Âncora: Valgimigli 2025 Lancet (PMID 40902613). Slides 13-15 criados com dados reais. QA loop pendente.
+## Status: BLUEPRINT v1.8 — 18 slides ativos (deck completo). Âncora: Valgimigli 2025 Lancet (PMID 40902613). Slides 13-15 criados com dados reais. QA F1 PASS; F2-F3 LINT-PASS.
