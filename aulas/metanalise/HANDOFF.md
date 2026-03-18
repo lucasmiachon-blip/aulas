@@ -189,7 +189,22 @@
 
 ---
 
-## Ultima atualizacao: 2026-03-17h (verificação documental + pendências para main resolvidas na WT)
+## Ultima atualizacao: 2026-03-17i (merge main governance + audit interno)
+
+---
+
+## Sessao 2026-03-17i — Merge main governance + audit interno
+
+### O que foi feito
+- [x] `git merge main` — merge commit `a0e3568`, 6 conflitos resolvidos
+- [x] Conflitos: CHANGELOG (both kept), CLAUDE.md root (WT status preserved), ECOSYSTEM/README/XREF (WT versions — reflect actual metanalise files), lessons.md (both kept)
+- [x] Classe: todos A/B (4 commits governance: C1-C5, H1-H7, M1-M10, audit-rules). Zero Classe C
+- [x] Audit interno: 0 broken links, 0 wrong counts, 18 slides = 18 manifest entries
+- [x] CLAUDE.md aula: merge hash atualizado (4bda0c1 → a0e3568)
+
+### O que NAO foi feito (deliberado)
+- QA slides pendentes (15 scorecards 14-dim)
+- Build de producao
 
 ---
 
