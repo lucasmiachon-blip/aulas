@@ -1,5 +1,8 @@
 # QA Workflow — Meta-analise
 
+> **DEPRECATED** — O workflow de QA agora e definido por [WT-OPERATING.md](WT-OPERATING.md) secao 4 (QA Sub-Loop).
+> Este arquivo mantido como referencia de tooling, execution logs, e status tracker historico.
+
 > Pipeline de QA visual, slide a slide, fase a fase.
 > Threshold: todas 14 dimensoes >= 9 para PASS. Archetype-adjusted para title/hook/checkpoint/recap.
 > Ferramentas: Playwright (screenshots, contraste in-browser, console, video), a11y-contrast MCP, lighthouse MCP, lint:slides.

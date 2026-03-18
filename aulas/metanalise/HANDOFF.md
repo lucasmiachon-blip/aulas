@@ -23,6 +23,62 @@
 - **CSS overrides em metanalise.css vs base.css:** `justify-content: center` restaurado + pseudo-elements desativados (ERRO-005). Checkpoint safe-center pattern proprio (ERRO-006). CSS zoom REMOVIDO — deck.js scale() é o mecanismo correto (ERRO-008). Fixed px tokens mantidos para evitar vw double-scaling. Hook: `.hook-data` flex container + `.hook-data-item { flex: 1 }` para colunas iguais + verdict `margin-top: 80px`. Checkpoint navy override: `#s-checkpoint-1/2 .slide-inner { background-color: #162032 }` + 8 on-dark tokens restaurados (ERRO-009).
 - **Backlog CSS:** 13 refs `--on-dark` tokens em CSS de slides light (funcional via stage-c remap, naming misleading). Nao bloqueia QA — registrado para cleanup futuro.
 
+## Estado dos Slides (maquina de estados — WT-OPERATING.md)
+
+> Estados: BACKLOG → DRAFT → CONTENT → SYNCED → LINT-PASS → QA → DONE
+> Verificar 1 a 1 antes de registrar. Nao assumir.
+
+### F1 — Criar importancia (3 slides)
+
+| # | Slide | Estado | Notas |
+|---|-------|--------|-------|
+| 1 | s-title | QA | Scorecard 14-dim PASS (Opus). Gemini pendente. |
+| 2 | s-hook | QA | Scorecard 14-dim PASS (Opus). Gemini pendente. |
+| 3 | s-contrato | QA | Scorecard 14-dim PASS (Opus). Gemini pendente. |
+
+### I1 — Checkpoint engajamento (1 slide)
+
+| # | Slide | Estado | Notas |
+|---|-------|--------|-------|
+| 4 | s-checkpoint-1 | LINT-PASS | Gates 1-4 PASS. Scorecard 14-dim pendente. |
+
+### F2 — Metodologia (8 slides)
+
+| # | Slide | Estado | Notas |
+|---|-------|--------|-------|
+| 5 | s-rs-vs-ma | LINT-PASS | Gates 1-4 PASS. Scorecard 14-dim pendente. |
+| 6 | s-pico | LINT-PASS | Gates 1-4 PASS. Scorecard 14-dim pendente. |
+| 7 | s-abstract | LINT-PASS | Gates 1-4 PASS. Scorecard 14-dim pendente. |
+| 8 | s-forest-plot | LINT-PASS | Gates 1-4 PASS. Scorecard 14-dim pendente. |
+| 9 | s-benefit-harm | LINT-PASS | Gates 1-4 PASS. Scorecard 14-dim pendente. |
+| 10 | s-grade | LINT-PASS | Gates 1-4 PASS. Scorecard 14-dim pendente. |
+| 11 | s-heterogeneity | LINT-PASS | Gates 1-4 PASS. Scorecard 14-dim pendente. |
+| 12 | s-fixed-random | LINT-PASS | Gates 1-4 PASS. Scorecard 14-dim pendente. |
+
+### I2 — Checkpoint consolidacao (1 slide)
+
+| # | Slide | Estado | Notas |
+|---|-------|--------|-------|
+| 13 | s-checkpoint-2 | LINT-PASS | Gates 1-4 PASS. Scorecard 14-dim pendente. |
+
+### F3 — Aplicacao Valgimigli (5 slides)
+
+| # | Slide | Estado | Notas |
+|---|-------|--------|-------|
+| 14 | s-ancora | LINT-PASS | Gates 1-4 PASS. Scorecard 14-dim pendente. |
+| 15 | s-aplicacao | LINT-PASS | Gates 1-4 PASS. Scorecard 14-dim pendente. |
+| 16 | s-aplicabilidade | LINT-PASS | Gates 1-4 PASS. Scorecard 14-dim pendente. |
+| 17 | s-absoluto | LINT-PASS | Gates 1-4 PASS. Scorecard 14-dim pendente. |
+| 18 | s-takehome | LINT-PASS | Gates 1-4 PASS. Scorecard 14-dim pendente. |
+
+### Resumo
+
+- **QA (3):** s-title, s-hook, s-contrato — scorecards 14-dim PASS, Gemini pendente
+- **LINT-PASS (15):** restantes — scorecard 14-dim pendente
+- **DONE (0):** nenhum slide completou QA full (Opus + Gemini)
+
+---
+
 ## O que foi feito
 
 - [x] Narrativa reestruturada (v1): 3 fases + 2 interações

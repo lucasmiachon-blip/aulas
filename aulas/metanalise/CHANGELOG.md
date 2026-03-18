@@ -4,6 +4,25 @@
 
 ---
 
+## 2026-03-17f — WT-OPERATING.md + state machine no HANDOFF
+
+Branch: `feat/metanalise-mvp`
+
+### Docs
+- **WT-OPERATING.md CRIADO:** maquina de estados (BACKLOG→DONE), checklists de transicao, QA 5-stage com checkpoints humanos, anti-drift embutido, tooling reference. Adaptado de cirrose.
+- **HANDOFF.md:** tabela "Estado dos Slides" adicionada (18 slides, 3 QA + 15 LINT-PASS)
+- **CLAUDE.md aula:** secao "Documentacao order" + "Arquivos de trabalho" adicionadas
+- **QA-WORKFLOW.md:** marcado DEPRECATED — workflow vive no WT-OPERATING.md secao 4
+
+### Adaptacoes cirrose → metanalise
+- Paths: `cirrose` → `metanalise` em todos contextos
+- Narrativa: acts (s-a1-, s-a2-) → fases (s-title, s-hook, etc.)
+- Removidos: archetypes.css, case-panel.js, CASE.md, meld-calc.js, HANDOFF-CLAUDE-AI.md, qa-batch-screenshot.mjs
+- Gemini prompt: "hepatic cirrhosis" + hepatologists → "meta-analysis critical reading" + medical residents
+- Expertise-reversal: "Congress = zero revisao basica" → "basico-intermediario, sem infantilizar"
+
+---
+
 ## 2026-03-17e — MCPs racionalizados (.mcp.json 5→7 servers)
 
 Branch: `feat/metanalise-mvp`

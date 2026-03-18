@@ -35,10 +35,27 @@ Parent: ver CLAUDE.md na raiz.
 - **Área do Lucas ≠ hepatologia** — artigo pode ser de qualquer área (ambulatório ou hospital)
 - Acesso: CAPES/USP — não precisa ser open access
 
-## Hierarquia de referência
+## Documentacao order
+
+1. **WT-OPERATING.md** — maquina de estados, checklists de transicao, QA 5-stage, anti-drift
+2. **HANDOFF.md** — estado operacional + tabela de estados por slide
+3. **CLAUDE.md** (este arquivo) — regras especificas da aula
+
+## Hierarquia de referencia
 
 narrative.md → evidence-db.md → blueprint.md → slides/
 reading-list.md (paralelo, informa pre-reading)
+
+## Arquivos de trabalho
+
+```
+slides/*.html (18 arquivos)
+slides/_manifest.js
+slide-registry.js
+metanalise.css
+```
+
+Sem archetypes.css, sem index.template.html. Build via `npm run build:metanalise`.
 
 ## Estrutura narrativa (v1)
 
