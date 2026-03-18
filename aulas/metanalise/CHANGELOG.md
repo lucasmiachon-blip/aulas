@@ -4,6 +4,38 @@
 
 ---
 
+## 2026-03-18e — s-hook v4 (grid + blackout + brutalismo + prompt template)
+
+Branch: `feat/metanalise-mvp`
+
+- s-hook CSS: flex column centered → grid 2-col assimétrico (Z-pattern)
+- Provocação esquerda, hero 41% direita, verdict full-width rodapé
+- Beat 2 blackout: fade ALL upper content (opacity 0.12), verdict toma foco
+- Verdict brutalismo: border-radius:0, padding 16px 56px, --danger bg, Instrument Serif italic
+- 146 mono: número em JetBrains Mono 72px (espelhamento tipográfico com 41%)
+- HTML: `<p>` provocação → `<div>` com `.hook-vol-number` + `.hook-vol-text` + `.hook-vol-ask`
+- slide-registry.js: hero shrink → blackout (querySelectorAll upper), retreat restaura
+- Gemini scores: v2 beauty 6.5 legibility 9.5, v3 beauty 6.5 legibility 9.0 (ITERATE)
+- Prompt template padronizado: `docs/prompts/gemini-slide-qa.md` (tags XML, rubrica, speaker notes, código pronto)
+- Bug pendente: 146 mono não renderiza (specificity CSS — debugar próxima sessão)
+
+## 2026-03-18d — s-hook refactor (hero 41% + trials concretos)
+
+Branch: `feat/metanalise-mvp`
+
+- s-hook HTML refatorado: 3-column number grid → hero number pattern (41% single dominant stat)
+- Dados trocados: Bojcic 81%/Qureshi 10% → Windish 41% (avaliacao de evidencia, nao bioestatistica)
+- Contexto adicionado: TRH, rosiglitazona, controle glicemico intensivo (trials concretos revertidos)
+- 396 praticas revertidas (Herrera-Perez 2019) como supporting context
+- Verdict visual: font-size --text-h3, margin-top --space-lg (antes --text-body, 80px)
+- metanalise.css: dead CSS removido (.hook-data-grid, .hook-data-item, .hook-data-value, .hook-data-big, .hook-data-label)
+- metanalise.css: adicionado .hook-hero (96px mono), .hook-context, .hook-context-line, .hook-context-num
+- _manifest.js: headline corrigida ("bioestatistica" → "avaliacao de evidencia")
+- evidence-db.md v5.0: 6 novas referencias (Windish, Saposnik, VITALITY/Xu, Possamai, Herrera-Perez, Ioannidis)
+- slide-punch: diagnostico ENCAIXADO (0 FAIL, 0 WARN)
+- QA.0 Content PASS, QA.1 Constraint PASS, QA.2 Visual PASS (14 dims >= 8)
+- Contrastes verificados: hero 14.15:1, label 9.20:1, verdict 10.26:1 (AAA). Context 5.75:1 (AA — WARN marginal)
+
 ## 2026-03-18c — s-title QA.3-QA.4 (Gemini approved)
 
 Branch: `feat/metanalise-mvp`

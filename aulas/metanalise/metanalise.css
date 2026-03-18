@@ -150,25 +150,45 @@ aside.notes { display: none; }
   width: 100%;
 }
 
-/* --- Hook slide: central question block --- */
+/* --- Hook slide: asymmetric grid (Z-pattern) --- */
 .hook-question {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;
   align-items: center;
   flex: 1;
-  text-align: center;
-  padding: 0 var(--space-md);
+  padding: var(--space-lg) 0;
+  gap: var(--space-md);
 }
-/* Specificity: #deck p.X (0,1,1,1) beats .stage-c #deck p (0,1,1,1) by cascade order */
-#deck p.hook-question-text {
-  font-family: var(--font-display);
-  font-size: var(--text-h2);
-  font-style: italic;
+/* Specificity: #deck .X beats .stage-c #deck p by cascade order */
+#deck .hook-question-text {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: left;
+}
+.hook-vol-number {
+  font-family: var(--font-mono);
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 1;
   color: var(--text-primary);
-  max-width: 24ch;
-  line-height: 1.25;
 }
-/* --- Hook: 2-beat state machine --- */
+#deck .hook-vol-text {
+  font-family: var(--font-display);
+  font-size: 34px;
+  font-style: italic;
+  line-height: 1.2;
+  color: var(--text-primary);
+  max-width: 18ch;
+  margin: 0;
+}
+.hook-vol-ask {
+  color: var(--text-secondary);
+}
+/* --- Hook: 3-beat state machine --- */
 .hook-beat-0 {
   opacity: 0;
   transform: translateY(20px);
@@ -178,70 +198,71 @@ aside.notes { display: none; }
   visibility: hidden;
   transform: translateY(30px);
 }
+.hook-beat-2 {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+}
 
-/* --- Hook: data container (grid + verdict) --- */
+/* --- Hook: data container (hero stat) --- */
 .hook-data {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin-top: var(--space-md);
+  align-items: flex-start;
+  transition: transform 0.6s, opacity 0.6s;
 }
 
-/* --- Hook: data grid (3 numbers) --- */
-.hook-data-grid {
-  display: flex;
-  width: 100%;
-  gap: var(--space-md);
-  justify-content: center;
-  align-items: flex-end;
-}
-.hook-data-item {
+/* --- Hook: hero number (single dominant stat) --- */
+.hook-hero {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--space-xs);
-  flex: 1;
-  min-width: 0;
 }
-#deck .hook-data-value {
+#deck .hook-hero-value {
   font-family: var(--font-mono);
-  font-size: var(--text-h2);
+  font-size: 96px;
   color: var(--text-primary);
   font-weight: 600;
   line-height: 1;
 }
-#deck .hook-data-big {
-  font-size: var(--text-h1);
-}
-#deck .hook-data-label {
-  font-family: var(--font-body);
-  font-size: var(--text-caption);
-  color: var(--text-secondary);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  font-weight: 500;
-}
-
-/* --- Hook: verdict line --- */
-#deck p.hook-verdict {
+#deck .hook-hero-label {
   font-family: var(--font-body);
   font-size: var(--text-body);
-  color: var(--ui-accent);
-  margin-top: 80px;
-  margin-inline: auto;
+  color: var(--text-secondary);
+  max-width: 20ch;
+  text-align: left;
+}
+
+/* --- Hook: verdict red-flag block (beat 2) — brutalismo editorial --- */
+#deck p.hook-verdict {
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
+  justify-self: center;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 36px;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  color: var(--text-on-dark);
+  background-color: var(--danger);
+  padding: 16px 56px;
+  border-radius: 0;
+  margin: 0;
+  max-width: none;
   text-align: center;
-  max-width: 40ch;
-  opacity: 0;
-  transform: translateY(10px);
 }
 
 /* .no-js / QA fallback for hook beats */
 .no-js .hook-beat-0,
 .no-js .hook-beat-1,
+.no-js .hook-beat-2,
 .no-js .hook-verdict,
 [data-qa] .hook-beat-0,
 [data-qa] .hook-beat-1,
+[data-qa] .hook-beat-2,
 [data-qa] .hook-verdict {
   opacity: 1 !important;
   visibility: visible !important;
@@ -607,7 +628,7 @@ aside.notes { display: none; }
 }
 @media print {
   .checkpoint--hidden,
-  .hook-beat-0, .hook-beat-1, .hook-verdict,
+  .hook-beat-0, .hook-beat-1, .hook-beat-2, .hook-verdict,
   .checkpoint-step, .checkpoint-verdict {
     opacity: 1 !important;
     visibility: visible !important;

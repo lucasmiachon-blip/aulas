@@ -139,10 +139,28 @@
 
 ### Competência dos médicos
 
-| Dado | Valor | Fonte | PMID | DOI | Tier |
-|------|-------|-------|------|-----|------|
-| Clínicos: baixa proficiência + alta confiança (n=898) | Ilusão de competência | Lakhlifi et al. Cogn Res Princ Implic 2023;8:23 | 37081292 | 10.1186/s41235-023-00474-1 | 1 |
-| Competências EBP mínimas (5-step model) | Consenso internacional | Sicily Statement. Dawes et al. BMC Med Educ 2005;5:1 | 15634359 | 10.1186/1472-6920-5-1 | 1 |
+| Dado | Valor | Fonte | PMID | DOI | Tier | Nota |
+|------|-------|-------|------|-----|------|------|
+| Residentes: acerto em bioestatística | **41,4%** (IC 95%: 39,7–43,3%) | Windish DM et al. JAMA 2007;298(9):1010-22 | 17785646 ✅ | 10.1001/jama.298.9.1010 | 1 | ✅ **EM USO no hook** (swap 146→41%). n=277 residentes clín. médica, 11 programas |
+| Residentes que acham importante saber bioestat | **95%** | Windish et al. 2007 | 17785646 ✅ | idem | 1 | vs 75% admitem não entender tudo |
+| Residentes que interpretam Kaplan-Meier corretamente | **10,5%** | Windish et al. 2007 | 17785646 ✅ | idem | 1 | RR: 81,6% acertam. OR ajustado: 37,4% |
+| Clínicos: baixa proficiência + alta confiança (n=898) | Ilusão de competência | Lakhlifi et al. Cogn Res Princ Implic 2023;8:23 | 37081292 | 10.1186/s41235-023-00474-1 | 1 | EM USO no hook (verdict) |
+| Overconfidence → erros diagnósticos/terapêuticos | **36,5–77%** dos cenários | Saposnik G et al. BMC Med Inform Decis Mak 2016;16:138 | 27809908 ✅ | 10.1186/s12911-016-0377-1 | 2 | n=6.810 médicos, 20 estudos, 19 vieses cognitivos. 71,4% estudos: vieses → erros terapêuticos |
+| Competências EBP mínimas (5-step model) | Consenso internacional | Sicily Statement. Dawes et al. BMC Med Educ 2005;5:1 | 15634359 | 10.1186/1472-6920-5-1 | 1 | |
+
+### MAs contraditas, retratadas e reversões médicas
+
+| Dado | Valor | Fonte | PMID | DOI | Tier | Nota |
+|------|-------|-------|------|-----|------|------|
+| Trials retratados → MAs mudaram direção | **8,4%** (IC 95%: 6,8–10,1%) | Xu C et al. (VITALITY). BMJ 2025;389:e082068 | 40268307 ✅ | 10.1136/bmj-2024-082068 | 1 | 1.330 trials retratados → 847 SRs → 3.902 MAs. Arsenal para hook/notes |
+| Trials retratados → MAs mudaram significância | **16,0%** (IC 95%: 14,2–17,9%) | Xu et al. (VITALITY) 2025 | 40268307 ✅ | idem | 1 | |
+| Trials retratados → magnitude mudou >50% | **15,7%** (IC 95%: 13,5–17,9%) | Xu et al. (VITALITY) 2025 | 40268307 ✅ | idem | 1 | |
+| Guidelines contaminadas por SRs com trials retratados | **68 SRs** → **157 guidelines** | Xu et al. (VITALITY) 2025 | 40268307 ✅ | idem | 1 | |
+| MAs com <10 estudos: risco maior de mudar direção | OR 2,63 (1,29–5,38) vs ≥20 estudos | Xu et al. (VITALITY) 2025 | 40268307 ✅ | idem | 1 | |
+| SRs em top-25 journals com retratados: desfecho primário mudou ≥10% | **42%** (27/64) | Possamai C et al. JAMA Intern Med 2025;185(6):702-9 | 40163084 ✅ | 10.1001/jamainternmed.2025.0256 | 1 | 61 SRs, 62 retratados. 74% retratações pós-publicação da SR |
+| SRs em top-25 journals: desfecho primário mudou ≥50% | **19%** (12/64) | Possamai et al. 2025 | 40163084 ✅ | idem | 1 | |
+| Práticas médicas revertidas em JAMA/Lancet/NEJM | **396** reversões em >3.000 RCTs | Herrera-Perez D et al. eLife 2019;8:e45183 | 31182188 ✅ | 10.7554/eLife.45183 | 1 | 92% em países de alta renda. Cardiovascular (20%) e medicamentos (33%) mais comuns |
+| Estudos altamente citados contraditos | **16%** (7/45) + 16% efeito inicial mais forte | Ioannidis JPA. JAMA 2005;294(2):218-28 | 16014596 ✅ | 10.1001/jama.294.2.218 | 1 | Landmark. 49 estudos mais citados em medicina — 1/6 contradito, 1/6 efeito inflado |
 
 ---
 
@@ -203,6 +221,7 @@
 
 | Data | Mudança |
 |------|---------|
+| 2026-03-18 | v5.0 — 6 refs adicionadas: Windish JAMA 2007 (EM USO no hook, swap 146→41%), VITALITY BMJ 2025, Possamai JAMA Intern Med 2025, Herrera-Perez eLife 2019, Saposnik BMC 2016, Ioannidis JAMA 2005. Nova seção "MAs contraditas/retratadas". Todos PMIDs ✅ |
 | 2026-03-17 | v4.3 — Candidatos S2/A7/F1-F3/G1-G5 colapsados em tabela-resumo (~200 linhas cortadas). Dados completos preservados em PMIDs |
 | 2026-03-16j | v4.2 — Autores corrigidos via PubMed: G3 Yin→Greenwood H (PMID 38588546 ✅), G5 Bosco→El-Taji O (PMID 38842801 ✅). Todos 5 PMIDs candidatos agora verificados |
 | 2026-03-16e | v4.1 — Hook dados atualizados: Siemens 88% → Bojcic 81% (cross-field); Fanaroff 8,5% → Qureshi 10% (23 sociedades). Tags CANDIDATO → EM USO. Pendente: sync Notion References DB |

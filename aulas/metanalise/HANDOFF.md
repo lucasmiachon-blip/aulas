@@ -6,21 +6,21 @@
 
 ## Estado atual
 
-- **Fase:** HTML cleanup completo. Janela limpa para QA scorecards 14-dim.
+- **Fase:** QA slide-a-slide. s-title DONE (Gemini). s-hook v4 (grid assimétrico + blackout + brutalismo + 146 mono) — Gemini ITERATE (beauty 6.5, legibility 9.0), iterando.
 - **HTML cleanup (2026-03-17d):** `data-background-color` removido de 17/18 slides (todos — deck.js ignora). `slide-navy` removido de 16/18 slides light (mantido em CP1+CP2 que TEM bg navy via CSS override). ERRO-009 documentado.
-- **QA pipeline:** ver [WT-OPERATING.md §4](WT-OPERATING.md#4-qa-sub-loop-dentro-do-estado-qa). Gates 1-4: 18/18 PASS. Scorecards formais 14-dim: 3/18 (F1). s-title QA.0-QA.4 PASS (Gemini approved). Fase 3 (dynamic): 3 pendentes (hook, CP1, CP2). Fase 4 (Gemini): s-title done, demais pendentes.
+- **QA pipeline:** ver [WT-OPERATING.md §4](WT-OPERATING.md#4-qa-sub-loop-dentro-do-estado-qa). Gates 1-4: 18/18 PASS. Scorecards formais 14-dim: 3/18 (F1). s-title QA.0-QA.4 PASS (Gemini approved). s-hook refatorado (hero 41% + trials) QA.0-QA.2 PASS, QA.3-QA.4 pendente. Fase 3 (dynamic): 3 pendentes (hook, CP1, CP2). Fase 4 (Gemini): s-title done, demais pendentes.
 - **Branch:** feat/metanalise-mvp (worktree wt-metanalise)
 - **Slides no index.html:** 18 (00-title → 01-hook → 02-contrato → 03-checkpoint-1 → 04-rs-vs-ma → 05-pico → 06-abstract → 07-forest-plot → 08-benefit-harm → 09-grade → 10-heterogeneity → 11-fixed-random → 12-checkpoint-2 → 13-ancora → 14-aplicacao → 15-aplicabilidade → 16-absoluto → 17-takehome)
 - **Slides planejados:** 18 (00-17) — ver blueprint.md v1.8
-- **Docs fundacionais:** narrative.md (v2.2), evidence-db.md (v4.3 — 20+ refs, candidatos colapsados), blueprint.md (v1.8), reading-list.md (v0.3)
+- **Docs fundacionais:** narrative.md (v2.2), evidence-db.md (v5.0 — 26+ refs, hook refs adicionadas), blueprint.md (v1.8), reading-list.md (v0.3)
 - **_manifest.js:** CRIADO — 18 slides, fases F1/I1/F2/I2/F3
-- **slide-registry.js:** CRIADO — state machines para title (choreography), hook (2-beat), checkpoint-1 (3-beat), checkpoint-2 (4-beat)
+- **slide-registry.js:** CRIADO — state machines para title (choreography), hook (3-beat: fadeUp + countUp + blackout/verdict), checkpoint-1 (3-beat), checkpoint-2 (4-beat)
 - **Orphan slides:** 0
 - **Orphan CSS:** 0
 - **Artigo âncora:** ✅ Valgimigli 2025, Clopidogrel vs Aspirina (Lancet, PMID 40902613). IPD-MA, 7 RCTs, 28.982 pts
 - **lint:slides:** ✅ PASS (zero FAILs)
 - **HEX navy:** #162032 mantido (decisao Lucas — consistencia cross-aula)
-- **CSS overrides em metanalise.css vs base.css:** `justify-content: center` restaurado + pseudo-elements desativados (ERRO-005). Checkpoint safe-center pattern proprio (ERRO-006). CSS zoom REMOVIDO — deck.js scale() é o mecanismo correto (ERRO-008). Fixed px tokens mantidos para evitar vw double-scaling. Hook: `.hook-data` flex container + `.hook-data-item { flex: 1 }` para colunas iguais + verdict `margin-top: 80px`. Checkpoint navy override: `#s-checkpoint-1/2 .slide-inner { background-color: #162032 }` + 8 on-dark tokens restaurados (ERRO-009).
+- **CSS overrides em metanalise.css vs base.css:** `justify-content: center` restaurado + pseudo-elements desativados (ERRO-005). Checkpoint safe-center pattern proprio (ERRO-006). CSS zoom REMOVIDO — deck.js scale() é o mecanismo correto (ERRO-008). Fixed px tokens mantidos para evitar vw double-scaling. Hook v4: grid assimétrico 2-col (Z-pattern), `.hook-vol-number` 72px mono, verdict brutalismo (`--danger`, border-radius:0), blackout beat 2. Dead CSS removido. Checkpoint navy override: `#s-checkpoint-1/2 .slide-inner { background-color: #162032 }` + 8 on-dark tokens restaurados (ERRO-009).
 - **Backlog CSS:** 13 refs `--on-dark` tokens em CSS de slides light (funcional via stage-c remap, naming misleading). Nao bloqueia QA — registrado para cleanup futuro.
 
 ## Estado dos Slides (maquina de estados — WT-OPERATING.md)
@@ -33,7 +33,7 @@
 | # | Slide | Estado | Notas |
 |---|-------|--------|-------|
 | 1 | s-title | QA | QA.0-QA.4 PASS. Gemini approved (beauty 9, legibility 10). Choreography + masking. |
-| 2 | s-hook | QA | Scorecard 14-dim PASS (Opus). Gemini pendente. |
+| 2 | s-hook | QA | v4: grid assimétrico + blackout + brutalismo + 146 mono. Gemini v2=6.5, v3=6.5 (ITERATE). Iterando. |
 | 3 | s-contrato | QA | Scorecard 14-dim PASS (Opus). Gemini pendente. |
 
 ### I1 — Checkpoint engajamento (1 slide)

@@ -74,48 +74,35 @@ Scorecards formais serao preenchidos durante ralph-qa batches 2-6 (proximas sess
 
 ## s-hook (01-hook.html)
 
-**Status:** PASS (re-audit 2026-03-18 — Playwright + contraste verificado)
+**Status:** QA.0-QA.2 PASS (refatorado 2026-03-18d). QA.3-QA.4 Gemini pendente.
 **Archetype:** hook — dims E, P intencionalmente baixas
+**Refactor (2026-03-18d):** 3-column number grid → hero number pattern. Dados: Bojcic/Qureshi → Windish 41%. Contexto: trials concretos (TRH, rosiglitazona, NICE-SUGAR) + 396 reversoes.
 
 | Dim | Score | Nota |
 |-----|-------|------|
-| H (hierarquia) | 9 | Question 34px italic serif > Values 34-38px mono 600 > Labels 14px uppercase > Verdict 20px accent > Source 14px muted. 81% hero (38px) = Von Restorff |
-| T (tipografia) | 9 | 3 familias: Instrument Serif italic (question), JetBrains Mono 600 (numeros), DM Sans (labels/verdict). Excelente contraste tipografico |
-| E (layout fill) | 5 | ~50% — intencional para hook (respiro dramatico) |
-| C (cor/contraste) | 9 | Question 17.6:1, Values 17.6:1, Labels 13.8:1, Verdict 10.0:1, Source 8.6:1. Todos ≥ 7:1. Verificado via a11y-contrast |
-| V (visuais) | 8 | 3 countUp hero numbers — impacto. 81% hero size |
-| K (consistência) | 9 | Padrao hook |
-| S (sofisticação) | 9 | 2-beat state machine declarativa. .no-js + print fallbacks. Sem AI markers |
-| M (comunicação) | 9 | Provocacao → dados → punchline — arco completo em 1 slide |
-| I (interações) | 9 | 2-beat state machine (beat0 auto fadeUp, beat1 click reveal + countUp). QA mode: beats forcados via JS (engine.js nao seta [data-qa] — pendencia main) |
-| D (dados) | 9 | 3 dados Tier 1 verificados: Hoffmann PMID 34091022, Bojcic PMID 37931822, Qureshi PMID 41428154 |
-| A (acessibilidade) | 9 | Todos contrastes ≥ 8.6:1. Axe-core 0 violations. Labels uppercase legiveis |
-| L (carga cognitiva) | 9 | 3 dados + 1 verdict = dentro do 4±1 Cowan |
-| P (andragogia) | 8 | Retrieval practice (pergunta antes de resposta) |
-| N (arco narrativo) | 9 | Hook forte, cria tensao para Fase 1 |
-
-**Fixes aplicados (sessoes anteriores):**
-- ERRO-003 corrigido: 88%→81% (Bojcic 2024), 8.5%→10% (Qureshi 2025)
-- Especificidade `#deck p` corrigida (question text era 20px, agora --text-h2)
-- Tokens: bulk fix --text-on-dark → --text-primary/secondary
-- Source-tag centering fix: `#deck p.source-tag` com `max-width: none; width: 100%`
-
-**Fix aplicado (2026-03-18):**
-- CSS `[data-qa]` selectors adicionados para `.hook-beat-0`, `.hook-beat-1`, `.hook-verdict` (paridade com checkpoint). Pendente: engine.js setar `[data-qa]` no body (fix para main/shared)
+| H (hierarquia) | 9 | Question 34px italic serif > Hero 96px mono 600 > Label 20px sans > Context 16px muted > Verdict 24px accent > Source 14px muted. Von Restorff no 41% |
+| T (tipografia) | 9 | 3 familias: Instrument Serif italic (question), JetBrains Mono 600 (hero), DM Sans (label/context/verdict). Excelente contraste tipografico |
+| E (layout fill) | 5 | ~55% — intencional para hook (respiro dramatico) |
+| C (cor/contraste) | 8 | Hero 14.15:1 AAA, Label 9.20:1 AAA, Verdict 10.26:1 AAA, Context/source 5.75:1 AA (WARN: abaixo de 6:1 para projecao). Verificado via a11y-contrast MCP |
+| V (visuais) | 8 | Single hero countUp 41% — impacto dominante. Sem imagens (texto-only hook) |
+| K (consistencia) | 9 | Padrao hook. Source tag bottom |
+| S (sofisticacao) | 9 | 2-beat state machine (slide-registry.js). countUp 1.5s + verdict delay 1.8s. .no-js + [data-qa] + print fallbacks |
+| M (comunicacao) | 9 | Provocacao → hero punch → trials concretos → verdict. Arco emocional completo |
+| I (interacoes) | 9 | 2-beat state machine (beat0 auto fadeUp, beat1 click → hero + context + verdict delayed). QA mode: [data-qa] selectors |
+| D (dados) | 9 | 7 dados Tier 1 verificados: Hoffmann PMID 34091022, Windish PMID 17785646, Herrera-Perez PMID 31182188, WHI PMID 12117397, Nissen PMID 17517853, NICE-SUGAR PMID 19318384, Lakhlifi PMID 37081292 |
+| A (acessibilidade) | 9 | Primary text AAA (>9:1). Context/source 5.75:1 AA — marginal para projecao mas aceitavel para texto secundario |
+| L (carga cognitiva) | 9 | 1 hero number + 2 context lines + 1 verdict = dentro do 4+-1 Cowan |
+| P (andragogia) | 9 | Retrieval practice (pergunta antes de resposta). Trials concretos criam personal stake |
+| N (arco narrativo) | 9 | Hook forte — "por que essa aula existe". Transicao natural para s-contrato |
 
 **Pendencias para Gemini (Gate 4):**
 - Instrument Serif italic na provocacao — legibilidade a 5m em sala iluminada?
-- Labels uppercase 14px ("CRITICAMENTE BAIXAS") — legibilidade em projetor?
-- Sufixo % nos numeros — tratamento tipografico?
-- Distribuicao vertical — validar em projecao real
-- margin-top 80px no verdict — gap adequado?
+- Hero 96px mono — proporcional ao canvas 1280px?
+- Context lines wrapping a 1280px — verificar em projecao real
+- "396 praticas revertidas em JAMA, Lancet e NEJM" — Lucas considera abstrato, pode ajustar nos speaker notes
+- Verdict delay 1.8s — timing adequado apos countUp?
 
-**Pendencias operacionais:** ✅ TODAS RESOLVIDAS (verificado 2026-03-17)
-
-**Screenshots:** `qa-screenshots/s01-hook-final.png` (estado final forcado via Playwright)
-- ~~Sync Notion References DB: Bojcic e Qureshi mudar de CANDIDATO → EM USO~~ ✅ Notion sync feito (2026-03-16i, timestamp 23:16). Bojcic highlight confirma "EM USO no hook".
-- ~~narrative.md atualizado (dados do hook)~~ ✅ Linha 51: 146/dia, Bojcic 81%, Qureshi 10%
-- ~~evidence-db.md atualizado (Bojcic/Qureshi: CANDIDATO → EM USO)~~ ✅ v4.1 (linhas 126, 137)
+**Screenshots:** `qa-screenshots/s-hook/beat0-1280x720.png`, `qa-screenshots/s-hook/beat1-final-1280x720.png`, `qa-screenshots/s-hook/beat1-1920x1080.png`
 
 ---
 

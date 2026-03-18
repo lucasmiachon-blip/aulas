@@ -5,34 +5,27 @@
     <div class="hook-question">
 
       <!-- BEAT 0: A provocação (auto, fadeUp no enter) -->
-      <p class="hook-question-text hook-beat-0">
-        146 revisões sistemáticas por dia.<br>
-        Quantas você consegue avaliar?
-      </p>
-
-      <!-- BEAT 1: Os 3 números (click para revelar) -->
-      <div class="hook-data hook-beat-1">
-        <div class="hook-data-grid">
-          <div class="hook-data-item">
-            <span class="hook-data-value" data-animate="countUp" data-target="146">0</span>
-            <span class="hook-data-label">SRs/dia em 2021</span>
-          </div>
-          <div class="hook-data-item">
-            <span class="hook-data-value hook-data-big" data-animate="countUp" data-target="81" data-suffix="%">0</span>
-            <span class="hook-data-label">criticamente baixas</span>
-          </div>
-          <div class="hook-data-item">
-            <span class="hook-data-value" data-animate="countUp" data-target="10" data-suffix="%">0</span>
-            <span class="hook-data-label">guidelines com LoE forte</span>
-          </div>
-        </div>
-        <p class="hook-verdict">
-          Alta confiança, baixa acurácia.
-        </p>
+      <div class="hook-question-text hook-beat-0">
+        <span class="hook-vol-number">146</span>
+        <p class="hook-vol-text">revisões sistemáticas por dia.<br>
+        <span class="hook-vol-ask">Quantas você consegue avaliar?</span></p>
       </div>
 
+      <!-- BEAT 1: O punch (click para revelar) -->
+      <div class="hook-data hook-beat-1">
+        <div class="hook-hero">
+          <span class="hook-hero-value" data-animate="countUp" data-target="41" data-suffix="%">0</span>
+          <span class="hook-hero-label">dos residentes avaliam evidência corretamente</span>
+        </div>
+      </div>
+
+      <!-- BEAT 2: O veredito (click para revelar) -->
+      <p class="hook-verdict hook-beat-2">
+        Alta confiança, baixa acurácia.
+      </p>
+
     </div>
-    <p class="source-tag">Hoffmann 2021 · Bojcic 2024 · Qureshi 2025 · Lakhlifi 2023</p>
+    <p class="source-tag">Windish 2007 · Herrera-Perez 2019 · Hoffmann 2021 · Lakhlifi 2023</p>
   </div>
 
   <aside class="notes">
@@ -42,26 +35,31 @@ Isso é dado de 2021. Hoje? Mais ainda."
 PAUSA 3s.
 "Quantas vocês conseguem avaliar criticamente?"
 
-[BEAT 1 · click] Os números
-"146 por dia em 2021 — mais de 53 mil por ano. E o número só cresce."
+[BEAT 1 · click] O punch
+"Quando testados em avaliação de evidência, residentes acertam 41%."
+PAUSA 3s.
+"TRH — décadas de MAs observacionais diziam proteção cardiovascular.
+O WHI, com 16 mil mulheres, mostrou o oposto: aumento de risco."
+"Rosiglitazona — uma MA no NEJM restringiu o medicamento por risco de IAM.
+Depois foi parcialmente revertida."
+"Controle glicêmico intensivo em UTI — Van den Berghe dizia benefício.
+NICE-SUGAR, com 6 mil pacientes, mostrou aumento de mortalidade."
 PAUSA.
-"81% dessas revisões têm qualidade criticamente baixa pelo AMSTAR-2."
-"E das recomendações das grandes guidelines — 23 sociedades médicas americanas —
-só 10% são baseadas em evidência forte."
-PAUSA.
-"E o pior: quando testamos clínicos, a proficiência estatística é baixa,
-mas a confiança é alta. Mesmo nas respostas erradas."
-"Isso se chama ilusão de competência."
-ÊNFASE: "Essa aula existe porque vocês vão encontrar MAs no dia a dia
+"396 práticas médicas revertidas só em JAMA, Lancet e NEJM."
+"E a confiança? Alta. Mesmo nas respostas erradas. Ilusão de competência."
+ÊNFASE: "Essa aula existe porque vocês vão ler MAs no dia a dia
 e precisam saber separar o diamante de verdade do diamante de vidro."
 
 [TRANSIÇÃO] → slide 02 (contrato)
 
 [DATA] Fontes:
-- 146/dia: Hoffmann et al. J Clin Epidemiol 2021;138:1-11, PMID 34091022 (53.208 SRs em 2021; em 2019 eram ~80/dia)
-- 81% criticamente baixa: Bojcic et al. J Clin Epidemiol 2024;165:111210, PMID 37931822 (35/43 SRs, cross-field, AMSTAR-2)
-- 10% LoE forte: Qureshi et al. JGIM 2025, PMID 41428154 (768/7.582 recomendações, 23 sociedades EUA, 2019-2023)
+- 146/dia: Hoffmann et al. J Clin Epidemiol 2021;138:1-11, PMID 34091022 (53.208 SRs em 2021)
+- 41% acerto: Windish DM et al. JAMA 2007;298(9):1010-22, PMID 17785646 (n=277 residentes, 11 programas)
+- 396 reversões: Herrera-Perez D et al. eLife 2019;8:e45183, PMID 31182188 (>3.000 RCTs em JAMA/Lancet/NEJM)
+- TRH/WHI: WHI Writing Group. JAMA 2002;288(3):321-33, PMID 12117397 (n=16.608)
+- Rosiglitazona: Nissen SE, Wolski K. NEJM 2007;356(24):2457-71, PMID 17517853 (42 RCTs, OR IAM 1,43)
+- NICE-SUGAR: NICE-SUGAR Study Investigators. NEJM 2009;360(13):1283-97, PMID 19318384 (n=6.104)
 - Ilusão de competência: Lakhlifi et al. Cogn Res 2023;8:23, PMID 37081292 (n=898)
-| Verificado: 2026-03-16 | Atualizado: ERRO-003 corrigido
+| Verificado: 2026-03-18 | Atualizado: refactor hero + trials concretos
   </aside>
 </section>

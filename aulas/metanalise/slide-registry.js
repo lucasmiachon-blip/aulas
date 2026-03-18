@@ -49,18 +49,20 @@ export const slideRegistry = {
   's-hook': (slide, gsap) => {
     const beat0 = slide.querySelector('.hook-beat-0');
     const beat1 = slide.querySelector('.hook-beat-1');
-    const verdict = slide.querySelector('.hook-verdict');
+    const beat2 = slide.querySelector('.hook-beat-2');
     if (!beat0 || !beat1) return;
 
     let state = 0;
-    const MAX = 1;
+    const MAX = 2;
 
+    // Beat 0: auto fadeUp on slide enter
     gsap.to(beat0, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' });
 
     function advance() {
       if (state >= MAX) return false;
       state++;
       if (state === 1) {
+        // Beat 1: hero 41% with countUp
         gsap.set(beat1, { visibility: 'visible' });
         gsap.to(beat1, { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out' });
         beat1.querySelectorAll('[data-animate="countUp"]').forEach(el => {
@@ -81,17 +83,28 @@ export const slideRegistry = {
             }
           });
         });
-        if (verdict) {
-          gsap.to(verdict, { y: 0, opacity: 1, duration: 0.6, delay: 1.8, ease: 'power3.out' });
-        }
+      }
+      if (state === 2 && beat2) {
+        // Beat 2: blackout — fade ALL upper content, verdict takes focus
+        const upper = slide.querySelectorAll('.hook-question-text, .hook-data');
+        gsap.to(upper, { opacity: 0.12, scale: 0.95, duration: 0.7, ease: 'power2.inOut' });
+        gsap.set(beat2, { visibility: 'visible' });
+        gsap.to(beat2, { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out', delay: 0.2 });
       }
       return true;
     }
 
     function retreat() {
       if (state <= 0) return false;
+      if (state === 2 && beat2) {
+        gsap.to(beat2, { opacity: 0, duration: 0.3 });
+        gsap.set(beat2, { visibility: 'hidden', delay: 0.3 });
+        // Restore upper content from blackout
+        const upper = slide.querySelectorAll('.hook-question-text, .hook-data');
+        gsap.to(upper, { opacity: 1, scale: 1, duration: 0.4, ease: 'power3.out' });
+      }
       if (state === 1) {
-        gsap.to([beat1, verdict].filter(Boolean), { opacity: 0, duration: 0.3 });
+        gsap.to(beat1, { opacity: 0, duration: 0.3 });
         gsap.set(beat1, { visibility: 'hidden', delay: 0.3 });
       }
       state--;
