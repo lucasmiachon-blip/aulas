@@ -55,7 +55,7 @@
 | **Visual QA** | Gemini 3.1 Pro | VideoMME 84.8% · APEX Agents #1 · SVG | ❌ Relatório visual |
 | **Auditor narrativo** | GPT-5.4 (ChatGPT Agent) | OSWorld 75% · BrowseComp 82.7% · navega produto real | ❌ Impressões e tom |
 | **Pesquisador** | Perplexity Ultra / Computer | Web real-time · roda horas overnight | ❌ Dados e PMIDs |
-| **Verificador de citações** | Scite MCP | Supporting/contradicting por artigo | ❌ Score de evidência |
+| **Verificador de citações** | Scite MCP (perfil `full`) | Supporting/contradicting por artigo | ❌ Score de evidência |
 
 ### Regras da aliança
 1. **Só Claude Code edita e commita** — todos os outros produzem relatórios
@@ -75,12 +75,12 @@
 | **Gemini 3.1 Flash-Lite** | Lint · quick fix · batch | gemini MCP | ✅ Ativo |
 | **Perplexity Computer** | Orquestração multi-agente | — | ⏳ $200/mês Max |
 | **ChatGPT Agent** (GPT-5.4) | Browser QA · auditor clínico/narrativo (nunca edita) | — | ✅ Disponível |
-| **Perplexity Ultra** | Pesquisa em tempo real | Sim | ✅ Ativo |
-| **Scite** | Citações | Sim | ✅ MCP streamableHttp |
-| **Consensus** | Meta-análises | — | Manual |
+| **Perplexity Ultra** | Pesquisa em tempo real | always-on | ✅ Ativo |
+| **Scite** | Citações | Sim | ⏳ Perfil `full` (streamableHttp) |
+| **Consensus** | Meta-análises | Built-in | ✅ `mcp__claude_ai_Consensus` |
 | **Elicit** | Extração de papers | — | Manual |
-| **Notion** | Specs · Bíblia · References | Sim | ✅ MCP |
-| **Zotero** | Referências | Sim | ✅ MCP |
+| **Notion** | Specs · Bíblia · References | Built-in | ✅ `mcp__claude_ai_Notion` |
+| ~~**Zotero**~~ | ~~Referências~~ | ~~Removido~~ | ❌ Removido 2026-03-17 — usar Notion References DB |
 | **Canva Pro** | Assets visuais | — | Manual |
 | **Excalidraw** | Diagramas · storyboards | — | Notion embed |
 
@@ -158,8 +158,8 @@
 ## Como Atualizar
 
 1. **Nova ferramenta:** Adicionar nesta tabela com uso + se tem MCP
-2. **MCP novo:** Configurar em `.cursor/mcp.json`, testar `claude mcp list`
-3. **Skill novo:** Criar em `.cursor/skills/[nome]/SKILL.md` (ver [docs/SKILLS.md](SKILLS.md))
-4. **Rule novo:** Criar em `.cursor/rules/[nome].mdc` (ver [docs/RULES.md](RULES.md))
+2. **MCP novo:** Configurar em `.mcp.json` (always-on) ou `.mcp-profiles/{profile}.json` (sob demanda). Testar `claude mcp list`
+3. **Skill novo:** Criar em `.claude/skills/[nome]/SKILL.md` (ver [docs/SKILLS.md](SKILLS.md))
+4. **Rule novo:** Criar em `.claude/rules/[nome].md` (ver [docs/RULES.md](RULES.md))
 5. **Busca semanal:** Rodar prompt em `docs/prompts/weekly-updates.md`
 6. **Benchmarks:** Verificar [arena.ai/leaderboard](https://arena.ai/leaderboard/code) mensalmente

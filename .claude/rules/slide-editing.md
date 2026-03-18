@@ -13,7 +13,7 @@ Antes de editar QUALQUER slide:
 - [ ] Tags balanceadas
 - [ ] Dados numéricos verificados (ver `medical-data.md`)
 - [ ] Layout em `.slide-inner`, não no `<section>`
-- [ ] Background: `data-background-color` HEX (Reveal legacy) ou CSS class (deck.js)
+- [ ] Background escuro: CSS `background-color` no seletor `#slide-id .slide-inner` (deck.js). NUNCA `data-background-color` (ignorado pelo deck.js)
 - [ ] Se bg escuro: `.slide-inner` tem `.slide-navy`
 - [ ] Sem CDN links
 - [ ] Animações via `data-animate`, NUNCA gsap inline
@@ -54,7 +54,7 @@ Antes de declarar slide "done", verificar:
 Validação automática: `npm run lint:narrative-sync`
 
 Para mudanças em slides narrativeCritical, usar protocolo Decision Record:
-ver `references/decision-protocol.md`
+ver `aulas/cirrose/references/decision-protocol.md` (cirrose only — outras aulas: registrar decisao em NOTES.md)
 
 ---
 

@@ -54,7 +54,7 @@ Lançar 4 subagents simultaneamente, cada um com foco único:
 - Espaçamento usa `--space-*`?
 - `.slide-inner` wrapper presente?
 - Slides escuros usam `.slide-navy`?
-- Background via `data-background-color` com HEX literal?
+- Background escuro via CSS `background-color` no seletor do slide (deck.js)? NUNCA `data-background-color` em aulas deck.js
 - Sem `display` inline no `<section>` (E07)?
 
 **Agent D — Acessibilidade + Speaker Notes**

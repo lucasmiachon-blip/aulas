@@ -49,10 +49,10 @@ MAX 3 iterações por slide. Se não atingir após 3 → escalar para Lucas com 
 | `mcp:playwright browser_console_messages` | Erros JS |
 | `mcp:lighthouse run_audit(url, ['accessibility'])` | Score Lighthouse a11y |
 | `mcp:eslint lint-files` | Qualidade JS |
-| `mcp:perplexity perplexity_reason` | Avaliação pedagógica (CLT, Mayer, Knowles, Miller) |
-| `mcp:ui-ux-pro` | Padrões UX: tipografia, espaçamento, cores, landing patterns (103 styles, 170 UX guidelines) |
-| `mcp:design-comparison compare(before, after)` | Pixel diff GRATUITO — before/after CSS fixes, % de diferença, imagem diff |
-| `mcp:floto compare_design(design, impl)` | Smart diff semântico — AI detecta discrepâncias visuais além de pixels (requer FLOTO_API_KEY) |
+| `mcp:perplexity perplexity_reason` | Avaliação pedagógica (CLT, Mayer, Knowles, Miller) · **Requer perfil dev+ (always-on)** |
+| `mcp:ui-ux-pro` | Padrões UX: tipografia, espaçamento, cores, landing patterns · **Requer perfil `full`** |
+| `mcp:design-comparison compare(before, after)` | Pixel diff GRATUITO · **Requer perfil `qa` ou `full`** |
+| `mcp:floto compare_design(design, impl)` | Smart diff semântico · **Requer perfil `qa` ou `full`** (+ FLOTO_API_KEY) |
 | ~~`mcp:attention-insight`~~ | **NÃO usar a princípio** — clarity/focus score (sharp fallback ou API paga) |
 | ~~`mcp:frontend-review` (Hyperbolic)~~ | **NÃO usar a princípio** — before/after visual diff via Qwen-VL |
 | `Bash: npm run lint:slides` | Assertion-evidence lint |

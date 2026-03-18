@@ -391,9 +391,7 @@ Modelos disponiveis (Tier 1):
 
 | Modelo | Uso recomendado |
 |--------|-----------------|
-| gemini-2.5-flash | Per-slide visual audit (rapido, barato) |
-| gemini-2.5-pro | Analise profunda se flash insuficiente |
-| gemini-3.1-pro-preview | Deck-level cross-slide (melhor visual reasoning) |
+| gemini-3.1-pro | **Unico modelo.** Visual audit, cross-slide, analise profunda. $2/M input. |
 
 ### API Keys
 

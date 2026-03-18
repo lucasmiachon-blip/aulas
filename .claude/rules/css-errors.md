@@ -1,6 +1,6 @@
 # CSS Errors — Registry & Prevention
 
-> 35 erros em 5 clusters. Canônico para erros e prevenção.
+> 32 erros (E01-E34, exceto E04/E29 reservados) em 5 clusters. Canônico para erros e prevenção.
 > Relacionados: [design-system](design-system.md) · [medical-data](medical-data.md) · [slide-editing](slide-editing.md)
 > Prioridade: MUST = fatal/bloqueante | SHOULD = alta | MAY = nice-to-have
 

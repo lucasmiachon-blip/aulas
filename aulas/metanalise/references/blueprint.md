@@ -2,7 +2,7 @@
 
 > Espinha de slides. Cada entrada = 1 slide-núcleo.
 > Assertion-evidence: h2 = afirmação verificável, nunca rótulo genérico.
-> Derivado de: narrative.md v1 (3 fases + 2 interações).
+> Derivado de: narrative.md v2.2 (3 fases + 2 interações).
 > Reestruturado: 2026-03-13.
 
 ---

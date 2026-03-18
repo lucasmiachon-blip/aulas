@@ -5,11 +5,17 @@ tools:
   - Read
   - Write
   - Bash
-  - mcp:pubmed
-  - mcp:crossref
-  - mcp:notion
-  - mcp:scite
-  - mcp:zotero
+  - mcp__claude_ai_PubMed__search_articles
+  - mcp__claude_ai_PubMed__get_article_metadata
+  - mcp__claude_ai_PubMed__convert_article_ids
+  - mcp__claude_ai_Notion__notion-search
+  - mcp__claude_ai_Notion__notion-create-pages
+  - mcp__claude_ai_Notion__notion-update-page
+  - mcp__claude_ai_Notion__notion-query-database-view
+  - WebSearch
+  - WebFetch
+# Profile: dev (built-ins). crossref/scite → npm run mcp:research ou mcp:full
+# Zotero removido (2026-03-17) — usar Notion References DB
 model: opus-4.6
 ralph_phase: act
 ---
@@ -49,13 +55,12 @@ Campos obrigatórios: Name, PMID, DOI, AMA Citation, Tier, GRADE Certainty, Rele
 ```bash
 # 1. Ler tasks/reference-check-report.md (output do reference-checker). Se não existe: escanear slides HTML direto.
 # 2. Parse da tabela de PMIDs/DOIs como input
-# 3. Validar cada PMID via PubMed MCP
-# 4. Validar cada DOI via CrossRef MCP
-# 5. Via Scite MCP: checar se paper tem citações contradicting (flag se >5)
+# 3. Validar cada PMID via PubMed built-in (mcp__claude_ai_PubMed__get_article_metadata)
+# 4. Validar cada DOI via WebSearch doi.org (CrossRef MCP se perfil research/full ativo)
+# 5. Se Scite disponível (perfil full): checar citações contradicting (flag se >5)
 # 6. Formatar AMA
-# 7. Cadastrar no Notion MCP (References DB)
+# 7. Cadastrar no Notion built-in (mcp__claude_ai_Notion__notion-create-pages)
 # 8. Resolver [TBD]/[REF-n] em slides HTML
-# 9. Se Zotero MCP disponível: exportar bibliografia atualizada
 ```
 
 ## Formato AMA

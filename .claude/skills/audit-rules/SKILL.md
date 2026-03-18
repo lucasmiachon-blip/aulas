@@ -9,7 +9,7 @@ allowed-tools: Read, Grep, Glob
 
 # audit-rules — Auditoria de Regras
 
-Audita os 8 rules files em `.claude/rules/*.md` contra o estado real do projeto.
+Audita os 10 rules files em `.claude/rules/*.md` contra o estado real do projeto.
 
 **Complementar ao `/evolve`:** evolve audita o ecossistema inteiro (skills, docs, tools, deps). audit-rules foca estreito e profundo nas rules.
 
@@ -32,7 +32,7 @@ Audita os 8 rules files em `.claude/rules/*.md` contra o estado real do projeto.
 ### 1. Coletar inputs (paralelo)
 
 ```
-Read: .claude/rules/*.md (8 files)
+Read: .claude/rules/*.md (10 files)
 Read: tasks/lessons.md
 Read: aulas/{aula}/ERROR-LOG.md (e outras aulas se existirem)
 Glob: .cursor/rules/*.mdc (para check de bloat)

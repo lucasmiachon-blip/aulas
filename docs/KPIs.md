@@ -111,7 +111,7 @@ SVG animado (novo)              → Gemini 3.1 Pro            SVG nativo a parti
 | Anti-padrão | Por que causa retrabalho | Handoff correto |
 |-------------|--------------------------|-----------------|
 | Gerar HTML de slide no chat (não Claude Code) | Claude Code conhece assertion-evidence + archetypes; chat não tem contexto do codebase | Claude Code (você, aqui) |
-| Pedir CSS fix via linguagem natural sem screenshot | Modelo corrige sem ver o resultado; nova rodada inevitável | Gemini 2.5 Flash com imagem ou Playwright MCP |
+| Pedir CSS fix via linguagem natural sem screenshot | Modelo corrige sem ver o resultado; nova rodada inevitável | Gemini 3.1 Pro com imagem ou Playwright MCP |
 | Usar Perplexity Computer para edição em tempo real | Latência de agente longo ≠ iteração rápida de slide | Para overnight batch; edição rápida = Claude Code |
 | Dado clínico sem fonte no mesmo prompt | Revisão humana para verificar = ciclo extra | MCP PubMed/Scite primeiro, depois criar slide |
 | Sessão >70% contexto sem /compact | Detalhe se perde silenciosamente; próximo comando já não sabe o que foi feito | /compact com foco na task atual |

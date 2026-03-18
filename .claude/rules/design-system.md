@@ -30,7 +30,7 @@
 }
 ```
 
-**HEX canônicos** (para `data-background-color`):
+**HEX canônicos** (para CSS `background-color` em deck.js, ou `data-background-color` em Reveal legacy):
 ```
 --bg-navy    = #0d1a2d
 --bg-surface = #f5f5f7
@@ -175,6 +175,8 @@ Referência: Paul Tol color schemes (https://personal.sron.nl/~pault/)
   --text-caption: clamp(11px, 0.7vw, 15px);
 }
 ```
+
+> **AVISO deck.js:** `vw` computa contra viewport, nao o canvas 1280px. Em deck.js (`transform: scale()`), causa double-scaling (ERRO-008). Usar **px fixo** em aulas deck.js. Clamp acima e referencia para Reveal legacy ou design tokens em `base.css`.
 
 ### Hierarquia
 

@@ -4,7 +4,7 @@ description: Busca evidências clínicas no PubMed para slides. Use quando o usu
 version: 0.2.0
 context: fork
 agent: general-purpose
-allowed-tools: Read, WebSearch
+allowed-tools: Read, WebSearch, WebFetch, mcp__claude_ai_PubMed__search_articles, mcp__claude_ai_PubMed__get_article_metadata, mcp__claude_ai_PubMed__get_full_text_article, mcp__claude_ai_Consensus__search
 argument-hint: "[query clínica]"
 ---
 
@@ -14,7 +14,7 @@ Busca evidência clínica para: `$ARGUMENTS`
 
 ## Passos
 
-1. Buscar PubMed MCP (se disponível) com filtros:
+1. Buscar PubMed built-in (`mcp__claude_ai_PubMed__search_articles`) com filtros:
    - `randomized controlled trial[pt]`
    - `meta-analysis[pt]`
    - `practice guideline[pt]`
