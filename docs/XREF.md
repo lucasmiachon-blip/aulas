@@ -2,7 +2,7 @@
 
 > Mapa canônico de dependências entre documentos do projeto.
 > Atualizar ao criar, mover ou deletar qualquer .md.
-> Gerado: 2026-03-07. Última revisão: 2026-03-17.
+> Gerado: 2026-03-07. Última revisão: 2026-03-18.
 
 ---
 
@@ -21,7 +21,7 @@ CLAUDE.md (root)              ← fonte de verdade operacional (absorveu AGENTS.
 ├── .claude/rules/*.md        ← regras detalhadas (prevalecem sobre .cursor se mais completas)
 ├── .claude/hooks/*.sh        ← safety gates determinísticos (100% enforcement)
 ├── .claude/scripts/*.sh      ← worktree lifecycle (init, cleanup)
-├── .claude/skills/*/SKILL.md ← skills invocáveis (18 ativas)
+├── .claude/skills/*/SKILL.md ← skills invocáveis (18 ativas + 2 archived)
 ├── .cursor/rules/*.mdc       ← regras Cursor (quick-ref com globs)
 ├── docs/*.md                 ← referência expandida
 └── aulas/*/HANDOFF.md        ← estado por aula
@@ -95,6 +95,18 @@ CLAUDE.md (root)              ← fonte de verdade operacional (absorveu AGENTS.
 | prompts/openai-backward-design.md | (prompt template — OpenAI) | ← README.md |
 | prompts/openai-canvas-storyboard.md | (prompt template — OpenAI) | ← README.md |
 | external/11-long-context-auditor.md | (tool spec — Gemini long-context) | ← README.md |
+
+### .claude/agents/ (custom subagents)
+
+| Arquivo | MCPs scoped | Papel |
+|---------|------------|-------|
+| qa-engineer.md | playwright, lighthouse, eslint, perplexity, ui-ux-pro, design-comparison, floto | QA perfection loop 14 dimensoes |
+| reference-manager.md | pubmed, crossref, notion, scite, zotero | Valida PMIDs/DOIs, formata AMA, sync Notion |
+| medical-researcher.md | pubmed, crossref, semantic-scholar, scite, biomcp | Pesquisa profunda multi-MCP + triangulacao + rubrica profundidade |
+| notion-sync.md | notion | Sync Slides DB repo ↔ Notion |
+| slide-builder.md | playwright | Build slides HTML |
+| repo-janitor.md | — | Audit orphan files, broken links |
+| verifier.md | — | Valida que trabalho declarado done realmente passa |
 
 ### .claude/hooks/ (safety gates — determinísticos)
 
@@ -219,6 +231,7 @@ CLAUDE.md (root)              ← fonte de verdade operacional (absorveu AGENTS.
 | Pedagogia | docs/slide-pedagogy.md | .claude/rules/design-principles.md |
 | KPIs multiagente | docs/KPIs.md | — |
 | Benchmarks modelos | docs/ECOSYSTEM.md | — |
+| Pesquisa médica profunda | .claude/skills/medical-researcher/SKILL.md | .claude/rules/medical-data.md, docs/MCP-ACADEMICOS.md |
 | Safety gates (hooks) | .claude/settings.json + .claude/hooks/ | — |
 | WT protocol | aulas/*/CLAUDE.md § Worktree | .claude/scripts/ |
 | Audit trail | .claude/hooks/audit-trail.sh | ~/.claude/session-logs/ |

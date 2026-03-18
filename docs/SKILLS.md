@@ -1,6 +1,6 @@
 # Skills — Melhores Práticas
 
-> Baseado em: docs oficiais Anthropic Claude Code (mar 2026) + Cursor Docs. Última atualização: 2026-03-17.
+> Baseado em: docs oficiais Anthropic Claude Code (mar 2026) + Cursor Docs. Última atualização: 2026-03-18.
 
 ---
 
@@ -86,28 +86,36 @@ disable-model-invocation: true  # opcional — só invocação manual
 
 ## Skills do Projeto
 
-### Claude Code (`.claude/skills/`)
+### Claude Code (`.claude/skills/`) — 19 ativas
 
 | Skill | version | context | allowed-tools | Papel |
 |-------|---------|---------|---------------|-------|
-| `assertion-evidence` | 0.2.0 | — | Read, Grep, Glob | Valida formato assertion-evidence em slides HTML |
-| `medical-data` | 0.2.0 | — | Read, Grep | Verifica dados clínicos: trial, IC95%, PMID obrigatórios |
-| `docs-audit` | 0.2.0 | fork / general-purpose | Read, Grep, Glob | Audita docs/*.md: links, redundância, token economy |
-| `review` | 0.2.0 | fork / Explore | Read, Grep, Glob | Audita slides: PASS/WARN/FAIL por dimensão |
 | `evidence` | 0.2.0 | fork / general-purpose | Read, WebSearch | Busca evidências PubMed → citação AMA + dados slide |
+| `medical-researcher` | 1.0.0 | fork / general-purpose | Read, Grep, Glob, Agent, WebSearch, WebFetch | Orquestrador multi-MCP: 4 agentes paralelos, triangulação, rubrica profundidade 8-dim |
+| `sync-evidence` | 1.0.0 | fork / general-purpose | Read, Write, Grep, Glob, Agent | Ponte pesquisa→persistência: evidence-db.md + Notion (opcional, via reference-manager) |
+| `review` | 0.4.0 | fork / Explore | Read, Grep, Glob | Audita slides: PASS/WARN/FAIL por dimensão (inclui assertion-evidence + medical-data) |
+| `ralph-qa` | 6.0.1 | fork / qa-engineer | Read, Write, Bash | QA em 2 loops (Opus lint + Gemini visual) até PASS |
+| `final-pass` | 3.0.0 | fork / general-purpose | Read, Edit, Bash, Grep, Glob, Agent | Avaliação final deck — coerência (A) + empolgação (B, 10 critérios) via Gemini |
 | `new-slide` | — | — | — | Cria slide HTML completo com archetype correto |
 | `export` | — | — | — | Exporta slides para PDF/compartilhamento |
+| `docs-audit` | 0.2.0 | fork / general-purpose | Read, Grep, Glob | Audita docs/*.md: links, redundância, token economy |
 | `context7` | — | — | Read, Grep, Glob | Injeta docs de libs no contexto (GSAP, Reveal, Vite, OKLCH) |
-| `new-skill` | — | — | — | Scaffold de nova skill com frontmatter correto |
+| `mem-search` | — | — | Read, Grep, Glob | Busca semântica na memória do projeto |
+| `new-skill` | 2.0.0 | fork | Read, Write, Glob, Grep | Scaffold de nova skill (3 templates: simple, orchestrator, lazy) |
 | `repo-janitor` | — | fork / general-purpose | Read, Grep, Glob, Bash | Audit orphan files, broken links, dead HTML (read-only) |
 | `audit-rules` | — | — | Read, Grep, Glob | Audita rules para contradições, stale refs, gaps |
 | `evolve` | — | fork / general-purpose | Read, Grep, Glob, WebSearch | Comitê de evolução — pesquisa + patches para skills/docs/tools |
-| `final-pass` | — | fork / general-purpose | Read, Grep, Glob | Avaliação final deck completo via Gemini (Gates 1-3 já passaram) |
 | `gtd` | — | — | Read, Write | Getting Things Done file-based (inbox, next actions, weekly review) |
-| `mem-search` | — | — | Read, Grep, Glob | Busca semântica na memória do projeto |
-| `ralph-qa` | — | fork / qa-engineer | Read, Write, Bash | QA em 2 loops (Opus lint + Gemini visual) até PASS |
 | `resolve-conflict` | — | — | Read, Grep | Guia PT-BR para merge conflicts |
+| `slide-punch` | 1.0.0 | — | Read, Grep, Glob | Avalia encaixe narrativo de 1 slide — transições, gancho retórico, densidade vs respiro |
 | `retro` | — | — | Read, Edit, Write, Grep, Glob | Extrai lições da sessão para tasks/lessons.md |
+
+### Archived (`.claude/skills/archive/`)
+
+| Skill | Absorvido por | Motivo |
+|-------|---------------|--------|
+| `assertion-evidence` v0.2.1 | `review` v0.4+ | Assertion-evidence é dimensão de auditoria dentro do review |
+| `medical-data` v0.2.1 | `review` v0.4+ | Verificação de dados clínicos é dimensão de auditoria dentro do review |
 
 ### Cursor (`.cursor/skills/`)
 
