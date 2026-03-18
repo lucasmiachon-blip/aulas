@@ -8,7 +8,7 @@
 
 ## Título da aula
 
-**Do diamante à decisão**
+**Meta-análise — Leitura crítica para decisão clínica**
 
 ## Tese central
 

@@ -5,6 +5,47 @@
  */
 
 export const slideRegistry = {
+  's-title': (slide, gsap) => {
+    // Full choreography: h1 → subtitle → pillars (masking) → dots → identity
+    const h1 = slide.querySelector('h1');
+    const subtitle = slide.querySelector('.title-subtitle');
+    const pillarSpans = slide.querySelectorAll('.pillar > span');
+    const dots = slide.querySelectorAll('.pillar-dot');
+    const identity = slide.querySelector('.title-identity');
+
+    // h1: gentle fade+rise (0s)
+    if (h1) {
+      gsap.fromTo(h1,
+        { opacity: 0, y: 12 },
+        { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }
+      );
+    }
+    // subtitle: fade+rise (0.3s)
+    if (subtitle) {
+      gsap.fromTo(subtitle,
+        { opacity: 0, y: 10 },
+        { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out', delay: 0.3 }
+      );
+    }
+    // pillars: masking reveal (0.6s) — overflow:hidden + yPercent
+    gsap.fromTo(pillarSpans,
+      { yPercent: 100 },
+      { yPercent: 0, duration: 0.8, stagger: 0.2, ease: 'power3.out', delay: 0.6 }
+    );
+    // dots: fade in between pillars (0.8s)
+    gsap.fromTo(dots,
+      { opacity: 0 },
+      { opacity: 1, duration: 0.4, stagger: 0.2, delay: 0.8, ease: 'power2.out' }
+    );
+    // identity: fade+rise last (1.4s)
+    if (identity) {
+      gsap.fromTo(identity,
+        { opacity: 0, y: 8 },
+        { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out', delay: 1.4 }
+      );
+    }
+  },
+
   's-hook': (slide, gsap) => {
     const beat0 = slide.querySelector('.hook-beat-0');
     const beat1 = slide.querySelector('.hook-beat-1');

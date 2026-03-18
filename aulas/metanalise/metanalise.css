@@ -41,31 +41,45 @@ aside.notes { display: none; }
   align-items: center;
   text-align: center;
 }
-/* Specificity: #deck h1 (0,1,0,1) overrides .slide-title h1 (0,0,1,1).
-   Boost to #deck .slide-title h1 (0,1,1,1) to restore hero size. */
+/* Custom choreography: all elements start hidden, GSAP reveals (slide-registry.js) */
+#s-title h1,
+#s-title .title-subtitle,
+#s-title .title-identity { opacity: 0; }
+.no-js #s-title h1,
+.no-js #s-title .title-subtitle,
+.no-js #s-title .title-identity { opacity: 1; }
+@media print {
+  #s-title h1,
+  #s-title .title-subtitle,
+  #s-title .title-identity { opacity: 1; }
+}
+/* Bold idea #1: inverted weight hierarchy — h1 light 400/64px, subtitle bold 600/20px uppercase.
+   Specificity: #deck .slide-title h1 (0,1,1,1) > #deck h1 (0,1,0,1). */
 #deck .slide-title h1 {
-  font-size: var(--text-hero);
+  font-size: 64px;
+  font-weight: 400;
   max-width: 18ch;
   margin: 0 auto;
 }
 
-/* --- Title: subtitle row --- */
-.title-subtitle {
+/* --- Title: subtitle row (inverted: bold uppercase) --- */
+#deck .slide-title p.title-subtitle {
   font-family: var(--font-body);
-  font-size: var(--text-h3);
+  font-size: 20px;
   color: var(--text-secondary);
   margin-top: var(--space-sm);
-  font-weight: 400;
-  letter-spacing: 0.02em;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
-/* --- Title: pillars row (3 palavras-chave separadas por dot) --- */
+/* --- Title: pillars row — masking reveal via custom anim in slide-registry.js --- */
 .title-pillars {
   display: flex;
   gap: var(--space-sm);
   align-items: center;
   justify-content: center;
-  margin-top: var(--space-md);
+  margin-top: 40px;
   font-family: var(--font-body);
   font-size: var(--text-body);
   color: var(--text-secondary);
@@ -73,39 +87,44 @@ aside.notes { display: none; }
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
+.pillar {
+  overflow: hidden;
+  display: inline-block;
+}
+.pillar > span {
+  display: inline-block;
+}
+
 .pillar-dot {
-  width: 5px;
-  height: 5px;
+  width: 4px;
+  height: 4px;
   border-radius: 50%;
   background: var(--text-muted);
-  opacity: 0.6;
+  opacity: 0;
+  transform: translateY(1px); /* optical center with uppercase text */
+}
+.no-js .pillar-dot {
+  opacity: 1;
 }
 
-/* --- Title: divider line --- */
-.title-divider {
-  width: 80px;
-  height: 1px;
-  background: var(--border-navy);
-  margin: var(--space-md) auto;
-}
-
-/* --- Title: author identity block --- */
+/* --- Title: author identity block (merged — bold idea #2) --- */
 .title-identity {
   text-align: center;
+  margin-top: 40px;
 }
-/* Specificity: #deck p (0,1,0,1) forces --text-secondary on all <p>.
-   Boost to #deck .title-author / .title-affiliation to restore hierarchy. */
-#deck .title-author {
+#deck .slide-title p.title-author {
   font-family: var(--font-body);
   font-size: var(--text-body);
   color: var(--text-primary);
   font-weight: 500;
+  line-height: 1.5;
   margin: 0;
 }
-#deck .title-affiliation {
+#deck .slide-title .title-affiliation {
   font-family: var(--font-body);
-  font-size: var(--text-small);
-  color: var(--text-muted);
+  font-size: 18px;
+  color: oklch(0.42 0.008 258);
+  font-weight: 400;
   margin: var(--space-xs) 0 0;
 }
 

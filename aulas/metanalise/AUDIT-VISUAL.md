@@ -28,40 +28,47 @@ Scorecards formais serao preenchidos durante ralph-qa batches 2-6 (proximas sess
 
 ## s-title (00-title.html)
 
-**Status:** PASS (re-audit 2026-03-18 — Playwright + contraste + fixes)
+**Status:** PASS (QA.0-QA.4 completo 2026-03-18c — Gemini approved, beauty 9/10, legibility 10/10)
 **Archetype:** title — dims E, M, P intencionalmente baixas
 
 | Dim | Score | Nota |
 |-----|-------|------|
-| H (hierarquia) | 9 | h1 56px 600 > subtitle 20px secondary > pillars 20px uppercase 500 > author 20px primary > affil 16px muted — 5 niveis claros |
-| T (tipografia) | 8 | DM Sans throughout (stage-c override). 4 tratamentos: hero 56/600, body 20, uppercase tracking, small 16 muted. Serif indisponivel em stage-c (shared/ READ-ONLY) |
+| H (hierarquia) | 9 | h1 64px/400 > subtitle 20px/600 uppercase > pillars 20px/500 uppercase > author 20px/500 > affil 18px/400 muted — inverted weight hierarchy (Gemini bold idea #1) |
+| T (tipografia) | 9 | DM Sans throughout (stage-c). Inverted weight: h1 light 400, subtitle bold 600 uppercase. 5 tratamentos diferenciados |
 | E (layout fill) | 4 | ~30% — intencional para title |
-| C (cor/contraste) | 9 | h1 17.6:1, subtitle 13.8:1, author 17.6:1, affil 8.6:1 — todos AAA. Verificado via Playwright+a11y |
-| V (visuais) | 7 | Sem visual dominante — OK para title |
-| K (consistência) | 9 | Padrao de capa. Pillars ecoam s-contrato |
-| S (sofisticação) | 9 | data-animate declarativo. Failsafes .no-js e print. Sem AI markers. Divider funcional (separador autor) |
-| M (comunicação) | 5 | h1 = rotulo — correto para archetype |
-| I (interações) | 7 | fadeUp subtitle + stagger pillars + fadeUp identity. Declarativo. QA mode OK |
+| C (cor/contraste) | 9 | h1 17.58:1, subtitle 13.82:1, author 17.58:1, affil 8.62:1 — todos AAA. Verificado via Playwright + a11y-contrast MCP |
+| V (visuais) | 8 | Pillar masking reveal (overflow:hidden + GSAP yPercent). Dots optically centered. Sem divider (removido — era AI marker) |
+| K (consistencia) | 9 | Padrao de capa. Pillars ecoam s-contrato e s-takehome |
+| S (sofisticacao) | 9 | Custom choreography via slide-registry.js. Failsafes .no-js e @media print. Sem AI markers |
+| M (comunicacao) | 5 | h1 = rotulo — correto para archetype |
+| I (interacoes) | 9 | Full choreography: h1 fade+rise (0s) → subtitle (0.3s) → pillar masking (0.6s) → dots fade (0.8s) → identity (1.4s). Sem click-reveals |
 | D (dados) | N/A | Title — sem dados clinicos |
-| A (acessibilidade) | 9 | Axe-core 0 violations. aria-hidden nos dots. Todos pares ≥ 8.6:1 |
-| L (carga cognitiva) | 9 | Minimo — titulo + 3 palavras |
-| P (andragogia) | 6 | Sem decisao clinica — esperado. Pillars = orientacao framework |
+| A (acessibilidade) | 9 | Todos pares >= 8.62:1 (AAA). aria-hidden nos dots decorativos |
+| L (carga cognitiva) | 9 | Minimo — titulo + 3 palavras + identidade |
+| P (andragogia) | 6 | Sem decisao clinica — esperado. Pillars orientam framework |
 | N (arco narrativo) | 8 | Abertura limpa. Pillars (Perguntar/Estimar/Decidir) mapeiam 3 fases |
 
-**Fixes aplicados (2026-03-18):**
-- h1 font-size: 38px → 56px (specificity `#deck .slide-title h1` vence `#deck h1`)
-- Author color: --text-secondary → --text-primary (specificity `#deck .title-author` vence `#deck p`)
-- Affiliation color: --text-secondary → --text-muted (specificity `#deck .title-affiliation` vence `#deck p`)
+**Gemini QA.3 (2026-03-18c) — model gemini-2.5-pro (2 rounds):**
+- Round 1: beauty 8.5/10, legibility 9/10. 4 issues + 3 bold ideas propostas
+- Bold ideas aplicadas: #1 inverted weight hierarchy (h1 400/64, subtitle 600/20 uppercase), #2 merged identity block, #3 pillar masking reveal (overflow:hidden + GSAP yPercent)
+- Round 2 (re-eval com screenshots + video pos-fix): beauty 9/10, legibility 10/10, verdict **approve**
+- Custo estimado: ~$0.15 (2 chamadas API)
 
+**QA.4 fixes (2026-03-18c):**
+- Pillar-dot: `transform: translateY(1px)` para alinhamento optico com uppercase
+- Choreography: slide-registry.js reescrito — h1/subtitle/identity animados via GSAP (antes so pillars). `data-animate="fadeUp"` removido do HTML (custom anim controla tudo)
+- CSS: `#s-title h1, .title-subtitle, .title-identity { opacity: 0 }` + `.no-js` + `@media print` failsafes
+
+**Fixes anteriores (2026-03-18b) — specificity war `.stage-c #deck p`:**
+- Subtitle: selector → `#deck .slide-title p.title-subtitle` (0,1,2,1). Weight 450→600, font-size 20px, uppercase
+- Author: selector → `#deck .slide-title p.title-author` (0,1,2,1). Weight 450→500
+- Affiliation: selector → `#deck .slide-title p.title-affiliation` (0,1,2,1). Weight 450→400
+
+**Fixes anteriores (2026-03-18):** h1 56px→64px, author --text-primary, affil --text-muted. Divider removido.
 **Fixes anteriores (2026-03-16e/17):** tokens on-dark → light-mode. Pilares 400→500. data-background-color removido.
 
-**Pendencias para Gemini (Gate 4):**
-- Title divider — AI marker ou separador funcional?
-- Fill ratio ~30% — adequado para projecao?
-- DM Sans 600 no h1 (stage-c) vs Instrument Serif (design-system) — confirmar legibilidade a 5m
-- Author weight 450 (stage-c `#deck p` override) vs 500 intencional — diferenca visivel?
-
-**Screenshots:** `qa-screenshots/s-title/S0.png` (1280x720), `qa-screenshots/s-title/S0-fullscreen.png` (1920x1080). Anteriores: `qa-screenshots/s00-title-qa.png` (pre-fix), `qa-screenshots/s00-title-fix2-qa.png` (pos-fix)
+**Screenshots:** `qa-screenshots/s-title/S0.png` (1280x720), `qa-screenshots/s-title/S0-fullscreen.png` (1920x1080)
+**Videos:** `qa-screenshots/s-title/video-v2.webm` (animacao completa pos-Gemini)
 
 ---
 

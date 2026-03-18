@@ -4,6 +4,17 @@
 
 ---
 
+## 2026-03-18c — s-title QA.3-QA.4 (Gemini approved)
+
+Branch: `feat/metanalise-mvp`
+
+- QA s-title: QA.3 Gemini (2 rounds) → beauty 9/10, legibility 10/10, **approved**
+- Bold ideas Gemini: inverted weight hierarchy (h1 400/64px, subtitle 600/20px uppercase), merged identity block, pillar masking reveal
+- slide-registry.js: s-title choreography — h1→subtitle→pillars(masking)→dots→identity (5-element stagger)
+- metanalise.css: pillar-dot `translateY(1px)` optical align, `#s-title` opacity:0 initial states + .no-js + @media print failsafes
+- 00-title.html: `data-animate="fadeUp"` removido de subtitle/identity (custom anim controla)
+- narrative.md: titulo corrigido ("Do diamante à decisão" → "Meta-análise — Leitura crítica para decisão clínica")
+
 ## 2026-03-18 — Sessão QA + refs + merge main
 
 Branch: `feat/metanalise-mvp`

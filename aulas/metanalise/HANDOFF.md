@@ -8,13 +8,13 @@
 
 - **Fase:** HTML cleanup completo. Janela limpa para QA scorecards 14-dim.
 - **HTML cleanup (2026-03-17d):** `data-background-color` removido de 17/18 slides (todos — deck.js ignora). `slide-navy` removido de 16/18 slides light (mantido em CP1+CP2 que TEM bg navy via CSS override). ERRO-009 documentado.
-- **QA pipeline:** ver [WT-OPERATING.md §4](WT-OPERATING.md#4-qa-sub-loop-dentro-do-estado-qa). Gates 1-4: 18/18 PASS. Scorecards formais 14-dim: 3/18 (F1). Fase 3 (dynamic): 3 pendentes (hook, CP1, CP2). Fase 4 (Gemini): bloqueada.
+- **QA pipeline:** ver [WT-OPERATING.md §4](WT-OPERATING.md#4-qa-sub-loop-dentro-do-estado-qa). Gates 1-4: 18/18 PASS. Scorecards formais 14-dim: 3/18 (F1). s-title QA.0-QA.4 PASS (Gemini approved). Fase 3 (dynamic): 3 pendentes (hook, CP1, CP2). Fase 4 (Gemini): s-title done, demais pendentes.
 - **Branch:** feat/metanalise-mvp (worktree wt-metanalise)
 - **Slides no index.html:** 18 (00-title → 01-hook → 02-contrato → 03-checkpoint-1 → 04-rs-vs-ma → 05-pico → 06-abstract → 07-forest-plot → 08-benefit-harm → 09-grade → 10-heterogeneity → 11-fixed-random → 12-checkpoint-2 → 13-ancora → 14-aplicacao → 15-aplicabilidade → 16-absoluto → 17-takehome)
 - **Slides planejados:** 18 (00-17) — ver blueprint.md v1.8
 - **Docs fundacionais:** narrative.md (v2.2), evidence-db.md (v4.3 — 20+ refs, candidatos colapsados), blueprint.md (v1.8), reading-list.md (v0.3)
 - **_manifest.js:** CRIADO — 18 slides, fases F1/I1/F2/I2/F3
-- **slide-registry.js:** CRIADO — state machines para hook (2-beat), checkpoint-1 (3-beat), checkpoint-2 (4-beat)
+- **slide-registry.js:** CRIADO — state machines para title (choreography), hook (2-beat), checkpoint-1 (3-beat), checkpoint-2 (4-beat)
 - **Orphan slides:** 0
 - **Orphan CSS:** 0
 - **Artigo âncora:** ✅ Valgimigli 2025, Clopidogrel vs Aspirina (Lancet, PMID 40902613). IPD-MA, 7 RCTs, 28.982 pts
@@ -32,7 +32,7 @@
 
 | # | Slide | Estado | Notas |
 |---|-------|--------|-------|
-| 1 | s-title | QA | Scorecard 14-dim PASS (Opus). QA.0-QA.2 PASS. QA.3 Gemini pendente. |
+| 1 | s-title | QA | QA.0-QA.4 PASS. Gemini approved (beauty 9, legibility 10). Choreography + masking. |
 | 2 | s-hook | QA | Scorecard 14-dim PASS (Opus). Gemini pendente. |
 | 3 | s-contrato | QA | Scorecard 14-dim PASS (Opus). Gemini pendente. |
 

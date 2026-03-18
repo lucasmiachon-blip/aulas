@@ -11,7 +11,7 @@
 
 export const slides = [
   // ── Fase 1: Criar importância ──
-  { id: 's-title',        file: '00-title.html',        phase: 'F1', archetype: 'title',      headline: 'Meta-análise — Leitura crítica para decisão clínica',                                                                timing: null, clickReveals: 0, customAnim: null,             narrativeRole: null,         tensionLevel: 0, narrativeCritical: false },
+  { id: 's-title',        file: '00-title.html',        phase: 'F1', archetype: 'title',      headline: 'Meta-análise — Leitura crítica para decisão clínica',                                                                timing: null, clickReveals: 0, customAnim: 's-title',        narrativeRole: null,         tensionLevel: 0, narrativeCritical: false },
   { id: 's-hook',         file: '01-hook.html',         phase: 'F1', archetype: 'hook',       headline: '146 revisões sistemáticas por dia. Quantas você consegue avaliar?',                                     timing: 60,   clickReveals: 1, customAnim: 's-hook',           narrativeRole: 'hook',       tensionLevel: 3, narrativeCritical: true },
   { id: 's-contrato',     file: '02-contrato.html',     phase: 'F1', archetype: 'cards',      headline: '3 perguntas que você faz a toda meta-análise',                                            timing: 45,   clickReveals: 0, customAnim: null,             narrativeRole: 'setup',      tensionLevel: 1, narrativeCritical: false },
 
