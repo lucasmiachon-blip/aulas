@@ -28,3 +28,19 @@
 - `.claude/agents/qa-engineer.md`: adicionar ref `WT-OPERATING.md §4` (state machine per-aula)
 - `.claude/skills/ralph-qa/SKILL.md`: adicionar ref `WT-OPERATING.md` (source) + `qa-engineer.md` (rubric)
 - `docs/XREF.md`: adicionar entradas para qa-engineer.md e ralph-qa/SKILL.md
+
+### Merge main 2026-03-18
+- 4 commits Classe A/B absorvidos (zero conflitos):
+  - `d22acc4` medical-researcher skill + agent
+  - `59f9f97` final-pass v3.0.0 (Eixo B excitement)
+  - `7840e53` archive deprecated skills, new-skill v2
+  - `2831807` slide-punch skill
+- Merge commit: `5406dd8`
+- Zero Classe C. Build OK. Lint PASS.
+
+### Investigação viewport ultrawide
+- Monitor dev: 2560x1600 @ 150% → viewport ~1707x1067 → scale 1.334 → centrado OK
+- A 100% scaling: scale 2.0 → conteúdo grande, centrado, mas "faixa" embaixo (taskbar?)
+- Projetor congresso: TBD — Lucas pega viewport amanhã
+- deck.js (shared/) escala corretamente em todos os aspect ratios testados (16:9, 16:10, 21:9)
+- Nenhum fix necessário em deck.js

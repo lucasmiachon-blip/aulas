@@ -4,6 +4,21 @@
 
 ---
 
+## 2026-03-18 — Sessão QA + refs + merge main
+
+Branch: `feat/metanalise-mvp`
+
+- WT-OPERATING.md §9: refs complementares (qa-engineer, ralph-qa)
+- WT-OPERATING.md §4 QA.2: regra dual-format screenshots (1280x720 + 1920x1080)
+- AUDIT-VISUAL.md: scorecards s-title/s-hook/s-contrato re-auditados com evidências
+- metanalise.css: specificity fixes (#deck .slide-title h1, #deck .title-author/affiliation)
+- metanalise.css: [data-qa] hook fallbacks + --text-muted navy token
+- QA s-title: QA.0 PASS, QA.1 PASS, QA.2 PASS (contrastes AAA verificados)
+- Merge main: 4 commits Classe A/B (medical-researcher, final-pass v3, slide-punch, new-skill v2, sync-evidence)
+- Investigação viewport ultrawide: centrado OK em todos aspect ratios
+
+---
+
 ## 2026-03-17h — Verificação documental + pendências para main
 
 Branch: `feat/metanalise-mvp`

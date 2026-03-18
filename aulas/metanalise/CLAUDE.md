@@ -5,9 +5,9 @@ Parent: ver CLAUDE.md na raiz.
 ## WT State (atualizar a cada sessao)
 
 - **Branch:** feat/metanalise-mvp
-- **Ultimo merge main:** a0e3568 (2026-03-17) — absorve governance hardening (4 commits: C1-C5, H1-H7, M1-M10, audit-rules)
-- **Classe C pendente:** 0 arquivos em main
-- **Infra sync:** OK — governance absorvida (Class A/B), GSAP 3.14.2
+- **Ultimo merge main:** 5406dd8 (2026-03-18) — absorve skills/agents (medical-researcher, final-pass v3, slide-punch, new-skill v2, sync-evidence)
+- **Classe C pendente:** 0
+- **Infra sync:** OK
 
 ## Worktree
 
@@ -81,4 +81,4 @@ Sem archetypes.css. Build via `npm run build:metanalise`.
 
 ## Status
 
-**18 slides ativos (deck completo: Fases 1-3 + Interações 1-2). Âncora: Valgimigli 2025 Lancet (PMID 40902613). _manifest.js criado. CSS limpo (8 classes orfas removidas). QA F1 PASS (title, hook, contrato — scorecards 14-dim); scorecards F2/I1/I2/F3 pendentes. Gates 1-4: 18/18 PASS. Docs: narrative v2.2, blueprint v1.8, evidence-db v4.3.**
+**18 slides ativos (deck completo: Fases 1-3 + Interações 1-2). Âncora: Valgimigli 2025 Lancet (PMID 40902613). _manifest.js criado. CSS limpo (specificity fixes aplicados). QA F1 PASS (title, hook, contrato — scorecards 14-dim, Gemini pendente); scorecards F2/I1/I2/F3 pendentes. Gates 1-4: 18/18 PASS. Docs: narrative v2.2, blueprint v1.8, evidence-db v4.3. Main sync: 5406dd8.**

@@ -32,7 +32,7 @@
 
 | # | Slide | Estado | Notas |
 |---|-------|--------|-------|
-| 1 | s-title | QA | Scorecard 14-dim PASS (Opus). Gemini pendente. |
+| 1 | s-title | QA | Scorecard 14-dim PASS (Opus). QA.0-QA.2 PASS. QA.3 Gemini pendente. |
 | 2 | s-hook | QA | Scorecard 14-dim PASS (Opus). Gemini pendente. |
 | 3 | s-contrato | QA | Scorecard 14-dim PASS (Opus). Gemini pendente. |
 
@@ -189,7 +189,31 @@
 
 ---
 
-## Ultima atualizacao: 2026-03-17i (merge main governance + audit interno)
+## Ultima atualizacao: 2026-03-18 (QA refs + specificity fixes + merge main skills/agents)
+
+---
+
+## Sessao 2026-03-18 — QA refs + specificity fixes + merge main
+
+### O que foi feito
+- [x] WT-OPERATING.md §9: refs complementares (qa-engineer, ralph-qa)
+- [x] WT-OPERATING.md §4 QA.2: regra dual-format screenshots (1280x720 + 1920x1080)
+- [x] AUDIT-VISUAL.md: scorecards s-title/s-hook/s-contrato re-auditados com evidencias
+- [x] metanalise.css: specificity fixes (#deck .slide-title h1, #deck .title-author/affiliation)
+- [x] metanalise.css: [data-qa] hook fallbacks + --text-muted navy token
+- [x] QA s-title: QA.0 PASS, QA.1 PASS, QA.2 PASS (contrastes AAA verificados)
+- [x] Investigacao viewport ultrawide: centrado OK em todos aspect ratios
+- [x] `git merge main` — merge commit `5406dd8`, zero conflitos
+- [x] Classe: todos A/B (4 commits: medical-researcher, final-pass v3, slide-punch, new-skill v2). Zero Classe C
+- [x] Build OK (18 slides), lint PASS
+
+### O que NAO foi feito (deliberado)
+- QA slides pendentes (15 scorecards 14-dim)
+- QA.3 Gemini (s-title, s-hook, s-contrato)
+- Build de producao
+
+### Pendencia nova
+- Calibracao viewport congresso — Lucas fornece innerWidth x innerHeight da TV/projetor
 
 ---
 
