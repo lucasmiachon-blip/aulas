@@ -18,3 +18,13 @@
 - docs/README.md: WT-OPERATING.md adicionado à tabela Estado e handoff
 - CLAUDE.md root: status metanalise atualizado (QA parcial → F1 QA PASS, F2-F3 LINT-PASS)
 - tasks/lessons.md: 3 lições doc sync adicionadas (drift dados, verbosidade candidatos, refs cross-doc)
+
+## 2026-03-18 — Refs cruzadas QA workflow
+
+### Feito na WT
+- WT-OPERATING.md §9: adicionada tabela "Documentos complementares" (qa-engineer.md, ralph-qa/SKILL.md, AUDIT-VISUAL.md)
+
+### Pendências para próxima sessão main
+- `.claude/agents/qa-engineer.md`: adicionar ref `WT-OPERATING.md §4` (state machine per-aula)
+- `.claude/skills/ralph-qa/SKILL.md`: adicionar ref `WT-OPERATING.md` (source) + `qa-engineer.md` (rubric)
+- `docs/XREF.md`: adicionar entradas para qa-engineer.md e ralph-qa/SKILL.md

@@ -41,7 +41,9 @@ aside.notes { display: none; }
   align-items: center;
   text-align: center;
 }
-.slide-title h1 {
+/* Specificity: #deck h1 (0,1,0,1) overrides .slide-title h1 (0,0,1,1).
+   Boost to #deck .slide-title h1 (0,1,1,1) to restore hero size. */
+#deck .slide-title h1 {
   font-size: var(--text-hero);
   max-width: 18ch;
   margin: 0 auto;
@@ -91,14 +93,16 @@ aside.notes { display: none; }
 .title-identity {
   text-align: center;
 }
-.title-author {
+/* Specificity: #deck p (0,1,0,1) forces --text-secondary on all <p>.
+   Boost to #deck .title-author / .title-affiliation to restore hierarchy. */
+#deck .title-author {
   font-family: var(--font-body);
   font-size: var(--text-body);
   color: var(--text-primary);
   font-weight: 500;
   margin: 0;
 }
-.title-affiliation {
+#deck .title-affiliation {
   font-family: var(--font-body);
   font-size: var(--text-small);
   color: var(--text-muted);
@@ -213,10 +217,13 @@ aside.notes { display: none; }
   transform: translateY(10px);
 }
 
-/* .no-js fallback for hook beats */
+/* .no-js / QA fallback for hook beats */
 .no-js .hook-beat-0,
 .no-js .hook-beat-1,
-.no-js .hook-verdict {
+.no-js .hook-verdict,
+[data-qa] .hook-beat-0,
+[data-qa] .hook-beat-1,
+[data-qa] .hook-verdict {
   opacity: 1 !important;
   visibility: visible !important;
   transform: none !important;
@@ -599,6 +606,7 @@ aside.notes { display: none; }
   --text-secondary:     oklch(70% 0.01 258);
   --text-on-dark:       oklch(95% 0.005 258);
   --text-on-dark-muted: oklch(70% 0.01 258);
+  --text-muted:         oklch(70% 0.01 258);
   --bg-navy-mid:        oklch(28% 0.035 258);
   --safe-on-dark:       oklch(75% 0.13 170);
   --warning-on-dark:    oklch(80% 0.14 85);

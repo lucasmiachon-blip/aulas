@@ -159,22 +159,26 @@ Verificacoes automatizaveis (lint + HTML source):
 
 Capturar screenshots e analisar:
 
-**Captura (Playwright):**
+**Captura (Playwright) — DOIS formatos obrigatorios por estado:**
 
 ```bash
 # Dev server deve estar ativo (npm run dev)
 # Navegar ate o slide, esperar animacoes (2.5s), screenshot
 # Se click-reveals: screenshot antes de cada click
 
-# Output:
+# Output (AMBOS formatos para CADA estado):
 # qa-screenshots/{slide-id}/
-#   S0.png          ← estado apos entrada (animacoes completadas)
-#   S1.png          ← apos click-reveal 1 (se existir)
-#   S2.png          ← apos click-reveal 2 (se existir)
-#   metrics.json    ← bounding boxes (opcional)
+#   S0.png              ← 1280x720 — formato apresentacao (Plan C)
+#   S0-fullscreen.png   ← 1920x1080 — inspecao detalhada
+#   S1.png              ← apos click-reveal 1 (se existir)
+#   S1-fullscreen.png   ← idem fullscreen
+#   metrics.json        ← bounding boxes (opcional)
 ```
 
-Resolucao: 1280x720 @2x (deviceScaleFactor: 2).
+**Resolucoes obrigatorias:**
+- **1280x720** — tamanho real da apresentacao (Plan C). Usar para avaliar legibilidade a distancia.
+- **1920x1080** — fullscreen para inspecao de detalhes (tipografia, alinhamento, pixels).
+- Ambos com viewport size real (sem deviceScaleFactor) para reproduzir o que o projetor mostra.
 
 **Analise (Opus — leitura direta dos PNGs):**
 
@@ -404,6 +408,14 @@ export GEMINI_API_KEY="$(powershell -Command "[System.Environment]::GetEnvironme
 - Texto secundario (labels, refs): >= 6:1
 - Large text hero: >= 4.5:1 (AA large)
 - Testar com a11y-contrast MCP ou Playwright in-browser calc
+
+### Documentos complementares
+
+| Doc | Path | Papel |
+|-----|------|-------|
+| Rubrica 14-dim + scorecard | `.claude/agents/qa-engineer.md` | Template de scorecard, evidence requirements, rubricas detalhadas por dim |
+| Skill QA (invocacao) | `.claude/skills/ralph-qa/SKILL.md` | 2-loop Opus+Gemini, batch architecture |
+| Scorecards registrados | `AUDIT-VISUAL.md` | Output — scorecards por slide |
 
 ---
 

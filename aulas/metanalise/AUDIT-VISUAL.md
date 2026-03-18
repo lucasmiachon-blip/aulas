@@ -3,6 +3,7 @@
 > Scorecard por slide. 14 dimensões. Atualizado a cada QA pass.
 > Pendente: audit final Gemini (Gate 4) para todas as dims.
 > Pipeline: ver [WT-OPERATING.md §4](WT-OPERATING.md#4-qa-sub-loop-dentro-do-estado-qa)
+> Screenshots: **DOIS formatos por estado** — `S0.png` (1280x720 apresentação) + `S0-fullscreen.png` (1920x1080 inspeção). Ver WT-OPERATING.md §4 QA.2.
 
 ---
 
@@ -27,79 +28,84 @@ Scorecards formais serao preenchidos durante ralph-qa batches 2-6 (proximas sess
 
 ## s-title (00-title.html)
 
-**Status:** PASS (QA slide-a-slide 2026-03-16e)
+**Status:** PASS (re-audit 2026-03-18 — Playwright + contraste + fixes)
 **Archetype:** title — dims E, M, P intencionalmente baixas
 
 | Dim | Score | Nota |
 |-----|-------|------|
-| H (hierarquia) | 9 | h1 > subtitle > pillars > author — clara |
-| T (tipografia) | 9 | Serif+sans, pesos adequados, uppercase 500 |
+| H (hierarquia) | 9 | h1 56px 600 > subtitle 20px secondary > pillars 20px uppercase 500 > author 20px primary > affil 16px muted — 5 niveis claros |
+| T (tipografia) | 8 | DM Sans throughout (stage-c override). 4 tratamentos: hero 56/600, body 20, uppercase tracking, small 16 muted. Serif indisponivel em stage-c (shared/ READ-ONLY) |
 | E (layout fill) | 4 | ~30% — intencional para title |
-| C (cor/contraste) | 8 | Tokens light-mode corretos (fix session 16e) |
+| C (cor/contraste) | 9 | h1 17.6:1, subtitle 13.8:1, author 17.6:1, affil 8.6:1 — todos AAA. Verificado via Playwright+a11y |
 | V (visuais) | 7 | Sem visual dominante — OK para title |
-| K (consistência) | 9 | Padrão de capa |
-| S (sofisticação) | 8 | Limpo, profissional |
-| M (comunicação) | 5 | h1 = rótulo — correto para archetype |
-| I (interações) | 6 | fadeUp + stagger presentes |
-| D (dados) | N/A | Title — sem dados clínicos |
-| A (acessibilidade) | 8 | aria-hidden nos dots, bom contraste |
-| L (carga cognitiva) | 9 | Mínimo — título + 3 palavras |
-| P (andragogia) | 6 | Sem decisão clínica — esperado |
-| N (arco narrativo) | 8 | Abertura limpa, pilares antecipam estrutura |
+| K (consistência) | 9 | Padrao de capa. Pillars ecoam s-contrato |
+| S (sofisticação) | 9 | data-animate declarativo. Failsafes .no-js e print. Sem AI markers. Divider funcional (separador autor) |
+| M (comunicação) | 5 | h1 = rotulo — correto para archetype |
+| I (interações) | 7 | fadeUp subtitle + stagger pillars + fadeUp identity. Declarativo. QA mode OK |
+| D (dados) | N/A | Title — sem dados clinicos |
+| A (acessibilidade) | 9 | Axe-core 0 violations. aria-hidden nos dots. Todos pares ≥ 8.6:1 |
+| L (carga cognitiva) | 9 | Minimo — titulo + 3 palavras |
+| P (andragogia) | 6 | Sem decisao clinica — esperado. Pillars = orientacao framework |
+| N (arco narrativo) | 8 | Abertura limpa. Pillars (Perguntar/Estimar/Decidir) mapeiam 3 fases |
 
-**Fix aplicado:** tokens `--text-on-dark-*` → tokens light-mode (`--text-secondary`, `--text-primary`, `--text-muted`). Pilares peso 400→500.
+**Fixes aplicados (2026-03-18):**
+- h1 font-size: 38px → 56px (specificity `#deck .slide-title h1` vence `#deck h1`)
+- Author color: --text-secondary → --text-primary (specificity `#deck .title-author` vence `#deck p`)
+- Affiliation color: --text-secondary → --text-muted (specificity `#deck .title-affiliation` vence `#deck p`)
 
-**Pendências para audit Gemini (Gate 4):**
-- Title divider (linha decorativa) — avaliar se é AI marker ou separação funcional
-- Spacing vertical — grupo de conteúdo levemente acima do centro? Avaliar com Gemini
-- Fill ratio 30% — confirmar que é adequado para projeção (muito vazio?)
-- Tipografia do h1 (Instrument Serif) — confirmar legibilidade em projetor real
+**Fixes anteriores (2026-03-16e/17):** tokens on-dark → light-mode. Pilares 400→500. data-background-color removido.
+
+**Pendencias para Gemini (Gate 4):**
+- Title divider — AI marker ou separador funcional?
+- Fill ratio ~30% — adequado para projecao?
+- DM Sans 600 no h1 (stage-c) vs Instrument Serif (design-system) — confirmar legibilidade a 5m
+- Author weight 450 (stage-c `#deck p` override) vs 500 intencional — diferenca visivel?
+
+**Screenshots:** `qa-screenshots/s-title/S0.png` (1280x720), `qa-screenshots/s-title/S0-fullscreen.png` (1920x1080). Anteriores: `qa-screenshots/s00-title-qa.png` (pre-fix), `qa-screenshots/s00-title-fix2-qa.png` (pos-fix)
 
 ---
 
 ## s-hook (01-hook.html)
 
-**Status:** PASS (QA slide-a-slide 2026-03-16e)
+**Status:** PASS (re-audit 2026-03-18 — Playwright + contraste verificado)
 **Archetype:** hook — dims E, P intencionalmente baixas
 
 | Dim | Score | Nota |
 |-----|-------|------|
-| H (hierarquia) | 9 | Pergunta > números (hero 81%) > verdict > source |
-| T (tipografia) | 9 | Serif italic provocação, mono números, sans verdict |
-| E (layout fill) | 5 | ~50% — intencional para hook (respiro dramático) |
-| C (cor/contraste) | 9 | Tokens light-mode, verdict em --ui-accent |
-| V (visuais) | 8 | 3 countUp hero numbers — impacto |
-| K (consistência) | 9 | Padrão hook |
-| S (sofisticação) | 9 | Limpo, dramático, source-tag no rodapé |
-| M (comunicação) | 9 | Provocação → dados → punchline — arco completo |
-| I (interações) | 9 | 2-beat state machine (beat0 auto, beat1 click) |
-| D (dados) | 9 | 3 dados Tier 1 verificados + PMID (ERRO-003 corrigido) |
-| A (acessibilidade) | 8 | Bom contraste, labels uppercase legíveis |
-| L (carga cognitiva) | 9 | 3 dados + 1 verdict = dentro do 4±1 |
+| H (hierarquia) | 9 | Question 34px italic serif > Values 34-38px mono 600 > Labels 14px uppercase > Verdict 20px accent > Source 14px muted. 81% hero (38px) = Von Restorff |
+| T (tipografia) | 9 | 3 familias: Instrument Serif italic (question), JetBrains Mono 600 (numeros), DM Sans (labels/verdict). Excelente contraste tipografico |
+| E (layout fill) | 5 | ~50% — intencional para hook (respiro dramatico) |
+| C (cor/contraste) | 9 | Question 17.6:1, Values 17.6:1, Labels 13.8:1, Verdict 10.0:1, Source 8.6:1. Todos ≥ 7:1. Verificado via a11y-contrast |
+| V (visuais) | 8 | 3 countUp hero numbers — impacto. 81% hero size |
+| K (consistência) | 9 | Padrao hook |
+| S (sofisticação) | 9 | 2-beat state machine declarativa. .no-js + print fallbacks. Sem AI markers |
+| M (comunicação) | 9 | Provocacao → dados → punchline — arco completo em 1 slide |
+| I (interações) | 9 | 2-beat state machine (beat0 auto fadeUp, beat1 click reveal + countUp). QA mode: beats forcados via JS (engine.js nao seta [data-qa] — pendencia main) |
+| D (dados) | 9 | 3 dados Tier 1 verificados: Hoffmann PMID 34091022, Bojcic PMID 37931822, Qureshi PMID 41428154 |
+| A (acessibilidade) | 9 | Todos contrastes ≥ 8.6:1. Axe-core 0 violations. Labels uppercase legiveis |
+| L (carga cognitiva) | 9 | 3 dados + 1 verdict = dentro do 4±1 Cowan |
 | P (andragogia) | 8 | Retrieval practice (pergunta antes de resposta) |
-| N (arco narrativo) | 9 | Hook forte, cria tensão para Fase 1 |
+| N (arco narrativo) | 9 | Hook forte, cria tensao para Fase 1 |
 
-**Fixes aplicados:**
+**Fixes aplicados (sessoes anteriores):**
 - ERRO-003 corrigido: 88%→81% (Bojcic 2024), 8.5%→10% (Qureshi 2025)
 - Especificidade `#deck p` corrigida (question text era 20px, agora --text-h2)
-- Tokens: bulk fix --text-on-dark → --text-primary/secondary em TODO o CSS
-- Labels encurtadas para fit horizontal
-- Source-tag movida para .slide-inner (fora de .hook-question)
-- Verdict em --ui-accent (cor sutil de ênfase)
-- Source-tag centering fix: `#deck p.source-tag` com `max-width: none; width: 100%` (vence `.stage-c #deck p` de base.css)
-- Texto beat-0: "publicadas hoje" → "por dia — só em 2019" (dado Hoffmann é de 2019, hoje >140/dia)
-- Label "SRs por dia" → "SRs/dia em 2021" (contexto temporal)
-- Speaker notes atualizadas (crescimento 80→146/dia entre 2019→2021)
+- Tokens: bulk fix --text-on-dark → --text-primary/secondary
+- Source-tag centering fix: `#deck p.source-tag` com `max-width: none; width: 100%`
 
-**Pendências para audit Gemini (Gate 4):**
-- Sufixo % nos números (81%, 10%) — avaliar se precisa de tratamento tipográfico (% menor)
-- Distribuição vertical no fullscreen — validar em projetor real
-- Beat 0 sozinho — avaliar impacto dramático do texto isolado antes do click
-- Labels "CRITICAMENTE BAIXAS" e "GUIDELINES COM LOE FORTE" — legibilidade em projetor
-- **Instrument Serif italic** na provocação (beat-0) — confirmar legibilidade em TV/projetor a 5m em sala iluminada. Se ilegível, fallback para DM Sans 600 italic
-- "só em 2019" como qualificador — avaliar se enfraquece o impacto dramático ou se reforça (implica crescimento)
+**Fix aplicado (2026-03-18):**
+- CSS `[data-qa]` selectors adicionados para `.hook-beat-0`, `.hook-beat-1`, `.hook-verdict` (paridade com checkpoint). Pendente: engine.js setar `[data-qa]` no body (fix para main/shared)
 
-**Pendências operacionais:** ✅ TODAS RESOLVIDAS (verificado 2026-03-17)
+**Pendencias para Gemini (Gate 4):**
+- Instrument Serif italic na provocacao — legibilidade a 5m em sala iluminada?
+- Labels uppercase 14px ("CRITICAMENTE BAIXAS") — legibilidade em projetor?
+- Sufixo % nos numeros — tratamento tipografico?
+- Distribuicao vertical — validar em projecao real
+- margin-top 80px no verdict — gap adequado?
+
+**Pendencias operacionais:** ✅ TODAS RESOLVIDAS (verificado 2026-03-17)
+
+**Screenshots:** `qa-screenshots/s01-hook-final.png` (estado final forcado via Playwright)
 - ~~Sync Notion References DB: Bojcic e Qureshi mudar de CANDIDATO → EM USO~~ ✅ Notion sync feito (2026-03-16i, timestamp 23:16). Bojcic highlight confirma "EM USO no hook".
 - ~~narrative.md atualizado (dados do hook)~~ ✅ Linha 51: 146/dia, Bojcic 81%, Qureshi 10%
 - ~~evidence-db.md atualizado (Bojcic/Qureshi: CANDIDATO → EM USO)~~ ✅ v4.1 (linhas 126, 137)
@@ -108,7 +114,7 @@ Scorecards formais serao preenchidos durante ralph-qa batches 2-6 (proximas sess
 
 ## s-contrato (02-contrato.html)
 
-**Status:** PASS (QA 14-dim 2026-03-17b — re-audit com screenshots Playwright)
+**Status:** PASS (QA 14-dim 2026-03-17b — re-confirmado 2026-03-18, CSS fixes de hoje nao afetam este slide)
 **Archetype:** cards (setup) — dim D = N/A (sem dados clínicos)
 
 | Dim | Score | Nota |
