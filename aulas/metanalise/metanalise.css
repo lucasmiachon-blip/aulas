@@ -548,48 +548,105 @@ aside.notes { display: none; }
 .symbol-danger { color: var(--danger-on-dark); }
 
 /* --- Contrato layout (3 cards + scope footer) --- */
+/* Base flex — shared with s-takehome */
 .contrato-grid {
   display: flex;
   gap: var(--space-md);
 }
+/* s-contrato: CSS Grid + subgrid for perfect cross-card alignment */
+#s-contrato .contrato-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto 1fr auto;
+  gap: var(--space-lg);
+  margin-top: auto;
+  margin-bottom: auto;
+}
 .contrato-card {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-sm);
+  display: grid;
+  grid-row: span 3;
+  grid-template-rows: subgrid;
+  gap: var(--space-xs);
   padding: var(--space-lg) var(--space-md);
-  background: var(--bg-card);
-  border: 1px solid var(--overlay-border);
-  border-left: 3px solid var(--ui-accent);
-  box-shadow: 0 1px 3px var(--shadow-subtle);
-  border-radius: var(--radius-md);
-  text-align: center;
+  background: var(--bg-elevated);
+  border: none;
+  border-radius: var(--radius-lg);
+  box-shadow:
+    0 4px 6px -1px oklch(0% 0 0 / 0.02),
+    0 10px 15px -3px oklch(0% 0 0 / 0.04),
+    0 24px 38px 3px oklch(0% 0 0 / 0.02);
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+/* Bleeding numbers watermark */
+.contrato-card:nth-child(1)::after { content: "1"; }
+.contrato-card:nth-child(2)::after { content: "2"; }
+.contrato-card:nth-child(3)::after { content: "3"; }
+.contrato-card::after {
+  position: absolute;
+  bottom: -1.5rem;
+  right: -0.5rem;
+  font-family: var(--font-mono);
+  font-size: 14rem;
+  font-weight: 700;
+  line-height: 0.8;
+  color: var(--ui-accent);
+  opacity: 0.07;
+  z-index: 0;
+  user-select: none;
+  pointer-events: none;
 }
 .contrato-number {
   font-family: var(--font-mono);
-  font-size: var(--text-hero);
+  font-size: 44px;
   color: var(--ui-accent);
   font-weight: 600;
   line-height: 1;
+  position: relative;
+  z-index: 1;
 }
 .contrato-question {
   font-family: var(--font-display);
-  font-size: var(--text-h3);
+  font-size: 26px;
   color: var(--text-primary);
-  line-height: 1.2;
+  line-height: 1.15;
+  align-self: start;
+  position: relative;
+  z-index: 1;
 }
 .contrato-skill {
   font-family: var(--font-body);
-  font-size: var(--text-body);
-  color: var(--text-muted);
+  font-size: 15px;
+  color: var(--text-secondary);
+  align-self: end;
+  border-top: 1px solid var(--divider);
+  padding-top: var(--space-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
 }
-/* --- Contrato: vertical centering + wider gap (scoped, preserves takehome) --- */
-#s-contrato .contrato-grid {
-  margin-top: auto;
-  margin-bottom: auto;
-  gap: var(--space-lg);
+/* Animation initial states (custom choreography via slide-registry.js) */
+#s-contrato .contrato-card { opacity: 0; transform: translateY(40px) scale(0.98); }
+#s-contrato .contrato-number { opacity: 0; transform: scale(0.5); }
+#s-contrato .contrato-question { opacity: 0; transform: translateY(12px); }
+#s-contrato .contrato-skill { opacity: 0; transform: translateX(-10px); }
+/* Failsafes */
+.no-js #s-contrato .contrato-card,
+.no-js #s-contrato .contrato-number,
+.no-js #s-contrato .contrato-question,
+.no-js #s-contrato .contrato-skill { opacity: 1; transform: none; }
+.stage-bad #s-contrato .contrato-card,
+.stage-bad #s-contrato .contrato-number,
+.stage-bad #s-contrato .contrato-question,
+.stage-bad #s-contrato .contrato-skill { opacity: 1; transform: none; }
+@media print {
+  #s-contrato .contrato-card,
+  #s-contrato .contrato-number,
+  #s-contrato .contrato-question,
+  #s-contrato .contrato-skill { opacity: 1; transform: none; }
 }
 
 /* --- Checkpoint: initial hidden state (controlled by state machine) --- */

@@ -80,6 +80,39 @@ export const slideRegistry = {
     });
   },
 
+  's-contrato': (slide, gsap) => {
+    const cards = slide.querySelectorAll('.contrato-card');
+    const numbers = slide.querySelectorAll('.contrato-number');
+    const questions = slide.querySelectorAll('.contrato-question');
+    const skills = slide.querySelectorAll('.contrato-skill');
+
+    const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+
+    // 1. Cards rise + fade (architectural entrance)
+    tl.to(cards, {
+      opacity: 1, y: 0, scale: 1,
+      duration: 0.8, stagger: 0.2
+    })
+    // 2. Numbers stamp with subtle overshoot (contrato = weight)
+    .to(numbers, {
+      opacity: 1, scale: 1,
+      duration: 0.6, stagger: 0.2,
+      ease: 'back.out(1.5)'
+    }, '-=0.5')
+    // 3. Questions fade up
+    .to(questions, {
+      opacity: 1, y: 0,
+      duration: 0.5, stagger: 0.2,
+      ease: 'power2.out'
+    }, '-=0.3')
+    // 4. Skills slide in (methodological foundation)
+    .to(skills, {
+      opacity: 1, x: 0,
+      duration: 0.5, stagger: 0.15,
+      ease: 'power2.out'
+    }, '-=0.2');
+  },
+
   's-checkpoint-1': (slide, gsap) => {
     const scenario = slide.querySelector('.checkpoint-scenario');
     const question = slide.querySelector('.checkpoint-question');
