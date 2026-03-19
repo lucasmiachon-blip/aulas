@@ -29,6 +29,7 @@ if [ -n "$(git status --porcelain)" ]; then
 fi
 
 cleanup() {
+  git merge --abort 2>/dev/null || true
   git checkout "$ORIGINAL_BRANCH" --quiet 2>/dev/null || true
   git branch -D "$CANARY_BRANCH" --quiet 2>/dev/null || true
 }
@@ -54,7 +55,7 @@ if git merge --no-commit --no-ff "$TARGET" >/dev/null 2>&1; then
     echo ""
     echo "$CHANGED"
   fi
-  git merge --abort 2>/dev/null || true
+  # cleanup trap handles merge --abort
 else
   echo "RESULT: CONFLICTS detected"
   echo ""
@@ -62,7 +63,7 @@ else
   git diff --name-only --diff-filter=U 2>/dev/null || true
   echo ""
   echo "Run 'git diff' on canary branch for details (but we're cleaning up now)."
-  git merge --abort 2>/dev/null || true
+  # cleanup trap handles merge --abort
 fi
 
 echo ""

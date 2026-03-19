@@ -125,4 +125,10 @@ Sem regra CSS explicitando `background-color` no slide, o fundo permanece light 
 
 ---
 
+### Nota: codigos cross-project
+
+Alguns docs (CHANGELOG, AUDIT-VISUAL) referenciam ERRO-034 (data-background-color em deck.js). Este codigo vive em `aulas/cirrose/ERROR-LOG.md`. Equivalente local: ERRO-009 (mesma root cause, contexto metanalise).
+
+---
+
 *Append-only. Não remover erros antigos.*

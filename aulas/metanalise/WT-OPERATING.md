@@ -51,36 +51,10 @@ BACKLOG → DRAFT → CONTENT → SYNCED → LINT-PASS → QA → DONE
 
 ## 3. Checklists de Transicao
 
-### BACKLOG → DRAFT
+### BACKLOG → DRAFT → CONTENT → SYNCED
 
-- [ ] Arquivo HTML criado em `slides/NN-slug.html`
-- [ ] `<section id="s-{slug}">` com ID correto
-- [ ] `<div class="slide-inner">` wrapper
-- [ ] `<h2>` com assercao (mesmo que provisoria)
-- [ ] `<aside class="notes">` com timing placeholder
-- [ ] Entrada em `_manifest.js` na posicao correta
-
-### DRAFT → CONTENT
-
-- [ ] h2 = assercao clinica verificavel (nao rotulo generico)
-- [ ] Zero `<ul>`/`<ol>` no corpo do slide
-- [ ] Todos dados numericos verificados (PMID ou [TBD] em notes)
-- [ ] Corpo do slide <= 30 palavras
-- [ ] Speaker notes com timing, [DATA] tags, fontes
-- [ ] Conteudo atualizado (ultima guideline/trial?)
-- [ ] Conteudo que gruda (numero ancora, regra de bolso?)
-
-### CONTENT → SYNCED (critico — 9 superficies)
-
-- [ ] `_manifest.js` headline = `<h2>` do HTML
-- [ ] `_manifest.js` clickReveals = numero real de `[data-reveal]`
-- [ ] `_manifest.js` customAnim = null ou ID correto
-- [ ] `slide-registry.js` tem wiring se customAnim != null
-- [ ] `metanalise.css` tem seletores `#slide-id` se necessario
-- [ ] `narrative.md` tem linha para este slide na fase correta
-- [ ] `evidence-db.md` tem referencias se slide tem dados
-- [ ] `AUDIT-VISUAL.md` tem entrada (pode ser placeholder)
-- [ ] `HANDOFF.md` registra estado SYNCED
+Fases ja completadas (18/18 slides em LINT-PASS ou acima).
+Checklists detalhados: ver `slide-editing.md` e `slide-identity.md` (9 superficies).
 
 ### SYNCED → LINT-PASS
 
@@ -256,35 +230,10 @@ Aplicar fixes aprovados por Lucas:
 
 ---
 
-## 5. Anti-Drift (embutido)
+## 5. Anti-Drift
 
-### Check a cada 30 minutos
-
-O agente DEVE se perguntar:
-
-1. "Estou no mesmo slide que comecei?"
-2. "O slide que comecei ja avancou de estado?"
-3. "Quantos slides avancaram nesta sessao?"
-
-Se mudou de slide sem fechar o anterior → **PARAR, voltar, fechar ate SYNCED minimo.**
-
-### Excecoes legitimas
-
-- Bloqueio: precisa de dado do Lucas, PMID nao encontrado, dependencia de outro slide
-- Lucas pediu explicitamente para mudar de foco
-- Sessao mobile (sem dev server): docs e decisoes sao trabalho valido
-
-### Regra dos 3 commits
-
-Apos 3 commits consecutivos sem arquivo em `aulas/metanalise/slides/` ou `metanalise.css`:
-- Pausar e perguntar: "3 commits sem tocar em slides. Continuar ou voltar ao produto?"
-
-### Contraponto obrigatorio
-
-Para toda decisao nao-trivial, o agente DEVE:
-1. Apresentar o lado oposto — mesmo que concorde
-2. Explicitar trade-offs
-3. Dar recomendacao
+Regras completas: `.claude/rules/anti-drift.md` (auto-loaded).
+Resumo operacional: check a cada 30 min ("mesmo slide?", "avancou estado?"), regra dos 3 commits, contraponto obrigatorio.
 
 ---
 

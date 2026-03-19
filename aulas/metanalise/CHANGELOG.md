@@ -70,7 +70,7 @@ Branch: `feat/metanalise-mvp`
 - slide-registry.js: hero shrink → blackout (querySelectorAll upper), retreat restaura
 - Gemini scores: v2 beauty 6.5 legibility 9.5, v3 beauty 6.5 legibility 9.0 (ITERATE)
 - Prompt template padronizado: `docs/prompts/gemini-slide-qa.md` (tags XML, rubrica, speaker notes, código pronto)
-- Bug pendente: 146 mono não renderiza (specificity CSS — debugar próxima sessão)
+- ~~Bug pendente: 146 mono não renderiza (specificity CSS)~~ [CORRIGIDO 2026-03-19a: era Vite cache poisoning, não CSS — ver ERRO-010]
 
 ## 2026-03-18d — s-hook refactor (hero 41% + trials concretos)
 

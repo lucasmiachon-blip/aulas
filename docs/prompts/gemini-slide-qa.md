@@ -25,7 +25,6 @@ Modelo: `gemini-3.1-pro` via MCP ou API REST.
 | `${ROLE_SEGUINTE}` | narrativeRole do slide seguinte |
 | `${NARRATIVE_ROLE}` | narrativeRole deste slide |
 | `${TENSION_LEVEL}` | tensionLevel deste slide (1-5) |
-| `${CONTEXTO_NARRATIVO}` | Slide anterior + posterior + narrativeRole + tensionLevel |
 | `${HTML_RAW}` | slides/NN-slug.html |
 | `${CSS_RAW}` | seletores relevantes do metanalise.css |
 | `${JS_RAW}` | entrada do slide-registry.js (ou "nenhum -- usa data-animate declarativo") |
@@ -98,7 +97,7 @@ NAO se limite ao engine.js existente (fadeUp, stagger, countUp, drawPath, highli
 
 Criterios para animacao valida:
 - Tem proposito cognitivo (guiar atencao, revelar progressao, destacar dado)
-- Duracao total <= 3s por beat
+- Duracao por elemento <= 2s (sequencias multi-beat podem somar mais, mas cada step <= 2s)
 - Degradacao graciosa (.no-js -> tudo visivel)
 - NAO frivola (bounce, elastic -- contexto medico)
 

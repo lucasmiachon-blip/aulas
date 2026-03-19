@@ -5,6 +5,28 @@
 
 ---
 
+## Trabalho completado (movido do HANDOFF 2026-03-19)
+
+### Slides criados (18/18)
+- 00-title, 01-hook (reescrito 03/13, atualizado 03/16), 02-contrato, 03-checkpoint-1, 04-rs-vs-ma, 05-pico, 06-abstract, 07-forest-plot, 08-benefit-harm, 09-grade, 10-heterogeneity, 11-fixed-random, 12-checkpoint-2, 13-ancora, 14-aplicacao, 15-aplicabilidade, 16-absoluto, 17-takehome
+
+### Infra completada
+- Narrativa v1 (3 fases + 2 interacoes), docs fundacionais, metanalise.css (10 layouts), deck.js + engine.js migration, evidence-db v2 (12 refs tier 1), QA review pass (4 FAILs + 6 WARNs corrigidos), Notion sync (15 slides + 7 refs), h2 assertion rewrite (9 headlines)
+
+### Decisoes tomadas
+
+| Decisao | Data |
+|---------|------|
+| Artigo ancora = Valgimigli 2025 (Lancet, PMID 40902613) | 03/15 |
+| Slide 11 (fixed vs random) MANTEM como dedicado (Lucas override) | 03/14 |
+| 3 fases + 2 interacoes (retrieval practice) | 03/13 |
+| h2 = assertion tecnica | 03/13 |
+| Forest plots = imagens cropadas | 03/13 |
+| 01-objectives absorvido por 02-contrato | 03/13 |
+| Hook generalizado (sem Musini) | 03/13 |
+
+---
+
 ## Sessao 2026-03-14 — Analise Gemini + busca de candidatos
 
 ### O que foi feito
