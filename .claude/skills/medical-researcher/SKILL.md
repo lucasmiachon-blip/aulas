@@ -383,3 +383,5 @@ Este skill pode evoluir para um custom agent (`.claude/agents/medical-researcher
 - Subagents dedicados: `guideline-hunter.md`, `trial-scout.md`, `meta-analyst.md`, `authority-verifier.md`
 
 Por ora, o pattern skill + Agent tool e suficiente e consistente com o ecossistema do projeto.
+
+> **Nota:** Para Q&A em full-text de papers ja obtidos (PDF carregados em notebook), ver tambem `/nlm-skill`. NotebookLM requer autenticacao interativa (`nlm login`), incompativel com subagent autonomo — por isso e skill separado, nao integrado neste agent.

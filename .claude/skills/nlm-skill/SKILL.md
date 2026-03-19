@@ -35,6 +35,31 @@ else:
 
 This skill documents BOTH approaches. Choose the appropriate one based on tool availability and **user preference**.
 
+## Integração com Pipeline Aulas Magnas
+
+### Notebooks existentes
+
+| Alias | Aula | Conteúdo |
+|-------|------|----------|
+| `cirrose` | Cirrose | Papers hepatologia (EASL, BAVENO, trials) |
+| `metanalise` | Meta-análise | Papers metodologia + trials para slide examples |
+
+### Posição no pipeline de pesquisa
+
+```
+/evidence (PMID rápido) → /medical-researcher (profundo) → /nlm-skill (full-text Q&A) → /sync-evidence (persistir)
+```
+
+- **medical-researcher** descobre papers e triangula dados (metadata PubMed)
+- **nlm-skill** extrai dados granulares do full-text (parágrafo exato, tabela, figure caption)
+- Usar `nlm notebook query <alias> "pergunta"` para Q&A one-shot com citação do trecho-fonte
+
+### Skills relacionados
+
+- `/evidence` — busca rápida PubMed (PMID + citação AMA)
+- `/medical-researcher` — pesquisa profunda multi-MCP (4 agentes paralelos)
+- `/sync-evidence` — persiste achados em evidence-db.md + Notion
+
 ## Quick Reference
 
 **Run `nlm --ai` to get comprehensive AI-optimized documentation** - this provides a complete view of all CLI capabilities.

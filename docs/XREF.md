@@ -21,7 +21,7 @@ CLAUDE.md (root)              ← fonte de verdade operacional (absorveu AGENTS.
 ├── .claude/rules/*.md        ← regras detalhadas (prevalecem sobre .cursor se mais completas)
 ├── .claude/hooks/*.sh        ← safety gates determinísticos (100% enforcement)
 ├── .claude/scripts/*.sh      ← worktree lifecycle (init, cleanup)
-├── .claude/skills/*/SKILL.md ← skills invocáveis (19 ativas + 2 archived)
+├── .claude/skills/*/SKILL.md ← skills invocáveis (20 ativas + 2 archived)
 ├── .cursor/rules/*.mdc       ← regras Cursor (quick-ref com globs)
 ├── docs/*.md                 ← referência expandida
 └── aulas/*/HANDOFF.md        ← estado por aula
@@ -76,7 +76,7 @@ CLAUDE.md (root)              ← fonte de verdade operacional (absorveu AGENTS.
 | biblia-narrativa.md | (autônomo) | ← aulas/cirrose/HANDOFF.md |
 | slide-pedagogy.md | (autônomo — teorias pedagógicas) | ← README.md |
 | insights-html-cirrose-2026.md | (autônomo — análise Gemini HTML) | ← README.md |
-| MCP-ACADEMICOS.md | (autônomo) | ← ECOSYSTEM.md |
+| MCP-ACADEMICOS.md | → nlm-skill/SKILL.md (Q&A grounded) | ← ECOSYSTEM.md, nlm-skill |
 | MCP-ENV-VARS.md | (autônomo) | ← ECOSYSTEM.md |
 | SETUP.md | (autônomo — setup inicial) | ← README.md |
 | ZIP-LIMPO-PROTOCOLO.md | (autônomo) | ← README.md |
@@ -232,6 +232,7 @@ CLAUDE.md (root)              ← fonte de verdade operacional (absorveu AGENTS.
 | KPIs multiagente | docs/KPIs.md | — |
 | Benchmarks modelos | docs/ECOSYSTEM.md | — |
 | Pesquisa médica profunda | .claude/skills/medical-researcher/SKILL.md | .claude/rules/medical-data.md, docs/MCP-ACADEMICOS.md |
+| Q&A grounded em full-text | .claude/skills/nlm-skill/SKILL.md | docs/MCP-ACADEMICOS.md |
 | Safety gates (hooks) | .claude/settings.json + .claude/hooks/ | — |
 | WT protocol | aulas/*/CLAUDE.md § Worktree | .claude/scripts/ |
 | Audit trail | .claude/hooks/audit-trail.sh | ~/.claude/session-logs/ |

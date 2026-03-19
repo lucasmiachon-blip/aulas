@@ -40,6 +40,7 @@
 | **ChatGPT Agent (GPT-5.4)** | QA browser · auditor clínico/narrativo · impressões de tom e adequação ao público | 75% OSWorld (> humano 72.4%) · BrowseComp 82.7% · **nunca edita, só audita** |
 | **Perplexity Ultra** (MCP) | Pesquisa em tempo real | Acesso web em tempo real |
 | **Scite** (MCP) | Supporting/contradicting por artigo | Verificação de citações |
+| **NotebookLM** (CLI/MCP) | Q&A grounded em full-text de papers/guidelines | Extração granular pós-discovery |
 | **Zotero** (MCP) | Biblioteca de referências · DOIs | Gestão bibliográfica |
 
 ---
@@ -83,6 +84,7 @@
 | ~~**Zotero**~~ | ~~Referências~~ | ~~Removido~~ | ❌ Removido 2026-03-17 — usar Notion References DB |
 | **Canva Pro** | Assets visuais | — | Manual |
 | **Excalidraw** | Diagramas · storyboards | — | Notion embed |
+| **NotebookLM** | Q&A grounded em full-text · podcasts · flashcards · cross-paper comparison | notebooklm MCP (profiles `research`/`full`) | ✅ `nlm` CLI + MCP |
 
 ---
 
@@ -128,7 +130,7 @@
 | Perfil | Quando usar |
 |--------|------------|
 | `dev.json` | Default (8 servers) |
-| `research.json` | Pesquisa acadêmica (12 servers: +pubmed, crossref, semantic-scholar, perplexity, notion) |
+| `research.json` | Pesquisa acadêmica (13 servers: +pubmed, crossref, semantic-scholar, perplexity, notion, notebooklm) |
 | `qa.json` | QA visual (playwright, lighthouse, a11y, eslint) |
 | `full.json` | Todos os servers disponíveis |
 

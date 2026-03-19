@@ -2,7 +2,7 @@
 
 **Superfície:** Claude Code (terminal), Claude.ai (web). Não conflita com .cursor — superfícies diferentes.
 
-## Skills disponíveis (19 ativas + 2 archived)
+## Skills disponíveis (20 ativas + 2 archived)
 
 | Skill | Papel | Quando ativar |
 |-------|-------|--------------|
@@ -25,6 +25,7 @@
 | `retro` | Extrai lições da sessão atual em tasks/lessons.md | "retro", "extract lessons", final de sessão |
 | `slide-punch` | Avalia encaixe narrativo de 1 slide — transicoes, gancho retorico, densidade | "slide solto", "nao se vende", "punch", "esse slide funciona?" |
 | `audit-rules` | Audita .claude/rules/*.md — contradições, refs stale, gaps vs ERROR-LOG | "auditar rules", "rules stale?", "audit-rules" |
+| `nlm-skill` | Q&A grounded em full-text via NotebookLM (CLI + MCP) | "nlm", "notebooklm", "podcast", "audio overview" |
 
 ### Archived (`.claude/skills/archive/`)
 
@@ -38,8 +39,8 @@
 ## Pipeline — Sequência de uso
 
 ```
-Pesquisa:   /evidence ──→ /medical-researcher ──→ /sync-evidence
-                (rápida)      (profunda)           (persistir)
+Pesquisa:   /evidence ──→ /medical-researcher ──→ /nlm-skill ──→ /sync-evidence
+                (rápida)      (profunda)       (full-text Q&A)    (persistir)
 
 QA slide:   /review ──→ /ralph-qa ──→ commit
             (diagnóstico)  (fix loop)
@@ -56,7 +57,8 @@ Suporte:    /evolve    (melhorar skills/docs)
 ```
 
 **Regra de sequência:**
-- `sync-evidence` só roda APÓS `medical-researcher` (precisa de achados)
+- `nlm-skill` roda APÓS `medical-researcher` para Q&A granular em full-text de papers já obtidos
+- `sync-evidence` só roda APÓS `medical-researcher` ou `nlm-skill` (precisa de achados)
 - `final-pass` só roda APÓS Gates 1-3 (lint PASS + review PASS + ralph-qa PASS)
 - `ralph-qa` pode rodar standalone, mas ideal após `/review` para ter diagnóstico
 
