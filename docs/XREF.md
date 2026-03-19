@@ -66,17 +66,17 @@ CLAUDE.md (root)              ← fonte de verdade operacional (absorveu AGENTS.
 |---------|-----------|-----------------|
 | README.md | → todos docs/*.md | (índice) |
 | XREF.md | (este arquivo) | ← README.md |
-| ECOSYSTEM.md | → SKILLS.md, RULES.md, KPIs.md | ← CLAUDE.md |
+| ECOSYSTEM.md | → SKILLS.md, RULES.md, KPIs.md | ← docs/README.md |
 | KPIs.md | (autônomo) | ← ECOSYSTEM.md, README.md |
-| RULES.md | → SUBAGENTS.md, .cursor/rules/*.mdc | ← CLAUDE.md, ECOSYSTEM.md |
-| SKILLS.md | → .cursor/skills/, .claude/skills/ | ← CLAUDE.md, ECOSYSTEM.md |
-| SUBAGENTS.md | → .cursor/rules/core-constraints.mdc | ← CLAUDE.md, RULES.md |
-| SYNC-NOTION-REPO.md | → .env.example (IDs Notion) | ← CLAUDE.md |
+| RULES.md | → SUBAGENTS.md, .cursor/rules/*.mdc | ← docs/README.md, ECOSYSTEM.md |
+| SKILLS.md | → .cursor/skills/, .claude/skills/ | ← docs/README.md, ECOSYSTEM.md |
+| SUBAGENTS.md | → .cursor/rules/core-constraints.mdc | ← docs/README.md, RULES.md |
+| SYNC-NOTION-REPO.md | → .env.example (IDs Notion) | ← docs/README.md |
 | blueprint-cirrose.md | (autônomo) | ← aulas/cirrose/HANDOFF.md |
 | biblia-narrativa.md | (autônomo) | ← aulas/cirrose/HANDOFF.md |
 | slide-pedagogy.md | (autônomo — teorias pedagógicas) | ← README.md |
 | insights-html-cirrose-2026.md | (autônomo — análise Gemini HTML) | ← README.md |
-| MCP-ACADEMICOS.md | → nlm-skill/SKILL.md (Q&A grounded) | ← ECOSYSTEM.md, nlm-skill |
+| MCP-ACADEMICOS.md | → nlm-skill/SKILL.md (Q&A grounded) | ← docs/README.md, nlm-skill |
 | MCP-ENV-VARS.md | (autônomo) | ← ECOSYSTEM.md |
 | SETUP.md | (autônomo — setup inicial) | ← README.md |
 | ZIP-LIMPO-PROTOCOLO.md | (autônomo) | ← README.md |
@@ -141,16 +141,19 @@ CLAUDE.md (root)              ← fonte de verdade operacional (absorveu AGENTS.
 | pre-push.sh | done-gate --strict para aula detectada na branch | .git/hooks/pre-push (delegator) |
 | post-merge.sh | Anti-rollback: slide count loss + content diff detection pós-merge | .git/hooks/post-merge (delegator) |
 | install-hooks.sh | Instala pre-commit + pre-push + post-merge em .git/hooks/ | Manual: `bash scripts/install-hooks.sh` |
+| ghost-canary.sh | Detecta ghost skills (dirs sem SKILL.md) | Manual |
 
 ### aulas/cirrose/
 
 | Arquivo | Referencia | Referenciado por |
 |---------|-----------|-----------------|
-| HANDOFF.md | → blueprint-cirrose.md, biblia-narrativa.md | ← CLAUDE.md (operational record) |
-| HANDOFF-CLAUDE-AI.md | → HANDOFF.md | ← CLAUDE.md |
-| CHANGELOG.md | (append-only — histórico de batches) | ← CLAUDE.md (operational record) |
-| ERROR-LOG.md | (append-only — erros → regras) | ← CLAUDE.md (operational record) |
-| NOTES.md | (log de decisões entre agentes) | ← CLAUDE.md (operational record) |
+| CLAUDE.md | (regras + estado aula) | ← CLAUDE.md root (projects table) |
+| HANDOFF.md | → blueprint-cirrose.md, biblia-narrativa.md | ← aulas/cirrose/CLAUDE.md |
+| HANDOFF-CLAUDE-AI.md | → HANDOFF.md | ← aulas/cirrose/CLAUDE.md |
+| AUDIT-VISUAL.md | (scorecards QA) | ← aulas/cirrose/CLAUDE.md |
+| CHANGELOG.md | (append-only — histórico de batches) | ← aulas/cirrose/CLAUDE.md |
+| ERROR-LOG.md | (append-only — erros → regras) | ← aulas/cirrose/CLAUDE.md |
+| NOTES.md | (log de decisões entre agentes) | ← aulas/cirrose/CLAUDE.md |
 ### aulas/metanalise/
 
 | Arquivo | Referencia | Referenciado por |
@@ -167,7 +170,8 @@ CLAUDE.md (root)              ← fonte de verdade operacional (absorveu AGENTS.
 | AUDIT-VISUAL.md | → WT-OPERATING.md §4 | ← WT-OPERATING.md §4 (QA loop) |
 | NOTES.md | (log de decisões entre agentes) | ← WT-OPERATING.md |
 | HANDOFF-ARCHIVE.md | (sessões arquivadas) | ← HANDOFF.md |
-| references/reading-list.md | (pre-reading list) | ← blueprint.md |
+| references/archetypes.md | (6 layout patterns) | ← CLAUDE.md aula |
+| references/reading-list.md | (pre-reading list) | ← CLAUDE.md aula, HANDOFF.md |
 
 ### Arquivados (docs/archive/)
 
@@ -186,6 +190,7 @@ CLAUDE.md (root)              ← fonte de verdade operacional (absorveu AGENTS.
 | CHATGPT_HANDOFF_ACT2.md | One-shot planning Act 2 |
 | NNT-IC95-REPORT.md | Relatório NNT verificação |
 | aulas-magnas-system-v6.plan.md | System plan v6 |
+| CURSOR.md | Superseded por CLAUDE.md (mar/2026) |
 
 ---
 
