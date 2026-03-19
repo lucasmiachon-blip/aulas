@@ -45,6 +45,7 @@ Parent: ver CLAUDE.md na raiz.
 
 narrative.md → evidence-db.md → blueprint.md → slides/
 reading-list.md (paralelo, informa pre-reading)
+archetypes.md (6 layout patterns — skeleton, constraints, animation contract)
 
 ## Arquivos de trabalho
 
@@ -56,6 +57,7 @@ metanalise.css
 ```
 
 Sem archetypes.css. Build via `npm run build:metanalise`.
+GSAP plugins: SplitText + Flip + ScrambleTextPlugin (registered in index.template.html).
 
 ## Estrutura narrativa (v1)
 
@@ -81,4 +83,4 @@ Sem archetypes.css. Build via `npm run build:metanalise`.
 
 ## Status
 
-**18 slides ativos (deck completo: Fases 1-3 + Interações 1-2). Âncora: Valgimigli 2025 Lancet (PMID 40902613). Visual uplift ativo: SplitText importado, dark-bg consolidado (6 slides), prompt Gemini v3.0 (docs/prompts/gemini-slide-qa.md). QA: s-title DONE (Gemini PASS); s-hook Gemini re-eval pendente; s-contrato Gemini pendente; F2/I1/I2/F3 scorecards pendentes. Gates 1-4: 18/18 PASS. Docs: narrative v2.2, blueprint v1.8, evidence-db v5.0. Main sync: 5406dd8.**
+**18 slides ativos (deck completo: Fases 1-3 + Interações 1-2). Âncora: Valgimigli 2025 Lancet (PMID 40902613). Visual uplift ativo: SplitText + Flip + ScrambleTextPlugin importados, dark-bg consolidado (6 slides), prompt Gemini v4.0 (docs/prompts/gemini-slide-qa.md — structured CoT, code grounding, few-shot, self-critique). Archetypes: 6 patterns documentados (references/archetypes.md). QA: s-title DONE (Gemini PASS); s-hook Gemini re-eval pendente; s-contrato Gemini pendente; F2/I1/I2/F3 scorecards pendentes. Gates 1-4: 18/18 PASS. Docs: narrative v2.2, blueprint v1.8, evidence-db v5.0. Main sync: 5406dd8.**

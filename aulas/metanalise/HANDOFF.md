@@ -6,7 +6,7 @@
 
 ## Estado atual
 
-- **Fase:** QA slide-a-slide com **visual uplift** (beleza avançada + GSAP sofisticado). s-title DONE (Gemini). s-hook screenshots+video capturados, Gemini re-eval pendente. Prompt Gemini v3.0 pronto (docs/prompts/gemini-slide-qa.md). Pre-work infra: SplitText importado, dark-bg CSS consolidado (6 slides).
+- **Fase:** QA slide-a-slide com **visual uplift** (beleza avançada + GSAP sofisticado). s-title DONE (Gemini). s-hook screenshots+video capturados, Gemini re-eval pendente. Prompt Gemini v4.0 pronto (docs/prompts/gemini-slide-qa.md — structured CoT, code grounding, few-shot, self-critique). Pre-work infra: SplitText + Flip + ScrambleTextPlugin importados, dark-bg CSS consolidado (6 slides), archetypes.md documentado (6 layout patterns).
 - **HTML cleanup (2026-03-17d):** `data-background-color` removido de 18/18 slides (deck.js ignora). `slide-navy` removido de 16/18 slides light (mantido em CP1+CP2 que TEM bg navy via CSS override). ERRO-009 documentado.
 - **QA pipeline:** ver [WT-OPERATING.md §4](WT-OPERATING.md#4-qa-sub-loop-dentro-do-estado-qa). Gates 1-4: 18/18 PASS. Scorecards formais 14-dim: 3/18 (F1). s-title QA.0-QA.4 PASS (Gemini approved). s-hook QA.0-QA.2 PASS, QA.3 screenshots+video capturados, QA.4 Gemini pendente (materiais prontos). Fase 3 (dynamic): 3 pendentes (hook, CP1, CP2). Fase 4 (Gemini): s-title done, s-hook materiais prontos, demais pendentes.
 - **Branch:** feat/metanalise-mvp (worktree wt-metanalise)
@@ -14,7 +14,7 @@
 - **Slides planejados:** 18 (00-17) — ver blueprint.md v1.8
 - **Docs fundacionais:** narrative.md (v2.2), evidence-db.md (v5.0 — 26+ refs, hook refs adicionadas), blueprint.md (v1.8), reading-list.md (v0.3)
 - **_manifest.js:** CRIADO — 18 slides, fases F1/I1/F2/I2/F3
-- **slide-registry.js:** CRIADO — state machines para title (choreography), hook (2-beat: countUp + blackout/verdict), checkpoint-1 (2-beat: cenario + twist), checkpoint-2 (3-beat: cenario + reveal + punchline). SplitText disponível globalmente (registrado em index.template.html)
+- **slide-registry.js:** CRIADO — state machines para title (choreography), hook (2-beat: countUp + blackout/verdict), checkpoint-1 (2-beat: cenario + twist), checkpoint-2 (3-beat: cenario + reveal + punchline). SplitText + Flip + ScrambleTextPlugin disponíveis globalmente (registrados em index.template.html)
 - **Orphan slides:** 0
 - **Orphan CSS:** 0
 - **Artigo âncora:** ✅ Valgimigli 2025, Clopidogrel vs Aspirina (Lancet, PMID 40902613). IPD-MA, 7 RCTs, 28.982 pts
@@ -87,10 +87,10 @@ Trabalho completado e decisões tomadas: ver [HANDOFF-ARCHIVE.md](HANDOFF-ARCHIV
 ## Caminho crítico — próximas sessões
 
 ### Sessão N+1 (imediata) — QA slide-a-slide com visual uplift
-1. **Pre-work DONE:** SplitText importado, dark-bg consolidado (6 slides), prompt Gemini v3.0 pronto.
+1. **Pre-work DONE:** SplitText + Flip + ScrambleTextPlugin importados, dark-bg consolidado (6 slides), prompt Gemini v4.0 pronto, archetypes.md documentado.
 2. **Pipeline normal** (WT-OPERATING.md §4): proximo slide na fila → QA.0-QA.4 → DONE → proximo.
-   - Criterios visuais elevados: beleza avançada + GSAP sofisticado (SplitText, custom choreographies)
-   - Gemini prompt v3.0 (4 dimensoes, chain-of-thought, exploration mandate GSAP)
+   - Criterios visuais elevados: beleza avançada + GSAP sofisticado (SplitText, Flip, ScrambleText, custom choreographies)
+   - Gemini prompt v4.0 (structured CoT 5-step, code-grounded GSAP API, few-shot exemplar, self-critique, token budget 1500-3000)
    - Contexto sala: pequena, ~15 pessoas, 1-4m, iluminacao forte, TV LED — legibilidade constraint #1
 3. **Dark-bg reference** (sugestao, decide-se por slide):
    - Ja dark: s-checkpoint-1, s-checkpoint-2

@@ -4,6 +4,44 @@
 
 ---
 
+## 2026-03-19d — Hardening documental + GSAP toolkit expansion
+
+Branch: `feat/metanalise-mvp`
+
+### GSAP Toolkit
+- **Flip** + **ScrambleTextPlugin** imported and registered in `index.template.html` (alongside existing SplitText)
+- Flip: layout state changes, GRADE level reordering. Proven in cirrose.
+- ScrambleText: number suspense for NNT/HR/RR reveals. High-impact for number-heavy aula.
+
+### Gemini Prompt v4.0
+- `docs/prompts/gemini-slide-qa.md` rewritten v3.0 → v4.0 (advanced PE techniques from cirrose v5):
+  - Structured CoT: 5-step pipeline (olhar → observar/scratchpad → avaliar/4 lentes → propor/structured → autocritica)
+  - Code-grounded GSAP API: table with real syntax for 11 plugins (3 registered + 8 available), prevents hallucination
+  - Few-shot exemplar: 1 complete example adapted for metanalise (NNT + benefit-harm + GRADE Flip)
+  - Self-critique: mandatory step 5 (contradictions, API correctness, legibility, round-context)
+  - Token budget: 1500-3000 target
+  - Output priming: forces `## Observacao` as first line
+  - Quality spectrum: 5-level scale with visual references (nivel 4-5 expected)
+  - Persona fundida: art director + motion designer + tipografo (vs generic "diretor criativo senior")
+
+### Archetypes
+- `references/archetypes.md` CRIADO: 6 layout patterns extracted from 18 slides
+  - concept-evidence (6 slides), data-hero (2), forest-plot (1), benefit-harm (2), checkpoint (2), application (2-3)
+  - Each: HTML skeleton, CSS constraints table, animation contract, click-reveal pattern
+  - Cross-archetype rules + selection guide for new slides
+
+### Docs atualizados
+- CLAUDE.md aula: plugins, archetypes ref, status
+- HANDOFF.md: pre-work expanded, plugin list, prompt version, pipeline criteria
+- CHANGELOG.md: este entry
+
+### Verificacao
+- `npm run build:metanalise` → PASS (18 slides, Flip+ScrambleText imports resolve)
+- `npm run lint:slides` → PASS
+- Zero regressoes (no slide content changes)
+
+---
+
 ## 2026-03-19c — Visual uplift pre-work (infra + prompt v3.0)
 
 Branch: `feat/metanalise-mvp`

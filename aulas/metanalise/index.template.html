@@ -16,7 +16,9 @@
 <script type="module">
   import gsap from 'gsap';
   import { SplitText } from 'gsap/SplitText';
-  gsap.registerPlugin(SplitText);
+  import { Flip } from 'gsap/Flip';
+  import { ScrambleTextPlugin } from 'gsap/ScrambleTextPlugin';
+  gsap.registerPlugin(SplitText, Flip, ScrambleTextPlugin);
   import '../../shared/css/base.css';
   import './metanalise.css';
   import { initAula, createAnimationDispatcher } from '../../shared/js/engine.js';
