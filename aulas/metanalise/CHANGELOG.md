@@ -4,6 +4,30 @@
 
 ---
 
+## 2026-03-19g — Gemini prompt v4.0 → v6.0 (absorve cirrose v6)
+
+Branch: `feat/metanalise-mvp`
+
+### Prompt upgrade
+- `docs/prompts/gemini-slide-qa.md` reescrito v4.0 → v6.0 absorvendo inovacoes de cirrose `gemini-slide-editor.md` v6:
+  - **5 personas** (v4 tinha 3): +UI/UX designer (Linear/Vercel) +front-end engineer (CSS moderno, perf)
+  - **Mentalidade** block: "pense em camadas" (TV 4m → residente 1m → designer 50cm)
+  - **Scorecard numerico** 10 dimensoes (1-10): beleza, superficie, tipografia, paleta, composicao, motion, interacoes, craft, legibilidade, impacto
+  - **10 lenses** (v4 tinha 4 fundidas): avaliacao granular por dimensao com SCORE IMPACT
+  - **8 steps** (v4 tinha 5): +scorecard, +radical ideas forcing, +scorecard projetado before/after
+  - **Impacto** field nas propostas: liga proposta → dimensoes do scorecard
+  - **Temperature 1.0** + topP 0.95 (v4 era 0.9 sem topP)
+  - **Output schema** rigido: 6 secoes obrigatorias
+  - **Constraint** "ignorar video" como anti-pattern explicito
+- Adaptacoes metanalise mantidas: publico residentes, sala 1-4m, TV LED, ScrambleText importado, variaveis narrativas (TENSION_LEVEL, SLIDE_POS, etc.)
+- Exemplo few-shot atualizado com scorecard + radical + projecao
+
+### Docs
+- HANDOFF.md: prompt v4.0 → v6.0
+- CHANGELOG.md: este entry
+
+---
+
 ## 2026-03-19f — s-hook Gate 3 scorecard + QA.4 fixes
 
 Branch: `feat/metanalise-mvp`

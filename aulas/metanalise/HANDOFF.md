@@ -13,7 +13,7 @@
 - **QA pipeline:** [WT-OPERATING.md §4](WT-OPERATING.md#4-qa-sub-loop-dentro-do-estado-qa). Gates 1-4: 18/18 PASS. Scorecards 14-dim: 3/18 (F1).
 - **Docs:** narrative v2.3, evidence-db v5.1, blueprint v1.8, reading-list v0.4
 - **GSAP plugins:** SplitText + Flip + ScrambleTextPlugin (index.template.html)
-- **Prompt Gemini:** v4.0 (docs/prompts/gemini-slide-qa.md)
+- **Prompt Gemini:** v6.0 (docs/prompts/gemini-slide-qa.md)
 - **Dark-bg:** 6 slides (ver NOTES.md §dark-bg reference map). Novos slides dark = adicionar ID ao seletor em metanalise.css.
 - **HEX navy:** #162032 (decisao Lucas)
 - **Reveal.js:** REMOVIDO (ERRO-010)
@@ -85,7 +85,7 @@ Trabalho completado e decisões tomadas: ver [HANDOFF-ARCHIVE.md](HANDOFF-ARCHIV
 1. **Hardening documental DONE (2026-03-19g, commit 0dd5221):** -125 linhas, stale data corrigido, XREF fixes. Docs limpos para QA.
 2. **Pipeline normal** (WT-OPERATING.md §4): proximo slide na fila → QA.0-QA.4 → DONE → proximo.
    - Criterios visuais elevados: beleza avançada + GSAP sofisticado (SplitText, Flip, ScrambleText, custom choreographies)
-   - Gemini prompt v4.0 (structured CoT 5-step, code-grounded GSAP API, few-shot exemplar, self-critique, token budget 1500-3000)
+   - Gemini prompt v6.0 (scorecard 10-dim, 10 lenses, 5 personas, radical ideas forcing, projected scorecard, temp 1.0)
    - Contexto sala: pequena, ~15 pessoas, 1-4m, iluminacao forte, TV LED — legibilidade constraint #1
 3. **Dark-bg reference** (sugestao, decide-se por slide):
    - Ja dark: s-checkpoint-1, s-checkpoint-2
