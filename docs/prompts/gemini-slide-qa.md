@@ -428,3 +428,48 @@ v6.0 avanca sobre v4.0:
 - **Output schema** rigido: 6 secoes obrigatorias, formato exato
 - **Lente 9** adaptada: TV LED 1-4m (nao projetor 5-15m como cirrose)
 - **Lente 10** adaptada: "residentes acham meta-analise chata — como quebrar?"
+
+---
+
+## Learnings dos 3 slides DONE (s-title, s-hook, s-contrato)
+
+> Padroes extraidos de 8 rounds Gemini (2 rounds s-title, 2 rounds s-hook, 4 rounds s-contrato).
+> Usar para calibrar expectativas e evitar erros recorrentes.
+
+### O que funcionou
+
+| Pattern | Slide | Efeito |
+|---------|-------|--------|
+| **Inverted weight hierarchy** (h1 light 400, subtitle bold 600 uppercase) | s-title | Gemini bold idea #1 — aprovada. Subverte expectativa, cria tensao tipografica |
+| **Asymmetric grid** (1fr-auto-1fr com divider vertical) | s-hook | Gemini propôs. Volume vs qualidade = layout assimetrico. Reforça narrativa |
+| **Typographic deconstruction** (numero grande + affix pequeno) | s-hook | 96px "80" + 36px "/dia" = hierarquia instantanea a 4m |
+| **Bleeding watermark** (numero 14rem, 12-35% opacity como ::after) | s-contrato | Gemini radical idea — aprovada. Profundidade sem competir com texto |
+| **Pillar masking reveal** (overflow:hidden + GSAP yPercent) | s-title | Gemini bold idea #3 — aprovada. Reveal cinematografico dos 3 pilares |
+| **Re-eval pos-fix** (screenshots + video novos a cada round) | todos | ESSENCIAL. Gemini so avalia com material atual. Material stale = sugestoes stale |
+
+### O que falhou / foi rejeitado
+
+| Pattern | Slide | Razão da rejeição |
+|---------|-------|-------------------|
+| **Cor danger para qualidade baixa** (81% em vermelho) | s-hook | `--danger` = dano clinico, nao metrica de qualidade. Violaria semantica do design system |
+| **Tom alarmista** (VITALITY 1.330 retratados, UTI) | s-hook | Lucas: sóbrio > escandaloso. Público = residentes, nao jornalistas |
+| **Layout complexo (Z-pattern + 3 beats + state machine)** | s-hook | 115 linhas JS removidas. Complexidade sem ganho proporcional em clarity |
+
+### Calibracao de rounds
+
+| Metrica | Valor observado |
+|---------|----------------|
+| Rounds por slide ate APPROVED | 2-5 (media 3) |
+| Score inicial tipico | 4-6/10 |
+| Score final tipico | 9-9.5/10 |
+| Custo estimado por slide | ~$0.10-0.20 (2-4 chamadas API) |
+| Tempo por round (envio + resposta + implementacao) | ~20-40 min |
+| Propostas aceitas vs rejeitadas | ~80% aceitas |
+
+### Regras operacionais derivadas
+
+1. **SEMPRE reenviar screenshots pos-fix.** Gemini avalia imagem, nao codigo. Sem screenshot novo = re-avaliacao invalida.
+2. **Especificar modelo explicitamente** na chamada MCP. Default do MCP pode nao ser o esperado.
+3. **Radical ideas valem o risco.** 3/3 slides tiveram pelo menos 1 radical aceita que elevou o nivel significativamente.
+4. **Danger = clinico.** NUNCA usar cores semanticas clinicas para metricas de qualidade, frequencia ou volume.
+5. **Complexidade JS tem custo de manutenção.** Se o efeito pode ser alcançado com CSS + data-animate, preferir isso a state machine custom.
