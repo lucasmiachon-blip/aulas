@@ -11,7 +11,7 @@
 
 | Fase | Slides | Scorecard formal | QA session |
 |------|--------|-----------------|------------|
-| F1 | s-title, s-hook, s-contrato | s-title, s-hook, s-contrato — scorecards abaixo | 2026-03-16e / 2026-03-17 |
+| F1 | s-title, s-hook, s-contrato | s-title DONE, s-hook DONE, s-contrato Gemini pendente | 2026-03-16e / 2026-03-17 / 2026-03-19 |
 | I1 | s-checkpoint-1 | Pendente (Fase 3 motion) | 2026-03-16j (constraint check PASS) |
 | F2 | s-rs-vs-ma → s-fixed-random (8) | Pendente scorecard formal | 2026-03-16j (constraint check PASS, QA slide-a-slide) |
 | I2 | s-checkpoint-2 | Pendente (Fase 3 motion) | 2026-03-16j (constraint check PASS) |
@@ -76,30 +76,45 @@ Scorecards formais serao preenchidos durante ralph-qa batches 2-6 (proximas sess
 
 ## s-hook (01-hook.html)
 
-**Status:** SCORECARD INVALIDADO (rewrite edb2e2f, 2026-03-19h). QA.0 pendente.
-**Archetype:** cards (was hook) — 3 metric cards com data-animate="stagger"
-**Rewrite (2026-03-19h):** Alarmist VITALITY/UTI framing removido. Novo: 3 sober metric cards (80/dia SRs, 81% AMSTAR-2, 33.8% GRADE). h2 curto "Por que isso importa". Sem click-reveals. Sem state machine. Sem ScrambleText/SplitText/blackout/verdict.
+**Status:** PASS (QA.0-QA.4 completo 2026-03-19. Gemini QA.3 drove uplift. Opus QA.4 re-audit PASS.)
+**Archetype:** cards — asymmetric grid "volume vs reality" with countUp GSAP
+**History:** Rewrite edb2e2f (sober 3-card), uplift c400f5a (Gemini QA.3 → asymmetric grid, typographic deconstruction, divider, tags)
 
 | Dim | Score | Nota |
 |-----|-------|------|
-| H | — | Pendente re-audit |
-| T | — | Pendente re-audit |
-| E | — | Pendente re-audit |
-| C | — | Pendente re-audit |
-| V | — | Pendente re-audit |
-| K | — | Pendente re-audit |
-| S | — | Pendente re-audit |
-| M | — | Pendente re-audit |
-| I | — | Pendente re-audit |
-| D | — | Pendente re-audit |
-| A | — | Pendente re-audit |
-| L | — | Pendente re-audit |
-| P | — | Pendente re-audit |
-| N | — | Pendente re-audit |
+| H (hierarquia) | 9 | Hero 96px "80" dominates left; 72px secondary nums right; h2 34px top-left anchor |
+| T (tipografia) | 9 | JetBrains Mono nums (96/72px), DM Sans labels (20px), affix smaller (36/32px). Tabular-nums lining-nums |
+| E (layout fill) | 9 | CSS Grid 1fr-auto-1fr. Vertical divider 200px. ~60% fill — hook sweet spot |
+| C (cor/contraste) | 10 | h2 17.58:1, nums 9.99:1, labels 13.82:1, muted 8.62:1 — ALL AAA. Verified via Playwright + a11y-contrast MCP |
+| V (visuais) | 9 | Numbers ARE the visual evidence. AMSTAR-2/GRADE tags = credibility markers. No images needed |
+| K (consistencia) | 9 | Same bg surface + h2 position as s-title. Mono nums, source-tag convention |
+| S (sofisticacao) | 9 | Asymmetric grid, typographic deconstruction (big num + small affix), editorial divider, countUp choreography, tags |
+| M (comunicacao) | 10 | Volume vs quality gap = clear message. Asymmetric layout reinforces narrative |
+| I (interacoes) | 9 | CountUp choreography: volume→divider→facts. Timeline: tl.to chain. No click-reveals (appropriate for hook) |
+| D (dados) | 10 | 3 sourced data points (Hoffmann, Bojcic, Siedler). PMIDs in notes. Murad 2014 framework. No invented data |
+| A (acessibilidade) | 10 | All AAA. no-js failsafe (HTML has final values). stage-bad failsafe. @media print failsafe |
+| L (carga cognitiva) | 9 | 3 data points in 2 chunks (Cowan OK). Labels concise. Body word count within 30-word limit |
+| P (andragogia) | 9 | Engages via surprise gap (volume high, quality low). Relevant to daily practice |
+| N (arco narrativo) | 10 | Tension 2. Creates cognitive dissonance → motivates entire deck |
+
+**Average: 9.36/10 — All dimensions >= 9. PASS.**
+
+**QA.3 Gemini (2026-03-19, gemini-2.5-pro):**
+- Input: fullscreen PNG (1920x1080) + full code context (HTML + CSS + JS)
+- Gemini scored original 3-card layout 4.4/10. Proposed 6 changes.
+- Accepted: asymmetric grid, countUp GSAP, typographic deconstruction, editorial divider, AMSTAR-2/GRADE tags
+- Rejected: danger color for 81% (--danger semantics = clinical harm, not quality assessment)
+- Projected scorecard: 9.2/10
+
+**QA.4 re-audit (2026-03-19, Opus):**
+- Fresh screenshots at 1280x720 + 1920x1080 post-uplift
+- 5 contrast checks via a11y-contrast MCP — all AAA
+- 14-dim scorecard: all >= 9. PASS.
 
 **Scorecard anterior (pre-rewrite, referencia historica):** avg 8.6/10. Detalhes em HANDOFF-ARCHIVE.md.
 
-**Screenshots anteriores invalidados:** beat0/1/2 PNG + video .webm nao representam mais o slide.
+**Screenshots:** `qa-screenshots/s-hook/QA4-1280x720.png`, `qa-screenshots/s-hook/QA4-1920x1080.png`
+**Screenshots anteriores (historico):** S0.png, S0-fullscreen.png (pre-uplift), S0-v2.png, S0-v2-fullscreen.png (post-uplift), video.webm
 
 ---
 

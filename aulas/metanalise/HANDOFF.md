@@ -10,7 +10,7 @@
 - **Branch:** feat/metanalise-mvp (worktree wt-metanalise)
 - **Slides:** 18/18 no deck (ver _manifest.js). Lint PASS. Orphans: 0.
 - **Ancora:** Valgimigli 2025 Lancet (PMID 40902613) — IPD-MA, 7 RCTs, 28.982 pts
-- **QA pipeline:** [WT-OPERATING.md §4](WT-OPERATING.md#4-qa-sub-loop-dentro-do-estado-qa). Gates 1-4: 18/18 PASS. Scorecards 14-dim: 3/18 (F1).
+- **QA pipeline:** [WT-OPERATING.md §4](WT-OPERATING.md#4-qa-sub-loop-dentro-do-estado-qa). Gates 1-4: 18/18 PASS. Scorecards 14-dim: 3/18 (F1). DONE: 2/18 (s-title, s-hook).
 - **Docs:** narrative v2.3, evidence-db v5.1, blueprint v1.8, reading-list v0.4
 - **GSAP plugins:** SplitText + Flip + ScrambleTextPlugin (index.template.html)
 - **Prompt Gemini:** v6.0 (docs/prompts/gemini-slide-qa.md)
@@ -28,8 +28,8 @@
 
 | # | Slide | Estado | Notas |
 |---|-------|--------|-------|
-| 1 | s-title | QA | QA.0-QA.4 PASS. Gemini approved (beauty 9, legibility 10). Choreography + masking. |
-| 2 | s-hook | QA | **QA UPLIFT (c400f5a):** Gemini QA.3 → layout assimétrico "volume vs realidade" (grid), countUp GSAP, typographic deconstruction (96/72px num + affix menor), divider, tags AMSTAR-2/GRADE. QA.0-QA.3 PASS. QA.4 pendente (re-audit visual). |
+| 1 | s-title | DONE | QA.0-QA.4 PASS. Gemini approved (beauty 9, legibility 10). Choreography + masking. |
+| 2 | s-hook | DONE | QA.0-QA.4 PASS. Asymmetric grid, countUp GSAP, 14-dim avg 9.36. Gemini drove uplift (c400f5a). |
 | 3 | s-contrato | QA | Scorecard 14-dim PASS (Opus). Gemini pendente. |
 
 ### I1 — Checkpoint engajamento (1 slide)
@@ -69,11 +69,9 @@
 
 ### Resumo
 
-- **QA (3):** s-title (DONE Gemini), s-hook (QA.0-QA.3 PASS, QA.4 pendente), s-contrato (Gemini pendente)
+- **DONE (2):** s-title, s-hook — QA full (Opus + Gemini) completo
+- **QA (1):** s-contrato (Gemini pendente)
 - **LINT-PASS (15):** restantes — scorecard 14-dim pendente
-- **DONE (0):** nenhum slide completou QA full (Opus + Gemini)
-
-**s-hook uplift (c400f5a):** Layout assimétrico "fenômeno vs realidade" com grid, countUp GSAP, desconstrução tipográfica, divider vertical, tags AMSTAR-2/GRADE. Gemini scorecard 4.4→9.2 projetado.
 
 ---
 
@@ -93,7 +91,7 @@ Trabalho completado e decisões tomadas: ver [HANDOFF-ARCHIVE.md](HANDOFF-ARCHIV
    - Ja dark: s-checkpoint-1, s-checkpoint-2
    - Propostos dark: s-forest-plot, s-heterogeneity, s-ancora, s-absoluto (CSS pronto)
    - Light: demais (s-rs-vs-ma, s-pico, s-abstract, s-benefit-harm, s-grade, s-fixed-random, s-aplicacao, s-aplicabilidade, s-takehome)
-4. **Ordem:** s-hook QA.4 (re-audit visual uplift) → s-contrato (Gemini pendente) → s-checkpoint-1 → F2 em sequencia
+4. **Ordem:** s-contrato (Gemini pendente) → s-checkpoint-1 → F2 em sequencia
 
 ### Sessão N+2
 - Fase 4 (Gemini deck-level — este sim em batches)
