@@ -4,6 +4,47 @@
 
 ---
 
+## 2026-03-19h — s-hook REWRITE: sober 3-card metrics, state machine removed
+
+Branch: `feat/metanalise-mvp` · Commit: `edb2e2f`
+
+### Motivacao
+Lucas rejeitou tom alarmista/escandaloso do hook (VITALITY "1.330 retratados", "guidelines contaminadas", UTI, verdict vermelho). Novo framing: sober, clinico, motivador de leitura critica.
+
+### HTML (01-hook.html) — full rewrite
+- **REMOVIDO:** 3-beat state machine (beat-0 ScrambleText "1.330", beat-1 hero "20%", beat-2 blackout + SplitText verdict vermelho + NICE-SUGAR UTI)
+- **NOVO:** 3 metric cards com `data-animate="stagger"` (declarativo via engine.js):
+  - ~80/dia: revisoes sistematicas publicadas (Hoffmann 2021)
+  - 81%: qualidade criticamente baixa AMSTAR-2 (Bojcic 2024)
+  - 33,8%: avaliaram certeza GRADE (Siedler 2025)
+- h2: "Por que isso importa" (curto, nao assertion longo)
+- section-tag removido (redundante com h2)
+- Takeaway movido para speaker notes
+- Source-tag: Hoffmann 2021 · Bojcic 2024 · Siedler 2025 · Murad 2014
+- clickReveals: 2 → 0. Sem interacao.
+
+### CSS (metanalise.css) — -132/+30 linhas
+- **REMOVIDO:** .hook-question (grid Z-pattern), .hook-vol-*, .hook-beat-0/1/2, .hook-data, .hook-hero*, .hook-verdict, .no-js/.qa fallbacks beats, print media hook refs
+- **NOVO:** .hook-metrics (flex), .hook-metric-card (border-top accent), .hook-metric-number (64px mono --ui-accent), .hook-metric-label
+
+### slide-registry.js — -117 linhas
+- s-hook entry INTEIRO removido (state machine, ScrambleText, SplitText, blackout, advance/retreat/cleanup)
+- `import { SplitText }` removido (nenhum entry restante usa)
+
+### _manifest.js
+- archetype: hook → cards
+- headline: "Por que isso importa"
+- clickReveals: 2 → 0
+- customAnim: 's-hook' → null
+- tensionLevel: 3 → 2
+
+### Verificacao
+- `npm run build:metanalise` → PASS (18 slides)
+- `npm run lint:slides` → PASS
+- Scorecard anterior INVALIDADO (conteudo + visual + interacao mudaram completamente)
+
+---
+
 ## 2026-03-19g — Gemini prompt v4.0 → v6.0 (absorve cirrose v6)
 
 Branch: `feat/metanalise-mvp`

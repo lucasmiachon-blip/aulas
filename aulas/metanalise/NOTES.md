@@ -100,3 +100,22 @@
 - **Bug encontrado:** SplitText `type: 'chars'` criava spans individuais por char — browser fazia word-break mid-word "paci/entes". Fix: `type: 'words,chars'` + `&nbsp;` no HTML.
 - Regra aprendida: **qualquer elemento com bg próprio escuro em slide light DEVE usar cor explícita, não var(--text-on-dark)** — stage-c remap não distingue "slide escuro" de "elemento escuro em slide claro".
 - 14-dim scorecard: avg 8.6/10. Lucas aprovou resultado: "melhorou muito".
+
+## 2026-03-19 — s-hook REWRITE (sober tone)
+
+### Decisao Lucas
+- Rejeitou tom alarmista/escandaloso: "1.330 retratados", "guidelines contaminadas", UTI, verdict vermelho.
+- Novo framing: "Finding a SR is no longer the problem. Knowing which one to trust is." Sóbrio, clínico.
+- h2 longo removido → curto "Por que isso importa". Section-tag redundante removido.
+- Takeaway (frase editorial) removido do corpo → speaker notes.
+
+### Impacto tecnico
+- State machine (115 linhas JS) removida inteiramente. ScrambleText/SplitText nao mais usados.
+- SplitText import removido de slide-registry.js (nenhum entry restante usa).
+- CSS: -132 linhas (grid Z-pattern, beats, hero, verdict, fallbacks) / +30 linhas (metric cards).
+- Archetype: hook → cards. clickReveals: 2 → 0. customAnim: 's-hook' → null.
+- Scorecard anterior INVALIDADO. QA.0 pendente.
+
+### Plugins GSAP
+- SplitText, Flip, ScrambleTextPlugin permanecem REGISTRADOS em index.template.html (disponiveis para slides futuros).
+- Atualmente usados: nenhum (s-title usa gsap.fromTo direto, nao SplitText).

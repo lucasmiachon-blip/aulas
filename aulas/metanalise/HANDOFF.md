@@ -29,7 +29,7 @@
 | # | Slide | Estado | Notas |
 |---|-------|--------|-------|
 | 1 | s-title | QA | QA.0-QA.4 PASS. Gemini approved (beauty 9, legibility 10). Choreography + masking. |
-| 2 | s-hook | QA | **Gate 3+4 PASS**: 14-dim scorecard avg 8.6. Verdict 7.78:1 AAA (was 3.67). Word-break fixed. Gemini Gate 4 pendente. |
+| 2 | s-hook | QA | **REWRITE (edb2e2f):** 3-beat state machine → 3 sober metric cards. h2 curto "Por que isso importa". data-animate="stagger" (declarativo, sem custom JS). Scorecard anterior INVALIDADO — QA.0 pendente. |
 | 3 | s-contrato | QA | Scorecard 14-dim PASS (Opus). Gemini pendente. |
 
 ### I1 — Checkpoint engajamento (1 slide)
@@ -69,9 +69,11 @@
 
 ### Resumo
 
-- **QA (3):** s-title (DONE Gemini), s-hook (Gate 3+4 PASS, Gemini pendente), s-contrato (Gemini pendente)
+- **QA (3):** s-title (DONE Gemini), s-hook (REWRITE — QA.0 pendente), s-contrato (Gemini pendente)
 - **LINT-PASS (15):** restantes — scorecard 14-dim pendente
 - **DONE (0):** nenhum slide completou QA full (Opus + Gemini)
+
+**s-hook rewrite (edb2e2f):** Alarmist VITALITY/NICE-SUGAR/UTI framing removido. Agora 3 metric cards (Hoffmann 80/dia, Bojcic 81% AMSTAR-2, Siedler 33.8% GRADE). Sem click-reveals. Sem state machine. Sem ScrambleText/SplitText. Archetype cards com data-animate="stagger".
 
 ---
 
@@ -91,7 +93,7 @@ Trabalho completado e decisões tomadas: ver [HANDOFF-ARCHIVE.md](HANDOFF-ARCHIV
    - Ja dark: s-checkpoint-1, s-checkpoint-2
    - Propostos dark: s-forest-plot, s-heterogeneity, s-ancora, s-absoluto (CSS pronto)
    - Light: demais (s-rs-vs-ma, s-pico, s-abstract, s-benefit-harm, s-grade, s-fixed-random, s-aplicacao, s-aplicabilidade, s-takehome)
-4. **Ordem:** s-hook Gemini Gate 4 → s-contrato (Gemini pendente) → s-checkpoint-1 → F2 em sequencia
+4. **Ordem:** s-hook QA.0→QA.4 (rewrite) → s-contrato (Gemini pendente) → s-checkpoint-1 → F2 em sequencia
 
 ### Sessão N+2
 - Fase 4 (Gemini deck-level — este sim em batches)

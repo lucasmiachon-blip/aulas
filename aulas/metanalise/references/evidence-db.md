@@ -112,7 +112,7 @@
 
 | Dado | Valor | Fonte | PMID | DOI | Tier |
 |------|-------|-------|------|-----|------|
-| SRs publicadas por dia (2019) | **~80/dia** | Hoffmann et al. J Clin Epidemiol 2021;138:1-11 | 34091022 | 10.1016/j.jclinepi.2021.05.022 | 1 |
+| SRs publicadas por dia (2019) | **~80/dia** | Hoffmann et al. J Clin Epidemiol 2021;138:1-11 | 34091022 | 10.1016/j.jclinepi.2021.05.022 | 1 | ✅ **EM USO no hook card 1** |
 | Aumento de SRs indexadas (2000→2019) | 1.432 → 29.073 (**20x**) | Hoffmann et al. 2021 | 34091022 | idem | 1 |
 | Crescimento de SRs (1991→2014) | **+2.728%** (vs +153% total PubMed) | Ioannidis. Milbank Q 2016;94(3):485-514 | 27620683 | 10.1111/1468-0009.12210 | 1 |
 | SRs/MAs indexadas em 2017 | 22.774 (48x vs 1995) | Niforatos et al. JAMA Intern Med 2019;179(11):1593-4 | 31355871 | 10.1001/jamainternmed.2019.3013 | 1 |
@@ -123,9 +123,15 @@
 | Dado | Valor | Fonte | PMID | DOI | Tier | Nota |
 |------|-------|-------|------|-----|------|------|
 | SRs em câncer com qualidade criticamente baixa (AMSTAR-2) | **88,1%** (230/261) | Siemens et al. J Clin Epidemiol 2021;136:84-95 | 33741503 | 10.1016/j.jclinepi.2021.03.010 | 1 | ⚠ Específico de câncer avançado — não usar como dado geral |
-| SRs que declaram AMSTAR-2: criticamente baixas (cross-field) | **81%** (35/43) | Bojcic et al. J Clin Epidemiol 2024;165:111210 | 37931822 ✅ | 10.1016/j.jclinepi.2023.10.026 | 1 | ✅ **EM USO no hook** (substituiu Siemens 88%) — cross-field, não específico de área |
+| SRs que declaram AMSTAR-2: criticamente baixas (cross-field) | **81%** (35/43) | Bojcic et al. J Clin Epidemiol 2024;165:111210 | 37931822 ✅ | 10.1016/j.jclinepi.2023.10.026 | 1 | ✅ **EM USO no hook card 2** — cross-field, não específico de área |
 | "A grande maioria é desnecessária, enganosa ou conflitada" | — | Ioannidis 2016 | 27620683 | idem | 1 | |
 | MAs redundantes sobre antidepressivos (2007-2014) | **185** sobre o mesmo tema | Ioannidis 2016 | 27620683 | idem | 1 | |
+
+### GRADE gap em MAs
+
+| Dado | Valor | Fonte | PMID | DOI | Tier | Nota |
+|------|-------|-------|------|-----|------|------|
+| MAs que avaliaram certeza GRADE | **33,8%** | Siedler MR et al. J Clin Epidemiol 2025 | pendente | pendente | 1 | ✅ **EM USO no hook card 3** — proporção de MAs que aplicaram GRADE (dois terços omitem) |
 
 ### Guidelines e evidência de nível A
 
@@ -161,9 +167,9 @@
 
 | Dado | Valor | Fonte | PMID | DOI | Tier | Nota |
 |------|-------|-------|------|-----|------|------|
-| MA pré-NICE-SUGAR: mortalidade | RR 0,93 (IC 0,85–1,03); hipoglicemia RR 5,13 | Wiener RS et al. JAMA 2008;300(8):933-44 | 18728267 ✅ | 10.1001/jama.300.8.933 | 1 | ✅ **EM USO no hook beat 2**. 29 RCTs, 8.432 pts. Benefício sugerido mas IC cruza 1 |
-| NICE-SUGAR trial (reversão) | OR mortalidade 1,14 (IC 1,02–1,28) | NICE-SUGAR Study Investigators. NEJM 2009;360(13):1283-97 | 19318384 ✅ | 10.1056/NEJMoa0810625 | 1 | ✅ **EM USO no hook beat 2**. n=6.104, 42 centros. Mortalidade AUMENTOU |
-| MA pós-NICE-SUGAR: confirmação | RR 0,93 (IC 0,83–1,04); hipoglicemia RR 6,0 | Griesdale DEG et al. CMAJ 2009;180(8):821-7 | 19318387 ✅ | 10.1503/cmaj.091206 | 1 | ✅ **EM USO no hook beat 2**. 26 trials, 13.567 pts. Subgrupo cirúrgico: benefício; clínico: dano |
+| MA pré-NICE-SUGAR: mortalidade | RR 0,93 (IC 0,85–1,03); hipoglicemia RR 5,13 | Wiener RS et al. JAMA 2008;300(8):933-44 | 18728267 ✅ | 10.1001/jama.300.8.933 | 1 | REMOVIDO do slide (rewrite sober). 29 RCTs, 8.432 pts. Ref para notes/futuro |
+| NICE-SUGAR trial (reversão) | OR mortalidade 1,14 (IC 1,02–1,28) | NICE-SUGAR Study Investigators. NEJM 2009;360(13):1283-97 | 19318384 ✅ | 10.1056/NEJMoa0810625 | 1 | REMOVIDO do slide (rewrite sober). n=6.104, 42 centros. Ref para notes/futuro |
+| MA pós-NICE-SUGAR: confirmação | RR 0,93 (IC 0,83–1,04); hipoglicemia RR 6,0 | Griesdale DEG et al. CMAJ 2009;180(8):821-7 | 19318387 ✅ | 10.1503/cmaj.091206 | 1 | REMOVIDO do slide (rewrite sober). 26 trials, 13.567 pts. Ref para notes/futuro |
 
 ### Pirâmide de evidência e hierarquia
 
@@ -175,7 +181,7 @@
 
 | Dado | Valor | Fonte | PMID | DOI | Tier | Nota |
 |------|-------|-------|------|-----|------|------|
-| Trials retratados → MAs mudaram direção | **8,4%** (IC 95%: 6,8–10,1%) | Xu C et al. (VITALITY). BMJ 2025;389:e082068 | 40268307 ✅ | 10.1136/bmj-2024-082068 | 1 | 1.330 trials retratados → 847 SRs → 3.902 MAs. Arsenal para hook/notes |
+| Trials retratados → MAs mudaram direção | **8,4%** (IC 95%: 6,8–10,1%) | Xu C et al. (VITALITY). BMJ 2025;389:e082068 | 40268307 ✅ | 10.1136/bmj-2024-082068 | 1 | REMOVIDO do slide (rewrite sober). Mantido como ref para notes/futuro |
 | Trials retratados → MAs mudaram significância | **16,0%** (IC 95%: 14,2–17,9%) | Xu et al. (VITALITY) 2025 | 40268307 ✅ | idem | 1 | |
 | Trials retratados → magnitude mudou >50% | **15,7%** (IC 95%: 13,5–17,9%) | Xu et al. (VITALITY) 2025 | 40268307 ✅ | idem | 1 | |
 | Guidelines contaminadas por SRs com trials retratados | **68 SRs** → **157 guidelines** | Xu et al. (VITALITY) 2025 | 40268307 ✅ | idem | 1 | |
@@ -244,6 +250,7 @@
 
 | Data | Mudança |
 |------|---------|
+| 2026-03-19 | v5.2 — Hook rewrite sober: VITALITY/NICE-SUGAR removidos do slide (mantidos como ref). Hoffmann "EM USO card 1", Bojcic "EM USO card 2". +Siedler 2025 (33.8% GRADE, "EM USO card 3"). Tags EM USO atualizadas. |
 | 2026-03-19 | v5.1 — Hook rewrite VITALITY backbone: +8 refs. INSPECT-SR (Wilkinson 2025, PMID 40349737), Guyatt/Brignardello-Petersen 2025 (PMID 39218429), Paul 2025 (PMID 40414366), Uttley 2024 (PMID 39542225), Wiener MA 2008 (PMID 18728267), NICE-SUGAR 2009 (PMID 19318384), Griesdale MA 2009 (PMID 19318387), Murad 2016 pirâmide (PMID 27339128). Novas seções: integridade RCTs, exemplo MA UTI, pirâmide. Todos PMIDs ✅ |
 | 2026-03-18 | v5.0 — 6 refs adicionadas: Windish JAMA 2007 (EM USO no hook, swap 146→41%), VITALITY BMJ 2025, Possamai JAMA Intern Med 2025, Herrera-Perez eLife 2019, Saposnik BMC 2016, Ioannidis JAMA 2005. Nova seção "MAs contraditas/retratadas". Todos PMIDs ✅ |
 | 2026-03-17 | v4.3 — Candidatos S2/A7/F1-F3/G1-G5 colapsados em tabela-resumo (~200 linhas cortadas). Dados completos preservados em PMIDs |

@@ -88,8 +88,8 @@ GSAP plugins: SplitText + Flip + ScrambleTextPlugin (registered in index.templat
 | Slides | 18/18 deck completo (F1+I1+F2+I2+F3) |
 | Ancora | Valgimigli 2025 Lancet (PMID 40902613) |
 | Gates 1-4 | 18/18 PASS |
-| Scorecards 14-dim | 3/18 (F1): s-title DONE, s-hook Gate 3+4 PASS, s-contrato Gemini pendente |
-| Docs | narrative v2.3, blueprint v1.8, evidence-db v5.1 |
+| Scorecards 14-dim | 2/18 (F1): s-title DONE, s-contrato Gemini pendente. s-hook INVALIDADO (rewrite). |
+| Docs | narrative v2.4, blueprint v1.8, evidence-db v5.2 |
 | Main sync | 5406dd8 (2026-03-18) |
 
 Detalhes QA por slide: HANDOFF.md. Pipeline: WT-OPERATING.md §4.
