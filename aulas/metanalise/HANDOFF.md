@@ -81,7 +81,7 @@ Trabalho completado e decisões tomadas: ver [HANDOFF-ARCHIVE.md](HANDOFF-ARCHIV
 ## Caminho crítico — próximas sessões
 
 ### Sessão N+1 (imediata) — QA slide-a-slide com visual uplift
-1. **Hardening documental DONE (2026-03-19, 6 commits 709395f→d21c3f0):** -903 linhas net, stale data corrigido, XREF rebuilt, CHANGELOG/HANDOFF-ARCHIVE reescritos, CURSOR.md archived. Docs limpos para QA.
+1. **Hardening documental R1+R2 DONE (2026-03-19):** R1 (-903 linhas, XREF rebuilt). R2: MEMORY.md 5 fixes, blueprint v1.9 (stale hook assertion), lessons +3, .gitignore fix, Notion blocker documented.
 2. **Pipeline normal** (WT-OPERATING.md §4): proximo slide na fila → QA.0-QA.4 → DONE → proximo.
    - Criterios visuais elevados: beleza avançada + GSAP sofisticado (SplitText, Flip, ScrambleText, custom choreographies)
    - Gemini prompt v6.0 (scorecard 10-dim, 10 lenses, 5 personas, radical ideas forcing, projected scorecard, temp 1.0)
@@ -90,7 +90,7 @@ Trabalho completado e decisões tomadas: ver [HANDOFF-ARCHIVE.md](HANDOFF-ARCHIV
    - Ja dark: s-checkpoint-1, s-checkpoint-2
    - Propostos dark: s-forest-plot, s-heterogeneity, s-ancora, s-absoluto (CSS pronto)
    - Light: demais (s-rs-vs-ma, s-pico, s-abstract, s-benefit-harm, s-grade, s-fixed-random, s-aplicacao, s-aplicabilidade, s-takehome)
-4. **Ordem:** s-contrato (Gemini pendente) → s-checkpoint-1 → F2 em sequencia
+4. **Ordem:** s-checkpoint-1 → F2 em sequencia (F1 completo: s-title, s-hook, s-contrato DONE)
 
 ### Sessão N+2
 - Fase 4 (Gemini deck-level — este sim em batches)
@@ -106,6 +106,7 @@ Trabalho completado e decisões tomadas: ver [HANDOFF-ARCHIVE.md](HANDOFF-ARCHIV
 | Bloqueio | Impacto | Workaround |
 |----------|---------|------------|
 | Cochrane exemplos visuais | Forest plots e GRADE tables reais precisam de screenshots/crops | Acessar via CAPES e cropar quando iniciar QA visual |
+| Notion Slides DB sem `Aula` property | Não pode sincronizar metanalise — DB assume tudo é Cirrose | Manual: adicionar Select `Aula` no Notion UI, tagar pages existentes como Cirrose, atualizar agent |
 
 ## Pendências para main (Classe B — não editar na WT)
 
@@ -113,7 +114,7 @@ Trabalho completado e decisões tomadas: ver [HANDOFF-ARCHIVE.md](HANDOFF-ARCHIV
 - **qa-engineer.md:** ref a `mcp__claude_ai_perplexity` diverge do nome real. Verificar e corrigir em main.
 - **ralph-qa SKILL.md:** ref a `perplexity_reason` pode não bater com MCP name real. Idem.
 - **XREF.md (cirrose):** `aulas/cirrose/WT-OPERATING.md` listado mas não existe no disco (copy-paste da seção metanalise). Remover.
-- **.gitignore:** adicionar `.claude/agent-memory/` (cache local medical-researcher, untracked).
+- ~~.gitignore: adicionar `.claude/agent-memory/`~~ — DONE (2026-03-19, nesta WT).
 
 ## Não fazer ainda
 

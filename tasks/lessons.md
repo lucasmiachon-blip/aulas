@@ -390,3 +390,22 @@ Tokens não importam. Retrabalho é sinal de aprendizado — mas não pode paral
 - Computed styles mostraram JetBrains Mono 72px correto — o CSS SEMPRE esteve certo.
 - A tela preta impedia validação visual → hipótese de CSS nunca foi testada.
 - Regra: antes de diagnosticar "CSS specificity", verificar se o dev server está servindo o código certo.
+
+### stage-c remap de --text-on-dark afeta elementos com bg local escuro
+
+- `--text-on-dark` em stage-c é remapeado para `oklch(12%)` (texto ESCURO) — correto para slides light.
+- Elemento com bg escuro DENTRO de slide light (ex: verdict pill com --danger bg) herda o remap → texto escuro sobre bg escuro = contraste 3.67:1.
+- **Regra:** Qualquer elemento com background-color próprio escuro em slide light DEVE usar cor explícita (`oklch(95%)` ou HEX), NUNCA `var(--text-on-dark)`.
+- Ref: NOTES.md 2026-03-19 (s-hook Gate 3 scorecard). ERRO-009 (mesmo root cause para slides inteiros).
+
+### SplitText `type: 'chars'` causa word-break
+
+- `SplitText({ type: 'chars' })` envolve cada caractere em `<span>` — browser faz word-break mid-word ("paci/entes").
+- **Fix:** `type: 'words,chars'` — SplitText primeiro agrupa por palavra, depois por char. `&nbsp;` no HTML para espaços non-breaking.
+- **Regra:** NUNCA usar `type: 'chars'` isolado. Sempre `'words,chars'` para manter word boundaries.
+
+### Tom alarmista rejeitado pelo Lucas (s-hook)
+
+- Dados VITALITY (1.330 retratados, guidelines contaminadas, UTI) geraram tom "escandaloso" no s-hook.
+- Lucas rejeitou: apresentação sóbria e clínica > alarmista. Público = residentes, não jornalistas.
+- **Regra:** Nunca usar dados de retratação/fraude para criar medo. Framing clínico: "saber em quem confiar" > "a ciência está quebrada".

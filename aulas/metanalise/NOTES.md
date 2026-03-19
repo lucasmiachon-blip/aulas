@@ -101,6 +101,29 @@
 - Regra aprendida: **qualquer elemento com bg próprio escuro em slide light DEVE usar cor explícita, não var(--text-on-dark)** — stage-c remap não distingue "slide escuro" de "elemento escuro em slide claro".
 - 14-dim scorecard: avg 8.6/10. Lucas aprovou resultado: "melhorou muito".
 
+## 2026-03-19 — Governance hardening round 2
+
+### Scope
+- MEMORY.md: 5 fixes (orphan ref, missing entry, branch state, descriptions)
+- .gitignore: +`.claude/agent-memory/` (HANDOFF pendencia resolvida)
+- HANDOFF.md: "s-contrato (Gemini pendente)" → DONE
+- CLAUDE.md (aula): scorecards status atualizado (F1 DONE)
+- blueprint.md: s-hook assertion atualizada (VITALITY→sober), s-contrato status DONE, version bump v1.9
+- lessons.md: +3 licoes (stage-c remap, SplitText word-break, tom sober)
+- feedback_metanalise_narrative_order.md: ancora atualizada (Musini→Valgimigli)
+- feedback_gemini_model.md: criado (file missing, so index)
+
+### Gemini model discrepancy
+- WT-OPERATING.md §9 diz "gemini-3.1-pro" (unico modelo)
+- AUDIT-VISUAL.md registra "gemini-2.5-pro" nas chamadas reais
+- Possivel causa: MCP @fre4x/gemini usa model default != especificado
+- **Acao:** verificar configuracao do MCP na proxima chamada Gemini. Registros historicos em AUDIT-VISUAL NAO devem ser alterados.
+
+### Pendencias PMID
+- Siedler 2025 (33.8% GRADE, EM USO hook card 3): PMID pendente
+- Higgins & Lopez-Lopez 2025 (I² creator): PMID pendente
+- Ambos aguardam verificacao por reference-manager agent
+
 ## 2026-03-19 — s-hook REWRITE (sober tone)
 
 ### Decisao Lucas

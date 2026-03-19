@@ -42,6 +42,9 @@ npm-debug.log*
 # MCP Memory (local knowledge graph)
 .memory/
 
+# Claude Code agent memory (local cache, not versioned)
+.claude/agent-memory/
+
 # Transcripts (arquivos grandes, gerados localmente)
 docs/transcripts/*.whisper.json
 docs/transcripts/*.analysis.json

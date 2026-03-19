@@ -33,10 +33,10 @@
 
 - **Fase:** 1
 - **Função:** hook — criar importância, gerar curiosidade
-- **Assertion:** "1.330 trials retratados contaminaram 3.902 MAs — 20% mudam resultado, 157 guidelines afetadas"
+- **Assertion:** "Por que isso importa" (h2 curto — archetype hook, não assertion longo)
 - **Risco cognitivo:** aula parecer estatística pura → desmotivação imediata
-- **Evidência:** VITALITY/Xu (1.330 trials → 3.902 MAs), Bojcic PMID 37931822 (81% crit. baixa), Qureshi PMID 41428154 (10% LoE forte), NICE-SUGAR cadeia (Wiener 2008 → NICE-SUGAR 2009 → Griesdale 2009). Detalhes: evidence-db.md §s-hook
-- **Status:** ✅ FEITO (01-hook.html) — sober 3-card metrics layout (countUp + stagger)
+- **Evidência:** ~80/dia SRs publicadas (Hoffmann 2021, PMID 34091022), 81% qualidade criticamente baixa AMSTAR-2 (Bojcic 2024, PMID 37931822), 33.8% certeza moderada/alta GRADE (Siedler 2025). Detalhes: evidence-db.md §s-hook
+- **Status:** ✅ FEITO (01-hook.html) — sober 3-card metrics layout, asymmetric grid, countUp GSAP. DONE (QA.0-QA.4 PASS, avg 9.36)
 
 ### Slide 02 — Contrato com a audiência
 
@@ -45,7 +45,7 @@
 - **Assertion:** "3 perguntas que você faz a toda meta-análise"
 - **Risco cognitivo:** residente não saber o que esperar → atenção dispersa
 - **Evidência:** —
-- **Status:** ✅ FEITO (02-contrato.html) — 3 cards reformulados: "Posso confiar na síntese?" / "Qual o efeito — e qual o dano?" / "O que isso significa para meu paciente?" . Absorveu 01-objectives.html. Alinhado com takehome (slide 17). Scope footer removido.
+- **Status:** ✅ DONE (02-contrato.html) — 3 cards: "Posso confiar na síntese?" / "Qual o efeito — e qual o dano?" / "O que isso significa para meu paciente?". Watermark-only design, grid+subgrid, GSAP choreography. QA.0-QA.4 PASS.
 
 ---
 
@@ -220,4 +220,4 @@
 
 ---
 
-## Status: BLUEPRINT v1.8 — 18 slides (deck completo). QA F1 PASS; F2-F3 LINT-PASS.
+## Status: BLUEPRINT v1.9 — 18 slides (deck completo). F1 DONE (3/18); F2-F3 LINT-PASS (15/18).
