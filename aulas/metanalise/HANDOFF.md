@@ -6,9 +6,9 @@
 
 ## Estado atual
 
-- **Fase:** QA slide-a-slide. s-title DONE (Gemini). s-hook v4 (grid assimétrico + blackout + brutalismo + 146 mono) — 146 mono OK (era Vite cache, não CSS), Gemini re-eval pendente.
+- **Fase:** QA slide-a-slide. s-title DONE (Gemini). s-hook v4 (grid assimétrico + blackout + brutalismo + 146 mono) — 146 mono OK (era Vite cache, não CSS). Screenshots 3 beats + vídeo .webm capturados para Gemini re-eval. Prompt v2.1 pronto (docs/prompts/gemini-slide-qa.md).
 - **HTML cleanup (2026-03-17d):** `data-background-color` removido de 17/18 slides (todos — deck.js ignora). `slide-navy` removido de 16/18 slides light (mantido em CP1+CP2 que TEM bg navy via CSS override). ERRO-009 documentado.
-- **QA pipeline:** ver [WT-OPERATING.md §4](WT-OPERATING.md#4-qa-sub-loop-dentro-do-estado-qa). Gates 1-4: 18/18 PASS. Scorecards formais 14-dim: 3/18 (F1). s-title QA.0-QA.4 PASS (Gemini approved). s-hook refatorado (hero 41% + trials) QA.0-QA.2 PASS, QA.3-QA.4 pendente. Fase 3 (dynamic): 3 pendentes (hook, CP1, CP2). Fase 4 (Gemini): s-title done, demais pendentes.
+- **QA pipeline:** ver [WT-OPERATING.md §4](WT-OPERATING.md#4-qa-sub-loop-dentro-do-estado-qa). Gates 1-4: 18/18 PASS. Scorecards formais 14-dim: 3/18 (F1). s-title QA.0-QA.4 PASS (Gemini approved). s-hook QA.0-QA.2 PASS, QA.3 screenshots+video capturados, QA.4 Gemini pendente (materiais prontos). Fase 3 (dynamic): 3 pendentes (hook, CP1, CP2). Fase 4 (Gemini): s-title done, s-hook materiais prontos, demais pendentes.
 - **Branch:** feat/metanalise-mvp (worktree wt-metanalise)
 - **Slides no index.html:** 18 (00-title → 01-hook → 02-contrato → 03-checkpoint-1 → 04-rs-vs-ma → 05-pico → 06-abstract → 07-forest-plot → 08-benefit-harm → 09-grade → 10-heterogeneity → 11-fixed-random → 12-checkpoint-2 → 13-ancora → 14-aplicacao → 15-aplicabilidade → 16-absoluto → 17-takehome)
 - **Slides planejados:** 18 (00-17) — ver blueprint.md v1.8

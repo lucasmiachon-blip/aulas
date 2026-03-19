@@ -4,6 +4,16 @@
 
 ---
 
+## 2026-03-19b — s-hook Gemini materials captured
+
+Branch: `feat/metanalise-mvp`
+
+- Screenshots 3 beats capturados (1280x720): beat0 (provocação), beat1 (hero 41%), beat2 (blackout+verdict)
+- Vídeo .webm gravado via Playwright headless (~9s, 413KB): animação completa dos 3 beats
+- Prompt Gemini v2.1 preenchido para s-hook (slide 2/18, contexto narrativo incluído)
+- Materiais em `qa-screenshots/`: `s-hook-beat{0,1,2}-gemini.png` + `s-hook-animation-gemini.webm`
+- HANDOFF atualizado com estado QA.3 do hook
+
 ## 2026-03-19a — Reveal.js purge + Vite cache fix + doc P0 fixes
 
 Branch: `feat/metanalise-mvp`
