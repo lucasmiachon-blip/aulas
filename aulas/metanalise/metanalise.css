@@ -246,8 +246,8 @@ aside.notes { display: none; }
   font-size: 40px;
   letter-spacing: -0.02em;
   font-weight: 400;
-  color: var(--text-on-dark);
-  background-color: var(--danger);
+  color: oklch(95% 0.005 258);              /* Explicit light — stage-c remaps --text-on-dark to dark, but verdict has own dark bg */
+  background-color: oklch(38% 0.17 25);     /* Darker danger for 7.8:1 contrast on projector (was --danger oklch 50%) */
   padding: 20px 64px;
   border-radius: 0;
   margin: 0;

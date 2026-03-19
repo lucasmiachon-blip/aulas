@@ -121,7 +121,7 @@ export const slideRegistry = {
         gsap.to(upper, { opacity: 0.04, scale: 0.97, duration: 0.5, ease: 'power2.inOut' });
 
         gsap.set(beat2, { visibility: 'visible', opacity: 1, y: 0 });
-        const splitVerdict = new SplitText(beat2, { type: 'chars' });
+        const splitVerdict = new SplitText(beat2, { type: 'words,chars' });
         splitInstances.push(splitVerdict);
         gsap.from(splitVerdict.chars, {
           opacity: 0,

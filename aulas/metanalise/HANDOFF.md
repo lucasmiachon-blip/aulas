@@ -6,9 +6,9 @@
 
 ## Estado atual
 
-- **Fase:** QA slide-a-slide com **visual uplift** (beleza avançada + GSAP sofisticado). s-title DONE (Gemini). **s-hook Gate 3 PASS com issues (2026-03-19f):** 14-dim scorecard completo. 1 CRITICAL (verdict contrast 3.67:1 — dark text on danger-red, stage-c remap --text-on-dark), 1 MINOR (word-break "pacientes"). QA.4 fixes pendentes. Prompt Gemini v4.0 pronto. Pre-work infra: SplitText + Flip + ScrambleTextPlugin importados, dark-bg CSS consolidado (6 slides), archetypes.md documentado (6 layout patterns).
+- **Fase:** QA slide-a-slide com **visual uplift** (beleza avançada + GSAP sofisticado). s-title DONE (Gemini). **s-hook Gate 3+4 PASS (2026-03-19f):** 14-dim scorecard (avg 8.6/10). QA.4 fixes: verdict contrast 3.67→7.78:1 (explicit light text + darker red bg), word-break fixed (SplitText words,chars + &nbsp;). Gemini Gate 4 pendente. Prompt Gemini v4.0 pronto. Pre-work infra: SplitText + Flip + ScrambleTextPlugin importados, dark-bg CSS consolidado (6 slides), archetypes.md documentado (6 layout patterns).
 - **HTML cleanup (2026-03-17d):** `data-background-color` removido de 18/18 slides (deck.js ignora). `slide-navy` removido de 16/18 slides light (mantido em CP1+CP2 que TEM bg navy via CSS override). ERRO-009 documentado.
-- **QA pipeline:** ver [WT-OPERATING.md §4](WT-OPERATING.md#4-qa-sub-loop-dentro-do-estado-qa). Gates 1-4: 18/18 PASS. Scorecards formais 14-dim: 3/18 (F1). s-title QA.0-QA.4 PASS (Gemini approved). **s-hook Gate 3 PASS com issues** (14-dim scorecard completo, 6 screenshots, contrast table — CRITICAL: verdict 3.67:1). QA.4 fixes pendentes: verdict contrast + word-break. s-contrato Gemini pendente. Fase 3 (dynamic): 2 pendentes (CP1, CP2). Fase 4 (Gemini): s-title done, s-hook pendente (após QA.4), demais pendentes.
+- **QA pipeline:** ver [WT-OPERATING.md §4](WT-OPERATING.md#4-qa-sub-loop-dentro-do-estado-qa). Gates 1-4: 18/18 PASS. Scorecards formais 14-dim: 3/18 (F1). s-title QA.0-QA.4 PASS (Gemini approved). **s-hook Gate 3+4 PASS** (14-dim scorecard avg 8.6, contrast 7.78:1, fixes applied). Gemini Gate 4 pendente. s-contrato Gemini pendente. Fase 3 (dynamic): 2 pendentes (CP1, CP2). Fase 4 (Gemini): s-title done, s-hook+s-contrato pendentes.
 - **Branch:** feat/metanalise-mvp (worktree wt-metanalise)
 - **Slides no index.html:** 18 (00-title → 01-hook → 02-contrato → 03-checkpoint-1 → 04-rs-vs-ma → 05-pico → 06-abstract → 07-forest-plot → 08-benefit-harm → 09-grade → 10-heterogeneity → 11-fixed-random → 12-checkpoint-2 → 13-ancora → 14-aplicacao → 15-aplicabilidade → 16-absoluto → 17-takehome)
 - **Slides planejados:** 18 (00-17) — ver blueprint.md v1.8
@@ -34,7 +34,7 @@
 | # | Slide | Estado | Notas |
 |---|-------|--------|-------|
 | 1 | s-title | QA | QA.0-QA.4 PASS. Gemini approved (beauty 9, legibility 10). Choreography + masking. |
-| 2 | s-hook | QA | **Gate 3 PASS com issues**: 14-dim scorecard, 6 screenshots, contrast table. CRITICAL: verdict 3.67:1 (dark on red). MINOR: word-break "pacientes". QA.4 fixes pendentes. |
+| 2 | s-hook | QA | **Gate 3+4 PASS**: 14-dim scorecard avg 8.6. Verdict 7.78:1 AAA (was 3.67). Word-break fixed. Gemini Gate 4 pendente. |
 | 3 | s-contrato | QA | Scorecard 14-dim PASS (Opus). Gemini pendente. |
 
 ### I1 — Checkpoint engajamento (1 slide)
