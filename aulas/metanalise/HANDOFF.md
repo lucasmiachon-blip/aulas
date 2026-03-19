@@ -82,7 +82,7 @@ Trabalho completado e decisões tomadas: ver [HANDOFF-ARCHIVE.md](HANDOFF-ARCHIV
 ## Caminho crítico — próximas sessões
 
 ### Sessão N+1 (imediata) — QA slide-a-slide com visual uplift
-1. **Pre-work DONE:** SplitText + Flip + ScrambleTextPlugin importados, dark-bg consolidado (6 slides), prompt Gemini v4.0 pronto, archetypes.md documentado.
+1. **Hardening documental DONE (2026-03-19g, commit 0dd5221):** -125 linhas, stale data corrigido, XREF fixes. Docs limpos para QA.
 2. **Pipeline normal** (WT-OPERATING.md §4): proximo slide na fila → QA.0-QA.4 → DONE → proximo.
    - Criterios visuais elevados: beleza avançada + GSAP sofisticado (SplitText, Flip, ScrambleText, custom choreographies)
    - Gemini prompt v4.0 (structured CoT 5-step, code-grounded GSAP API, few-shot exemplar, self-critique, token budget 1500-3000)
