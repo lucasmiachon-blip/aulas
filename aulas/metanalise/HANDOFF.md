@@ -10,14 +10,15 @@
 - **Branch:** feat/metanalise-mvp (worktree wt-metanalise)
 - **Slides:** 18/18 no deck (ver _manifest.js). Lint PASS. Orphans: 0.
 - **Ancora:** Valgimigli 2025 Lancet (PMID 40902613) — IPD-MA, 7 RCTs, 28.982 pts
-- **QA pipeline:** [WT-OPERATING.md §4](WT-OPERATING.md#4-qa-sub-loop-dentro-do-estado-qa). Gates 1-4: 18/18 PASS. Scorecards 14-dim: 3/18 (F1). DONE: 2/18 (s-title, s-hook).
-- **Docs:** narrative v2.4, evidence-db v5.3, blueprint v1.9, reading-list v0.4
+- **QA pipeline:** [WT-OPERATING.md §4](WT-OPERATING.md#4-qa-sub-loop-dentro-do-estado-qa). Gates 1-4: 18/18 PASS. Scorecards 14-dim: 3/18 (F1). DONE: 3/18 (s-title, s-hook, s-contrato).
+- **Docs:** narrative v2.4, evidence-db v5.4, blueprint v1.9, reading-list v0.4
 - **GSAP plugins:** SplitText + Flip + ScrambleTextPlugin (index.template.html)
 - **Prompt Gemini:** v6.0 (docs/prompts/gemini-slide-qa.md)
 - **Dark-bg:** 6 slides (ver NOTES.md §dark-bg reference map). Novos slides dark = adicionar ID ao seletor em metanalise.css.
 - **HEX navy:** #162032 (decisao Lucas)
 - **Reveal.js:** REMOVIDO (ERRO-010)
 - **Backlog CSS:** ~40 refs `--on-dark` tokens (funcional, naming misleading). Cleanup futuro.
+- **Notion Slides DB:** 18/18 slides sincronizados (2026-03-19). Schema correto: Slide ID, Bloco Narrativo MA-F1/I1/F2/I2/F3, Headline PT/EN, Corpo, Speaker Notes EN, Pipeline Status, pos, tempo, animacao, objetivo, GRADE, PMID, DOI, NNT. Bloqueio anterior resolvido: DB nao precisa de prop Aula separada (relation funciona). Scrips: notion_batch_f2f3.cjs (removido pos-execucao).
 
 ## Estado dos Slides (maquina de estados — WT-OPERATING.md)
 
@@ -81,7 +82,7 @@ Trabalho completado e decisões tomadas: ver [HANDOFF-ARCHIVE.md](HANDOFF-ARCHIV
 ## Caminho crítico — próximas sessões
 
 ### Sessão N+1 (imediata) — QA slide-a-slide com visual uplift
-1. **Hardening documental R1+R2 DONE (2026-03-19):** R1 (-903 linhas, XREF rebuilt). R2: MEMORY.md 5 fixes, blueprint v1.9 (stale hook assertion), lessons +3, .gitignore fix, Notion blocker documented.
+1. **Hardening documental R1+R2+R3 DONE (2026-03-19):** R1 (-903 linhas, XREF rebuilt). R2: MEMORY.md 5 fixes, blueprint v1.9 (stale hook assertion), lessons +3, .gitignore fix. R3: Notion 18 slides synced (Bloco Narrativo MA-*), evidence-db v5.4 (PMID audit: 36 verificados, 2 corrigidos, 1 DOI fix), HANDOFF pendencias 3/5 falsas (verificadas OK).
 2. **Pipeline normal** (WT-OPERATING.md §4): proximo slide na fila → QA.0-QA.4 → DONE → proximo.
    - Criterios visuais elevados: beleza avançada + GSAP sofisticado (SplitText, Flip, ScrambleText, custom choreographies)
    - Gemini prompt v6.0 (scorecard 10-dim, 10 lenses, 5 personas, radical ideas forcing, projected scorecard, temp 1.0)
@@ -106,16 +107,11 @@ Trabalho completado e decisões tomadas: ver [HANDOFF-ARCHIVE.md](HANDOFF-ARCHIV
 | Bloqueio | Impacto | Workaround |
 |----------|---------|------------|
 | Cochrane exemplos visuais | Forest plots e GRADE tables reais precisam de screenshots/crops | Acessar via CAPES e cropar quando iniciar QA visual |
-| Notion Slides DB sem `Aula` property | Não pode sincronizar metanalise — DB assume tudo é Cirrose | Manual: adicionar Select `Aula` no Notion UI, tagar pages existentes como Cirrose, atualizar agent |
 
 ## Pendências para main (Classe B — não editar na WT)
 
-- **lint-slides.js false positive:** `scripts/lint-slides.js:110` — `data-animate="countUp"` sem `data-target` não pula `<script>` blocks. 2 false positives no index.html built.
-- **Scripts orphans (main):** `scripts/attention-insight.js`, `scripts/mcp-attention-insight.js`, `scripts/act1-surgical-qa.mjs`, `scripts/act1-reaudit.mjs` — confirmar delete.
-- ~~qa-engineer.md perplexity ref~~ — VERIFICADO OK (2026-03-19): usa `mcp:perplexity`, bate com `.mcp.json`.
-- ~~ralph-qa SKILL.md perplexity ref~~ — VERIFICADO OK (2026-03-19): zero menções a perplexity.
-- ~~XREF.md cirrose/WT-OPERATING.md~~ — VERIFICADO OK (2026-03-19): não existe entrada fantasma.
-- ~~.gitignore: adicionar `.claude/agent-memory/`~~ — DONE (2026-03-19, nesta WT).
+- **lint-slides.js false positive:** `scripts/lint-slides.js:110` — `data-animate="countUp"` sem `data-target` não pula `<script>` blocks. 2 false positives no index.html built. **Fix preparado:** context-aware check (3 linhas antes/depois). Aplicar em main.
+- **Scripts orphans (main):** `scripts/attention-insight.js`, `scripts/mcp-attention-insight.js`, `scripts/act1-surgical-qa.mjs`, `scripts/act1-reaudit.mjs` — **confirmed orphan** pelo repo-janitor (2026-03-19). `git rm` preparado.
 
 ## Não fazer ainda
 

@@ -109,4 +109,37 @@ Alguns docs (CHANGELOG, AUDIT-VISUAL) referenciam ERRO-034 (data-background-colo
 
 ---
 
+## Clusters de Erro (padrões extraídos)
+
+> Agrupa root causes recorrentes para prevenir novas instâncias.
+
+### Cluster A — deck.js ≠ Reveal.js (ERRO-001, 009, 010)
+
+**Pattern:** Código/atributos/dependências de Reveal.js aplicados em contexto deck.js.
+- ERRO-001: stage class ausente (padrão Reveal.js não exigia)
+- ERRO-009: `data-background-color` (atributo Reveal.js ignorado por deck.js)
+- ERRO-010: `reveal.js` como dependência (Vite cache poisoning)
+
+**Regra derivada:** deck.js é um framework separado. ZERO carryover de Reveal.js: nem atributos, nem dependencies, nem padrões de configuração. Checklist para nova aula deck.js: (1) `<body class="stage-c">`, (2) zero `data-background-color`, (3) zero `reveal.js` em package.json.
+
+### Cluster B — stage-c remap quebra tokens on-dark (ERRO-001, 005, 008, 009)
+
+**Pattern:** Tokens `--text-on-dark`, `--bg-navy` etc. são remapeados por stage-c para valores light. Código que assume valores dark recebe valores light.
+- ERRO-001: sem stage class → defaults `:root` (inconsistente)
+- ERRO-005: pseudo-elements competem com flex:1 (agravado por remap)
+- ERRO-008: zoom CSS conflita com deck.js scale
+- ERRO-009: `.slide-navy` sem `background-color` → texto on-dark sobre fundo light
+
+**Regra derivada:** Em stage-c, NUNCA confiar em tokens `--on-dark` para slides que precisam de bg escuro. Sempre declarar `background-color` explícito via CSS + token restoration scope (re-declarar 8 tokens on-dark no seletor).
+
+### Cluster C — Dados em docs driftam (ERRO-003 + lessons doc-sync)
+
+**Pattern:** Dado numérico atualizado em um lugar, não propagado para outros.
+- ERRO-003: dados do hook incorretos (3 valores desatualizados)
+- Doc-sync lesson: "80/dia" atualizado no HTML mas não em blueprint/narrative (detectado 2 sessões depois)
+
+**Regra derivada:** Ao atualizar qualquer dado: `grep -rn "VALOR_ANTIGO" aulas/{aula}/`. Atualizar TODOS no mesmo batch. evidence-db é canônico.
+
+---
+
 *Append-only. Não remover erros antigos.*

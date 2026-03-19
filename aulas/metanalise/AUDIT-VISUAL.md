@@ -146,3 +146,66 @@ Scorecards formais serao preenchidos durante ralph-qa batches 2-6 (proximas sess
 **Fix history:** slide-navy removed (03-17), flex:1→cards 248px + token ui-accent (03-17b), visual uplift grid+subgrid+watermark+GSAP (03-19 2038185), cards 2&3 fix: skill 15→12px, text-wrap:balance (03-19 f38eb90), watermark-only: remove contrato-number spans, grid 2 rows (03-19 f2d3785), Gemini polish: border divider, skill 600, fadeUp skills, accent +, watermark 35% (03-19).
 
 **Screenshots:** `qa-screenshots/s-contrato/s-contrato-1280x720-r5-opacity35.png` (final). Historico: S0→S5-fixed, r4, r5.
+
+---
+
+## Template — Scorecard 14-dim (copiar para cada slide)
+
+> Copiar bloco abaixo ao iniciar QA.2 de um slide. Preencher notas e scores.
+
+```markdown
+## s-{id} (NN-slug.html)
+
+**Status:** [QA em andamento]
+**Archetype:** [tipo]
+
+| Dim | Score | Nota |
+|-----|-------|------|
+| H (hierarquia) | ?/10 | |
+| T (tipografia) | ?/10 | |
+| E (layout fill) | ?/10 | |
+| C (cor/contraste) | ?/10 | |
+| V (visuais) | ?/10 | |
+| K (consistencia) | ?/10 | |
+| S (sofisticacao) | ?/10 | |
+| M (comunicacao) | ?/10 | |
+| I (interacoes) | ?/10 | |
+| D (dados) | ?/10 | |
+| A (acessibilidade) | ?/10 | |
+| L (carga cognitiva) | ?/10 | |
+| P (andragogia) | ?/10 | |
+| N (arco narrativo) | ?/10 | |
+
+**Average: ?/10**
+
+**QA.3 Gemini (DATE, MODEL):**
+- Input: [PNGs, video, code]
+- Score: ?/10. Verdict: [ITERATE/APPROVED]
+- Accepted: [list]
+- Rejected: [list]
+
+**QA.4 fixes:**
+- [list of changes]
+
+**Screenshots:** `qa-screenshots/s-{id}/S0.png` (1280x720), `qa-screenshots/s-{id}/S0-fullscreen.png` (1920x1080)
+```
+
+### Fila QA (15 slides pendentes — copiar template acima ao iniciar cada)
+
+| Ordem | Slide ID | Arquivo | Fase | Prioridade |
+|-------|----------|---------|------|------------|
+| 1 | s-checkpoint-1 | 03-checkpoint-1.html | I1 | Próximo |
+| 2 | s-rs-vs-ma | 04-rs-vs-ma.html | F2 | — |
+| 3 | s-pico | 05-pico.html | F2 | — |
+| 4 | s-abstract | 06-abstract.html | F2 | — |
+| 5 | s-forest-plot | 07-forest-plot.html | F2 | — |
+| 6 | s-benefit-harm | 08-benefit-harm.html | F2 | — |
+| 7 | s-grade | 09-grade.html | F2 | — |
+| 8 | s-heterogeneity | 10-heterogeneity.html | F2 | — |
+| 9 | s-fixed-random | 11-fixed-random.html | F2 | — |
+| 10 | s-checkpoint-2 | 12-checkpoint-2.html | I2 | — |
+| 11 | s-ancora | 13-ancora.html | F3 | — |
+| 12 | s-aplicacao | 14-aplicacao.html | F3 | — |
+| 13 | s-aplicabilidade | 15-aplicabilidade.html | F3 | — |
+| 14 | s-absoluto | 16-absoluto.html | F3 | — |
+| 15 | s-takehome | 17-takehome.html | F3 | — |

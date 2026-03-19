@@ -159,7 +159,7 @@
 | Dado | Valor | Fonte | PMID | DOI | Tier | Nota |
 |------|-------|-------|------|-----|------|------|
 | RCTs com problemas de confiabilidade em Cochrane reviews | **25%** (24/95 RCTs em 50 SRs) | Wilkinson J et al. (INSPECT-SR). J Clin Epidemiol 2025;184:111824 | 40349737 ✅ | 10.1016/j.jclinepi.2025.111824 | 1 | ✅ **EM USO no hook notes**. 6% sérios. 22% MAs ficam com zero estudos após exclusão. RoB e GRADE não detectam |
-| GRADE assume dados confiáveis | "Revisores devem verificar integridade dos estudos" | Brignardello-Petersen R, Guyatt GH. Am J Epidemiol 2025;194(6):1681-6 | 39218429 ✅ | 10.1093/aje/kwae256 | 1 | ✅ **EM USO no hook notes**. Guyatt (criador do GRADE) reconhece limitação |
+| GRADE assume dados confiáveis | "Revisores devem verificar integridade dos estudos" | Brignardello-Petersen R, Guyatt GH. Am J Epidemiol 2025;194(6):1681-6 | 39218429 ✅ | 10.1093/aje/kwae332 | 1 | ✅ **EM USO no hook notes**. Guyatt (criador do GRADE) reconhece limitação |
 | SRs observacionais usando dados brutos | **80,9%** | Paul J et al. J Clin Epidemiol 2025;181:111702 | 40414366 ✅ | 10.1016/j.jclinepi.2025.111702 | 1 | 500 SRs 2022. Risco de confusão residual não tratado |
 | Problemas com SRs catalogados | **68 problemas** em 637 artigos | Uttley L et al. J Clin Epidemiol 2025;177:111575 | 39542225 ✅ | 10.1016/j.jclinepi.2024.111575 | 1 | Scoping review. Categorias: report, conduct, relevance, waste |
 
@@ -197,8 +197,8 @@
 
 | Referência | PMID | DOI | Tier | Função |
 |-----------|------|-----|------|--------|
-| Murad et al. Rating the certainty in evidence in the absence of a single estimate of effect. JAMA 2014;312(2):171-9 | 25005654 ✅ | 10.1001/jama.2014.5952 | 1 | GRADE tutorial canônico — rating sem single estimate |
-| Guyatt et al. GRADE: an emerging consensus on rating quality of evidence. BMJ 2008;336(7650):924-6 | 21195583 ✅ | 10.1136/bmj.39489.470347.AD | 1 | Série introdutória GRADE |
+| Murad et al. Rating the certainty in evidence in the absence of a single estimate of effect. JAMA 2014;312(2):171-9 | 25005654 ⚠️ [VERIFY] | 10.1001/jama.2014.5952 | 1 | GRADE tutorial canônico — rating sem single estimate. **PMID 25005654 resolve para "Users' Guides" (diferente artigo, mesmo vol/pag). Verificar PMID correto.** |
+| Guyatt et al. GRADE: an emerging consensus on rating quality of evidence. BMJ 2008;336(7650):924-6 | 18436948 ✅ | 10.1136/bmj.39489.470347.AD | 1 | Série introdutória GRADE. **PMID corrigido: era 21195583 (GRADE Guidelines 2011, artigo diferente).** |
 | Dettori et al. Understanding the forest plot. Global Spine J 2021;11(7):1137-9 | 33939533 ✅ | 10.1177/21925682211012058 | 1 | Didática forest plot (já usada no slide 07) |
 | Higgins JPT, Lopez-Lopez JA. Reflections on the I-squared index for measuring inconsistency in meta-analysis. Res Synth Methods. Published online Dec 29, 2025 | [não indexado] | 10.1017/rsm.2025.10062 ✅ | 1 | I² creator cautions overuse. Usada no slide 10 notes. Epub ahead of print — re-checar PMID em abr/2026 |
 
@@ -250,6 +250,7 @@
 
 | Data | Mudança |
 |------|---------|
+| 2026-03-19 | v5.4 — PMID audit (reference-manager agent, 36 PMIDs): Guyatt BMJ 2008 PMID corrigido 21195583→18436948. Murad JAMA 2014 PMID 25005654 marcado [VERIFY] (resolve para artigo diferente). Brignardello-Petersen DOI corrigido kwae256→kwae332. |
 | 2026-03-19 | v5.3 — Siedler PMID 40969451 verificado. Journal corrigido: Cochrane Evid Synth Methods (não J Clin Epidemiol). Framing corrigido: 33,8% = SRs que avaliaram certeza (não % com certeza moderada/alta). Higgins & Lopez-Lopez DOI verificado (10.1017/rsm.2025.10062), PMID não indexado (epub Dez 2025). |
 | 2026-03-19 | v5.2 — Hook rewrite sober: VITALITY/NICE-SUGAR removidos do slide (mantidos como ref). Hoffmann "EM USO card 1", Bojcic "EM USO card 2". +Siedler 2025 (33.8% GRADE, "EM USO card 3"). Tags EM USO atualizadas. |
 | 2026-03-19 | v5.1 — Hook rewrite VITALITY backbone: +8 refs. INSPECT-SR (Wilkinson 2025, PMID 40349737), Guyatt/Brignardello-Petersen 2025 (PMID 39218429), Paul 2025 (PMID 40414366), Uttley 2024 (PMID 39542225), Wiener MA 2008 (PMID 18728267), NICE-SUGAR 2009 (PMID 19318384), Griesdale MA 2009 (PMID 19318387), Murad 2016 pirâmide (PMID 27339128). Novas seções: integridade RCTs, exemplo MA UTI, pirâmide. Todos PMIDs ✅ |

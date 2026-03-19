@@ -5,6 +5,13 @@
 
 ---
 
+## 2026-03-19j — Doc hardening session: PMIDs, lessons reorg, ERROR clusters, QA template
+
+- **Batch 1:** Siedler PMID 40969451 verified + framing corrected. Higgins DOI verified. Gemini model discrepancy documented. evidence-db v5.3, blueprint v1.9.
+- **Batch 2:** lessons.md reorganized by scope (9 sections). HANDOFF cleaned (stale items removed). ERROR-LOG: 3 error clusters extracted. AUDIT-VISUAL: scorecard template + 15-slide QA queue.
+
+---
+
 ## 2026-03-19i — s-hook QA UPLIFT: asymmetric layout, countUp, editorial typography
 
 Commit: `c400f5a` · QA.0-QA.2 PASS (14 dims >=9, contraste AAA 8.61-17.58:1)
