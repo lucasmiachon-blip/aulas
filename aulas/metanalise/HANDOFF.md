@@ -29,7 +29,7 @@
 | # | Slide | Estado | Notas |
 |---|-------|--------|-------|
 | 1 | s-title | QA | QA.0-QA.4 PASS. Gemini approved (beauty 9, legibility 10). Choreography + masking. |
-| 2 | s-hook | QA | **REWRITE (edb2e2f):** 3-beat state machine → 3 sober metric cards. h2 curto "Por que isso importa". data-animate="stagger" (declarativo, sem custom JS). Scorecard anterior INVALIDADO — QA.0 pendente. |
+| 2 | s-hook | QA | **QA UPLIFT (c400f5a):** Gemini QA.3 → layout assimétrico "volume vs realidade" (grid), countUp GSAP, typographic deconstruction (96/72px num + affix menor), divider, tags AMSTAR-2/GRADE. QA.0-QA.3 PASS. QA.4 pendente (re-audit visual). |
 | 3 | s-contrato | QA | Scorecard 14-dim PASS (Opus). Gemini pendente. |
 
 ### I1 — Checkpoint engajamento (1 slide)
@@ -69,11 +69,11 @@
 
 ### Resumo
 
-- **QA (3):** s-title (DONE Gemini), s-hook (REWRITE — QA.0 pendente), s-contrato (Gemini pendente)
+- **QA (3):** s-title (DONE Gemini), s-hook (QA.0-QA.3 PASS, QA.4 pendente), s-contrato (Gemini pendente)
 - **LINT-PASS (15):** restantes — scorecard 14-dim pendente
 - **DONE (0):** nenhum slide completou QA full (Opus + Gemini)
 
-**s-hook rewrite (edb2e2f):** Alarmist VITALITY/NICE-SUGAR/UTI framing removido. Agora 3 metric cards (Hoffmann 80/dia, Bojcic 81% AMSTAR-2, Siedler 33.8% GRADE). Sem click-reveals. Sem state machine. Sem ScrambleText/SplitText. Archetype cards com data-animate="stagger".
+**s-hook uplift (c400f5a):** Layout assimétrico "fenômeno vs realidade" com grid, countUp GSAP, desconstrução tipográfica, divider vertical, tags AMSTAR-2/GRADE. Gemini scorecard 4.4→9.2 projetado.
 
 ---
 
@@ -93,7 +93,7 @@ Trabalho completado e decisões tomadas: ver [HANDOFF-ARCHIVE.md](HANDOFF-ARCHIV
    - Ja dark: s-checkpoint-1, s-checkpoint-2
    - Propostos dark: s-forest-plot, s-heterogeneity, s-ancora, s-absoluto (CSS pronto)
    - Light: demais (s-rs-vs-ma, s-pico, s-abstract, s-benefit-harm, s-grade, s-fixed-random, s-aplicacao, s-aplicabilidade, s-takehome)
-4. **Ordem:** s-hook QA.0→QA.4 (rewrite) → s-contrato (Gemini pendente) → s-checkpoint-1 → F2 em sequencia
+4. **Ordem:** s-hook QA.4 (re-audit visual uplift) → s-contrato (Gemini pendente) → s-checkpoint-1 → F2 em sequencia
 
 ### Sessão N+2
 - Fase 4 (Gemini deck-level — este sim em batches)

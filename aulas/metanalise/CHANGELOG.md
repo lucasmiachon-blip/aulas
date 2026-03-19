@@ -4,6 +4,30 @@
 
 ---
 
+## 2026-03-19i — s-hook QA UPLIFT: asymmetric layout, countUp, editorial typography
+
+Branch: `feat/metanalise-mvp` · Commit: `c400f5a`
+
+### QA Gates
+- QA.0 Content Audit: PASS (dados verificados, narrativeRole correto)
+- QA.1 Constraint Check: PASS (lint, no-js failsafes, word count)
+- QA.2 Visual Audit (Opus): PASS (14 dims ≥ 9, contraste AAA 8.61-17.58:1)
+- QA.3 Visual Audit (Gemini): scorecard 4.4/10 → propostas implementadas
+
+### Mudanças (Gemini-driven)
+- **Layout:** 3 cards iguais → grid assimétrico "fenômeno vs realidade" (1fr/auto/1fr)
+- **Tipografia:** números isolados de affixes (~, /dia, %). Num 96/72px mono, affix 32-36px DM Sans
+- **GSAP:** data-animate="stagger" → custom timeline em slide-registry.js (countUp + entrada sequencial + divider scaleY)
+- **Tags:** AMSTAR-2 e GRADE como pills (font-mono, border, bg-card)
+- **Failsafes:** no-js/stage-bad/print forçam opacity:1. HTML tem valores finais (JS reseta para 0 antes de animar)
+- **Fix:** diacríticos "revisões sistemáticas" corrigidos
+
+### Decisões
+- Cor danger para dados de qualidade REJEITADA (violaria semântica design-system)
+- Layout "Trust Blackout" (Flip + scramble) simplificado para timeline sequencial sem clicks
+
+---
+
 ## 2026-03-19h — s-hook REWRITE: sober 3-card metrics, state machine removed
 
 Branch: `feat/metanalise-mvp` · Commit: `edb2e2f`
