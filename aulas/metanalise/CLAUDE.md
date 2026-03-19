@@ -89,7 +89,7 @@ GSAP plugins: SplitText + Flip + ScrambleTextPlugin (registered in index.templat
 | Ancora | Valgimigli 2025 Lancet (PMID 40902613) |
 | Gates 1-4 | 18/18 PASS |
 | Scorecards 14-dim | 3/18 (F1 DONE): s-title, s-hook (avg 9.36), s-contrato. |
-| Docs | narrative v2.4, blueprint v1.8, evidence-db v5.2 |
+| Docs | narrative v2.4, blueprint v1.9, evidence-db v5.3 |
 | Main sync | 5406dd8 (2026-03-18) |
 
 Detalhes QA por slide: HANDOFF.md. Pipeline: WT-OPERATING.md §4.

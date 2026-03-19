@@ -157,3 +157,26 @@
 ### Plugins GSAP
 - SplitText, Flip, ScrambleTextPlugin permanecem REGISTRADOS em index.template.html (disponiveis para slides futuros).
 - Atualmente usados: nenhum (s-title usa gsap.fromTo direto, nao SplitText).
+
+## 2026-03-19 — Governance hardening R3: Notion sync + PMID audit
+
+### Notion Slides DB sync (18/18)
+- 5 novas opcoes Bloco Narrativo adicionadas via DDL: MA-F1, MA-I1, MA-F2, MA-I2, MA-F3
+- Aula (relation) atualizada em todos os 18 slides → page `30adfe6859a881d2b1f6c81c59e3e12d`
+- 2 duplicatas marcadas [DEP]: MA-F2-RSVSMA (`325dfe68...8cb6`), segundo MA-F2-BENHARM (`325dfe68...966e`)
+- Pipeline Status atualizado: 3 QA-DONE (F1), 15 LINT-PASS
+
+### PMID audit (reference-manager agent, 36 PMIDs)
+- **28 OK**, 2 corrigidos, 1 DOI corrigido, 2 sem PMID (Siedler PMID ja verificado separadamente, Higgins epub), 1 flag dados (Qureshi 10% — verificar)
+- **Guyatt BMJ 2008 GRADE:** PMID 21195583 → **18436948** (21195583 = GRADE Guidelines 2011, artigo diferente)
+- **Murad JAMA 2014:** PMID 25005654 marcado **[VERIFY]** (resolve para "Users' Guides", nao "Rating certainty". PMID correto desconhecido)
+- **Brignardello-Petersen DOI:** kwae256 → **kwae332**
+- evidence-db.md atualizado para v5.4
+
+### HANDOFF pendencias verificadas
+- 3/5 eram falsas (qa-engineer.md, ralph-qa/SKILL.md, XREF.md — todos ja corretos)
+- 2 reais confirmadas: lint-slides.js:110 (fix preparado para main), 4 scripts orphans (git rm preparado)
+
+### Main-scope fixes preparados (NAO executar na WT)
+- lint-slides.js:110: context-aware check (±3 linhas) elimina false positive em HTML built
+- 4 orphan scripts: `git rm` confirmado pelo repo-janitor
