@@ -198,15 +198,15 @@ Input para Gemini (TUDO junto):
 // Salvar em qa-screenshots/{slide-id}/video.webm
 ```
 
-**Prompt Gemini v4.0** (5-step CoT, code-grounded GSAP API, few-shot exemplar):
+**Prompt Gemini v6.0** (10 dimensoes, 5 personas, 10 lenses, radical ideas forcing):
 
 Prompt canonico: `docs/prompts/gemini-slide-qa.md`
 
-Principios do v4.0:
-- Role + expertise priming (diretor criativo senior, GSAP 3.14, Mayer/Sweller/Duarte)
-- 4 dimensoes obrigatorias: legibilidade sob stress, beleza/sofisticacao, animacao/interacao, adequacao narrativa
+Principios do v6.0:
+- 5 personas (director criativo, data-viz, andragogia, GSAP, a11y) com 10 lenses cada
+- 10 dimensoes obrigatorias: legibilidade, beleza, animacao, narrativa, tipografia, dados, cor, layout, interacao, acessibilidade
 - Constraint injection: sala pequena, ~15 pessoas, 1-4m, TV LED, iluminacao forte
-- Exploration mandate: proponha GSAP alem do engine.js (SplitText, morphSVG, Flip, physics-based)
+- Radical ideas forcing + projected scorecard + temp 1.0
 - Output: reasoning + propostas concretas com codigo quando possivel
 
 **Output:** JSON do Gemini + interpretacao do agente.

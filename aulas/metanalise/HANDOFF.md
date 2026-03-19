@@ -82,7 +82,7 @@ Trabalho completado e decisões tomadas: ver [HANDOFF-ARCHIVE.md](HANDOFF-ARCHIV
 ## Caminho crítico — próximas sessões
 
 ### Sessão N+1 (imediata) — QA slide-a-slide com visual uplift
-1. **Hardening documental DONE (2026-03-19g, commit 0dd5221):** -125 linhas, stale data corrigido, XREF fixes. Docs limpos para QA.
+1. **Hardening documental DONE (2026-03-19, 6 commits 709395f→d21c3f0):** -903 linhas net, stale data corrigido, XREF rebuilt, CHANGELOG/HANDOFF-ARCHIVE reescritos, CURSOR.md archived. Docs limpos para QA.
 2. **Pipeline normal** (WT-OPERATING.md §4): proximo slide na fila → QA.0-QA.4 → DONE → proximo.
    - Criterios visuais elevados: beleza avançada + GSAP sofisticado (SplitText, Flip, ScrambleText, custom choreographies)
    - Gemini prompt v6.0 (scorecard 10-dim, 10 lenses, 5 personas, radical ideas forcing, projected scorecard, temp 1.0)
@@ -114,7 +114,6 @@ Trabalho completado e decisões tomadas: ver [HANDOFF-ARCHIVE.md](HANDOFF-ARCHIV
 - **qa-engineer.md:** ref a `mcp__claude_ai_perplexity` diverge do nome real. Verificar e corrigir em main.
 - **ralph-qa SKILL.md:** ref a `perplexity_reason` pode não bater com MCP name real. Idem.
 - **XREF.md (cirrose):** `aulas/cirrose/WT-OPERATING.md` listado mas não existe no disco (copy-paste da seção metanalise). Remover.
-- **XREF.md (root):** 5 back-refs stale — CLAUDE.md root refs indiretas (via README), ECOSYSTEM.md sem ref por CLAUDE.md, MCP-ACADEMICOS sem ref por ECOSYSTEM.md. Corrigir em main.
 - **.gitignore:** adicionar `.claude/agent-memory/` (cache local medical-researcher, untracked).
 
 ## Não fazer ainda
