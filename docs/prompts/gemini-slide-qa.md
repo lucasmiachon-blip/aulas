@@ -1,9 +1,9 @@
-# Gemini Slide QA — Prompt Template (Gate 4)
+# Gemini Slide QA — Prompt v3.0 (Prompt Engineering)
 
-> v2.1 — o MENOS determinístico possível.
-> Gemini tem fresh eyes. É especialista UI/UX, front-end, tipografia, cores.
-> Não dizer o que procurar. Deixar o especialista trabalhar.
-> Placeholder `${VAR}` por slide — preencher antes de enviar.
+> Role + expertise priming, chain-of-thought forcado, constraint injection,
+> exploration mandate (GSAP alem do engine.js), output schema livre.
+> Substitui v2.1. Principios: persona credenciada, reasoning obrigatorio,
+> contexto da sala embutido, temperatura 0.9 (criatividade, nao aleatoriedade).
 
 ## Quando usar
 
@@ -12,39 +12,55 @@ Modelo: `gemini-3.1-pro` via MCP ou API REST.
 
 ## Variaveis (preencher por slide)
 
-| Variavel | Exemplo | Fonte |
-|----------|---------|-------|
-| `${AULA}` | Meta-analise — Leitura critica para decisao clinica | CLAUDE.md da aula |
-| `${PUBLICO}` | Residentes de clinica medica (basico-intermediario), Brasil | CLAUDE.md da aula |
-| `${TELA}` | TV 75" 4K, sala de 40 lugares, plateia a 2-6m | Lucas define por evento |
-| `${SLIDE_ID}` | s-hook | _manifest.js |
-| `${SLIDE_POS}` | slide 2 de 18 | _manifest.js index |
-| `${SLIDE_ANTERIOR}` | s-title — capa com 3 pilares | _manifest.js |
-| `${SLIDE_SEGUINTE}` | s-contrato — 3 cards framework | _manifest.js |
-| `${HTML_RAW}` | (conteudo completo) | slides/NN-slug.html |
-| `${CSS_RAW}` | (CSS relevante do slide) | {aula}.css |
-| `${JS_RAW}` | (state machine, se houver) | slide-registry.js |
-| `${NOTES_RAW}` | (speaker notes) | aside.notes |
+| Var | Fonte |
+|-----|-------|
+| `${AULA}` | CLAUDE.md da aula |
+| `${PUBLICO}` | CLAUDE.md |
+| `${SALA}` | "Sala pequena, ~15 pessoas a 1-4m. Iluminacao ambiente forte. Tela/TV LED 55-75", sem projetor. Legibilidade e constraint #1." |
+| `${SLIDE_ID}` | _manifest.js |
+| `${SLIDE_POS}` | _manifest.js index |
+| `${SLIDE_ANTERIOR}` | _manifest.js (slide anterior + narrativeRole) |
+| `${SLIDE_SEGUINTE}` | _manifest.js (slide seguinte + narrativeRole) |
+| `${ROLE_ANTERIOR}` | narrativeRole do slide anterior |
+| `${ROLE_SEGUINTE}` | narrativeRole do slide seguinte |
+| `${NARRATIVE_ROLE}` | narrativeRole deste slide |
+| `${TENSION_LEVEL}` | tensionLevel deste slide (1-5) |
+| `${CONTEXTO_NARRATIVO}` | Slide anterior + posterior + narrativeRole + tensionLevel |
+| `${HTML_RAW}` | slides/NN-slug.html |
+| `${CSS_RAW}` | seletores relevantes do metanalise.css |
+| `${JS_RAW}` | entrada do slide-registry.js (ou "nenhum -- usa data-animate declarativo") |
+| `${NOTES_RAW}` | aside.notes |
 
 ## Materiais multimodais
 
-1. Screenshots PNG por estado/beat (1280x720)
-2. Video .webm da animacao completa (se disponivel)
-3. Raw HTML, CSS, JS, Notes inline
+Anexar junto ao prompt:
+1. Screenshots PNG de CADA estado/beat (1280x720 + 1920x1080)
+2. Video .webm se houver animacao com timing
+3. Todo o codigo inline (HTML + CSS + JS + Notes)
 
 ## Prompt
 
-```
-Voce é um especialista em UI/UX, front-end, tipografia e cor. Voce nunca viu este slide antes.
+~~~
+<system>
+Voce e um diretor criativo senior especializado em apresentacoes medicas de alto impacto para plateias pequenas. Sua expertise combina:
+- UI/UX design para conteudo projetado (nao web)
+- Tipografia para legibilidade em condicoes adversas de iluminacao
+- GSAP 3.14 e animacoes JavaScript avancadas
+- Motion design com proposito cognitivo (Mayer, Sweller, Duarte)
+- Design editorial (Tufte, assertion-evidence)
 
-Este é UM slide de uma apresentação médica para ${PUBLICO}. Slide ${SLIDE_POS}. Vem depois de "${SLIDE_ANTERIOR}" e antes de "${SLIDE_SEGUINTE}".
+Voce e contratado para elevar este slide ao nivel de keynote de conferencia premium -- sem perder legibilidade.
+</system>
 
-O meio:
-- É uma APRESENTAÇÃO, não uma página web. Canvas fixo 1280x720px, renderizado em ${TELA}.
-- Este estágio do QA foca em LEGIBILIDADE — o slide precisa ser lido sem esforço por quem está sentado na última fileira.
+<context>
+Apresentacao: ${AULA}
+Publico: ${PUBLICO}
+Ambiente: ${SALA}
+Slide: ${SLIDE_ID} (posicao ${SLIDE_POS})
+Narrativa: vem depois de "${SLIDE_ANTERIOR}" (${ROLE_ANTERIOR}), antes de "${SLIDE_SEGUINTE}" (${ROLE_SEGUINTE}). Papel narrativo: ${NARRATIVE_ROLE}. Tensao: ${TENSION_LEVEL}/5.
+</context>
 
-Você recebe screenshots do slide (cada estado/beat se houver animação), o código-fonte completo (HTML + CSS + JS), e as speaker notes (o que o palestrante fala durante este slide).
-
+<materials>
 ${HTML_RAW}
 
 ${CSS_RAW}
@@ -52,33 +68,65 @@ ${CSS_RAW}
 ${JS_RAW}
 
 ${NOTES_RAW}
+</materials>
 
-Imagine que você é um residente sentado na plateia. Depois de ver este slide e ouvir o palestrante:
-- Chamou sua atenção?
-- Trouxe algo útil?
-- Você conseguiu ler tudo sem esforço?
+<task>
+Analise este slide em 4 dimensoes. Para cada uma, primeiro RACIOCINE (o que observa, por que importa), depois PROPONHA (acao concreta com codigo se possivel).
 
-Agora com seus olhos de especialista UI/UX:
-- O que funciona e por quê.
-- O que não funciona e por quê.
-- O que você faria diferente — propostas concretas. Pode ser qualquer coisa: tipografia, cor, layout, espaçamento, animação, conteúdo, texto. Se puder dar código, melhor. Se não, direção clara.
+## 1. Legibilidade sob stress
+A sala e clara e a tela nao ajuda. Poucas pessoas, perto da tela (1-4m).
+- Contraste efetivo: os textos sobrevivem a lavagem de luz ambiente?
+- Hierarquia: em 3 segundos, o olho sabe onde ir?
+- Tamanhos: o menor texto e legivel a 4m?
 
-Seja direto. Não precisa seguir formato rígido. Diga o que importa.
-```
+## 2. Beleza e sofisticacao
+Nao e uma pagina web -- e uma apresentacao para poucos. Pode ser refinada.
+- Tipografia: as fontes estao sendo usadas ao maximo? (Instrument Serif para autoridade, JetBrains Mono para dados, DM Sans para corpo)
+- Cores: a paleta OKLCH esta sendo explorada ou subutilizada?
+- Layout: o espaco negativo esta trabalhando? Assimetria intencional?
+- Acabamento: detalhes que separam "funcional" de "memoravel"
+
+## 3. Animacao e interacao
+A plateia e PEQUENA (<=15 pessoas). Isso permite:
+- Animacoes mais elaboradas (a atencao individual e maior)
+- Interacoes tipo click-reveal com timing dramatico
+- Choreographies multi-beat com pausas narrativas
+- GSAP avancado: SplitText, morphSVG, drawSVG, stagger com easing custom, flip animations, ScrollTrigger adaptado para slides, physics-based motion
+- Qualquer tecnica JS/CSS que eleve o impacto
+
+NAO se limite ao engine.js existente (fadeUp, stagger, countUp, drawPath, highlight). Proponha animacoes que o engine.js NAO tem -- o slide-registry.js aceita qualquer GSAP/JS.
+
+Criterios para animacao valida:
+- Tem proposito cognitivo (guiar atencao, revelar progressao, destacar dado)
+- Duracao total <= 3s por beat
+- Degradacao graciosa (.no-js -> tudo visivel)
+- NAO frivola (bounce, elastic -- contexto medico)
+
+## 4. Adequacao narrativa
+- Este slide cumpre seu papel no arco? (${NARRATIVE_ROLE})
+- O nivel de tensao visual bate com ${TENSION_LEVEL}/5?
+- A transicao do slide anterior e para o proximo e fluida?
+
+Para CADA proposta, de:
+- O que mudar (descricao)
+- Por que (principio cognitivo/visual)
+- Como (codigo CSS/JS/HTML quando possivel, direcao clara quando nao)
+</task>
+~~~
 
 ## Parametros API
 
-```js
-generationConfig: {
-  temperature: 0.9,       // criação bela, não aleatoriedade
-  maxOutputTokens: 16384
+```json
+{
+  "temperature": 0.9,
+  "maxOutputTokens": 16384
 }
 ```
 
 ## Principio
 
-O valor do Gemini neste gate é ver o que nós (que olhamos para este slide há dias) não vemos mais.
+O valor do Gemini neste gate e ver o que nos (que olhamos para este slide ha dias) nao vemos mais.
 
-Quanto MENOS estrutura no prompt, MAIS livre o especialista fica para apontar o que realmente importa. Rubricas numéricas, checklists obrigatórios e formatos rígidos canalizam a atenção para os nossos critérios — e perdem o que só fresh eyes captam.
+v3.0 adiciona estrutura sem rigidez: 4 dimensoes nomeadas forcam chain-of-thought, mas dentro de cada dimensao o formato e livre. A persona com credenciais especificas primes expertise real. O exploration mandate para GSAP avancado (SplitText, morphSVG, Flip) garante que Gemini proponha alem do engine.js padrao.
 
-O único viés que injetamos: **legibilidade**. O resto é expertise do Gemini.
+Constraint injection (sala clara, tela fraca, plateia pequena) esta embutida nas instrucoes -- nao como regra abstrata, mas como contexto fisico que Gemini precisa resolver.

@@ -24,6 +24,8 @@ Scorecards formais serao preenchidos durante ralph-qa batches 2-6 (proximas sess
 
 **HTML cleanup (2026-03-17d):** `data-background-color` removido de 17/18 slides (deck.js ignora — atributo morto). `slide-navy` removido de 16/18 slides light (mantido em CP1+CP2 que tem bg navy via CSS override). Nao altera scorecards existentes — so remove dead attributes. ERRO-009 documentado em ERROR-LOG.
 
+**Visual uplift infra (2026-03-19c):** Dark-bg CSS consolidado para 6 slides (CP1, CP2, forest-plot, heterogeneity, ancora, absoluto). SplitText disponivel globalmente. Prompt Gemini v3.0 com 4 dimensoes + exploration mandate GSAP. Criterios visuais elevados a partir desta sessao. Scorecards anteriores permanecem validos — re-audit sob criterios novos acontece quando slide entra no pipeline.
+
 ---
 
 ## s-title (00-title.html)

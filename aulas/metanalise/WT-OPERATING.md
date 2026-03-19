@@ -224,53 +224,16 @@ Input para Gemini (TUDO junto):
 // Salvar em qa-screenshots/{slide-id}/video.webm
 ```
 
-**Prompt Gemini (avaliacao livre, nao-deterministica):**
+**Prompt Gemini v3.0** (4 dimensoes, chain-of-thought, exploration mandate):
 
-```
-You are reviewing a single slide for a medical congress presentation
-on meta-analysis critical reading.
+Prompt canonico: `docs/prompts/gemini-slide-qa.md`
 
-Audience: medical residents (basic-intermediate), Brazilian congress.
-Stack: deck.js, GSAP, OKLCH tokens.
-Resolution: 1280x720, Plan C (good projector, light room).
-
-I'm providing:
-1. The raw HTML source
-2. The CSS that styles this slide
-3. Screenshots of each visual state (S0 = after entry, S1+ = after clicks)
-4. A video recording of the slide in action (entry animation + interactions)
-
---- HTML ---
-{raw HTML}
-
---- CSS ---
-{relevant CSS}
-
-[Screenshots and video attached]
-
-Assess quality freely. Consider whatever matters:
-- Would this look professional projected at a congress?
-- Visual hierarchy from 5 meters away?
-- Typography for projection (not screen)?
-- Does anything look AI-generated rather than human-designed?
-- Spacing, alignment, composition?
-- Color, contrast, accessibility?
-- How do the animations feel? Too fast? Too slow? Distracting?
-- Does the progressive disclosure (click-reveals) make sense?
-- Anything else you notice?
-
-Be specific and honest. Point to exact elements/CSS properties.
-Return JSON:
-{
-  "overall_impression": "...",
-  "issues": [
-    { "element": "...", "problem": "...", "suggestion": "...", "severity": "critical|high|medium|low" }
-  ],
-  "strengths": ["..."],
-  "animation_notes": "...",
-  "score_estimate": "1-10 overall"
-}
-```
+Principios do v3.0:
+- Role + expertise priming (diretor criativo senior, GSAP 3.14, Mayer/Sweller/Duarte)
+- 4 dimensoes obrigatorias: legibilidade sob stress, beleza/sofisticacao, animacao/interacao, adequacao narrativa
+- Constraint injection: sala pequena, ~15 pessoas, 1-4m, TV LED, iluminacao forte
+- Exploration mandate: proponha GSAP alem do engine.js (SplitText, morphSVG, Flip, physics-based)
+- Output: reasoning + propostas concretas com codigo quando possivel
 
 **Output:** JSON do Gemini + interpretacao do agente.
 **→ CHECKPOINT:** apresentar ao Lucas. Lucas aprova/rejeita sugestoes Gemini individualmente.
@@ -392,6 +355,14 @@ Modelos disponiveis (Tier 1):
 | Modelo | Uso recomendado |
 |--------|-----------------|
 | gemini-3.1-pro | **Unico modelo.** Visual audit, cross-slide, analise profunda. $2/M input. |
+
+### GSAP Plugins disponiveis (index.template.html)
+
+| Plugin | Import | Uso |
+|--------|--------|-----|
+| SplitText | `gsap/SplitText` | Animacao por caractere/palavra/linha (headlines, reveals dramaticos) |
+
+Registrado globalmente — disponivel em qualquer `slide-registry.js` custom animation via `SplitText` no scope do module.
 
 ### API Keys
 

@@ -4,6 +4,37 @@
 
 ---
 
+## 2026-03-19c — Visual uplift pre-work (infra + prompt v3.0)
+
+Branch: `feat/metanalise-mvp`
+
+### Infra
+- **SplitText** imported and registered in `index.template.html` (GSAP plugin — enables text splitting animations in slide-registry.js)
+- **Dark-bg CSS consolidated** in `metanalise.css`: seletor compartilhado expandido de 2 slides (CP1/CP2) para 6 (`+s-forest-plot, +s-heterogeneity, +s-ancora, +s-absoluto`). Background `#162032` + 8 on-dark token overrides. Novos slides dark = adicionar ID ao seletor.
+
+### Prompt
+- **Gemini prompt v3.0** (`docs/prompts/gemini-slide-qa.md`): reescrita com prompt engineering profissional:
+  - Role + expertise priming (diretor criativo senior, GSAP 3.14, motion design cognitivo)
+  - Chain-of-thought forcado (4 dimensoes: legibilidade, beleza, animacao, narrativa)
+  - Constraint injection (sala pequena, ~15 pessoas, 1-4m, TV LED, iluminacao forte)
+  - Exploration mandate (GSAP alem do engine.js: SplitText, morphSVG, Flip, physics-based)
+  - Output schema livre (reasoning + propostas com codigo)
+  - Substitui v2.1 (que era "menos estrutura possivel")
+
+### Verificacao
+- `npm run build:metanalise` → PASS (18 slides)
+- `npm run lint:slides` → PASS
+- Zero regressoes visuais (pre-work nao altera slides existentes)
+
+### Docs atualizados
+- HANDOFF.md: estado atual, CSS overrides, caminho critico, dark-bg reference map
+- CHANGELOG.md: este entry
+- WT-OPERATING.md: §4 QA.3 referencia prompt v3.0, §9 SplitText disponivel
+- CLAUDE.md aula: status atualizado
+- NOTES.md: decisao visual uplift + dark-bg map
+
+---
+
 ## 2026-03-19b — s-hook Gemini materials captured
 
 Branch: `feat/metanalise-mvp`

@@ -636,11 +636,16 @@ aside.notes { display: none; }
   }
 }
 
-/* --- Checkpoint: navy background (narrative rhythm — Duarte)
+/* --- Dark background slides (narrative rhythm — Duarte)
    stage-c remaps on-dark tokens for light bg.
-   Override at slide scope to restore correct contrast. --- */
+   Override at slide scope to restore correct contrast.
+   Add new slide IDs here when they become dark in the pipeline. --- */
 #s-checkpoint-1 .slide-inner,
-#s-checkpoint-2 .slide-inner {
+#s-checkpoint-2 .slide-inner,
+#s-forest-plot .slide-inner,
+#s-heterogeneity .slide-inner,
+#s-ancora .slide-inner,
+#s-absoluto .slide-inner {
   background-color: #162032;
   --text-primary:       oklch(95% 0.005 258);
   --text-secondary:     oklch(70% 0.01 258);

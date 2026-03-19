@@ -6,7 +6,7 @@
 
 ## Estado atual
 
-- **Fase:** QA slide-a-slide. s-title DONE (Gemini). s-hook v4 (grid assimétrico + blackout + brutalismo + 146 mono) — 146 mono OK (era Vite cache, não CSS). Screenshots 3 beats + vídeo .webm capturados para Gemini re-eval. Prompt v2.1 pronto (docs/prompts/gemini-slide-qa.md).
+- **Fase:** QA slide-a-slide com **visual uplift** (beleza avançada + GSAP sofisticado). s-title DONE (Gemini). s-hook screenshots+video capturados, Gemini re-eval pendente. Prompt Gemini v3.0 pronto (docs/prompts/gemini-slide-qa.md). Pre-work infra: SplitText importado, dark-bg CSS consolidado (6 slides).
 - **HTML cleanup (2026-03-17d):** `data-background-color` removido de 17/18 slides (todos — deck.js ignora). `slide-navy` removido de 16/18 slides light (mantido em CP1+CP2 que TEM bg navy via CSS override). ERRO-009 documentado.
 - **QA pipeline:** ver [WT-OPERATING.md §4](WT-OPERATING.md#4-qa-sub-loop-dentro-do-estado-qa). Gates 1-4: 18/18 PASS. Scorecards formais 14-dim: 3/18 (F1). s-title QA.0-QA.4 PASS (Gemini approved). s-hook QA.0-QA.2 PASS, QA.3 screenshots+video capturados, QA.4 Gemini pendente (materiais prontos). Fase 3 (dynamic): 3 pendentes (hook, CP1, CP2). Fase 4 (Gemini): s-title done, s-hook materiais prontos, demais pendentes.
 - **Branch:** feat/metanalise-mvp (worktree wt-metanalise)
@@ -14,13 +14,13 @@
 - **Slides planejados:** 18 (00-17) — ver blueprint.md v1.8
 - **Docs fundacionais:** narrative.md (v2.2), evidence-db.md (v5.0 — 26+ refs, hook refs adicionadas), blueprint.md (v1.8), reading-list.md (v0.3)
 - **_manifest.js:** CRIADO — 18 slides, fases F1/I1/F2/I2/F3
-- **slide-registry.js:** CRIADO — state machines para title (choreography), hook (2-beat: countUp + blackout/verdict), checkpoint-1 (3-beat), checkpoint-2 (4-beat)
+- **slide-registry.js:** CRIADO — state machines para title (choreography), hook (2-beat: countUp + blackout/verdict), checkpoint-1 (3-beat), checkpoint-2 (4-beat). SplitText disponível globalmente (registrado em index.template.html)
 - **Orphan slides:** 0
 - **Orphan CSS:** 0
 - **Artigo âncora:** ✅ Valgimigli 2025, Clopidogrel vs Aspirina (Lancet, PMID 40902613). IPD-MA, 7 RCTs, 28.982 pts
 - **lint:slides:** ✅ PASS (zero FAILs)
 - **HEX navy:** #162032 mantido (decisao Lucas — consistencia cross-aula)
-- **CSS overrides em metanalise.css vs base.css:** `justify-content: center` restaurado + pseudo-elements desativados (ERRO-005). Checkpoint safe-center pattern proprio (ERRO-006). CSS zoom REMOVIDO — deck.js scale() é o mecanismo correto (ERRO-008). Fixed px tokens mantidos para evitar vw double-scaling. Hook v4: grid assimétrico 2-col (Z-pattern), `.hook-vol-number` 72px mono, verdict brutalismo (`--danger`, border-radius:0), blackout beat 2. Dead CSS removido. Checkpoint navy override: `#s-checkpoint-1/2 .slide-inner { background-color: #162032 }` + 8 on-dark tokens restaurados (ERRO-009).
+- **CSS overrides em metanalise.css vs base.css:** `justify-content: center` restaurado + pseudo-elements desativados (ERRO-005). Checkpoint safe-center pattern proprio (ERRO-006). CSS zoom REMOVIDO — deck.js scale() é o mecanismo correto (ERRO-008). Fixed px tokens mantidos para evitar vw double-scaling. Hook v4: grid assimétrico 2-col (Z-pattern), `.hook-vol-number` 72px mono, verdict brutalismo (`--danger`, border-radius:0), blackout beat 2. Dead CSS removido. **Dark-bg consolidado:** seletor compartilhado para 6 slides (`#s-checkpoint-1/2, #s-forest-plot, #s-heterogeneity, #s-ancora, #s-absoluto`) com `background-color: #162032` + 8 on-dark tokens restaurados. Novos slides dark = adicionar ID ao seletor.
 - **Reveal.js:** REMOVIDO desta WT. `package.json` sem reveal, `vite.config.js` exclui frozen aulas (ERRO-010).
 - **Backlog CSS:** 13 refs `--on-dark` tokens em CSS de slides light (funcional via stage-c remap, naming misleading). Nao bloqueia QA — registrado para cleanup futuro.
 
@@ -134,13 +134,17 @@
 
 ## Caminho crítico — próximas sessões
 
-### Sessão N+1 (imediata) — Scorecards formais 14-dim
-1. HTML limpo. Zero dead attributes. Checkpoint CSS verificado.
-2. **QA slide-a-slide** com Playwright (Gates 1-4 por slide, workflow em WT-OPERATING.md §4):
-   - Slide 04 (s-checkpoint-1) → 05 → 06 → ... → 18 (em ordem)
-   - Para cada: screenshot + contraste + score 14-dim + fix loop + docs + commit
-   - Gemini slide-a-slide (nao em batch)
-3. **Fase 3 (dynamic gate):** hook, CP1, CP2 — timing assertions + click-reveal + video
+### Sessão N+1 (imediata) — QA slide-a-slide com visual uplift
+1. **Pre-work DONE:** SplitText importado, dark-bg consolidado (6 slides), prompt Gemini v3.0 pronto.
+2. **Pipeline normal** (WT-OPERATING.md §4): proximo slide na fila → QA.0-QA.4 → DONE → proximo.
+   - Criterios visuais elevados: beleza avançada + GSAP sofisticado (SplitText, custom choreographies)
+   - Gemini prompt v3.0 (4 dimensoes, chain-of-thought, exploration mandate GSAP)
+   - Contexto sala: pequena, ~15 pessoas, 1-4m, iluminacao forte, TV LED — legibilidade constraint #1
+3. **Dark-bg reference** (sugestao, decide-se por slide):
+   - Ja dark: s-checkpoint-1, s-checkpoint-2
+   - Propostos dark: s-forest-plot, s-heterogeneity, s-ancora, s-absoluto (CSS pronto)
+   - Light: demais (s-rs-vs-ma, s-pico, s-abstract, s-benefit-harm, s-grade, s-fixed-random, s-aplicacao, s-aplicabilidade, s-takehome)
+4. **Ordem:** s-hook (Gemini re-eval pendente) → s-contrato (Gemini pendente) → s-checkpoint-1 → F2 em sequencia
 
 ### Sessão N+2
 - Fase 4 (Gemini deck-level — este sim em batches)

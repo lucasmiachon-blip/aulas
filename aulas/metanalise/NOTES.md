@@ -44,3 +44,29 @@
 - Projetor congresso: TBD — Lucas pega viewport amanhã
 - deck.js (shared/) escala corretamente em todos os aspect ratios testados (16:9, 16:10, 21:9)
 - Nenhum fix necessário em deck.js
+
+## 2026-03-19 — Visual uplift pre-work
+
+### Decisao: visual uplift dentro do pipeline existente
+- Pipeline QA slide-a-slide (WT-OPERATING.md) NAO muda
+- O que muda: criterios visuais elevados + GSAP sofisticado + prompt Gemini v3.0
+- Contexto sala: pequena, ~15 pessoas, 1-4m, TV LED 55-75", iluminacao forte → legibilidade constraint #1
+
+### Infra aplicada
+- SplitText importado em `index.template.html` (disponivel para qualquer slide via slide-registry.js)
+- Dark-bg CSS consolidado: seletor compartilhado 6 slides com token overrides. Para adicionar slide dark: acrescentar ID no seletor em metanalise.css (~linha 642)
+
+### Dark-bg reference map (sugestao — decide-se por slide no pipeline)
+| Slide | BG | Razao |
+|-------|-----|-------|
+| s-checkpoint-1 | DARK (ja) | Ritmo narrativo |
+| s-checkpoint-2 | DARK (ja) | Ritmo narrativo |
+| s-forest-plot | DARK (CSS pronto) | Ferramenta visual central, Von Restorff |
+| s-heterogeneity | DARK (CSS pronto) | Hero I2 dramatico |
+| s-ancora | DARK (CSS pronto) | Cinematic article reveal |
+| s-absoluto | DARK (CSS pronto) | NNT conversion dramatica |
+| demais | LIGHT | Modo aprendizado, cores semanticas em bg claro |
+
+### Prompt Gemini v3.0 (docs/prompts/gemini-slide-qa.md)
+- Substitui v2.1. 4 dimensoes com chain-of-thought forcado. Exploration mandate para GSAP avancado.
+- Referenciado por WT-OPERATING.md §4 QA.3

@@ -15,6 +15,8 @@
 </div>
 <script type="module">
   import gsap from 'gsap';
+  import { SplitText } from 'gsap/SplitText';
+  gsap.registerPlugin(SplitText);
   import '../../shared/css/base.css';
   import './metanalise.css';
   import { initAula, createAnimationDispatcher } from '../../shared/js/engine.js';
