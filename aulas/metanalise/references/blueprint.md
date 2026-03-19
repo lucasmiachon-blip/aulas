@@ -36,7 +36,7 @@
 - **Assertion:** "1.330 trials retratados contaminaram 3.902 MAs — 20% mudam resultado, 157 guidelines afetadas"
 - **Risco cognitivo:** aula parecer estatística pura → desmotivação imediata
 - **Evidência:** VITALITY/Xu (1.330 trials → 3.902 MAs), Bojcic PMID 37931822 (81% crit. baixa), Qureshi PMID 41428154 (10% LoE forte), NICE-SUGAR cadeia (Wiener 2008 → NICE-SUGAR 2009 → Griesdale 2009). Detalhes: evidence-db.md §s-hook
-- **Status:** ✅ FEITO (01-hook.html) — 3-beat state machine (ScrambleText + SplitText + blackout verdict)
+- **Status:** ✅ FEITO (01-hook.html) — sober 3-card metrics layout (countUp + stagger)
 
 ### Slide 02 — Contrato com a audiência
 
@@ -58,7 +58,7 @@
 - **Assertion:** "Uma MA mostra RR 0.91 (IC 0.85–0.97) para mortalidade. Você muda sua conduta?"
 - **Risco cognitivo:** residente achar que já sabe ler MA → não engajar na metodologia
 - **Evidência:** dados ilustrativos genéricos — cenário didático (Musini removido do visible text; regra: nenhum artigo antes Fase 3)
-- **Status:** ✅ FEITO (03-checkpoint-1.html) — state machine 3-beat: cenário → pergunta → twist (via slide-registry.js)
+- **Status:** ✅ FEITO (03-checkpoint-1.html) — click-reveal 3-beat: cenário → pergunta → twist (via slide-registry.js)
 - **Nota:** a maioria dirá sim. A aula vai mostrar por que a resposta não é tão simples.
 
 ---
@@ -148,7 +148,7 @@
 - **Assertion:** "RR 0.75 (IC 0.60–0.93), I²=72%, certeza GRADE baixa — o diamante favorece. Você muda sua conduta?"
 - **Risco cognitivo:** confiar no diamante sem avaliar certeza e efeito absoluto
 - **Evidência:** dados ilustrativos/didáticos (NÃO de artigo real — sinalizar claramente)
-- **Status:** ✅ FEITO (12-checkpoint-2.html) — state machine 4-beat: cenário+pergunta → ✓safe → ⚠warning+✕danger → verdict (via slide-registry.js)
+- **Status:** ✅ FEITO (12-checkpoint-2.html) — click-reveal 4-beat: cenário+pergunta → ✓safe → ⚠warning+✕danger → verdict (via slide-registry.js)
 - **Twist:** diamante favorece tratamento (IC não cruza 1) MAS I²=72% + GRADE baixa + efeito absoluto pequeno (ARR ~1,25%, NNT ~80 com baseline risk 5%) → "provavelmente NÃO muda conduta"
 - **Arco com CP1:** no checkpoint-1 a maioria disse "sim" (RR 0.91, IC significativo). Aqui, mesmo com RR mais impressionante (0.75), a resposta correta é "não" — crescimento do residente.
 
