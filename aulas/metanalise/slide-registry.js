@@ -3,8 +3,6 @@
  * State machines for interactive slides (hook, checkpoints).
  * Pattern: cirrose slide-registry.js
  */
-import { SplitText } from 'gsap/SplitText';
-
 export const slideRegistry = {
   's-title': (slide, gsap) => {
     // Full choreography: h1 → subtitle → pillars (masking) → dots → identity
@@ -45,123 +43,6 @@ export const slideRegistry = {
         { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out', delay: 1.4 }
       );
     }
-  },
-
-  's-hook': (slide, gsap) => {
-    const beat0 = slide.querySelector('.hook-beat-0');
-    const beat1 = slide.querySelector('.hook-beat-1');
-    const beat2 = slide.querySelector('.hook-beat-2');
-    if (!beat0 || !beat1) return;
-
-    let state = 0;
-    const MAX = 2;
-    let splitInstances = [];
-
-    // Beat 0: ScrambleText "1.330" + SplitText words on description
-    const volNumber = slide.querySelector('.hook-vol-number');
-    const volText = slide.querySelector('.hook-vol-text');
-
-    gsap.to(beat0, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' });
-
-    // ScrambleText on "1.330" — information gap before reveal
-    if (volNumber) {
-      volNumber.textContent = '';
-      gsap.to(volNumber, {
-        scrambleText: {
-          text: '1.330',
-          chars: '0123456789.',
-          speed: 0.6,
-          revealDelay: 0.3
-        },
-        duration: 1.4,
-        ease: 'power2.out'
-      });
-    }
-
-    // SplitText on description — guided reading rhythm
-    if (volText) {
-      const splitVol = new SplitText(volText, { type: 'words' });
-      splitInstances.push(splitVol);
-      gsap.from(splitVol.words, {
-        opacity: 0, y: 8,
-        stagger: 0.04,
-        duration: 0.5,
-        ease: 'power3.out',
-        delay: 1.2
-      });
-    }
-
-    function advance() {
-      if (state >= MAX) return false;
-      state++;
-      if (state === 1) {
-        // Beat 1: ScrambleText "20%" — genuine suspense (replaces countUp)
-        gsap.set(beat1, { visibility: 'visible' });
-        gsap.to(beat1, { y: 0, opacity: 1, duration: 0.5, ease: 'power3.out' });
-        const heroValue = beat1.querySelector('.hook-hero-value');
-        if (heroValue) {
-          gsap.set(heroValue, { opacity: 1 }); // override [data-animate] opacity:0
-          heroValue.textContent = '';
-          gsap.to(heroValue, {
-            scrambleText: {
-              text: '20%',
-              chars: '0123456789%',
-              speed: 0.7,
-              revealDelay: 0.4
-            },
-            duration: 1.6,
-            ease: 'power2.out',
-            delay: 0.3
-          });
-        }
-      }
-      if (state === 2 && beat2) {
-        // Beat 2: blackout upper (near-invisible) + SplitText verdict
-        const upper = slide.querySelectorAll('.hook-question-text, .hook-data');
-        gsap.to(upper, { opacity: 0.04, scale: 0.97, duration: 0.5, ease: 'power2.inOut' });
-
-        gsap.set(beat2, { visibility: 'visible', opacity: 1, y: 0 });
-        const splitVerdict = new SplitText(beat2, { type: 'words,chars' });
-        splitInstances.push(splitVerdict);
-        gsap.from(splitVerdict.chars, {
-          opacity: 0,
-          stagger: 0.025,
-          duration: 0.3,
-          ease: 'power2.out',
-          delay: 0.6
-        });
-      }
-      return true;
-    }
-
-    function retreat() {
-      if (state <= 0) return false;
-      if (state === 2 && beat2) {
-        // Revert SplitText on verdict before hiding
-        const lastSplit = splitInstances.pop();
-        if (lastSplit) lastSplit.revert();
-        gsap.killTweensOf(beat2);
-        gsap.to(beat2, { opacity: 0, duration: 0.3 });
-        gsap.set(beat2, { visibility: 'hidden', delay: 0.3 });
-        // Restore upper content from blackout
-        const upper = slide.querySelectorAll('.hook-question-text, .hook-data');
-        gsap.to(upper, { opacity: 1, scale: 1, duration: 0.4, ease: 'power3.out' });
-      }
-      if (state === 1) {
-        gsap.to(beat1, { opacity: 0, duration: 0.3 });
-        gsap.set(beat1, { visibility: 'hidden', delay: 0.3 });
-      }
-      state--;
-      return true;
-    }
-
-    slide.__hookAdvance = advance;
-    slide.__hookRetreat = retreat;
-    slide.__hookCurrentBeat = () => state;
-    slide.__hookCleanup = () => {
-      splitInstances.forEach(s => s.revert());
-      splitInstances = [];
-    };
   },
 
   's-checkpoint-1': (slide, gsap) => {
