@@ -138,5 +138,5 @@
 | 2026-03-11 | v0 — derivado do memo direcionado |
 | 2026-03-13 | v0.1 — item 4 atualizado: artigo âncora = [TBD], não Musini definitivo |
 | 2026-03-14 | v0.2 — Murad JAMA 2014 (good to read residentes), Guyatt BMJ 2008 (good to read professor) |
-| 2026-03-19 | v0.4 — +3 pre-reading obrigatórios: Ioannidis 2016 abstract (5 min), Uttley 2024 abstract (3 min), INSPECT-SR Wilkinson 2025 abstract (5 min). Total pre-reading: ~48-58 min |
-| 2026-03-17 | v0.3 — Nice-to-read: Musini PMC embargo → Valgimigli Lancet (CAPES). Changelog reordenado |
+| 2026-03-17 | v0.3 — Nice-to-read: Musini PMC embargo → Valgimigli Lancet (CAPES) |
+| 2026-03-19 | v0.4 — +3 pre-reading obrigatórios: Ioannidis 2016, Uttley 2024, INSPECT-SR Wilkinson 2025. Total: ~48-58 min |

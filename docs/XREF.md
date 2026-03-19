@@ -151,8 +151,6 @@ CLAUDE.md (root)              ← fonte de verdade operacional (absorveu AGENTS.
 | CHANGELOG.md | (append-only — histórico de batches) | ← CLAUDE.md (operational record) |
 | ERROR-LOG.md | (append-only — erros → regras) | ← CLAUDE.md (operational record) |
 | NOTES.md | (log de decisões entre agentes) | ← CLAUDE.md (operational record) |
-| WT-OPERATING.md | (prompt operacional — máquina de estados + QA loop, WT-only) | ← HANDOFF.md |
-
 ### aulas/metanalise/
 
 | Arquivo | Referencia | Referenciado por |
@@ -164,9 +162,9 @@ CLAUDE.md (root)              ← fonte de verdade operacional (absorveu AGENTS.
 | references/blueprint.md | → narrative.md, evidence-db.md | ← HANDOFF.md |
 | slides/_manifest.js | (canônico ordem/metadata slides) | ← lint:narrative-sync, index.html |
 | WT-OPERATING.md | → HANDOFF.md, slide-identity.md | ← CLAUDE.md aula (doc order) |
-| CHANGELOG.md | (append-only — histórico de batches) | ← HANDOFF.md |
-| ERROR-LOG.md | (append-only — erros → regras) | ← CHANGELOG.md |
-| AUDIT-VISUAL.md | → WT-OPERATING.md §4 | ← HANDOFF.md |
+| CHANGELOG.md | (append-only — histórico de batches) | ← HANDOFF-ARCHIVE.md |
+| ERROR-LOG.md | (append-only — erros → regras) | → CHANGELOG.md (ref header) |
+| AUDIT-VISUAL.md | → WT-OPERATING.md §4 | ← WT-OPERATING.md §4 (QA loop) |
 | NOTES.md | (log de decisões entre agentes) | ← WT-OPERATING.md |
 | HANDOFF-ARCHIVE.md | (sessões arquivadas) | ← HANDOFF.md |
 | references/reading-list.md | (pre-reading list) | ← blueprint.md |

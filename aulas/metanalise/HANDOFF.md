@@ -6,23 +6,18 @@
 
 ## Estado atual
 
-- **Fase:** QA slide-a-slide com **visual uplift** (beleza avançada + GSAP sofisticado). s-title DONE (Gemini). **s-hook Gate 3+4 PASS (2026-03-19f):** 14-dim scorecard (avg 8.6/10). QA.4 fixes: verdict contrast 3.67→7.78:1 (explicit light text + darker red bg), word-break fixed (SplitText words,chars + &nbsp;). Gemini Gate 4 pendente. Prompt Gemini v4.0 pronto. Pre-work infra: SplitText + Flip + ScrambleTextPlugin importados, dark-bg CSS consolidado (6 slides), archetypes.md documentado (6 layout patterns).
-- **HTML cleanup (2026-03-17d):** `data-background-color` removido de 18/18 slides (deck.js ignora). `slide-navy` removido de 16/18 slides light (mantido em CP1+CP2 que TEM bg navy via CSS override). ERRO-009 documentado.
-- **QA pipeline:** ver [WT-OPERATING.md §4](WT-OPERATING.md#4-qa-sub-loop-dentro-do-estado-qa). Gates 1-4: 18/18 PASS. Scorecards formais 14-dim: 3/18 (F1). s-title QA.0-QA.4 PASS (Gemini approved). **s-hook Gate 3+4 PASS** (14-dim scorecard avg 8.6, contrast 7.78:1, fixes applied). Gemini Gate 4 pendente. s-contrato Gemini pendente. Fase 3 (dynamic): 2 pendentes (CP1, CP2). Fase 4 (Gemini): s-title done, s-hook+s-contrato pendentes.
+- **Fase:** QA slide-a-slide com visual uplift (beleza + GSAP sofisticado)
 - **Branch:** feat/metanalise-mvp (worktree wt-metanalise)
-- **Slides no index.html:** 18 (00-title → 01-hook → 02-contrato → 03-checkpoint-1 → 04-rs-vs-ma → 05-pico → 06-abstract → 07-forest-plot → 08-benefit-harm → 09-grade → 10-heterogeneity → 11-fixed-random → 12-checkpoint-2 → 13-ancora → 14-aplicacao → 15-aplicabilidade → 16-absoluto → 17-takehome)
-- **Slides planejados:** 18 (00-17) — ver blueprint.md v1.8
-- **Docs fundacionais:** narrative.md (v2.3), evidence-db.md (v5.1 — 34+ refs, VITALITY backbone + NICE-SUGAR + INSPECT-SR + Guyatt 2025), blueprint.md (v1.8), reading-list.md (v0.4 — +3 pre-reading)
-- **_manifest.js:** CRIADO — 18 slides, fases F1/I1/F2/I2/F3
-- **slide-registry.js:** CRIADO — state machines para title (choreography), hook (3-beat: ScrambleText "1.330" + SplitText words → ScrambleText "20%" + hero label → blackout + SplitText chars verdict NICE-SUGAR), checkpoint-1 (2-beat: cenario + twist), checkpoint-2 (3-beat: cenario + reveal + punchline). SplitText + Flip + ScrambleTextPlugin disponíveis globalmente (registrados em index.template.html)
-- **Orphan slides:** 0
-- **Orphan CSS:** 0
-- **Artigo âncora:** ✅ Valgimigli 2025, Clopidogrel vs Aspirina (Lancet, PMID 40902613). IPD-MA, 7 RCTs, 28.982 pts
-- **lint:slides:** ✅ PASS (zero FAILs)
-- **HEX navy:** #162032 mantido (decisao Lucas — consistencia cross-aula)
-- **CSS overrides em metanalise.css vs base.css:** `justify-content: center` restaurado + pseudo-elements desativados (ERRO-005). Checkpoint safe-center pattern proprio (ERRO-006). CSS zoom REMOVIDO — deck.js scale() é o mecanismo correto (ERRO-008). Fixed px tokens mantidos para evitar vw double-scaling. Hook v5: grid assimétrico 2-col (Z-pattern), `.hook-vol-number` 96px mono "1.330", `.hook-vol-text` 22ch max-width, hero-label 30ch, verdict 40px brutalismo (`--danger`, border-radius:0), blackout beat 2. Dead CSS removido. **Dark-bg consolidado:** seletor compartilhado para 6 slides (`#s-checkpoint-1/2, #s-forest-plot, #s-heterogeneity, #s-ancora, #s-absoluto`) com `background-color: #162032` + 8 on-dark tokens restaurados. Novos slides dark = adicionar ID ao seletor.
-- **Reveal.js:** REMOVIDO desta WT. `package.json` sem reveal, `vite.config.js` exclui frozen aulas (ERRO-010).
-- **Backlog CSS:** ~40 refs `--on-dark` tokens em metanalise.css (funcional via stage-c remap, naming misleading em slides light). Nao bloqueia QA — registrado para cleanup futuro.
+- **Slides:** 18/18 no deck (ver _manifest.js). Lint PASS. Orphans: 0.
+- **Ancora:** Valgimigli 2025 Lancet (PMID 40902613) — IPD-MA, 7 RCTs, 28.982 pts
+- **QA pipeline:** [WT-OPERATING.md §4](WT-OPERATING.md#4-qa-sub-loop-dentro-do-estado-qa). Gates 1-4: 18/18 PASS. Scorecards 14-dim: 3/18 (F1).
+- **Docs:** narrative v2.3, evidence-db v5.1, blueprint v1.8, reading-list v0.4
+- **GSAP plugins:** SplitText + Flip + ScrambleTextPlugin (index.template.html)
+- **Prompt Gemini:** v4.0 (docs/prompts/gemini-slide-qa.md)
+- **Dark-bg:** 6 slides (ver NOTES.md §dark-bg reference map). Novos slides dark = adicionar ID ao seletor em metanalise.css.
+- **HEX navy:** #162032 (decisao Lucas)
+- **Reveal.js:** REMOVIDO (ERRO-010)
+- **Backlog CSS:** ~40 refs `--on-dark` tokens (funcional, naming misleading). Cleanup futuro.
 
 ## Estado dos Slides (maquina de estados — WT-OPERATING.md)
 
@@ -118,7 +113,9 @@ Trabalho completado e decisões tomadas: ver [HANDOFF-ARCHIVE.md](HANDOFF-ARCHIV
 - **lint-slides.js false positive:** `scripts/lint-slides.js:110` — `data-animate="countUp"` sem `data-target` não pula `<script>` blocks. 2 false positives no index.html built.
 - **qa-engineer.md:** ref a `mcp__claude_ai_perplexity` diverge do nome real. Verificar e corrigir em main.
 - **ralph-qa SKILL.md:** ref a `perplexity_reason` pode não bater com MCP name real. Idem.
-- **XREF.md:** entries metanalise adicionadas (autorização Lucas 2026-03-17)
+- **XREF.md (cirrose):** `aulas/cirrose/WT-OPERATING.md` listado mas não existe no disco (copy-paste da seção metanalise). Remover.
+- **XREF.md (root):** 5 back-refs stale — CLAUDE.md root refs indiretas (via README), ECOSYSTEM.md sem ref por CLAUDE.md, MCP-ACADEMICOS sem ref por ECOSYSTEM.md. Corrigir em main.
+- **.gitignore:** adicionar `.claude/agent-memory/` (cache local medical-researcher, untracked).
 
 ## Não fazer ainda
 

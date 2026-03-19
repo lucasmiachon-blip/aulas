@@ -49,7 +49,7 @@
 
 ### Decisao: visual uplift dentro do pipeline existente
 - Pipeline QA slide-a-slide (WT-OPERATING.md) NAO muda
-- O que muda: criterios visuais elevados + GSAP sofisticado + prompt Gemini v3.0
+- O que muda: criterios visuais elevados + GSAP sofisticado + prompt Gemini v4.0
 - Contexto sala: pequena, ~15 pessoas, 1-4m, TV LED 55-75", iluminacao forte → legibilidade constraint #1
 
 ### Infra aplicada
@@ -67,8 +67,8 @@
 | s-absoluto | DARK (CSS pronto) | NNT conversion dramatica |
 | demais | LIGHT | Modo aprendizado, cores semanticas em bg claro |
 
-### Prompt Gemini v3.0 (docs/prompts/gemini-slide-qa.md)
-- Substitui v2.1. 4 dimensoes com chain-of-thought forcado. Exploration mandate para GSAP avancado.
+### Prompt Gemini v4.0 (docs/prompts/gemini-slide-qa.md)
+- Substitui v3.0. 5-step CoT estruturado, code-grounded GSAP API, few-shot exemplar, self-critique, token budget 1500-3000.
 - Referenciado por WT-OPERATING.md §4 QA.3
 
 ## 2026-03-19 — s-hook content rewrite (VITALITY backbone)

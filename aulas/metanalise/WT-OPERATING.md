@@ -198,11 +198,11 @@ Input para Gemini (TUDO junto):
 // Salvar em qa-screenshots/{slide-id}/video.webm
 ```
 
-**Prompt Gemini v3.0** (4 dimensoes, chain-of-thought, exploration mandate):
+**Prompt Gemini v4.0** (5-step CoT, code-grounded GSAP API, few-shot exemplar):
 
 Prompt canonico: `docs/prompts/gemini-slide-qa.md`
 
-Principios do v3.0:
+Principios do v4.0:
 - Role + expertise priming (diretor criativo senior, GSAP 3.14, Mayer/Sweller/Duarte)
 - 4 dimensoes obrigatorias: legibilidade sob stress, beleza/sofisticacao, animacao/interacao, adequacao narrativa
 - Constraint injection: sala pequena, ~15 pessoas, 1-4m, TV LED, iluminacao forte
@@ -310,8 +310,10 @@ Modelos disponiveis (Tier 1):
 | Plugin | Import | Uso |
 |--------|--------|-----|
 | SplitText | `gsap/SplitText` | Animacao por caractere/palavra/linha (headlines, reveals dramaticos) |
+| Flip | `gsap/Flip` | Layout transitions (reorder, resize, reparent) |
+| ScrambleTextPlugin | `gsap/ScrambleTextPlugin` | Efeito typewriter/scramble em numeros e texto |
 
-Registrado globalmente — disponivel em qualquer `slide-registry.js` custom animation via `SplitText` no scope do module.
+Registrados globalmente em `index.template.html` — disponiveis em qualquer custom animation via `slide-registry.js`.
 
 ### API Keys
 

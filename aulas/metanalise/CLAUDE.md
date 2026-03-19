@@ -83,4 +83,13 @@ GSAP plugins: SplitText + Flip + ScrambleTextPlugin (registered in index.templat
 
 ## Status
 
-**18 slides ativos (deck completo: Fases 1-3 + Interações 1-2). Âncora: Valgimigli 2025 Lancet (PMID 40902613). Visual uplift ativo: SplitText + Flip + ScrambleTextPlugin importados, dark-bg consolidado (6 slides), prompt Gemini v4.0. s-hook VITALITY backbone + Gate 3+4 PASS (2026-03-19): 14-dim avg 8.6, verdict 7.78:1 AAA, word-break fixed. QA: s-title DONE (Gemini PASS); s-hook Gate 3+4 PASS (Gemini pendente); s-contrato Gemini pendente; F2/I1/I2/F3 scorecards pendentes. Gates 1-4: 18/18 PASS. Docs: narrative v2.3, blueprint v1.8, evidence-db v5.1 (34+ refs). Main sync: 5406dd8.**
+| Campo | Valor |
+|-------|-------|
+| Slides | 18/18 deck completo (F1+I1+F2+I2+F3) |
+| Ancora | Valgimigli 2025 Lancet (PMID 40902613) |
+| Gates 1-4 | 18/18 PASS |
+| Scorecards 14-dim | 3/18 (F1): s-title DONE, s-hook Gate 3+4 PASS, s-contrato Gemini pendente |
+| Docs | narrative v2.3, blueprint v1.8, evidence-db v5.1 |
+| Main sync | 5406dd8 (2026-03-18) |
+
+Detalhes QA por slide: HANDOFF.md. Pipeline: WT-OPERATING.md §4.

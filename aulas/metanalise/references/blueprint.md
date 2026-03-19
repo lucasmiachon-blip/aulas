@@ -33,10 +33,10 @@
 
 - **Fase:** 1
 - **Função:** hook — criar importância, gerar curiosidade
-- **Assertion:** "Residentes acertam 41% em avaliação de evidência — mas a confiança é alta, mesmo nas respostas erradas"
+- **Assertion:** "1.330 trials retratados contaminaram 3.902 MAs — 20% mudam resultado, 157 guidelines afetadas"
 - **Risco cognitivo:** aula parecer estatística pura → desmotivação imediata
-- **Evidência:** Hoffmann PMID 34091022 (146/dia em 2021), Bojcic PMID 37931822 (81% crit. baixa), Qureshi PMID 41428154 (10% LoE forte), Lakhlifi PMID 37081292 (ilusão de competência)
-- **Status:** ✅ FEITO (01-hook.html) — 2-beat state machine, 3 countUp animations
+- **Evidência:** VITALITY/Xu (1.330 trials → 3.902 MAs), Bojcic PMID 37931822 (81% crit. baixa), Qureshi PMID 41428154 (10% LoE forte), NICE-SUGAR cadeia (Wiener 2008 → NICE-SUGAR 2009 → Griesdale 2009). Detalhes: evidence-db.md §s-hook
+- **Status:** ✅ FEITO (01-hook.html) — 3-beat state machine (ScrambleText + SplitText + blackout verdict)
 
 ### Slide 02 — Contrato com a audiência
 
@@ -213,27 +213,11 @@
 
 ---
 
-## Mapa de migração (CONCLUÍDO)
+## Historico (CONCLUIDO)
 
-> 18/18 slides migrados e posicionados. Todos ✅. Detalhes: CHANGELOG.md (sessões 2026-03-13 a 2026-03-15).
-
----
-
-## Candidatos a Artigo Âncora (DECIDIDO)
-
-> **Decisão final: Valgimigli 2025 (S3) — Lancet, PMID 40902613.** Slides 13-15 implementados.
-> Dados completos dos 20+ candidatos avaliados: evidence-db.md.
-> Decisões do Lucas: Cochrane = exemplos visuais (Fases 1-2); área ≠ hepatologia; CAPES/USP; bayesiano excluído.
-> Slide 11 (fixed vs random) MANTÉM — override do Lucas sobre 3 dossiês Gemini.
+> Migração 18/18 ✅. Âncora: Valgimigli 2025 (PMID 40902613). Dossiês Gemini absorvidos em narrative v2.
+> Detalhes: CHANGELOG.md + HANDOFF-ARCHIVE.md.
 
 ---
 
-## Propostas narrativas Gemini (ABSORVIDAS)
-
-> 3 dossiês Gemini (2026-03-14) absorvidos em narrative.md v2 e blueprint v1.4:
-> credibility gap, tese central, 3 perguntas reformuladas, checkpoint-2 "falso positivo".
-> Refs metodológicas (Murad, Guyatt, Sterne, Page) já em evidence-db e reading-list.
-
----
-
-## Status: BLUEPRINT v1.8 — 18 slides ativos (deck completo). Âncora: Valgimigli 2025 Lancet (PMID 40902613). Slides 13-15 criados com dados reais. QA F1 PASS; F2-F3 LINT-PASS.
+## Status: BLUEPRINT v1.8 — 18 slides (deck completo). QA F1 PASS; F2-F3 LINT-PASS.

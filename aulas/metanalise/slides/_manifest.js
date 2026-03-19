@@ -6,7 +6,7 @@
  * Validação: npm run lint:narrative-sync metanalise
  *
  * Coautoria: Lucas (decisão clínica) · Opus 4.6 (código + governance)
- * Atualizado: 2026-03-15 — Deck completo (18 slides)
+ * Atualizado: 2026-03-19 — Deck completo (18 slides)
  */
 
 export const slides = [
