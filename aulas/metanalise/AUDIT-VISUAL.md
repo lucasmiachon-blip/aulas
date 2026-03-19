@@ -70,9 +70,9 @@ Scorecards formais serao preenchidos durante ralph-qa batches 2-6 (proximas sess
 
 ## s-hook (01-hook.html)
 
-**Status:** PASS (QA.0-QA.4 completo 2026-03-19. Gemini QA.3 drove uplift. Opus QA.4 re-audit PASS.)
+**Status:** PASS (QA.0-QA.4 completo 2026-03-19. Gemini QA.3 drove uplift. Opus QA.4 re-audit PASS. Decimal countUp fix 03-19.)
 **Archetype:** cards — asymmetric grid "volume vs reality" with countUp GSAP
-**History:** Rewrite edb2e2f (sober 3-card), uplift c400f5a (Gemini QA.3 → asymmetric grid, typographic deconstruction, divider, tags)
+**History:** Rewrite edb2e2f (sober 3-card), uplift c400f5a (Gemini QA.3 → asymmetric grid, typographic deconstruction, divider, tags), decimal countUp fix (03-19: 33,8% animates with parseFloat+data-decimals)
 
 | Dim | Score | Nota |
 |-----|-------|------|
@@ -114,19 +114,19 @@ Scorecards formais serao preenchidos durante ralph-qa batches 2-6 (proximas sess
 
 ## s-contrato (02-contrato.html)
 
-**Status:** QA — Gemini Round 2 APPROVED (9.25/10). Round 3 pendente (fix cards 2&3).
+**Status:** QA — Gemini Round 3 APPROVED (9.5/10, legibility 10/10). Round 4 pendente (watermark-only design).
 **Archetype:** cards (setup) — dim D = N/A (sem dados clinicos)
-**History:** flex:1 fix (03-17b), visual uplift Gemini R1 (03-19: grid+subgrid, bleeding watermarks, left-align, custom GSAP choreography), cards 2&3 fix (03-19: skill 12px, text-wrap balance)
+**History:** flex:1 fix (03-17b), visual uplift Gemini R1 (03-19: grid+subgrid, bleeding watermarks, left-align, custom GSAP choreography), cards 2&3 fix (03-19: skill 12px, text-wrap balance), watermark-only redesign (03-19: remove small numbers, keep only ::after 14rem at 12% opacity, grid 2 rows)
 
 | Dim | Score | Nota |
 |-----|-------|------|
-| H (hierarquia) | 9 | Numero hero (44px mono) > pergunta (26px serif) > skill (12px sans uppercase). Von Restorff nos numerais. Bleeding watermark 14rem 7% reforco. |
+| H (hierarquia) | 9 | Bleeding watermark (14rem mono, 12% opacity) > pergunta (26px serif) > skill (12px sans uppercase). Watermark-only = cleaner hierarchy. |
 | T (tipografia) | 9 | Instrument Serif perguntas, JetBrains Mono numerais+watermark, DM Sans skills. text-wrap:balance evita orfaos. |
-| E (layout fill) | 9 | CSS Grid repeat(3,1fr) + subgrid 3 rows. margin-top/bottom:auto centraliza. Fill ~65%. |
+| E (layout fill) | 9 | CSS Grid repeat(3,1fr) + subgrid 2 rows. margin-top/bottom:auto centraliza. Fill ~65%. |
 | C (cor/contraste) | 9 | numero --ui-accent vs white 8.8:1, pergunta --text-primary vs white 15.5:1, skill --text-secondary vs white 9.13:1. Todos AAA. |
-| V (visuais) | 9 | Bleeding watermark numbers (14rem, 7% opacity) = depth + editorial. Layered shadow (3-tier). Subgrid cross-card alignment. |
+| V (visuais) | 9 | Bleeding watermark numbers (14rem, 12% opacity) = sole numeral layer. Layered shadow (3-tier). Subgrid cross-card alignment. Cleaner without small inline numbers. |
 | K (consistencia) | 9 | Echo direto com s-takehome (slide 17, shared .contrato-grid). Archetype cards. |
-| S (sofisticacao) | 10 | Custom GSAP choreography: cards rise+scale → numbers back.out(1.5) → questions fadeUp → skills slideX. Failsafes .no-js, .stage-bad, [data-qa], @media print. Bleeding watermark via ::after pseudo. |
+| S (sofisticacao) | 10 | Custom GSAP choreography: cards rise+scale (watermark appears with card) → questions fadeUp → skills slideX. Failsafes .no-js, .stage-bad, [data-qa], @media print. Bleeding watermark via ::after pseudo. |
 | M (comunicacao) | 9 | h2 = assercao verificavel. 3 cards x ~12 palavras (Cowan). Left-align facilita scanning. |
 | I (interacoes) | 9 | Custom choreography via slide-registry.js. clickReveals: 0. Sem click handlers. |
 | D (dados) | N/A | Slide de setup — sem dados numericos clinicos. |
@@ -139,8 +139,9 @@ Scorecards formais serao preenchidos durante ralph-qa batches 2-6 (proximas sess
 - Round 1: Proposed grid+subgrid, left-align, bleeding watermarks, 3-tier shadow, custom GSAP choreography, skill uppercase+border-top
 - All proposals accepted + radical (bleeding watermark). Implemented in 2038185.
 - Round 2: re-eval com screenshots pos-fix. Score 9.25/10. Verdict: **APPROVED**.
-- Round 3: pendente — fix cards 2&3 (skill wrapping, question orphans)
+- Round 3: re-eval apos cards 2&3 fix (skill 12px, text-wrap balance). Score 9.5/10. Verdict: **APPROVED** (beauty 9.5, legibility 10).
+- Round 4: pendente — watermark-only redesign (remove small inline numbers, watermark 12% opacity)
 
-**Fix history:** slide-navy removed (03-17), flex:1→cards 248px + token ui-accent (03-17b), visual uplift grid+subgrid+watermark+GSAP (03-19 2038185), cards 2&3 fix: skill 15→12px, letter-spacing 0.05→0.02em, text-wrap:balance (03-19).
+**Fix history:** slide-navy removed (03-17), flex:1→cards 248px + token ui-accent (03-17b), visual uplift grid+subgrid+watermark+GSAP (03-19 2038185), cards 2&3 fix: skill 15→12px, letter-spacing 0.05→0.02em, text-wrap:balance (03-19 f38eb90), watermark-only: remove contrato-number spans, grid 3→2 rows, watermark opacity 0.07→0.12 (03-19).
 
-**Screenshots:** `qa-screenshots/s-contrato/S5-fixed-{1280x720,1920x1080}.png` (pos-fix). Historico: S0, S1-post-gemini, S2-qa-fresh, S3-cards-qa, S4-fix-preview.
+**Screenshots:** `qa-screenshots/s-contrato/s-contrato-{1280x720,1920x1080}-r4.png` (watermark-only). Historico: S0→S5-fixed, r4.

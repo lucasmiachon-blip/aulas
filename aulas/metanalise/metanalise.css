@@ -557,16 +557,16 @@ aside.notes { display: none; }
 #s-contrato .contrato-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: 1fr auto;
   gap: var(--space-lg);
   margin-top: auto;
   margin-bottom: auto;
 }
 .contrato-card {
   display: grid;
-  grid-row: span 3;
+  grid-row: span 2;
   grid-template-rows: subgrid;
-  gap: var(--space-xs);
+  gap: var(--space-sm);
   padding: var(--space-lg) var(--space-md);
   background: var(--bg-elevated);
   border: none;
@@ -592,19 +592,10 @@ aside.notes { display: none; }
   font-weight: 700;
   line-height: 0.8;
   color: var(--ui-accent);
-  opacity: 0.07;
+  opacity: 0.12;
   z-index: 0;
   user-select: none;
   pointer-events: none;
-}
-.contrato-number {
-  font-family: var(--font-mono);
-  font-size: 44px;
-  color: var(--ui-accent);
-  font-weight: 600;
-  line-height: 1;
-  position: relative;
-  z-index: 1;
 }
 .contrato-question {
   font-family: var(--font-display);
@@ -631,25 +622,20 @@ aside.notes { display: none; }
 }
 /* Animation initial states (custom choreography via slide-registry.js) */
 #s-contrato .contrato-card { opacity: 0; transform: translateY(40px) scale(0.98); }
-#s-contrato .contrato-number { opacity: 0; transform: scale(0.5); }
 #s-contrato .contrato-question { opacity: 0; transform: translateY(12px); }
 #s-contrato .contrato-skill { opacity: 0; transform: translateX(-10px); }
 /* Failsafes */
 .no-js #s-contrato .contrato-card,
-.no-js #s-contrato .contrato-number,
 .no-js #s-contrato .contrato-question,
 .no-js #s-contrato .contrato-skill { opacity: 1; transform: none; }
 .stage-bad #s-contrato .contrato-card,
-.stage-bad #s-contrato .contrato-number,
 .stage-bad #s-contrato .contrato-question,
 .stage-bad #s-contrato .contrato-skill { opacity: 1; transform: none; }
 [data-qa] #s-contrato .contrato-card,
-[data-qa] #s-contrato .contrato-number,
 [data-qa] #s-contrato .contrato-question,
 [data-qa] #s-contrato .contrato-skill { opacity: 1; transform: none; }
 @media print {
   #s-contrato .contrato-card,
-  #s-contrato .contrato-number,
   #s-contrato .contrato-question,
   #s-contrato .contrato-skill { opacity: 1; transform: none; }
 }

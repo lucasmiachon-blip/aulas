@@ -64,48 +64,47 @@ export const slideRegistry = {
 
     // 4. CountUp on all numbers (reset to 0 first — HTML has final values for no-js)
     nums.forEach((num) => {
-      const target = parseInt(num.getAttribute('data-val'), 10);
+      const decimals = parseInt(num.getAttribute('data-decimals') || '0', 10);
+      const target = decimals > 0 ? parseFloat(num.getAttribute('data-val')) : parseInt(num.getAttribute('data-val'), 10);
       num.textContent = '0';
       const obj = { val: 0 };
       const isVolume = num.closest('.hook-volume');
       const delay = isVolume ? 0 : (num.closest('.hook-fact') === facts[0] ? 1.0 : 1.25);
+      const snapVal = decimals > 0 ? Math.pow(10, -decimals) : 1;
       gsap.to(obj, {
         val: target,
         duration: 1.4,
         delay: delay,
         ease: 'power2.out',
-        snap: { val: 1 },
-        onUpdate: () => { num.textContent = obj.val; }
+        snap: { val: snapVal },
+        onUpdate: () => {
+          num.textContent = decimals > 0
+            ? obj.val.toFixed(decimals).replace('.', ',')
+            : Math.round(obj.val);
+        }
       });
     });
   },
 
   's-contrato': (slide, gsap) => {
     const cards = slide.querySelectorAll('.contrato-card');
-    const numbers = slide.querySelectorAll('.contrato-number');
     const questions = slide.querySelectorAll('.contrato-question');
     const skills = slide.querySelectorAll('.contrato-skill');
 
     const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
-    // 1. Cards rise + fade (architectural entrance)
+    // 1. Cards rise + fade (architectural entrance — watermark numbers appear with card)
     tl.to(cards, {
       opacity: 1, y: 0, scale: 1,
       duration: 0.8, stagger: 0.2
     })
-    // 2. Numbers stamp with subtle overshoot (contrato = weight)
-    .to(numbers, {
-      opacity: 1, scale: 1,
-      duration: 0.6, stagger: 0.2,
-      ease: 'back.out(1.5)'
-    }, '-=0.5')
-    // 3. Questions fade up
+    // 2. Questions fade up
     .to(questions, {
       opacity: 1, y: 0,
       duration: 0.5, stagger: 0.2,
       ease: 'power2.out'
     }, '-=0.3')
-    // 4. Skills slide in (methodological foundation)
+    // 3. Skills slide in (methodological foundation)
     .to(skills, {
       opacity: 1, x: 0,
       duration: 0.5, stagger: 0.15,
