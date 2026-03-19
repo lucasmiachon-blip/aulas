@@ -2,8 +2,8 @@
 
 > Espinha de slides. Cada entrada = 1 slide-núcleo.
 > Assertion-evidence: h2 = afirmação verificável, nunca rótulo genérico.
-> Derivado de: narrative.md v2.2 (3 fases + 2 interações).
-> Reestruturado: 2026-03-13.
+> Derivado de: narrative.md v2.4 (3 fases + 2 interações).
+> Reestruturado: 2026-03-13. Atualizado: 2026-03-19 (v1.9 — Siedler PMID, framing corrigido).
 
 ---
 
@@ -35,7 +35,7 @@
 - **Função:** hook — criar importância, gerar curiosidade
 - **Assertion:** "Por que isso importa" (h2 curto — archetype hook, não assertion longo)
 - **Risco cognitivo:** aula parecer estatística pura → desmotivação imediata
-- **Evidência:** ~80/dia SRs publicadas (Hoffmann 2021, PMID 34091022), 81% qualidade criticamente baixa AMSTAR-2 (Bojcic 2024, PMID 37931822), 33.8% certeza moderada/alta GRADE (Siedler 2025). Detalhes: evidence-db.md §s-hook
+- **Evidência:** ~80/dia SRs publicadas (Hoffmann 2021, PMID 34091022), 81% qualidade criticamente baixa AMSTAR-2 (Bojcic 2024, PMID 37931822), 33,8% sequer avaliaram certeza da evidência (Siedler 2025, PMID 40969451). Detalhes: evidence-db.md §s-hook
 - **Status:** ✅ FEITO (01-hook.html) — sober 3-card metrics layout, asymmetric grid, countUp GSAP. DONE (QA.0-QA.4 PASS, avg 9.36)
 
 ### Slide 02 — Contrato com a audiência

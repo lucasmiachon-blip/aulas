@@ -8,7 +8,8 @@
 ## Quando usar
 
 Review visual de slide individual via Gemini (Gate 4 do QA pipeline).
-Modelo: `gemini-3.1-pro` via MCP ou API REST.
+Modelo: especificar explicitamente na chamada. Recomendado: `gemini-3.1-pro` via MCP ou API REST.
+**Nota:** chamadas históricas (s-title, s-hook) usaram `gemini-2.5-pro` (default do MCP à época). Registros em AUDIT-VISUAL refletem o modelo real usado — não alterar.
 
 ## Parametros API
 

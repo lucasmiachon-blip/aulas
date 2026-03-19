@@ -131,7 +131,7 @@
 
 | Dado | Valor | Fonte | PMID | DOI | Tier | Nota |
 |------|-------|-------|------|-----|------|------|
-| MAs que avaliaram certeza GRADE | **33,8%** | Siedler MR et al. J Clin Epidemiol 2025 | pendente | pendente | 1 | ✅ **EM USO no hook card 3** — proporção de MAs que aplicaram GRADE (dois terços omitem) |
+| SRs que avaliaram certeza da evidência | **33,8%** (346/1.023) | Siedler MR et al. Cochrane Evid Synth Methods 2025;3(2) | 40969451 ✅ | 10.1002/cesm.70014 | 1 | ✅ **EM USO no hook card 3** — 33,8% = SRs que AVALIARAM certeza (89,3% via GRADE). Dois terços omitem avaliação. 10 revistas alto impacto, Jan 2013–Jan 2024 |
 
 ### Guidelines e evidência de nível A
 
@@ -200,7 +200,7 @@
 | Murad et al. Rating the certainty in evidence in the absence of a single estimate of effect. JAMA 2014;312(2):171-9 | 25005654 ✅ | 10.1001/jama.2014.5952 | 1 | GRADE tutorial canônico — rating sem single estimate |
 | Guyatt et al. GRADE: an emerging consensus on rating quality of evidence. BMJ 2008;336(7650):924-6 | 21195583 ✅ | 10.1136/bmj.39489.470347.AD | 1 | Série introdutória GRADE |
 | Dettori et al. Understanding the forest plot. Global Spine J 2021;11(7):1137-9 | 33939533 ✅ | 10.1177/21925682211012058 | 1 | Didática forest plot (já usada no slide 07) |
-| Higgins & Lopez-Lopez. Reflections on the I² index for measuring inconsistency in meta-analysis. Res Synth Methods 2025 | pendente | — | 1 | I² creator cautions overuse. Usada no slide 10 notes |
+| Higgins JPT, Lopez-Lopez JA. Reflections on the I-squared index for measuring inconsistency in meta-analysis. Res Synth Methods. Published online Dec 29, 2025 | [não indexado] | 10.1017/rsm.2025.10062 ✅ | 1 | I² creator cautions overuse. Usada no slide 10 notes. Epub ahead of print — re-checar PMID em abr/2026 |
 
 ---
 
@@ -250,6 +250,7 @@
 
 | Data | Mudança |
 |------|---------|
+| 2026-03-19 | v5.3 — Siedler PMID 40969451 verificado. Journal corrigido: Cochrane Evid Synth Methods (não J Clin Epidemiol). Framing corrigido: 33,8% = SRs que avaliaram certeza (não % com certeza moderada/alta). Higgins & Lopez-Lopez DOI verificado (10.1017/rsm.2025.10062), PMID não indexado (epub Dez 2025). |
 | 2026-03-19 | v5.2 — Hook rewrite sober: VITALITY/NICE-SUGAR removidos do slide (mantidos como ref). Hoffmann "EM USO card 1", Bojcic "EM USO card 2". +Siedler 2025 (33.8% GRADE, "EM USO card 3"). Tags EM USO atualizadas. |
 | 2026-03-19 | v5.1 — Hook rewrite VITALITY backbone: +8 refs. INSPECT-SR (Wilkinson 2025, PMID 40349737), Guyatt/Brignardello-Petersen 2025 (PMID 39218429), Paul 2025 (PMID 40414366), Uttley 2024 (PMID 39542225), Wiener MA 2008 (PMID 18728267), NICE-SUGAR 2009 (PMID 19318384), Griesdale MA 2009 (PMID 19318387), Murad 2016 pirâmide (PMID 27339128). Novas seções: integridade RCTs, exemplo MA UTI, pirâmide. Todos PMIDs ✅ |
 | 2026-03-18 | v5.0 — 6 refs adicionadas: Windish JAMA 2007 (EM USO no hook, swap 146→41%), VITALITY BMJ 2025, Possamai JAMA Intern Med 2025, Herrera-Perez eLife 2019, Saposnik BMC 2016, Ioannidis JAMA 2005. Nova seção "MAs contraditas/retratadas". Todos PMIDs ✅ |

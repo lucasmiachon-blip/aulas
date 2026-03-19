@@ -288,7 +288,7 @@ Estas sao sugestoes, nao gates. O agente pode registrar em NOTES.md para Lucas d
 ## 9. Tooling Reference
 
 GSAP plugins, contraste, API keys → ver `CLAUDE.md` (aula) secao "Arquivos de trabalho".
-Gemini: usar `gemini-3.1-pro` (unico modelo). Playwright: `npm run dev` ativo.
+Gemini: especificar modelo explicitamente na chamada MCP (`gemini-3.1-pro` recomendado). Chamadas historicas (AUDIT-VISUAL) registram `gemini-2.5-pro` — provavelmente o default do MCP na epoca. **Nao alterar registros historicos.** Playwright: `npm run dev` ativo.
 
 | Doc | Path | Papel |
 |-----|------|-------|

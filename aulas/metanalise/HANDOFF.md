@@ -11,7 +11,7 @@
 - **Slides:** 18/18 no deck (ver _manifest.js). Lint PASS. Orphans: 0.
 - **Ancora:** Valgimigli 2025 Lancet (PMID 40902613) — IPD-MA, 7 RCTs, 28.982 pts
 - **QA pipeline:** [WT-OPERATING.md §4](WT-OPERATING.md#4-qa-sub-loop-dentro-do-estado-qa). Gates 1-4: 18/18 PASS. Scorecards 14-dim: 3/18 (F1). DONE: 2/18 (s-title, s-hook).
-- **Docs:** narrative v2.4, evidence-db v5.2, blueprint v1.8, reading-list v0.4
+- **Docs:** narrative v2.4, evidence-db v5.3, blueprint v1.9, reading-list v0.4
 - **GSAP plugins:** SplitText + Flip + ScrambleTextPlugin (index.template.html)
 - **Prompt Gemini:** v6.0 (docs/prompts/gemini-slide-qa.md)
 - **Dark-bg:** 6 slides (ver NOTES.md §dark-bg reference map). Novos slides dark = adicionar ID ao seletor em metanalise.css.
@@ -111,9 +111,10 @@ Trabalho completado e decisões tomadas: ver [HANDOFF-ARCHIVE.md](HANDOFF-ARCHIV
 ## Pendências para main (Classe B — não editar na WT)
 
 - **lint-slides.js false positive:** `scripts/lint-slides.js:110` — `data-animate="countUp"` sem `data-target` não pula `<script>` blocks. 2 false positives no index.html built.
-- **qa-engineer.md:** ref a `mcp__claude_ai_perplexity` diverge do nome real. Verificar e corrigir em main.
-- **ralph-qa SKILL.md:** ref a `perplexity_reason` pode não bater com MCP name real. Idem.
-- **XREF.md (cirrose):** `aulas/cirrose/WT-OPERATING.md` listado mas não existe no disco (copy-paste da seção metanalise). Remover.
+- **Scripts orphans (main):** `scripts/attention-insight.js`, `scripts/mcp-attention-insight.js`, `scripts/act1-surgical-qa.mjs`, `scripts/act1-reaudit.mjs` — confirmar delete.
+- ~~qa-engineer.md perplexity ref~~ — VERIFICADO OK (2026-03-19): usa `mcp:perplexity`, bate com `.mcp.json`.
+- ~~ralph-qa SKILL.md perplexity ref~~ — VERIFICADO OK (2026-03-19): zero menções a perplexity.
+- ~~XREF.md cirrose/WT-OPERATING.md~~ — VERIFICADO OK (2026-03-19): não existe entrada fantasma.
 - ~~.gitignore: adicionar `.claude/agent-memory/`~~ — DONE (2026-03-19, nesta WT).
 
 ## Não fazer ainda

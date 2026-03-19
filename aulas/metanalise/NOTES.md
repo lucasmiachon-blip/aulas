@@ -124,6 +124,21 @@
 - Higgins & Lopez-Lopez 2025 (I² creator): PMID pendente
 - Ambos aguardam verificacao por reference-manager agent
 
+## 2026-03-19 — Batch 1 doc hardening: pendencias factuais
+
+### PMIDs verificados
+- **Siedler 2025:** PMID **40969451** verificado via PubMed MCP + Crossref. Journal correto: *Cochrane Evid Synth Methods* 2025;3(2). DOI: 10.1002/cesm.70014.
+  - **CORREÇÃO DE DADOS:** 33,8% = proporção de SRs que *avaliaram* certeza da evidência (89,3% destas via GRADE). NÃO é "% com certeza moderada/alta". Framing corrigido em blueprint.md e evidence-db.md. HTML do slide já tinha framing correto ("avaliaram certeza da evidência").
+- **Higgins & Lopez-Lopez 2025:** DOI **10.1017/rsm.2025.10062** verificado via Crossref. Epub ahead of print (Dec 29, 2025). PMID **não indexado** — re-checar abr/2026. Autores confirmados (Julian PT Higgins = criador do I²).
+
+### Gemini model discrepancy resolvida
+- Prompt v6.0 dizia `gemini-3.1-pro` como modelo único. AUDIT-VISUAL registrava chamadas com `gemini-2.5-pro`.
+- Causa: MCP `@fre4x/gemini` usa model default que pode diferir do especificado no prompt.
+- Resolução: docs atualizados para recomendar especificar modelo explicitamente. Registros históricos preservados (refletem modelo real usado).
+- Arquivos atualizados: WT-OPERATING.md §9, docs/prompts/gemini-slide-qa.md.
+
+---
+
 ## 2026-03-19 — s-hook REWRITE (sober tone)
 
 ### Decisao Lucas
