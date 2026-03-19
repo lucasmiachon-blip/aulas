@@ -426,6 +426,4 @@ Este doc define a maquina; HANDOFF registra o estado de cada slide.
 
 ## Deprecated
 
-> **QA-WORKFLOW.md** contem detalhes historicos de tooling (Playwright, Gemini models, API keys, status tracker).
-> O loop de QA agora e definido por ESTE documento (secao 4).
-> QA-WORKFLOW.md mantido como referencia de tooling e execution logs anteriores.
+> ~~QA-WORKFLOW.md~~ — arquivo removido. O loop de QA e definido por ESTE documento (secao 4).

@@ -372,3 +372,21 @@ Tokens não importam. Retrabalho é sinal de aprendizado — mas não pode paral
 - `::before/::after { flex: 1 }` em containers base compartilhados PROIBIDO.
 - Participam do layout flex → com gap ou flex:1 children, produzem efeitos colaterais.
 - Codificado como E32 em css-errors.md. Lesson detalhada: sessao 16/mar neste arquivo.
+
+---
+
+## Sessão Diagnostico WT (2026-03-19)
+
+### Vite cache poisoning entre worktrees (ERRO-010)
+
+- Sintoma: tela preta no dev server, `section { display: none }`, DOM quase vazio.
+- Root cause: `node_modules/.vite/deps/` continha `reveal__js.js` pre-bundled de grade/osteoporose entries. Vite serviu inline script de OUTRA worktree com `import Reveal`. Reveal.css colapsou todas as sections.
+- Fix: (1) Remover `reveal.js` de dependencies. (2) Excluir frozen aulas de `discoverEntries()` no Vite config. (3) `npm install` invalida hash → cache limpo.
+- Regra: Worktrees deck.js NUNCA devem ter `reveal.js` em dependencies. Se tela preta: checar `.vite/deps/` ANTES de debugar CSS. Rodar `npx vite --force` ao trocar entre WTs.
+
+### "CSS bug" pode ser infra
+
+- O CHANGELOG dizia "146 mono não renderiza (specificity CSS)". Diagnóstico errado.
+- Computed styles mostraram JetBrains Mono 72px correto — o CSS SEMPRE esteve certo.
+- A tela preta impedia validação visual → hipótese de CSS nunca foi testada.
+- Regra: antes de diagnosticar "CSS specificity", verificar se o dev server está servindo o código certo.

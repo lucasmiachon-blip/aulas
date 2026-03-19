@@ -8,6 +8,10 @@ const __dirname = fileURLToPath(new URL('.', import.meta.url));
 // Auto-discover all HTML files in aulas/
 // Convention: aulas/*/index*.html = lecture decks (Plan A + Plan B)
 //             aulas/calibracao.html = projector calibration tool (intentionally here, ships with build)
+// Frozen Reveal.js aulas excluded from entry discovery.
+// They can still be served by URL in dev mode, but won't pollute the Vite dep cache.
+const FROZEN_AULAS = ['grade', 'osteoporose'];
+
 function discoverEntries() {
   const entries = {};
   const aulasDir = resolve(__dirname, 'aulas');
@@ -17,11 +21,11 @@ function discoverEntries() {
     const full = resolve(aulasDir, item);
     if (item.endsWith('.html')) {
       entries[item.replace('.html', '')] = full;
-    } else if (statSync(full).isDirectory()) {
-      // Subdir HTML (e.g., grade/index.html, grade/index.stage-b.html)
+    } else if (statSync(full).isDirectory() && !FROZEN_AULAS.includes(item)) {
+      // Subdir HTML (e.g., metanalise/index.html, cirrose/index.html)
       readdirSync(full).filter(f => f.endsWith('.html')).forEach(f => {
-        const key = f === 'index.html' 
-          ? item 
+        const key = f === 'index.html'
+          ? item
           : `${item}_${f.replace('.html', '').replace('index.', '')}`;
         entries[key] = resolve(full, f);
       });

@@ -112,6 +112,17 @@ Sem regra CSS explicitando `background-color` no slide, o fundo permanece light 
 (3) `slide-navy` só deve ser usado em slides que efetivamente têm fundo navy via CSS.
 **Data:** 2026-03-17
 
+### ERRO-010 · CRITICAL · Todos os slides
+**Descrição:** Tela preta. Dev server renderiza 0 slides. `#deck` não existe no DOM. Reveal.js CSS (`section { display: none }`) injected.
+**Root cause:** Vite dep cache poisoned. `node_modules/.vite/deps/` continha `reveal__js.js` pre-bundled porque `discoverEntries()` em `vite.config.js` escaneava grade/osteoporose (frozen, Reveal.js). O cache serviu inline script de outra worktree (`wt-cirrose`) com `import Reveal from 'reveal.js'`. Reveal.css colapsou todas as `<section>`.
+**Fix:** (1) Removido `reveal.js` de `package.json`. (2) `FROZEN_AULAS` excluídos de `discoverEntries()` no `vite.config.js`. (3) `npm install` invalidou lockfile hash → Vite rebuild cache limpo.
+**Regra derivada:**
+(1) Worktrees deck.js NÃO devem ter `reveal.js` em dependencies.
+(2) `vite.config.js` DEVE excluir aulas frozen/Reveal de entry discovery (`FROZEN_AULAS`).
+(3) Se tela preta em dev: verificar `node_modules/.vite/deps/` por entradas inesperadas ANTES de debugar CSS.
+(4) Sempre rodar `npx vite --force` ao trocar entre WTs ou após `npm install`.
+**Data:** 2026-03-19
+
 ---
 
 *Append-only. Não remover erros antigos.*

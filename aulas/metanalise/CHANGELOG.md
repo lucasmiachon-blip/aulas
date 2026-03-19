@@ -4,6 +4,18 @@
 
 ---
 
+## 2026-03-19a — Reveal.js purge + Vite cache fix + doc P0 fixes
+
+Branch: `feat/metanalise-mvp`
+
+- **ROOT CAUSE encontrado:** "146 mono não renderiza" NÃO era CSS specificity — era Vite cache poisoning. `node_modules/.vite/deps/` tinha Reveal.js pre-bundled (de grade/osteoporose entries). Vite servia inline script ERRADO (da wt-cirrose) com `import Reveal from 'reveal.js'`, que injetava `reveal.css` → `section { display: none }` → tela preta.
+- **Fix 1:** Removido `reveal.js` de `package.json` dependencies. `npm install` → node_modules limpo.
+- **Fix 2:** `vite.config.js` → `FROZEN_AULAS = ['grade', 'osteoporose']` excluídos de `discoverEntries()`. Previne re-contaminação do dep cache.
+- **Fix 3:** WT-OPERATING.md ghost ref a QA-WORKFLOW.md removida (arquivo não existe).
+- **Fix 4:** CLAUDE.md aula status atualizado: Gemini s-title PASS, s-hook ITERATE, demais pendentes (era genérico "Gemini pendente").
+- 146 mono renderiza corretamente: JetBrains Mono 72px 600w. Verificado via Playwright computed styles.
+- Build PASS, lint PASS, 18/18 slides renderizando.
+
 ## 2026-03-18e — s-hook v4 (grid + blackout + brutalismo + prompt template)
 
 Branch: `feat/metanalise-mvp`

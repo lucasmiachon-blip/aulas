@@ -81,4 +81,4 @@ Sem archetypes.css. Build via `npm run build:metanalise`.
 
 ## Status
 
-**18 slides ativos (deck completo: Fases 1-3 + Interações 1-2). Âncora: Valgimigli 2025 Lancet (PMID 40902613). _manifest.js criado. CSS limpo (specificity fixes aplicados). QA F1 PASS (title, hook, contrato — scorecards 14-dim, Gemini pendente); scorecards F2/I1/I2/F3 pendentes. Gates 1-4: 18/18 PASS. Docs: narrative v2.2, blueprint v1.8, evidence-db v5.0. Main sync: 5406dd8.**
+**18 slides ativos (deck completo: Fases 1-3 + Interações 1-2). Âncora: Valgimigli 2025 Lancet (PMID 40902613). _manifest.js criado. CSS limpo (specificity fixes aplicados). QA: s-title DONE (scorecards 14-dim + Gemini PASS); s-hook ITERATE (Gemini beauty 6.5, bug 146 mono pendente); s-contrato scorecards PASS (Gemini pendente); F2/I1/I2/F3 scorecards pendentes. Gates 1-4: 18/18 PASS. Docs: narrative v2.2, blueprint v1.8, evidence-db v5.0. Main sync: 5406dd8.**
