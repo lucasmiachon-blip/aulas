@@ -6,9 +6,9 @@
 
 ## Estado atual
 
-- **Fase:** QA slide-a-slide com **visual uplift** (beleza avançada + GSAP sofisticado). s-title DONE (Gemini). **s-hook content rewrite concluído (2026-03-19):** VITALITY backbone (1.330 trials retratados → 3.902 MAs → 20% mudam resultado → 157 guidelines), NICE-SUGAR como exemplo MA concreto (beat 2). ScrambleText atualizado (146→1.330, 41%→20%). QA.0-QA.2 INVALIDADOS (conteúdo mudou) — re-audit pendente. Prompt Gemini v4.0 pronto (docs/prompts/gemini-slide-qa.md — structured CoT, code grounding, few-shot, self-critique). Pre-work infra: SplitText + Flip + ScrambleTextPlugin importados, dark-bg CSS consolidado (6 slides), archetypes.md documentado (6 layout patterns).
+- **Fase:** QA slide-a-slide com **visual uplift** (beleza avançada + GSAP sofisticado). s-title DONE (Gemini). **s-hook Gate 3 PASS com issues (2026-03-19f):** 14-dim scorecard completo. 1 CRITICAL (verdict contrast 3.67:1 — dark text on danger-red, stage-c remap --text-on-dark), 1 MINOR (word-break "pacientes"). QA.4 fixes pendentes. Prompt Gemini v4.0 pronto. Pre-work infra: SplitText + Flip + ScrambleTextPlugin importados, dark-bg CSS consolidado (6 slides), archetypes.md documentado (6 layout patterns).
 - **HTML cleanup (2026-03-17d):** `data-background-color` removido de 18/18 slides (deck.js ignora). `slide-navy` removido de 16/18 slides light (mantido em CP1+CP2 que TEM bg navy via CSS override). ERRO-009 documentado.
-- **QA pipeline:** ver [WT-OPERATING.md §4](WT-OPERATING.md#4-qa-sub-loop-dentro-do-estado-qa). Gates 1-4: 18/18 PASS. Scorecards formais 14-dim: 3/18 (F1). s-title QA.0-QA.4 PASS (Gemini approved). **s-hook QA.0-QA.2 INVALIDADOS** (content rewrite VITALITY), Gate 3 pendente (screenshots + Gemini). s-contrato Gemini pendente. Fase 3 (dynamic): 3 pendentes (hook, CP1, CP2). Fase 4 (Gemini): s-title done, demais pendentes.
+- **QA pipeline:** ver [WT-OPERATING.md §4](WT-OPERATING.md#4-qa-sub-loop-dentro-do-estado-qa). Gates 1-4: 18/18 PASS. Scorecards formais 14-dim: 3/18 (F1). s-title QA.0-QA.4 PASS (Gemini approved). **s-hook Gate 3 PASS com issues** (14-dim scorecard completo, 6 screenshots, contrast table — CRITICAL: verdict 3.67:1). QA.4 fixes pendentes: verdict contrast + word-break. s-contrato Gemini pendente. Fase 3 (dynamic): 2 pendentes (CP1, CP2). Fase 4 (Gemini): s-title done, s-hook pendente (após QA.4), demais pendentes.
 - **Branch:** feat/metanalise-mvp (worktree wt-metanalise)
 - **Slides no index.html:** 18 (00-title → 01-hook → 02-contrato → 03-checkpoint-1 → 04-rs-vs-ma → 05-pico → 06-abstract → 07-forest-plot → 08-benefit-harm → 09-grade → 10-heterogeneity → 11-fixed-random → 12-checkpoint-2 → 13-ancora → 14-aplicacao → 15-aplicabilidade → 16-absoluto → 17-takehome)
 - **Slides planejados:** 18 (00-17) — ver blueprint.md v1.8
@@ -34,7 +34,7 @@
 | # | Slide | Estado | Notas |
 |---|-------|--------|-------|
 | 1 | s-title | QA | QA.0-QA.4 PASS. Gemini approved (beauty 9, legibility 10). Choreography + masking. |
-| 2 | s-hook | QA | **v5 VITALITY rewrite**: 3-beat (1.330 retratados → 20% mudam → NICE-SUGAR). ScrambleText + SplitText. QA.0-QA.2 invalidados, Gate 3 pendente. |
+| 2 | s-hook | QA | **Gate 3 PASS com issues**: 14-dim scorecard, 6 screenshots, contrast table. CRITICAL: verdict 3.67:1 (dark on red). MINOR: word-break "pacientes". QA.4 fixes pendentes. |
 | 3 | s-contrato | QA | Scorecard 14-dim PASS (Opus). Gemini pendente. |
 
 ### I1 — Checkpoint engajamento (1 slide)
@@ -74,7 +74,7 @@
 
 ### Resumo
 
-- **QA (3):** s-title (DONE Gemini), s-hook (content rewrite, re-QA pendente), s-contrato (Gemini pendente)
+- **QA (3):** s-title (DONE Gemini), s-hook (Gate 3 PASS, QA.4 fixes pendentes: verdict contrast + word-break), s-contrato (Gemini pendente)
 - **LINT-PASS (15):** restantes — scorecard 14-dim pendente
 - **DONE (0):** nenhum slide completou QA full (Opus + Gemini) — s-title aguarda re-confirmação formal
 
@@ -96,7 +96,7 @@ Trabalho completado e decisões tomadas: ver [HANDOFF-ARCHIVE.md](HANDOFF-ARCHIV
    - Ja dark: s-checkpoint-1, s-checkpoint-2
    - Propostos dark: s-forest-plot, s-heterogeneity, s-ancora, s-absoluto (CSS pronto)
    - Light: demais (s-rs-vs-ma, s-pico, s-abstract, s-benefit-harm, s-grade, s-fixed-random, s-aplicacao, s-aplicabilidade, s-takehome)
-4. **Ordem:** s-hook (Gate 3: screenshots + Gemini) → s-contrato (Gemini pendente) → s-checkpoint-1 → F2 em sequencia
+4. **Ordem:** s-hook QA.4 (fix verdict contrast + word-break → re-screenshot → Gemini Gate 4) → s-contrato (Gemini pendente) → s-checkpoint-1 → F2 em sequencia
 
 ### Sessão N+2
 - Fase 4 (Gemini deck-level — este sim em batches)

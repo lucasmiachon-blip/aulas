@@ -76,37 +76,57 @@ Scorecards formais serao preenchidos durante ralph-qa batches 2-6 (proximas sess
 
 ## s-hook (01-hook.html)
 
-**Status:** QA.0-QA.2 INVALIDADOS (content rewrite 2026-03-19e VITALITY backbone). Gate 3 pendente.
+**Status:** Gate 3 PASS com issues (2026-03-19f). 1 issue CRITICAL (verdict contrast), 1 MINOR (word-break). QA.4 fixes pendentes.
 **Archetype:** hook — dims E, P intencionalmente baixas
 **Content rewrite (2026-03-19e):** VITALITY backbone. Beat 0: "1.330 trials retratados → 3.902 MAs, 81% qualidade baixa". Beat 1: "20% das MAs mudam resultado, 157 guidelines contaminadas". Beat 2: NICE-SUGAR cadeia MA (Wiener 2008 → NICE-SUGAR 2009 → Griesdale 2009).
 **Refactor anterior (2026-03-18d):** 3-column number grid → hero number pattern. Grid assimétrico 2-col (Z-pattern). Blackout brutalismo.
 
 | Dim | Score | Nota |
 |-----|-------|------|
-| H (hierarquia) | — | PENDENTE re-audit (conteúdo mudou) |
-| T (tipografia) | — | PENDENTE re-audit |
-| E (layout fill) | — | PENDENTE re-audit |
-| C (cor/contraste) | — | PENDENTE re-audit (novos textos, verificar wrapping) |
-| V (visuais) | — | PENDENTE re-audit |
-| K (consistencia) | — | PENDENTE re-audit |
-| S (sofisticacao) | — | ScrambleText "1.330" + "20%", SplitText words + chars. 3-beat state machine. .no-js + [data-qa] failsafes mantidos |
-| M (comunicacao) | — | PENDENTE re-audit (arco: contaminação → consequência → exemplo concreto) |
-| I (interacoes) | — | 3-beat state machine (beat0 auto, beat1 click, beat2 click+blackout). ScrambleText + SplitText |
+| H (hierarquia) | 8 | 96px mono hero "1.330"/"20%" → 34px Instrument Serif italic (description) → 20px DM Sans (label) → 14px source-tag. 4 níveis tipográficos distintos. Von Restorff nos números hero. |
+| T (tipografia) | 9 | JetBrains Mono 96px/600 (hero numbers), Instrument Serif 34px italic (description + verdict), DM Sans 20px (label). 3 famílias com função semântica clara: mono=impacto, serif=narrativa, sans=informação. |
+| E (layout fill) | 5 | Beat 0: ~30% (upper-left, respiro intencional). Beat 1: ~40% (Z-pattern 2-col). Beat 2: ~50% (ghosted + full-width red block). Baixo por design — archetype hook/hero/breathe. |
+| C (cor/contraste) | 6 | Beat 0/1 text: "1.330"/"20%" 13.09:1 AAA+, description 13.09:1, secondary 9.05:1 AAA, source-tag 5.32:1 AA. **ISSUE: verdict (beat 2) = oklch(12%) dark text on oklch(50%) danger-red bg = 3.67:1. AA-lg PASS (3:1) mas BELOW 7:1 projector threshold.** Precisa fix: escurecer bg ou forçar texto claro com override. |
+| V (visuais) | 8 | Z-pattern grid assimétrico. Blackout beat 2 (opacity 0.04, scale 0.97) = fade dramático. Red verdict block border-radius:0 (brutalismo editorial). Sem decoração. Word-break "paci/entes" desfavorável (minor). |
+| K (consistencia) | 9 | Hero number pattern (96px mono) consistente entre "1.330" e "20%". Source-tag pattern igual ao s-title. .no-js + [data-qa] + @media print failsafes. Hook é intencionalmente distinto (correto). |
+| S (sofisticacao) | 9 | ScrambleText "1.330" (chars '0123456789.') + "20%" (chars '0123456789%'). SplitText words (beat 0) + chars (beat 2). 3-beat state machine com advance/retreat/cleanup. Blackout via GSAP (opacity+scale, não CSS class). Triple failsafe (.no-js, [data-qa], @media print). |
+| M (comunicacao) | 8 | Sem h2 (correto para hook). Arco escalante: contaminação (1.330 retratados) → consequência sistêmica (20% mudam) → exemplo concreto (NICE-SUGAR). Cada beat adiciona camada de urgência. Word-break "paci/entes" interrompe leitura momentaneamente. |
+| I (interacoes) | 9 | 3-beat state machine: beat 0 auto (fadeUp + ScrambleText + SplitText words), beat 1 click (ScrambleText "20%" + hero label), beat 2 click (blackout + SplitText chars verdict). 2 click reveals (< Cowan 4±1). Advance/retreat com cleanup completo. |
 | D (dados) | 9 | 9 dados Tier 1 verificados: VITALITY PMID 40268307, Bojcic PMID 37931822, INSPECT-SR PMID 40349737, Possamai PMID 40163084, Guyatt PMID 39218429, Wiener MA PMID 18728267, NICE-SUGAR PMID 19318384, Griesdale MA PMID 19318387, Ioannidis PMID 27620683 |
-| A (acessibilidade) | — | PENDENTE re-audit |
-| L (carga cognitiva) | — | PENDENTE re-audit (3 beats × 1-2 elementos = within Cowan 4±1 expected) |
-| P (andragogia) | — | PENDENTE re-audit (NICE-SUGAR example creates "this affects MY patients" feeling) |
-| N (arco narrativo) | — | PENDENTE re-audit (hook→contrato transition preserved) |
+| A (acessibilidade) | 7 | Beat 0/1: todos pares >= 9.05:1 (AAA). Source-tag 5.32:1 (AA — padrão cross-slide). **Verdict 3.67:1 — AA-lg PASS mas abaixo do threshold projector (7:1).** Ghosted elements (beat 2 opacity 0.04) são intencionais, não precisam ser legíveis. Failsafes .no-js presentes. |
+| L (carga cognitiva) | 9 | 3 beats × 1-2 elementos cada = within Cowan 4±1 por estado. Beat 0: 1 número + 1 parágrafo (2 chunks). Beat 1: 1 número + 1 label (2 chunks). Beat 2: 1 bloco verdict (1 chunk). Progressive disclosure via state machine. |
+| P (andragogia) | 7 | NICE-SUGAR cria "isso afeta MEUS pacientes" (Knowles: relevância para prática). Dados enquadrados como problema sistêmico que afeta decisões diárias do residente. Hook não ensina (correto) — cria motivação. Score esperado baixo para archetype hook. |
+| N (arco narrativo) | 9 | narrativeRole: hook, tensionLevel: 3. Escalação: contaminação → consequência → exemplo concreto. Transição para s-contrato: beat 2 termina com urgência → contrato resolve ansiedade com framework. Thread "diamante de verdade ou de vidro" conecta ao deck inteiro. |
 
-**Pendencias para Gate 3 (screenshots + Gemini):**
-- Novo conteúdo: verificar wrapping "1.330" em 96px mono, "trials retratados já citados em 3.902 meta-análises" em 22ch
-- Hero label "das MAs mudam de resultado. 157 guidelines contaminadas" em 30ch — cabe no canvas?
-- Verdict "Controle glicêmico em UTI: MAs diziam benefício. 6.104 pacientes depois — mortalidade aumentou." em 40px — quantas linhas?
-- ScrambleText "1.330" com char "." — visual do ponto no scramble noise?
-- SplitText chars no verdict (91 chars × 0.025s = 2.3s + 0.6s delay) — timing adequado?
-- Source-tag 4 autores (Xu 2025 · Bojcic 2024 · Wiener 2008 · Griesdale 2009) — cabe em 1 linha?
+**Gate 3 contrast check (2026-03-19f) — Playwright computed styles + WCAG calculator:**
 
-**Screenshots:** INVALIDADOS (conteúdo mudou). Novos screenshots pendentes Gate 3.
+| Elemento | Cor texto | Cor fundo | Ratio | WCAG | Proj 7:1 |
+|----------|-----------|-----------|-------|------|----------|
+| hook-vol-number (96px mono) | oklch(12%) --text-primary | oklch(95%) --bg-surface | 13.09:1 | AAA | PASS |
+| hook-vol-text (34px serif) | oklch(12%) --text-primary | oklch(95%) --bg-surface | 13.09:1 | AAA | PASS |
+| hook-vol-ask (34px secondary) | oklch(25%) --text-secondary | oklch(95%) --bg-surface | 9.05:1 | AAA | PASS |
+| hook-hero-value (96px mono) | oklch(12%) --text-primary | oklch(95%) --bg-surface | 13.09:1 | AAA | PASS |
+| hook-hero-label (20px sans) | oklch(25%) --text-secondary | oklch(95%) --bg-surface | 9.05:1 | AAA | PASS |
+| source-tag (14px sans) | oklch(38%) --text-muted | oklch(95%) --bg-surface | 5.32:1 | AA | FAIL |
+| **hook-verdict (40px serif)** | **oklch(12%) --text-on-dark** | **oklch(50%) --danger** | **3.67:1** | **AA-lg** | **FAIL** |
+
+**Issues para QA.4:**
+1. **CRITICAL — Verdict contrast (3.67:1):** `color: var(--text-on-dark)` em stage-c resolve para oklch(12%) — texto escuro em fundo vermelho escuro. AA-lg (3:1) passa, mas falha projector threshold (7:1). **Fix proposto:** escurecer bg para oklch(~30% 0.16 25) com texto claro forçado (oklch 95%) via override `#s-hook .hook-verdict { color: oklch(95% 0.005 258); background-color: oklch(30% 0.16 25); }`. Estimativa: ~8-9:1 → PASS projector.
+2. **MINOR — Word-break "pacientes":** "6.104 paci / entes" quebra no meio da palavra em 40px @ 1280px. Fix: `6.104&nbsp;pacientes` ou reduzir para "6 mil pacientes".
+3. **KNOWN — Source-tag 5.32:1:** Abaixo de 7:1 projector mas consistente cross-slide. Padrão aceito.
+
+**Gate 3 wrapping checks (respondendo pendências anteriores):**
+- "1.330" em 96px mono: cabe sem wrap, posicionado upper-left. OK.
+- "trials retratados já citados em 3.902 meta-análises" em 22ch: wrap natural em 2 linhas. OK.
+- Hero label "das MAs mudam de resultado. 157 guidelines contaminadas" em 30ch: wrap em 2 linhas. OK.
+- Verdict em 40px: 3 linhas (1280px) / 2 linhas (1920px). Word-break "paci/entes" — ver issue #2.
+- Source-tag 4 autores: cabe em 1 linha (ambas resoluções). OK.
+- SplitText chars verdict (91 chars): timing adequado para SplitText reveal.
+
+**Screenshots (2026-03-19f):**
+- `qa-screenshots/s-hook/beat0-1280x720.png`, `beat0-1920x1080.png`
+- `qa-screenshots/s-hook/beat1-1280x720.png`, `beat1-1920x1080.png`
+- `qa-screenshots/s-hook/beat2-1280x720.png`, `beat2-1920x1080.png`
 
 ---
 
