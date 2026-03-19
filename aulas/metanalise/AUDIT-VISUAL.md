@@ -114,28 +114,33 @@ Scorecards formais serao preenchidos durante ralph-qa batches 2-6 (proximas sess
 
 ## s-contrato (02-contrato.html)
 
-**Status:** PASS (QA 14-dim 2026-03-17b — re-confirmado 2026-03-18, CSS fixes de hoje nao afetam este slide)
-**Archetype:** cards (setup) — dim D = N/A (sem dados clínicos)
+**Status:** QA — Gemini Round 2 APPROVED (9.25/10). Round 3 pendente (fix cards 2&3).
+**Archetype:** cards (setup) — dim D = N/A (sem dados clinicos)
+**History:** flex:1 fix (03-17b), visual uplift Gemini R1 (03-19: grid+subgrid, bleeding watermarks, left-align, custom GSAP choreography), cards 2&3 fix (03-19: skill 12px, text-wrap balance)
 
 | Dim | Score | Nota |
 |-----|-------|------|
-| H (hierarquia) | 9 | Número hero (56px mono) > pergunta (h3 24px serif) > skill (16px sans). Von Restorff nos numerais. |
-| T (tipografia) | 9 | Instrument Serif nas perguntas, JetBrains Mono nos numerais, DM Sans nas skills. 3 famílias distintas. |
-| E (layout fill) | 9 | Cards 248px (antes 550px — fix flex:1). h2 top 220px, grid 281-529px. Fill 82%. Proporção card adequada. |
-| C (cor/contraste) | 9 | número vs card-bg 8.8:1, pergunta vs card-bg 15.5:1, skill vs card-bg 12.2:1. Todos acima de 7:1. |
-| V (visuais) | 8 | Numerais 1/2/3 em hero mono funcionam como âncoras visuais. Sem gráfico. Correto para setup. |
-| K (consistência) | 9 | Echo direto com s-takehome (slide 17). Archetype cards reutilizado de s-pico. Callbacks perguntas idênticas. |
-| S (sofisticação) | 9 | data-animate="stagger" declarativo. Failsafes .no-js e .stage-bad. Sem source-tag (correto — sem dados). Sem AI markers. Token --ui-accent corrigido (era on-dark). |
-| M (comunicação) | 9 | h2 = asserção verificável. Sem ul/ol. 45 palavras total mas 3 cards × ~12 palavras (Cowan chunks). |
-| I (interações) | 9 | Stagger automático ao entrar. clickReveals: 0 no manifest. Sem click handlers. Sem JS inline. |
-| D (dados) | N/A | Slide de setup — sem dados numéricos clínicos. Sem TBD em corpo. |
-| A (acessibilidade) | 9 | Contraste mínimo 8.8:1 (todos pares medidos). aside.notes hidden. Console errors: ZERO. |
-| L (carga cognitiva) | 9 | 1 conceito central: framework de 3 perguntas. 3 chunks visuais independentes. Stagger revela sequencialmente. |
-| P (andragogia) | 9 | "3 perguntas que você faz" = imperativo do residente. Contrato com audiência = técnica andragógica sólida. Echo com takehome cria schema. |
-| N (arco narrativo) | 9 | narrativeRole: setup. tensionLevel: 1 — resolve ansiedade do hook. Perguntas espelham takehome (slide 17). Posição correta no arco. |
+| H (hierarquia) | 9 | Numero hero (44px mono) > pergunta (26px serif) > skill (12px sans uppercase). Von Restorff nos numerais. Bleeding watermark 14rem 7% reforco. |
+| T (tipografia) | 9 | Instrument Serif perguntas, JetBrains Mono numerais+watermark, DM Sans skills. text-wrap:balance evita orfaos. |
+| E (layout fill) | 9 | CSS Grid repeat(3,1fr) + subgrid 3 rows. margin-top/bottom:auto centraliza. Fill ~65%. |
+| C (cor/contraste) | 9 | numero --ui-accent vs white 8.8:1, pergunta --text-primary vs white 15.5:1, skill --text-secondary vs white 9.13:1. Todos AAA. |
+| V (visuais) | 9 | Bleeding watermark numbers (14rem, 7% opacity) = depth + editorial. Layered shadow (3-tier). Subgrid cross-card alignment. |
+| K (consistencia) | 9 | Echo direto com s-takehome (slide 17, shared .contrato-grid). Archetype cards. |
+| S (sofisticacao) | 10 | Custom GSAP choreography: cards rise+scale → numbers back.out(1.5) → questions fadeUp → skills slideX. Failsafes .no-js, .stage-bad, [data-qa], @media print. Bleeding watermark via ::after pseudo. |
+| M (comunicacao) | 9 | h2 = assercao verificavel. 3 cards x ~12 palavras (Cowan). Left-align facilita scanning. |
+| I (interacoes) | 9 | Custom choreography via slide-registry.js. clickReveals: 0. Sem click handlers. |
+| D (dados) | N/A | Slide de setup — sem dados numericos clinicos. |
+| A (acessibilidade) | 9 | Contraste minimo 8.8:1 (todos pares). Failsafes completos. aside.notes hidden. |
+| L (carga cognitiva) | 9 | 1 conceito central: framework de 3 perguntas. 3 chunks visuais. Choreography sequencial. |
+| P (andragogia) | 9 | "3 perguntas que voce faz" = imperativo. Contrato com audiencia. Echo takehome. |
+| N (arco narrativo) | 9 | narrativeRole: setup. tensionLevel: 1. Resolve ansiedade do hook. Espelha takehome. |
 
-**Fix history:** slide-navy/data-background-color removidos (03-17), flex:1→cards 248px + token ui-accent (03-17b). Gate 1 PASS. Doc compliance PASS.
+**Gemini QA.3 (2026-03-19, gemini-2.5-pro):**
+- Round 1: Proposed grid+subgrid, left-align, bleeding watermarks, 3-tier shadow, custom GSAP choreography, skill uppercase+border-top
+- All proposals accepted + radical (bleeding watermark). Implemented in 2038185.
+- Round 2: re-eval com screenshots pos-fix. Score 9.25/10. Verdict: **APPROVED**.
+- Round 3: pendente — fix cards 2&3 (skill wrapping, question orphans)
 
-**Screenshots:** `qa-screenshots/s02-contrato-current.png`, `qa-screenshots/s02-contrato-fix1.png` (1280×720).
+**Fix history:** slide-navy removed (03-17), flex:1→cards 248px + token ui-accent (03-17b), visual uplift grid+subgrid+watermark+GSAP (03-19 2038185), cards 2&3 fix: skill 15→12px, letter-spacing 0.05→0.02em, text-wrap:balance (03-19).
 
-**Pendências Gemini (Gate 4):** cards distinguíveis em projetor? Stagger timing 0.45s adequado? Instrument Serif legível a 5m?
+**Screenshots:** `qa-screenshots/s-contrato/S5-fixed-{1280x720,1920x1080}.png` (pos-fix). Historico: S0, S1-post-gemini, S2-qa-fresh, S3-cards-qa, S4-fix-preview.

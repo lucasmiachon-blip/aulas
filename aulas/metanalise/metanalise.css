@@ -612,18 +612,19 @@ aside.notes { display: none; }
   color: var(--text-primary);
   line-height: 1.15;
   align-self: start;
+  text-wrap: balance;
   position: relative;
   z-index: 1;
 }
 .contrato-skill {
   font-family: var(--font-body);
-  font-size: 15px;
+  font-size: 12px;
   color: var(--text-secondary);
   align-self: end;
   border-top: 1px solid var(--divider);
   padding-top: var(--space-xs);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
   font-weight: 500;
   position: relative;
   z-index: 1;
@@ -642,6 +643,10 @@ aside.notes { display: none; }
 .stage-bad #s-contrato .contrato-number,
 .stage-bad #s-contrato .contrato-question,
 .stage-bad #s-contrato .contrato-skill { opacity: 1; transform: none; }
+[data-qa] #s-contrato .contrato-card,
+[data-qa] #s-contrato .contrato-number,
+[data-qa] #s-contrato .contrato-question,
+[data-qa] #s-contrato .contrato-skill { opacity: 1; transform: none; }
 @media print {
   #s-contrato .contrato-card,
   #s-contrato .contrato-number,
