@@ -48,8 +48,8 @@ Residentes de clínica médica (básico-intermediário).
 
 **Conteúdo:**
 - Por que meta-análise importa para o residente clínico?
-- Dados de impacto no hook: 146 SRs/dia em 2021 (Hoffmann 2021, PMID 34091022: 53.208 SRs indexadas), 81% criticamente baixas (Bojcic 2024), 10% guidelines com LoE forte (Qureshi 2025), ilusão de competência (Lakhlifi 2023)
-- Situação provocativa: "Você lê o abstract e confia no diamante. Mas deveria?"
+- Dados de impacto no hook (VITALITY backbone): 1.330 trials retratados → 3.902 MAs contaminadas (Xu/VITALITY BMJ 2025, PMID 40268307), 81% SRs criticamente baixas (Bojcic 2024, PMID 37931822), 20% das MAs mudam de resultado + 157 guidelines contaminadas (VITALITY). Exemplo concreto: NICE-SUGAR — cadeia MA→guideline→prática (Wiener 2008 → NICE-SUGAR 2009 → Griesdale 2009).
+- Speaker notes expandidas: INSPECT-SR (25% RCTs problemáticos em Cochrane, PMID 40349737), Possamai (42%/19% em top-25 journals, PMID 40163084), Guyatt quote ("GRADE assumes data trustworthy", PMID 39218429).
 - Contrato com a audiência: o que a aula vai entregar (3 perguntas framework)
 
 **Tensão narrativa:** "eu achava que sabia ler uma MA, mas talvez não saiba tanto"
@@ -170,6 +170,7 @@ Uma meta-análise não é melhor do que os RCTs que a alimentam. A qualidade da 
 | 2026-03-11 | v0 — bootstrap a partir do memo direcionado |
 | 2026-03-13 | v1 — reestruturado de 4 atos para 3 fases + 2 interações. Artigo desancorado das fases iniciais |
 | 2026-03-13 | v1.1 — revisão de slides existentes concluída. Orphans deletados. Tabela de revisão atualizada |
+| 2026-03-19 | v2.3 — Fase 1 hook dados atualizados: VITALITY backbone (1.330 retratados → 3.902 MAs → 20% mudam → 157 guidelines). NICE-SUGAR como exemplo MA. Refs expandidas (INSPECT-SR, Possamai, Guyatt). |
 | 2026-03-15g | v2.2 — Âncora decidida: Valgimigli 2025 Lancet (PMID 40902613). Fase 3 atualizada com tensões didáticas IPD/HR/GRADE. Slides 13-15 criados |
 | 2026-03-15b | v2.1 — Nota: âncora em deliberação (Pitre PAC ou Abdul-Aziz β-lactam). Cochrane = exemplos visuais. Estrutura narrativa inalterada. Área do Lucas ≠ hepatologia |
 | 2026-03-15 | v2 — convergências Gemini absorvidas: tese central (credibilidade + efeito absoluto), 3 perguntas reformuladas, credibility gap documentado, checkpoint-2 recalibrado para "falso positivo" |

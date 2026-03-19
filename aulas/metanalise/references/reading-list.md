@@ -35,6 +35,29 @@
 
 ---
 
+### 5. Ioannidis JPA. The Mass Production of Redundant, Misleading, and Conflicted Systematic Reviews. Milbank Q 2016;94(3):485-514
+- **Função:** entender por que MAs podem enganar — "produção epidêmica"
+- **Tarefa:** ler abstract + primeiras 2 páginas
+- **Carga:** 5 min
+- **Tier:** 1
+- **Acesso:** aberto. PMID 27620683
+
+### 6. Uttley L et al. Problems with systematic reviews — 68 types identified. J Clin Epidemiol 2025;177:111575
+- **Função:** panorama dos problemas que afetam SRs (report, conduct, relevance, waste)
+- **Tarefa:** ler abstract
+- **Carga:** 3 min
+- **Tier:** 1
+- **Acesso:** PMID 39542225
+
+### 7. Wilkinson J et al. (INSPECT-SR). J Clin Epidemiol 2025;184:111824
+- **Função:** saber que 25% dos RCTs em Cochrane reviews têm problemas de confiabilidade
+- **Tarefa:** ler abstract + Tabela 1
+- **Carga:** 5 min
+- **Tier:** 1
+- **Acesso:** PMID 40349737
+
+---
+
 ## Residentes — Good to read
 
 ### 1. Cochrane Handbook, Cap. 10 — seções introdutórias
@@ -115,4 +138,5 @@
 | 2026-03-11 | v0 — derivado do memo direcionado |
 | 2026-03-13 | v0.1 — item 4 atualizado: artigo âncora = [TBD], não Musini definitivo |
 | 2026-03-14 | v0.2 — Murad JAMA 2014 (good to read residentes), Guyatt BMJ 2008 (good to read professor) |
+| 2026-03-19 | v0.4 — +3 pre-reading obrigatórios: Ioannidis 2016 abstract (5 min), Uttley 2024 abstract (3 min), INSPECT-SR Wilkinson 2025 abstract (5 min). Total pre-reading: ~48-58 min |
 | 2026-03-17 | v0.3 — Nice-to-read: Musini PMC embargo → Valgimigli Lancet (CAPES). Changelog reordenado |

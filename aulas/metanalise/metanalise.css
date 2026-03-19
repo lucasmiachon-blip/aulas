@@ -171,7 +171,7 @@ aside.notes { display: none; }
 }
 .hook-vol-number {
   font-family: var(--font-mono);
-  font-size: 72px;
+  font-size: 96px;
   font-weight: 600;
   line-height: 1;
   color: var(--text-primary);
@@ -182,7 +182,7 @@ aside.notes { display: none; }
   font-style: italic;
   line-height: 1.2;
   color: var(--text-primary);
-  max-width: 18ch;
+  max-width: 22ch;
   margin: 0;
 }
 .hook-vol-ask {
@@ -232,7 +232,7 @@ aside.notes { display: none; }
   font-family: var(--font-body);
   font-size: var(--text-body);
   color: var(--text-secondary);
-  max-width: 20ch;
+  max-width: 30ch;
   text-align: left;
 }
 
@@ -243,12 +243,12 @@ aside.notes { display: none; }
   justify-self: center;
   font-family: var(--font-display);
   font-style: italic;
-  font-size: 36px;
+  font-size: 40px;
   letter-spacing: -0.02em;
   font-weight: 400;
   color: var(--text-on-dark);
   background-color: var(--danger);
-  padding: 16px 56px;
+  padding: 20px 64px;
   border-radius: 0;
   margin: 0;
   max-width: none;

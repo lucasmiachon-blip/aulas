@@ -148,6 +148,29 @@
 | Overconfidence → erros diagnósticos/terapêuticos | **36,5–77%** dos cenários | Saposnik G et al. BMC Med Inform Decis Mak 2016;16:138 | 27809908 ✅ | 10.1186/s12911-016-0377-1 | 2 | n=6.810 médicos, 20 estudos, 19 vieses cognitivos. 71,4% estudos: vieses → erros terapêuticos |
 | Competências EBP mínimas (5-step model) | Consenso internacional | Sicily Statement. Dawes et al. BMC Med Educ 2005;5:1 | 15634359 | 10.1186/1472-6920-5-1 | 1 | |
 
+### Integridade e confiabilidade de RCTs em SRs
+
+| Dado | Valor | Fonte | PMID | DOI | Tier | Nota |
+|------|-------|-------|------|-----|------|------|
+| RCTs com problemas de confiabilidade em Cochrane reviews | **25%** (24/95 RCTs em 50 SRs) | Wilkinson J et al. (INSPECT-SR). J Clin Epidemiol 2025;184:111824 | 40349737 ✅ | 10.1016/j.jclinepi.2025.111824 | 1 | ✅ **EM USO no hook notes**. 6% sérios. 22% MAs ficam com zero estudos após exclusão. RoB e GRADE não detectam |
+| GRADE assume dados confiáveis | "Revisores devem verificar integridade dos estudos" | Brignardello-Petersen R, Guyatt GH. Am J Epidemiol 2025;194(6):1681-6 | 39218429 ✅ | 10.1093/aje/kwae256 | 1 | ✅ **EM USO no hook notes**. Guyatt (criador do GRADE) reconhece limitação |
+| SRs observacionais usando dados brutos | **80,9%** | Paul J et al. J Clin Epidemiol 2025;181:111702 | 40414366 ✅ | 10.1016/j.jclinepi.2025.111702 | 1 | 500 SRs 2022. Risco de confusão residual não tratado |
+| Problemas com SRs catalogados | **68 problemas** em 637 artigos | Uttley L et al. J Clin Epidemiol 2025;177:111575 | 39542225 ✅ | 10.1016/j.jclinepi.2024.111575 | 1 | Scoping review. Categorias: report, conduct, relevance, waste |
+
+### Exemplo MA: controle glicêmico intensivo em UTI
+
+| Dado | Valor | Fonte | PMID | DOI | Tier | Nota |
+|------|-------|-------|------|-----|------|------|
+| MA pré-NICE-SUGAR: mortalidade | RR 0,93 (IC 0,85–1,03); hipoglicemia RR 5,13 | Wiener RS et al. JAMA 2008;300(8):933-44 | 18728267 ✅ | 10.1001/jama.300.8.933 | 1 | ✅ **EM USO no hook beat 2**. 29 RCTs, 8.432 pts. Benefício sugerido mas IC cruza 1 |
+| NICE-SUGAR trial (reversão) | OR mortalidade 1,14 (IC 1,02–1,28) | NICE-SUGAR Study Investigators. NEJM 2009;360(13):1283-97 | 19318384 ✅ | 10.1056/NEJMoa0810625 | 1 | ✅ **EM USO no hook beat 2**. n=6.104, 42 centros. Mortalidade AUMENTOU |
+| MA pós-NICE-SUGAR: confirmação | RR 0,93 (IC 0,83–1,04); hipoglicemia RR 6,0 | Griesdale DEG et al. CMAJ 2009;180(8):821-7 | 19318387 ✅ | 10.1503/cmaj.091206 | 1 | ✅ **EM USO no hook beat 2**. 26 trials, 13.567 pts. Subgrupo cirúrgico: benefício; clínico: dano |
+
+### Pirâmide de evidência e hierarquia
+
+| Dado | Valor | Fonte | PMID | DOI | Tier | Nota |
+|------|-------|-------|------|-----|------|------|
+| Nova pirâmide de evidência | Confiança no body of evidence, não hierarquia rígida | Murad MH et al. Evid Based Med 2016;21(4):125-7 | 27339128 ✅ | 10.1136/ebmed-2016-110401 | 1 | Redefine MA como "lupa, não oráculo" |
+
 ### MAs contraditas, retratadas e reversões médicas
 
 | Dado | Valor | Fonte | PMID | DOI | Tier | Nota |
@@ -221,6 +244,7 @@
 
 | Data | Mudança |
 |------|---------|
+| 2026-03-19 | v5.1 — Hook rewrite VITALITY backbone: +8 refs. INSPECT-SR (Wilkinson 2025, PMID 40349737), Guyatt/Brignardello-Petersen 2025 (PMID 39218429), Paul 2025 (PMID 40414366), Uttley 2024 (PMID 39542225), Wiener MA 2008 (PMID 18728267), NICE-SUGAR 2009 (PMID 19318384), Griesdale MA 2009 (PMID 19318387), Murad 2016 pirâmide (PMID 27339128). Novas seções: integridade RCTs, exemplo MA UTI, pirâmide. Todos PMIDs ✅ |
 | 2026-03-18 | v5.0 — 6 refs adicionadas: Windish JAMA 2007 (EM USO no hook, swap 146→41%), VITALITY BMJ 2025, Possamai JAMA Intern Med 2025, Herrera-Perez eLife 2019, Saposnik BMC 2016, Ioannidis JAMA 2005. Nova seção "MAs contraditas/retratadas". Todos PMIDs ✅ |
 | 2026-03-17 | v4.3 — Candidatos S2/A7/F1-F3/G1-G5 colapsados em tabela-resumo (~200 linhas cortadas). Dados completos preservados em PMIDs |
 | 2026-03-16j | v4.2 — Autores corrigidos via PubMed: G3 Yin→Greenwood H (PMID 38588546 ✅), G5 Bosco→El-Taji O (PMID 38842801 ✅). Todos 5 PMIDs candidatos agora verificados |

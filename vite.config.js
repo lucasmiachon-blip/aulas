@@ -16,10 +16,11 @@ function discoverEntries() {
   const entries = {};
   const aulasDir = resolve(__dirname, 'aulas');
 
-  // Top-level HTML (e.g., calibracao.html)
+  // Top-level HTML — skip calibracao (depends on reveal.js, not installed in deck.js WTs)
+  const SKIP_TOP_LEVEL = ['calibracao.html'];
   readdirSync(aulasDir).forEach(item => {
     const full = resolve(aulasDir, item);
-    if (item.endsWith('.html')) {
+    if (item.endsWith('.html') && !SKIP_TOP_LEVEL.includes(item)) {
       entries[item.replace('.html', '')] = full;
     } else if (statSync(full).isDirectory() && !FROZEN_AULAS.includes(item)) {
       // Subdir HTML (e.g., metanalise/index.html, cirrose/index.html)

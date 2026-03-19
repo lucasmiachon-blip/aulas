@@ -76,35 +76,37 @@ Scorecards formais serao preenchidos durante ralph-qa batches 2-6 (proximas sess
 
 ## s-hook (01-hook.html)
 
-**Status:** QA.0-QA.2 PASS (refatorado 2026-03-18d). QA.3-QA.4 Gemini pendente.
+**Status:** QA.0-QA.2 INVALIDADOS (content rewrite 2026-03-19e VITALITY backbone). Gate 3 pendente.
 **Archetype:** hook — dims E, P intencionalmente baixas
-**Refactor (2026-03-18d):** 3-column number grid → hero number pattern. Dados: Bojcic/Qureshi → Windish 41%. Contexto: trials concretos (TRH, rosiglitazona, NICE-SUGAR) + 396 reversoes.
+**Content rewrite (2026-03-19e):** VITALITY backbone. Beat 0: "1.330 trials retratados → 3.902 MAs, 81% qualidade baixa". Beat 1: "20% das MAs mudam resultado, 157 guidelines contaminadas". Beat 2: NICE-SUGAR cadeia MA (Wiener 2008 → NICE-SUGAR 2009 → Griesdale 2009).
+**Refactor anterior (2026-03-18d):** 3-column number grid → hero number pattern. Grid assimétrico 2-col (Z-pattern). Blackout brutalismo.
 
 | Dim | Score | Nota |
 |-----|-------|------|
-| H (hierarquia) | 9 | Question 34px italic serif > Hero 96px mono 600 > Label 20px sans > Context 16px muted > Verdict 24px accent > Source 14px muted. Von Restorff no 41% |
-| T (tipografia) | 9 | 3 familias: Instrument Serif italic (question), JetBrains Mono 600 (hero), DM Sans (label/context/verdict). Excelente contraste tipografico |
-| E (layout fill) | 5 | ~55% — intencional para hook (respiro dramatico) |
-| C (cor/contraste) | 8 | Hero 14.15:1 AAA, Label 9.20:1 AAA, Verdict 10.26:1 AAA, Context/source 5.75:1 AA (WARN: abaixo de 6:1 para projecao). Verificado via a11y-contrast MCP |
-| V (visuais) | 8 | Single hero countUp 41% — impacto dominante. Sem imagens (texto-only hook) |
-| K (consistencia) | 9 | Padrao hook. Source tag bottom |
-| S (sofisticacao) | 9 | 2-beat state machine (slide-registry.js). countUp 1.5s + verdict delay 1.8s. .no-js + [data-qa] + print fallbacks |
-| M (comunicacao) | 9 | Provocacao → hero punch → trials concretos → verdict. Arco emocional completo |
-| I (interacoes) | 9 | 2-beat state machine (beat0 auto fadeUp, beat1 click → hero + context + verdict delayed). QA mode: [data-qa] selectors |
-| D (dados) | 9 | 7 dados Tier 1 verificados: Hoffmann PMID 34091022, Windish PMID 17785646, Herrera-Perez PMID 31182188, WHI PMID 12117397, Nissen PMID 17517853, NICE-SUGAR PMID 19318384, Lakhlifi PMID 37081292 |
-| A (acessibilidade) | 9 | Primary text AAA (>9:1). Context/source 5.75:1 AA — marginal para projecao mas aceitavel para texto secundario |
-| L (carga cognitiva) | 9 | 1 hero number + 2 context lines + 1 verdict = dentro do 4+-1 Cowan |
-| P (andragogia) | 9 | Retrieval practice (pergunta antes de resposta). Trials concretos criam personal stake |
-| N (arco narrativo) | 9 | Hook forte — "por que essa aula existe". Transicao natural para s-contrato |
+| H (hierarquia) | — | PENDENTE re-audit (conteúdo mudou) |
+| T (tipografia) | — | PENDENTE re-audit |
+| E (layout fill) | — | PENDENTE re-audit |
+| C (cor/contraste) | — | PENDENTE re-audit (novos textos, verificar wrapping) |
+| V (visuais) | — | PENDENTE re-audit |
+| K (consistencia) | — | PENDENTE re-audit |
+| S (sofisticacao) | — | ScrambleText "1.330" + "20%", SplitText words + chars. 3-beat state machine. .no-js + [data-qa] failsafes mantidos |
+| M (comunicacao) | — | PENDENTE re-audit (arco: contaminação → consequência → exemplo concreto) |
+| I (interacoes) | — | 3-beat state machine (beat0 auto, beat1 click, beat2 click+blackout). ScrambleText + SplitText |
+| D (dados) | 9 | 9 dados Tier 1 verificados: VITALITY PMID 40268307, Bojcic PMID 37931822, INSPECT-SR PMID 40349737, Possamai PMID 40163084, Guyatt PMID 39218429, Wiener MA PMID 18728267, NICE-SUGAR PMID 19318384, Griesdale MA PMID 19318387, Ioannidis PMID 27620683 |
+| A (acessibilidade) | — | PENDENTE re-audit |
+| L (carga cognitiva) | — | PENDENTE re-audit (3 beats × 1-2 elementos = within Cowan 4±1 expected) |
+| P (andragogia) | — | PENDENTE re-audit (NICE-SUGAR example creates "this affects MY patients" feeling) |
+| N (arco narrativo) | — | PENDENTE re-audit (hook→contrato transition preserved) |
 
-**Pendencias para Gemini (Gate 4):**
-- Instrument Serif italic na provocacao — legibilidade a 5m em sala iluminada?
-- Hero 96px mono — proporcional ao canvas 1280px?
-- Context lines wrapping a 1280px — verificar em projecao real
-- "396 praticas revertidas em JAMA, Lancet e NEJM" — Lucas considera abstrato, pode ajustar nos speaker notes
-- Verdict delay 1.8s — timing adequado apos countUp?
+**Pendencias para Gate 3 (screenshots + Gemini):**
+- Novo conteúdo: verificar wrapping "1.330" em 96px mono, "trials retratados já citados em 3.902 meta-análises" em 22ch
+- Hero label "das MAs mudam de resultado. 157 guidelines contaminadas" em 30ch — cabe no canvas?
+- Verdict "Controle glicêmico em UTI: MAs diziam benefício. 6.104 pacientes depois — mortalidade aumentou." em 40px — quantas linhas?
+- ScrambleText "1.330" com char "." — visual do ponto no scramble noise?
+- SplitText chars no verdict (91 chars × 0.025s = 2.3s + 0.6s delay) — timing adequado?
+- Source-tag 4 autores (Xu 2025 · Bojcic 2024 · Wiener 2008 · Griesdale 2009) — cabe em 1 linha?
 
-**Screenshots:** `qa-screenshots/s-hook/beat0-1280x720.png`, `qa-screenshots/s-hook/beat1-final-1280x720.png`, `qa-screenshots/s-hook/beat1-1920x1080.png`
+**Screenshots:** INVALIDADOS (conteúdo mudou). Novos screenshots pendentes Gate 3.
 
 ---
 

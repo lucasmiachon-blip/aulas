@@ -4,6 +4,47 @@
 
 ---
 
+## 2026-03-19e — s-hook content rewrite: VITALITY backbone + NICE-SUGAR exemplo MA
+
+Branch: `feat/metanalise-mvp`
+
+### Content rewrite (01-hook.html)
+- **Beat 0:** "146 SRs/dia" → "1.330 trials retratados já citados em 3.902 meta-análises" (VITALITY BMJ 2025). Subline: "81% das SRs: qualidade criticamente baixa" (Bojcic 2024).
+- **Beat 1:** "41% acerto" → "20% das MAs mudam de resultado. 157 guidelines contaminadas" (VITALITY).
+- **Beat 2:** "396 práticas revertidas" → "Controle glicêmico em UTI: MAs diziam benefício. 6.104 pacientes depois — mortalidade aumentou" (Wiener 2008 → NICE-SUGAR 2009 → Griesdale 2009).
+- Speaker notes: VITALITY detalhado, INSPECT-SR (25% RCTs problematic), Possamai (42%/19% top-25 journals), Guyatt quote ("GRADE assumes data trustworthy"), cadeia MA completa (Wiener → NICE-SUGAR → Griesdale).
+
+### slide-registry.js
+- ScrambleText targets: "146" → "1.330" (chars +"."), "41%" → "20%"
+- Comments atualizados
+
+### metanalise.css
+- `.hook-vol-text` max-width: 18ch → 22ch (acomodar "meta-análises")
+- `.hook-hero-label` max-width: 20ch → 30ch (acomodar label mais longo)
+- `.hook-verdict` font-size: 48px → 40px (texto 3x mais longo que antes)
+
+### _manifest.js
+- s-hook headline: "1.330 trials retratados → 3.902 MAs contaminadas, 20% mudam resultado, 157 guidelines afetadas"
+
+### evidence-db.md v5.1
+- +8 refs verificadas: INSPECT-SR (PMID 40349737), Guyatt/Brignardello-Petersen 2025 (PMID 39218429), Paul 2025 (PMID 40414366), Uttley 2024 (PMID 39542225), Wiener MA 2008 (PMID 18728267), NICE-SUGAR 2009 (PMID 19318384), Griesdale MA 2009 (PMID 19318387), Murad 2016 pirâmide (PMID 27339128)
+- Novas seções: "Integridade e confiabilidade de RCTs em SRs", "Exemplo MA: controle glicêmico em UTI", "Pirâmide de evidência"
+
+### reading-list.md v0.4
+- +3 pre-reading obrigatórios: Ioannidis 2016 abstract (5 min), Uttley 2024 abstract (3 min), INSPECT-SR Wilkinson 2025 abstract (5 min)
+
+### QA status
+- s-hook QA.0-QA.2 INVALIDADOS (content rewrite). Gate 3 pendente (screenshots + Gemini).
+- Build PASS (18 slides). Lint PASS.
+
+### Motivação
+- Dados anteriores (146 SRs/dia, 41% acerto, 396 reversões) eram válidos mas não tinham punch de 2025.
+- VITALITY (BMJ 2025) = backbone mais forte: 1.330 trials retratados contaminando 3.902 MAs e 157 guidelines.
+- Beat 2 reframed: de "práticas revertidas" (trial-level) para "cadeia MA→guideline→prática" (NICE-SUGAR = exemplo perfeito de MA que mudou guideline).
+- Deep research via medical-researcher skill: PubMed + Consensus + Scite + Perplexity. Todas refs verificadas (PMIDs ✅).
+
+---
+
 ## 2026-03-19d — Hardening documental + GSAP toolkit expansion
 
 Branch: `feat/metanalise-mvp`

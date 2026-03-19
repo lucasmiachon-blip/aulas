@@ -70,3 +70,25 @@
 ### Prompt Gemini v3.0 (docs/prompts/gemini-slide-qa.md)
 - Substitui v2.1. 4 dimensoes com chain-of-thought forcado. Exploration mandate para GSAP avancado.
 - Referenciado por WT-OPERATING.md §4 QA.3
+
+## 2026-03-19 — s-hook content rewrite (VITALITY backbone)
+
+### Motivação
+- Dados anteriores (146 SRs/dia, 41% acerto, 396 reversões) eram válidos mas datados/genéricos
+- Lucas pediu: "dados do VITALITY são mais interessantes", "exemplo deve ser de META-ANÁLISE, não de interpretação de HR"
+- Deep research via medical-researcher: PubMed + Consensus + Scite + Perplexity. Filtro Tier-1.
+
+### Decisões de conteúdo (Lucas aprovou)
+- **Beat 0:** VITALITY (1.330 trials retratados → 3.902 MAs) + Bojcic (81% qualidade baixa). Número âncora: 1.330.
+- **Beat 1:** Consequência sistêmica: 20% mudam resultado + 157 guidelines contaminadas. Hero: "20%".
+- **Beat 2:** NICE-SUGAR como cadeia MA→guideline: Wiener 2008 (29 RCTs pre-NICE-SUGAR) → NICE-SUGAR 2009 (6.104 pts, mortalidade ↑) → Griesdale 2009 (26 trials, confirmou). Framing: MA problem, não trial problem.
+- Speaker notes enriquecidas: INSPECT-SR (25% RCTs questionáveis em Cochrane), Possamai (42%/19% em top-25 journals), Guyatt quote ("GRADE assumes data trustworthy").
+- TRH/WHI e rosiglitazona REMOVIDOS do corpo (eram trial-framed, não MA-framed). Herrera-Perez 396 removido (genérico demais).
+
+### CSS ajustes
+- vol-text 18ch→22ch, hero-label 20ch→30ch, verdict 48px→40px
+- Nenhuma mudança estrutural no grid (Z-pattern mantido)
+
+### QA status
+- Scorecards QA.0-QA.2 invalidados (conteúdo mudou significativamente)
+- Gate 3 (screenshots + Gemini) = próximo passo
