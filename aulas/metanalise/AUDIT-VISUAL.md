@@ -61,13 +61,7 @@ Scorecards formais serao preenchidos durante ralph-qa batches 2-6 (proximas sess
 - Choreography: slide-registry.js reescrito — h1/subtitle/identity animados via GSAP (antes so pillars). `data-animate="fadeUp"` removido do HTML (custom anim controla tudo)
 - CSS: `#s-title h1, .title-subtitle, .title-identity { opacity: 0 }` + `.no-js` + `@media print` failsafes
 
-**Fixes anteriores (2026-03-18b) — specificity war `.stage-c #deck p`:**
-- Subtitle: selector → `#deck .slide-title p.title-subtitle` (0,1,2,1). Weight 450→600, font-size 20px, uppercase
-- Author: selector → `#deck .slide-title p.title-author` (0,1,2,1). Weight 450→500
-- Affiliation: selector → `#deck .slide-title p.title-affiliation` (0,1,2,1). Weight 450→400
-
-**Fixes anteriores (2026-03-18):** h1 56px→64px, author --text-primary, affil --text-muted. Divider removido.
-**Fixes anteriores (2026-03-16e/17):** tokens on-dark → light-mode. Pilares 400→500. data-background-color removido.
+**Fix history:** specificity bumps (03-18b), h1 64px + divider removido (03-18), on-dark→light tokens (03-16e). Detalhes: `git log --oneline -- aulas/metanalise/metanalise.css`
 
 **Screenshots:** `qa-screenshots/s-title/S0.png` (1280x720), `qa-screenshots/s-title/S0-fullscreen.png` (1920x1080)
 **Videos:** `qa-screenshots/s-title/video-v2.webm` (animacao completa pos-Gemini)
@@ -140,28 +134,8 @@ Scorecards formais serao preenchidos durante ralph-qa batches 2-6 (proximas sess
 | P (andragogia) | 9 | "3 perguntas que você faz" = imperativo do residente. Contrato com audiência = técnica andragógica sólida. Echo com takehome cria schema. |
 | N (arco narrativo) | 9 | narrativeRole: setup. tensionLevel: 1 — resolve ansiedade do hook. Perguntas espelham takehome (slide 17). Posição correta no arco. |
 
-**Fixes aplicados (2026-03-17):**
-- `slide-navy` removido de `.slide-inner` — herança de versão navy anterior. Stage-c = fundo creme.
-- `data-background-color="#162032"` removido do `<section>` — ignorado por deck.js (ERRO-034), era legado.
+**Fix history:** slide-navy/data-background-color removidos (03-17), flex:1→cards 248px + token ui-accent (03-17b). Gate 1 PASS. Doc compliance PASS.
 
-**Fixes aplicados (2026-03-17b):**
-- `.contrato-grid`: removido `flex: 1` + `align-items: stretch` — cards de 550→248px.
-- `.contrato-card`: adicionado `justify-content: center` + padding vertical `--space-lg`.
-- `.contrato-number`: token `--ui-accent-on-dark` → `--ui-accent` (correto para stage-c light bg).
+**Screenshots:** `qa-screenshots/s02-contrato-current.png`, `qa-screenshots/s02-contrato-fix1.png` (1280×720).
 
-**Gate 1 constraint check: PASS**
-- h2 = asserção ✅, zero ul/ol ✅, aside.notes ✅, sem inline style ✅, sem data-background-color ✅, sem slide-navy ✅, lint:slides PASS ✅, console ZERO ✅
-- WARN: word count 45 (3 cards × ~12 — dentro do esperado para archetype cards)
-
-**DOC COMPLIANCE:**
-- [x] manifest headline == HTML h2: "3 perguntas que você faz a toda meta-análise"
-- [x] manifest id == section id: s-contrato
-- [x] Notes com timing [0:00-0:15] [0:15-0:30] [0:30-0:45] — sem dados numéricos novos
-- [x] Sem [TBD] em corpo projetado
-
-**Screenshots:** `qa-screenshots/s02-contrato-current.png` (pré-fix), `qa-screenshots/s02-contrato-fix1.png` (pós-fix). Ambos 1280×720 via Playwright script.
-
-**Pendências para audit Gemini (Gate 4):**
-- Avaliar se cards são distinguíveis em projetor real (contraste de área bg-navy-mid/bg-surface sutil)
-- Avaliar timing stagger: 3 cards × 0.15s = 0.45s — adequado para pacing clínico?
-- Confirmar legibilidade Instrument Serif nas perguntas dos cards em tela a 5m
+**Pendências Gemini (Gate 4):** cards distinguíveis em projetor? Stagger timing 0.45s adequado? Instrument Serif legível a 5m?

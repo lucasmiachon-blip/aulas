@@ -33,19 +33,9 @@ Severidades: CRITICAL (bloqueia projeção), HIGH (prejudica leitura), MEDIUM (e
 **Data:** 2026-03-15
 
 ### ERRO-003 · HIGH · Slide 01 (hook) — ✅ CORRIGIDO
-**Descrição:** Dados clínicos no hook não correspondem às referências citadas ou estão desatualizados.
-**Detalhes:**
-- "80/dia" → dado de 2019 (Hoffmann PMID 34091022). Em 2021 já eram ~146/dia (53.208 SRs no PubMed). Apresentar como "hoje" em 2026 é understatement significativo.
-- "88% qualidade criticamente baixa" → paper citado (Siemens PMID 33741503) diz 90%, não 88%. E é específico de câncer avançado, não geral.
-- "8,5% LoE A" → correto para ACC/AHA (Fanaroff PMID 30874755), mas slide não especifica que é só cardiologia. ESC = 14,2%. Dado geral (JGIM 2025): 10%.
-**Root cause:** Dados inseridos sem verificação cruzada com o paper original e sem discussão com o usuário.
-**Fix:** ✅ APLICADO (sessão 2026-03-16f):
-- 88% → 81% (Bojcic et al. J Clin Epidemiol 2024, PMID 37931822 — 35/43 SRs, cross-field, AMSTAR-2)
-- 8,5% → 10% (Qureshi et al. JGIM 2025, PMID 41428154 — 768/7.582 recomendações, 23 sociedades EUA)
-- 80/dia → 146/dia: atualizado para dado de 2021 (Hoffmann PMID 34091022: 53.208 SRs em 2021). Label "SRs/dia em 2021". Beat-0 texto atualizado. Decisão Lucas (sessão 2026-03-16j)
-- evidence-db.md: Bojcic/Qureshi promovidos de CANDIDATO → EM USO
-- narrative.md: dados do hook atualizados
-**Regra derivada:** (1) Todo dado numérico DEVE ser verificado no paper original (PMID → PubMed → abstract) antes de entrar no slide. (2) Dados devem ser discutidos com o usuário antes de serem implementados. (3) Ano do dado deve ser explicitado quando diferente do ano da aula.
+**Descrição:** 3 dados do hook incorretos/desatualizados (80/dia, 88%, 8.5%).
+**Fix:** 80→146/dia (Hoffmann 2021), 88→81% (Bojcic PMID 37931822), 8.5→10% (Qureshi PMID 41428154).
+**Regra derivada:** Todo dado numérico DEVE ser verificado no paper original antes de entrar no slide. Discutir com usuário. Explicitar ano do dado.
 **Data:** 2026-03-15 | Corrigido: 2026-03-16
 
 ### ERRO-004 · MEDIUM · Vite config
@@ -77,22 +67,10 @@ Severidades: CRITICAL (bloqueia projeção), HIGH (prejudica leitura), MEDIUM (e
 **Data:** 2026-03-16
 
 ### ERRO-008 · CRITICAL · Todos os slides (double-scaling at fullscreen) — ✅ CORRIGIDO
-**Descrição:** Slides renderizando com fontes e layout 2.25x maiores que o correto em viewports > 1280px (ex: 1920x1080 fullscreen). Cards clipped horizontalmente, h2 acima do viewport, source-tag abaixo do viewport.
-**Root cause:** `body { zoom: min(100vw/1280, 100vh/720) }` em metanalise.css conflitava com `#deck { transform: translate(-50%, -50%) scale(S) }` de deck.js. Ambos escalavam para o viewport: zoom 1.5 × scale 1.5 = 2.25x. Além disso, `vw`-based clamp tokens computavam no viewport (1920), não no canvas (1280), causando double-scaling em qualquer resolução.
-**Investigação:**
-- Primeiro tentou-se fixar tokens de px (parcialmente correto)
-- Depois fixar body width: 1280px (não resolveu — getBoundingClientRect mostrava 2880px)
-- Debug do #deck revelou `style="transform: translate(-50%, -50%) scale(1.5)"` — deck.js já escalava
-- CSS zoom era 100% redundante e conflitante
-**Fix:**
-1. **Removido** `zoom` do body em metanalise.css — deck.js handles scaling
-2. **Mantido** fixed px tokens no `#deck` — `vw` units still reference viewport, not canvas
-3. Selectors `#deck p.hook-question-text` e `#deck p.hook-verdict` bumped para vencer `.stage-c #deck p` de base.css
-**Regra derivada:**
-(1) NUNCA usar CSS `zoom` em aulas com deck.js — deck.js já aplica `transform: scale()` no `#deck`.
-(2) Tokens com `vw` em clamp() computam no viewport, não no canvas escalado — usar fixed px em aulas com deck.js.
-(3) Todo `<p>` dentro de `#deck` herda styles de `.stage-c #deck p` — selectors de `<p>` precisam de especificidade `#deck p.className`.
-(4) Antes de adicionar zoom/scale, verificar se deck.js já escala (inspecionar `#deck.style.transform`).
+**Descrição:** Layout 2.25x maior que correto em fullscreen (zoom × scale = double-scaling).
+**Root cause:** CSS `zoom` em body conflitava com deck.js `transform: scale()`. `vw` tokens computavam no viewport, não no canvas.
+**Fix:** Removido `zoom` do body. Mantido fixed px tokens. Selectors `<p>` bumped para vencer base.css.
+**Regra derivada:** (1) NUNCA `zoom` com deck.js (já escala via transform). (2) Usar fixed px, não `vw`, em aulas deck.js. (3) `<p>` em `#deck` herda de `.stage-c #deck p` — precisa de especificidade `#deck p.className`.
 **Data:** 2026-03-16
 
 ### ERRO-009 · HIGH · Checkpoints 03, 12 (contraste destruído)

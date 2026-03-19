@@ -287,55 +287,14 @@ Estas sao sugestoes, nao gates. O agente pode registrar em NOTES.md para Lucas d
 
 ## 9. Tooling Reference
 
-### Playwright (screenshots + video)
-
-```bash
-# Dev server deve estar ativo
-npm run dev
-
-# Video via Playwright API
-# recordVideo: { dir: 'qa-screenshots/{slide-id}/', size: { width: 1280, height: 720 } }
-```
-
-### Gemini MCP
-
-Modelos disponiveis (Tier 1):
-
-| Modelo | Uso recomendado |
-|--------|-----------------|
-| gemini-3.1-pro | **Unico modelo.** Visual audit, cross-slide, analise profunda. $2/M input. |
-
-### GSAP Plugins disponiveis (index.template.html)
-
-| Plugin | Import | Uso |
-|--------|--------|-----|
-| SplitText | `gsap/SplitText` | Animacao por caractere/palavra/linha (headlines, reveals dramaticos) |
-| Flip | `gsap/Flip` | Layout transitions (reorder, resize, reparent) |
-| ScrambleTextPlugin | `gsap/ScrambleTextPlugin` | Efeito typewriter/scramble em numeros e texto |
-
-Registrados globalmente em `index.template.html` — disponiveis em qualquer custom animation via `slide-registry.js`.
-
-### API Keys
-
-Keys no Windows User env vars. Se sessao nao herdar:
-```bash
-export GEMINI_API_KEY="$(powershell -Command "[System.Environment]::GetEnvironmentVariable('GEMINI_API_KEY', 'User')")"
-```
-
-### Contraste
-
-- Texto primario (headlines, valores): >= 7:1 (AAA)
-- Texto secundario (labels, refs): >= 6:1
-- Large text hero: >= 4.5:1 (AA large)
-- Testar com a11y-contrast MCP ou Playwright in-browser calc
-
-### Documentos complementares
+GSAP plugins, contraste, API keys → ver `CLAUDE.md` (aula) secao "Arquivos de trabalho".
+Gemini: usar `gemini-3.1-pro` (unico modelo). Playwright: `npm run dev` ativo.
 
 | Doc | Path | Papel |
 |-----|------|-------|
-| Rubrica 14-dim + scorecard | `.claude/agents/qa-engineer.md` | Template de scorecard, evidence requirements, rubricas detalhadas por dim |
-| Skill QA (invocacao) | `.claude/skills/ralph-qa/SKILL.md` | 2-loop Opus+Gemini, batch architecture |
-| Scorecards registrados | `AUDIT-VISUAL.md` | Output — scorecards por slide |
+| Rubrica 14-dim + scorecard | `.claude/agents/qa-engineer.md` | Template, rubricas por dim |
+| Skill QA | `.claude/skills/ralph-qa/SKILL.md` | 2-loop Opus+Gemini |
+| Scorecards registrados | `AUDIT-VISUAL.md` | Output por slide |
 
 ---
 
