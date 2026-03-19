@@ -17,3 +17,4 @@ Docs superseded ou one-shot. Mantidos para referência histórica.
 | aulas-magnas-system-v6.plan.md | Cursor plan superseded (bootstrap fases 0-3 concluídas) |
 | audit-rules-report-2026-03-17.md | Relatório audit rules (one-shot) |
 | docs-audit-report-2026-03-17.md | Relatório docs audit (one-shot) |
+| CURSOR.md | Superseded por CLAUDE.md (mar/2026) |
