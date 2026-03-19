@@ -569,7 +569,7 @@ aside.notes { display: none; }
   gap: var(--space-sm);
   padding: var(--space-lg) var(--space-md);
   background: var(--bg-elevated);
-  border: none;
+  border: 1px solid var(--divider);
   border-radius: var(--radius-lg);
   box-shadow:
     0 4px 6px -1px oklch(0% 0 0 / 0.02),
@@ -592,7 +592,7 @@ aside.notes { display: none; }
   font-weight: 700;
   line-height: 0.8;
   color: var(--ui-accent);
-  opacity: 0.12;
+  opacity: 0.35;
   z-index: 0;
   user-select: none;
   pointer-events: none;
@@ -616,14 +616,15 @@ aside.notes { display: none; }
   padding-top: var(--space-xs);
   text-transform: uppercase;
   letter-spacing: 0.02em;
-  font-weight: 500;
+  font-weight: 600;
   position: relative;
   z-index: 1;
 }
+.contrato-accent { color: var(--ui-accent); }
 /* Animation initial states (custom choreography via slide-registry.js) */
 #s-contrato .contrato-card { opacity: 0; transform: translateY(40px) scale(0.98); }
 #s-contrato .contrato-question { opacity: 0; transform: translateY(12px); }
-#s-contrato .contrato-skill { opacity: 0; transform: translateX(-10px); }
+#s-contrato .contrato-skill { opacity: 0; transform: translateY(10px); }
 /* Failsafes */
 .no-js #s-contrato .contrato-card,
 .no-js #s-contrato .contrato-question,

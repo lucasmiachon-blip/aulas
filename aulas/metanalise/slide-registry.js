@@ -104,9 +104,9 @@ export const slideRegistry = {
       duration: 0.5, stagger: 0.2,
       ease: 'power2.out'
     }, '-=0.3')
-    // 3. Skills slide in (methodological foundation)
+    // 3. Skills fade up (cohesive with card entrance direction)
     .to(skills, {
-      opacity: 1, x: 0,
+      opacity: 1, y: 0,
       duration: 0.5, stagger: 0.15,
       ease: 'power2.out'
     }, '-=0.2');

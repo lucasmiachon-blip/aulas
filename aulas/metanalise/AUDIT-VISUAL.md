@@ -11,7 +11,7 @@
 
 | Fase | Slides | Scorecard formal | QA session |
 |------|--------|-----------------|------------|
-| F1 | s-title, s-hook, s-contrato | s-title DONE, s-hook DONE, s-contrato Gemini pendente | 2026-03-16e / 2026-03-17 / 2026-03-19 |
+| F1 | s-title, s-hook, s-contrato | s-title DONE, s-hook DONE, s-contrato DONE | 2026-03-16e / 2026-03-17 / 2026-03-19 |
 | I1 | s-checkpoint-1 | Pendente (Fase 3 motion) | 2026-03-16j (constraint check PASS) |
 | F2 | s-rs-vs-ma → s-fixed-random (8) | Pendente scorecard formal | 2026-03-16j (constraint check PASS, QA slide-a-slide) |
 | I2 | s-checkpoint-2 | Pendente (Fase 3 motion) | 2026-03-16j (constraint check PASS) |
@@ -114,7 +114,7 @@ Scorecards formais serao preenchidos durante ralph-qa batches 2-6 (proximas sess
 
 ## s-contrato (02-contrato.html)
 
-**Status:** QA — Gemini Round 3 APPROVED (9.5/10, legibility 10/10). Round 4 pendente (watermark-only design).
+**Status:** DONE — Gemini R4 APPROVED (beauty 9, legibility 8.5). All Gemini suggestions applied. Watermark 35% opacity (azul forte). Lucas approved.
 **Archetype:** cards (setup) — dim D = N/A (sem dados clinicos)
 **History:** flex:1 fix (03-17b), visual uplift Gemini R1 (03-19: grid+subgrid, bleeding watermarks, left-align, custom GSAP choreography), cards 2&3 fix (03-19: skill 12px, text-wrap balance), watermark-only redesign (03-19: remove small numbers, keep only ::after 14rem at 12% opacity, grid 2 rows)
 
@@ -140,8 +140,9 @@ Scorecards formais serao preenchidos durante ralph-qa batches 2-6 (proximas sess
 - All proposals accepted + radical (bleeding watermark). Implemented in 2038185.
 - Round 2: re-eval com screenshots pos-fix. Score 9.25/10. Verdict: **APPROVED**.
 - Round 3: re-eval apos cards 2&3 fix (skill 12px, text-wrap balance). Score 9.5/10. Verdict: **APPROVED** (beauty 9.5, legibility 10).
-- Round 4: pendente — watermark-only redesign (remove small inline numbers, watermark 12% opacity)
+- Round 4: re-eval watermark-only design. Score beauty 9, legibility 8.5. Verdict: **APPROVED**. Suggested: card border, skill 600, fadeUp skills, accent +. All applied.
+- Round 5 (Lucas tuning): watermark opacity 0.12→0.15→0.20→0.35 (azul forte). Lucas APPROVED.
 
-**Fix history:** slide-navy removed (03-17), flex:1→cards 248px + token ui-accent (03-17b), visual uplift grid+subgrid+watermark+GSAP (03-19 2038185), cards 2&3 fix: skill 15→12px, letter-spacing 0.05→0.02em, text-wrap:balance (03-19 f38eb90), watermark-only: remove contrato-number spans, grid 3→2 rows, watermark opacity 0.07→0.12 (03-19).
+**Fix history:** slide-navy removed (03-17), flex:1→cards 248px + token ui-accent (03-17b), visual uplift grid+subgrid+watermark+GSAP (03-19 2038185), cards 2&3 fix: skill 15→12px, text-wrap:balance (03-19 f38eb90), watermark-only: remove contrato-number spans, grid 2 rows (03-19 f2d3785), Gemini polish: border divider, skill 600, fadeUp skills, accent +, watermark 35% (03-19).
 
-**Screenshots:** `qa-screenshots/s-contrato/s-contrato-{1280x720,1920x1080}-r4.png` (watermark-only). Historico: S0→S5-fixed, r4.
+**Screenshots:** `qa-screenshots/s-contrato/s-contrato-1280x720-r5-opacity35.png` (final). Historico: S0→S5-fixed, r4, r5.

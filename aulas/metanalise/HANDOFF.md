@@ -30,7 +30,7 @@
 |---|-------|--------|-------|
 | 1 | s-title | DONE | QA.0-QA.4 PASS. Gemini approved (beauty 9, legibility 10). Choreography + masking. |
 | 2 | s-hook | DONE | QA.0-QA.4 PASS. Asymmetric grid, countUp GSAP (decimal support), 14-dim avg 9.36. Gemini drove uplift (c400f5a). |
-| 3 | s-contrato | QA | Watermark-only design (no inline numbers). Gemini R3 APPROVED 9.5/10. R4 pendente (watermark-only re-eval). |
+| 3 | s-contrato | DONE | Watermark-only 35% opacity. Gemini R4 APPROVED + all suggestions applied. Lucas approved. |
 
 ### I1 — Checkpoint engajamento (1 slide)
 
@@ -69,8 +69,7 @@
 
 ### Resumo
 
-- **DONE (2):** s-title, s-hook — QA full (Opus + Gemini) completo
-- **QA (1):** s-contrato (Gemini R3 APPROVED 9.5/10, R4 pendente — watermark-only re-eval)
+- **DONE (3):** s-title, s-hook, s-contrato — QA full (Opus + Gemini) completo
 - **LINT-PASS (15):** restantes — scorecard 14-dim pendente
 
 ---
