@@ -9,6 +9,7 @@
 npm run dev               # Vite hot reload (port 3000)
 npm run build             # Producao
 npm run build:cirrose     # Concatena slides → index.html via _manifest.js
+npm run build:metanalise  # Idem para Meta-análise
 npm run build:grade       # Idem para GRADE
 npm run build:osteoporose # Idem para Osteoporose
 npm run preview           # Servir localmente (palco)

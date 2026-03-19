@@ -1,6 +1,6 @@
 ---
 name: slide-builder
-description: "Builds and updates Reveal.js slide HTML from specs. Use PROACTIVELY when slides need creation, update, or refactoring based on narrative/evidence changes."
+description: "Builds and updates deck.js slide HTML from specs. Use PROACTIVELY when slides need creation, update, or refactoring based on narrative/evidence changes."
 tools:
   - Read
   - Write

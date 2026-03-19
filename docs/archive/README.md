@@ -15,3 +15,5 @@ Docs superseded ou one-shot. Mantidos para referência histórica.
 | research-skills-ecosystem-2026-03-11.md | Pesquisa ecosystem upgrade (referência, não operacional) |
 | CHATGPT_HANDOFF_ACT2.md | One-shot prompt para ChatGPT (síntese Act 2) |
 | aulas-magnas-system-v6.plan.md | Cursor plan superseded (bootstrap fases 0-3 concluídas) |
+| audit-rules-report-2026-03-17.md | Relatório audit rules (one-shot) |
+| docs-audit-report-2026-03-17.md | Relatório docs audit (one-shot) |

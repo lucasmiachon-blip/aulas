@@ -102,7 +102,7 @@ CLAUDE.md (root)              ← fonte de verdade operacional (absorveu AGENTS.
 | Arquivo | MCPs scoped | Papel |
 |---------|------------|-------|
 | qa-engineer.md | playwright, lighthouse, eslint, perplexity, ui-ux-pro, design-comparison, floto | QA perfection loop 14 dimensoes |
-| reference-manager.md | pubmed, crossref, notion, scite, zotero | Valida PMIDs/DOIs, formata AMA, sync Notion |
+| reference-manager.md | pubmed, crossref, notion, scite | Valida PMIDs/DOIs, formata AMA, sync Notion |
 | medical-researcher.md | pubmed, crossref, semantic-scholar, scite, biomcp | Pesquisa profunda multi-MCP + triangulacao + rubrica profundidade |
 | notion-sync.md | notion | Sync Slides DB repo ↔ Notion |
 | slide-builder.md | playwright | Build slides HTML |

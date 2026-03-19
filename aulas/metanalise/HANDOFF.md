@@ -11,7 +11,7 @@
 - **Slides:** 18/18 no deck (ver _manifest.js). Lint PASS. Orphans: 0.
 - **Ancora:** Valgimigli 2025 Lancet (PMID 40902613) — IPD-MA, 7 RCTs, 28.982 pts
 - **QA pipeline:** [WT-OPERATING.md §4](WT-OPERATING.md#4-qa-sub-loop-dentro-do-estado-qa). Gates 1-4: 18/18 PASS. Scorecards 14-dim: 3/18 (F1). DONE: 2/18 (s-title, s-hook).
-- **Docs:** narrative v2.3, evidence-db v5.1, blueprint v1.8, reading-list v0.4
+- **Docs:** narrative v2.4, evidence-db v5.2, blueprint v1.8, reading-list v0.4
 - **GSAP plugins:** SplitText + Flip + ScrambleTextPlugin (index.template.html)
 - **Prompt Gemini:** v6.0 (docs/prompts/gemini-slide-qa.md)
 - **Dark-bg:** 6 slides (ver NOTES.md §dark-bg reference map). Novos slides dark = adicionar ID ao seletor em metanalise.css.
