@@ -59,6 +59,13 @@
       "env": {
         "PERPLEXITY_API_KEY": "${PERPLEXITY_API_KEY}"
       }
+    },
+    "notebooklm": {
+      "command": "python",
+      "args": ["-m", "notebooklm_tools.mcp.server"],
+      "env": {
+        "PYTHONUTF8": "1"
+      }
     }
   }
 }

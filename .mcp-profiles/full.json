@@ -144,6 +144,13 @@
     "chrome-devtools": {
       "command": "npx",
       "args": ["-y", "chrome-devtools-mcp"]
+    },
+    "notebooklm": {
+      "command": "python",
+      "args": ["-m", "notebooklm_tools.mcp.server"],
+      "env": {
+        "PYTHONUTF8": "1"
+      }
     }
   }
 }

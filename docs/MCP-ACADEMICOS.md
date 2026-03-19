@@ -34,6 +34,18 @@ Funcoes: OpenFDA, clinical trials, gene info, variant data. Util para farmacovig
 |-----|--------|---------|-------|---------------|
 | **zotero** | `zotero-mcp` | uvx | Gratis (Zotero local) | `ZOTERO_API_KEY`, `ZOTERO_LIBRARY_ID` |
 
+### Q&A Grounded (PDFs completos)
+
+| MCP | Pacote | Runtime | Custo | Variavel .env |
+|-----|--------|---------|-------|---------------|
+| **notebooklm** | `notebooklm-mcp-cli` (PyPI) | python -m | Gratis (consumer) | — (auth via cookies) |
+
+NotebookLM MCP permite Q&A grounded nos PDFs completos dos artigos. Requer `nlm login` para autenticar via browser (cookies expiram ~20min). API nao oficial — reverse-engineered RPCs do Google.
+
+Workflow: `nlm login` → `nlm notebook create` → `nlm source add` (PDFs) → `nlm notebook query` (Q&A com citacao).
+
+CLI: `nlm` (instalado via `pip install notebooklm-mcp-cli`). Skill: `.claude/skills/nlm-skill/`.
+
 ### Analise e Citacoes
 
 | MCP | Pacote | Runtime | Custo | Variavel .env |
@@ -60,7 +72,7 @@ Disponiveis automaticamente em claude.ai (Project Knowledge):
 | Profile | MCPs academicos incluidos | Uso |
 |---------|--------------------------|-----|
 | `dev` | 0 | Desenvolvimento de slides |
-| `research` | pubmed, crossref, semantic-scholar, perplexity | Pesquisa de evidencias |
+| `research` | pubmed, crossref, semantic-scholar, perplexity, notebooklm | Pesquisa de evidencias |
 | `qa` | 0 | Quality assurance visual |
 | `full` | Todos (12 academicos + QA + infra) | Sessoes intensivas |
 
