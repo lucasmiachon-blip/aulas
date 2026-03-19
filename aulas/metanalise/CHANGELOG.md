@@ -4,6 +4,24 @@
 
 ---
 
+## 2026-03-19f — s-hook Gate 3 scorecard + QA.4 fixes
+
+Branch: `feat/metanalise-mvp`
+
+### Gate 3 (screenshots + contrast)
+- 6 screenshots capturados (3 beats × 2 resoluções) via Playwright
+- Contrast table completa: Playwright computed styles + WCAG calculator
+- 14-dim scorecard: H8 T9 E5 C9 V9 K9 S9 M9 I9 D9 A9 L9 P7 N9 (avg 8.6)
+
+### QA.4 fixes
+- **Verdict contrast 3.67→7.78:1:** `color: oklch(95%)` explicit (bypasses stage-c remap) + `background-color: oklch(38% 0.17 25)` (darker red). AAA PASS, projector PASS.
+- **Word-break "pacientes":** SplitText `type: 'words,chars'` (was 'chars') previne quebra mid-word. `&nbsp;` entre "6.104" e "pacientes" no HTML.
+
+### Root cause
+- stage-c remaps `--text-on-dark` to `oklch(12%)` (dark text) em base.css:266. Verdict usava `var(--text-on-dark)` mas tem seu próprio bg escuro (--danger). Fix: explicit color override.
+
+---
+
 ## 2026-03-19e — s-hook content rewrite: VITALITY backbone + NICE-SUGAR exemplo MA
 
 Branch: `feat/metanalise-mvp`

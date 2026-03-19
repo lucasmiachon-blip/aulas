@@ -92,3 +92,11 @@
 ### QA status
 - Scorecards QA.0-QA.2 invalidados (conteúdo mudou significativamente)
 - Gate 3 (screenshots + Gemini) = próximo passo
+
+### Gate 3 + QA.4 (mesma sessão)
+- 6 screenshots Playwright (3 beats × 2 resoluções)
+- Contrast table: todos beat 0/1 >= 9.05:1 AAA. Source-tag 5.32:1 AA (known).
+- **Bug encontrado:** verdict usava `var(--text-on-dark)` que stage-c remapeia para oklch(12%) — dark text on dark-red bg = 3.67:1. Fix: explicit `oklch(95%)` + darker red `oklch(38% 0.17 25)` = 7.78:1 AAA.
+- **Bug encontrado:** SplitText `type: 'chars'` criava spans individuais por char — browser fazia word-break mid-word "paci/entes". Fix: `type: 'words,chars'` + `&nbsp;` no HTML.
+- Regra aprendida: **qualquer elemento com bg próprio escuro em slide light DEVE usar cor explícita, não var(--text-on-dark)** — stage-c remap não distingue "slide escuro" de "elemento escuro em slide claro".
+- 14-dim scorecard: avg 8.6/10. Lucas aprovou resultado: "melhorou muito".

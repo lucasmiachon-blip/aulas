@@ -74,9 +74,9 @@
 
 ### Resumo
 
-- **QA (3):** s-title (DONE Gemini), s-hook (Gate 3 PASS, QA.4 fixes pendentes: verdict contrast + word-break), s-contrato (Gemini pendente)
+- **QA (3):** s-title (DONE Gemini), s-hook (Gate 3+4 PASS, Gemini pendente), s-contrato (Gemini pendente)
 - **LINT-PASS (15):** restantes — scorecard 14-dim pendente
-- **DONE (0):** nenhum slide completou QA full (Opus + Gemini) — s-title aguarda re-confirmação formal
+- **DONE (0):** nenhum slide completou QA full (Opus + Gemini)
 
 ---
 
@@ -96,7 +96,7 @@ Trabalho completado e decisões tomadas: ver [HANDOFF-ARCHIVE.md](HANDOFF-ARCHIV
    - Ja dark: s-checkpoint-1, s-checkpoint-2
    - Propostos dark: s-forest-plot, s-heterogeneity, s-ancora, s-absoluto (CSS pronto)
    - Light: demais (s-rs-vs-ma, s-pico, s-abstract, s-benefit-harm, s-grade, s-fixed-random, s-aplicacao, s-aplicabilidade, s-takehome)
-4. **Ordem:** s-hook QA.4 (fix verdict contrast + word-break → re-screenshot → Gemini Gate 4) → s-contrato (Gemini pendente) → s-checkpoint-1 → F2 em sequencia
+4. **Ordem:** s-hook Gemini Gate 4 → s-contrato (Gemini pendente) → s-checkpoint-1 → F2 em sequencia
 
 ### Sessão N+2
 - Fase 4 (Gemini deck-level — este sim em batches)
