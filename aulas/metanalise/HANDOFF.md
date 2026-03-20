@@ -94,7 +94,6 @@ Trabalho completado e decisões tomadas: ver [HANDOFF-ARCHIVE.md](HANDOFF-ARCHIV
    - Light: demais (s-rs-vs-ma, s-pico, s-abstract, s-benefit-harm, s-grade, s-fixed-random, s-aplicacao, s-aplicabilidade, s-takehome)
 4. **Ordem:** s-checkpoint-1 (screenshots + scorecard) → F2 em sequencia (F1 completo: s-title, s-hook, s-contrato DONE)
 5. **MCP setup pendente:** Perplexity API key (setar env var) + Scite OAuth (reiniciar Claude Code). Config `.mcp.json` já atualizado.
-6. **qa-video.js:** 3 bugs deck.js corrigidos (2026-03-20c) — FRAMEWORK, goToSlide, slide-active. Agora funciona com `--aula=metanalise`.
 
 ### Sessão N+2
 - Fase 4 (Gemini deck-level — este sim em batches)
