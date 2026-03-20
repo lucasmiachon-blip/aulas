@@ -2,23 +2,23 @@
 # Hook 3 — PostToolUse + PostToolUseFailure: Log build results to NOTES.md
 # Filters: npm run build* or build-html.ps1 commands only.
 
-INPUT=$(cat)
+INPUT=$(cat 2>/dev/null || echo '{}')
 
 # Extract fields
-CMD=$(echo "$INPUT" | node -e "
-const d=JSON.parse(require('fs').readFileSync('/dev/stdin','utf8'));
+CMD=$(node -e "
+const d=JSON.parse(process.argv[1] || '{}');
 console.log((d.tool_input||{}).command||'');
-" 2>/dev/null)
+" "$INPUT" 2>/dev/null)
 
-EVENT=$(echo "$INPUT" | node -e "
-const d=JSON.parse(require('fs').readFileSync('/dev/stdin','utf8'));
+EVENT=$(node -e "
+const d=JSON.parse(process.argv[1] || '{}');
 console.log(d.hook_event_name||'');
-" 2>/dev/null)
+" "$INPUT" 2>/dev/null)
 
-CWD=$(echo "$INPUT" | node -e "
-const d=JSON.parse(require('fs').readFileSync('/dev/stdin','utf8'));
+CWD=$(node -e "
+const d=JSON.parse(process.argv[1] || '{}');
 console.log(d.cwd||'.');
-" 2>/dev/null)
+" "$INPUT" 2>/dev/null)
 
 # Filter: only build commands
 if [[ "$CMD" != *"npm run build"* ]] && \
@@ -41,16 +41,21 @@ esac
 NOTES="$CWD/aulas/$AULA/NOTES.md"
 DATE=$(date '+%Y-%m-%d %H:%M')
 
+# Skip NOTES write if aula is unknown (e.g., on main without aula context)
+if [ "$AULA" = "unknown" ] || [ ! -d "$CWD/aulas/$AULA" ]; then
+    exit 0
+fi
+
 # Create NOTES.md if it doesn't exist
 if [ ! -f "$NOTES" ]; then
     printf "# NOTES — %s\n\n" "$AULA" > "$NOTES"
 fi
 
 if [[ "$EVENT" == "PostToolUseFailure" ]]; then
-    ERROR=$(echo "$INPUT" | node -e "
-const d=JSON.parse(require('fs').readFileSync('/dev/stdin','utf8'));
+    ERROR=$(node -e "
+const d=JSON.parse(process.argv[1] || '{}');
 console.log(d.error||'exit code != 0');
-" 2>/dev/null)
+" "$INPUT" 2>/dev/null)
     printf "\n[%s] [BUILD] FAIL — %s | cmd: %s\n" "$DATE" "$ERROR" "$CMD" >> "$NOTES"
 else
     printf "\n[%s] [BUILD] OK — %s\n" "$DATE" "$CMD" >> "$NOTES"

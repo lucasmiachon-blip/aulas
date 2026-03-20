@@ -5,12 +5,12 @@
 # Workaround: always emit warning. reference-manager knows to expect it.
 # Non-blocking (exit 0 + JSON systemMessage).
 
-INPUT=$(cat)
+INPUT=$(cat 2>/dev/null || echo '{}')
 
-FILE_PATH=$(echo "$INPUT" | node -e "
-const d=JSON.parse(require('fs').readFileSync('/dev/stdin','utf8'));
+FILE_PATH=$(node -e "
+const d=JSON.parse(process.argv[1] || '{}');
 console.log((d.tool_input||{}).file_path||'');
-" 2>/dev/null)
+" "$INPUT" 2>/dev/null)
 
 # Only apply to evidence-db.md
 if [[ "$FILE_PATH" != *"evidence-db.md" ]]; then

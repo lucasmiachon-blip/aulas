@@ -182,6 +182,30 @@
         ]
       }
     ],
+    "TeammateIdle": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/teammate-idle-gate.sh",
+            "timeout": 30,
+            "statusMessage": "Validando quality gates do teammate..."
+          }
+        ]
+      }
+    ],
+    "TaskCompleted": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/task-completed-gate.sh",
+            "timeout": 10,
+            "statusMessage": "Verificando task completion..."
+          }
+        ]
+      }
+    ],
     "SessionEnd": [
       {
         "hooks": [

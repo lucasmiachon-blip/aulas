@@ -1,6 +1,7 @@
-# Design System — OKLCH + Tokens
+# Design System — OKLCH + Tokens + color-mix()
 
 > Canônico para tokens, semântica, tipografia, paleta de dados.
+> **v5.1 (2026-03-19):** Variantes `-light` derivadas via `color-mix(in oklch)`. Fallback HEX mantido.
 
 ---
 
@@ -71,23 +72,23 @@ Downgrade é auxiliar (fora da regra ΔL principal) — sempre reforçado com í
 :root {
   /* Safe / Teal — L=40 */
   --safe:         oklch(40% 0.12 170);
-  --safe-light:   oklch(92% 0.05 170);
+  --safe-light:   color-mix(in oklch, var(--safe) 15%, oklch(97% 0 0));
   --safe-on-dark: oklch(75% 0.13 170);
 
   /* Warning / Amber — L=60 (ΔL 20% vs safe, 10% vs danger) */
   --warning:          oklch(60% 0.13 85);
-  --warning-light:    oklch(92% 0.06 85);
+  --warning-light:    color-mix(in oklch, var(--warning) 15%, oklch(97% 0 0));
   --warning-on-dark:  oklch(80% 0.14 85);
   --warning-on-light: oklch(45% 0.10 85);
 
   /* Danger / Red — L=50 (ΔL 10% vs safe, 10% vs warning) */
   --danger:          oklch(50% 0.18 25);
-  --danger-light:    oklch(92% 0.04 25);
+  --danger-light:    color-mix(in oklch, var(--danger) 15%, oklch(97% 0 0));
   --danger-on-dark:  oklch(72% 0.16 25);
 
   /* Downgrade / Ocre — L=30 (auxiliar, sempre com ícone ↓) */
   --downgrade:          oklch(30% 0.08 55);
-  --downgrade-light:    oklch(92% 0.04 55);
+  --downgrade-light:    color-mix(in oklch, var(--downgrade) 15%, oklch(97% 0 0));
   --downgrade-on-dark:  oklch(68% 0.10 55);
 }
 ```
@@ -141,12 +142,21 @@ Referência: Paul Tol color schemes (https://personal.sron.nl/~pault/)
 
 ### Gamut Fallback
 ```css
+/* OKLCH fallback (Chrome <111, Firefox <113) */
 @supports not (color: oklch(50% 0.1 258)) {
   :root {
     --safe: #2a8a7a; --warning: #c4922a; --danger: #cc4a3a;
+    /* -light variants: HEX fixo (color-mix tambem nao suportado) */
+    --safe-light: #e0f4f0; --warning-light: #f4ecd8;
+    --danger-light: #f4e0dc; --downgrade-light: #f0eadc;
   }
 }
 ```
+
+**Nota:** `color-mix(in oklch)` requer suporte a OKLCH. O `@supports not` bloco
+cobre ambos — se OKLCH nao existe, color-mix(in oklch) tambem nao funciona.
+Browsers que suportam OKLCH (Chrome 111+, Firefox 113+, Safari 15.4+) tambem
+suportam `color-mix()` (Chrome 111+, Firefox 113+, Safari 16.2+).
 
 ---
 

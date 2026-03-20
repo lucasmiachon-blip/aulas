@@ -1,5 +1,6 @@
 ---
 name: new-slide
+version: 1.0.0
 description: Cria novo slide assertion-evidence para uma aula. Use quando o usuário pedir "criar slide", "novo slide", "new slide", "adicionar slide sobre [topic]". Gera HTML completo com template correto.
 argument-hint: "[lecture] [assertion]"
 allowed-tools: Read, Write, Bash(npm run lint:slides)

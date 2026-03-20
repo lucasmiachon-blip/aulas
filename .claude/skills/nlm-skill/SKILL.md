@@ -60,6 +60,7 @@ This skill documents BOTH approaches. Choose the appropriate one based on tool a
 - `/medical-researcher` — pesquisa profunda multi-MCP (4 agentes paralelos)
 - `/sync-evidence` — persiste achados em evidence-db.md + Notion
 
+
 ## Quick Reference
 
 **Run `nlm --ai` to get comprehensive AI-optimized documentation** - this provides a complete view of all CLI capabilities.

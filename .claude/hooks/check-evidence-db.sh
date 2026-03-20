@@ -2,13 +2,13 @@
 # Hook 1 — PreToolUse: Block Write to slides/*.html if evidence-db.md not read this session
 # Exit 2 = block. Exit 0 = allow.
 
-INPUT=$(cat)
+INPUT=$(cat 2>/dev/null || echo '{}')
 
 # Extract file_path from tool_input
-FILE_PATH=$(echo "$INPUT" | node -e "
-const d=JSON.parse(require('fs').readFileSync('/dev/stdin','utf8'));
+FILE_PATH=$(node -e "
+const d=JSON.parse(process.argv[1] || '{}');
 console.log((d.tool_input||{}).file_path||'');
-" 2>/dev/null)
+" "$INPUT" 2>/dev/null)
 
 # Only apply to aulas/*/slides/*.html
 if [[ "$FILE_PATH" != *"aulas/"*"/slides/"* ]] || [[ "$FILE_PATH" != *.html ]]; then
@@ -16,10 +16,10 @@ if [[ "$FILE_PATH" != *"aulas/"*"/slides/"* ]] || [[ "$FILE_PATH" != *.html ]]; 
 fi
 
 # Get transcript path
-TRANSCRIPT=$(echo "$INPUT" | node -e "
-const d=JSON.parse(require('fs').readFileSync('/dev/stdin','utf8'));
+TRANSCRIPT=$(node -e "
+const d=JSON.parse(process.argv[1] || '{}');
 console.log(d.transcript_path||'');
-" 2>/dev/null)
+" "$INPUT" 2>/dev/null)
 
 # If no transcript available, allow (can't verify)
 if [ -z "$TRANSCRIPT" ] || [ ! -f "$TRANSCRIPT" ]; then
@@ -59,6 +59,6 @@ fi
 
 # Block
 # Extract aula name from file path
-AULA=$(echo "$FILE_PATH" | node -e "const p=require('fs').readFileSync('/dev/stdin','utf8').trim();const m=p.match(/aulas\/([^\/]+)\//);console.log(m?m[1]:'unknown');" 2>/dev/null)
+AULA=$(node -e "const p=(process.argv[1]||'').trim();const m=p.match(/aulas\/([^\/]+)\//);console.log(m?m[1]:'unknown');" "$FILE_PATH" 2>/dev/null)
 echo "Ler evidence-db.md antes de editar slides. Caminho: aulas/$AULA/references/evidence-db.md" >&2
 exit 2

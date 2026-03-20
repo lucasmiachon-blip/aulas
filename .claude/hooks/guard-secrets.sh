@@ -5,17 +5,16 @@
 
 set -euo pipefail
 
+# Read stdin (PreToolUse passes JSON via stdin)
+INPUT=$(cat 2>/dev/null || echo '{}')
+
 # Só roda em comandos git commit/add
-TOOL_INPUT="${TOOL_INPUT:-}"
-if ! echo "$TOOL_INPUT" | node -e "
-  const input = require('fs').readFileSync('/dev/stdin','utf8');
-  try {
-    const parsed = JSON.parse(input);
-    const cmd = parsed.command || '';
-    if (/git\s+(commit|add)/.test(cmd)) process.exit(0);
-    process.exit(1);
-  } catch { process.exit(1); }
-" 2>/dev/null; then
+CMD=$(node -e "
+const d=JSON.parse(process.argv[1] || '{}');
+console.log((d.tool_input||{}).command||'');
+" "$INPUT" 2>/dev/null)
+
+if ! echo "$CMD" | grep -qE 'git\s+(commit|add)'; then
   exit 0
 fi
 

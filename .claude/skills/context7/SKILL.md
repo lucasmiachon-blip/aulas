@@ -1,7 +1,7 @@
 ---
 name: context7
 description: Injeta documentação atualizada de bibliotecas no contexto. Ativar automaticamente quando o usuário trabalhar com GSAP, Reveal.js, Vite, OKLCH, ou qualquer lib do projeto. Resolve hallucination de APIs desatualizadas. Usar "/context7 [library]" para busca manual.
-version: 2.0.1
+version: 2.1.0
 context: lazy
 agent: general-purpose
 allowed-tools: Read, WebSearch, WebFetch
@@ -80,14 +80,20 @@ Reveal.on("fragmentshown", ({ fragment }) => { })
 
 ### Breaking v4→v5: `?print-pdf` → `?view=print` (antigo ainda funciona). Scroll-view auto <435px.
 
-## Vite 6.x
+## Vite 6.x (projeto atual) / Vite 8.0 (disponivel)
 
 ### Breaking v5→v6
 - Sass API: `css.preprocessorOptions.scss.api: "modern-compiler"` (se usar SCSS)
 - `commonjsOptions.strictRequires` default `true`
 - postcss-oklab-function sem mudancas
 
-Vite 8.0 (Rolldown) disponivel. Upgrade nao urgente — 6.x mantido.
+### Vite 8.0 (Rolldown) — estavel desde 2026-03-12
+- Substitui esbuild + Rollup por Rolldown (bundler Rust unico)
+- 10-30x faster builds (benchmarks: 25x em 19K modules)
+- Migration: `build.rollupOptions` → `build.rolldownOptions`
+- CommonJS interop mudou: fallback temporario `legacy.inconsistentCjsInterop: true`
+- Caminho: v6 → v7 (migration guide) → v8
+- **Status projeto:** upgrade nao urgente — 6.x mantido. Avaliar apos QA pipeline estabilizar.
 
 ## Fallback
 Se docs ficarem desatualizadas: `cat package.json | grep -E "gsap|reveal|vite"` → WebSearch changelog.

@@ -3,9 +3,16 @@
 # Warns when "git merge main" in a WT would bring Class C (semantic) files.
 # Does NOT block — just warns the agent to triage before proceeding.
 
-# Only fire on "git merge" commands
-TOOL_INPUT="${TOOL_INPUT:-}"
-if ! echo "$TOOL_INPUT" | grep -qE 'git\s+merge\s+main'; then
+# Read stdin (PreToolUse passes JSON via stdin)
+INPUT=$(cat 2>/dev/null || echo '{}')
+
+# Only fire on "git merge main" commands
+CMD=$(node -e "
+const d=JSON.parse(process.argv[1] || '{}');
+console.log((d.tool_input||{}).command||'');
+" "$INPUT" 2>/dev/null)
+
+if ! echo "$CMD" | grep -qE 'git\s+merge\s+main'; then
   exit 0
 fi
 

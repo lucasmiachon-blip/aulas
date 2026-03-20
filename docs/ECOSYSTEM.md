@@ -155,6 +155,23 @@
 
 **Variáveis de ambiente:** `docs/MCP-ENV-VARS.md` · `.env.example` (fonte canônica)
 
+### MCPs candidatos (avaliacao 2026-03-19)
+
+| MCP | Fontes | Diferencial | Status |
+|-----|--------|------------|--------|
+| **paper-search-mcp** (openags) | arXiv, PubMed, bioRxiv, medRxiv, Semantic Scholar, Crossref, OpenAlex, PMC, CORE, Europe PMC, DOAJ + 10 | Unified multi-source com dedup. Potencial substituto do combo pubmed+crossref+semantic-scholar | AVALIAR |
+| **healthcare-mcp-public** (Cicatriiz) | FDA, PubMed, medRxiv, NCBI Bookshelf, ClinicalTrials.gov, ICD-10, DICOM | All-in-one healthcare. ICD-10 util para slides com codigos | AVALIAR |
+| **Anthropic Life Sciences** (oficial) | PubMed, BioRender, 10x Genomics | Marketplace oficial Anthropic. Manutencao garantida | AVALIAR — preferencial |
+| **clinicaltrialsgov-mcp** (cyanheads) | ClinicalTrials.gov v2 API | Search trials, compare studies, patient matching | BAIXA PRIORIDADE |
+
+**Criterios de adocao:**
+1. Substitui >=2 MCPs atuais com mesma ou melhor cobertura
+2. Manutencao ativa (commits nos ultimos 30 dias)
+3. Funciona em Windows (node/npx, nao uvx/python)
+4. Nao requer API key paga adicional (exceto Perplexity que ja temos)
+
+**Proxima acao:** Testar `paper-search-mcp` e `Anthropic Life Sciences` em sessao dedicada de pesquisa.
+
 ---
 
 ## Como Atualizar

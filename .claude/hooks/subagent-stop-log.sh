@@ -2,27 +2,27 @@
 # Hook 4 — SubagentStop: Append 1-line summary to NOTES.md for every subagent that completes.
 # Format: [DATA] [AGENT:id] — concluído. Status: [PASS/FAIL/PARTIAL]
 
-INPUT=$(cat)
+INPUT=$(cat 2>/dev/null || echo '{}')
 
-AGENT_TYPE=$(echo "$INPUT" | node -e "
-const d=JSON.parse(require('fs').readFileSync('/dev/stdin','utf8'));
+AGENT_TYPE=$(node -e "
+const d=JSON.parse(process.argv[1] || '{}');
 console.log(d.agent_type||'unknown');
-" 2>/dev/null)
+" "$INPUT" 2>/dev/null)
 
-AGENT_ID=$(echo "$INPUT" | node -e "
-const d=JSON.parse(require('fs').readFileSync('/dev/stdin','utf8'));
+AGENT_ID=$(node -e "
+const d=JSON.parse(process.argv[1] || '{}');
 console.log((d.agent_id||'?').slice(0,8));
-" 2>/dev/null)
+" "$INPUT" 2>/dev/null)
 
-LAST_MSG=$(echo "$INPUT" | node -e "
-const d=JSON.parse(require('fs').readFileSync('/dev/stdin','utf8'));
+LAST_MSG=$(node -e "
+const d=JSON.parse(process.argv[1] || '{}');
 console.log((d.last_assistant_message||'').slice(0,300));
-" 2>/dev/null)
+" "$INPUT" 2>/dev/null)
 
-CWD=$(echo "$INPUT" | node -e "
-const d=JSON.parse(require('fs').readFileSync('/dev/stdin','utf8'));
+CWD=$(node -e "
+const d=JSON.parse(process.argv[1] || '{}');
 console.log(d.cwd||'.');
-" 2>/dev/null)
+" "$INPUT" 2>/dev/null)
 
 DATE=$(date '+%Y-%m-%d %H:%M')
 BRANCH=$(git branch --show-current 2>/dev/null)
@@ -47,7 +47,7 @@ fi
 
 # Create NOTES.md if it doesn't exist
 if [ ! -f "$NOTES" ]; then
-    printf "# NOTES — Cirrose\n\n" > "$NOTES"
+    printf "# NOTES — %s\n\n" "$AULA" > "$NOTES"
 fi
 
 printf "\n[%s] [%s:%s] — concluído. Status: %s\n" "$DATE" "$AGENT_TYPE" "$AGENT_ID" "$STATUS" >> "$NOTES"

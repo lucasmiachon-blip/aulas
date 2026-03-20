@@ -52,28 +52,28 @@
 
   /* --- UI Accent (chrome, NOT clinical) --- */
   --ui-accent:         oklch(35% 0.12 258);
-  --ui-accent-light:   oklch(92% 0.03 258);
+  --ui-accent-light:   color-mix(in oklch, var(--ui-accent) 15%, oklch(97% 0 0));
   --ui-accent-on-dark: oklch(75% 0.14 258);
 
   /* --- Safe / Teal (L=40) --- */
   --safe:         oklch(40% 0.12 170);
-  --safe-light:   oklch(92% 0.05 170);
+  --safe-light:   color-mix(in oklch, var(--safe) 15%, oklch(97% 0 0));
   --safe-on-dark: oklch(75% 0.13 170);
 
   /* --- Warning / Amber (L=60) --- */
   --warning:          oklch(60% 0.13 85);
-  --warning-light:    oklch(92% 0.06 85);
+  --warning-light:    color-mix(in oklch, var(--warning) 15%, oklch(97% 0 0));
   --warning-on-dark:  oklch(80% 0.14 85);
   --warning-on-light: oklch(45% 0.10 85);
 
   /* --- Danger / Red (L=50) --- */
   --danger:          oklch(50% 0.18 25);
-  --danger-light:    oklch(92% 0.04 25);
+  --danger-light:    color-mix(in oklch, var(--danger) 15%, oklch(97% 0 0));
   --danger-on-dark:  oklch(72% 0.16 25);
 
   /* --- Downgrade / Ocre (L=30, auxiliar, sempre com ícone ↓) --- */
   --downgrade:          oklch(30% 0.08 55);
-  --downgrade-light:    oklch(92% 0.04 55);
+  --downgrade-light:    color-mix(in oklch, var(--downgrade) 15%, oklch(97% 0 0));
   --downgrade-on-dark:  oklch(68% 0.10 55);
 
   /* --- Data palette: Tol High-contrast (2-3 series) --- */

@@ -1,5 +1,6 @@
 ---
 name: retro
+version: 1.0.0
 description: Extract lessons from current session into tasks/lessons.md. Use after corrections or at session end.
 disable-model-invocation: true
 allowed-tools: Read, Edit, Write, Grep, Glob
