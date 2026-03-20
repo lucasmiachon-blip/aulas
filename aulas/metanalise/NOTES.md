@@ -181,8 +181,9 @@
 - lint-slides.js:110: context-aware check (±3 linhas) elimina false positive em HTML built
 - 4 orphan scripts: `git rm` confirmado pelo repo-janitor
 
-[2026-03-19 21:15] [BUILD] OK — npm run build:metanalise 2>&1
-
-[2026-03-20 12:18] [BUILD] OK — git status --short && echo "---" && npm run build:metanalise 2>&1 | tail -3
-
-[2026-03-20 12:28] [medical-researcher:a2d60864] — concluído. Status: PASS
+### Gemini CLI migration (2026-03-20)
+- Cloud MCP (@fre4x/gemini) substituido por CLI headless (scripts/gemini.mjs)
+- qa-video.js adaptado para deck.js (--aula=metanalise)
+- .audit/ criado para outputs JSON
+- Zero refs MCP Gemini em .mcp.json ou profiles
+- Registros historicos AUDIT-VISUAL preservados (gemini-2.5-pro = modelo real usado)

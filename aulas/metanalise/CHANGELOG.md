@@ -5,6 +5,19 @@
 
 ---
 
+## 2026-03-20a — Gemini CLI headless migration (5 items)
+
+Commits: `b496462`, `38599cf`
+
+- `scripts/gemini.mjs`: rewrite — model `gemini-3.1-pro-preview`, multimodal (--png/--mp4), auto-save `.audit/`, template loading from `docs/prompts/gemini-slide-qa.md`
+- `scripts/qa/qa-video.js`: deck.js support (`--aula=metanalise`), framework auto-detect, 15s max recording, BASE_URL parametrizado
+- `.audit/`: diretorio criado (.gitkeep tracked, *.json gitignored)
+- `WT-OPERATING.md` §4 QA.3: CLI invocation, WebM/MP4 codec limitation documented
+- `CLAUDE.md` (aula): secao "Auditoria Visual — Gemini CLI" adicionada
+- MCP Gemini: **zero** referencias em .mcp.json ou .mcp-profiles/. Acesso exclusivo via CLI.
+
+---
+
 ## 2026-03-19j — Doc hardening session: PMIDs, lessons reorg, ERROR clusters, QA template
 
 - **Batch 1:** Siedler PMID 40969451 verified + framing corrected. Higgins DOI verified. Gemini model discrepancy documented. evidence-db v5.3, blueprint v1.9.

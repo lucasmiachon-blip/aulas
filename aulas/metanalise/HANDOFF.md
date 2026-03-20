@@ -13,7 +13,7 @@
 - **QA pipeline:** [WT-OPERATING.md §4](WT-OPERATING.md#4-qa-sub-loop-dentro-do-estado-qa). Gates 1-4: 18/18 PASS. Scorecards 14-dim: 3/18 (F1). DONE: 3/18 (s-title, s-hook, s-contrato).
 - **Docs:** narrative v2.4, evidence-db v5.4, blueprint v1.9, reading-list v0.4
 - **GSAP plugins:** SplitText + Flip + ScrambleTextPlugin (index.template.html)
-- **Prompt Gemini:** v6.0 (docs/prompts/gemini-slide-qa.md)
+- **Gemini:** CLI headless (`scripts/gemini.mjs`, model `gemini-3.1-pro-preview`). Prompt v6.0 (`docs/prompts/gemini-slide-qa.md`). Output: `.audit/{id}_result.json`.
 - **Dark-bg:** 6 slides (ver NOTES.md §dark-bg reference map). Novos slides dark = adicionar ID ao seletor em metanalise.css.
 - **HEX navy:** #162032 (decisao Lucas)
 - **Reveal.js:** REMOVIDO (ERRO-010)
