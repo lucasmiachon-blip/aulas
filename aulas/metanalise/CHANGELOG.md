@@ -5,6 +5,20 @@
 
 ---
 
+## 2026-03-20c — qa-video.js 3 bug fixes (deck.js compat)
+
+### Fixes (scripts/qa/qa-video.js)
+- **FRAMEWORK invertido:** cirrose removido da condição Reveal.js — só grade/osteoporose são Reveal legacy
+- **goToSlide broken:** `window.deck.goTo()` não existe (ESM puro). Substituído por DOM manipulation (slide-active swap + dispatch slide:changed/slide:entered)
+- **getRevealCount classe errada:** `section.active` → `section.slide-active` (classe real do deck.js)
+
+### Verificação
+- `grep "window.deck"` → 0 matches
+- `grep "slide-active"` → 4 matches (correto)
+- `--aula=metanalise` → FRAMEWORK=deck, `--aula=grade` → FRAMEWORK=reveal
+
+---
+
 ## 2026-03-20b — s-checkpoint-1 ACCORD rewrite + research deep dive
 
 ### Slide rewrite

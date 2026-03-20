@@ -234,3 +234,5 @@
 - Exemplares GRADE recentes: Lin 2025 (PMID 41147324, CINeMA NMA), Ghosal 2025 (PMID 41201574, formal SoF)
 
 [2026-03-20 20:15] [BUILD] OK — npm run build:metanalise
+
+[2026-03-20 20:18] [Explore:abe2c0bb] — concluído. Status: PARTIAL

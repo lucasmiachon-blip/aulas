@@ -52,7 +52,7 @@ const aulaArg = args.find(a => a.startsWith('--aula='))?.split('=')[1] || 'cirro
 const urlArg = args.find(a => a.startsWith('--url='))?.split('=')[1];
 
 const BASE_URL = urlArg || `http://localhost:${PORT}/aulas/${aulaArg}/index.html`;
-const FRAMEWORK = (aulaArg === 'cirrose' || aulaArg === 'grade' || aulaArg === 'osteoporose')
+const FRAMEWORK = (aulaArg === 'grade' || aulaArg === 'osteoporose')
   ? 'reveal' : 'deck';
 
 let batchRange = null;
@@ -90,7 +90,7 @@ async function getRevealCount(page) {
   } else {
     // deck.js: count unrevealed [data-reveal] elements in current slide
     return page.evaluate(() => {
-      const current = document.querySelector('section.active') || document.querySelector('section[aria-hidden="false"]');
+      const current = document.querySelector('section.slide-active') || document.querySelector('section[aria-hidden="false"]');
       if (!current) return 0;
       return current.querySelectorAll('[data-reveal]:not(.revealed)').length;
     });
@@ -108,15 +108,27 @@ async function goToSlide(page, slideIndex) {
       window.Reveal.configure({ transition: 'fade' });
     });
   } else {
-    // deck.js: navigate via keyboard to target slide
-    // First go to slide 0, then advance to target
+    // deck.js: pure ESM — no window.deck. Replicate goTo() via DOM.
     await page.evaluate((idx) => {
-      if (typeof window.deck !== 'undefined' && window.deck.goTo) {
-        window.deck.goTo(idx);
-      }
+      const sections = document.querySelectorAll('#slide-viewport > section');
+      const current = document.querySelector('section.slide-active');
+      const target = sections[idx];
+      if (!target) return;
+      if (current) current.classList.remove('slide-active');
+      target.classList.add('slide-active');
+      document.dispatchEvent(new CustomEvent('slide:changed', {
+        detail: { currentSlide: target, previousSlide: current, indexh: idx },
+        bubbles: false
+      }));
+      setTimeout(() => {
+        document.dispatchEvent(new CustomEvent('slide:entered', {
+          detail: { currentSlide: target, indexh: idx },
+          bubbles: false
+        }));
+      }, 600);
     }, slideIndex);
     // Wait for slide:entered event
-    await page.waitForTimeout(600);
+    await page.waitForTimeout(800);
   }
 }
 
