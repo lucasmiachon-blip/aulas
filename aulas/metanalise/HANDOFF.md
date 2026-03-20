@@ -82,18 +82,28 @@ Trabalho completado e decisões tomadas: ver [HANDOFF-ARCHIVE.md](HANDOFF-ARCHIV
 
 ## Caminho crítico — próximas sessões
 
-### Sessão N+1 (imediata) — QA slide-a-slide com visual uplift
-1. **Hardening documental R1+R2+R3 DONE (2026-03-19):** R1 (-903 linhas, XREF rebuilt). R2: MEMORY.md 5 fixes, blueprint v1.9 (stale hook assertion), lessons +3, .gitignore fix. R3: Notion 18 slides synced (Bloco Narrativo MA-*), evidence-db v5.4 (PMID audit: 36 verificados, 2 corrigidos, 1 DOI fix), HANDOFF pendencias 3/5 falsas (verificadas OK).
-2. **Pipeline normal** (WT-OPERATING.md §4): proximo slide na fila → QA.0-QA.4 → DONE → proximo.
-   - Criterios visuais elevados: beleza avançada + GSAP sofisticado (SplitText, Flip, ScrambleText, custom choreographies)
-   - Gemini prompt v6.0 (scorecard 10-dim, 10 lenses, 5 personas, radical ideas forcing, projected scorecard, temp 1.0)
-   - Contexto sala: pequena, ~15 pessoas, 1-4m, iluminacao forte, TV LED — legibilidade constraint #1
-3. **Dark-bg reference** (sugestao, decide-se por slide):
-   - Ja dark: s-checkpoint-1, s-checkpoint-2
-   - Propostos dark: s-forest-plot, s-heterogeneity, s-ancora, s-absoluto (CSS pronto)
-   - Light: demais (s-rs-vs-ma, s-pico, s-abstract, s-benefit-harm, s-grade, s-fixed-random, s-aplicacao, s-aplicabilidade, s-takehome)
-4. **Ordem:** s-checkpoint-1 (screenshots + scorecard) → F2 em sequencia (F1 completo: s-title, s-hook, s-contrato DONE)
-5. **MCP setup pendente:** Perplexity API key (setar env var) + Scite OAuth (reiniciar Claude Code). Config `.mcp.json` já atualizado.
+### Sessão N+1 (imediata) — Scite research + QA s-checkpoint-1
+
+#### 1. Scite OAuth + buscas pendentes (ANTES de QA)
+Reiniciar Claude Code para ativar Scite MCP (streamableHttp, conta premium Lucas).
+Buscas a fazer:
+- **ACCORD contrasting citations:** Scite tallies mostraram 889 citacoes, 23 supporting, **5 contrasting** — identidade das 5 requer auth. Objetivo: enriquecer speaker notes s-checkpoint-1 + preparar arguicao.
+- **Valgimigli 2025 (PMID 40902613) citation tallies:** verificar recepcao do artigo-ancora (supporting/contrasting/mentioning). Objetivo: fortalecer F3 (s-ancora e s-aplicacao) com dados de recepcao pela comunidade.
+- **Ray 2009 (PMID 19185116) contrasting:** MA de controle glicemico intensivo usada no s-checkpoint-1. Verificar quais papers contestam. Complementa ACCORD.
+
+#### 2. Perplexity API key (main)
+Prompt dado ao terminal main para criar `.env` a partir de `.env.example` e copiar para WTs.
+
+#### 3. Pipeline QA normal (apos research)
+Proximo: s-checkpoint-1 (screenshots + scorecard 14-dim) → F2 em sequencia.
+- Criterios visuais elevados: beleza avancada + GSAP sofisticado
+- Gemini prompt v6.0 (10-dim, 5 personas, radical ideas forcing, temp 1.0)
+- Contexto sala: pequena, ~15 pessoas, 1-4m, iluminacao forte, TV LED — legibilidade constraint #1
+
+#### 4. Dark-bg reference (decide-se por slide)
+- Ja dark: s-checkpoint-1, s-checkpoint-2
+- Propostos dark: s-forest-plot, s-heterogeneity, s-ancora, s-absoluto (CSS pronto)
+- Light: demais
 
 ### Sessão N+2
 - Fase 4 (Gemini deck-level — este sim em batches)
