@@ -772,6 +772,150 @@ aside.notes { display: none; }
   transform: none !important;
 }
 
+/* --- Checkpoint 1: ACCORD "liquidificador" visual --- */
+#s-checkpoint-1 .checkpoint-question { max-width: 24ch; }
+
+.ck1-forest {
+  position: relative;
+  width: 540px;
+  height: 150px;
+}
+.ck1-null {
+  position: absolute;
+  left: 55%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: oklch(70% 0.01 258 / 0.35);
+}
+.ck1-diamond {
+  position: absolute;
+  left: 42%;
+  top: 48%;
+  width: 24px;
+  height: 24px;
+  background: var(--safe-on-dark);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.ck1-axis {
+  position: absolute;
+  bottom: -4px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-muted);
+  opacity: 0.5;
+}
+.ck1-axis--left { left: 80px; }
+.ck1-axis--right { right: 0; }
+
+/* Trial markers — hidden until beat 2 (GSAP reveals) */
+.ck1-trial {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 18px;
+  opacity: 0;
+}
+.ck1-trial--ukpds   { top: 6px; }
+.ck1-trial--advance  { top: 42px; }
+.ck1-trial--vadt     { top: 78px; }
+.ck1-trial--accord   { top: 118px; }
+
+.ck1-name {
+  position: absolute;
+  left: 0;
+  width: 78px;
+  text-align: right;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 18px;
+}
+.ck1-ci {
+  position: absolute;
+  height: 2px;
+  top: 8px;
+  background: var(--text-primary);
+}
+.ck1-dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: 4px;
+  background: var(--text-primary);
+  transform: translateX(-50%);
+}
+
+/* Trial-specific positions (dot at point estimate, CI = confidence interval) */
+/* Null line at 55% = 297px. Benefit = left, Harm = right */
+.ck1-trial--ukpds .ck1-ci    { left: 155px; width: 105px; }
+.ck1-trial--ukpds .ck1-dot   { left: 207px; }
+
+.ck1-trial--advance .ck1-ci  { left: 240px; width: 80px; }
+.ck1-trial--advance .ck1-dot { left: 280px; }
+
+.ck1-trial--vadt .ck1-ci     { left: 210px; width: 95px; }
+.ck1-trial--vadt .ck1-dot    { left: 257px; }
+
+.ck1-trial--accord .ck1-ci   { left: 290px; width: 130px; background: var(--danger-on-dark); }
+.ck1-trial--accord .ck1-dot  { left: 360px; width: 16px; height: 16px; top: 1px; background: var(--danger-on-dark); }
+.ck1-trial--accord .ck1-name { color: var(--danger-on-dark); font-weight: 600; }
+
+/* Stats below forest */
+.ck1-stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.ck1-context {
+  font-family: var(--font-mono);
+  font-size: var(--text-small);
+  color: var(--text-secondary);
+  line-height: 1.3;
+}
+.ck1-hero {
+  font-family: var(--font-mono);
+  font-size: var(--text-h3);
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+/* ACCORD reveal box */
+.ck1-reveal {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--bg-navy-mid);
+  border-radius: var(--radius-sm);
+  border-left: 4px solid var(--danger-on-dark);
+  max-width: 45ch;
+}
+.ck1-twist {
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  color: var(--danger-on-dark);
+  line-height: 1.3;
+  margin: 0;
+}
+
+/* Failsafes: no-js, QA mode, print */
+.no-js #s-checkpoint-1 .ck1-trial,
+[data-qa] #s-checkpoint-1 .ck1-trial {
+  opacity: 1 !important;
+}
+.no-js #s-checkpoint-1 .ck1-diamond,
+[data-qa] #s-checkpoint-1 .ck1-diamond {
+  opacity: 0.15 !important;
+}
+@media print {
+  #s-checkpoint-1 .ck1-trial { opacity: 1 !important; }
+  #s-checkpoint-1 .ck1-diamond { opacity: 0.15 !important; }
+}
+
 /* --- Checkpoint: multi-step reveal (checkpoint-2) --- */
 .checkpoint-steps {
   display: flex;

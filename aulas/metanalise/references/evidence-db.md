@@ -193,6 +193,59 @@
 
 ---
 
+## Checkpoint 1 — ACCORD trap (controle glicêmico e infarto)
+
+> Dados REAIS do slide checkpoint-1. MA mostra benefício para IAM, mas o maior trial (ACCORD) aumentou mortalidade.
+> Função: armadilha antes de ensinar forest plot — "olhar dentro do diamante".
+
+### Ray 2009 — MA de controle glicêmico intensivo
+
+| Campo | Valor |
+|-------|-------|
+| Autores | Ray KK, Seshasai SRK, Wijesuriya S, et al. |
+| Título | Effect of intensive control of glucose on cardiovascular outcomes and death in patients with diabetes mellitus: a meta-analysis of randomised controlled trials |
+| Fonte | Lancet 2009;373(9677):1765-72 |
+| PMID | 19465231 ✅ |
+| DOI | 10.1016/S0140-6736(09)60697-8 |
+| Desenho | MA de 5 RCTs |
+| Participantes | 33.040 |
+| Tier | **1** (Lancet) |
+
+### Resultados — Ray 2009
+
+| Desfecho | Medida | IC 95% | Nota |
+|----------|--------|--------|------|
+| IAM não-fatal | OR 0,83 | 0,75–0,93 | Significativo — benefício |
+| Mortalidade total | OR 1,02 | NS | Sem diferença |
+
+### ACCORD 2008 — maior trial dentro da MA
+
+| Campo | Valor |
+|-------|-------|
+| Autores | ACCORD Study Group |
+| Título | Effects of intensive glucose lowering in type 2 diabetes |
+| Fonte | N Engl J Med 2008;358(24):2545-59 |
+| PMID | 18539917 ✅ |
+| DOI | 10.1056/NEJMoa0802743 |
+| Participantes | 10.251 (~31% da MA Ray 2009) |
+| Tier | **1** (NEJM) |
+
+### Resultados — ACCORD
+
+| Desfecho | Medida | IC 95% | p | Nota |
+|----------|--------|--------|---|------|
+| Mortalidade total | HR 1,22 | 1,01–1,46 | 0,04 | Interrompido precocemente por excesso de mortalidade |
+
+### Notas para a aula
+
+- ACCORD era o maior trial (31% do N total) e foi interrompido por excesso de mortalidade
+- A MA de Ray 2009 MASCARA o sinal do ACCORD ao poolar com os outros 4 trials
+- Função didática: "olhar dentro do diamante" — a soma esconde a parte
+- Usado como armadilha no checkpoint 1 (antes de ensinar forest plot)
+- Outros trials na MA: UKPDS, ADVANCE, VADT, PROactive
+
+---
+
 ## Referências metodológicas adicionais (verificadas 2026-03-14)
 
 | Referência | PMID | DOI | Tier | Função |
@@ -250,6 +303,7 @@
 
 | Data | Mudança |
 |------|---------|
+| 2026-03-20 | v5.5 — +Ray 2009 (PMID 19465231) e ACCORD 2008 (PMID 18539917) para checkpoint 1. Nova seção "Checkpoint 1 — ACCORD trap". |
 | 2026-03-19 | v5.4 — PMID audit (reference-manager agent, 36 PMIDs): Guyatt BMJ 2008 PMID corrigido 21195583→18436948. Murad JAMA 2014 PMID 25005654 marcado [VERIFY] (resolve para artigo diferente). Brignardello-Petersen DOI corrigido kwae256→kwae332. |
 | 2026-03-19 | v5.3 — Siedler PMID 40969451 verificado. Journal corrigido: Cochrane Evid Synth Methods (não J Clin Epidemiol). Framing corrigido: 33,8% = SRs que avaliaram certeza (não % com certeza moderada/alta). Higgins & Lopez-Lopez DOI verificado (10.1017/rsm.2025.10062), PMID não indexado (epub Dez 2025). |
 | 2026-03-19 | v5.2 — Hook rewrite sober: VITALITY/NICE-SUGAR removidos do slide (mantidos como ref). Hoffmann "EM USO card 1", Bojcic "EM USO card 2". +Siedler 2025 (33.8% GRADE, "EM USO card 3"). Tags EM USO atualizadas. |

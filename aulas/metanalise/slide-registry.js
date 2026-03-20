@@ -115,30 +115,53 @@ export const slideRegistry = {
   's-checkpoint-1': (slide, gsap) => {
     const scenario = slide.querySelector('.checkpoint-scenario');
     const question = slide.querySelector('.checkpoint-question');
-    const reveal = slide.querySelector('.checkpoint-reveal');
+    const diamond = slide.querySelector('.ck1-diamond');
+    const trials = slide.querySelectorAll('.ck1-trial');
+    const accord = slide.querySelector('.ck1-trial--accord');
+    const reveal = slide.querySelector('.ck1-reveal');
     if (!scenario || !question || !reveal) return;
 
     let state = 0;
     const MAX = 2;
 
+    // Beat 0 (auto): scenario fades in — diamond + stats visible
     gsap.to(scenario, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' });
 
     function advance() {
       if (state >= MAX) return false;
       state++;
       if (state === 1) {
+        // Beat 1: provocative question
         gsap.to(question, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' });
       }
       if (state === 2) {
-        gsap.to(reveal, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' });
+        // Beat 2: "liquidificador" — diamond dissolves, trials appear
+        // 1. Diamond fades to ghost
+        gsap.to(diamond, { opacity: 0.15, duration: 0.8, ease: 'power2.inOut' });
+        // 2. Non-ACCORD trials appear staggered
+        const others = [trials[0], trials[1], trials[2]];
+        gsap.to(others, { opacity: 1, duration: 0.5, stagger: 0.12, delay: 0.3, ease: 'power2.out' });
+        // 3. ACCORD appears with emphasis (larger dot, danger color, slight scale)
+        gsap.fromTo(accord,
+          { opacity: 0, scale: 0.85 },
+          { opacity: 1, scale: 1, duration: 0.6, delay: 0.8, ease: 'power2.out' }
+        );
+        // 4. Reveal text with ACCORD twist
+        gsap.to(reveal, { y: 0, opacity: 1, duration: 0.8, delay: 1.0, ease: 'power3.out' });
       }
       return true;
     }
 
     function retreat() {
       if (state <= 0) return false;
-      const target = state === 2 ? reveal : question;
-      gsap.to(target, { opacity: 0, y: 20, duration: 0.3 });
+      if (state === 2) {
+        gsap.to(diamond, { opacity: 1, duration: 0.3 });
+        gsap.to(trials, { opacity: 0, scale: 1, duration: 0.3 });
+        gsap.to(reveal, { opacity: 0, y: 20, duration: 0.3 });
+      }
+      if (state === 1) {
+        gsap.to(question, { opacity: 0, y: 20, duration: 0.3 });
+      }
       state--;
       return true;
     }

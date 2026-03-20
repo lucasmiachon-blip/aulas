@@ -5,6 +5,38 @@
 
 ---
 
+## 2026-03-20b — s-checkpoint-1 ACCORD rewrite + research deep dive
+
+### Slide rewrite
+- `03-checkpoint-1.html`: reescrito inteiro — ACCORD trap com dados reais (Ray 2009 PMID 19465231, ACCORD 2008 PMID 18539917)
+- Visual "liquidificador": diamante simplificado dissolve → 4 trial markers (UKPDS, ADVANCE, VADT, ACCORD em danger)
+- 3-beat state machine: cenário (auto) → pergunta (click) → twist ACCORD (click)
+- `metanalise.css`: +110 linhas (`.ck1-*` classes, forest visual, trial positions, failsafes)
+- `slide-registry.js`: handler reescrito (diamond fade, trial stagger, ACCORD emphasis)
+- `_manifest.js`: headline atualizada
+
+### Docs
+- `narrative.md` v2.5: I1 reescrito com ACCORD, visual liquidificador, changelog
+- `evidence-db.md` v5.5: seção "Checkpoint 1 — ACCORD trap" com tabelas Ray/ACCORD
+- `blueprint.md` v2.0: slide 03 atualizado (evidência, status, nota dados reais)
+
+### Verificação
+- Build: 18 slides OK. Lint: clean. Integrity: 18/18 match. Narrative-sync: 0 errors.
+- Slide-punch: 6/6 PASS, veredicto ENCAIXADO.
+
+### Research — arguição prep
+- Deep research: MAs controle glicêmico intensivo 2009-2024. 10 papers verificados.
+- Achado: **ZERO** fizeram GRADE formal (Ray, CONTROL, Boussageon, Hemmingsen Cochrane, Kunutsor 2024)
+- Boussageon 2011 (PMID 21791495): NNT 117-150 (IAM) vs NNH 15-52 (hipoglicemia). Crítica mais forte.
+- Kunutsor 2024 (PMID 38409644): update 51.469 pts — IAM reduzido, MACE NS, sem GRADE.
+- Scite tallies Ray 2009: 889 citações (23 supporting, 5 contrasting, 806 mentioning)
+- Tese/antítese/síntese preparada para arguição + 6 perguntas de banca com respostas
+
+### Infra
+- `.mcp.json`: Scite MCP adicionado (streamableHttp → api.scite.ai/mcp). Perplexity: config OK, API key pendente.
+
+---
+
 ## 2026-03-20a — Gemini CLI headless migration (5 items)
 
 Commits: `b496462`, `38599cf`

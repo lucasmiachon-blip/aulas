@@ -16,7 +16,7 @@ export const slides = [
   { id: 's-contrato',     file: '02-contrato.html',     phase: 'F1', archetype: 'cards',      headline: '3 perguntas que você faz a toda meta-análise',                                            timing: 45,   clickReveals: 0, customAnim: 's-contrato',             narrativeRole: 'setup',      tensionLevel: 1, narrativeCritical: false },
 
   // ── Interação 1: Checkpoint de engajamento ──
-  { id: 's-checkpoint-1', file: '03-checkpoint-1.html', phase: 'I1', archetype: 'checkpoint', headline: 'Uma MA mostra RR 0,91 (IC 0,85–0,97). Você muda sua conduta?',                                                     timing: 90,   clickReveals: 2, customAnim: 's-checkpoint-1', narrativeRole: 'checkpoint', tensionLevel: 3, narrativeCritical: true },
+  { id: 's-checkpoint-1', file: '03-checkpoint-1.html', phase: 'I1', archetype: 'checkpoint', headline: 'Controle glicemico intensivo reduziu infarto — mas o maior trial da MA aumentou mortalidade',                       timing: 90,   clickReveals: 2, customAnim: 's-checkpoint-1', narrativeRole: 'checkpoint', tensionLevel: 3, narrativeCritical: true },
 
   // ── Fase 2: Metodologia ──
   { id: 's-rs-vs-ma',     file: '04-rs-vs-ma.html',     phase: 'F2', archetype: 'compare',    headline: 'RS é o método de busca e seleção; MA é o cálculo estatístico — e são separáveis',                                    timing: 60,   clickReveals: 0, customAnim: null,             narrativeRole: 'setup',      tensionLevel: 1, narrativeCritical: false },

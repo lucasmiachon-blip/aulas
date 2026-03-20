@@ -11,7 +11,7 @@
 - **Slides:** 18/18 no deck (ver _manifest.js). Lint PASS. Orphans: 0.
 - **Ancora:** Valgimigli 2025 Lancet (PMID 40902613) — IPD-MA, 7 RCTs, 28.982 pts
 - **QA pipeline:** [WT-OPERATING.md §4](WT-OPERATING.md#4-qa-sub-loop-dentro-do-estado-qa). Gates 1-4: 18/18 PASS. Scorecards 14-dim: 3/18 (F1). DONE: 3/18 (s-title, s-hook, s-contrato).
-- **Docs:** narrative v2.4, evidence-db v5.4, blueprint v1.9, reading-list v0.4
+- **Docs:** narrative v2.5, evidence-db v5.5, blueprint v2.0, reading-list v0.4
 - **GSAP plugins:** SplitText + Flip + ScrambleTextPlugin (index.template.html)
 - **Gemini:** CLI headless (`scripts/gemini.mjs`, model `gemini-3.1-pro-preview`). Prompt v6.0 (`docs/prompts/gemini-slide-qa.md`). Output: `.audit/{id}_result.json`.
 - **Dark-bg:** 6 slides (ver NOTES.md §dark-bg reference map). Novos slides dark = adicionar ID ao seletor em metanalise.css.
@@ -37,7 +37,7 @@
 
 | # | Slide | Estado | Notas |
 |---|-------|--------|-------|
-| 4 | s-checkpoint-1 | LINT-PASS | Gates 1-4 PASS. Scorecard 14-dim pendente. |
+| 4 | s-checkpoint-1 | QA | Reescrito com ACCORD trap (Ray 2009 + ACCORD 2008). 3-beat liquidificador. Build+lint PASS. Slide-punch 6/6 PASS (ENCAIXADO). Scorecard 14-dim + screenshots pendentes. |
 
 ### F2 — Metodologia (8 slides)
 
@@ -71,7 +71,8 @@
 ### Resumo
 
 - **DONE (3):** s-title, s-hook, s-contrato — QA full (Opus + Gemini) completo
-- **LINT-PASS (15):** restantes — scorecard 14-dim pendente
+- **QA (1):** s-checkpoint-1 — reescrito ACCORD, slide-punch PASS, screenshots pendentes
+- **LINT-PASS (14):** restantes — scorecard 14-dim pendente
 
 ---
 
@@ -91,7 +92,8 @@ Trabalho completado e decisões tomadas: ver [HANDOFF-ARCHIVE.md](HANDOFF-ARCHIV
    - Ja dark: s-checkpoint-1, s-checkpoint-2
    - Propostos dark: s-forest-plot, s-heterogeneity, s-ancora, s-absoluto (CSS pronto)
    - Light: demais (s-rs-vs-ma, s-pico, s-abstract, s-benefit-harm, s-grade, s-fixed-random, s-aplicacao, s-aplicabilidade, s-takehome)
-4. **Ordem:** s-checkpoint-1 → F2 em sequencia (F1 completo: s-title, s-hook, s-contrato DONE)
+4. **Ordem:** s-checkpoint-1 (screenshots + scorecard) → F2 em sequencia (F1 completo: s-title, s-hook, s-contrato DONE)
+5. **MCP setup pendente:** Perplexity API key (setar env var) + Scite OAuth (reiniciar Claude Code). Config `.mcp.json` já atualizado.
 
 ### Sessão N+2
 - Fase 4 (Gemini deck-level — este sim em batches)

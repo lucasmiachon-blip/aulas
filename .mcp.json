@@ -45,6 +45,10 @@
       "command": "cmd",
       "args": ["/c", "npx", "frontend-design-audit"],
       "env": {}
+    },
+    "scite": {
+      "type": "streamableHttp",
+      "url": "https://api.scite.ai/mcp"
     }
   }
 }

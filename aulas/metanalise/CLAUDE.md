@@ -87,13 +87,14 @@ Pipeline completo: WT-OPERATING.md §4 (QA.3).
 4. **Interação 2** (slide 12): checkpoint de consolidação
 5. **Fase 3 — Aplicação** (slides 13-17): Valgimigli 2025 (Lancet, PMID 40902613)
 
-**Regra:** nenhum slide antes da Fase 3 referencia artigo específico.
+**Exceção I1:** s-checkpoint-1 usa dados reais (Ray 2009 + ACCORD 2008) como armadilha pedagógica. Decisão Lucas 2026-03-20.
+**Regra geral:** demais slides antes da Fase 3 não referenciam artigo específico.
 
 ## Hard constraints (herda root + adiciona)
 
 1. Assertion-evidence em todos os slides
-2. Fases 1-2: dados genéricos ou Cochrane Handbook. Artigo específico só na Fase 3
-3. Sem dados inventados. Sem fonte tier 1 → [TBD]. Dados de checkpoints = ilustrativos (sinalizar)
+2. Fases 1-2: dados genéricos ou Cochrane Handbook. Artigo específico só na Fase 3 (exceção: I1 com ACCORD — dados reais como armadilha)
+3. Sem dados inventados. Sem fonte tier 1 → [TBD]. Dados de checkpoints: I1 = reais (Ray/ACCORD), I2 = ilustrativos (sinalizar)
 4. GRADE como linguagem clínica, não burocracia
 5. Forest plot: cropado de artigo real quando disponível; placeholder até lá
 6. Corpo do slide <= 30 palavras
@@ -107,8 +108,8 @@ Pipeline completo: WT-OPERATING.md §4 (QA.3).
 | Slides | 18/18 deck completo (F1+I1+F2+I2+F3) |
 | Ancora | Valgimigli 2025 Lancet (PMID 40902613) |
 | Gates 1-4 | 18/18 PASS |
-| Scorecards 14-dim | 3/18 (F1 DONE): s-title, s-hook (avg 9.36), s-contrato. |
-| Docs | narrative v2.4, blueprint v1.9, evidence-db v5.3 |
+| Scorecards 14-dim | 3/18 (F1 DONE): s-title, s-hook (avg 9.36), s-contrato. s-checkpoint-1 em QA. |
+| Docs | narrative v2.5, blueprint v2.0, evidence-db v5.5 |
 | Main sync | 5406dd8 (2026-03-18) |
 
 Detalhes QA por slide: HANDOFF.md. Pipeline: WT-OPERATING.md §4.

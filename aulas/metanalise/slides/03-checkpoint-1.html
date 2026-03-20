@@ -4,58 +4,90 @@
   <div class="slide-inner slide-navy">
     <div class="checkpoint-layout">
 
-      <!-- Cenário clínico (beat 0 — auto on enter) -->
+      <!-- Beat 0 (auto): MA summary diamond + hero stats -->
       <div class="checkpoint-scenario checkpoint--hidden">
-        <p class="checkpoint-context">MA de 16 RCTs, 26.795 pacientes:</p>
-        <div class="checkpoint-result">
-          <span class="checkpoint-metric">RR 0,91</span>
-          <span class="checkpoint-ci">(IC 95%: 0,85–0,97)</span>
-          <span class="checkpoint-grade">Certeza GRADE: alta</span>
+        <div class="ck1-forest">
+          <div class="ck1-null"></div>
+          <div class="ck1-diamond"></div>
+          <span class="ck1-axis ck1-axis--left">&larr; Beneficio</span>
+          <span class="ck1-axis ck1-axis--right">Dano &rarr;</span>
+
+          <!-- Trial markers (hidden until beat 2 — GSAP reveals) -->
+          <div class="ck1-trial ck1-trial--ukpds">
+            <span class="ck1-name">UKPDS</span>
+            <span class="ck1-ci"></span>
+            <span class="ck1-dot"></span>
+          </div>
+          <div class="ck1-trial ck1-trial--advance">
+            <span class="ck1-name">ADVANCE</span>
+            <span class="ck1-ci"></span>
+            <span class="ck1-dot"></span>
+          </div>
+          <div class="ck1-trial ck1-trial--vadt">
+            <span class="ck1-name">VADT</span>
+            <span class="ck1-ci"></span>
+            <span class="ck1-dot"></span>
+          </div>
+          <div class="ck1-trial ck1-trial--accord">
+            <span class="ck1-name">ACCORD</span>
+            <span class="ck1-ci"></span>
+            <span class="ck1-dot"></span>
+          </div>
         </div>
-        <p class="checkpoint-outcome">para mortalidade total</p>
+
+        <div class="ck1-stats">
+          <span class="ck1-context">MA de 5 RCTs &middot; 33.040 pacientes</span>
+          <span class="ck1-context">Controle glicemico intensivo</span>
+          <span class="ck1-hero">Infarto reduzido em 17%</span>
+        </div>
       </div>
 
-      <!-- A pergunta -->
+      <!-- Beat 1 (click): provocative question -->
       <p class="checkpoint-question checkpoint--hidden">
-        Você muda sua conduta?
+        Voce aperta a meta de HbA1c do seu paciente?
       </p>
 
-      <!-- Reveal: a resposta não é tão simples (beat 2 — click) -->
-      <div class="checkpoint-reveal checkpoint--hidden">
-        <p class="checkpoint-twist">Antes: população? Comparador? Dano?</p>
+      <!-- Beat 2 (click): ACCORD reveal + trial markers appear -->
+      <div class="ck1-reveal checkpoint--hidden">
+        <p class="ck1-twist"><strong>ACCORD</strong> &mdash; o maior trial &mdash; interrompido.</p>
+        <p class="ck1-twist">Mortalidade aumentou 22%.</p>
       </div>
 
-      <p class="source-tag">Dados ilustrativos — cenário genérico para fins didáticos</p>
+      <p class="source-tag">Ray 2009 Lancet &middot; ACCORD 2008 NEJM</p>
 
     </div>
   </div>
 
   <aside class="notes">
-[0:00-0:20] "Vamos testar."
-"Uma meta-análise Cochrane: 16 ensaios, quase 27 mil pacientes."
-"RR 0,91 para mortalidade. IC 0,85 a 0,97. Certeza GRADE alta."
-PAUSA 5s.
-"Você muda sua conduta?"
-PERGUNTAR: "Quem mudaria? Levantem a mão."
+[0:00-0:20] "Cinco ensaios clinicos, trinta e tres mil pacientes.
+Controle glicemico intensivo — apertar HbA1c abaixo de 6,5% —
+reduz infarto em dezessete por cento. O resultado e estatisticamente
+significativo, o intervalo e estreito."
+PAUSA 2s.
+
+[0:20-0:40] "Voces tem um paciente diabetico. Voces apertariam a meta?"
+PERGUNTAR: "Quem apertaria? Mao pra cima."
 (A maioria levanta.)
+PAUSA 5s.
 
-[0:20-0:50] PAUSA.
-"Antes de responder: qual era a população?"
-"Qual era o comparador? Placebo? Tratamento ativo?"
-"E o dano? O que aconteceu com efeitos adversos?"
+[0:40-1:10] "O ACCORD — o maior ensaio DENTRO dessa meta-analise,
+com dez mil pacientes — foi interrompido precocemente."
+PAUSA 2s.
+"Os pacientes do grupo intensivo estavam morrendo mais.
+Mortalidade aumentou vinte e dois por cento."
 PAUSA 3s.
-"A maioria de vocês disse sim — e faz sentido. O número é bom."
-"Mas a resposta depende de mais do que o diamante."
+"O diamante disse beneficio. Mas dentro dele, o maior pedaco
+apontava pro lado errado."
 
-[0:50-1:30] "Isso é exatamente o que vamos aprender nas próximas slides."
-"Cada conceito que vem agora — PICO, forest plot, GRADE, heterogeneidade —
-vai dar a vocês ferramentas para responder essa pergunta com mais segurança."
-"No final, voltamos a esse cenário."
+[1:10-1:30] "Isso e exatamente o que vamos aprender agora.
+Como olhar dentro do diamante antes de decidir."
+"Cada conceito que vem — como a meta-analise e feita,
+como ler o grafico, como avaliar a certeza — serve pra isso."
 
-→ avançar para slide 04 (RS vs MA)
+→ avancar para slide 05 (RS vs MA)
 
-[DATA] Dados baseados em Musini et al. Cochrane 2025;10:CD000028, PMID 41065416.
-Usados como cenário didático — NÃO como artigo âncora da Fase 3.
-| Verificado: 2026-03-13
+[DATA] Fonte: Ray MN et al. Lancet 2009;373:1765-72, PMID 19465231.
+ACCORD Study Group. N Engl J Med 2008;358:2545-59, PMID 18539917.
+| Verificado: 2026-03-20
   </aside>
 </section>

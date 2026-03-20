@@ -187,3 +187,50 @@
 - .audit/ criado para outputs JSON
 - Zero refs MCP Gemini em .mcp.json ou profiles
 - Registros historicos AUDIT-VISUAL preservados (gemini-2.5-pro = modelo real usado)
+
+[2026-03-20 15:52] [medical-researcher:a4aec9e2] — concluído. Status: PASS
+
+[2026-03-20 18:15] [medical-researcher:a5910edf] — concluído. Status: PASS
+
+[2026-03-20 18:38] [BUILD] OK — npm run build:metanalise 2>&1
+
+[2026-03-20 19:30] [unknown:a6fc834c] — concluído. Status: PARTIAL
+
+[2026-03-20 19:52] [unknown:a1066330] — concluído. Status: PARTIAL
+
+[2026-03-20 19:54] [medical-researcher:ae342915] — concluído. Status: PASS
+
+## 2026-03-20 — s-checkpoint-1 ACCORD rewrite + arguição prep
+
+### Decisões de conteúdo (Lucas aprovou)
+- ACCORD como armadilha pedagógica: dados REAIS (Ray 2009 + ACCORD 2008), não ilustrativos
+- Visual "liquidificador": diamante dissolve → trials aparecem → ACCORD em vermelho
+- Escolha do ACCORD sobre CAST/Vioxx/rosiglitazona: custo cognitivo zero (todo residente conhece), estrutura perfeita ("dano dentro do diamante"), endocrinologia mas transcende especialidade
+
+### Research deep dive — controle glicêmico intensivo
+- **Achado principal:** NENHUMA MA de controle glicêmico (2009-2024) fez GRADE formal
+  - Ray 2009: nenhum
+  - Boussageon 2011: Jadad only
+  - Hemmingsen 2013 Cochrane: TSA, sem SoF GRADE
+  - Kunutsor 2024: não reportado
+- Isso valida diretamente slides 09 (GRADE) e 14 (lacuna GRADE Valgimigli)
+- Boussageon 2011 = crítica mais forte: NNT 117-150 vs NNH 15-52
+- Scite tallies: 889 citações, 23 supporting, 5 contrasting (identidade das 5 requer auth)
+
+### Arguição — material preparado
+- Tese/antítese/síntese: confiança no diamante → ACCORD como crise → método como resposta
+- 6 perguntas prováveis com respostas (desfechos diferentes, simplificação, por que não outro caso, visual simplificado, OR vs HR, dados reais vs googling)
+- Ancoragem em Knowles (andragogia), Kahneman (anchoring/disponibilidade), Roediger (testing effect), Mayer (contiguidade), Kalyuga (expertise reversal)
+
+### MCP setup
+- Perplexity: configurado, API key não setada no ambiente. Perplexity Max ≠ API credits (verificar se plano inclui $5/mês grátis)
+- Scite: adicionado ao `.mcp.json` (streamableHttp). OAuth via conta premium. Reiniciar Claude Code para ativar.
+- Tallies endpoint funciona sem auth (usado para pegar contagem 889/23/5/806)
+
+### Backlog MAs reais (NÃO implementar agora — plano aprovado)
+- s-grade: Pitre 2023 (PMID 37076606) — corticoides PAC, GRADE diferente por subgrupo
+- s-heterogeneity: antidepressivos para dor — PMID TBD
+- Publication bias: Turner 2008 (PMID 18199864) — SSRIs, menção em notes
+- Exemplares GRADE recentes: Lin 2025 (PMID 41147324, CINeMA NMA), Ghosal 2025 (PMID 41201574, formal SoF)
+
+[2026-03-20 20:15] [BUILD] OK — npm run build:metanalise

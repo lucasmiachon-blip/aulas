@@ -63,15 +63,18 @@ Residentes de clínica médica (básico-intermediário).
 ### Interação 1 — Checkpoint de engajamento (entre Fase 1 e Fase 2)
 
 **Momento:** após criar importância, antes de entrar em metodologia.
-**Formato:** pergunta provocativa para a audiência.
+**Formato:** pergunta provocativa com dados reais (ACCORD como armadilha).
 
-**Exemplo:**
-"Você recebe uma MA que diz que o tratamento reduz mortalidade com RR 0.91 (IC 0.85–0.97). Você muda sua conduta?"
+**Cenário (dados reais — Ray 2009 Lancet, PMID 19465231):**
+MA de 5 RCTs, 33.040 pacientes. Controle glicêmico intensivo reduz infarto em 17% (OR 0,83, IC 0,75–0,93).
+"Você aperta a meta de HbA1c do seu paciente?"
 - A maioria dirá sim
-- Mas ainda não sabem avaliar certeza, heterogeneidade, aplicabilidade
-- Isso é o que a aula vai ensinar
+- Twist: o ACCORD (PMID 18539917) — maior trial da MA (10.251 pts, 31%) — foi interrompido por aumento de mortalidade (HR 1,22, p=0,04)
+- O diamante disse benefício, mas dentro dele, o maior pedaço apontava pro lado errado
 
-**Função pedagógica:** retrieval practice + criar tensão ("eu achava que sabia, mas não sei tanto")
+**Visual:** diamante simplificado + linha de nulidade → "liquidificador" (diamond fades, trial markers appear, ACCORD em vermelho no lado do dano)
+
+**Função pedagógica:** retrieval practice + criar tensão + ancorar o conceito de "olhar dentro do diamante". Prepara para forest plot (slide 07) e heterogeneidade (slide 10).
 
 **Slide:** 03-checkpoint-1
 
@@ -174,6 +177,7 @@ Uma meta-análise não é melhor do que os RCTs que a alimentam. A qualidade da 
 | 2026-03-11 | v0 — bootstrap a partir do memo direcionado |
 | 2026-03-13 | v1 — reestruturado de 4 atos para 3 fases + 2 interações. Artigo desancorado das fases iniciais |
 | 2026-03-13 | v1.1 — revisão de slides existentes concluída. Orphans deletados. Tabela de revisão atualizada |
+| 2026-03-20 | v2.5 — I1 reescrito com ACCORD trap (Ray 2009/ACCORD 2008). Dados reais substituem cenário genérico. Visual liquidificador. |
 | 2026-03-19 | v2.4 — Hook rewrite sober: VITALITY/NICE-SUGAR removidos do slide. Agora 3 metric cards (Hoffmann 80/dia, Bojcic 81% AMSTAR-2, Siedler 33.8% GRADE). h2 curto. Sem click-reveals. |
 | 2026-03-19 | v2.3 — Fase 1 hook dados atualizados: VITALITY backbone (1.330 retratados → 3.902 MAs → 20% mudam → 157 guidelines). NICE-SUGAR como exemplo MA. Refs expandidas (INSPECT-SR, Possamai, Guyatt). |
 | 2026-03-15g | v2.2 — Âncora decidida: Valgimigli 2025 Lancet (PMID 40902613). Fase 3 atualizada com tensões didáticas IPD/HR/GRADE. Slides 13-15 criados |

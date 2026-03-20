@@ -51,15 +51,15 @@
 
 ## INTERAÇÃO 1 — Checkpoint de engajamento
 
-### Slide 03 — Você mudaria sua conduta?
+### Slide 03 — Você mudaria sua conduta? (ACCORD trap)
 
 - **Fase:** Interação 1
-- **Função:** provocar a audiência — expor viés de confiança no diamante
-- **Assertion:** "Uma MA mostra RR 0.91 (IC 0.85–0.97) para mortalidade. Você muda sua conduta?"
-- **Risco cognitivo:** residente achar que já sabe ler MA → não engajar na metodologia
-- **Evidência:** dados ilustrativos genéricos — cenário didático (Musini removido do visible text; regra: nenhum artigo antes Fase 3)
-- **Status:** ✅ FEITO (03-checkpoint-1.html) — click-reveal 3-beat: cenário → pergunta → twist (via slide-registry.js)
-- **Nota:** a maioria dirá sim. A aula vai mostrar por que a resposta não é tão simples.
+- **Função:** provocar a audiência — expor viés de confiança no diamante com dados reais
+- **Assertion:** "Controle glicêmico intensivo reduziu infarto — mas o maior trial da MA aumentou mortalidade"
+- **Risco cognitivo:** residente aceitar resultado da MA sem olhar os estudos individuais
+- **Evidência:** Ray 2009 Lancet (PMID 19465231) — OR 0,83 IAM; ACCORD 2008 NEJM (PMID 18539917) — HR 1,22 mortalidade
+- **Status:** ✅ FEITO (03-checkpoint-1.html) — diamond liquidificador visual + 3-beat click-reveal: cenário → pergunta → ACCORD twist
+- **Nota:** dados REAIS (não ilustrativos). ACCORD como armadilha antes de ensinar forest plot.
 
 ---
 
@@ -220,4 +220,4 @@
 
 ---
 
-## Status: BLUEPRINT v1.9 — 18 slides (deck completo). F1 DONE (3/18); F2-F3 LINT-PASS (15/18).
+## Status: BLUEPRINT v2.0 — 18 slides (deck completo). F1 DONE (3/18); I1 reescrito com ACCORD; F2-F3 LINT-PASS (15/18).
