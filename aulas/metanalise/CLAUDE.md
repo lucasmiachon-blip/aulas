@@ -59,6 +59,25 @@ metanalise.css
 Sem archetypes.css. Build via `npm run build:metanalise`.
 GSAP plugins: SplitText + Flip + ScrambleTextPlugin (registered in index.template.html).
 
+## Auditoria Visual — Gemini CLI
+
+Handoff: código → visual = Gemini (CLI headless)
+Prompt: `docs/prompts/gemini-slide-qa.md`
+Modelo: `gemini-3.1-pro-preview`
+Threshold: score < 7 → checkpoint Lucas antes de continuar
+
+```bash
+node scripts/gemini.mjs \
+  --slide {id} \
+  --file {slide.html} \
+  --png {screenshot.png} \
+  --mp4 {animacao.mp4} \
+  --json
+```
+
+Output: `.audit/{id}_result.json` (auto-save, gitignored).
+Pipeline completo: WT-OPERATING.md §4 (QA.3).
+
 ## Estrutura narrativa (v1)
 
 3 fases + 2 interações (ver narrative.md):

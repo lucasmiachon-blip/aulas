@@ -186,17 +186,17 @@ Input para Gemini (TUDO junto):
 1. Raw HTML do slide
 2. Raw CSS (seletores relevantes do metanalise.css)
 3. PNGs de cada estado (S0, S1... SN)
-4. Video .webm da navegacao real
+4. Video .mp4 da navegacao real
 
 **Captura de video (Playwright):**
 
-```js
-// recordVideo: navegar ao slide, esperar, interagir, sair
-// Slides sem animacao: video curto (entrada + estado final)
-// Slides com click-reveals: video com cada click
-// Slides com data-animate: video mostrando a animacao
-// Salvar em qa-screenshots/{slide-id}/video.webm
+```bash
+npm run qa:video -- --slide=s-{id}
+# Output: qa-screenshots/videos/{slide-id}.mp4
+# Resolucao: 1280x720 | Duracao max: 15s por slide
 ```
+
+**Limitacao conhecida:** Playwright grava em WebM (VP8/VP9). O script renomeia para `.mp4` mas o codec interno continua WebM. Se Gemini rejeitar o container, adicionar ffmpeg transcoding: `ffmpeg -i input.webm -c:v libx264 -crf 23 output.mp4`.
 
 **Prompt Gemini v6.0** (10 dimensoes, 5 personas, 10 lenses, radical ideas forcing):
 
@@ -209,7 +209,21 @@ Principios do v6.0:
 - Radical ideas forcing + projected scorecard + temp 1.0
 - Output: reasoning + propostas concretas com codigo quando possivel
 
-**Output:** JSON do Gemini + interpretacao do agente.
+**Invocacao CLI** (substituiu cloud MCP):
+
+```bash
+node scripts/gemini.mjs \
+  --slide {id} \
+  --file {slide.html} \
+  --png {screenshot.png} \
+  --mp4 {animacao.mp4} \
+  --json
+```
+
+Output persistido em `.audit/{id}_result.json` (auto-save).
+REGRA: Gemini NUNCA edita. So produz JSON de sugestoes.
+
+**Output:** JSON do Gemini em `.audit/` + interpretacao do agente.
 **→ CHECKPOINT:** apresentar ao Lucas. Lucas aprova/rejeita sugestoes Gemini individualmente.
 
 ### QA.4 — Fix + Re-Audit
@@ -288,7 +302,7 @@ Estas sao sugestoes, nao gates. O agente pode registrar em NOTES.md para Lucas d
 ## 9. Tooling Reference
 
 GSAP plugins, contraste, API keys → ver `CLAUDE.md` (aula) secao "Arquivos de trabalho".
-Gemini: especificar modelo explicitamente na chamada MCP (`gemini-3.1-pro` recomendado). Chamadas historicas (AUDIT-VISUAL) registram `gemini-2.5-pro` — provavelmente o default do MCP na epoca. **Nao alterar registros historicos.** Playwright: `npm run dev` ativo.
+Gemini: `gemini-3.1-pro-preview` via CLI headless (`scripts/gemini.mjs`). Chamadas historicas (AUDIT-VISUAL) registram `gemini-2.5-pro` — **nao alterar registros historicos.** Playwright: `npm run dev` ativo.
 
 | Doc | Path | Papel |
 |-----|------|-------|

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * QA Video — Grava .webm de cada slide com animações reais
+ * QA Video — Grava .mp4 de cada slide com animações reais
  *
  * Playwright recordVideo captura o browser real:
  *   → GSAP rodando (countUp, stagger, drawPath)
@@ -8,7 +8,7 @@
  *   → Fragment reveals
  *   → Click-reveal progressivo
  *
- * Output: qa-screenshots/videos/{slide-id}.webm
+ * Output: qa-screenshots/videos/{slide-id}.mp4
  *
  * Usage:
  *   npm run qa:video                     # todos os slides
@@ -18,7 +18,7 @@
  * Workflow:
  *   1. Rodar: npm run qa:video
  *   2. Abrir qa-screenshots/videos/
- *   3. Upload do .webm para Gemini Ultra
+ *   3. Upload do .mp4 para Gemini
  *   4. Gemini analisa animação real com contexto clínico
  *
  * Requer servidor: npm run dev  (ou npm run preview)
@@ -42,6 +42,7 @@ const TIMING = {
   afterNav: 800,        // após navegar para o slide
   afterTransition: 600, // após cada fragment/reveal
   endPause: 1000,       // pausa final antes de parar gravação
+  maxRecording: 15000,  // timeout máximo por slide (15s, limit inlineData ~20MB)
 };
 
 const args = process.argv.slice(2);
@@ -102,9 +103,11 @@ async function recordSlide(browser, slideIndex, slideId) {
 
   await page.waitForTimeout(TIMING.afterNav);
 
-  // Avançar todos os fragments um por um
+  // Avançar todos os fragments um por um (respeitando timeout máximo)
+  const recordStart = Date.now();
   let safetyCounter = 0;
   while (safetyCounter < 20) {
+    if (Date.now() - recordStart > TIMING.maxRecording - TIMING.endPause) break;
     const remaining = await getFragmentCount(page);
     if (remaining === 0) break;
     await page.keyboard.press('ArrowRight');
@@ -113,14 +116,15 @@ async function recordSlide(browser, slideIndex, slideId) {
   }
 
   // Pausa final para mostrar estado completo
-  await page.waitForTimeout(TIMING.endPause);
+  const remaining = TIMING.maxRecording - (Date.now() - recordStart);
+  await page.waitForTimeout(Math.min(TIMING.endPause, Math.max(200, remaining)));
 
   // Fechar contexto → Playwright salva o vídeo
   const videoPath = await page.video()?.path();
   await context.close();
 
   // Mover para output final com nome correto
-  const finalName = `${slideId}.webm`;
+  const finalName = `${slideId}.mp4`;
   const finalPath = join(OUT_ROOT, finalName);
 
   if (videoPath && existsSync(videoPath)) {
@@ -167,7 +171,7 @@ async function main() {
     const label = id || `slide-${String(index).padStart(2, '0')}`;
     process.stdout.write(`  [${String(index).padStart(2, '0')}] ${label} → gravando...`);
     const path = await recordSlide(browser, index, label);
-    process.stdout.write(` ✓ ${label}.webm\n`);
+    process.stdout.write(` ✓ ${label}.mp4\n`);
   }
 
   await browser.close();
@@ -176,8 +180,8 @@ async function main() {
   console.log(`\n✓ Vídeos → qa-screenshots/videos/`);
   console.log(`\nPróximo passo:`);
   console.log(`  1. Abrir qa-screenshots/videos/`);
-  console.log(`  2. Upload do .webm para Gemini Ultra`);
-  console.log(`  3. Prompt: "Analise esta apresentação médica para hepatologistas..."`);
+  console.log(`  2. Upload do .mp4 para Gemini`);
+  console.log(`  3. node scripts/gemini.mjs --slide {id} --file {html} --png {png} --mp4 {mp4} --json`);
 }
 
 main().catch(e => { console.error(e); process.exit(1); });

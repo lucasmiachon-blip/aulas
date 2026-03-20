@@ -68,6 +68,9 @@ tasks/notion-refs-sync-*.cjs
 # Playwright MCP artifacts (screenshots, logs — gerados localmente)
 .playwright-mcp/
 
+# Audit outputs (efêmeros, não versionar)
+.audit/*.json
+
 # Audit export (temporary, for Claude.ai upload)
 audit-export/
 

@@ -182,3 +182,7 @@
 - 4 orphan scripts: `git rm` confirmado pelo repo-janitor
 
 [2026-03-19 21:15] [BUILD] OK — npm run build:metanalise 2>&1
+
+[2026-03-20 12:18] [BUILD] OK — git status --short && echo "---" && npm run build:metanalise 2>&1 | tail -3
+
+[2026-03-20 12:28] [medical-researcher:a2d60864] — concluído. Status: PASS
