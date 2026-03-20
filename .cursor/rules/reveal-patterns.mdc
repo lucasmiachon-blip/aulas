@@ -8,6 +8,8 @@ alwaysApply: false
 
 > Canônico para: speaker notes, fragments, data-animate, PDF export.
 > Cirrose/metanálise: `deck.js` (custom). Grade/osteoporose: Reveal.js (legacy frozen).
+> Referência completa deck.js: `.claude/rules/deck-patterns.md`
+> Referência completa Reveal.js legacy: `.claude/rules/reveal-legacy.md`
 
 ## Estrutura de Slide
 

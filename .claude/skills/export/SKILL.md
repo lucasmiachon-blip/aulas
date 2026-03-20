@@ -50,7 +50,9 @@ Exporta `$ARGUMENTS` para PDF + screenshots. Exemplo: `/export cirrose`
 2. Preview server: `npx serve . -l 4173 &` → `sleep 2`
 3. Playwright screenshot loop:
    ```bash
-   node aulas/$ARGUMENTS/scripts/qa-screenshots-stage-c.js
+   # [TBD — cada aula terá seu próprio script de screenshots]
+   # Cirrose: node aulas/cirrose/scripts/qa-screenshots-stage-c.js
+   # Metanalise: pendente criação
    ```
 4. Para PDF: combinar screenshots com ImageMagick ou ferramenta equivalente
 5. Matar servidor: `kill $(lsof -t -i:4173)`

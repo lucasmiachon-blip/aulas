@@ -90,25 +90,25 @@ disable-model-invocation: true  # opcional — só invocação manual
 
 | Skill | version | context | allowed-tools | Papel |
 |-------|---------|---------|---------------|-------|
-| `evidence` | 0.2.0 | fork / general-purpose | Read, WebSearch | Busca evidências PubMed → citação AMA + dados slide |
+| `evidence` | 0.2.0 | fork / general-purpose | Read, WebSearch, WebFetch, PubMed MCPs, Consensus | Busca evidências PubMed → citação AMA + dados slide |
 | `medical-researcher` | 1.0.0 | fork / general-purpose | Read, Grep, Glob, Agent, WebSearch, WebFetch | Orquestrador multi-MCP: 4 agentes paralelos, triangulação, rubrica profundidade 8-dim |
 | `sync-evidence` | 1.0.0 | fork / general-purpose | Read, Write, Grep, Glob, Agent | Ponte pesquisa→persistência: evidence-db.md + Notion (opcional, via reference-manager) |
-| `review` | 0.4.0 | fork / Explore | Read, Grep, Glob | Audita slides: PASS/WARN/FAIL por dimensão (inclui assertion-evidence + medical-data) |
-| `ralph-qa` | 6.0.1 | fork / qa-engineer | Read, Write, Bash | QA em 2 loops (Opus lint + Gemini visual) até PASS |
+| `review` | 0.4.0 | fork / general-purpose | Read, Grep, Glob, Agent | Audita slides: PASS/WARN/FAIL por dimensão (inclui assertion-evidence + medical-data) |
+| `ralph-qa` | 6.0.1 | fork / general-purpose | Read, Edit, Bash, Grep, Glob, Agent | QA em 2 loops (Opus lint + Gemini visual) até PASS |
 | `final-pass` | 3.0.0 | fork / general-purpose | Read, Edit, Bash, Grep, Glob, Agent | Avaliação final deck — coerência (A) + empolgação (B, 10 critérios) via Gemini |
-| `new-slide` | — | — | — | Cria slide HTML completo com archetype correto |
-| `export` | — | — | — | Exporta slides para PDF/compartilhamento |
-| `docs-audit` | 0.2.0 | fork / general-purpose | Read, Grep, Glob | Audita docs/*.md: links, redundância, token economy |
-| `context7` | — | — | Read, Grep, Glob | Injeta docs de libs no contexto (GSAP, Reveal, Vite, OKLCH) |
-| `mem-search` | — | — | Read, Grep, Glob | Busca semântica na memória do projeto |
+| `new-slide` | 1.0.0 | — | Read, Write, Bash(npm run lint:slides) | Cria slide HTML completo com archetype correto |
+| `export` | — | — | Bash(npm/npx/kill/sleep *) | Exporta slides para PDF/compartilhamento |
+| `docs-audit` | 0.3.0 | fork / general-purpose | Read, Grep, Glob | Audita docs/*.md: links, redundância, token economy |
+| `context7` | 2.1.0 | lazy / general-purpose | Read, WebSearch, WebFetch | Injeta docs de libs no contexto (GSAP, Reveal, Vite, OKLCH) |
+| `mem-search` | 1.0.0 | lazy / Explore | Read, Grep, Glob | Busca semântica na memória do projeto |
 | `new-skill` | 2.0.0 | fork | Read, Write, Glob, Grep | Scaffold de nova skill (3 templates: simple, orchestrator, lazy) |
-| `repo-janitor` | — | fork / general-purpose | Read, Grep, Glob, Bash | Audit orphan files, broken links, dead HTML (read-only) |
-| `audit-rules` | — | — | Read, Grep, Glob | Audita rules para contradições, stale refs, gaps |
-| `evolve` | — | fork / general-purpose | Read, Grep, Glob, WebSearch | Comitê de evolução — pesquisa + patches para skills/docs/tools |
-| `gtd` | — | — | Read, Write | Getting Things Done file-based (inbox, next actions, weekly review) |
-| `resolve-conflict` | — | — | Read, Grep | Guia PT-BR para merge conflicts |
+| `repo-janitor` | 1.0.0 | fork / repo-janitor | Read, Bash, Glob, Grep | Audit orphan files, broken links, dead HTML (read-only) |
+| `audit-rules` | 1.0.0 | fork / general-purpose | Read, Grep, Glob | Audita rules para contradições, stale refs, gaps |
+| `evolve` | 1.0.1 | fork / general-purpose | Read, Edit, Bash, Grep, Glob, Agent, WebSearch, WebFetch | Comitê de evolução — pesquisa + patches para skills/docs/tools |
+| `gtd` | 1.0.0 | lazy | Read, Write, Edit, Glob, Grep | Getting Things Done file-based (inbox, next actions, weekly review) |
+| `resolve-conflict` | 1.0.0 | fork / general-purpose | Read, Edit, Bash, Grep, Glob | Guia PT-BR para merge conflicts |
 | `slide-punch` | 1.0.0 | — | Read, Grep, Glob | Avalia encaixe narrativo de 1 slide — transições, gancho retórico, densidade vs respiro |
-| `retro` | — | — | Read, Edit, Write, Grep, Glob | Extrai lições da sessão para tasks/lessons.md |
+| `retro` | 1.0.0 | — (disable-model-invocation) | Read, Edit, Write, Grep, Glob | Extrai lições da sessão para tasks/lessons.md |
 | `nlm-skill` | 0.5.1 | fork | Read, Bash | Q&A grounded em full-text via NotebookLM CLI/MCP — papers, podcasts, flashcards |
 
 ### Archived (`.claude/skills/archive/`)

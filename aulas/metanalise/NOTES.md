@@ -180,3 +180,5 @@
 ### Main-scope fixes preparados (NAO executar na WT)
 - lint-slides.js:110: context-aware check (±3 linhas) elimina false positive em HTML built
 - 4 orphan scripts: `git rm` confirmado pelo repo-janitor
+
+[2026-03-19 21:15] [BUILD] OK — npm run build:metanalise 2>&1

@@ -8,12 +8,9 @@ alwaysApply: false
 
 ## Databases
 
-IDs canônicos em `docs/SYNC-NOTION-REPO.md`. Resumo:
-| Database | ID |
-|----------|-----|
-| Slides DB | `620431d1-8955-42b7-8b04-8f7cc616a8ab` |
-| References DB | `2b24bb6c-91be-42c0-ae28-908a794e5cf5` |
-| Blueprint Cirrose | `30adfe68-59a8-815a-abf5-c817cd705b29` |
+IDs canônicos em `.env.example` (variáveis `NOTION_*_ID`). Docs: `docs/SYNC-NOTION-REPO.md`.
+
+**NUNCA hardcodar UUIDs aqui** — consultar `.env.example` ou `docs/SYNC-NOTION-REPO.md`.
 
 ## Workflow com MCP Notion
 1. Ler spec do slide (Headline PT, Visual Recomendado, Objetivo Cognitivo)

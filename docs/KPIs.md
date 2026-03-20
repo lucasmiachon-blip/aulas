@@ -123,6 +123,12 @@ SVG animado (novo)              → Gemini 3.1 Pro            SVG nativo a parti
 
 ---
 
+---
+
+> **Nota (2026-03-19):** Tracking automatizado de KPIs (audit trail → dashboard) deferido. Prioridade atual: slides F2-F3 do deck metanálise. Revisitar quando pipeline QA estiver maduro.
+
+---
+
 ## Revisão Mensal
 
 Primeiro dia de cada mês:
