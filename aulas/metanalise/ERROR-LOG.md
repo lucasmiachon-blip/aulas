@@ -101,6 +101,17 @@ Sem regra CSS explicitando `background-color` no slide, o fundo permanece light 
 (4) Sempre rodar `npx vite --force` ao trocar entre WTs ou após `npm install`.
 **Data:** 2026-03-19
 
+### ERRO-011 · HIGH · Docs (evidence-db, research-accord-valgimigli, 13-ancora)
+**Descrição:** 5 de 9 PMIDs gerados por LLM na sessão de research enrichment (03-21) estavam errados. Cada PMID apontava para paper completamente diferente do pretendido (ex: PMID de squalene fractionation atribuído ao Riddle 2010 diabetes paper).
+**Root cause:** LLM fabricou PMIDs plausíveis sem verificação. Sessão de research gerou narrativa correta (autores, journals, anos) mas PMIDs inventados. Agravante: Giacoppo BMJ (PMID 40467090) foi confundido com Elbahloul Eur J Clin Pharmacol (PMID 41649579) — paper diferente, journal diferente, 162.829 pts vs 16.117 pts. Dados do paper errado propagaram para evidence-db e speaker notes.
+**Fix:** Verificação de todos os 9 PMIDs via PubMed MCP (search por autor+título+ano → get_article_metadata → confirmar). 5 corrigidos em 4 arquivos. evidence-db v5.6→v5.7.
+**Regra derivada:**
+(1) **NUNCA** usar PMID de output LLM sem PubMed MCP verification — taxa de erro observada: 56% (5/9).
+(2) Ao verificar PMID, confirmar que author, title E patient count coincidem — PMID errado pode ser de paper similar.
+(3) Após corrigir PMID, `grep` em TODOS os arquivos do projeto — PMIDs errados propagam para múltiplos docs.
+(4) Regra existente (medical-data.md "NUNCA usar PMID gerado por LLM") reforçada com dados: é erro FREQUENTE, não excepcional.
+**Data:** 2026-03-21
+
 ---
 
 ### Nota: codigos cross-project
@@ -132,13 +143,14 @@ Alguns docs (CHANGELOG, AUDIT-VISUAL) referenciam ERRO-034 (data-background-colo
 
 **Regra derivada:** Em stage-c, NUNCA confiar em tokens `--on-dark` para slides que precisam de bg escuro. Sempre declarar `background-color` explícito via CSS + token restoration scope (re-declarar 8 tokens on-dark no seletor).
 
-### Cluster C — Dados em docs driftam (ERRO-003 + lessons doc-sync)
+### Cluster C — Dados em docs driftam (ERRO-003, ERRO-011 + lessons doc-sync)
 
-**Pattern:** Dado numérico atualizado em um lugar, não propagado para outros.
+**Pattern:** Dado numérico atualizado em um lugar, não propagado para outros. PMIDs fabricados propagam sem verificação.
 - ERRO-003: dados do hook incorretos (3 valores desatualizados)
+- ERRO-011: PMIDs fabricados por LLM propagaram para 4 arquivos antes de detecção
 - Doc-sync lesson: "80/dia" atualizado no HTML mas não em blueprint/narrative (detectado 2 sessões depois)
 
-**Regra derivada:** Ao atualizar qualquer dado: `grep -rn "VALOR_ANTIGO" aulas/{aula}/`. Atualizar TODOS no mesmo batch. evidence-db é canônico.
+**Regra derivada:** (1) Ao atualizar qualquer dado: `grep -rn "VALOR_ANTIGO" aulas/{aula}/`. Atualizar TODOS no mesmo batch. evidence-db é canônico. (2) PMIDs de LLM = CANDIDATOS até PubMed MCP confirmar. Taxa de erro real: 56%.
 
 ---
 

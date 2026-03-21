@@ -85,20 +85,19 @@ Trabalho completado e decisões tomadas: ver [HANDOFF-ARCHIVE.md](HANDOFF-ARCHIV
 
 ### Sessão N+1 (imediata) — QA s-checkpoint-1 + F2
 
-#### 1. MCPs acadêmicos — DONE (2026-03-21)
-- Scite, Perplexity, Consensus: todos funcionando e testados
-- Buscas realizadas: Scite tallies ACCORD (7.335/2.399), Ray (1.318/889), Valgimigli (não indexado)
-- evidence-db v5.6: NNH 95, paradoxo A1C, follow-ups, 7 RCTs, CYP2C19, Giacoppo
-- research-accord-valgimigli.md: briefing narrativo completo + PDFs para NotebookLM
-- Notes de s-checkpoint-1, s-ancora, s-aplicacao, s-aplicabilidade enriquecidas
+#### DONE nesta sessão (03-21b)
+- Notion sync completo: 4 slides + 9 references
+- 5 PMIDs corrigidos via PubMed MCP (ERRO-011). evidence-db v5.7
+- Mapa de fontes para retórica documentado (HANDOFF §Mapa de fontes)
+- ERROR-LOG, CHANGELOG, lessons.md atualizados
 
-#### 2. Pipeline QA (caminho crítico)
+#### Pipeline QA (caminho crítico)
 Proximo: s-checkpoint-1 (screenshots + scorecard 14-dim) → F2 em sequencia.
 - Criterios visuais elevados: beleza avancada + GSAP sofisticado
 - Gemini prompt v6.0 (10-dim, 5 personas, radical ideas forcing, temp 1.0)
 - Contexto sala: pequena, ~15 pessoas, 1-4m, iluminacao forte, TV LED — legibilidade constraint #1
 
-#### 4. Dark-bg reference (decide-se por slide)
+#### Dark-bg reference (decide-se por slide)
 - Ja dark: s-checkpoint-1, s-checkpoint-2
 - Propostos dark: s-forest-plot, s-heterogeneity, s-ancora, s-absoluto (CSS pronto)
 - Light: demais
@@ -111,6 +110,52 @@ Proximo: s-checkpoint-1 (screenshots + scorecard 14-dim) → F2 em sequencia.
 ### Opcional — Merge cirrose→main
 - Plano pronto (ver conversa anterior). Elimina WT cirrose permanentemente.
 - Sequência: push cirrose → merge --no-ff em main (ALLOW_MAIN_CONTENT=1) → remover WT → atualizar hooks → push
+
+## Mapa de fontes — retórica e conhecimento
+
+> Onde buscar informação para preparar a aula, responder arguição, e enriquecer slides.
+
+### Fontes internas (repo)
+
+| Fonte | Conteúdo | Quando usar |
+|-------|----------|-------------|
+| `references/evidence-db.md` | Todos dados clínicos verificados, PMIDs, números, Scite tallies | **Fonte canônica** para qualquer número em slide ou notes. Verificar aqui PRIMEIRO |
+| `references/research-accord-valgimigli.md` | Briefing narrativo ACCORD + Valgimigli (3 partes) + PDFs para NotebookLM | Prep arguição, entender contexto profundo dos 2 papers-âncora |
+| `references/narrative.md` | Arco narrativo, beats de tensão, papel de cada slide | Entender POR QUE cada slide existe, qual o punchline |
+| `references/blueprint.md` | Mapa slide-a-slide com evidências associadas | Visão global: qual slide cobre qual conceito |
+| `references/reading-list.md` | Pre-reading recomendado (4 papers) | Antes de começar a preparar a apresentação |
+| Speaker notes nos slides | Script retórico com timing [0:00-0:30] | Durante ensaio e apresentação. Inclui pausas, perguntas, ênfases |
+| `references/archetypes.md` | 6 layout patterns visuais | Referência de design ao criar/revisar slides |
+
+### Fontes externas (MCPs — verificação e aprofundamento)
+
+| MCP | O que faz | Quando usar | Auth |
+|-----|-----------|-------------|------|
+| **PubMed** | Metadata de artigos, busca por autor/título, verificação PMID | Verificar QUALQUER PMID antes de usar. Buscar papers novos | Sem auth |
+| **Scite** | Citation tallies (supporting/contrasting/mentioning), smart citations | Quanto um paper é contestado? Quem o apoia/questiona? | OAuth premium |
+| **Perplexity** | Respostas rápidas com citações, pesquisa profunda | "O que sabemos sobre X?" — factos rápidos, estado da arte | API key |
+| **Consensus** | Consenso da literatura sobre uma pergunta | "A evidência apoia X?" — visão quantitativa do campo | OAuth |
+| **Scholar Gateway** | Busca semântica em literatura | Busca exploratória por conceito (não por autor/PMID) | Sem auth |
+
+### Fontes externas (fora MCPs)
+
+| Fonte | O que faz | Quando usar |
+|-------|-----------|-------------|
+| **NotebookLM** | Q&A grounded em full-text de papers carregados | Perguntas profundas sobre um paper específico (ex: "qual foi a análise de sensibilidade do ACCORD?") |
+| **CAPES/USP** | Acesso a PDFs completos | Quando precisa ler o paper inteiro, cropar forest plots |
+| **Cochrane Library** | SRs exemplares, GRADE tables, forest plots | Exemplos visuais para slides de metodologia (F2) |
+
+### Fluxo de prep retórica (sugerido)
+
+1. **Ler** `narrative.md` → entender o arco (por que esta ordem?)
+2. **Ler** `evidence-db.md` → dominar os números (vão te perguntar)
+3. **Ler** `research-accord-valgimigli.md` → contexto profundo dos 2 papers-âncora
+4. **Ensaiar** com speaker notes dos slides (timing real)
+5. **Se pergunta surgir** → Perplexity (rápido) ou PubMed+Scite (verificado)
+6. **Se dado contestado** → Scite tallies (quantos suportam vs questionam)
+7. **Se precisar aprofundar** → NotebookLM (Q&A grounded no full-text)
+
+---
 
 ## Bloqueios conhecidos
 

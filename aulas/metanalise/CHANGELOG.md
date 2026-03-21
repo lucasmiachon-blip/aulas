@@ -5,6 +5,31 @@
 
 ---
 
+## 2026-03-21b — Notion sync + 5 PMID corrections (evidence-db v5.7)
+
+### Notion sync
+- **Slides DB:** 4 pages atualizadas (Speaker Notes EN): s-checkpoint-1, s-ancora, s-aplicacao, s-aplicabilidade
+- **References DB:** 9 papers criados com schema completo (AMA citation, PMID, DOI, Tier, Study Type, Aula relation)
+
+### PMID corrections (PubMed MCP verification)
+- 5/9 PMIDs gerados por LLM estavam **errados** — apontavam para papers completamente diferentes:
+  - ACCORD 5yr: 21067804 (CTT LDL cholesterol) → **21366473** (Gerstein NEJM)
+  - VADT 15yr: 31314966 (HIV testing Africa) → **31167051** (Reaven NEJM)
+  - Riddle 2010: 20103978 (squalene fractionation) → **20427682** (Riddle Diabetes Care)
+  - Bonds 2010: 20044403 (Varenicline/suicide) → **20061358** (Bonds BMJ)
+  - Giacoppo BMJ: 41649579 (Elbahloul Eur J Clin Pharmacol, 162.829 pts) → **40467090** (Giacoppo BMJ, 16.117 pts)
+- Corrigidos em: evidence-db.md, research-accord-valgimigli.md, 13-ancora.html, CHANGELOG.md
+
+### Problemas encontrados
+- PubMed MCP session expirada mid-use (retry resolveu)
+- Notion "Property Name not found" — schema usa "Citation" (não "Name"). Descoberto via notion-fetch
+- Giacoppo patient count errado (162.829 era do Elbahloul, paper diferente com PMID errado)
+
+### Verificação
+- Build: 18 slides OK. evidence-db v5.6→v5.7.
+
+---
+
 ## 2026-03-21 — MCP research enrichment (ACCORD + Valgimigli)
 
 ### Research (Scite + Perplexity + Consensus)

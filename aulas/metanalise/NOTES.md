@@ -289,6 +289,22 @@
 - Arquivos corrigidos: evidence-db.md, research-accord-valgimigli.md, 13-ancora.html, CHANGELOG.md
 - evidence-db bump: v5.6→v5.7 (PMID corrections)
 
+### Problemas encontrados na sessão Notion sync
+1. **PubMed MCP session expirou** mid-use ("MCP session has been terminated"). Retry imediato funcionou. Causa provável: OAuth timeout.
+2. **Notion schema ≠ assumido:** Tentamos criar pages com propriedade "Name" (padrão Notion) mas o References DB usa "Citation" como title property. Descoberto via `notion-fetch` do data_source — sempre verificar schema antes de criar.
+3. **PubMed metadata oversized:** Batch de 5 PMIDs retornou 86K chars. Solução: salvar em arquivo + parsear com `node -e`.
+4. **Giacoppo confusion:** PMID errado (41649579 = Elbahloul) tinha N=162.829 pts. PMID correto (40467090 = Giacoppo) tem N=16.117 pts. Dados errados haviam propagado para evidence-db e speaker notes. **Lição:** verificar patient count além de author/title.
+
+### ERRO-011 registrado
+- Taxa de erro PMID por LLM: 56% (5/9). Registrado em ERROR-LOG.md como ERRO-011 (HIGH).
+- Reforça regra existente em medical-data.md. Agora com dados quantitativos.
+
+### Mapa de fontes para retórica
+- Criado em HANDOFF.md (§Mapa de fontes — retórica e conhecimento)
+- Define ONDE buscar informação para: prep de aula, arguição, enriquecimento de slides
+- 3 camadas: fontes internas (repo), MCPs acadêmicos, fontes externas (NotebookLM, CAPES, Cochrane)
+- Fluxo sugerido: narrative.md → evidence-db → research-accord-valgimigli → ensaio → MCPs sob demanda
+
 ## 2026-03-21 — Sessão evolve + prep
 
 ### Evolve patches (aplicados em main)

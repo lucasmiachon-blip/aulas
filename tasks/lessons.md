@@ -75,8 +75,9 @@ Os agentes são **parceiros** que amplificam essas capacidades — não concorre
 
 | Pattern | Regra | Codificado em |
 |---------|-------|---------------|
-| NUNCA confiar em PMID gerado por LLM | 5/5 candidatos errados (GPT-5.4). Verificar via PubMed MCP | medical-data.md |
+| NUNCA confiar em PMID gerado por LLM | 5/9 errados (sessão 03-21, taxa 56%). Verificar via PubMed MCP. Confirmar author+title+N pts | medical-data.md, **ERRO-011** |
 | PMID correto em um doc, errado em outro | Ao fixar PMID, grep ALL occurrences e corrigir em todos | medical-data.md |
+| PMID errado pode apontar para paper similar | Giacoppo BMJ (16.117 pts) confundido com Elbahloul Eur J Clin Pharmacol (162.829 pts). Verificar N pts | **ERRO-011** |
 | HR ≠ RR ≠ OR | Trial isolado = HR. Meta-análise = RR. NUNCA misturar | **E25** |
 | Verificar POPULAÇÃO do trial | Prevenção 1ª ≠ 2ª. Trial de uma pop ≠ hero de outra | medical-data.md |
 | Incidência ≠ sobrevida pós-diagnóstico | Ex: Ioannou HCC — PMID 31374215 (sobrevida) ≠ PMID 31356807 (incidência) | — |
@@ -103,6 +104,15 @@ Os agentes são **parceiros** que amplificam essas capacidades — não concorre
 2. O ID mudou? → 9 superfícies completas (slide-identity.md)
 3. Dados mudaram? → notes [DATA] tag + grep docs
 4. Aula tem build script? → rodar antes de commit
+
+### MCPs acadêmicos
+
+| Pattern | Regra |
+|---------|-------|
+| PubMed MCP session expira | Retry funciona. Não assumir falha permanente |
+| Notion References DB schema: "Citation" não "Name" | Sempre descobrir schema via `notion-fetch` antes de criar pages. Property names não são óbvios |
+| Scite DOIs devem ser lowercase | Mixed-case retorna 0 resultados |
+| PubMed metadata response pode ser enorme | Batch de 5 PMIDs = 86K chars. Parsear com `node -e`, não ler direto |
 
 ### Infra
 
@@ -166,6 +176,13 @@ Os agentes são **parceiros** que amplificam essas capacidades — não concorre
 
 - VITALITY/UTI geraram tom "escandaloso". Lucas rejeitou: sóbrio e clínico > alarmista.
 - **Regra:** Framing clínico: "saber em quem confiar" > "a ciência está quebrada"
+
+### PMID verification — taxa de erro real
+
+- Sessão 03-21: 5 de 9 PMIDs gerados por LLM estavam errados (56%).
+- Papers errados eram de áreas completamente diferentes (squalene, HIV, varenicline).
+- Giacoppo confundido com Elbahloul: journals diferentes, N pts 10x diferente.
+- **Regra:** PubMed MCP search (autor+título+ano) → get_metadata → confirmar author+title+N pts. Registrado como ERRO-011.
 
 ### Siedler 2025 — framing correto
 
