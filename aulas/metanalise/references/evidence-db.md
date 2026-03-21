@@ -254,7 +254,7 @@ DOIs Scite (lowercase obrigatorio): `10.1056/nejmoa0802743`, `10.1016/s0140-6736
 | Hipoglicemia severa | 16,2% vs 5,1% (3x mais no intensivo) | Mas: HR morte pos-hipo STANDARD 2,93 vs INTENSIVO 1,79 |
 | A1C atingida | Intensivo 6,4% vs Standard 7,5% | Paradoxo A1C: nao-respondedores = maior risco (Riddle 2010) |
 
-### Paradoxo A1C (Riddle 2010, PMID 20103978)
+### Paradoxo A1C (Riddle 2010, PMID 20427682)
 
 No grupo intensivo, cada 1% de aumento na A1C media → HR 1,66 mortalidade (p<0,0001). No standard: HR 0,98 (NS). Interacao p=0,0007. Ajustando por A1C atingida, HR intensivo→standard SOBE de 1,22 para 1,82. Interpretacao: "insistencia cega mata" — nao-respondedores recebiam mais drogas sem beneficio.
 
@@ -263,9 +263,9 @@ No grupo intensivo, cada 1% de aumento na A1C media → HR 1,66 mortalidade (p<0
 | Follow-up | Mortalidade | IAM nao-fatal | Fonte |
 |-----------|-------------|---------------|-------|
 | 3,5 anos (original) | HR 1,22 (1,01-1,46) | HR 0,76 (0,62-0,92) | NEJM 2008, PMID 18539917 |
-| 5 anos | HR 1,19 (1,03-1,38) | HR 0,82 (0,70-0,96) | NEJM 2011, PMID 21067804 |
+| 5 anos | HR 1,19 (1,03-1,38) | HR 0,82 (0,70-0,96) | NEJM 2011, PMID 21366473 |
 | 9 anos | Morte CV HR 1,20 (1,03-1,39) | — | Diabetes Care 2016, PMID 26822326 |
-| VADT 15 anos (comparador) | HR 1,02 (0,88-1,18) = neutro | — | NEJM 2019, PMID 31314966 |
+| VADT 15 anos (comparador) | HR 1,02 (0,88-1,18) = neutro | — | NEJM 2019, PMID 31167051 |
 
 ### Notas para a aula
 
@@ -336,7 +336,7 @@ Pacientes com variantes de perda de função do CYP2C19 (poor metabolizers) AIND
 | Referência | PMID | Tipo |
 |-----------|------|------|
 | Valgimigli authors' reply (Lancet 2026) | 41763741 | Resposta a críticas |
-| Giacoppo et al. (BMJ 2025) — MA confirmatória | 41649579 | >162.000 pts incl observacionais. Confirmou: clopidogrel diminui MACE sem aumentar sangramento |
+| Giacoppo et al. (BMJ 2025) — MA confirmatória IPD | 40467090 | 16.117 pts, 5 RCTs pos-PCI. MACCE HR 0,77 (0,67-0,89). Confirmou clopidogrel sem aumento de sangramento |
 | NICE TA210 | — | Guideline UK: aspirina 1ª linha pós-IAM (clopidogrel só AVC/DAP/multivascular). Gap vs evidência Valgimigli |
 
 ---
@@ -365,6 +365,7 @@ Pacientes com variantes de perda de função do CYP2C19 (poor metabolizers) AIND
 
 | Data | Mudança |
 |------|---------|
+| 2026-03-21b | v5.7 — 5 PMIDs corrigidos via PubMed MCP (ACCORD 5yr→21366473, VADT→31167051, Riddle→20427682, Bonds→20061358, Giacoppo→40467090). Giacoppo: 162.829→16.117 pts (era paper errado). Notion References DB: 9 papers criados. |
 | 2026-03-21 | v5.6 — Scite tallies (ACCORD 7.335/2.399, Ray 1.318/889). NNH 95. Paradoxo A1C (Riddle 2010). Follow-ups 5yr/9yr/VADT-15yr. 7 RCTs nomeados. CYP2C19. Authors' reply + Giacoppo. research-accord-valgimigli.md criado. |
 | 2026-03-20 | v5.5 — +Ray 2009 (PMID 19465231) e ACCORD 2008 (PMID 18539917) para checkpoint 1. Nova seção "Checkpoint 1 — ACCORD trap". |
 | 2026-03-19 | v5.4 — PMID audit (reference-manager agent, 36 PMIDs): Guyatt BMJ 2008 PMID corrigido 21195583→18436948. Murad JAMA 2014 PMID 25005654 marcado [VERIFY] (resolve para artigo diferente). Brignardello-Petersen DOI corrigido kwae256→kwae332. |

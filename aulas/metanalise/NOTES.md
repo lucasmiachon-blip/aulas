@@ -275,7 +275,19 @@
 - `feedback_research_narrative_form.md` — pesquisa como narrativa detalhada + download URLs
 
 ### Slides avançados: 0 (sessão de pesquisa/enriquecimento — suporte legítimo para QA)
-### Notion: não atualizado (plano: próxima sessão)
+
+### Notion sync 2026-03-21 (executado em sessão seguinte)
+- **Slides DB:** 4 pages atualizadas (Speaker Notes EN): s-checkpoint-1, s-ancora, s-aplicacao, s-aplicabilidade
+- **References DB:** 9 papers criados (todos verificados via PubMed MCP):
+  - ACCORD 2008 (18539917), Ray 2009 (19465231), ACCORD 5yr (21366473), ACCORD 9yr (26822326), VADT 15yr (31167051), Riddle 2010 (20427682), Bonds 2010 (20061358), Giacoppo BMJ 2025 (40467090), Valgimigli reply (41763741)
+- **5 PMIDs corrigidos** (LLM havia gerado errados na sessão anterior):
+  - ACCORD 5yr: 21067804→21366473 (era CTT LDL cholesterol)
+  - VADT 15yr: 31314966→31167051 (era HIV testing study)
+  - Riddle 2010: 20103978→20427682 (era squalene fractionation)
+  - Bonds 2010: 20044403→20061358 (era Varenicline/suicide)
+  - Giacoppo BMJ: 41649579→40467090 (era Elbahloul Eur J Clin Pharmacol). Pts: 162.829→16.117
+- Arquivos corrigidos: evidence-db.md, research-accord-valgimigli.md, 13-ancora.html, CHANGELOG.md
+- evidence-db bump: v5.6→v5.7 (PMID corrections)
 
 ## 2026-03-21 — Sessão evolve + prep
 
@@ -300,3 +312,11 @@
 [2026-03-21 17:24] [BUILD] OK — npm run build:metanalise 2>&1
 
 [2026-03-21 17:39] [BUILD] OK — npm run build:metanalise 2>&1
+
+[2026-03-21 17:43] [Explore:a83686d9] — concluído. Status: PASS
+
+[2026-03-21 17:49] [unknown:a037d69e] — concluído. Status: PARTIAL
+
+[2026-03-21 18:01] [unknown:a69ad7d9] — concluído. Status: PASS
+
+[2026-03-21 18:02] [BUILD] OK — npm run build:metanalise

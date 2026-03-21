@@ -118,7 +118,7 @@ O NICE TA210 (Reino Unido) ainda recomenda aspirina como primeira linha pós-IAM
 
 Os autores reconhecem que clopidogrel pode custar mais que aspirina na maioria dos países e pedem estudos de custo-efetividade. Publicaram um authors' reply em fevereiro de 2026 (Lancet, PMID 41763741), respondendo a críticas — o conteúdo ainda não está disponível em abstract.
 
-Uma MA confirmatória de Giacoppo et al. (BMJ 2025, PMID 41649579) expandiu para >162.000 pacientes incluindo estudos observacionais e confirmou: clopidogrel diminui MACE sem aumentar sangramento pós-PCI.
+Uma MA confirmatória de Giacoppo et al. (BMJ 2025, PMID 40467090) reuniu dados individuais de 16.117 pacientes de 5 RCTs pós-PCI e confirmou: clopidogrel diminui MACCE (HR 0,77; 0,67-0,89) sem aumentar sangramento.
 
 ### Valgimigli no Scite
 
@@ -142,13 +142,13 @@ Os DOIs no Scite devem ser **lowercase**. Mixed-case retorna zero resultados.
 | Paper | PDF | PMC/DOI |
 |-------|-----|---------|
 | **ACCORD 2008** — Effects of Intensive Glucose Lowering in Type 2 Diabetes | [PDF NEJM](https://www.nejm.org/doi/pdf/10.1056/NEJMoa0802743) | PMID 18539917 |
-| **ACCORD 5yr follow-up 2011** — Long-Term Effects of Intensive Glucose Lowering on CV Outcomes | [PDF NEJM](https://www.nejm.org/doi/pdf/10.1056/NEJMoa1006524) | PMID 21067804 |
+| **ACCORD 5yr follow-up 2011** — Long-Term Effects of Intensive Glucose Lowering on CV Outcomes | [PDF NEJM](https://www.nejm.org/doi/pdf/10.1056/NEJMoa1006524) | PMID 21366473 |
 | **ACCORD IHD 2014** — Effects of intensive glycaemic control on ischaemic heart disease (Lancet) | [PDF UNC repo](https://cdr.lib.unc.edu/downloads/jq085t130) | DOI 10.1016/s0140-6736(14)60611-5 |
-| **VADT 15yr 2019** — Intensive Glucose Control — 15-Year Follow-up | [PDF NEJM](https://www.nejm.org/doi/pdf/10.1056/NEJMoa1806802) | PMID 31314966 |
+| **VADT 15yr 2019** — Intensive Glucose Control — 15-Year Follow-up | [PDF NEJM](https://www.nejm.org/doi/pdf/10.1056/NEJMoa1806802) | PMID 31167051 |
 | **Lachin 2010** — Chance vs mechanism: ACCORD mortality (Point) | [PMC2992220](https://pmc.ncbi.nlm.nih.gov/articles/PMC2992220/) | Diabetes Care |
 | **Riddle 2010** — Counterpoint: intensive glucose and mortality in ACCORD | [PMC2992221](https://pmc.ncbi.nlm.nih.gov/articles/PMC2992221/) | Diabetes Care |
-| **ACCORD A1C epidemiology 2010** — Riddle et al. Epidemiologic Relationships Between A1C and All-Cause Mortality | via PMC | PMID 20103978 |
-| **ACCORD Hypoglycemia-Mortality 2010** — Bonds et al. (BMJ) | via BMJ OA | PMID 20044403 |
+| **ACCORD A1C epidemiology 2010** — Riddle et al. Epidemiologic Relationships Between A1C and All-Cause Mortality | [PMC2858202](https://pmc.ncbi.nlm.nih.gov/articles/PMC2858202/) | PMID 20427682 |
+| **ACCORD Hypoglycemia-Mortality 2010** — Bonds et al. (BMJ) | [PMC2803744](https://pmc.ncbi.nlm.nih.gov/articles/PMC2803744/) | PMID 20061358 |
 
 ### Acesso via CAPES/institucional
 
@@ -163,7 +163,7 @@ Os DOIs no Scite devem ser **lowercase**. Mixed-case retorna zero resultados.
 
 **Notebook "ACCORD + Controle Glicemico"**: ACCORD 2008 + 5yr + 9yr + IHD 2014 + Lachin 2010 + Riddle 2010 + VADT 15yr + Ray 2009
 
-**Notebook "Valgimigli Clopidogrel vs Aspirina"**: Valgimigli 2025 + authors' reply 2026 + Giacoppo BMJ 2025 (PMID 41649579)
+**Notebook "Valgimigli Clopidogrel vs Aspirina"**: Valgimigli 2025 + authors' reply 2026 + Giacoppo BMJ 2025 (PMID 40467090)
 
 Queries sugeridas para nlm-skill:
 - "What are the proposed mechanisms for the excess mortality in the intensive group of the ACCORD trial?"

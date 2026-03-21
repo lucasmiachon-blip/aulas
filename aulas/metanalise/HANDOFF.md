@@ -11,14 +11,15 @@
 - **Slides:** 18/18 no deck (ver _manifest.js). Lint PASS. Orphans: 0.
 - **Ancora:** Valgimigli 2025 Lancet (PMID 40902613) — IPD-MA, 7 RCTs, 28.982 pts
 - **QA pipeline:** [WT-OPERATING.md §4](WT-OPERATING.md#4-qa-sub-loop-dentro-do-estado-qa). Gates 1-4: 18/18 PASS. Scorecards 14-dim: 3/18 (F1). DONE: 3/18 (s-title, s-hook, s-contrato).
-- **Docs:** narrative v2.5, evidence-db v5.6, blueprint v2.0, reading-list v0.4, research-accord-valgimigli v1.0
+- **Docs:** narrative v2.5, evidence-db v5.7, blueprint v2.0, reading-list v0.4, research-accord-valgimigli v1.0
 - **GSAP plugins:** SplitText + Flip + ScrambleTextPlugin (index.template.html)
 - **Gemini:** CLI headless (`scripts/gemini.mjs`, model `gemini-3.1-pro-preview`). Prompt v6.0 (`docs/prompts/gemini-slide-qa.md`). Output: `.audit/{id}_result.json`.
 - **Dark-bg:** 6 slides (ver NOTES.md §dark-bg reference map). Novos slides dark = adicionar ID ao seletor em metanalise.css.
 - **HEX navy:** #162032 (decisao Lucas)
 - **Reveal.js:** REMOVIDO (ERRO-010)
 - **Backlog CSS:** ~40 refs `--on-dark` tokens (funcional, naming misleading). Cleanup futuro.
-- **Notion Slides DB:** 18/18 slides sincronizados (2026-03-19). Schema correto: Slide ID, Bloco Narrativo MA-F1/I1/F2/I2/F3, Headline PT/EN, Corpo, Speaker Notes EN, Pipeline Status, pos, tempo, animacao, objetivo, GRADE, PMID, DOI, NNT. Bloqueio anterior resolvido: DB nao precisa de prop Aula separada (relation funciona). Scrips: notion_batch_f2f3.cjs (removido pos-execucao).
+- **Notion Slides DB:** 18/18 slides sincronizados (2026-03-21). 4 slides atualizados (Speaker Notes EN): s-checkpoint-1, s-ancora, s-aplicacao, s-aplicabilidade.
+- **Notion References DB:** 9 papers criados (2026-03-21): ACCORD 2008, Ray 2009, ACCORD 5yr, ACCORD 9yr, VADT 15yr, Riddle 2010, Bonds 2010, Giacoppo 2025, Valgimigli reply 2026. 5 PMIDs corrigidos via PubMed MCP.
 
 ## Estado dos Slides (maquina de estados — WT-OPERATING.md)
 
