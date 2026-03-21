@@ -109,7 +109,7 @@ Pipeline completo: WT-OPERATING.md §4 (QA.3).
 | Ancora | Valgimigli 2025 Lancet (PMID 40902613) |
 | Gates 1-4 | 18/18 PASS |
 | Scorecards 14-dim | 3/18 (F1 DONE): s-title, s-hook (avg 9.36), s-contrato. s-checkpoint-1 em QA. |
-| Docs | narrative v2.5, blueprint v2.0, evidence-db v5.5 |
+| Docs | narrative v2.5, blueprint v2.0, evidence-db v5.6, research-accord-valgimigli v1.0 |
 | Main sync | e77dcec (2026-03-22) |
 
 Detalhes QA por slide: HANDOFF.md. Pipeline: WT-OPERATING.md §4.

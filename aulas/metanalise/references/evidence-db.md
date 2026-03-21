@@ -236,6 +236,37 @@
 |----------|--------|--------|---|------|
 | Mortalidade total | HR 1,22 | 1,01–1,46 | 0,04 | Interrompido precocemente por excesso de mortalidade |
 
+### Scite tallies (2026-03-21)
+
+| Paper | Citing | Smart | Supporting | Contrasting | Mentioning |
+|-------|--------|-------|------------|-------------|------------|
+| ACCORD (PMID 18539917) | 7.335 | 2.399 | 64 | 15 | 2.320 |
+| Ray 2009 (PMID 19465231) | 1.318 | 889 | 23 | 5 | 806 |
+
+DOIs Scite (lowercase obrigatorio): `10.1056/nejmoa0802743`, `10.1016/s0140-6736(09)60697-8`
+
+### Dados expandidos — ACCORD
+
+| Dado | Valor | Nota |
+|------|-------|------|
+| NNH (mortalidade) | **95** (1 morte extra / 95 tratados / 3,5 anos) | Autores: "one death for every 95 patients treated for 3.5 years" |
+| IAM nao-fatal | HR 0,76 (0,62-0,92) | Paradoxo: preveniu IAM E aumentou mortalidade |
+| Hipoglicemia severa | 16,2% vs 5,1% (3x mais no intensivo) | Mas: HR morte pos-hipo STANDARD 2,93 vs INTENSIVO 1,79 |
+| A1C atingida | Intensivo 6,4% vs Standard 7,5% | Paradoxo A1C: nao-respondedores = maior risco (Riddle 2010) |
+
+### Paradoxo A1C (Riddle 2010, PMID 20103978)
+
+No grupo intensivo, cada 1% de aumento na A1C media → HR 1,66 mortalidade (p<0,0001). No standard: HR 0,98 (NS). Interacao p=0,0007. Ajustando por A1C atingida, HR intensivo→standard SOBE de 1,22 para 1,82. Interpretacao: "insistencia cega mata" — nao-respondedores recebiam mais drogas sem beneficio.
+
+### Follow-ups ACCORD
+
+| Follow-up | Mortalidade | IAM nao-fatal | Fonte |
+|-----------|-------------|---------------|-------|
+| 3,5 anos (original) | HR 1,22 (1,01-1,46) | HR 0,76 (0,62-0,92) | NEJM 2008, PMID 18539917 |
+| 5 anos | HR 1,19 (1,03-1,38) | HR 0,82 (0,70-0,96) | NEJM 2011, PMID 21067804 |
+| 9 anos | Morte CV HR 1,20 (1,03-1,39) | — | Diabetes Care 2016, PMID 26822326 |
+| VADT 15 anos (comparador) | HR 1,02 (0,88-1,18) = neutro | — | NEJM 2019, PMID 31314966 |
+
 ### Notas para a aula
 
 - ACCORD era o maior trial (31% do N total) e foi interrompido por excesso de mortalidade
@@ -243,6 +274,10 @@
 - Função didática: "olhar dentro do diamante" — a soma esconde a parte
 - Usado como armadilha no checkpoint 1 (antes de ensinar forest plot)
 - Outros trials na MA: UKPDS, ADVANCE, VADT, PROactive
+- NNH 95 = dado clinicamente ressonante para arguicao
+- Paradoxo A1C: material para responder "mas por que morreram mais?"
+- 15 contrasting citations no Scite = comunidade nao aceitou passivamente
+- Narrativa briefing completo: `research-accord-valgimigli.md`
 
 ---
 
@@ -276,6 +311,33 @@
 | PROSPERO | CRD42025645594 |
 | Acesso | Abstract aberto (Lancet) |
 | Nota | IPD (não pairwise clássica). HR (não RR). Tema universal |
+| Scite | Não indexado (publicado ago 2025). Consensus: 5 citações |
+
+### 7 RCTs incluídos
+
+| Trial | País | N | Destaque |
+|-------|------|---|----------|
+| CAPRIE (1996) | Internacional | 19.185 | O avô — primeiro clopidogrel vs aspirina. Pop mista (AVC, IAM, DAP) |
+| HOST-EXAM | Coreia | 5.530 | Pós-PCI, follow-up longo |
+| STOPDAPT-2 | Japão | — | Curta DAPT → monoterapia |
+| STOPDAPT-3 | Japão | — | Curta DAPT → monoterapia |
+| SMART-CHOICE | Coreia | — | P2Y12 vs aspirina pós-PCI |
+| ASCET | Noruega | — | DAC estável |
+| CADET | — | — | Menor, confirmatório |
+
+Generalização: dados orientais (Coreia, Japão) + ocidentais (Europa, CAPRIE). Idade média 66a, 22% mulheres.
+
+### CYP2C19 — achado pré-especificado
+
+Pacientes com variantes de perda de função do CYP2C19 (poor metabolizers) AINDA se beneficiaram do clopidogrel sobre aspirina. ACC editorial: "Even patients with impaired responsiveness to clopidogrel because of genetic or clinical factors still benefited from its use over aspirin." Relevante para s-aplicabilidade.
+
+### Artigos relacionados
+
+| Referência | PMID | Tipo |
+|-----------|------|------|
+| Valgimigli authors' reply (Lancet 2026) | 41763741 | Resposta a críticas |
+| Giacoppo et al. (BMJ 2025) — MA confirmatória | 41649579 | >162.000 pts incl observacionais. Confirmou: clopidogrel diminui MACE sem aumentar sangramento |
+| NICE TA210 | — | Guideline UK: aspirina 1ª linha pós-IAM (clopidogrel só AVC/DAP/multivascular). Gap vs evidência Valgimigli |
 
 ---
 
@@ -303,6 +365,7 @@
 
 | Data | Mudança |
 |------|---------|
+| 2026-03-21 | v5.6 — Scite tallies (ACCORD 7.335/2.399, Ray 1.318/889). NNH 95. Paradoxo A1C (Riddle 2010). Follow-ups 5yr/9yr/VADT-15yr. 7 RCTs nomeados. CYP2C19. Authors' reply + Giacoppo. research-accord-valgimigli.md criado. |
 | 2026-03-20 | v5.5 — +Ray 2009 (PMID 19465231) e ACCORD 2008 (PMID 18539917) para checkpoint 1. Nova seção "Checkpoint 1 — ACCORD trap". |
 | 2026-03-19 | v5.4 — PMID audit (reference-manager agent, 36 PMIDs): Guyatt BMJ 2008 PMID corrigido 21195583→18436948. Murad JAMA 2014 PMID 25005654 marcado [VERIFY] (resolve para artigo diferente). Brignardello-Petersen DOI corrigido kwae256→kwae332. |
 | 2026-03-19 | v5.3 — Siedler PMID 40969451 verificado. Journal corrigido: Cochrane Evid Synth Methods (não J Clin Epidemiol). Framing corrigido: 33,8% = SRs que avaliaram certeza (não % com certeza moderada/alta). Higgins & Lopez-Lopez DOI verificado (10.1017/rsm.2025.10062), PMID não indexado (epub Dez 2025). |

@@ -247,6 +247,36 @@
 
 [2026-03-21 14:35] [general-purpose:a65ae895] — concluído. Status: PARTIAL
 
+## 2026-03-21 — Sessão MCP research (ACCORD + Valgimigli enrichment)
+
+### MCPs testados e configurados
+- **Scite:** OAuth via `/mcp`. Premium. DOIs devem ser lowercase (mixed-case retorna 0).
+- **Perplexity:** API key (stdio). Funcionando (search, ask, research, reason).
+- **Consensus:** OAuth via `/mcp`. 200M+ papers.
+- PubMed e Scholar Gateway: já funcionavam.
+
+### Queries executadas
+- Scite: ACCORD (DOI lowercase) → 7.335 citing, 2.399 smart, 64 supporting, 15 contrasting
+- Scite: Ray 2009 → 1.318 citing, 889 smart, 23 supporting, 5 contrasting
+- Scite: Valgimigli → não indexado (ago 2025)
+- Perplexity: ACCORD mechanisms, A1C paradox, VADT comparison
+- Consensus: Valgimigli 2025 (5 citações), Giacoppo BMJ 2025 (confirmação)
+
+### Artefatos criados/atualizados
+1. **`references/research-accord-valgimigli.md`** — briefing narrativo completo (Partes 1-3) + PDFs para NotebookLM
+2. **`references/evidence-db.md`** v5.6 — Scite tallies, NNH 95, paradoxo A1C, follow-ups, 7 RCTs, CYP2C19, authors' reply, Giacoppo
+3. **`slides/03-checkpoint-1.html`** — notes enriquecidas com contexto ACCORD para arguição
+4. **`slides/13-ancora.html`** — notes com 7 RCTs nomeados, Scite status, Giacoppo
+5. **`slides/14-aplicacao.html`** — notes com NICE gap, custo, lacuna GRADE
+6. **`slides/15-aplicabilidade.html`** — notes com CYP2C19 e generalização geográfica
+
+### Memories salvos
+- `reference_scite_dois.md` — DOIs lowercase para Scite
+- `feedback_research_narrative_form.md` — pesquisa como narrativa detalhada + download URLs
+
+### Slides avançados: 0 (sessão de pesquisa/enriquecimento — suporte legítimo para QA)
+### Notion: não atualizado (plano: próxima sessão)
+
 ## 2026-03-21 — Sessão evolve + prep
 
 ### Evolve patches (aplicados em main)
@@ -258,3 +288,15 @@
 - Perplexity API key configurada
 - Scite OAuth configurado
 - Buscas Scite (ACCORD, Valgimigli, Ray) deferidas — não bloqueiam QA visual
+
+[2026-03-21 15:38] [medical-researcher:a4382197] — concluído. Status: PARTIAL
+
+[2026-03-21 15:38] [medical-researcher:a822e95b] — concluído. Status: PASS
+
+[2026-03-21 15:41] [medical-researcher:a8f9ef71] — concluído. Status: PASS
+
+[2026-03-21 17:16] [unknown:ad22a6cc] — concluído. Status: PASS
+
+[2026-03-21 17:24] [BUILD] OK — npm run build:metanalise 2>&1
+
+[2026-03-21 17:39] [BUILD] OK — npm run build:metanalise 2>&1

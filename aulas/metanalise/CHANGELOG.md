@@ -5,6 +5,28 @@
 
 ---
 
+## 2026-03-21 — MCP research enrichment (ACCORD + Valgimigli)
+
+### Research (Scite + Perplexity + Consensus)
+- MCPs configurados e testados: Scite (OAuth premium), Perplexity (API key), Consensus (OAuth)
+- Scite tallies: ACCORD 7.335 citing / 2.399 smart (64 supporting, 15 contrasting). Ray 1.318 / 889 (23/5). Valgimigli não indexado.
+- Perplexity: ACCORD mechanisms, A1C paradox, VADT 15yr comparison
+- Consensus: Valgimigli 5 citações, Giacoppo BMJ 2025 confirmação
+
+### Artefatos
+- **`references/research-accord-valgimigli.md`** (NOVO): briefing narrativo completo (3 partes) + tabela PDFs para NotebookLM
+- **`references/evidence-db.md`** v5.5→v5.6: Scite tallies, NNH 95, paradoxo A1C (Riddle 2010), follow-ups (5yr/9yr/VADT-15yr), 7 RCTs nomeados, CYP2C19, authors' reply (PMID 41763741), Giacoppo BMJ (PMID 41649579)
+- **`slides/03-checkpoint-1.html`**: notes enriquecidas — contexto ACCORD para arguição (4 hipóteses, paradoxo A1C, follow-ups, NNH 95)
+- **`slides/13-ancora.html`**: notes — 7 RCTs nomeados, modelo IPD, Scite/Consensus status, Giacoppo
+- **`slides/14-aplicacao.html`**: notes — NICE gap, custo, lacuna GRADE
+- **`slides/15-aplicabilidade.html`**: notes — CYP2C19 achado pré-especificado, generalização geográfica
+
+### Verificação
+- Build: 18 slides OK. Lint: clean.
+- Zero mudanças em HTML projetado (apenas `<aside class="notes">`)
+
+---
+
 ## 2026-03-20c — qa-video.js 3 bug fixes (deck.js compat)
 
 ### Fixes (scripts/qa/qa-video.js)

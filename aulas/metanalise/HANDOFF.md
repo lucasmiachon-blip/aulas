@@ -11,7 +11,7 @@
 - **Slides:** 18/18 no deck (ver _manifest.js). Lint PASS. Orphans: 0.
 - **Ancora:** Valgimigli 2025 Lancet (PMID 40902613) — IPD-MA, 7 RCTs, 28.982 pts
 - **QA pipeline:** [WT-OPERATING.md §4](WT-OPERATING.md#4-qa-sub-loop-dentro-do-estado-qa). Gates 1-4: 18/18 PASS. Scorecards 14-dim: 3/18 (F1). DONE: 3/18 (s-title, s-hook, s-contrato).
-- **Docs:** narrative v2.5, evidence-db v5.5, blueprint v2.0, reading-list v0.4
+- **Docs:** narrative v2.5, evidence-db v5.6, blueprint v2.0, reading-list v0.4, research-accord-valgimigli v1.0
 - **GSAP plugins:** SplitText + Flip + ScrambleTextPlugin (index.template.html)
 - **Gemini:** CLI headless (`scripts/gemini.mjs`, model `gemini-3.1-pro-preview`). Prompt v6.0 (`docs/prompts/gemini-slide-qa.md`). Output: `.audit/{id}_result.json`.
 - **Dark-bg:** 6 slides (ver NOTES.md §dark-bg reference map). Novos slides dark = adicionar ID ao seletor em metanalise.css.
@@ -37,7 +37,7 @@
 
 | # | Slide | Estado | Notas |
 |---|-------|--------|-------|
-| 4 | s-checkpoint-1 | QA | Reescrito com ACCORD trap (Ray 2009 + ACCORD 2008). 3-beat liquidificador. Build+lint PASS. Slide-punch 6/6 PASS (ENCAIXADO). Scorecard 14-dim + screenshots pendentes. |
+| 4 | s-checkpoint-1 | QA | Reescrito com ACCORD trap (Ray 2009 + ACCORD 2008). 3-beat liquidificador. Build+lint PASS. Slide-punch 6/6 PASS (ENCAIXADO). Notes enriquecidas com NNH 95, paradoxo A1C, follow-ups, 4 hipoteses. Scorecard 14-dim + screenshots pendentes. |
 
 ### F2 — Metodologia (8 slides)
 
@@ -62,9 +62,9 @@
 
 | # | Slide | Estado | Notas |
 |---|-------|--------|-------|
-| 14 | s-ancora | LINT-PASS | Gates 1-4 PASS. Scorecard 14-dim pendente. |
-| 15 | s-aplicacao | LINT-PASS | Gates 1-4 PASS. Scorecard 14-dim pendente. |
-| 16 | s-aplicabilidade | LINT-PASS | Gates 1-4 PASS. Scorecard 14-dim pendente. |
+| 14 | s-ancora | LINT-PASS | Gates 1-4 PASS. Notes enriquecidas: 7 RCTs nomeados, modelo IPD, Scite status, Giacoppo BMJ. Scorecard 14-dim pendente. |
+| 15 | s-aplicacao | LINT-PASS | Gates 1-4 PASS. Notes enriquecidas: NICE gap, custo, lacuna GRADE. Scorecard 14-dim pendente. |
+| 16 | s-aplicabilidade | LINT-PASS | Gates 1-4 PASS. Notes enriquecidas: CYP2C19, generalizacao geografica. Scorecard 14-dim pendente. |
 | 17 | s-absoluto | LINT-PASS | Gates 1-4 PASS. Scorecard 14-dim pendente. |
 | 18 | s-takehome | LINT-PASS | Gates 1-4 PASS. Scorecard 14-dim pendente. |
 
@@ -84,13 +84,12 @@ Trabalho completado e decisões tomadas: ver [HANDOFF-ARCHIVE.md](HANDOFF-ARCHIV
 
 ### Sessão N+1 (imediata) — QA s-checkpoint-1 + F2
 
-#### 1. Scite + Perplexity (preparados, próxima sessão)
-- Perplexity API key configurada no `.env`
-- Scite OAuth configurado
-- Buscas pendentes (enriquecem notes, não bloqueiam QA visual):
-  - ACCORD 5 contrasting citations
-  - Valgimigli 2025 citation tallies
-  - Ray 2009 contrasting
+#### 1. MCPs acadêmicos — DONE (2026-03-21)
+- Scite, Perplexity, Consensus: todos funcionando e testados
+- Buscas realizadas: Scite tallies ACCORD (7.335/2.399), Ray (1.318/889), Valgimigli (não indexado)
+- evidence-db v5.6: NNH 95, paradoxo A1C, follow-ups, 7 RCTs, CYP2C19, Giacoppo
+- research-accord-valgimigli.md: briefing narrativo completo + PDFs para NotebookLM
+- Notes de s-checkpoint-1, s-ancora, s-aplicacao, s-aplicabilidade enriquecidas
 
 #### 2. Pipeline QA (caminho crítico)
 Proximo: s-checkpoint-1 (screenshots + scorecard 14-dim) → F2 em sequencia.
@@ -129,4 +128,4 @@ Proximo: s-checkpoint-1 (screenshots + scorecard 14-dim) → F2 em sequencia.
 - Não expandir para NMA, IPD, bayesiana
 - Não fazer build de producao antes de QA visual completo
 
-> Sessoes anteriores (2026-03-14 a 2026-03-22): [HANDOFF-ARCHIVE.md](HANDOFF-ARCHIVE.md)
+> Sessoes anteriores (2026-03-14 a 2026-03-21): [HANDOFF-ARCHIVE.md](HANDOFF-ARCHIVE.md)

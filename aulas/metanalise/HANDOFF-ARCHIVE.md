@@ -17,7 +17,7 @@
 
 ---
 
-## Sessoes (03-14 → 03-22)
+## Sessoes (03-14 → 03-21)
 
 | Sessao | Resumo |
 |--------|--------|
@@ -48,7 +48,9 @@
 | 03-18 | QA refs + specificity fixes, QA s-title PASS, merge main (5406dd8) |
 | 03-22 | Hardening P3: diagnostico WT, merge main (e77dcec→2bf9740), todo.md cleanup |
 | 03-22b | HANDOFF cleanup (-57% archive), janitor WT (2 dead CSS, 6 debug PNGs), 3 orphan scripts deferridos para main |
+| 03-21a | Evolve patches em main (XREF hooks, lessons Vite 8). Prep Scite/Perplexity. |
+| 03-21b | MCP research enrichment: Scite+Perplexity+Consensus testados. evidence-db v5.6 (tallies, NNH, paradoxo A1C, follow-ups, 7 RCTs, CYP2C19). research-accord-valgimigli.md criado. Notes enriquecidas (checkpoint-1, ancora, aplicacao, aplicabilidade). |
 
 ---
 
-## Ultima atualizacao: 2026-03-22
+## Ultima atualizacao: 2026-03-21
