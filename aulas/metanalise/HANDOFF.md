@@ -76,6 +76,17 @@
 
 ---
 
+## Sessao 2026-03-22 — Hardening P3
+
+- Diagnostico completo da WT (read-only): git state, disco, docs, configs, slides, scripts
+- Merge main (`e77dcec` → `2bf9740`): 4 orphan scripts removidos, docs movidos para archive, conflito trivial package.json resolvido (build:metanalise duplicado em ambos lados)
+- `tasks/todo.md` atualizado: Gemini setup marcado DONE, secao MEDIA eliminada, backlog atualizado
+- CLAUDE.md (aula): main sync atualizado para e77dcec
+- Push OK (3 commits)
+- Zero slides tocados. Sessao de infra pura.
+
+---
+
 ## Histórico
 
 Trabalho completado e decisões tomadas: ver [HANDOFF-ARCHIVE.md](HANDOFF-ARCHIVE.md)
