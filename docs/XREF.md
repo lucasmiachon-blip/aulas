@@ -111,7 +111,7 @@ CLAUDE.md (root)              ← fonte de verdade operacional (absorveu AGENTS.
 
 | Arquivo | Wired em settings.json | Função |
 |---------|----------------------|--------|
-| audit-trail.sh | PostToolUse, PostToolUseFailure (*) | P0 traceability — JSONL log de toda tool call |
+| audit-trail.sh | PostToolUse, PostToolUseFailure (Write\|Edit\|StrReplace\|Bash\|Agent\|Skill\|NotebookEdit\|TaskCreate\|TaskUpdate) | P0 traceability — JSONL log de toda tool call |
 | build-monitor.sh | PostToolUse, PostToolUseFailure (Bash) | Detecta falhas de build |
 | check-evidence-db.sh | PreToolUse (Write) | Valida dados clínicos antes de escrever |
 | guard-evidence-db.sh | PreToolUse (Write) | Protege evidence-db de edições não autorizadas |
@@ -123,6 +123,8 @@ CLAUDE.md (root)              ← fonte de verdade operacional (absorveu AGENTS.
 | post-compact-reinject.sh | SessionStart (compact) | Reinjecta HANDOFF + git log após /compact |
 | session-tracker.sh | SessionStart, SessionEnd | Lifecycle de sessão (3-terminal tracking) |
 | subagent-stop-log.sh | SubagentStop | Loga conclusão de subagents |
+| teammate-idle-gate.sh | TeammateIdle | Gate: pausa quando teammate idle |
+| task-completed-gate.sh | TaskCompleted | Gate: valida task completion |
 
 ### .claude/scripts/
 

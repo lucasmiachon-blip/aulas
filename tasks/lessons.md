@@ -328,3 +328,7 @@ Tokens não importam. Retrabalho é sinal de aprendizado — mas não pode paral
 - `::before/::after { flex: 1 }` em containers base compartilhados PROIBIDO.
 - Participam do layout flex → com gap ou flex:1 children, produzem efeitos colaterais.
 - Codificado como E32 em css-errors.md. Lesson detalhada: sessao 16/mar neste arquivo.
+
+### Vite 8 (Rolldown) disponível
+
+- NÃO upgradar até pós-merge. Breaking: rollupOptions → rolldownOptions, CJS interop mudou.
