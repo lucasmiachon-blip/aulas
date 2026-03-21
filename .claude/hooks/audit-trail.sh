@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# P0: Audit Trail — logs EVERY tool call to daily JSONL
-# WT-aware: detects if running inside a git worktree and logs it
-# Uses node for JSON parsing (no jq on this Windows setup)
+# P0: Audit Trail — logs tool calls to daily JSONL
+# WT-aware: detects if running inside a git worktree
+# Pure bash — no node/jq dependency
 # Output: ~/.claude/session-logs/YYYY-MM-DD.jsonl
 
 set -euo pipefail
@@ -12,33 +12,63 @@ DIR="$HOME/.claude/session-logs"
 mkdir -p "$DIR"
 LOGFILE="$DIR/$(date +%Y-%m-%d).jsonl"
 
-# Detect worktree context
-BRANCH=$(git branch --show-current 2>/dev/null || echo "detached")
-GIT_DIR=$(git rev-parse --git-dir 2>/dev/null || echo ".git")
+# Single git call: line 1 = branch, line 2 = git-dir
+GIT_INFO=$(git rev-parse --abbrev-ref HEAD --git-dir 2>/dev/null || true)
+BRANCH="${GIT_INFO%%$'\n'*}"
+GIT_DIR="${GIT_INFO##*$'\n'}"
+BRANCH=${BRANCH:-detached}
+
+# Detect worktree from git-dir path
 WORKTREE=""
-if echo "$GIT_DIR" | grep -q "worktrees"; then
-  # Inside a worktree: extract WT name from path
-  WORKTREE=$(basename "$(echo "$GIT_DIR" | sed 's|/.git/worktrees/.*||')" 2>/dev/null || echo "")
+if [[ "${GIT_DIR:-}" == *worktrees* ]]; then
+  _tmp="${GIT_DIR%%/.git/worktrees/*}"
+  WORKTREE="${_tmp##*/}"
 fi
 
-node -e "
-const input = JSON.parse(process.argv[1] || '{}');
-const ti = input.tool_input || {};
-let detail = ti.file_path || ti.pattern || ti.skill || '?';
-if (ti.command) detail = ti.command.split('\\n')[0].slice(0, 120);
-if (ti.prompt) detail = ti.prompt.slice(0, 80);
-if (ti.query) detail = ti.query.slice(0, 80);
-const entry = {
-  ts: new Date().toISOString(),
-  tool: input.tool_name || 'unknown',
-  session: input.session_id || 'no-session',
-  detail,
-  cwd: process.cwd(),
-  branch: process.argv[2],
-  worktree: process.argv[3] || null
-};
-if (input.duration_ms) entry.duration_ms = input.duration_ms;
-console.log(JSON.stringify(entry));
-" "$INPUT" "$BRANCH" "$WORKTREE" >> "$LOGFILE" 2>/dev/null
+# Extract JSON string value (pure bash regex — no grep/sed)
+jv() {
+  local re="\"$1\":\"([^\"]*)\""
+  if [[ "$INPUT" =~ $re ]]; then
+    printf '%s' "${BASH_REMATCH[1]}"
+  fi
+}
+
+TOOL=$(jv tool_name);    TOOL=${TOOL:-unknown}
+SESSION=$(jv session_id); SESSION=${SESSION:-no-session}
+
+# Detail priority: query > prompt > command > file_path > pattern > skill > ?
+DETAIL=$(jv file_path)
+[[ -z "$DETAIL" ]] && DETAIL=$(jv pattern)
+[[ -z "$DETAIL" ]] && DETAIL=$(jv skill)
+DETAIL=${DETAIL:-?}
+
+CMD=$(jv command)
+if [[ -n "$CMD" ]]; then
+  DETAIL="${CMD%%\\n*}"; DETAIL="${DETAIL:0:120}"
+fi
+_p=$(jv prompt);  [[ -n "$_p" ]] && DETAIL="${_p:0:80}"
+_q=$(jv query);   [[ -n "$_q" ]] && DETAIL="${_q:0:80}"
+
+# JSON-escape: \ → \\, " → \"
+esc() { local s="${1//\\/\\\\}"; printf '%s' "${s//\"/\\\"}"; }
+
+TS=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+
+# Build JSONL entry
+LINE=$(printf '{"ts":"%s","tool":"%s","session":"%s","detail":"%s","cwd":"%s","branch":"%s"' \
+  "$TS" "$(esc "$TOOL")" "$(esc "$SESSION")" "$(esc "$DETAIL")" "$(esc "$PWD")" "$(esc "$BRANCH")")
+
+if [[ -n "$WORKTREE" ]]; then
+  LINE+=$(printf ',"worktree":"%s"' "$(esc "$WORKTREE")")
+else
+  LINE+=',"worktree":null'
+fi
+
+# duration_ms (number — no escaping needed)
+_dur_re='"duration_ms":([0-9]+)'
+[[ "$INPUT" =~ $_dur_re ]] && LINE+=$(printf ',"duration_ms":%s' "${BASH_REMATCH[1]}")
+
+LINE+='}'
+echo "$LINE" >> "$LOGFILE" 2>/dev/null
 
 exit 0
