@@ -312,6 +312,36 @@ Gemini: `gemini-3.1-pro-preview` via CLI headless (`scripts/gemini.mjs`). Chamad
 
 ---
 
+## 9a. Regras de Sessao (Estabilidade)
+
+### Regras de sessão
+
+- **Restart obrigatório a cada 2-3h de uso.** `/compact` NÃO reinicia o processo Bun.
+  Fechar e reabrir o Claude Code é a única forma de liberar memória.
+- **Commitar checkpoint antes de sessões QA/Playwright.**
+  Formato: `wip: checkpoint <contexto> antes de <operação pesada>`
+- **Monitorar RAM no Task Manager** durante sessões com Playwright.
+  Se RSS > 3GB: parar, commitar, reiniciar.
+
+### Playwright — regra obrigatória
+
+Toda sessão que usar Playwright DEVE chamar `browser_close()` ao terminar capturas.
+Chromium headless consome 300-500MB por instância. Sem close, acumula até crashar.
+
+Sequência correta:
+1. browser_launch()
+2. navigate + screenshots (quantos precisar)
+3. browser_close()  ← OBRIGATÓRIO
+4. Só então seguir com auditoria Gemini ou outras tarefas
+
+### Limites por sessão de QA
+
+- Max 4-5 slides por sessão de Playwright (não 15 de uma vez)
+- browser_close() entre cada batch
+- Restart Claude Code entre batches se sessão > 2h
+
+---
+
 ## 10. Estado dos Slides (referencia → HANDOFF.md)
 
 A tabela canonica de estados vive em `HANDOFF.md`, secao "Estado dos Slides".
