@@ -76,17 +76,6 @@
 
 ---
 
-## Sessao 2026-03-22 — Hardening P3
-
-- Diagnostico completo da WT (read-only): git state, disco, docs, configs, slides, scripts
-- Merge main (`e77dcec` → `2bf9740`): 4 orphan scripts removidos, docs movidos para archive, conflito trivial package.json resolvido (build:metanalise duplicado em ambos lados)
-- `tasks/todo.md` atualizado: Gemini setup marcado DONE, secao MEDIA eliminada, backlog atualizado
-- CLAUDE.md (aula): main sync atualizado para e77dcec
-- Push OK (3 commits)
-- Zero slides tocados. Sessao de infra pura.
-
----
-
 ## Histórico
 
 Trabalho completado e decisões tomadas: ver [HANDOFF-ARCHIVE.md](HANDOFF-ARCHIVE.md)
@@ -134,7 +123,6 @@ Proximo: s-checkpoint-1 (screenshots + scorecard 14-dim) → F2 em sequencia.
 ## Pendências para main (Classe B — não editar na WT)
 
 - **lint-slides.js false positive:** `scripts/lint-slides.js:110` — `data-animate="countUp"` sem `data-target` não pula `<script>` blocks. 2 false positives no index.html built. **Fix preparado:** context-aware check (3 linhas antes/depois). Aplicar em main.
-- ~~**Scripts orphans (main):**~~ RESOLVIDO — removidos em `e77dcec`, absorvidos via merge `2bf9740` (2026-03-22).
 
 ## Não fazer ainda
 
@@ -142,4 +130,4 @@ Proximo: s-checkpoint-1 (screenshots + scorecard 14-dim) → F2 em sequencia.
 - Não expandir para NMA, IPD, bayesiana
 - Não fazer build de producao antes de QA visual completo
 
-> Sessoes anteriores (2026-03-14 a 2026-03-18): [HANDOFF-ARCHIVE.md](HANDOFF-ARCHIVE.md)
+> Sessoes anteriores (2026-03-14 a 2026-03-22): [HANDOFF-ARCHIVE.md](HANDOFF-ARCHIVE.md)
