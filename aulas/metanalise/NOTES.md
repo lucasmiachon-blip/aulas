@@ -336,3 +336,14 @@
 [2026-03-21 18:01] [unknown:a69ad7d9] — concluído. Status: PASS
 
 [2026-03-21 18:02] [BUILD] OK — npm run build:metanalise
+
+[2026-03-21 19:34] [unknown:a4790eef] — concluído. Status: PARTIAL
+
+## Quotes para speaker notes (resgatadas de agent-memory, 2026-03-22)
+
+1. **Ioannidis:** "The production of systematic reviews and meta-analyses has reached epidemic proportions."
+2. **Uttley:** "a failure to appreciate and regulate problems with these highly cited research designs is a threat to credible science"
+3. **Paul:** "Nearly all (80.9%) performed meta-analyses of crude, unadjusted results... These reviews are misleading"
+4. **Murad:** SRs should be "removed from the top of the pyramid" — they are "a lens through which evidence is viewed"
+5. **Guyatt/Brignardello-Petersen:** "GRADE assessments assume that the evidence is trustworthy; that data have not been fabricated, falsified, or modified"
+6. **Schunemann:** "the way [GRADE] is being used is not infrequently inconsistent with GRADE guidance"

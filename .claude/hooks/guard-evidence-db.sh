@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-# Hook 2 — PreToolUse: Warn when any agent writes evidence-db.md
+# Hook 2 — PreToolUse: BLOCK all writes to evidence-db.md
 #
 # LIMITATION: PreToolUse does not expose agent_type — cannot verify identity of caller.
-# Workaround: always emit warning. reference-manager knows to expect it.
-# Non-blocking (exit 0 + JSON systemMessage).
+# Therefore: block ALL writes. Use /sync-evidence with user approval to edit.
+# Blocking (exit 2 = block).
 
 INPUT=$(cat 2>/dev/null || echo '{}')
 
@@ -17,6 +17,6 @@ if [[ "$FILE_PATH" != *"evidence-db.md" ]]; then
     exit 0
 fi
 
-# Non-blocking warn
-printf '{"systemMessage": "\u26a0 evidence-db.md s\u00f3 deve ser editado por reference-manager. Confirme antes de prosseguir."}\n'
-exit 0
+# Block
+echo "BLOCKED: evidence-db.md só pode ser editado com aprovação do usuário. Use /sync-evidence e peça confirmação." >&2
+exit 2
