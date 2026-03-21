@@ -5,6 +5,23 @@
 
 ---
 
+## 2026-03-22 — Hardening evidence-db governance + MCP pruning
+
+### Infra
+- guard-evidence-db.sh: WARN → BLOCK (`exit 2`). Todas escritas em evidence-db.md bloqueadas sem `/sync-evidence` + aprovação
+- Rule `no-clinical-data-in-memory.md`: dados clínicos proibidos em agent memory
+- Agent memory limpo: 5 arquivos deletados (~14.7K dados clínicos), MEMORY.md reescrito como índice vazio
+- 6 quotes retóricas (Ioannidis, Murad, Guyatt, Uttley, Paul, Schunemann) resgatadas para NOTES.md
+
+### MCP
+- NotebookLM skill: PAUSED (MCP não carregado, 0 execuções)
+- `.mcp-profiles/research.json`: 13→6 servers (removidos: filesystem, playwright, eslint, lighthouse, a11y, sharp, notebooklm)
+
+### Verificação
+- Zero mudanças em slides ou evidence-db. Sessão de governança pura.
+
+---
+
 ## 2026-03-21b — Notion sync + 5 PMID corrections (evidence-db v5.7)
 
 ### Notion sync

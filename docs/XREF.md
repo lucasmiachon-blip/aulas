@@ -58,6 +58,7 @@ CLAUDE.md (root)              ← fonte de verdade operacional (absorveu AGENTS.
 | motion-qa.md | → slide-editing.md, deck-patterns.md, reveal-legacy.md | ← CLAUDE.md |
 | reveal-legacy.md | → deck-patterns.md | ← slide-editing.md, motion-qa.md (FROZEN — grade/osteoporose) |
 | slide-editing.md | → css-errors.md, design-system.md, deck-patterns.md, reveal-legacy.md, medical-data.md | ← CLAUDE.md |
+| no-clinical-data-in-memory.md | → medical-data.md, sync-evidence skill | ← guard-evidence-db.sh |
 | slide-identity.md | → slide-editing.md, deck-patterns.md | ← CLAUDE.md, deck-patterns.md |
 
 ### docs/
@@ -116,7 +117,7 @@ CLAUDE.md (root)              ← fonte de verdade operacional (absorveu AGENTS.
 | audit-trail.sh | PostToolUse, PostToolUseFailure (*) | P0 traceability — JSONL log de toda tool call |
 | build-monitor.sh | PostToolUse, PostToolUseFailure (Bash) | Detecta falhas de build |
 | check-evidence-db.sh | PreToolUse (Write) | Valida dados clínicos antes de escrever |
-| guard-evidence-db.sh | PreToolUse (Write) | Protege evidence-db de edições não autorizadas |
+| guard-evidence-db.sh | PreToolUse (Write) | BLOCK todas escritas em evidence-db.md (exit 2) |
 | guard-shared.sh | PreToolUse (Write, Edit) | Bloqueia edição de shared/ em branches não-main |
 | guard-destructive.sh | (dormant — coberto por deny permissions) | Backup: bloqueia comandos destrutivos |
 | guard-merge.sh | PreToolUse (Bash) | Valida merge: --no-ff em main, bloqueia shared/ changes |

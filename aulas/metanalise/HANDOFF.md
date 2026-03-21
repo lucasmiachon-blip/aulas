@@ -85,7 +85,14 @@ Trabalho completado e decisões tomadas: ver [HANDOFF-ARCHIVE.md](HANDOFF-ARCHIV
 
 ### Sessão N+1 (imediata) — QA s-checkpoint-1 + F2
 
-#### DONE nesta sessão (03-21b)
+#### DONE nesta sessão (03-22)
+- MCP hardening: NotebookLM PAUSED, research.json podado (13→6 servers)
+- guard-evidence-db.sh promovido WARN→BLOCK (exit 2)
+- Agent memory limpo: 5 arquivos com dados clínicos deletados, MEMORY.md reescrito
+- Rule `no-clinical-data-in-memory.md` criada (dados clínicos → evidence-db only)
+- 6 quotes Ioannidis/Murad/Guyatt resgatadas para NOTES.md
+
+#### DONE sessão anterior (03-21b)
 - Notion sync completo: 4 slides + 9 references
 - 5 PMIDs corrigidos via PubMed MCP (ERRO-011). evidence-db v5.7
 - Mapa de fontes para retórica documentado (HANDOFF §Mapa de fontes)
