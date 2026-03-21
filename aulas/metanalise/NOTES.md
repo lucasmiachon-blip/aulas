@@ -244,3 +244,17 @@
 [2026-03-20 21:33] [Explore:a364f15c] — concluído. Status: PARTIAL
 
 [2026-03-20 21:37] [Plan:a6a5734e] — concluído. Status: PASS
+
+[2026-03-21 14:35] [general-purpose:a65ae895] — concluído. Status: PARTIAL
+
+## 2026-03-21 — Sessão evolve + prep
+
+### Evolve patches (aplicados em main)
+- P1+P2: XREF.md — 2 hooks faltantes (teammate-idle-gate, task-completed-gate) + fix audit-trail matcher
+- P6: lessons.md — warning Vite 8 (Rolldown, breaking changes)
+- P3 RETIRADO: run-pubmed-mcp.js não é orphan (refs em .cursor/mcp.json + MCP-ENV-VARS.md)
+
+### Prep para próxima sessão
+- Perplexity API key configurada
+- Scite OAuth configurado
+- Buscas Scite (ACCORD, Valgimigli, Ray) deferidas — não bloqueiam QA visual
