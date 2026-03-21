@@ -47,6 +47,7 @@
 | 03-17i | Merge main (a0e3568), 6 conflitos A/B resolvidos, 0 broken links |
 | 03-18 | QA refs + specificity fixes, QA s-title PASS, merge main (5406dd8) |
 | 03-22 | Hardening P3: diagnostico WT, merge main (e77dcec→2bf9740), todo.md cleanup |
+| 03-22b | HANDOFF cleanup (-57% archive), janitor WT (2 dead CSS, 6 debug PNGs), 3 orphan scripts deferridos para main |
 
 ---
 

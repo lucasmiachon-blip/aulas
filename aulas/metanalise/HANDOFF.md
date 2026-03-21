@@ -123,6 +123,7 @@ Proximo: s-checkpoint-1 (screenshots + scorecard 14-dim) → F2 em sequencia.
 ## Pendências para main (Classe B — não editar na WT)
 
 - **lint-slides.js false positive:** `scripts/lint-slides.js:110` — `data-animate="countUp"` sem `data-target` não pula `<script>` blocks. 2 false positives no index.html built. **Fix preparado:** context-aware check (3 linhas antes/depois). Aplicar em main.
+- **3 orphan scripts:** `scripts/browser-qa-act1.mjs`, `scripts/vote-final-qa.mjs`, `scripts/qa/qa-static.js` — zero refs, remover em main.
 
 ## Não fazer ainda
 
