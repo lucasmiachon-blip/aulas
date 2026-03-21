@@ -123,7 +123,7 @@ Proximo: s-checkpoint-1 (screenshots + scorecard 14-dim) → F2 em sequencia.
 ## Pendências para main (Classe B — não editar na WT)
 
 - **lint-slides.js false positive:** `scripts/lint-slides.js:110` — `data-animate="countUp"` sem `data-target` não pula `<script>` blocks. 2 false positives no index.html built. **Fix preparado:** context-aware check (3 linhas antes/depois). Aplicar em main.
-- **Scripts orphans (main):** `scripts/attention-insight.js`, `scripts/mcp-attention-insight.js`, `scripts/act1-surgical-qa.mjs`, `scripts/act1-reaudit.mjs` — **confirmed orphan** pelo repo-janitor (2026-03-19). `git rm` preparado.
+- ~~**Scripts orphans (main):**~~ RESOLVIDO — removidos em `e77dcec`, absorvidos via merge `2bf9740` (2026-03-22).
 
 ## Não fazer ainda
 

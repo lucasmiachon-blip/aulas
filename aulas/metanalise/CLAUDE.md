@@ -5,7 +5,7 @@ Parent: ver CLAUDE.md na raiz.
 ## WT State (atualizar a cada sessao)
 
 - **Branch:** feat/metanalise-mvp
-- **Ultimo merge main:** 5406dd8 (2026-03-18) — absorve skills/agents (medical-researcher, final-pass v3, slide-punch, new-skill v2, sync-evidence)
+- **Ultimo merge main:** e77dcec (2026-03-22) — absorve hardening main: 4 orphan scripts removidos, docs movidos para archive
 - **Classe C pendente:** 0
 - **Infra sync:** OK
 
@@ -110,6 +110,6 @@ Pipeline completo: WT-OPERATING.md §4 (QA.3).
 | Gates 1-4 | 18/18 PASS |
 | Scorecards 14-dim | 3/18 (F1 DONE): s-title, s-hook (avg 9.36), s-contrato. s-checkpoint-1 em QA. |
 | Docs | narrative v2.5, blueprint v2.0, evidence-db v5.5 |
-| Main sync | 5406dd8 (2026-03-18) |
+| Main sync | e77dcec (2026-03-22) |
 
 Detalhes QA por slide: HANDOFF.md. Pipeline: WT-OPERATING.md §4.
