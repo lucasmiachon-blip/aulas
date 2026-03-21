@@ -237,7 +237,7 @@ CLAUDE.md (root)              ← fonte de verdade operacional (absorveu AGENTS.
 | KPIs multiagente | docs/KPIs.md | — |
 | Benchmarks modelos | docs/ECOSYSTEM.md | — |
 | Pesquisa médica profunda | .claude/skills/medical-researcher/SKILL.md | .claude/rules/medical-data.md, docs/MCP-ACADEMICOS.md |
-| Q&A grounded em full-text | .claude/skills/nlm-skill/SKILL.md | docs/MCP-ACADEMICOS.md |
+| Q&A grounded em full-text | .claude/skills/nlm-skill/SKILL.md PAUSED (2026-03-22) | docs/MCP-ACADEMICOS.md |
 | Safety gates (hooks) | .claude/settings.json + .claude/hooks/ | — |
 | WT protocol | aulas/*/CLAUDE.md § Worktree | .claude/scripts/ |
 | Audit trail | .claude/hooks/audit-trail.sh | ~/.claude/session-logs/ |

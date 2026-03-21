@@ -4,6 +4,15 @@ description: "Expert guide for the NotebookLM CLI (`nlm`) and MCP server - inter
 version: "0.5.1"
 ---
 
+> STATUS: PAUSED (2026-03-22)
+>
+> Esta skill sera ativada quando NotebookLM MCP estiver disponivel.
+> Estado atual: skill doc OK, pipeline doc OK, 2 PDFs listados, MCP NAO carregado, 0 PDFs baixados, 0 outputs.
+>
+> **NAO INVOCAR** — usar Scholar Gateway + Scite + Consensus enquanto pausada.
+>
+> Para reativar: (1) carregar MCP, (2) baixar PDFs de sources/README.md, (3) testar 1 query, (4) remover este bloco.
+
 # NotebookLM CLI & MCP Expert
 
 This skill provides comprehensive guidance for using NotebookLM via both the `nlm` CLI and MCP tools.

@@ -141,7 +141,7 @@ Proximo: s-checkpoint-1 (screenshots + scorecard 14-dim) → F2 em sequencia.
 
 | Fonte | O que faz | Quando usar |
 |-------|-----------|-------------|
-| **NotebookLM** | Q&A grounded em full-text de papers carregados | Perguntas profundas sobre um paper específico (ex: "qual foi a análise de sensibilidade do ACCORD?") |
+| **NotebookLM** | PAUSED (2026-03-22) — Skill doc pronta, pipeline documentada, MCP nao carregado, 0 execucoes. Usar Scholar Gateway para buscas exploratórias profundas. Reativacao: carregar MCP, baixar 2 PDFs (sources/README.md), testar query, remover PAUSED. | Perguntas profundas sobre um paper específico (ex: "qual foi a análise de sensibilidade do ACCORD?") |
 | **CAPES/USP** | Acesso a PDFs completos | Quando precisa ler o paper inteiro, cropar forest plots |
 | **Cochrane Library** | SRs exemplares, GRADE tables, forest plots | Exemplos visuais para slides de metodologia (F2) |
 
@@ -153,7 +153,7 @@ Proximo: s-checkpoint-1 (screenshots + scorecard 14-dim) → F2 em sequencia.
 4. **Ensaiar** com speaker notes dos slides (timing real)
 5. **Se pergunta surgir** → Perplexity (rápido) ou PubMed+Scite (verificado)
 6. **Se dado contestado** → Scite tallies (quantos suportam vs questionam)
-7. **Se precisar aprofundar** → NotebookLM (Q&A grounded no full-text)
+7. **Se precisar aprofundar** → NotebookLM (PAUSED — usar Scholar Gateway + Scite enquanto indisponivel)
 
 ---
 
